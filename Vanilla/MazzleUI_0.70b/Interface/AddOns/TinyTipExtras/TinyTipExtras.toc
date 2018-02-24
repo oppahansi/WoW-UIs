@@ -1,0 +1,22 @@
+## Interface: 11200
+## Author: Thrae
+## Title: TinyTipExtras |cff7fff7f -Ace2-|r
+## Title-koKR: |CFF99FF99T|CFFFFFFFFiny|CFF99FF99T|CFFFFFFFFip|CFF99FF99E|CFFFFFFFFxtras |cff7fff7f -Ace2-|r
+## Notes: Adds extra features to your tooltip, such as pvp icon, buffs, etc. Loaded on demand by |cFF5555FFTinyTip|r.
+## Notes-koKR: 툴팁에 명예 아이콘, 버프의 표시 등의 추가적인 기능을 합니다. |CFF5555FFTinyTip|r의 부속 애드온으로 필요시 불러오는 애드온입니다.
+## Notes-zhCN: 为信息条增加军衔图标、增益效果图标等额外功能。(LoadOnDemand)
+## LoadOnDemand: 1
+## Dependencies: TinyTip
+## OptionalDeps: Ace2, TipLib
+TipLib-1.0\TipLib-1.0.lua
+
+TinyTipExtrasLocale_zhCN.lua
+TinyTipExtrasLocale_frFR.lua
+TinyTipExtrasLocale_deDE.lua
+TinyTipExtrasLocale_koKR.lua
+TinyTipExtrasLocale_enEN.lua
+
+TinyTipTargets.lua
+TinyTipIcons.lua
+
+TinyTipExtras.lua

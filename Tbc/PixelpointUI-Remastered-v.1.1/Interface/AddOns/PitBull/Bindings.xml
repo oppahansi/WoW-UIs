@@ -1,0 +1,36 @@
+<Bindings>
+    <Binding name="PITBULL_SET_RAID_GROUP_CLASS" header="PITBULL_RAID_GROUP">
+        if not InCombatLockdown() then
+            PitBull:ChangeRaidGroupStyle("class")
+        end
+    </Binding>
+    <Binding name="PITBULL_SET_RAID_GROUP_GROUP">
+        if not InCombatLockdown() then
+            PitBull:ChangeRaidGroupStyle("group")
+        end
+    </Binding>
+    <Binding name="PITBULL_SET_RAID_GROUP_FLAT_CLASS">
+        if not InCombatLockdown() then
+            PitBull:ChangeRaidGroupStyle("flatClass")
+        end
+    </Binding>
+    <Binding name="PITBULL_SET_RAID_GROUP_FLAT_GROUP">
+        if not InCombatLockdown() then
+            PitBull:ChangeRaidGroupStyle("flatGroup")
+        end
+    </Binding>
+    <Binding name="PITBULL_SET_RAID_GROUP_FLAT">
+        if not InCombatLockdown() then
+            PitBull:ChangeRaidGroupStyle("flat")
+        end
+    </Binding>
+    <Binding name="PITBULL_TOGGLE_RAID_GROUP">
+        if not InCombatLockdown() then
+            if PitBull.db.profile.groups.raid.groupStyle == "group" then
+                PitBull:ChangeRaidGroupStyle("class")
+            elseif PitBull.db.profile.groups.raid.groupStyle == "class" then
+                PitBull:ChangeRaidGroupStyle("group")
+            end
+        end
+    </Binding>
+</Bindings>

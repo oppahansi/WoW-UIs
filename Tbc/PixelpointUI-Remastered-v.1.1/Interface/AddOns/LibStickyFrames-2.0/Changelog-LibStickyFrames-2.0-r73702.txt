@@ -1,0 +1,73 @@
+------------------------------------------------------------------------
+r73702 | Sorata | 2008-05-13 12:17:40 -0400 (Tue, 13 May 2008) | 5 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+
+LibStickyFrames-2.0:
+- Removed :UpdateFrameColor from available API, it was being called when needed so it shouldn't have been needed anyway.
+- Add API to change overlay colors
+- Remove frame arg from :StopFrameMoving as only one frame can be moved at a time
+- Cache unused tables and reuse them when needed
+------------------------------------------------------------------------
+r73621 | Sorata | 2008-05-12 17:36:34 -0400 (Mon, 12 May 2008) | 3 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+
+LibStickyFrames-2.0:
+- Change the way dragging is handled:
+-- Rather than getting the x & y offset from the frame to the cursor when :StartMoving is called, use the x & y offset for when the OnClick happened or if not available set the offset as 0 which moves the center of the frame to the cursor position.
+------------------------------------------------------------------------
+r73524 | Sorata | 2008-05-11 21:27:10 -0400 (Sun, 11 May 2008) | 3 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+
+LibStickyFrames-2.0:
+- Make just about everything local and reduce table lookups
+- Update all the documentation
+------------------------------------------------------------------------
+r73482 | Sorata | 2008-05-11 15:09:24 -0400 (Sun, 11 May 2008) | 6 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+
+LibStickyFrames-2.0:
+- Combined lib:AttachFrameTo and lib:SetFrameAnchor
+- Renamed InFrameGroup to IsFrameGroup
+- Added InFrameGroup - This returns true is a frame is the group or a frame is in a group that is a table
+- Anchored frames will now update thier anchors and frames anchored to it when SetFrameInsets is called
+- When moving a frame, hidden frames show up as enabled if you can attach to it or disabled if you can't
+------------------------------------------------------------------------
+r73400 | Sorata | 2008-05-10 19:21:29 -0400 (Sat, 10 May 2008) | 2 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0
+   A /trunk/LibStickyFrames-2.0/CallbackHandler-1.0
+   A /trunk/LibStickyFrames-2.0/CallbackHandler-1.0/CallbackHandler-1.0.lua
+   A /trunk/LibStickyFrames-2.0/CallbackHandler-1.0/CallbackHandler-1.0.xml
+   A /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0
+   A /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+   A /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0/lib.xml
+   D /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+   M /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0.toc
+   A /trunk/LibStickyFrames-2.0/LibStub
+   A /trunk/LibStickyFrames-2.0/LibStub/LibStub.lua
+   D /trunk/LibStickyFrames-2.0/lib.xml
+
+LibStickyFrames-2.0:
+- Don't set externals for LibStub and CallbackHandler-1.0 (I think...)
+------------------------------------------------------------------------
+r73376 | Sorata | 2008-05-10 17:55:54 -0400 (Sat, 10 May 2008) | 2 lines
+Changed paths:
+   M /trunk/LibStickyFrames-2.0
+   A /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0.lua
+   A /trunk/LibStickyFrames-2.0/LibStickyFrames-2.0.toc
+   A /trunk/LibStickyFrames-2.0/lib.xml
+
+LibStickyFrames-2.0:
+- Move the files...
+------------------------------------------------------------------------
+r73374 | Sorata | 2008-05-10 17:51:29 -0400 (Sat, 10 May 2008) | 2 lines
+Changed paths:
+   A /trunk/LibStickyFrames-2.0
+
+LibStickyFrames-2.0:
+- Move to trunk
+------------------------------------------------------------------------

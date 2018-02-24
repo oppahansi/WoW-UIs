@@ -1,0 +1,27 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fWaypoints|r]
+## X-Name: Waypoints
+## X-Name-koKR: 위치 포인트
+## X-Name-deDE: Wegpunkte
+## X-ModuleName: Waypoints
+## Notes: Module which shows an arrow to direct you to a specified note or location.
+## Notes-koKR: 당신이 작성한 노트나 위치를 화살표로 안내하는 모듈입니다.
+## Notes-deDE: Modul das einen Pfeil anzeigt der dich zu einer Notiz oder Position führt.
+## Notes-zhTW: 顯示箭頭指引你到特定註記或地點的模組。
+## Author: Wobin
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, DewdropLib, TabletLib, TouristLib, CrayonLib, Babble-2.2, AbacusLib, RollCall-1.0
+## X-Category: Map
+## X-eMail: wobster@gmail.com
+## X-Website: http://wobin.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+Waypoint.lua
+PartyPoint.lua
+GuildPoint.lua
+NotePoint.lua
+CorpsePoint.lua
+Waypoints.lua

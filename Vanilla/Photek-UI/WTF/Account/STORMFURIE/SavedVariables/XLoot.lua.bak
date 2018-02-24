@@ -1,0 +1,2 @@
+
+XLootDB = nil

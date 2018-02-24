@@ -1,0 +1,16 @@
+
+ElkBuffBarOptions = {
+	["dbcolor"] = true,
+	["scale"] = 0.9,
+	["group"] = 5,
+	["alpha"] = 1,
+	["width"] = 250,
+	["y"] = 1130,
+	["x"] = 1523,
+	["sort"] = "TIMELEFT",
+	["spacing"] = 0,
+	["height"] = 20,
+	["timer"] = "DEFAULT",
+	["icon"] = "RIGHT",
+	["anchor"] = "TOPRIGHT",
+}

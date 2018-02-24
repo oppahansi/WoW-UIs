@@ -1,0 +1,64 @@
+MACRO 16777237 " " INV_Misc_QuestionMark
+/use Relentless Gladiator's Cord of Dominance
+/use Cobalt Frag Bomb
+END
+MACRO 16777228 " " INV_Misc_QuestionMark
+/cast [target=focus] Psychic Horror
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+/use Nevermelting Ice Crystal
+/use Platinum Disks of Sorcery
+/use Gnomish Lightning Generator
+/use Platinum Disks of Sorcery
+END
+MACRO 16777232 " " INV_Misc_QuestionMark
+/cast Inner Focus
+/cast Divine Hymn(Rank 1)
+END
+MACRO 16777219 " " INV_Misc_QuestionMark
+/cast [nopet] Shadowfiend
+/petaggressive
+/petattack
+/cast [pet, target=pet] Dispel Magic
+/cast [pet] Shadowcrawl
+END
+MACRO 16777224 " " INV_Misc_QuestionMark
+/castsequence reset=target/12 Abolish Disease, Cure Disease, Cure Disease, Cure Disease, Cure Disease, Cure Disease
+END
+MACRO 16777239 " " INV_Misc_QuestionMark
+/use Relentless Gladiator's Satin Gloves
+END
+MACRO 16777240 " " INV_Misc_QuestionMark
+/use Wrathful Gladiator's Cloak of Subjugation
+/cast Levitate
+END
+MACRO 16777241 " " INV_Misc_QuestionMark
+/cast !Shadowform
+END
+MACRO 16777230 "  " Ability_Mage_IncantersAbsorbtion
+/use Relentless Gladiator's Satin Gloves
+END
+MACRO 16777244 " a" INV_Misc_QuestionMark
+/target player
+END
+MACRO 16777221 "D 2" INV_Misc_QuestionMark
+/cast [target=party2] Dispel Magic
+END
+MACRO 16777242 "d 3" INV_Misc_QuestionMark
+/cast [target=party3] Dispel Magic
+END
+MACRO 16777243 "d 4" INV_Misc_QuestionMark
+/cast [target=party4] Dispel Magic
+END
+MACRO 16777218 "D P" INV_Misc_QuestionMark
+/cast [target=player] dispel magic
+END
+MACRO 16777235 "S 1" INV_Misc_QuestionMark
+/cast [target=party1] Power Word: Shield(Rank 14)
+END
+MACRO 16777233 "S 2" INV_Misc_QuestionMark
+/cast [target=party2] Power Word: Shield(Rank 14)
+END
+MACRO 16777238 "S Ny" INV_Misc_QuestionMark
+/cast [target=nyno] Power Word: Shield(Rank 14)
+END

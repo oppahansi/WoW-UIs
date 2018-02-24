@@ -1,0 +1,98 @@
+                 
+                 
+                 
+                  ___ Installation guidelines ___
+                        
+                        
+                        
+
+                              >> 1 <<
+
+
+    Unzip CaithUI.rar to a new folder called CaithUI. 
+    
+    Open there the wtf-folder and change the three folders:
+
+          ACCOUNTNAME (has to be in caps)
+          Servername 
+          Playername
+
+    to your specific ones.
+
+    For example: WTF\Account\CAITHACCOUNT\Gorgonnash\Caithlyn
+
+
+
+
+
+
+                              >> 2 <<
+
+
+    Go into your normal World of Warcraft directory. 
+    
+    Backup there your interface and wtf folder. 
+    
+    Then delete only your interface folder.
+
+
+
+
+
+                              
+                              >> 3 <<
+    
+    
+    Copy & overwrite the folders wtf, interface and fonts from 
+    
+    \CaithUI\ to your world of warcraft directory.
+
+
+
+    In your warcraft directory, Go to your overwritten WTF-folder, 
+    
+    open the config.wtf with WordPad, NotePad2 or something like that. 
+    
+    
+    Search for:
+
+          SET uiScale
+          SET useUiScale
+
+
+    change those values to:
+
+          SET uiScale "0.78"
+          SET useUiScale "1"
+
+
+    if they weren't there, just add them. Save the config.wtf.
+
+
+
+
+
+                              >> 5 <<
+
+
+    Start WoW. 
+    
+    Make sure every addon is enabled. 
+    
+    Type into your chat: /reflux switch CaithUI
+    
+    The interface should reload automaticly.
+    
+    
+    
+    Maybe the chat won't be in the black boxes. Just drag it into them.
+    
+    
+    Should work now.
+    
+    
+    
+   
+   
+    Greetings, Caith
+    

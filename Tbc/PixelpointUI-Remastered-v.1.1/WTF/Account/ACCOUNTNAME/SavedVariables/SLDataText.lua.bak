@@ -1,0 +1,105 @@
+
+SLDTDB = {
+	["namespaces"] = {
+		["Bag"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+		["Exp"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["xOff"] = "-100",
+					["aF"] = "BOTTOM",
+					["yOff"] = "89",
+					["textDisplay"] = "XP [Cur]/[Max]",
+				},
+			},
+		},
+		["FPS"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["xOff"] = "155",
+					["aF"] = "BOTTOM",
+					["yOff"] = 89,
+				},
+			},
+		},
+		["ZoneText"] = {
+		},
+		["Memory"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["xOff"] = "110",
+					["aF"] = "BOTTOM",
+					["yOff"] = 89,
+				},
+			},
+		},
+		["Mail"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["aF"] = "BOTTOM",
+					["showIcon"] = false,
+					["yOff"] = "89",
+					["xOff"] = "-150",
+				},
+			},
+		},
+		["Gold"] = {
+			["realm"] = {
+				["Smolderforge"] = {
+					["Horde"] = {
+						["Astalker"] = {
+							["gold"] = 1000000000,
+						},
+					},
+				},
+			},
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["enabled"] = false,
+					["xOff"] = 87,
+					["yOff"] = -185,
+				},
+			},
+		},
+		["Clock"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+		["Armor"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["xOff"] = "-50",
+					["aF"] = "BOTTOM",
+					["yOff"] = "89",
+					["textDisplay"] = "AR [Dur]%",
+				},
+			},
+		},
+		["Coords"] = {
+		},
+		["Latency"] = {
+			["profiles"] = {
+				["Astalker - Smolderforge"] = {
+					["xOff"] = "65",
+					["aF"] = "BOTTOM",
+					["yOff"] = 89,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Astalker - Smolderforge"] = "Astalker - Smolderforge",
+	},
+	["profiles"] = {
+		["Astalker - Smolderforge"] = {
+		},
+	},
+}

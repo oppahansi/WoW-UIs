@@ -1,0 +1,18 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fBanzai|r]
+## Notes: Adds aggro coloring to PitBull.
+## Notes-koKR: PitBull에 어그로 색상화를 추가합니다.
+## Author: Rabbit
+## Version: 1.0
+## X-Build: $Revision: 66934 $
+## X-ReleaseDate: $Date: 2008-03-29 13:27:11 -0400 (Sat, 29 Mar 2008) $
+## X-Category: Combat
+## X-eMail: rabbit.magtheridon@gmail.com
+## Dependencies: PitBull
+## OptionalDeps: PitBull_HealthBar
+## DefaultState: enabled
+## LoadOnDemand: 1
+## X-License: GPLv2.
+
+Banzai.lua
+

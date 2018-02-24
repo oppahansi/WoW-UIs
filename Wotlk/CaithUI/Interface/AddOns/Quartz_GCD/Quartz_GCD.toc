@@ -1,0 +1,20 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffGCD|r
+## Notes: Quartz module to display the global cooldown in a helpful way.
+## Title-ruRU: Кварц |cff7777ffГКД|r
+## Notes-ruRU: Модуль Кварца отображающий глобальную перезарядку.
+## Title-zhTW: Quartz |cff7777ff共同冷卻|r
+## Notes-zhTW: 在施法條旁用極小的閃爍條顯示共用冷卻時間。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: GCD
+## X-Quartz-RequiredModules: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+GCD.lua

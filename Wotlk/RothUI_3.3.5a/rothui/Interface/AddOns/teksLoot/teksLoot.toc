@@ -1,0 +1,15 @@
+## Interface: 30300
+
+## Title: teksLoot
+## Notes: Minimalistic group roll frames.
+## Author: Tekkub Stoutwrithe
+## Version: 3.3.0.9
+## X-Credits: Xuerian's XLootGroup
+## X-Website: http://www.tekkub.net/
+## X-Email: tekkub-wow@googlegroups.com
+## X-Category: Interface Enhancements
+
+## SavedVariables: teksLootDB
+
+Locale.lua
+teksLoot.lua

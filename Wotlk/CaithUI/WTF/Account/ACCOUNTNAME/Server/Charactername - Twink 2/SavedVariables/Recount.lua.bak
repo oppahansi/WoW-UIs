@@ -1,0 +1,3887 @@
+
+RecountPerCharDB = {
+	["version"] = "1.3",
+	["combatants"] = {
+		["Shadowfiend <Caithlyn>"] = {
+			["GUID"] = "0xF530004CD42ED2AB",
+			["LastEventHealth"] = {
+				"1710 (69%)", -- [1]
+				"1710 (69%)", -- [2]
+				"2466 (100%)", -- [3]
+				"2466 (100%)", -- [4]
+				"2466 (100%)", -- [5]
+				"2466 (100%)", -- [6]
+				"2466 (100%)", -- [7]
+				"2466 (100%)", -- [8]
+				"2466 (100%)", -- [9]
+				"2466 (100%)", -- [10]
+				"2466 (100%)", -- [11]
+				"2466 (100%)", -- [12]
+				"2466 (100%)", -- [13]
+				"2466 (100%)", -- [14]
+				"2466 (100%)", -- [15]
+				"2466 (100%)", -- [16]
+				"1995 (80%)", -- [17]
+				"1995 (80%)", -- [18]
+				"1995 (80%)", -- [19]
+			},
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
+				"DAMAGE", -- [10]
+				"DAMAGE", -- [11]
+				"DAMAGE", -- [12]
+				"DAMAGE", -- [13]
+				"DAMAGE", -- [14]
+				"DAMAGE", -- [15]
+				"DAMAGE", -- [16]
+				"DAMAGE", -- [17]
+				"DAMAGE", -- [18]
+				"MISC", -- [19]
+			},
+			["TimeWindows"] = {
+				["DeathCount"] = {
+					[2] = 1,
+				},
+				["ActiveTime"] = {
+					1.52, -- [1]
+					[12] = 1.52,
+					[14] = 1.49,
+					[15] = 1.54,
+					[8] = 3.5,
+					[17] = 1.48,
+					[18] = 1.53,
+					[20] = 1.46,
+					[11] = 1.49,
+					[9] = 1.57,
+				},
+				["TimeDamage"] = {
+					1.52, -- [1]
+					[12] = 1.52,
+					[14] = 1.49,
+					[15] = 1.54,
+					[8] = 3.5,
+					[17] = 1.48,
+					[18] = 1.53,
+					[20] = 1.46,
+					[11] = 1.49,
+					[9] = 1.57,
+				},
+				["DamageTaken"] = {
+					[20] = 471,
+				},
+				["Damage"] = {
+					283, -- [1]
+					[12] = 585,
+					[14] = 288,
+					[15] = 282,
+					[8] = 272,
+					[17] = 546,
+					[18] = 287,
+					[20] = 285,
+					[11] = 286,
+					[9] = 571,
+				},
+			},
+			["enClass"] = "PET",
+			["unit"] = "Shadowfiend",
+			["TimeLast"] = {
+				["DeathCount"] = 1227566289,
+				["ActiveTime"] = 1227566288,
+				["TimeDamage"] = 1227566288,
+				["OVERALL"] = 1227566289,
+				["DamageTaken"] = 1227566287,
+				["Damage"] = 1227566288,
+			},
+			["DeathLogs"] = {
+				{
+					["MessageIncoming"] = {
+						false, -- [1]
+						true, -- [2]
+						false, -- [3]
+						true, -- [4]
+						false, -- [5]
+						true, -- [6]
+						false, -- [7]
+						false, -- [8]
+						true, -- [9]
+						false, -- [10]
+						true, -- [11]
+						false, -- [12]
+						true, -- [13]
+						false, -- [14]
+						false, -- [15]
+						true, -- [16]
+						false, -- [17]
+						true, -- [18]
+						true, -- [19]
+					},
+					["Messages"] = {
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -272 (Physical)", -- [1]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [2]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -571 (Physical)", -- [3]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Dodge", -- [4]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -286 (Physical)", -- [5]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Dodge", -- [6]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -585 (Physical)", -- [7]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -288 (Physical)", -- [8]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [9]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -282 (Physical)", -- [10]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [11]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -546 (Physical)", -- [12]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [13]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -287 (Physical)", -- [14]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -285 (Physical)", -- [15]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Hit -471 (Physical)", -- [16]
+						"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -283 (Physical)", -- [17]
+						"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [18]
+						"Shadowfiend <Caithlyn> dies.", -- [19]
+					},
+					["DeathAt"] = 1227566291,
+					["HealthNum"] = {
+						69.34306569343066, -- [1]
+						69.34306569343066, -- [2]
+						100, -- [3]
+						100, -- [4]
+						100, -- [5]
+						100, -- [6]
+						100, -- [7]
+						100, -- [8]
+						100, -- [9]
+						100, -- [10]
+						100, -- [11]
+						100, -- [12]
+						100, -- [13]
+						100, -- [14]
+						100, -- [15]
+						100, -- [16]
+						80.90024330900243, -- [17]
+						80.90024330900243, -- [18]
+						80.90024330900243, -- [19]
+					},
+					["MessageTimes"] = {
+						-14.88300000000163, -- [1]
+						-14.52200000000084, -- [2]
+						-13.31700000000274, -- [3]
+						-12.46100000000297, -- [4]
+						-11.83100000000195, -- [5]
+						-10.48700000000099, -- [6]
+						-10.31300000000192, -- [7]
+						-8.828000000001339, -- [8]
+						-8.488000000001193, -- [9]
+						-7.291000000001077, -- [10]
+						-6.478000000002794, -- [11]
+						-5.81000000000131, -- [12]
+						-4.498000000003231, -- [13]
+						-4.277000000001863, -- [14]
+						-2.820000000003347, -- [15]
+						-2.447000000000116, -- [16]
+						-1.298000000002503, -- [17]
+						-0.2849999999998545, -- [18]
+						0, -- [19]
+					},
+					["KilledBy"] = "Savage Hill Brute",
+					["Health"] = {
+						"1710 (69%)", -- [1]
+						"1710 (69%)", -- [2]
+						"2466 (100%)", -- [3]
+						"2466 (100%)", -- [4]
+						"2466 (100%)", -- [5]
+						"2466 (100%)", -- [6]
+						"2466 (100%)", -- [7]
+						"2466 (100%)", -- [8]
+						"2466 (100%)", -- [9]
+						"2466 (100%)", -- [10]
+						"2466 (100%)", -- [11]
+						"2466 (100%)", -- [12]
+						"2466 (100%)", -- [13]
+						"2466 (100%)", -- [14]
+						"2466 (100%)", -- [15]
+						"2466 (100%)", -- [16]
+						"1995 (80%)", -- [17]
+						"1995 (80%)", -- [18]
+						"1995 (80%)", -- [19]
+					},
+					["EventNum"] = {
+						0, -- [1]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0, -- [8]
+						0, -- [9]
+						0, -- [10]
+						0, -- [11]
+						0, -- [12]
+						0, -- [13]
+						0, -- [14]
+						0, -- [15]
+						19.09975669099757, -- [16]
+						0, -- [17]
+						0, -- [18]
+						0, -- [19]
+					},
+					["MessageType"] = {
+						"DAMAGE", -- [1]
+						"DAMAGE", -- [2]
+						"DAMAGE", -- [3]
+						"DAMAGE", -- [4]
+						"DAMAGE", -- [5]
+						"DAMAGE", -- [6]
+						"DAMAGE", -- [7]
+						"DAMAGE", -- [8]
+						"DAMAGE", -- [9]
+						"DAMAGE", -- [10]
+						"DAMAGE", -- [11]
+						"DAMAGE", -- [12]
+						"DAMAGE", -- [13]
+						"DAMAGE", -- [14]
+						"DAMAGE", -- [15]
+						"DAMAGE", -- [16]
+						"DAMAGE", -- [17]
+						"DAMAGE", -- [18]
+						"MISC", -- [19]
+					},
+				}, -- [1]
+			},
+			["LastDamageAbility"] = "Melee",
+			["LastDamageTaken"] = 471,
+			["LastEventNum"] = {
+				[16] = 19.09975669099757,
+			},
+			["level"] = 1,
+			["AbilityType"] = {
+				["Melee"] = "Melee",
+			},
+			["LastFightIn"] = 0,
+			["isPlayer"] = false,
+			["type"] = "Pet",
+			["FightsSaved"] = 4,
+			["LastAbility"] = 19300.962,
+			["isFriend"] = true,
+			["Owner"] = "Caithlyn",
+			["LastEventIncoming"] = {
+				false, -- [1]
+				true, -- [2]
+				false, -- [3]
+				true, -- [4]
+				false, -- [5]
+				true, -- [6]
+				false, -- [7]
+				false, -- [8]
+				true, -- [9]
+				false, -- [10]
+				true, -- [11]
+				false, -- [12]
+				true, -- [13]
+				false, -- [14]
+				false, -- [15]
+				true, -- [16]
+				false, -- [17]
+				true, -- [18]
+				true, -- [19]
+			},
+			["NextEventNum"] = 20,
+			["LastEventHealthNum"] = {
+				69.34306569343066, -- [1]
+				69.34306569343066, -- [2]
+				100, -- [3]
+				100, -- [4]
+				100, -- [5]
+				100, -- [6]
+				100, -- [7]
+				100, -- [8]
+				100, -- [9]
+				100, -- [10]
+				100, -- [11]
+				100, -- [12]
+				100, -- [13]
+				100, -- [14]
+				100, -- [15]
+				100, -- [16]
+				80.90024330900243, -- [17]
+				80.90024330900243, -- [18]
+				80.90024330900243, -- [19]
+			},
+			["LastEvents"] = {
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -272 (Physical)", -- [1]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [2]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -571 (Physical)", -- [3]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Dodge", -- [4]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -286 (Physical)", -- [5]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Dodge", -- [6]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -585 (Physical)", -- [7]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -288 (Physical)", -- [8]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [9]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -282 (Physical)", -- [10]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [11]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Crit -546 (Physical)", -- [12]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [13]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -287 (Physical)", -- [14]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -285 (Physical)", -- [15]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Hit -471 (Physical)", -- [16]
+				"Shadowfiend <Caithlyn> Melee Savage Hill Brute Hit -283 (Physical)", -- [17]
+				"Savage Hill Brute Melee Shadowfiend <Caithlyn> Miss", -- [18]
+				"Shadowfiend <Caithlyn> dies.", -- [19]
+			},
+			["Name"] = "Shadowfiend",
+			["inGroup"] = true,
+			["LastEventTimes"] = {
+				19287.377, -- [1]
+				19287.738, -- [2]
+				19288.943, -- [3]
+				19289.799, -- [4]
+				19290.429, -- [5]
+				19291.773, -- [6]
+				19291.947, -- [7]
+				19293.432, -- [8]
+				19293.772, -- [9]
+				19294.969, -- [10]
+				19295.782, -- [11]
+				19296.45, -- [12]
+				19297.762, -- [13]
+				19297.983, -- [14]
+				19299.44, -- [15]
+				19299.813, -- [16]
+				19300.962, -- [17]
+				19301.975, -- [18]
+				19302.26, -- [19]
+			},
+			["Fights"] = {
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight4"] = {
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+								["Miss"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 8,
+						},
+					},
+					["DamageTaken"] = 471,
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 1,
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 17.1,
+					["ElementTaken"] = {
+						["Melee"] = 471,
+					},
+					["Damage"] = 3685,
+					["ElementDone"] = {
+						["Melee"] = 3685,
+					},
+					["Attacks"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 585,
+									["min"] = 546,
+									["count"] = 3,
+									["amount"] = 1702,
+								},
+								["Hit"] = {
+									["max"] = 288,
+									["min"] = 272,
+									["count"] = 7,
+									["amount"] = 1983,
+								},
+							},
+							["count"] = 10,
+							["amount"] = 3685,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 3685,
+								},
+							},
+							["amount"] = 3685,
+						},
+					},
+					["TimeDamage"] = 17.1,
+					["TimeDamaging"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 17.1,
+								},
+							},
+							["amount"] = 17.1,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 471,
+								},
+							},
+							["amount"] = 471,
+						},
+					},
+					["TimeSpent"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 17.1,
+								},
+							},
+							["amount"] = 17.1,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 10,
+						},
+					},
+				},
+				["LastFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+								["Miss"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 8,
+						},
+					},
+					["DamageTaken"] = 471,
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 1,
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["ActiveTime"] = 17.1,
+					["ElementTaken"] = {
+						["Melee"] = 471,
+					},
+					["Damage"] = 3685,
+					["ElementDone"] = {
+						["Melee"] = 3685,
+					},
+					["Attacks"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 585,
+									["min"] = 546,
+									["count"] = 3,
+									["amount"] = 1702,
+								},
+								["Hit"] = {
+									["max"] = 288,
+									["min"] = 272,
+									["count"] = 7,
+									["amount"] = 1983,
+								},
+							},
+							["count"] = 10,
+							["amount"] = 3685,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 3685,
+								},
+							},
+							["amount"] = 3685,
+						},
+					},
+					["TimeDamage"] = 17.1,
+					["TimeDamaging"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 17.1,
+								},
+							},
+							["amount"] = 17.1,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 471,
+								},
+							},
+							["amount"] = 471,
+						},
+					},
+					["TimeSpent"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 17.1,
+								},
+							},
+							["amount"] = 17.1,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 10,
+						},
+					},
+				},
+			},
+			["UnitLockout"] = 1227566275,
+			["LastActive"] = 1227566289,
+		},
+		["Caithlyn"] = {
+			["GUID"] = "0x0000000000009AFA",
+			["LastEventHealth"] = {
+				"12087 (92%)", -- [1]
+				"12087 (92%)", -- [2]
+				"13080 (100%)", -- [3]
+				"13080 (100%)", -- [4]
+				"13080 (100%)", -- [5]
+				"13080 (100%)", -- [6]
+				"13080 (100%)", -- [7]
+				"13080 (100%)", -- [8]
+				"13080 (100%)", -- [9]
+				"13080 (100%)", -- [10]
+				"13080 (100%)", -- [11]
+				"13080 (100%)", -- [12]
+				"13080 (100%)", -- [13]
+				"13080 (100%)", -- [14]
+				"13080 (100%)", -- [15]
+				"13080 (100%)", -- [16]
+				"13080 (100%)", -- [17]
+				"13080 (100%)", -- [18]
+				"13080 (100%)", -- [19]
+				"13080 (100%)", -- [20]
+				"13080 (100%)", -- [21]
+				"13080 (100%)", -- [22]
+				"13080 (100%)", -- [23]
+				"12844 (98%)", -- [24]
+				"12844 (98%)", -- [25]
+				"12844 (98%)", -- [26]
+				"12607 (96%)", -- [27]
+				"12607 (96%)", -- [28]
+				"13080 (100%)", -- [29]
+				"13080 (100%)", -- [30]
+				"13080 (100%)", -- [31]
+				"13080 (100%)", -- [32]
+				"13080 (100%)", -- [33]
+				"13080 (100%)", -- [34]
+				"13080 (100%)", -- [35]
+				"13080 (100%)", -- [36]
+				"13080 (100%)", -- [37]
+				"13080 (100%)", -- [38]
+				"13080 (100%)", -- [39]
+				"13080 (100%)", -- [40]
+				"13080 (100%)", -- [41]
+				"12721 (97%)", -- [42]
+				"12721 (97%)", -- [43]
+				"12721 (97%)", -- [44]
+				"12721 (97%)", -- [45]
+				"12721 (97%)", -- [46]
+				"12721 (97%)", -- [47]
+				"12721 (97%)", -- [48]
+				"12361 (94%)", -- [49]
+				"12361 (94%)", -- [50]
+			},
+			["class"] = "Priest",
+			["level"] = 80,
+			["FightsSaved"] = 4,
+			["GuardianReverseGUIDs"] = {
+				["Shadowfiend"] = "0xF530004CD42ED2AB",
+			},
+			["Owner"] = false,
+			["LastEventHealthNum"] = {
+				92.40825688073394, -- [1]
+				92.40825688073394, -- [2]
+				100, -- [3]
+				100, -- [4]
+				100, -- [5]
+				100, -- [6]
+				100, -- [7]
+				100, -- [8]
+				100, -- [9]
+				100, -- [10]
+				100, -- [11]
+				100, -- [12]
+				100, -- [13]
+				100, -- [14]
+				100, -- [15]
+				100, -- [16]
+				100, -- [17]
+				100, -- [18]
+				100, -- [19]
+				100, -- [20]
+				100, -- [21]
+				100, -- [22]
+				100, -- [23]
+				98.19571865443425, -- [24]
+				98.19571865443425, -- [25]
+				98.19571865443425, -- [26]
+				96.38379204892966, -- [27]
+				96.38379204892966, -- [28]
+				100, -- [29]
+				100, -- [30]
+				100, -- [31]
+				100, -- [32]
+				100, -- [33]
+				100, -- [34]
+				100, -- [35]
+				100, -- [36]
+				100, -- [37]
+				100, -- [38]
+				100, -- [39]
+				100, -- [40]
+				100, -- [41]
+				97.25535168195718, -- [42]
+				97.25535168195718, -- [43]
+				97.25535168195718, -- [44]
+				97.25535168195718, -- [45]
+				97.25535168195718, -- [46]
+				97.25535168195718, -- [47]
+				97.25535168195718, -- [48]
+				94.50305810397553, -- [49]
+				94.50305810397553, -- [50]
+			},
+			["LastEvents"] = {
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [1]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -931 (Shadow)", -- [2]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [3]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [4]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [5]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [6]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [7]
+				"Savage Hill Brute Melee Caithlyn Miss", -- [8]
+				"Caithlyn Mind Blast Savage Hill Brute Hit -2476 (Shadow)", -- [9]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Brute Tick -1323 (Shadow)", -- [10]
+				"Caithlyn Mind Flay Savage Hill Brute Hit -1031 (Shadow)", -- [11]
+				"Savage Hill Brute Melee Caithlyn Absorb", -- [12]
+				"Caithlyn Mind Flay Savage Hill Brute Hit -1031 (Shadow)", -- [13]
+				"Caithlyn Mind Flay Savage Hill Brute Hit -1031 (Shadow)", -- [14]
+				"Savage Hill Brute Melee Caithlyn Miss", -- [15]
+				"Caithlyn Shadow Word: Death Savage Hill Brute Hit -2296 (Shadow)", -- [16]
+				"Savage Hill Scavenger Bone Toss Caithlyn Absorb", -- [17]
+				"Caithlyn Vampiric Touch Savage Hill Scavenger Evade", -- [18]
+				"Caithlyn Shadow Word: Pain Savage Hill Scavenger Evade", -- [19]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1701 (Shadow)", -- [20]
+				"Savage Hill Scavenger Melee Caithlyn Absorb", -- [21]
+				"Savage Hill Scavenger Melee Caithlyn Absorb", -- [22]
+				"Caithlyn Mind Blast Savage Hill Scavenger Hit -3379 (Shadow)", -- [23]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1702 (Shadow)", -- [24]
+				"Caithlyn Mind Flay Savage Hill Scavenger Hit -1486 (Shadow)", -- [25]
+				"Savage Hill Scavenger Melee Caithlyn Hit -237 (Physical)", -- [26]
+				"Caithlyn Mind Flay Savage Hill Scavenger Hit -1472 (Shadow)", -- [27]
+				"Caithlyn Shadow Word: Death Savage Hill Scavenger Hit -2893 (Shadow)", -- [28]
+				"Caithlyn Glyph of Power Word: Shield Caithlyn Hit +777 (777 overheal)", -- [29]
+				"Savage Hill Scavenger Bone Toss Caithlyn Absorb", -- [30]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1324 (Shadow)", -- [31]
+				"Caithlyn Mind Blast Savage Hill Scavenger Hit -2784 (Shadow)", -- [32]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -930 (Shadow)", -- [33]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [34]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -930 (Shadow)", -- [35]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [36]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -931 (Shadow)", -- [37]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [38]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -930 (Shadow)", -- [39]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [40]
+				"Savage Hill Scavenger Bone Toss Caithlyn Hit -359 (Physical)", -- [41]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -931 (Shadow)", -- [42]
+				"Caithlyn Mind Blast Savage Hill Scavenger Hit -2813 (Shadow)", -- [43]
+				"Caithlyn Vampiric Touch (DoT) Savage Hill Scavenger Tick -1323 (Shadow)", -- [44]
+				"Savage Hill Scavenger Melee Caithlyn Miss", -- [45]
+				"Caithlyn Mind Flay Savage Hill Scavenger Hit -1259 (Shadow)", -- [46]
+				"Caithlyn Shadow Word: Pain (DoT) Savage Hill Scavenger Tick -931 (Shadow)", -- [47]
+				"Savage Hill Scavenger Bone Toss Caithlyn Hit -360 (Physical)", -- [48]
+				"Caithlyn Mind Flay Savage Hill Scavenger Hit -1260 (Shadow)", -- [49]
+				"Savage Hill Scavenger Melee Caithlyn Hit -274 (Physical)", -- [50]
+			},
+			["LastAbility"] = 19413.263,
+			["TimeLast"] = {
+				["TimeHeal"] = 1227566293,
+				["OVERALL"] = 1227566412,
+				["DamageTaken"] = 1227566400,
+				["Overhealing"] = 1227566293,
+				["ActiveTime"] = 1227566401,
+				["TimeDamage"] = 1227566401,
+				["ManaGain"] = 1227566412,
+				["DOT_Time"] = 1227566401,
+				["Damage"] = 1227566401,
+			},
+			["LastAttackedBy"] = "Savage Hill Scavenger",
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
+				"DAMAGE", -- [10]
+				"DAMAGE", -- [11]
+				"DAMAGE", -- [12]
+				"DAMAGE", -- [13]
+				"DAMAGE", -- [14]
+				"DAMAGE", -- [15]
+				"DAMAGE", -- [16]
+				"DAMAGE", -- [17]
+				"DAMAGE", -- [18]
+				"DAMAGE", -- [19]
+				"DAMAGE", -- [20]
+				"DAMAGE", -- [21]
+				"DAMAGE", -- [22]
+				"DAMAGE", -- [23]
+				"DAMAGE", -- [24]
+				"DAMAGE", -- [25]
+				"DAMAGE", -- [26]
+				"DAMAGE", -- [27]
+				"DAMAGE", -- [28]
+				"HEAL", -- [29]
+				"DAMAGE", -- [30]
+				"DAMAGE", -- [31]
+				"DAMAGE", -- [32]
+				"DAMAGE", -- [33]
+				"DAMAGE", -- [34]
+				"DAMAGE", -- [35]
+				"DAMAGE", -- [36]
+				"DAMAGE", -- [37]
+				"DAMAGE", -- [38]
+				"DAMAGE", -- [39]
+				"DAMAGE", -- [40]
+				"DAMAGE", -- [41]
+				"DAMAGE", -- [42]
+				"DAMAGE", -- [43]
+				"DAMAGE", -- [44]
+				"DAMAGE", -- [45]
+				"DAMAGE", -- [46]
+				"DAMAGE", -- [47]
+				"DAMAGE", -- [48]
+				"DAMAGE", -- [49]
+				"DAMAGE", -- [50]
+			},
+			["TimeWindows"] = {
+				["DamageTaken"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["TimeHeal"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["Overhealing"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["ActiveTime"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["TimeDamage"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["ManaGain"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["DOT_Time"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["Damage"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+			},
+			["enClass"] = "PRIEST",
+			["unit"] = "Caithlyn",
+			["LastDamageAbility"] = "Melee",
+			["AbilityType"] = {
+				["Mind Blast"] = "Shadow",
+				["Vampiric Touch (DoT)"] = "Shadow",
+				["Shadow Word: Pain (DoT)"] = "Shadow",
+				["Mind Flay"] = "Shadow",
+				["Shadow Word: Death"] = "Shadow",
+			},
+			["LastFightIn"] = 3,
+			["LastEventNum"] = {
+				[26] = 1.811926605504587,
+				[50] = 2.09480122324159,
+				[29] = 5.940366972477064,
+				[48] = 2.752293577981651,
+				[41] = 2.744648318042814,
+			},
+			["type"] = "Self",
+			["LastDamageTaken"] = 274,
+			["isFriend"] = true,
+			["TimeData"] = {
+				["DamageTaken"] = {
+					{
+						1227566335, -- [1]
+						1227566336, -- [2]
+						1227566337, -- [3]
+						1227566387, -- [4]
+						1227566390, -- [5]
+						1227566392, -- [6]
+						1227566395, -- [7]
+						1227566397, -- [8]
+						1227566398, -- [9]
+						1227566401, -- [10]
+						1227566403, -- [11]
+						1227566408, -- [12]
+						1227566411, -- [13]
+						1227566412, -- [14]
+						1227566413, -- [15]
+					}, -- [1]
+					{
+						0, -- [1]
+						1.755555555555556, -- [2]
+						0, -- [3]
+						0, -- [4]
+						15.95555555555556, -- [5]
+						37.25925925925926, -- [6]
+						65.43703703703703, -- [7]
+						73.55555555555554, -- [8]
+						73.55555555555554, -- [9]
+						65.57777777777777, -- [10]
+						54.92592592592592, -- [11]
+						18.14814814814815, -- [12]
+						4.059259259259259, -- [13]
+						2.02962962962963, -- [14]
+						0, -- [15]
+					}, -- [2]
+				},
+				["TimeHeal"] = {
+					{
+						1227566304, -- [1]
+						1227566305, -- [2]
+						1227566306, -- [3]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.02592592592592593, -- [2]
+						0, -- [3]
+					}, -- [2]
+				},
+				["Overhealing"] = {
+					{
+						1227566304, -- [1]
+						1227566305, -- [2]
+						1227566306, -- [3]
+					}, -- [1]
+					{
+						0, -- [1]
+						5.762962962962964, -- [2]
+						0, -- [3]
+					}, -- [2]
+				},
+				["ActiveTime"] = {
+					{
+						1227566300, -- [1]
+						1227566304, -- [2]
+						1227566338, -- [3]
+						1227566339, -- [4]
+						1227566386, -- [5]
+						1227566387, -- [6]
+						1227566387, -- [7]
+						1227566413, -- [8]
+						1227566414, -- [9]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.1022222222222222, -- [2]
+						0.006222222222222222, -- [3]
+						0, -- [4]
+						0.02555555555555555, -- [5]
+						0, -- [6]
+						0, -- [7]
+						0.01533333333333333, -- [8]
+						0, -- [9]
+					}, -- [2]
+				},
+				["TimeDamage"] = {
+					{
+						1227566300, -- [1]
+						1227566338, -- [2]
+						1227566339, -- [3]
+						1227566386, -- [4]
+						1227566387, -- [5]
+						1227566387, -- [6]
+						1227566413, -- [7]
+						1227566414, -- [8]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.006222222222222222, -- [2]
+						0, -- [3]
+						0.02555555555555555, -- [4]
+						0, -- [5]
+						0, -- [6]
+						0.01533333333333333, -- [7]
+						0, -- [8]
+					}, -- [2]
+				},
+				["ManaGain"] = {
+					{
+						1227566281, -- [1]
+						1227566286, -- [2]
+						1227566287, -- [3]
+						1227566288, -- [4]
+						1227566289, -- [5]
+						1227566291, -- [6]
+						1227566292, -- [7]
+						1227566293, -- [8]
+						1227566294, -- [9]
+						1227566296, -- [10]
+						1227566297, -- [11]
+						1227566299, -- [12]
+						1227566300, -- [13]
+						1227566302, -- [14]
+						1227566311, -- [15]
+						1227566314, -- [16]
+						1227566315, -- [17]
+						1227566318, -- [18]
+						1227566320, -- [19]
+						1227566326, -- [20]
+						1227566331, -- [21]
+						1227566333, -- [22]
+						1227566335, -- [23]
+						1227566343, -- [24]
+						1227566346, -- [25]
+						1227566349, -- [26]
+						1227566350, -- [27]
+						1227566351, -- [28]
+						1227566356, -- [29]
+						1227566358, -- [30]
+						1227566360, -- [31]
+						1227566362, -- [32]
+						1227566367, -- [33]
+						1227566368, -- [34]
+						1227566371, -- [35]
+						1227566372, -- [36]
+						1227566374, -- [37]
+						1227566375, -- [38]
+						1227566376, -- [39]
+						1227566379, -- [40]
+						1227566386, -- [41]
+						1227566389, -- [42]
+						1227566390, -- [43]
+						1227566391, -- [44]
+						1227566392, -- [45]
+						1227566393, -- [46]
+						1227566402, -- [47]
+						1227566405, -- [48]
+						1227566406, -- [49]
+						1227566407, -- [50]
+						1227566408, -- [51]
+						1227566409, -- [52]
+						1227566417, -- [53]
+						1227566420, -- [54]
+						1227566423, -- [55]
+						1227566424, -- [56]
+						1227566425, -- [57]
+					}, -- [1]
+					{
+						0, -- [1]
+						45.40740740740741, -- [2]
+						317.5777777777778, -- [3]
+						285.8074074074074, -- [4]
+						258.5777777777777, -- [5]
+						195.0592592592593, -- [6]
+						167.8444444444444, -- [7]
+						136.0888888888889, -- [8]
+						108.8740740740741, -- [9]
+						63.51111111111112, -- [10]
+						45.37037037037037, -- [11]
+						18.15555555555556, -- [12]
+						9.644444444444446, -- [13]
+						3.377777777777778, -- [14]
+						27.88148148148149, -- [15]
+						33.83703703703704, -- [16]
+						34.6962962962963, -- [17]
+						33.86666666666667, -- [18]
+						32.48888888888889, -- [19]
+						32.80740740740741, -- [20]
+						35.74074074074075, -- [21]
+						35.16296296296297, -- [22]
+						32.33333333333334, -- [23]
+						10.2, -- [24]
+						4.229629629629629, -- [25]
+						0.8444444444444446, -- [26]
+						0.2814814814814815, -- [27]
+						0, -- [28]
+						0, -- [29]
+						1.688888888888889, -- [30]
+						5.629629629629631, -- [31]
+						11.27407407407408, -- [32]
+						24.8888888888889, -- [33]
+						28.00000000000001, -- [34]
+						33.97037037037038, -- [35]
+						34.82962962962964, -- [36]
+						34.26666666666667, -- [37]
+						32.57037037037038, -- [38]
+						30.02222222222223, -- [39]
+						27.1925925925926, -- [40]
+						7.925925925925927, -- [41]
+						2.82962962962963, -- [42]
+						1.696296296296296, -- [43]
+						1.422222222222223, -- [44]
+						2, -- [45]
+						3.422222222222223, -- [46]
+						28.00740740740741, -- [47]
+						33.8962962962963, -- [48]
+						34.73333333333334, -- [49]
+						34.72592592592594, -- [50]
+						33.87407407407408, -- [51]
+						32.17037037037039, -- [52]
+						10.14074074074074, -- [53]
+						4.222222222222223, -- [54]
+						0.8444444444444446, -- [55]
+						0.2814814814814815, -- [56]
+						0, -- [57]
+					}, -- [2]
+				},
+				["DOT_Time"] = {
+					{
+						1227566312, -- [1]
+						1227566335, -- [2]
+						1227566336, -- [3]
+						1227566386, -- [4]
+						1227566387, -- [5]
+						1227566387, -- [6]
+						1227566413, -- [7]
+						1227566414, -- [8]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.02222222222222222, -- [2]
+						0, -- [3]
+						0.06666666666666667, -- [4]
+						0, -- [5]
+						0, -- [6]
+						0.04444444444444445, -- [7]
+						0, -- [8]
+					}, -- [2]
+				},
+				["Damage"] = {
+					{
+						1227566300, -- [1]
+						1227566301, -- [2]
+						1227566302, -- [3]
+						1227566305, -- [4]
+						1227566306, -- [5]
+						1227566307, -- [6]
+						1227566311, -- [7]
+						1227566312, -- [8]
+						1227566313, -- [9]
+						1227566315, -- [10]
+						1227566316, -- [11]
+						1227566317, -- [12]
+						1227566318, -- [13]
+						1227566319, -- [14]
+						1227566320, -- [15]
+						1227566321, -- [16]
+						1227566322, -- [17]
+						1227566323, -- [18]
+						1227566326, -- [19]
+						1227566327, -- [20]
+						1227566328, -- [21]
+						1227566329, -- [22]
+						1227566333, -- [23]
+						1227566336, -- [24]
+						1227566337, -- [25]
+						1227566338, -- [26]
+						1227566339, -- [27]
+						1227566355, -- [28]
+						1227566356, -- [29]
+						1227566358, -- [30]
+						1227566359, -- [31]
+						1227566360, -- [32]
+						1227566361, -- [33]
+						1227566362, -- [34]
+						1227566363, -- [35]
+						1227566364, -- [36]
+						1227566365, -- [37]
+						1227566366, -- [38]
+						1227566367, -- [39]
+						1227566369, -- [40]
+						1227566370, -- [41]
+						1227566372, -- [42]
+						1227566373, -- [43]
+						1227566375, -- [44]
+						1227566376, -- [45]
+						1227566379, -- [46]
+						1227566381, -- [47]
+						1227566382, -- [48]
+						1227566384, -- [49]
+						1227566385, -- [50]
+						1227566386, -- [51]
+						1227566387, -- [52]
+						1227566387, -- [53]
+						1227566388, -- [54]
+						1227566390, -- [55]
+						1227566391, -- [56]
+						1227566392, -- [57]
+						1227566393, -- [58]
+						1227566395, -- [59]
+						1227566396, -- [60]
+						1227566398, -- [61]
+						1227566399, -- [62]
+						1227566401, -- [63]
+						1227566402, -- [64]
+						1227566404, -- [65]
+						1227566408, -- [66]
+						1227566409, -- [67]
+						1227566411, -- [68]
+						1227566412, -- [69]
+						1227566413, -- [70]
+						1227566414, -- [71]
+					}, -- [1]
+					{
+						0, -- [1]
+						15.27407407407408, -- [2]
+						45.82222222222222, -- [3]
+						239.5111111111111, -- [4]
+						288.8, -- [5]
+						322.8148148148148, -- [6]
+						322.8148148148148, -- [7]
+						315.1777777777778, -- [8]
+						325.1037037037037, -- [9]
+						310.9407407407408, -- [10]
+						379.1333333333333, -- [11]
+						469.3407407407408, -- [12]
+						609.3703703703704, -- [13]
+						703.2666666666668, -- [14]
+						815.5037037037037, -- [15]
+						869.9037037037035, -- [16]
+						909.9259259259259, -- [17]
+						935.7777777777777, -- [18]
+						897.9777777777778, -- [19]
+						847.7407407407408, -- [20]
+						786.4962962962964, -- [21]
+						714.3481481481481, -- [22]
+						340.0370370370371, -- [23]
+						97.10370370370373, -- [24]
+						53.76296296296297, -- [25]
+						21.42962962962963, -- [26]
+						0, -- [27]
+						0, -- [28]
+						60.85925925925926, -- [29]
+						210.1333333333334, -- [30]
+						304.3703703703704, -- [31]
+						412.3851851851852, -- [32]
+						459.5407407407408, -- [33]
+						512.5185185185186, -- [34]
+						579.2888888888889, -- [35]
+						626.4592592592593, -- [36]
+						679.4518518518519, -- [37]
+						746.2222222222223, -- [38]
+						762.9629629629631, -- [39]
+						755.0814814814814, -- [40]
+						721.7407407407409, -- [41]
+						613.7259259259259, -- [42]
+						549.9185185185186, -- [43]
+						408.5111111111111, -- [44]
+						328.0074074074074, -- [45]
+						271.0444444444445, -- [46]
+						170.8962962962963, -- [47]
+						130.6222222222222, -- [48]
+						63.85185185185186, -- [49]
+						40.26666666666667, -- [50]
+						23.57777777777778, -- [51]
+						0, -- [52]
+						0, -- [53]
+						47.17037037037037, -- [54]
+						224.8592592592593, -- [55]
+						365.7481481481481, -- [56]
+						525.3037037037037, -- [57]
+						637.6888888888889, -- [58]
+						845.8962962962962, -- [59]
+						897.9555555555555, -- [60]
+						964.7407407407407, -- [61]
+						941.1555555555556, -- [62]
+						852.3111111111111, -- [63]
+						781.8666666666668, -- [64]
+						622.3111111111111, -- [65]
+						236.4148148148149, -- [66]
+						163.525925925926, -- [67]
+						59.42222222222223, -- [68]
+						33.39259259259259, -- [69]
+						16.6962962962963, -- [70]
+						0, -- [71]
+					}, -- [2]
+				},
+			},
+			["TimeNeedZero"] = {
+				["DamageTaken"] = false,
+				["TimeHeal"] = false,
+				["Overhealing"] = false,
+				["ActiveTime"] = false,
+				["TimeDamage"] = false,
+				["ManaGain"] = false,
+				["DOT_Time"] = false,
+				["Damage"] = false,
+			},
+			["Pet"] = {
+				"Shadowfiend <Caithlyn>", -- [1]
+			},
+			["NextEventNum"] = 3,
+			["LastEventIncoming"] = {
+				false, -- [1]
+				false, -- [2]
+				true, -- [3]
+				true, -- [4]
+				true, -- [5]
+				true, -- [6]
+				true, -- [7]
+				true, -- [8]
+				false, -- [9]
+				false, -- [10]
+				false, -- [11]
+				true, -- [12]
+				false, -- [13]
+				false, -- [14]
+				true, -- [15]
+				false, -- [16]
+				true, -- [17]
+				false, -- [18]
+				false, -- [19]
+				false, -- [20]
+				true, -- [21]
+				true, -- [22]
+				false, -- [23]
+				false, -- [24]
+				false, -- [25]
+				true, -- [26]
+				false, -- [27]
+				false, -- [28]
+				true, -- [29]
+				true, -- [30]
+				false, -- [31]
+				false, -- [32]
+				false, -- [33]
+				false, -- [34]
+				false, -- [35]
+				false, -- [36]
+				false, -- [37]
+				false, -- [38]
+				false, -- [39]
+				false, -- [40]
+				true, -- [41]
+				false, -- [42]
+				false, -- [43]
+				false, -- [44]
+				true, -- [45]
+				false, -- [46]
+				false, -- [47]
+				true, -- [48]
+				false, -- [49]
+				true, -- [50]
+			},
+			["isPlayer"] = true,
+			["Name"] = "Caithlyn",
+			["inGroup"] = true,
+			["LastEventTimes"] = {
+				19412.953, -- [1]
+				19413.263, -- [2]
+				19307.877, -- [3]
+				19309.899, -- [4]
+				19311.95, -- [5]
+				19313.907, -- [6]
+				19315.927, -- [7]
+				19317.936, -- [8]
+				19318.358, -- [9]
+				19319.809, -- [10]
+				19319.979, -- [11]
+				19319.98, -- [12]
+				19320.527, -- [13]
+				19321.569, -- [14]
+				19321.973, -- [15]
+				19322.363, -- [16]
+				19330.994, -- [17]
+				19332.15, -- [18]
+				19332.372, -- [19]
+				19333.009, -- [20]
+				19333.276, -- [21]
+				19335.269, -- [22]
+				19335.646, -- [23]
+				19336.02, -- [24]
+				19336.971, -- [25]
+				19337.262, -- [26]
+				19338.025, -- [27]
+				19338.866, -- [28]
+				19367.981, -- [29]
+				19374.715, -- [30]
+				19375.988, -- [31]
+				19376.043, -- [32]
+				19376.391, -- [33]
+				19378.997, -- [34]
+				19379.395, -- [35]
+				19381.998, -- [36]
+				19382.39, -- [37]
+				19384.975, -- [38]
+				19385.41, -- [39]
+				19406.933, -- [40]
+				19406.984, -- [41]
+				19407.257, -- [42]
+				19408.799, -- [43]
+				19409.968, -- [44]
+				19410.065, -- [45]
+				19410.116, -- [46]
+				19410.262, -- [47]
+				19410.888, -- [48]
+				19411.197, -- [49]
+				19412.716, -- [50]
+			},
+			["Fights"] = {
+				["Fight2"] = {
+					["DOTs"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 12,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 12,
+								},
+							},
+							["amount"] = 12,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Tick"] = {
+									["count"] = 8,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 24,
+					["Damage"] = 11798,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Shadow"] = 11798,
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 2784,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 5293,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 3721,
+								},
+							},
+							["amount"] = 11798,
+						},
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 803,
+								},
+							},
+							["amount"] = 803,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 803,
+								},
+							},
+							["amount"] = 803,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 0.06,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 11.3,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 1.57,
+								},
+							},
+							["amount"] = 12.93,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 12.93,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2784,
+									["min"] = 2784,
+									["count"] = 1,
+									["amount"] = 2784,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2784,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1324,
+									["min"] = 1323,
+									["count"] = 4,
+									["amount"] = 5293,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 5293,
+						},
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 931,
+									["min"] = 930,
+									["count"] = 4,
+									["amount"] = 3721,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 3721,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 12.93,
+					["TimeDamaging"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 0.06,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 11.3,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 1.57,
+								},
+							},
+							["amount"] = 12.93,
+						},
+					},
+					["ManaGain"] = 803,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 381,
+								},
+							},
+							["amount"] = 381,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 381,
+								},
+							},
+							["amount"] = 381,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 0,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 381,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight3"] = {
+					["DOTs"] = {
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 237,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Absorb"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 4,
+								},
+								["Tick"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Melee"] = 237,
+					},
+					["DOT_Time"] = 6,
+					["Damage"] = 12633,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Shadow"] = 12633,
+					},
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 3379,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 3403,
+								},
+								["Mind Flay"] = {
+									["count"] = 2958,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 2893,
+								},
+							},
+							["amount"] = 12633,
+						},
+					},
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 237,
+								},
+							},
+							["amount"] = 237,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 534,
+								},
+							},
+							["amount"] = 534,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 534,
+								},
+							},
+							["amount"] = 534,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 2.64,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.01,
+								},
+								["Shadow Word: Pain"] = {
+									["count"] = 0.22,
+								},
+								["Vampiric Touch"] = {
+									["count"] = 3.5,
+								},
+								["Mind Flay"] = {
+									["count"] = 2,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.84,
+								},
+							},
+							["amount"] = 10.21,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 10.21,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 3379,
+									["min"] = 3379,
+									["count"] = 1,
+									["amount"] = 3379,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 3379,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1702,
+									["min"] = 1701,
+									["count"] = 2,
+									["amount"] = 3403,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 3403,
+						},
+						["Shadow Word: Pain"] = {
+							["Details"] = {
+								["Evade"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Vampiric Touch"] = {
+							["Details"] = {
+								["Evade"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Mind Flay"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1486,
+									["min"] = 1472,
+									["count"] = 2,
+									["amount"] = 2958,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 2958,
+						},
+						["Shadow Word: Death"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2893,
+									["min"] = 2893,
+									["count"] = 1,
+									["amount"] = 2893,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2893,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 10.21,
+					["TimeDamaging"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 2.64,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.01,
+								},
+								["Shadow Word: Pain"] = {
+									["count"] = 0.22,
+								},
+								["Vampiric Touch"] = {
+									["count"] = 3.5,
+								},
+								["Mind Flay"] = {
+									["count"] = 2,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.84,
+								},
+							},
+							["amount"] = 10.21,
+						},
+					},
+					["ManaGain"] = 534,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight4"] = {
+					["TimeHealing"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Glyph of Power Word: Shield"] = {
+									["count"] = 3.5,
+								},
+							},
+							["amount"] = 3.5,
+						},
+					},
+					["OverHeals"] = {
+						["Glyph of Power Word: Shield"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 778,
+									["min"] = 778,
+									["count"] = 1,
+									["amount"] = 778,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 778,
+						},
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Absorb"] = {
+									["count"] = 6,
+								},
+								["Miss"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ManaGained"] = {
+						["Mana Leech"] = {
+							["Details"] = {
+								["Shadowfiend <Caithlyn>"] = {
+									["count"] = 6126,
+								},
+							},
+							["amount"] = 6126,
+						},
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 228,
+								},
+							},
+							["amount"] = 228,
+						},
+					},
+					["Overhealing"] = 778,
+					["ActiveTime"] = 11,
+					["DOT_Time"] = 3,
+					["Damage"] = 9188,
+					["TimeHeal"] = 3.5,
+					["DOTs"] = {
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Brute"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["Attacks"] = {
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2476,
+									["min"] = 2476,
+									["count"] = 1,
+									["amount"] = 2476,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2476,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1323,
+									["min"] = 1323,
+									["count"] = 1,
+									["amount"] = 1323,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 1323,
+						},
+						["Mind Flay"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1031,
+									["min"] = 1031,
+									["count"] = 3,
+									["amount"] = 3093,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 3093,
+						},
+						["Shadow Word: Death"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2296,
+									["min"] = 2296,
+									["count"] = 1,
+									["amount"] = 2296,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2296,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 2476,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1323,
+								},
+								["Mind Flay"] = {
+									["count"] = 3093,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 2296,
+								},
+							},
+							["amount"] = 9188,
+						},
+					},
+					["ManaGainedFrom"] = {
+						["Shadowfiend <Caithlyn>"] = {
+							["Details"] = {
+								["Mana Leech"] = {
+									["count"] = 6126,
+								},
+							},
+							["amount"] = 6126,
+						},
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 228,
+								},
+							},
+							["amount"] = 228,
+						},
+					},
+					["TimeDamage"] = 7.5,
+					["TimeDamaging"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 3.5,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.45,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.76,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.79,
+								},
+							},
+							["amount"] = 7.5,
+						},
+					},
+					["ManaGain"] = 6354,
+					["ElementDone"] = {
+						["Shadow"] = 9188,
+					},
+					["TimeSpent"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 3.5,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.45,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.76,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.79,
+								},
+							},
+							["amount"] = 7.5,
+						},
+						["Caithlyn"] = {
+							["Details"] = {
+								["Glyph of Power Word: Shield"] = {
+									["count"] = 3.5,
+								},
+							},
+							["amount"] = 3.5,
+						},
+					},
+				},
+				["LastFightData"] = {
+					["DOTs"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 9,
+								},
+							},
+							["amount"] = 9,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 9,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 993,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Tick"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Melee"] = 274,
+						["Physical"] = 719,
+					},
+					["DOT_Time"] = 18,
+					["Damage"] = 12094,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Shadow"] = 12094,
+					},
+					["PartialAbsorb"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 2793,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 3969,
+								},
+								["Mind Flay"] = {
+									["count"] = 2519,
+								},
+								["Mind Blast"] = {
+									["count"] = 2813,
+								},
+							},
+							["amount"] = 12094,
+						},
+					},
+					["PartialBlock"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Bone Toss"] = {
+									["count"] = 719,
+								},
+								["Melee"] = {
+									["count"] = 274,
+								},
+							},
+							["amount"] = 993,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 344,
+								},
+							},
+							["amount"] = 344,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 344,
+								},
+							},
+							["amount"] = 344,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 0.78,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 6.43,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.09,
+								},
+								["Mind Blast"] = {
+									["count"] = 1.54,
+								},
+							},
+							["amount"] = 9.84,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 9.84,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 931,
+									["min"] = 931,
+									["count"] = 3,
+									["amount"] = 2793,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 2793,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1323,
+									["min"] = 1323,
+									["count"] = 3,
+									["amount"] = 3969,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 3969,
+						},
+						["Mind Flay"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1260,
+									["min"] = 1259,
+									["count"] = 2,
+									["amount"] = 2519,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 2519,
+						},
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2813,
+									["min"] = 2813,
+									["count"] = 1,
+									["amount"] = 2813,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2813,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 9.84,
+					["TimeDamaging"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 0.78,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 6.43,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.09,
+								},
+								["Mind Blast"] = {
+									["count"] = 1.54,
+								},
+							},
+							["amount"] = 9.84,
+						},
+					},
+					["ManaGain"] = 344,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight1"] = {
+					["DOTs"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 9,
+								},
+							},
+							["amount"] = 9,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 9,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 993,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+								["Tick"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 9,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["ElementTaken"] = {
+						["Melee"] = 274,
+						["Physical"] = 719,
+					},
+					["DOT_Time"] = 18,
+					["Damage"] = 12094,
+					["ElementTakenBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDone"] = {
+						["Shadow"] = 12094,
+					},
+					["PartialAbsorb"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 2793,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 3969,
+								},
+								["Mind Flay"] = {
+									["count"] = 2519,
+								},
+								["Mind Blast"] = {
+									["count"] = 2813,
+								},
+							},
+							["amount"] = 12094,
+						},
+					},
+					["PartialBlock"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Bone Toss"] = {
+									["count"] = 719,
+								},
+								["Melee"] = {
+									["count"] = 274,
+								},
+							},
+							["amount"] = 993,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialResist"] = {
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["ManaGainedFrom"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 344,
+								},
+							},
+							["amount"] = 344,
+						},
+					},
+					["RunicPowerGained"] = {
+					},
+					["CCBreak"] = 0,
+					["RageGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 344,
+								},
+							},
+							["amount"] = 344,
+						},
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 0.78,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 6.43,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.09,
+								},
+								["Mind Blast"] = {
+									["count"] = 1.54,
+								},
+							},
+							["amount"] = 9.84,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["RunicPowerGain"] = 0,
+					["Heals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["ActiveTime"] = 9.84,
+					["Healing"] = 0,
+					["FDamagedWho"] = {
+					},
+					["Dispelled"] = 0,
+					["Attacks"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 931,
+									["min"] = 931,
+									["count"] = 3,
+									["amount"] = 2793,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 2793,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1323,
+									["min"] = 1323,
+									["count"] = 3,
+									["amount"] = 3969,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 3969,
+						},
+						["Mind Flay"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1260,
+									["min"] = 1259,
+									["count"] = 2,
+									["amount"] = 2519,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 2519,
+						},
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2813,
+									["min"] = 2813,
+									["count"] = 1,
+									["amount"] = 2813,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 2813,
+						},
+					},
+					["HealingTaken"] = 0,
+					["RageGain"] = 0,
+					["TimeDamage"] = 9.84,
+					["TimeDamaging"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 0.78,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 6.43,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.09,
+								},
+								["Mind Blast"] = {
+									["count"] = 1.54,
+								},
+							},
+							["amount"] = 9.84,
+						},
+					},
+					["ManaGain"] = 344,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["TimeHealing"] = {
+						["Caithlyn"] = {
+							["Details"] = {
+								["Glyph of Power Word: Shield"] = {
+									["count"] = 3.5,
+								},
+							},
+							["amount"] = 3.5,
+						},
+					},
+					["OverHeals"] = {
+						["Glyph of Power Word: Shield"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 778,
+									["min"] = 778,
+									["count"] = 1,
+									["amount"] = 778,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 778,
+						},
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Absorb"] = {
+									["count"] = 8,
+								},
+								["Hit"] = {
+									["count"] = 2,
+								},
+								["Miss"] = {
+									["count"] = 4,
+								},
+							},
+							["amount"] = 14,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["DamageTaken"] = 1230,
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+					},
+					["ManaGained"] = {
+						["Mana Leech"] = {
+							["Details"] = {
+								["Shadowfiend <Caithlyn>"] = {
+									["count"] = 6126,
+								},
+							},
+							["amount"] = 6126,
+						},
+						["Replenishment"] = {
+							["Details"] = {
+								["Caithlyn"] = {
+									["count"] = 2290,
+								},
+							},
+							["amount"] = 2290,
+						},
+					},
+					["Overhealing"] = 778,
+					["ActiveTime"] = 43.98,
+					["ElementTaken"] = {
+						["Melee"] = 511,
+						["Physical"] = 719,
+					},
+					["DOT_Time"] = 51,
+					["Damage"] = 45713,
+					["TimeHeal"] = 3.5,
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["Bone Toss"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+					},
+					["WhoDamaged"] = {
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 511,
+								},
+								["Bone Toss"] = {
+									["count"] = 719,
+								},
+							},
+							["amount"] = 1230,
+						},
+					},
+					["DOTs"] = {
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Scavenger"] = {
+									["count"] = 21,
+								},
+							},
+							["amount"] = 21,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Savage Hill Brute"] = {
+									["count"] = 3,
+								},
+								["Savage Hill Scavenger"] = {
+									["count"] = 27,
+								},
+							},
+							["amount"] = 30,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 17,
+								},
+								["Hit"] = {
+									["count"] = 13,
+								},
+							},
+							["amount"] = 30,
+						},
+					},
+					["Attacks"] = {
+						["Mind Blast"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 3379,
+									["min"] = 2476,
+									["count"] = 4,
+									["amount"] = 11452,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 11452,
+						},
+						["Vampiric Touch (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 1702,
+									["min"] = 1323,
+									["count"] = 10,
+									["amount"] = 13988,
+								},
+							},
+							["count"] = 10,
+							["amount"] = 13988,
+						},
+						["Shadow Word: Pain (DoT)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 931,
+									["min"] = 930,
+									["count"] = 7,
+									["amount"] = 6514,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 6514,
+						},
+						["Shadow Word: Pain"] = {
+							["Details"] = {
+								["Evade"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Mind Flay"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 1486,
+									["min"] = 1031,
+									["count"] = 7,
+									["amount"] = 8570,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 8570,
+						},
+						["Vampiric Touch"] = {
+							["Details"] = {
+								["Evade"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["Shadow Word: Death"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 2893,
+									["min"] = 2296,
+									["count"] = 2,
+									["amount"] = 5189,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 5189,
+						},
+					},
+					["DamagedWho"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 2476,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1323,
+								},
+								["Mind Flay"] = {
+									["count"] = 3093,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 2296,
+								},
+							},
+							["amount"] = 9188,
+						},
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 8976,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 12665,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 6514,
+								},
+								["Mind Flay"] = {
+									["count"] = 5477,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 2893,
+								},
+							},
+							["amount"] = 36525,
+						},
+					},
+					["ManaGainedFrom"] = {
+						["Shadowfiend <Caithlyn>"] = {
+							["Details"] = {
+								["Mana Leech"] = {
+									["count"] = 6126,
+								},
+							},
+							["amount"] = 6126,
+						},
+						["Caithlyn"] = {
+							["Details"] = {
+								["Replenishment"] = {
+									["count"] = 2290,
+								},
+							},
+							["amount"] = 2290,
+						},
+					},
+					["TimeDamage"] = 40.48,
+					["TimeDamaging"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 3.5,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.45,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.76,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.79,
+								},
+							},
+							["amount"] = 7.5,
+						},
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 4.24,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 18.74,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 2.35,
+								},
+								["Shadow Word: Pain"] = {
+									["count"] = 0.22,
+								},
+								["Vampiric Touch"] = {
+									["count"] = 3.5,
+								},
+								["Mind Flay"] = {
+									["count"] = 3.09,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.84,
+								},
+							},
+							["amount"] = 32.98,
+						},
+					},
+					["ManaGain"] = 8416,
+					["ElementDone"] = {
+						["Shadow"] = 45713,
+					},
+					["TimeSpent"] = {
+						["Savage Hill Brute"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 3.5,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 1.45,
+								},
+								["Mind Flay"] = {
+									["count"] = 1.76,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.79,
+								},
+							},
+							["amount"] = 7.5,
+						},
+						["Savage Hill Scavenger"] = {
+							["Details"] = {
+								["Mind Blast"] = {
+									["count"] = 4.24,
+								},
+								["Vampiric Touch (DoT)"] = {
+									["count"] = 18.74,
+								},
+								["Shadow Word: Pain (DoT)"] = {
+									["count"] = 2.35,
+								},
+								["Shadow Word: Pain"] = {
+									["count"] = 0.22,
+								},
+								["Vampiric Touch"] = {
+									["count"] = 3.5,
+								},
+								["Mind Flay"] = {
+									["count"] = 3.09,
+								},
+								["Shadow Word: Death"] = {
+									["count"] = 0.84,
+								},
+							},
+							["amount"] = 32.98,
+						},
+						["Caithlyn"] = {
+							["Details"] = {
+								["Glyph of Power Word: Shield"] = {
+									["count"] = 3.5,
+								},
+							},
+							["amount"] = 3.5,
+						},
+					},
+				},
+			},
+			["UnitLockout"] = 1227566293,
+			["LastActive"] = 1227566412,
+		},
+	},
+	["FightNum"] = 4,
+	["CombatTimes"] = {
+		{
+			1227566275, -- [1]
+			1227566313, -- [2]
+			"23:37:55", -- [3]
+			"23:38:33", -- [4]
+			"Savage Hill Brute", -- [5]
+		}, -- [1]
+		{
+			1227566318, -- [1]
+			1227566329, -- [2]
+			"23:38:39", -- [3]
+			"23:38:49", -- [4]
+			"Savage Hill Scavenger", -- [5]
+		}, -- [2]
+		{
+			1227566362, -- [1]
+			1227566375, -- [2]
+			"23:39:23", -- [3]
+			"23:39:35", -- [4]
+			"Savage Hill Scavenger", -- [5]
+		}, -- [3]
+		{
+			1227566395, -- [1]
+			1227566403, -- [2]
+			"23:39:55", -- [3]
+			"23:40:03", -- [4]
+			"Savage Hill Scavenger", -- [5]
+		}, -- [4]
+	},
+	["FoughtWho"] = {
+		"Savage Hill Scavenger 23:39:55-23:40:03", -- [1]
+		"Savage Hill Scavenger 23:39:23-23:39:35", -- [2]
+		"Savage Hill Scavenger 23:38:39-23:38:49", -- [3]
+		"Savage Hill Brute 23:37:55-23:38:33", -- [4]
+	},
+}

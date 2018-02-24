@@ -1,0 +1,19 @@
+﻿## Interface: 20400
+## Title: Dominos
+## Title-zhCN: |cFF0099FF[Dominos]|r 基础模块
+## Notes: A main actionbar replacement
+## Author: Tuller
+## Version: 1.3.3
+## SavedVariables: DominosDB, DominosVersion
+## OptionalDeps: Ace3, LibKeyBound-1.0, Dominos_Buff, ButtonFacade
+embeds.xml
+FlyPaper.lua
+localization\localization.lua
+localization\localization.cn.lua
+Dominos.lua
+drag.lua
+frame.lua
+actionBar.lua
+petBar.lua
+classBar.lua
+menuBar.lua

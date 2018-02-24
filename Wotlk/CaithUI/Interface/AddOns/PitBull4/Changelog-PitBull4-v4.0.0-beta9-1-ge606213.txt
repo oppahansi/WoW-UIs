@@ -1,0 +1,3 @@
+Shefki:
+	- Avoid an error in showing the FocusFrame since blizzard removed
+	FocusFrame_Update()

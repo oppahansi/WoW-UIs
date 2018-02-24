@@ -1,0 +1,2 @@
+
+XArtDB = nil

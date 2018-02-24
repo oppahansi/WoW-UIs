@@ -1,0 +1,98 @@
+
+DocsUI_NameplatesDB = {
+	["global"] = {
+		["spellList"] = {
+			[47893] = {
+				["icon"] = "Spell_Shadow_FelArmour",
+				["duration"] = 1800,
+			},
+			[15286] = {
+				["icon"] = "Spell_Shadow_UnsummonBuilding",
+				["duration"] = 1800,
+			},
+			[48169] = {
+				["icon"] = "Spell_Shadow_AntiShadow",
+				["duration"] = 600,
+			},
+			[48073] = {
+				["icon"] = "Spell_Holy_DivineSpirit",
+				["duration"] = 1800,
+			},
+			[15473] = {
+				["icon"] = "Spell_Shadow_Shadowform",
+			},
+			[48161] = {
+				["icon"] = "Spell_Holy_WordFortitude",
+				["duration"] = 1800,
+			},
+			[12544] = {
+				["icon"] = "Spell_Frost_FrostArmor02",
+				["duration"] = 1800,
+			},
+			[48168] = {
+				["icon"] = "Spell_Holy_InnerFire",
+				["duration"] = 1800,
+			},
+		},
+		["npcList"] = {
+			["Sawemba"] = "Battlemaster",
+			["Zel'mak"] = "Warrior Trainer",
+			["Horde Warbringer"] = "NONE",
+			["Magister Savarin"] = "Wintergrasp Battle-Mage",
+			["Sorek"] = "Warrior Trainer",
+		},
+	},
+	["realm"] = {
+		["Gorgonnash"] = {
+			["playerList"] = {
+				["Securas"] = "0x02800000017F9FCE",
+				["0x0280000000F4A730"] = {
+					["GUID"] = "0x0280000000F4A730",
+					["name"] = "Dübel",
+					["class"] = "WARLOCK",
+					["guild"] = "United Skunk Brothers",
+					["realm"] = "Gorgonnash",
+				},
+				["Faithy"] = "0x0280000000006C1E",
+				["0x0280000000006C1E"] = {
+					["GUID"] = "0x0280000000006C1E",
+					["name"] = "Faithy",
+					["class"] = "PRIEST",
+					["guild"] = "BonzenVerein",
+					["realm"] = "Gorgonnash",
+				},
+				["Dübel"] = "0x0280000000F4A730",
+				["Goyon"] = "0x0280000001FB00ED",
+				["0x0280000001FB00ED"] = {
+					["GUID"] = "0x0280000001FB00ED",
+					["name"] = "Goyon",
+					["class"] = "WARLOCK",
+					["guild"] = "BonzenVerein",
+					["realm"] = "Gorgonnash",
+				},
+				["0x02800000017F9FCE"] = {
+					["GUID"] = "0x02800000017F9FCE",
+					["name"] = "Securas",
+					["class"] = "WARLOCK",
+					["guild"] = "NONE",
+					["realm"] = "Gorgonnash",
+				},
+				["0x0280000000009AFA"] = {
+					["GUID"] = "0x0280000000009AFA",
+					["name"] = "Caithlyn",
+					["class"] = "PRIEST",
+					["guild"] = "Bellum",
+					["realm"] = "Gorgonnash",
+				},
+				["Caithlyn"] = "0x0280000000009AFA",
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+	},
+	["profiles"] = {
+		["Caithlyn - Gorgonnash"] = {
+		},
+	},
+}

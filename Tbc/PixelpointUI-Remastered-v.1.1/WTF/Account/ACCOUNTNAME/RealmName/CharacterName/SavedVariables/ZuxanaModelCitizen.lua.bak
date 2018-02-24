@@ -1,0 +1,1323 @@
+
+ModelCitizen_SessionProfile = {
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0.2612499412219061,
+				["zoom"] = -0.3791667913474741,
+				["position"] = {
+					["panH"] = 0.1385414320956193,
+					["panV"] = -0.02770870260854561,
+				},
+				["scale"] = 1.117187570896929,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "target",
+		},
+		["isEnabled"] = true,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 101.0000457763672,
+			["x"] = 1268.002183938399,
+		},
+		["scale"] = {
+			["height"] = 46.99994566477763,
+			["width"] = 49.00021455250752,
+		},
+	}, -- [1]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party1",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["ScrollWheel"] = {
+			},
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["count"] = 6,
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [2]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party2",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["ScrollWheel"] = {
+			},
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["count"] = 6,
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [3]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party3",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["ScrollWheel"] = {
+			},
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["count"] = 6,
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [4]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party4",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["ScrollWheel"] = {
+			},
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["count"] = 6,
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [5]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0.1316145537216416,
+					["panV"] = -0.1662498374260071,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "pet",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 736.9996337890625,
+			["x"] = 682.0003432985371,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [6]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0.2612499412219061,
+				["zoom"] = -0.3791667913474741,
+				["position"] = {
+					["panH"] = 0.1385414320956193,
+					["panV"] = -0.02770870260854561,
+				},
+				["scale"] = 1.117187570896929,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "targettarget",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["ScrollWheel"] = {
+			},
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["count"] = 6,
+		},
+		["anchor"] = {
+			["y"] = 723.9998168945313,
+			["x"] = 894.0000495668518,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [7]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "player",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = false,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 0,
+			["width"] = 0,
+		},
+	}, -- [8]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = true,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "player",
+		},
+		["isEnabled"] = true,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = false,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 0,
+			["width"] = 0,
+		},
+	}, -- [9]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party1target",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [10]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party2target",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [11]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party3target",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [12]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "party4target",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 200,
+			["width"] = 200,
+		},
+	}, -- [13]
+	{
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = false,
+			["camera"] = {
+				["rotation"] = 0,
+				["zoom"] = 0,
+				["position"] = {
+					["panH"] = 0,
+					["panV"] = 0,
+				},
+				["scale"] = 1,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "player",
+		},
+		["isEnabled"] = false,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = false,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 200,
+			["x"] = 200,
+		},
+		["scale"] = {
+			["height"] = 0,
+			["width"] = 0,
+		},
+	}, -- [14]
+	[0] = {
+		["bgColor"] = {
+			["alpha"] = 0,
+			["green"] = 0,
+			["blue"] = 0,
+			["red"] = 0,
+		},
+		["title"] = "Untitled",
+		["avatar"] = {
+			["isRendered"] = true,
+			["camera"] = {
+				["rotation"] = 0.2612499412219061,
+				["zoom"] = -0.3791667913474741,
+				["position"] = {
+					["panH"] = 0.1385414320956193,
+					["panV"] = -0.02770870260854561,
+				},
+				["scale"] = 1.117187570896929,
+				["light"] = {
+					["omni"] = 1,
+					["zoom"] = 0,
+					["ambient"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+					["position"] = {
+						["panH"] = 0,
+						["panV"] = 0,
+					},
+					["isEnabled"] = false,
+					["direct"] = {
+						["alpha"] = 0,
+						["green"] = 0,
+						["blue"] = 0,
+						["red"] = 0,
+					},
+				},
+			},
+			["unitType"] = "player",
+		},
+		["isEnabled"] = true,
+		["cursorControls"] = {
+			["MiddleButton"] = {
+			},
+			["count"] = 6,
+			["LeftButton"] = {
+				["CTRL"] = {
+					["name"] = "RotateAndZoom",
+					["isAvatar"] = true,
+				},
+				["ALT"] = {
+					["name"] = "Change_Scale",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Drag",
+					["isAvatar"] = false,
+				},
+			},
+			["isEnabled"] = true,
+			["RightButton"] = {
+				["NOKEY"] = {
+					["name"] = "Reflesh",
+					["isAvatar"] = true,
+				},
+				["CTRL"] = {
+					["name"] = "Pan",
+					["isAvatar"] = true,
+				},
+				["SHIFT"] = {
+					["name"] = "Resize",
+					["isAvatar"] = false,
+				},
+			},
+			["ScrollWheel"] = {
+			},
+		},
+		["anchor"] = {
+			["y"] = 102.9996471162882,
+			["x"] = 611.0006103515625,
+		},
+		["scale"] = {
+			["height"] = 43.99994089640709,
+			["width"] = 48.0000390764333,
+		},
+	},
+}

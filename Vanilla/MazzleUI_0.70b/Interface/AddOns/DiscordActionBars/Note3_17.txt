@@ -1,0 +1,3 @@
+* Updated the .toc file.
+* Finally fixed slash commands throwing an error.  (Major pain in the ass, btw.)
+* Fixed a conflict betweens Blizzard's Auto Self-cast option and DAB's auto-targeting.

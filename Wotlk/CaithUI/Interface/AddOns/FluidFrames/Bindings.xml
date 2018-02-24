@@ -1,0 +1,8 @@
+<Bindings>
+	<Binding name="HIGHLIGHTMOUSEFRAME" header="FLUIDFRAMES"> 
+		FluidFrames.HighlightMouseFrame();
+	</Binding>
+	<Binding name="HIGHLIGHTALLMOUSEFRAMES"> 
+		FluidFrames.HighlightMouseFrame(true);
+	</Binding>
+</Bindings>

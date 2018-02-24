@@ -1,0 +1,19 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffPlayer|r
+## Notes: Quartz module to display the player's casting bar.
+## Title-ruRU: Кварц |cff7777ffИгрок|r
+## Notes-ruRU: Модуль Кварца отображающий полосу применения игроков.
+## Title-zhTW: Quartz |cff7777ff玩家|r
+## Notes-zhTW: Quartz 的核心是輕簡的標準施法條，可設定大小寬高、文字、顏色及小圖示位置。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Player.lua

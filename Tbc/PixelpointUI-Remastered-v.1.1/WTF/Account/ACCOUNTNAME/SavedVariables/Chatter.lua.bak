@@ -1,0 +1,167 @@
+
+ChatterDB = {
+	["namespaces"] = {
+		["ChatTabs"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["ChatFont"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["PlayerNames"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Buttons"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["ChannelNames"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Scrollback"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Timestamps"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["EditBox"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["AltLinks"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["ChannelColors"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["colors"] = {
+						["Guild"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 1,
+							["r"] = 0.2509803921568627,
+						},
+						["General"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Trade"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Yell"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 0.2509803921568627,
+							["r"] = 1,
+						},
+						["LocalDefense"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Party"] = {
+							["b"] = 1,
+							["g"] = 0.6666666666666666,
+							["r"] = 0.6666666666666666,
+						},
+						["Whisper"] = {
+							["b"] = 1,
+							["g"] = 0.5019607843137255,
+							["r"] = 1,
+						},
+						["Say"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.4980392156862745,
+							["r"] = 1,
+						},
+						["Raid"] = {
+							["b"] = 0,
+							["g"] = 0.4980392156862745,
+							["r"] = 1,
+						},
+						["Raid Warning"] = {
+							["b"] = 0.7137254901960785,
+							["g"] = 0.8549019607843137,
+							["r"] = 1,
+						},
+						["Officer"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 0.7529411764705882,
+							["r"] = 0.2509803921568627,
+						},
+					},
+				},
+			},
+		},
+		["JustifyText"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Highlight"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["StickyChannels"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Invite Links"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+			},
+		},
+		["ChatFrameBorders"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+		["Mousewheel Scroll"] = {
+			["profileKeys"] = {
+				["Pixelpointxx - Bugs and Crashes"] = "Default",
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Pixelpointxx - Bugs and Crashes"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["welcomeMessaged"] = true,
+		},
+	},
+}

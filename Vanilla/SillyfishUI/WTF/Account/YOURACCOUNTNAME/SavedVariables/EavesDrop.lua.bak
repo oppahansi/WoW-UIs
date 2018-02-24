@@ -1,0 +1,11 @@
+
+EavesDropDB = {
+	["profiles"] = {
+		["Default"] = {
+			["LOCKED"] = true,
+			["FADETIME"] = 15,
+			["LINEWIDTH"] = 230,
+			["LINEHEIGHT"] = 11,
+		},
+	},
+}

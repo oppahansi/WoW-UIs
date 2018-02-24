@@ -1,0 +1,12 @@
+
+OneBagDB = {
+	["profiles"] = {
+		["Default"] = {
+			["point"] = {
+				["top"] = 593.5765991210938,
+				["left"] = 981.6179809570313,
+				["parent"] = "UIParent",
+			},
+		},
+	},
+}

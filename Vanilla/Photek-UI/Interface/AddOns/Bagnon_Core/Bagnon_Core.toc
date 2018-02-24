@@ -1,0 +1,23 @@
+## Interface: 11200
+## Title: Bagnon_Core
+## Notes: Core functionality for Bagnon and Banknon
+## Author: Tuller
+## Dependencies: 
+## OptionalDeps: KC_Items
+## SavedVariablesPerCharacter: BagnonSets
+lib\Infield.lua
+lib\Affine.lua
+localization.lua
+trans\localization.de.lua
+trans\localization.fr.lua
+trans\localization.cn.lua
+trans\localization.tw.lua
+core\Utility.lua
+core\Overrides.lua
+core\Frame.xml
+menu\Menu.xml
+spot\localization.lua
+spot\localization.cn.lua
+spot\spot.xml
+Slash.lua
+Events.lua

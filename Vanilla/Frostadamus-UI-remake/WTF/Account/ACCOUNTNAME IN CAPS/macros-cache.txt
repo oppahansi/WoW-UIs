@@ -1,0 +1,34 @@
+MACRO 8 "a" Ability_Ambush
+/npcscan scarlet smith
+/npcscan scarlet interrogator
+/npcscan scarlet executioner
+/npcscan scarlet high clerist
+/npcscan Foreman Jerris
+/npcscan Foreman marcrid
+/npcscan the husk
+/npcscan lord maldazzar
+/npcscan scarlet judge
+END
+MACRO 2 "BlinK" Ability_Rogue_Disguise
+/script SpellStopCasting()
+/cast Blink
+END
+MACRO 3 "Blizz" Spell_Frost_IceStorm
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Blizzard(Rank 6)") else CastSpellByName("Blizzard(Rank 1)"); end;
+END
+MACRO 4 "CoC" Spell_Frost_Glacier
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Cone of Cold(Rank 5)") else CastSpellByName("Cone of Cold(Rank 1)"); end;
+END
+MACRO 1 "Cs" Spell_Holy_ElunesGrace
+/script SpellStopCasting()
+/cast Counterspell
+END
+MACRO 7 "FB" Spell_Frost_FrostBolt02
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Frostbolt(Rank 10)") else CastSpellByName("Frostbolt(Rank 1)"); end;
+END
+MACRO 6 "Poly" Spell_Nature_Polymorph
+/run c=CastSpellByName s="Polymorph(Rank 4)" if UnitExists("mouseover") then TargetUnit("mouseover") c(s) TargetLastTarget() else c(s) end
+END
+MACRO 5 "Shield" Spell_Arcane_TeleportIronForge
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Ice Barrier") else CastSpellByName("Mana Shield"); end;
+END

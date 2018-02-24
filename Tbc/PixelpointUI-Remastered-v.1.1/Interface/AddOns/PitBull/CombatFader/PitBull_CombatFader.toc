@@ -1,0 +1,13 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fCombatFader|r]
+## Notes: Adds alpha changes based on combat.
+## Notes-koKR: 전투 상태에 근거해 투명도가 변경되는 기능을 추가합니다.
+## Author: JoshBorke
+## Version: 0.1
+## X-Category: Combat
+## Dependencies: PitBull
+## LoadOnDemand: 1
+## DefaultState: enabled
+## X-PitBull-DefaultState: 0
+
+CombatFader.lua

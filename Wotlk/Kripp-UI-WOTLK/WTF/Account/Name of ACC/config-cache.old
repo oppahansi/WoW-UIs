@@ -1,0 +1,5 @@
+SET flaggedTutorials "v##M"
+SET CombatDamage "0"
+SET CombatHealing "0"
+SET enableCombatText "0"
+SET cameraDistanceMaxFactor "1"

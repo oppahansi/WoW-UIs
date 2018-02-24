@@ -1,0 +1,30 @@
+-- * [DONE] Aggro gain/loss aura. 
+-- * [DONE] Option to use item/spell icons available on your actionbars instead of the pre-defined ones 
+-- * [DONE] PvP flagged 
+-- * [DONE] Make the custom texture field accept spell name (for spellbook spells) or spellid as input. 
+-- * [DONE] Option to use text as aura 
+-- * [DONE] Option to combine checks (AND logic)
+-- * [DONE] new trigger: Minimal spell alert functionality (enemytarget/focus spellcasts) 
+-- * [DONE] option to test buff/debuffs casted by the player only.
+-- * [DONE] Link timer to aura to overcome the 5timers limit.
+-- * [DONE] Export/Import Auras.
+-- * [DONE] Death Knight presence.
+-- * [DONE] Better formatting of export strings (add whitespace so they wrap).
+-- * [DONE] Smaller increments in health/mana/energy sliders.
+-- * [DONE] "Casted" -> "Cast" typo.
+-- * [DONE] Timer texture glow option.
+-- * [DONE]Vehicle support and option to disable if in vehicle.
+-- * [partially done] a redesign of Custom/Default auras to make adding / managing auras easier. 
+-- * Timer offset option.
+-- * Enable Timer for Debuffs on enemies (if possible)
+-- * Hide when resting option.
+-- * Support for spellid in buff/debuff fields.
+-- * Death Knight Runes.
+-- * new trigger: Target Properties (name, race, class, creature family or type, classification)
+-- * new trigger: Buff type for hostiles
+-- * Option to show stacks instead of timer or secondary timer.
+-- * a couple more transformation effects. (wiggle, ripple, explosion, flip, spin)
+-- * Add more debuff types. (fear, bleed, stun, snare, sap etc). EDIT: Not possible without hardcoded debuff lists :(
+-- * loop sound option: main problem how to determine loop duration?
+-- * optimize code and table usage
+-- * rename "Global 10" to "Share" and change the "Rename" button to "Send" for sending the page effects to other users.

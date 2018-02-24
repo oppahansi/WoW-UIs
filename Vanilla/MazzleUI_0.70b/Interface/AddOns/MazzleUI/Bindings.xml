@@ -1,0 +1,38 @@
+<Bindings>
+	<Binding name="MAZZLEUICONTEXT" header="MAZZLEUI">
+             MazzleUI:ShowContextMenu()
+	</Binding>
+	<Binding name="MAZZLEUITTELL">
+             MazzleUI:TargetTell()
+	</Binding>
+	<Binding name="MAZZLEUIDEBUG">
+             Mazz3D:ToggleDebug("Cameras")
+	</Binding>
+	<Binding name="MAZZLEUINEXTVIEW">
+             MazzleUI:NextView(1)
+	</Binding>
+	<Binding name="MAZZLEUIVIEW1">
+             MazzleUI_Settings.FaveRaidPosition = 1; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIVIEW2">
+             MazzleUI_Settings.FaveRaidPosition = 2; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIVIEW3">
+             MazzleUI_Settings.FaveRaidPosition = 3; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIMT1">
+             MazzleUI_Settings.FaveMTPosition = 1; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIMT2">
+             MazzleUI_Settings.FaveMTPosition = 2; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIMT3">
+             MazzleUI_Settings.FaveMTPosition = 3; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIPARTYSHOW">
+             MazzleUI_Settings.ShowRaidParty = true; MazzleUI:RaidViewSet();
+	</Binding>
+	<Binding name="MAZZLEUIPARTYHIDE">
+             MazzleUI_Settings.ShowRaidParty = false; MazzleUI:RaidViewSet();
+	</Binding>
+</Bindings>

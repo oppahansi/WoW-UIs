@@ -1,0 +1,30 @@
+<Bindings>
+	<Binding name="MAZZ3DSAVEMOB" header="MAZZ3D">
+             Mazz3D:SaveCamera()
+	</Binding>
+	<Binding name="MAZZ3DCACHEMOB">
+             if (Mazz3D.CacheCamera) then Mazz3D:CacheCamera(); end
+	</Binding>
+	<Binding name="MAZZ3DGUESSNEXT">
+             if (Mazz3D.GuessCamera) then Mazz3D:GuessCamera(1); end
+	</Binding>
+	<Binding name="MAZZ3DGUESSPREVIOUS">
+             if (Mazz3D.GuessCamera) then Mazz3D:GuessCamera(-1); end
+	</Binding>
+	<Binding name="MAZZ3DGUESSNEXTCACHE">
+             if (Mazz3D.LoadCacheCamera) then Mazz3D:LoadCacheCamera(1); end
+	</Binding>
+	<Binding name="MAZZ3DGUESSPREVIOUSCACHE">
+             if (Mazz3D.LoadCacheCamera) then Mazz3D:LoadCacheCamera(-1); end
+	</Binding>
+	<Binding name="MAZZ3DNEXTABSTRACT">
+             if (Mazz3D.LoadAbstractMob) then Mazz3D:LoadAbstractMob(1); end
+	</Binding>
+	<Binding name="MAZZ3DPREVIOUSABSTRACT">
+             if (Mazz3D.LoadAbstractMob) then Mazz3D:LoadAbstractMob(-1); end
+	</Binding>
+	<Binding name="MAZZ3DFORCEHUMAN">
+             if (Mazz3D.ForceHumanoid) then Mazz3D:ForceHumanoid(""); end
+	</Binding>
+</Bindings>
+

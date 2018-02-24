@@ -1,0 +1,38 @@
+
+CutupDB = {
+	["profileKeys"] = {
+		["Astalker - Smolderforge"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["julienne"] = {
+				["potentialColor"] = {
+					0.3803921568627451, -- [1]
+					0.3803921568627451, -- [2]
+					1, -- [3]
+					0, -- [4]
+				},
+				["textSize"] = 11,
+				["texture"] = "Armory",
+				["textFont"] = "Arial Narrow",
+				["width"] = 200,
+				["y"] = 205,
+				["x"] = 1059.109375,
+				["mainColor"] = {
+					0.596078431372549, -- [1]
+					0.615686274509804, -- [2]
+					0.5098039215686274, -- [3]
+					1, -- [4]
+				},
+				["potentialShow"] = false,
+				["height"] = 11,
+			},
+			["modules"] = {
+				["Bleeder"] = false,
+			},
+			["bleeder"] = {
+				["x"] = 557.6666870117188,
+			},
+		},
+	},
+}

@@ -1,0 +1,144 @@
+TipTac Changes | 2008 Apr 06
+----------------------------
+- New option to instantly hide world frame tips instead of fading them. These are tips like the ones which appear on herbs, mineral veins, mailboxes, chests etc.
+- TipTac now checks if the unit token is valid everytime it updates the tip, this is to avoid the "once in a blue moon" error that could happen when "GTT:OnTooltipSetUnit()" was called, but the "GTT:GetUnit()" function returning nil.  
+
+TipTac Changes | 2008 Mar 26
+----------------------------
+- There is a new option under the "Colors" page to show item tooltips with a colored border of their item quality.
+- Fixed a little error in the "OnShow" hook for modified tips.
+- Added options to set the backdrop edge size, and the backdrop insets size. These values control how large the border of the tip is and how far in the backdrop color of the tip is shown.
+- Fixed an error in the options dialog when having the Color Picker open and changing category page that could result in the Color Picker changing the wrong color variable.
+- Included a new addon called TipTacTalents which shows player talents in the tip. It also caches up to the last 10 people. This addon is completely independent of TipTac, meaning you can use this even without TipTac loaded. If you wish not to show talents, do not install this addon, or just disable it from the addon list on the character screen.
+- TipTac no longer has the option to show player talents in the tip, use "TipTacTalents" instead.
+
+TipTac Changes | 2008 Mar 21
+----------------------------
+- New option for auras to display them at the bottom of the tip instead of the top.
+- Added an option to show a small gradient area at the top of the tip, you can find this option under the "Backdrop" settings. This is somewhat similar to what the addon "Skinner" does to modify certain frames.
+- When the unit's level is unknown by displaying "??" and you are showing talents, TipTac will try and determine their level by adding the number of talents together.
+- TipTac will now show the talents line before they are loaded, this is to prevent the tip from growing when the talent data is actually received.
+- The "OnTooltipSetUnit" is now hooked on "VARIABLES_LOADED" instead of at code load, this hopefully fixes a problem with other addons that hooks it aswell, which might add extra lines to the tip later than TipTac, thus making TipTac not show it's information until the first update.
+- Having TipTac show talents will now also show which tree they have most of their points in. Example: "Holy (41/20/0)".
+- You can now change the format for the classification text. This is the text that describes the unit's level and such, like elite or rare mob.
+- New option to select the way the guild name is displayed, it can be set to show the guild, the guild and rank, but also turned completely off.
+- The drop down menus in the options now have a scrollbar. So if you have a lot of shared media objects, they should no longer drop off the screen.
+
+TipTac Changes | 2008 Feb 24
+----------------------------
+- Changed the TOC version to 20400 for the upcomming 2.4.0 patch.
+- New option to show the talent specialization of the player in the tip.
+- TipTac should now work better on non english localizations. Fixing things like mixing up level with NPC title, or not showing party/raid locations when they are out of range.
+- A unit targeting you are now shown as "<<YOU>>" instead of "[YOU]".
+
+TipTac Changes | 2008 Feb 06
+----------------------------
+- The "Hide Tips for Unit Frames in Combat" option now works even when you have TipTac Tips turned off.
+- Improved the reaction coloring options, you can now select the color for the text as well as the background.
+- Added option to add the reaction of the unit as text to the last line.
+- The player status has been added the new tag <DC> for when they are disconnected.
+- An entry for dead units has been added to the unit reactions.
+- You can now change the color of the health and mana bar. The default mana color is a bit more light than what it was before, which makes it better looking.
+- Fixed a bug with the "Smart" anchor setting and tips shown with the UIParent frame.
+
+TipTac Changes | 2008 Jan 30
+----------------------------
+- An option that determines if the font templates are going to be modified has been added, it is turned off by default. If you want TipTac to change the fonts, you have to enable it.
+- Added options to change the tip backdrop background and border texture. This uses "LibSharedMedia" if available for extra textures.
+- New option to color the health bar in the unit's class color.
+- Option to change the texture used for the health and power bars. Also uses uses "LibSharedMedia".
+- You can now change the font options for the bars.
+- Option added on the anchor page to surpress tips during combat shown from unit frames.
+- Added reaction coloring for the backdrop color, this is turned off by default.
+- The bars now have an option to show the text always in percent, values if available or hide the text all together.
+- New "Show Target" option to display it on the first line, like TipBuddy used to do it.
+
+TipTac Changes | 2008 Jan 25
+----------------------------
+- Major rework of both TipTac and the Options frame, they no longer uses XML files.
+- TipTac now allows you to change the font face and size of all tips in the WoW user interface. This feature takes advantage of "LibSharedMedia" if you have it installed.
+- The anchors for non-units and units can now be configured individually, they are now only configurable through the options frame, you can no longer right click the anchor frame.
+- You can now configure the color for normal reaction, players from your guild, neutral level and race & creature type color.
+- New option whether or not the TipTacTip should show the realm of the player, an asterisk (*) or just nothing at all.
+- Another option added that determines if it should show the status of players, like <AFK> or <DND>.
+- The option that decided if the tip should show who the unit was targeting has been added a new choice to be shown on the last line, instead of the second line.
+
+TipTac Changes | 2008 Jan 17
+----------------------------
+- Optimised a few parts of the code. It should now also show the tips in a better way as it no longer hooks the GTT:SetUnit() and is no longer dependant on the mouseover unit change event.
+- Renamed the config variable that determines if TipTac unit tips should be shown, this is to avoid the problems many have had with MI2 and TipTac.
+- Target of the unit are now colored by class color when the target is a player, the brackets are still colored based on reaction towards you.
+- Aura application count text now scales with the aura size as configured in the options.
+- The TipTacTip will now properly set the owner to the same frame as GameTooltip, instead of just setting it to UIParent. This may change some behaviour with Smart Anchor enabled.
+- New option to color the border of the tip in the same color as the unit class, this option works on both normal GameTooltip and the TipTacTip.
+- Added an option to display the unit name in the same color as the class, this will work both with normal GameTooltip and the TipTacTip.
+- A "Reset" button has been added to the options, this will reset all the options on the current page to default values.
+- Added options to change the background and border color of all modified tip and the TipTacTip.
+
+TipTac Changes | 2007 Dec 26
+----------------------------
+- TipTac can now show debuffs of the unit.
+- Fixed an anchor bug on tips that was already anchored to the mouse.
+- Added options to show only self castable buffs and removable debuffs by you.
+- A new option, to display cooldown models over buffs and debuffs, has been added.
+- Added a new option named "Only mouse anchor unit tips" which will make non-unit tips anchor the normal way, this is sort of a temporary option until I split the anchor options up properly.
+
+TipTac Changes | 2007 Dec 06
+----------------------------
+- TipTac now shows the buffs of the unit, debuffs are still work in progress (will be added soon™, I promise).
+- Increased the mouse anchor offsets boundaries to -200/+200.
+- Added the WorldMapTooltip to the list of tips changed in scale and appearence.
+- Fixed a bug in the OnShow hook of the modified tips.
+- Added 3 new anchor points, "Center", "Left" and "Right".
+- Changed the Option Dialog, it is now much easier for me to add new options to it.
+- Added new options to display text on the health, mana or power bar or not.
+- New option that lets you decide if you want TipTac to hook special tips to modify their appearance.
+
+TipTac Changes | 2007 Nov 30
+----------------------------
+- Fixed a problem with setting the scale of the tip and having it anchored to the mouse.
+- TipTac now modifies the ItemRefTooltip and ShoppingTooltips as well as the normal GameTooltip.
+- Added more options to show Health, Mana, Rage, Energy and Focus bars.
+
+TipTac Changes | 2007 Nov 27
+----------------------------
+- Changed the TOC version to 20300 for the 2.3 patch.
+- Mouse anchor now works much better, you can also change the mouse x and y offsets in the options.
+- Options: You can now use the mousewheel to increase and decrease slider values.
+
+TipTac Changes | 2007 Sep 27
+----------------------------
+- Updated for the 2.2 patch. Should no longer give an error occasionally on certain unit frames and elsewhere.
+- Fixed a little update problem with unit tips.
+- Added Smart anchoring. Available from the right click menu on the TipTacAnchor, overrides other anchor points when tip has a parent.
+
+TipTac Changes | 2007 Aug 11
+----------------------------
+- Options: Split the TipTac and GTT scale up so you can change them individually.
+- Options: Added "Pre Fade Time" slider, this is the time the tip will stay visible, before starting to fade out.
+- The unit target line will now show a raid icon if the unit they target have one assigned.
+- Fixed a problem with the tip when it was showing a "mouseover" unit and then moved onto a unitframe, that worked as a "mouseover" unit, which normally doesn't show a unit tip. Good example would be CTRA raid frames.
+
+TipTac Changes | 2007 Aug 08
+----------------------------
+- Options: There is a new option that lets you determine if the player's PvP name should be shown. This is the title you can select from the character sheet.
+- Added support for MobHealth.
+- Options: Added scale options for the TipTac unit tip.
+- Options: If Update Frequency is set to 0, it will not update the tip.
+- Options: You can now toggle the TipTacAnchor visibility from a button in the bottom left corner.
+
+TipTac Changes | 2007 Aug 07 (b)
+--------------------------------
+- Options: Fixed a problem with the Close button, should now be shown properly.
+- Options: Added option for showing "Targeted By" in the unit tips when in raids or parties.
+
+TipTac Changes | 2007 Aug 07
+----------------------------
+- Made option dialog for TipTac. It's Load on Demand, which means it will not be loaded by the WoW UI until you open it.
+- Added fade out time to the unit tips, default is 1.2 seconds.
+- Unit tips should no longer be shown as the normal GameTooltip fading out, when a unit despawns by zoning or logging out.
+- Changed the colors of the unit name. Also, tapped mobs will now be colored gray.
+
+TipTac Changes | 2007 Aug 04
+----------------------------
+- First Test Release.

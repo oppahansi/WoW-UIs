@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: LynLocation
+## Author: Lyn
+## Version: 1.2
+## Notes: zone + coords
+core.lua

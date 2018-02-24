@@ -1,0 +1,110 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+
+	<Script file="BookOfTracks.lua"/>
+	<Script file="localization.lua"/>
+
+
+
+	<!--
+	<Button name="BookOfTracksFrame" enableMouse="true" movable="false" resizable="true" parent="MiniMapTrackingFrame" toplevel="true">
+	
+		<Layer level="OVERLAY">
+			<Texture file="Interface\Minimap\MiniMap-TrackingBorder">
+				<Size>
+					<AbsDimension x="64" y="64"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+				</Anchors>
+			</Texture>
+		</Layer>
+
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="MiniMapTrackingFrame" />
+		</Anchors>
+
+		<Scripts>
+			<OnLoad>
+				BoT_OnLoad()
+			</OnLoad>
+			<OnEvent>
+				BoT_OnEvent( event, arg1 )
+			</OnEvent>
+			<OnClick>
+				H_ToggleDropDown()
+			</OnClick>
+		</Scripts>
+	</Button>
+	-->
+
+	<!-- ====================================================================== -->
+	<!--                   MAIN FRAME (replaces tracking icon)                  -->
+	<!-- ====================================================================== -->
+
+
+	<Frame name="BookOfTracksFrame" parent="Minimap" enableMouse="true" hidden="true" >
+		<Size>
+			<AbsDimension x="33" y="33"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="BookOfTracksIcon" file="Interface\\AddOns\\BookOfTracks\\Images\\Empty">
+					<Size>
+						<AbsDimension x="26" y="26"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="7" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture name="BookOfTracksBorder" file="Interface\Minimap\MiniMap-TrackingBorder">
+					<Size>
+						<AbsDimension x="64" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				BoT_OnLoad()
+			</OnLoad>
+			<OnEvent>
+				BoT_OnEvent( event, arg1 )
+			</OnEvent>
+			<OnMouseUp>
+				BoT_OnClick( arg1 )
+			</OnMouseUp> 
+			<OnEnter>
+				GameTooltip:SetOwner( this, "ANCHOR_BOTTOMLEFT" )
+				GameTooltip:SetTrackingSpell()
+			</OnEnter>							
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+
+	<Frame name="BookOfTracksDropDown" inherits="UIDropDownMenuTemplate" hidden="true">
+		<Size>
+			<AbsDimension x="10" y="10"/>
+		</Size>
+		<Anchors>
+			<Anchor point = "TOPRIGHT" relativePoint = "BOTTOMLEFT" relativeTo="BookOfTracksFrame" />
+		</Anchors>
+		<Scripts>
+			<OnShow>
+				BoT_DropDown_OnShow()
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+</Ui>

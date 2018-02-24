@@ -1,0 +1,29 @@
+tag v1.0.2
+60f7b4bae6a5ed06d199f33c82d7cdf136ed38c0
+Cameron Kenneth Knight <ckknight@gmail.com>
+2009-08-05 02:11:15 +0000
+
+Tagging as v1.0.2
+
+
+--------------------
+
+Shadowed:
+	- * TOC Bump
+kremonted:
+	- * Fixed SendAnnouncement call in spec detection
+	* Added say announcement channel type
+Shadowed:
+	- * Added defensive turtling abilities to auralist at min priority
+	* Cleaned up slash command very slightly
+	- * Fixed another leaked global
+	* Fixed an error at line #742 if the arenas update before a spec is found and class text is already set
+	* Removed an unnecessary power update
+	* Removed two unnecessary GetSpellInfo calls (Can just save them)
+	* Cleaned up spec detection and made it work with updating class text
+kremonted:
+	- spec detection added (also, grr at git)
+unknown:
+	- Added spec detection
+Shadowed:
+	- * Git being a pain, no change

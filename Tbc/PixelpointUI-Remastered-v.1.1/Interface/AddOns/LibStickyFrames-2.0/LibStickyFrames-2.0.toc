@@ -1,0 +1,14 @@
+## Interface: 20400
+## LoadOnDemand: 1
+## Title: Lib: StickyFrames-2.0
+## Notes: A library to manage snappy dragging & sticking of frames across multiple mods.
+## Author: Sorata
+## X-Credits: LibStickyFrames-1.0 by Toadkiller, Original StickyFrames code by Cladhaire; FlyPaper code by Tuller; LegoBlock code by Shadowed, JoshBorke, rophy123, Tekkub et al.
+## X-Website: http://www.wowace.com/wiki/LibStickyFrames-2.0
+## X-AceForum: 9752
+## X-Category: Library
+## X-License: Intention is to release into public domain once permission from above authors is received.
+
+LibStub\LibStub.lua
+CallbackHandler-1.0\CallbackHandler-1.0.xml
+LibStickyFrames-2.0\lib.xml

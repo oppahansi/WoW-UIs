@@ -1,0 +1,17 @@
+## Interface: 30000
+## Title: EnhancedColourPicker |cff7fff7f -Ace2-|r
+## Notes: Adds Copy and Paste Functions to the ColorPicker
+## Version: b1.9056.1
+## Author: Jncl
+## X-Credits: Lozareth for the original Discord Library Mod, Kyahx for stripping it out from Discord
+## X-Category: Interface Enhancements
+## OptionalDeps: Ace2
+## X-Embeds: Ace2
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+EnhancedColourPicker.lua

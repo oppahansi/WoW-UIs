@@ -1,0 +1,16 @@
+
+VF_RaidStatsData = {
+	{
+		"Session:Info:RaidID1=Karazhan-402627-109153,", -- [1]
+		"82592:Wipe_K=Wizard of Oz:VF_PET_1_Barmos <Gotong>_Gotong=1,VF_PET_3_Thangrave <Breaksmith>_Breaksmith=3,VF_PET_4_Disaith <Breaksmith>_Breaksmith=4,", -- [2]
+		"Session:Debug:Barmos=Barmos <Gotong>=0xF1401305400001D4,The Curator=The Curator=0xF130003D4B007F9C,Thangrave=Thangrave <Breaksmith>=0xF1401328DD0001CF,Disaith=Disaith <Breaksmith>=0xF140133553000081,Frostiie=Frostiie=0x000000000001ACB0,Gwenthyl=Gwenthyl=0x00000000000201BB,Paladinone=Paladinone=0x0000000000033E9D,Breaksmith=Breaksmith=0x000000000001EB76,Cilex=Cilex=0x000000000001F8F0,Priestone=Priestone=0x0000000000033C66,Gilgamesj=Gilgamesj=0x000000000001EA68,Symptom=Symptom=0x000000000000F9C3,Moondi=Moondi=0x000000000000E54E,The Crone=The Crone=0xF1300046F90267DE,Pixelpoint=Pixelpoint,Gotong=Gotong=0x000000000001D835,Enkidu=Enkidu <Gilgamesj>=0xF14022478100A417,Dorothee=Dorothee=0xF13000447F01C7E8,Sii=Sii=0x000000000000D939,", -- [3]
+		"82591:Start_C=The Curator;Dead_S=Dorothee:Barmos <Gotong>=1,1 2208  13234        6412  0,The Curator=2,2 693999  1090423          0,Thangrave <Breaksmith>=3,3 2285  26655          0,Disaith <Breaksmith>=4,4 80453  63901          0,Frostiie=5,5 951214  242131 8000   13   1 75921  0,Gwenthyl=6,6 423880 130896 997600 89692      6 713305  0,Paladinone=7,Breaksmith=8,8 762931 10409 266672 2939       115779  0,Cilex=9,9  1071222 274835 622741   4   3 67461  0,Priestone=10,10   388          0,Gilgamesj=11,11 695525 18160 179918 3690   6   3 56205  0,Symptom=12,12 628847 2319 305483 177       99878  0,Moondi=13,13 289441 3113 1480188 1879   2   3 1231232  0,The Crone=14,14 121948  182302  1        0,Pixelpoint=15,15 788196 4992 273486  13     1 131913  0,Gotong=16,16 616626 35946 253754 43707      1 100139  0,Enkidu <Gilgamesj>=17,VF_PET_17_Enkidu <Gilgamesj>_Gilgamesj=17,17 290275  154139  16      50975  0,Dorothee=18,18 212516  628642  2        0,Sii=19,19  1544274 401775 736854   3    165197  0,", -- [4]
+		"Session:Info:Date=2016-06-14 01:40:46,GameTime=-1:-1,Time=82587,Realm=Hellfire,Player=Pixelpoint,AddonVersion=1.2.1,RaidID1=Karazhan-402627-109155,Zone=Karazhan,", -- [5]
+	}, -- [1]
+}
+VF_RaidStatsVersion = "1.2.1"
+VF_RaidStats_Settings = {
+	["DebugMode"] = false,
+}
+VF_RS_ErrorLog = {
+}

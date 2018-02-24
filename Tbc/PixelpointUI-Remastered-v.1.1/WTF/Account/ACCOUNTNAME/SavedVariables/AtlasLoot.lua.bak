@@ -1,0 +1,25 @@
+
+AtlasLootOptions = nil
+AtlasLootFuDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+			},
+		},
+	},
+	["disabled"] = {
+		["Default"] = true,
+	},
+}
+AtlasLootDB = {
+	["profiles"] = {
+		["Default"] = {
+			["LastBossText"] = "Warlock",
+			["EquipCompare"] = true,
+			["AllLinks"] = false,
+			["AtlasLootVersion"] = "40603",
+			["MinimapButton"] = false,
+			["LastBoss"] = "T5Warlock",
+		},
+	},
+}

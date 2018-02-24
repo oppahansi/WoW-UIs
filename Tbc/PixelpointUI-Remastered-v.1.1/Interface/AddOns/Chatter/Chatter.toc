@@ -1,0 +1,26 @@
+## Interface: 20400
+## Title: Chatter
+## Notes: Lightweight Chat Improvements
+## Notes-zhTW: 一個輕量級的聊天增強插件
+## Notes-zhCN: 一个轻量级的聊天增强插件
+## Author: Antiarc
+## OptionalDeps: Ace3, LibSharedMedia-3.0, LibSink-2.0
+## X-Embeds: Ace3, LibSharedMedia-3.0, LibSink-2.0
+## X-Category: Chat/Communication
+## Version: 1.0
+## SavedVariables: ChatterDB
+
+embeds.xml
+
+Localization\enUS.lua
+Localization\ruRU.lua
+Localization\deDE.lua
+Localization\frFR.lua
+Localization\esES.lua
+Localization\zhCN.lua
+Localization\zhTW.lua
+Localization\koKR.lua
+
+Chatter.lua
+modules.xml
+

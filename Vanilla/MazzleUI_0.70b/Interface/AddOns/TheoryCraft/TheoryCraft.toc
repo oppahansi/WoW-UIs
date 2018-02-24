@@ -1,0 +1,10 @@
+## Interface: 11100
+## Author: Aelian
+## Title: TheoryCraft
+## Notes: Tells you everything about an ability, right on the tooltip.
+## Version: 1.06.2
+## SavedVariablesPerCharacter: TheoryCraft_Settings
+## SavedVariables: TheoryCraft_SetBonuses, TheoryCraft_MitigationMobs, TheoryCraft_MitigationPlayers
+## DefaultState: enabled
+## Dependencies: TinyTip
+TheoryCraft.xml

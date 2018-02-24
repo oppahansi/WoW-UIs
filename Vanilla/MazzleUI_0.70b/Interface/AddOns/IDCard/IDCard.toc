@@ -1,0 +1,7 @@
+## Interface: 10900
+## Title: IDCard
+## Notes: Adds the itemID to item tooltips.
+## SavedVariables: IDCardDB
+## RequiredDeps: Ace
+IDCard.xml
+IDCard.lua

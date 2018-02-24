@@ -1,0 +1,13 @@
+## Interface: 30300
+## Title: Tidy Plates
+## Notes: Modifies the default Blizzard nameplates.  Go SU!
+## Author: Binny the Love Fool
+## Version: 5.10.5
+## SavedVariablesPerCharacter: TidyPlatesOptions
+
+TidyPlatesCore.lua
+TidyPlatesUtility.lua
+TidyPlatesDefaults.lua
+TidyPlatesPanel.lua
+
+widgets\Widgets.xml

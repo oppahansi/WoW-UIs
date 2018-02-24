@@ -1,0 +1,9 @@
+## Interface: 30300
+## Author: Xus (Xussie of Kazzak EU)
+## Title: Forte|c30abd473Hunter|r
+## Notes: Forte Hunter Module
+## SavedVariables:
+## OptionalDeps:Forte_Casting, Forte_Timer, Forte_Cooldown
+## Dependencies:Forte_Core
+Localization.lua
+Forte_Hunter.lua

@@ -1,0 +1,16 @@
+## Interface: 11200
+
+## Title: Big Wigs Nefarian Counter |cff7fff7f -Ace2-|r
+## Notes: Counts how many Drakonids have been killed to help preparing for Nefarian's landing.
+## Author: Grimwald
+## X-Build: $Rev: 9125 $
+## X-ReleaseDate: $Date: 2006-08-25 18:19:39 -0400 (Fri, 25 Aug 2006) $
+## X-Email: bogi788@hotmail.com
+## X-Category: Raid
+## X-BigWigsModule: BigWigsNefCount
+
+## Dependencies: BigWigs
+## OptionalDeps: Ace2
+
+BigWigs_CounterBars.lua
+BigWigs_NefCount.lua

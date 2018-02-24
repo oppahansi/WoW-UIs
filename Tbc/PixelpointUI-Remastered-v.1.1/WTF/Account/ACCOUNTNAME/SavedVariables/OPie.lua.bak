@@ -1,0 +1,30 @@
+
+OneRing_Config = {
+	["Bindings"] = {
+		["OPieWarlockDemons"] = "ALT-D",
+	},
+	["SavedRingData"] = {
+	},
+	["LBFConfig"] = {
+		["Gloss"] = 0,
+		["Colors"] = {
+			["Normal"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["Backdrop"] = false,
+		["SkinID"] = "DsmFade",
+	},
+}
+OPie_Locale = nil
+OPie_OLog = {
+	{
+		"+ OneRingLib v.0.15", -- [1]
+		"SYS: ADDON_LOADED on 04/26/13 19:47:59", -- [2]
+		"SYS: PLAYER_LOGIN on 04/26/13 19:48:11", -- [3]
+		"SYS: PLAYER_LOGOUT on 04/26/13 21:30:39", -- [4]
+	}, -- [1]
+}

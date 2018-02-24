@@ -1,0 +1,8 @@
+
+pErrorDB = {
+	["Spell is not ready yet."] = true,
+	["Ability is not ready yet."] = true,
+	["Not enough energy"] = true,
+	["Out of range."] = true,
+	["You are too far away!"] = true,
+}

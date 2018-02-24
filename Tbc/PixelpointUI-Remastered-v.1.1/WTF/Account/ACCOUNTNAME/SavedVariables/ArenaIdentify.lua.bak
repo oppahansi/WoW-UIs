@@ -1,0 +1,14 @@
+
+ArenaIdentifyDB = {
+	["profileKeys"] = {
+		["Astalker - Smolderforge"] = "Astalker - Smolderforge",
+	},
+}
+ArenaIdentifyData = {
+	[2] = {
+	},
+	[5] = {
+	},
+	[3] = {
+	},
+}

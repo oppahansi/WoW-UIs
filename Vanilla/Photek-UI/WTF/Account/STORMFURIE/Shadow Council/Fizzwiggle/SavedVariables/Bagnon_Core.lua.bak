@@ -1,0 +1,31 @@
+
+BagnonSets = {
+	["qualityBorders"] = 1,
+	["showBagsAtAH"] = 1,
+	["showForeverTooltips"] = 1,
+	["showBankAtBank"] = 1,
+	["showTooltips"] = 1,
+	["version"] = "6.9.16",
+	["showBagsAtBank"] = 1,
+	["Bagnon"] = {
+		["parentScale"] = 0.699999988079071,
+		["scale"] = 1,
+		["bags"] = {
+			[1] = 0,
+			[2] = 1,
+			[3] = 2,
+			[4] = 3,
+			[5] = 4,
+			[6] = -2,
+		},
+		["left"] = 1041.428581526097,
+		["stayOnScreen"] = 1,
+		["bg"] = {
+			["a"] = 1,
+			["r"] = 0,
+			["g"] = 0,
+			["b"] = 0,
+		},
+		["top"] = 655.071406070085,
+	},
+}

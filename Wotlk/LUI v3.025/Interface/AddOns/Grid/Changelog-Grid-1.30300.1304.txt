@@ -1,0 +1,33 @@
+------------------------------------------------------------------------
+r1305 | phanx | 2010-06-23 07:22:42 +0000 (Wed, 23 Jun 2010) | 1 line
+Changed paths:
+   A /tags/1.30300.1304 (from /trunk:1304)
+
+Tagging as 1.30300.1304
+------------------------------------------------------------------------
+r1304 | Phanx | 2010-06-23 06:51:18 +0000 (Wed, 23 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/Grid.toc
+
+- Update version number for release
+------------------------------------------------------------------------
+r1303 | Phanx | 2010-06-23 03:25:02 +0000 (Wed, 23 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/Grid.toc
+   M /trunk/GridLayoutLayouts.lua
+
+- Remove AceTab-2.0 since it's broken in 3.3.5 and doesn't really do anything anyway
+------------------------------------------------------------------------
+r1302 | Phanx | 2010-05-25 12:41:16 +0000 (Tue, 25 May 2010) | 1 line
+Changed paths:
+   M /trunk/GridLDB.lua
+
+- Appropriately hide/show minimap icon on profile change
+------------------------------------------------------------------------
+r1301 | Phanx | 2010-05-02 07:14:14 +0000 (Sun, 02 May 2010) | 1 line
+Changed paths:
+   M /trunk/GridLayoutLayouts.lua
+
+- Add "By Class" layouts without pets
+------------------------------------------------------------------------

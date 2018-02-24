@@ -1,0 +1,9 @@
+------------------------------------------------------------------------
+r55254 | xonpathos | 2007-11-18 00:48:17 -0500 (Sun, 18 Nov 2007) | 2 lines
+Changed paths:
+   M /trunk/SellJunk/SellJunk.lua
+   M /trunk/SellJunk/SellJunk.toc
+
+SellJunk:
+- Changed the actual sell function to work with 2.3.
+------------------------------------------------------------------------

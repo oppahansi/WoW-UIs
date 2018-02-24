@@ -1,0 +1,154 @@
+
+FluidFramesModifiedFrames = {
+	["CharacterFrame"] = {
+		["parent"] = "UIParent",
+		["scale"] = 1,
+		["point"] = {
+			{
+				"TOPLEFT", -- [1]
+				"UIParent", -- [2]
+				"TOPLEFT", -- [3]
+				0, -- [4]
+				-104.0000005623091, -- [5]
+			}, -- [1]
+		},
+		["immobilized"] = {
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				26.60297766557525, -- [4]
+				235.6723916994464, -- [5]
+			},
+			["scale"] = 0.9561298489570618,
+		},
+	},
+	["VehicleSeatIndicator"] = {
+		["parent"] = "UIParent",
+		["point"] = {
+			{
+				"TOPRIGHT", -- [1]
+				"MinimapCluster", -- [2]
+				"BOTTOMRIGHT", -- [3]
+				0, -- [4]
+				-13.00000007028864, -- [5]
+			}, -- [1]
+		},
+		["immobilized"] = {
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				1426.051534081097, -- [4]
+				44.10679570910374, -- [5]
+			},
+		},
+	},
+	["AlwaysUpFrame1"] = {
+		["parent"] = "WorldStateAlwaysUpFrame",
+		["point"] = {
+			{
+				"TOP", -- [1]
+				"WorldStateAlwaysUpFrame", -- [2]
+				"TOP", -- [3]
+				-22.99999796162958, -- [4]
+				-20.00000028115454, -- [5]
+			}, -- [1]
+		},
+		["immobilized"] = {
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				429.4994148822549, -- [4]
+				910.8458504858105, -- [5]
+			},
+		},
+	},
+	["PlayerTalentFrame"] = {
+		["parent"] = "UIParent",
+		["scale"] = 1,
+		["point"] = {
+			{
+				"TOPLEFT", -- [1]
+				"UIParent", -- [2]
+				"TOPLEFT", -- [3]
+				384.000026990836, -- [4]
+				-104.0000005623091, -- [5]
+			}, -- [1]
+		},
+		["immobilized"] = {
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				885.185986610999, -- [4]
+				390.8800630573406, -- [5]
+			},
+			["scale"] = 0.7999473810195923,
+		},
+	},
+	["SpellBookFrame"] = {
+		["parent"] = "UIParent",
+		["scale"] = 1,
+		["point"] = {
+			{
+				"TOPLEFT", -- [1]
+				"UIParent", -- [2]
+				"TOPLEFT", -- [3]
+				0, -- [4]
+				-104.0000005623091, -- [5]
+			}, -- [1]
+		},
+		["immobilized"] = {
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				491.6021975320114, -- [4]
+				392.2704509880509, -- [5]
+			},
+			["scale"] = 0.7978099584579468,
+		},
+	},
+	["kgPanel4"] = {
+		["parent"] = "kgPanel46",
+		["point"] = {
+			{
+				"CENTER", -- [1]
+				"kgPanel46", -- [2]
+				"CENTER", -- [3]
+				0, -- [4]
+				0, -- [5]
+			}, -- [1]
+		},
+	},
+	["PVPParentFrame"] = {
+		["point"] = {
+			{
+				"TOPLEFT", -- [1]
+				"UIParent", -- [2]
+				"TOPLEFT", -- [3]
+				0, -- [4]
+				-104.0000005623091, -- [5]
+			}, -- [1]
+		},
+		["width"] = 384.000026990836,
+		["scale"] = 1,
+		["height"] = 512.0000359877813,
+		["parent"] = "UIParent",
+		["immobilized"] = {
+			["scale"] = 1.036633610725403,
+			["height"] = 470.97428919036,
+			["point"] = {
+				"BOTTOMLEFT", -- [1]
+				"UIParent", -- [2]
+				"BOTTOMLEFT", -- [3]
+				355.3906045602845, -- [4]
+				221.8011173222054, -- [5]
+			},
+			["width"] = 366.7694731677,
+		},
+	},
+}
+FluidFrames_SavedVars = nil

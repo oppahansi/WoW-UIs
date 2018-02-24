@@ -1,0 +1,14 @@
+## Interface: 20400
+## Title: PitBull |r[|cffeda55fVisualHeal|r]
+## Notes: Visualises healing done by you and your party/raid members directly on the unit frames.
+## Notes-koKR: 유닛 프레임에 직접 자신 및 파티/공격대원에 의한 치유 결과를 시각적으로 보여줍니다.
+## Author: xbeeps, Ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull, PitBull_HealthBar
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-License: GPL v2 or later
+## Version: 2.0
+
+VisualHeal.lua

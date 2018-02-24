@@ -1,0 +1,9 @@
+﻿## Interface: 20400
+## Title: ImprovedCamera
+## Author: Rewad/Trashy/Drool/Aezay
+## Version: 2.4.1
+## Notes: Increases limit of the Max Camera Distance slider in Interface Options to the very maximum possible (from 30 to 50).
+## eMail: droolio@gmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+ImprovedCamera.lua

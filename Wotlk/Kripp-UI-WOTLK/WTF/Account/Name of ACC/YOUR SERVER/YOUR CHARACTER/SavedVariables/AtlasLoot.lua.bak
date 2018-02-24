@@ -1,0 +1,54 @@
+
+AtlasLootCharDB = {
+	["QuickLooks"] = {
+	},
+	["WishList"] = {
+	},
+	["AtlasLootVersion"] = "51104",
+	["AutoQuery"] = false,
+	["SearchResult"] = {
+	},
+}
+AtlasLootFilterDB = {
+	["Relics"] = {
+		["Idol"] = false,
+		["Libram"] = false,
+		["Sigils"] = false,
+		["Totem"] = false,
+	},
+	["Other"] = {
+		["Neck"] = true,
+		["Trinket"] = true,
+		["Ring"] = true,
+		["Back"] = true,
+	},
+	["Armor"] = {
+		["Leather"] = true,
+		["Plate"] = false,
+		["Mail"] = true,
+		["Cloth"] = false,
+	},
+	["WeaponsMeeleTwoHand"] = {
+		["Mace"] = false,
+		["Sword"] = true,
+		["Axe"] = true,
+	},
+	["WeaponsRanged"] = {
+		["Crossbow"] = true,
+		["Thrown"] = false,
+		["Gun"] = true,
+		["Bow"] = true,
+		["Wand"] = false,
+	},
+	["WeaponsMeele"] = {
+		["Axe"] = true,
+		["Shield"] = false,
+		["Held in Off-Hand"] = false,
+		["Staff"] = true,
+		["Dagger"] = true,
+		["Mace"] = false,
+		["Fist Weapon"] = true,
+		["Polearm"] = true,
+		["Sword"] = true,
+	},
+}

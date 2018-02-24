@@ -1,0 +1,8 @@
+
+OneBagDB = {
+	["profiles"] = {
+		["Default"] = {
+			["cols"] = 10,
+		},
+	},
+}

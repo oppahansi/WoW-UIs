@@ -1,0 +1,36 @@
+## Interface: 20400
+
+## Title: Elkano's BuffBars
+## Notes: EBB adds groups of bars to your screen showing you which (de)buffs currently affect your toon or some other units.
+## Notes-zhCN: EBB 以计时条群组在荧屏上显示你或其他单位的(减)增益状态
+## Notes-zhTW: EBB 以計時條群組在螢幕上顯示你或其他單位的(減)增益狀態
+## Author: Elkano
+## Version: 2.1
+## X-Website: http://elkano.wowinterface.com/
+## X-Category: Buffs
+
+## X-RelSite-WoWI: 5101
+## X-RelSite-Curse: 3320
+## X-WoWIPortal: elkano
+## X-AceForum: 5467
+## X-Embeds: Ace2, DewdropLib, FuBarPlugin-2.0, LibAbacus-3.0, LibGratuity-3.0, LibSharedMedia-3.0, TabletLib, UTF8
+
+## OptionalDeps: Ace2, DewdropLib, FuBarPlugin-2.0, LibAbacus-3.0, LibGratuity-3.0, LibSharedMedia-3.0, TabletLib, UTF8
+
+## SavedVariables: ElkBuffBarsDB
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+#libs\UTF8\utf8data.lua
+libs\UTF8\utf8.lua
+
+embeds.xml
+
+ElkBuffBars.lua
+EBB_Bar.lua
+EBB_BarGroup.lua
+
+locales\ElkBuffBars.enUS.lua
+locales\ElkBuffBars.zhCN.lua
+locales\ElkBuffBars.zhTW.lua
+locales\ElkBuffBars.koKR.lua

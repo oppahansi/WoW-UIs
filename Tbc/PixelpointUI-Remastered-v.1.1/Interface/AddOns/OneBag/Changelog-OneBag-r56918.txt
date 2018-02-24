@@ -1,0 +1,78 @@
+------------------------------------------------------------------------
+r56918 | next96 | 2007-12-13 00:21:34 -0500 (Thu, 13 Dec 2007) | 2 lines
+Changed paths:
+   M /trunk/OneBag/OneBag.lua
+
+OneBag: 
+- Guildbank auto open surported
+------------------------------------------------------------------------
+r55081 | speeddymon | 2007-11-16 22:25:22 -0500 (Fri, 16 Nov 2007) | 2 lines
+Changed paths:
+   M /trunk/Aloft/Aloft.toc
+   M /trunk/AuldLangSyne/AuldLangSyne.toc
+   M /trunk/AuldLangSyne/Backup/AuldLangSyne_Backup.toc
+   M /trunk/AuldLangSyne/FriendList/AuldLangSyne_FriendList.toc
+   M /trunk/AuldLangSyne/Fu/AuldLangSyne_Fu.toc
+   M /trunk/AuldLangSyne/GuildList/AuldLangSyne_GuildList.toc
+   M /trunk/AuldLangSyne/Info/AuldLangSyne_Info.toc
+   M /trunk/AuldLangSyne/Note/AuldLangSyne_Note.toc
+   M /trunk/AuldLangSyne/Panel/AuldLangSyne_Panel.toc
+   M /trunk/AuldLangSyne/Sync/AuldLangSyne_Sync.toc
+   M /trunk/Automaton/Automaton.toc
+   M /trunk/CopyThat/CopyThat.toc
+   M /trunk/CrowBar/CrowBar.toc
+   M /trunk/EnvenomX/EnvenomX.toc
+   M /trunk/FuBar_BagFu/FuBar_BagFu.toc
+   M /trunk/FuBar_BattlegroundFu/FuBar_BattlegroundFu.toc
+   M /trunk/FuBar_ClockFu/FuBar_ClockFu.toc
+   M /trunk/FuBar_DigiCamFu/FuBar_DigiCamFu.toc
+   M /trunk/FuBar_ExperienceFu/FuBar_ExperienceFu.toc
+   M /trunk/FuBar_FactionItemsFu/FuBar_FactionItemsFu.toc
+   M /trunk/FuBar_FactionsFu/FuBar_FactionsFu.toc
+   M /trunk/FuBar_FarmerFu/FuBar_FarmerFu.toc
+   M /trunk/FuBar_FriendsFu/FuBar_FriendsFu.toc
+   M /trunk/FuBar_GCInFu/FuBar_GCInFu.toc
+   M /trunk/FuBar_LocationFu/FuBar_LocationFu.toc
+   M /trunk/FuBar_MailFu/FuBar_MailFu.toc
+   M /trunk/FuBar_MarkOfHonorFu/FuBar_MarkOfHonorFu.toc
+   M /trunk/FuBar_MicroMenuFu/FuBar_MicroMenuFu.toc
+   M /trunk/FuBar_MonkeyQuestFu/FuBar_MonkeyQuestFu.toc
+   M /trunk/FuBar_PetFu/FuBar_PetFu.toc
+   M /trunk/FuBar_PoisonReminderFu/FuBar_PoisonReminderFu.toc
+   M /trunk/FuBar_RecZone/FuBar_RecZone.toc
+   M /trunk/FuBar_ReloadUI/FuBar_ReloadUI.toc
+   M /trunk/FuBar_ReportAFK/FuBar_ReportAFK.toc
+   M /trunk/FuBar_RestFu/FuBar_RestFu.toc
+   M /trunk/FuBar_SpeedFu/FuBar_SpeedFu.toc
+   M /trunk/FuBar_VolumeFu/FuBar_VolumeFu.toc
+   M /trunk/FuBar_WarriorAlertFu/FuBar_WarriorAlertFu.toc
+   M /trunk/FuTextures/FuTextures.toc
+   M /trunk/GloryLib/GloryLib.toc
+   M /trunk/ItemRackFu/ItemRackFu.toc
+   M /trunk/LibFuBarPlugin-3.0/LibFuBarPlugin-3.0.toc
+   M /trunk/LockSmith/LockSmith.toc
+   M /trunk/Niagara/Niagara.toc
+   M /trunk/OneBag/OneBag.toc
+   M /trunk/OneBank/OneBank.toc
+   M /trunk/OneRing/OneRing.toc
+   M /trunk/OneView/OneView.toc
+   M /trunk/ParserLib/ParserLib.toc
+   M /trunk/RaidGroupNumber/RaidGroupNumber.toc
+   M /trunk/SCT_Cooldowns/SCT_Cooldowns.toc
+   M /trunk/SCT_SpellReady/SCT_SpellReady.toc
+   M /trunk/Sheppard/Sheppard.toc
+   M /trunk/SpellBinder/SpellBinder.toc
+   M /trunk/SurfaceLib/SurfaceLib.toc
+   M /trunk/Surfaces/Surfaces.toc
+   M /trunk/TauntWarn/TauntWarn.toc
+   M /trunk/TweakHub/TweakHub.toc
+   M /trunk/TweakHub_Automation/TweakHub_Automation.toc
+   M /trunk/TweakHub_Chat/TweakHub_Chat.toc
+   M /trunk/TweakHub_CombatLogger/TweakHub_CombatLogger.toc
+   M /trunk/TweakHub_Inbox/TweakHub_Inbox.toc
+   M /trunk/TweakHub_Merchant/TweakHub_Merchant.toc
+   M /trunk/TweakHub_Reputation/TweakHub_Reputation.toc
+
+.trunk: Bump TOC's of more addons
+
+------------------------------------------------------------------------

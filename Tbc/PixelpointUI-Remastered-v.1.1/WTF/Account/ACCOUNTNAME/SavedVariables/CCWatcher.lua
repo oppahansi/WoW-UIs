@@ -1,0 +1,2 @@
+
+CCWatcherDB = nil

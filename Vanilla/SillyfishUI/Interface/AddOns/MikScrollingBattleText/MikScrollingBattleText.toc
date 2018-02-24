@@ -1,0 +1,17 @@
+## Interface: 11200
+## Version: 3.6
+## Title: Mik's Scrolling Battle Text
+## Notes: Scrolls battle information around the character model.
+## OptionalDeps: SW_FixLogStrings
+## SavedVariables: MikSBT_Save
+
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceLocale-2.2\AceLocale-2.2.lua
+Libs\BabbleSpell-2.2\Babble-Spell-2.2.lua
+
+localization.lua
+MikTableRecyclerObject.lua
+MikCombatEventHelper.lua
+MikScrollingBattleText.lua
+MikCombatEventHelper.xml
+MikScrollingBattleText.xml

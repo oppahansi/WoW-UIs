@@ -1,0 +1,2 @@
+
+TinyTipCharDB = nil

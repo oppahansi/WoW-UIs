@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: Cirk's Merchantbags v1.12.0
+## Notes: Allows for all your bags to open automatically when you start trading with a merchant
+## URL: http://www.wowinterface.com/downloads/fileinfo.php?id=4541
+## SavedVariables: MerchantbagsState
+## OptionalDeps:
+## Dependencies:
+Merchantbags.xml

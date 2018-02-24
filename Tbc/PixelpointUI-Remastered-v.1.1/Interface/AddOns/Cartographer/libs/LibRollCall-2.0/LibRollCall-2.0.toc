@@ -1,0 +1,12 @@
+﻿## Interface: 20300
+## LoadOnDemand: 1
+## Title: LibRollCall-2.0
+## Notes: A library to provide an easy way to get information about guild members.
+## Author: ckknight
+## eMail: ckknight@gmail.com
+## Version: 2.0
+## X-Category: Library
+## Dependencies: LibRock-1.0, LibRockEvent-1.0, LibRockTimer-1.0
+## X-License: LGPL v2.1
+
+lib.xml

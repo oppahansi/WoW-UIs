@@ -1,0 +1,8 @@
+# Do not delete the following line!
+## Interface: 10900
+## Title: LootScroll
+## Notes: Loot frame becomes scrollable. Empty slots filled in.
+## First created: Jan 2006
+## SavedVariables: 
+LootScroll.lua
+LootScroll.xml

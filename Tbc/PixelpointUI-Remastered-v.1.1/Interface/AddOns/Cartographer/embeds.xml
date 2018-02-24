@@ -1,0 +1,34 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Script file="libs\LibStub\LibStub.lua"/>
+<Include file="libs\LibRock-1.0\lib.xml"/>
+<Include file="libs\LibRockComm-1.0\lib.xml"/>
+<Include file="libs\LibRockConfig-1.0\lib.xml"/>
+<Include file="libs\LibRockConsole-1.0\lib.xml"/>
+<Include file="libs\LibRockDB-1.0\lib.xml"/>
+<Include file="libs\LibRockEvent-1.0\lib.xml"/>
+<Include file="libs\LibRockHook-1.0\lib.xml"/>
+<Include file="libs\LibRockLocale-1.0\lib.xml"/>
+<Include file="libs\LibRockModuleCore-1.0\lib.xml"/>
+<Include file="libs\LibRockTimer-1.0\lib.xml"/>
+<Include file="libs\LibBabble-Zone-3.0\lib.xml"/>
+<Include file="libs\LibBabble-Spell-3.0\lib.xml"/>
+<Include file="libs\LibTourist-3.0\lib.xml"/>
+<Include file="libs\LibCrayon-3.0\lib.xml"/>
+<Include file="libs\LibRollCall-2.0\lib.xml"/>
+<Include file="libs\LibAbacus-3.0\lib.xml"/>
+<Script file="libs\AceLibrary\AceLibrary.lua"/>
+<Script file="libs\AceOO-2.0\AceOO-2.0.lua"/>
+<Script file="libs\AceEvent-2.0\AceEvent-2.0.lua"/>
+<Script file="libs\AceLocale-2.2\AceLocale-2.2.lua"/>
+<Script file="libs\Babble-Boss-2.2\Babble-Boss-2.2.lua"/>
+<Script file="libs\Babble-Class-2.2\Babble-Class-2.2.lua"/>
+<Script file="libs\LibPeriodicTable-3.1\LibPeriodicTable-3.1.lua"/>
+<Script file="libs\LibPeriodicTable-3.1-InstanceLoot\LibPeriodicTable-3.1-InstanceLoot.lua"/>
+<Script file="libs\LibPeriodicTable-3.1-InstanceLootHeroic\LibPeriodicTable-3.1-InstanceLootHeroic.lua"/>
+<Script file="libs\Dewdrop-2.0\Dewdrop-2.0.lua"/>
+<Script file="libs\Tablet-2.0\Tablet-2.0.lua"/>
+<Script file="libs\Roster-2.1\Roster-2.1.lua"/>
+
+</Ui>

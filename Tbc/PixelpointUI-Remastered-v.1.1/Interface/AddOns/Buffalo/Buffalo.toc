@@ -1,0 +1,30 @@
+﻿## Interface: 20400
+## Title: Buffalo |cff7fff7f -Ace2-|r
+## Title-zhCN: |cff7fff7f -Ace2-|r Buffalo 
+## Title-koKR: |CFF99FF99B|CFFFFFFFFuffalo |cff7fff7f -Ace2-|r
+## Title-zhTW: |cFF00FF00[顯示]|r簡易 Buff 顯示 Buffalo |cff7fff7f-Ace2-|r
+## Notes: Customizing your buff display
+## Notes-zhCN: 定义你的增益法术显示
+## Notes-zhTW: 簡潔式的增益顯示，輸入 /buffalo 以開啟選單
+## Notes-koKR: 사용자의 설정에 따라서 버프를 표시합니다.
+## Notes-deDE: Bereichert die Buff Anzeige um einige Features
+## Notes-esES: Personaliza la visualizacion de buffs
+## SavedVariables: BuffaloDB
+## Author: Nimbal
+## OptionalDependencies: ButtonFacade, Ace2, DewdropLib, LibAbacus-3.0
+## X-Category: Buffs
+## X-Embeds: Ace2, DewdropLib, LibAbacus-3.0
+## X-Date: 10/18/2006
+## X-eMail: nimbal@audacia-gilde.de
+
+embeds.xml
+
+Buffalo-enUS.lua
+Buffalo-deDE.lua
+Buffalo-koKR.lua
+Buffalo-esES.lua
+Buffalo-zhCN.lua
+Buffalo-zhTW.lua
+Buffalo.xml
+BuffaloDefaults.lua
+Buffalo.lua

@@ -1,0 +1,24 @@
+Set Up Your Style!
+============
+First, pick the folder that matches the style you want to use. Then, inside that folder pick the folder that corresponds to your in-game resolution. It is HIGHLY RECOMMENDED that you setup your ingame resolution and UI scale to the appropriate values BEFORE you load the game for the first time with UUI installed. I.E. Before you put these files into your Addons folder, login to the game, set your UI scale to 80% and resolution to the resolution you want to use for the style. Check the individual style folders for the supported resolutions.
+
+Further installation instructions are in their respective folders.
+
+What do each of these styles look like?
+=========================
+There are pictures of all the styles on www.wowbattle.net in various places, but here's a short description of each:
+
+- DUF(Perl)
+This looks like the old "Nymbia's Perl Unitframes" mod that was fairly popular in the old UUI. It was designed to fit well with Reawakening. This is ONLY Discord Unit Frames - no artwork here.
+
+- Night Elf A
+This is the newest Night Elf design - there's a group in the middle for buttons, with space on each side for chat frames. The art is leafy green like the Night Elf theme.
+
+- Night Elf B
+This is actually the original design for the Night Elf art. It uses the same artwork as above, just moved around a little. In this Night Elf style, there's a small area at the bottom left and bottom right for buttons, the chat frames are meant to go above them. Target and player frames are on either side.
+
+- Reawakening
+This is actually just the Discord Action Bars file to setup bars for Reawakening. They were made to fit Reawakening stretched not quite fully at 1280 x 1024. You can easily change the scale of the buttons to fit to any resolution.
+
+- Undead
+This is the classic Undead style of druidium. It a mixtures of brown hues with bone art. It works together very nicely. This style is grouped up similar to the Night Elf A style, with the buttons in the middle, and space for chat on the sides.

@@ -1,0 +1,88 @@
+
+SpellAlerterDB = {
+	["global"] = {
+		["Minimap"] = {
+			["hide"] = true,
+		},
+	},
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["SpellNames"] = true,
+			["FontSize"] = 18,
+			["ShowIcon"] = false,
+			["Positions"] = {
+				["SpellAlerterFrameAnchor"] = {
+					nil, -- [1]
+					nil, -- [2]
+					nil, -- [3]
+					6.564005428813041, -- [4]
+					185.8975474256752, -- [5]
+				},
+			},
+			["TargetGraphic"] = "text",
+			["FriendlyDebuffs"] = {
+			},
+			["Ignores"] = {
+				["Fire Nova"] = "Fire Nova",
+				["Howl of Terror"] = "Howl of Terror",
+				["Tranquility"] = "Tranquility",
+				["Summon Felhunter"] = "Summon Felhunter",
+				["Revive Pet"] = "Revive Pet",
+				["Summon Felguard"] = "Summon Felguard",
+				["Snake Trap"] = "Snake Trap",
+				["Frost Trap"] = "Frost Trap",
+				["Freezing Trap"] = "Freezing Trap",
+				["Summon Voidwalker"] = "Summon Voidwalker",
+				["Spell Reflection"] = "Spell Reflection",
+				["Summon Succubus"] = "Summon Succubus",
+				["Mana Tide Totem"] = "Mana Tide Totem",
+				["Grounding Totem"] = "Grounding Totem",
+			},
+			["Font"] = "Skurri",
+			["YouText"] = "CAITH",
+			["SpellCasts"] = {
+				["Polymorph"] = {
+					["Color"] = "PINK",
+				},
+				["Frost Trap"] = {
+					["Color"] = "PINK",
+				},
+				["Freezing Trap"] = {
+					["Color"] = "PINK",
+				},
+				["Grounding Totem"] = {
+					["Color"] = "GREEN",
+				},
+				["Fear"] = {
+					["Color"] = "PINK",
+				},
+				["Spell Reflection"] = {
+					["Color"] = "PINK",
+				},
+				["Hex"] = {
+					["Color"] = "PINK",
+				},
+				["Cyclone"] = {
+					["Color"] = "PINK",
+				},
+			},
+			["EnemyBuffs"] = {
+				["Nature's Swiftness"] = {
+					["Color"] = "PEACH",
+				},
+				["Hand of Sacrifice"] = {
+					["Color"] = "VIOLET",
+				},
+				["Evocation"] = {
+					["Color"] = "PEACH",
+				},
+				["Innervate"] = {
+					["Color"] = "PEACH",
+				},
+			},
+		},
+	},
+}

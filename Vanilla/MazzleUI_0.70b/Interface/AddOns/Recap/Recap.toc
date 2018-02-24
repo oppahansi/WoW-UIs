@@ -1,0 +1,11 @@
+## Interface: 11100
+## Title: Recap
+## Author: Gello (modified by Rophy)
+## Notes: Displays the damage and healing of all participants in combat
+## SavedVariables: recap, recap_set
+## OptionalDeps: InfoBar, TitanPanel
+CompostLib\CompostLib.lua
+ParserLib\ParserLib.lua
+Recap.xml
+RecapOptions.xml
+RecapPanel.xml

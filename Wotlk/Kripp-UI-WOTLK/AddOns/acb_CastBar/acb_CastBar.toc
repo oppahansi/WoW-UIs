@@ -1,0 +1,7 @@
+## Interface: 30300
+## Version: 09.12.16
+## Title: ACB CastBar
+## Author: Aezay (Earthen Ring EU)
+## Notes: CastBar Plugin for AzCastBar
+## Dependencies: AzCastBar
+core.lua

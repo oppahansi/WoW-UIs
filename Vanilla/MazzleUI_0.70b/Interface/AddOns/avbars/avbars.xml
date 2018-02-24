@@ -1,0 +1,479 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+
+
+<Frame name="gvalley_main" frameStrata="BACKGROUND" toplevel="true" enableMouse="true" parent="UIParent" hidden="false" movable="true">
+	<Size>
+		<AbsDimension x="150" y="103"/>
+	</Size>
+	<Anchors>
+		<Anchor point="Center"/>
+	</Anchors>
+
+
+	<Frames>
+		<Frame name="gvalley_Timer1" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T1_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" /></Texture>
+					<FontString name="gvalleyT1y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+						<Scripts><OnMouseDown></OnMouseDown></Scripts></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T1_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(1,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT1x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT" relativeTo="gvalley_Timer1">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+			</Layers>
+			
+			<Scripts><OnMouseDown>gvalley_AnnounceBG(1,arg1) if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+
+		</Frame>
+		<Frame name="gvalley_Timer2" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-13"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T2_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(2,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT2y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T2_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(2,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT2x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT" relativeTo="gvalley_Timer2">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>gvalley_AnnounceBG(2,arg1) if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer3" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-26"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T3_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(3,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT3y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T3_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(3,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT3x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT" relativeTo="gvalley_Timer3">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(3,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer4" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-39"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T4_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(4,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT4y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T4_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(4,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT4x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer4">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(4,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer5" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-52"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T5_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(5,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT5y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T5_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(5,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT5x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer5">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(5,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer6" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-65"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T6_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(6,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT6y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer6">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T6_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(6,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT6x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer6">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(6,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer7" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-78"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T7_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(7,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT7y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer7">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T7_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(7,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT7x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer7">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(7,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer8" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-91"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T8_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(8,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT8y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer8">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T8_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(8,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT8x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer8">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(8,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer9" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-104"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T9_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(9,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT9y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer9">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T9_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(9,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT9x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer9">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(9,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer10" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-117"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T10_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(10,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT10y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer10">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T10_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(10,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT10x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer10">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(10,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer11" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-130"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T11_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(11,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT11y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer11">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T11_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(11,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT11x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer11">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(11,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer12" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-143"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T12_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(12,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT12y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer12">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T12_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(12,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT12x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer12">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(12,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer13" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-156"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T13_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(13,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT13y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer13">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T13_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(13,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT13x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer13">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(13,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer14" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-169"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T14_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(14,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT14y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer14">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T14_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(14,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT14x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer14">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(14,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+		<Frame name="gvalley_Timer15" virtual="UIPanelScrollFrameTemplate">
+			<Size><AbsDimension x="150" y="12"/></Size> 
+	                       <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-182"/></Offset></Anchor></Anchors>
+			<Layers>
+				<Layer level="BACKGROUND">
+					<Texture name="gvalley_T15_Back" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(15,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT15y" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOP"  relativeTo="gvalley_Timer15">
+						<Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors></FontString>
+				</Layer>
+				<Layer level="ARTWORK">
+					<Texture name="gvalley_T15_Front" setAllPoints="true"><Color r="1" g="1" b="1" a="1" />
+					<Scripts><OnMouseDown>gvalley_AnnounceBG(15,arg)</OnMouseDown></Scripts></Texture>
+					<FontString name="gvalleyT15x" inherits="GameFontNormalSmall" text="">
+						<Anchors><Anchor point="TOPLEFT"  relativeTo="gvalley_Timer15">
+						<Offset><AbsDimension x="150" y="0"/></Offset></Anchor></Anchors></FontString>
+					
+				</Layer>
+
+			</Layers>
+			<Scripts><OnMouseDown>
+					gvalley_AnnounceBG(15,arg1) 
+					if IsShiftKeyDown() then gvalley_main:StartMoving(); end </OnMouseDown>	
+				<OnMouseUp>gvalley_main:StopMovingOrSizing()</OnMouseUp>
+			<OnEnter>	GameTooltip:SetOwner(this, "ANCHOR_LEFT")
+				GameTooltip:SetText("Left - Send to Say\nRight - Send to BG\nShift+Left - Move Timers")
+			</OnEnter>
+			<OnLeave>GameTooltip:Hide()</OnLeave></Scripts>
+		</Frame>
+	</Frames>
+	<Scripts>
+
+	</Scripts>
+</Frame>
+
+
+<GameTooltip name="GVTooltip" inherits="GameTooltipTemplate">
+   <Scripts>
+	<Onload>
+        	this:SetOwner(this, "ANCHOR_NONE");
+		this:RegisterEvent("VARIABLES_LOADED");
+	</Onload>
+	<OnEvent>
+		gvalley_OnEvent()
+	</OnEvent>
+   </Scripts>
+ </GameTooltip>
+</Ui>

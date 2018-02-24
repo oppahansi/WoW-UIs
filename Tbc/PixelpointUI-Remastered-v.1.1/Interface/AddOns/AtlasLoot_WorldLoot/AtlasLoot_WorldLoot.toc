@@ -1,0 +1,32 @@
+﻿## Interface: 20400
+## Title: AtlasLoot_WorldLoot
+## Title-deDE: AtlasLoot |cFF0099FF[World-Loot]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[World-Loot]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[World-Loot]|r
+## Notes: AtlasLoot loot tables from outdoor raid bosses and world events
+## Notes-deDE: AtlasLoot loot tables from outdoor raid bosses and world events
+## Notes-zhCN: AtlasLoot loot tables from outdoor raid bosses and world events
+## Notes-zhTW: AtlasLoot loot tables from outdoor raid bosses and world events
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+WorldRaidBosses.en.lua
+WorldRaidBosses.cn.lua
+WorldRaidBosses.de.lua
+WorldRaidBosses.es.lua
+WorldRaidBosses.fr.lua
+WorldRaidBosses.kr.lua
+WorldRaidBosses.tw.lua
+WorldEvents.en.lua
+WorldEvents.cn.lua
+WorldEvents.de.lua
+WorldEvents.es.lua
+WorldEvents.fr.lua
+WorldEvents.kr.lua
+WorldEvents.tw.lua

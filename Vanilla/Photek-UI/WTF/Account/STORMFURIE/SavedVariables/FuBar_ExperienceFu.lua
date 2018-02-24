@@ -1,0 +1,9 @@
+
+ExperienceFuDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+			},
+		},
+	},
+}

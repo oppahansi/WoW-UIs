@@ -1,0 +1,36 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fZone Info|r]
+## X-Name: Zone Info
+## X-Name-deDE: Zoneninfo
+## X-Name-frFR: Infos de zone
+## X-Name-koKR: 지역 정보
+## X-Name-zhTW: 地區資訊
+## X-Name-esES: Información de Zona
+## X-ModuleName: ZoneInfo
+## Notes: Module which on hovering over a zone, will show the levels of the zone, the instances in the zone, their levels, and the number of men the instance is made for (e.g. 5-man, 40-man).
+## Notes-deDE: Modul, das Dir zu jeder Zone die Stufe sowie vorhandene Instanzen mit deren Level und jeweiliger Begrenzung der Spielerzahl anzeigt, wenn Du mit der Maus darauf zeigst.
+## Notes-frFR: Module affichant au passage de la souris sur une zone : la fourchette de niveaux de la zone, les instances s'y trouvant, leurs niveaux, et le nombre de joueurs que l'instance peut accueillir (par ex. 5j, 40j).
+## Notes-koKR: 해당 지역에 위치한 인던 및 참여할 수 있는 인원(예. 5명, 40명)등을 보여줍니다.
+## Notes-zhTW: 顯示游標所在地區資訊的模組，在世界地圖上顯示此地區的適合等級，此地區的副本和副本的人數限制 (例如: 5人、40人)。
+## Notes-esES: Módulo que muestra los niveles e instancias de la zona y los niveles y número de hombres necesarios para las instancias (p.ej. 5-hombres, 40-hombres) cuando se pasa el cursor por encima
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, Babble-2.2, TouristLib
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+#Libs\Tourist-2.0\Tourist-2.0.lua
+#Libs\Babble-Spell-2.2\Babble-Spell-2.2.lua
+
+ZoneInfo.lua

@@ -1,0 +1,42 @@
+﻿## Interface: 20400
+## Title: AtlasLoot Enhanced
+## Notes: Shows the possible loot from the bosses
+## Author: Daviesh
+## Version: 4.06.04
+## X-eMail: oma_daviesh@hotmail.com
+## X-Credits: Asurn, Pernicus, Hegarol, Cellelach, many others
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+## X-Embeds: Ace2, DewdropLib, FuBarPlugin-2.0, TabletLib, LibBabble-Boss-3.0, LibBabble-Class-3.0, LibBabble-Faction-3.0, LibBabble-Inventory-3.0, LibBabble-Zone-3.0
+## Title-deDE: AtlasLoot Enhanced
+## Notes-deDE: Shows the possible loot from the bosses
+## Title-frFR: AtlasLoot Enhanced
+## Notes-frFR: Montre le butin possible des boss
+## Title-esES: AtlasLoot Enhanced
+## Notes-esES: Muestra el posible botin de los jefes finales
+## Title-koKR: AtlasLoot Enhanced
+## Notes-koKR: Shows the possible loot from the bosses
+## Title-zhCN: AtlasLoot Enhanced 
+## Notes-zhCN: 显示副本中的首领与小怪可能掉落的物品
+## Title-zhTW: |r|cFF0099FF[地圖]|rAL 物品掉落主程式
+## Notes-zhTW: 顯示首領與小怪可能掉落的物品，並可查詢各陣營與戰場的獎勵物品、套裝物品等
+## RealTitle-zhCN: [地图]副本掉落物品查询
+## RealTitle-zhTW: [地圖]AL 物品掉落[主程式]
+## Title-ruRU: AtlasLoot Расширенный
+## Notes-ruRU: Показывает весь возможный лут с боссов
+## SavedVariables: AtlasLootOptions, AtlasLootFuDB, AtlasLootDB
+## SavedVariablesPerCharacter: AtlasLootCharDB
+## OptionalDeps: Alphamap, AtlasLoader, LootLink, ItemSync, FuBar, TabletLib, DewdropLib, FuBarPlugin-2.0, FuBar, Ace2, EquipCompare, LibBabble-Boss-3.0, LibBabble-Class-3.0, LibBabble-Faction-3.0, LibBabble-Inventory-3.0, LibBabble-Zone-3.0
+
+embeds.xml
+
+Constants\Constants.xml
+Bossnames\BossNames.xml
+TableRegister\TableRegister.xml
+PvP\PvP.xml
+Instances\Instances.xml
+Add_Ons\Addons.xml
+WorldBosses\WorldBosses.xml
+Core\AtlasLoot.xml
+DefaultFrame\AtlaslootDefaultFrame.xml

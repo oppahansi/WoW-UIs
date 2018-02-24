@@ -1,0 +1,12 @@
+## Interface: 20400
+
+## Title: Lib: TooltipItemQuantities1
+## Version: 1.2.1
+## Author: Saeris
+## LoadOnDemand: 1
+
+
+## Notes: A library to easily retrieve the quantity of an item being displayed in a given tooltip.
+
+
+TooltipItemQuantities1_Loader.xml

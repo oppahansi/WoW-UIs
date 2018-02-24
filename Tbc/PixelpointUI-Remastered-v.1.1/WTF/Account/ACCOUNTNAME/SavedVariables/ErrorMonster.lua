@@ -1,0 +1,3 @@
+
+ErrorMonsterDB = nil
+ErrorMonsterDBChar = nil

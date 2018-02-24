@@ -1,0 +1,1 @@
+This does for cooldowns what DoTimer does for debuffs!  It can be completely separate from DoTimer, or the timers can be anchored to the end of DoTimer's data.  Access this addon ingame by typing "/cooldowns" or "/cd".  

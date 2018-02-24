@@ -1,0 +1,29 @@
+================================================================================
+1.0 - 11/15/2009
+
+First full release version.
+
+Added support for Call of the Elements/Ancestors/Spirits key bindings.
+
+
+
+================================================================================
+0.3 - 11/13/2009
+
+Improved compatibility with addons that modify the main action bar and its vehicle bar and bonus bar variants. This allows SnowfallKeyPress to work with Dominos without the user needing to change any configuration settings.
+
+Removed user configurability of the addon. This shouldn't be needed any longer for compatibility.
+
+
+
+================================================================================
+0.2 - 11/12/2009
+
+This version is more selective on which key bindings of button clicks it accelerates. If a button could possibly already be sensitive to down clicks, its key binding will not be accelerated. This allows SnowfallKeyPress to work with OPie without the user needing to change any configuration settings.
+
+
+
+================================================================================
+0.1 - 11/8/2009
+
+Original beta test version.

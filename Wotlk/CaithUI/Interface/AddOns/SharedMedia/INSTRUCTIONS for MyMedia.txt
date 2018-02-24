@@ -1,0 +1,73 @@
+--[=[
+INSTRUCTIONS for MyMedia - using SharedMedia with your own stuff
+================================================================
+By doing this step, you may register your own textures, fonts, sounds, etc.
+with LibSharedMedia-3.0 to choose from in-game, without fear of your edits being
+overwritten when updating SharedMedia!
+
+** Remember to always back up your Addons folder when updating with the WAU,
+   especially if using the Delete Before Extracting option. **
+
+
+Instructions on how to use MyMedia:
+-----------------------------------
+1. Make a copy of this file called MyMedia.lua in the SharedMedia folder
+
+2. Place your media files into the "MyMedia files" folder
+
+3. Use the examples below to add information about your newly added media.
+   You should only need to change anything between the lines marked "START"
+   and "END".
+
+4. Each item of media that you want to add should have its own line that
+   uses the relevant example as a template. To add details about more than
+   one item, just add another line to that section, changing the specific
+   details (eg, the font name and path).
+
+
+Examples:
+---------
+	background-
+		SharedMedia:Register("background", "my background's name", [[Interface\Addons\SharedMedia\MyMedia files\mybackground.tga]])
+	border-
+		SharedMedia:Register("border", "my border's name", [[Interface\Addons\SharedMedia\MyMedia files\myborder.tga]])
+	font-
+		SharedMedia:Register("font", "my font's name", [[Interface\Addons\SharedMedia\MyMedia files\myfont.ttf]])
+		SharedMedia:Register("font", "my friend's font", [[Interface\Addons\SharedMedia\MyMedia files\friendsfont.ttf]])
+	sound-
+		SharedMedia:Register("sound", "my sound's name", [[Interface\Addons\SharedMedia\MyMedia files\mysound.mp3]])
+	statusbar-
+		SharedMedia:Register("statusbar", "my statusbar texture's name", [[Interface\Addons\SharedMedia\MyMedia files\mytexture.tga]])
+
+
+Problems:
+---------
+If you have any issues, let us know on the wowace forums in the MyMedia
+thread. --Seerah
+]=]
+
+
+
+----------------------------------------------------------------------------
+-- Copy this file to a file called MyMedia.lua, and enter your media's
+-- information below, using the examples above.
+----------------------------------------------------------------------------
+
+
+-- START of the section that you should be updating
+--
+--    NB: any line beginning with "--" is ignored - so the lines
+--    below are just comments!
+--
+
+--background:
+
+--border:
+
+--font:
+
+--sound:
+
+--statusbar:
+
+-- END of the section that you should be updating

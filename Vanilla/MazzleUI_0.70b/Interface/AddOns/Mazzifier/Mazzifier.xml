@@ -1,0 +1,1441 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="Mazzifier_Globals.lua"/>
+	<Script file="Mazzifier_AddOnDB.lua"/>
+	<Script file="Mazzifier_GUI.lua"/>
+	<Script file="Mazzifier_GUI_AS.lua"/>
+	<Script file="Mazzifier_SAS.lua"/>
+	<Script file="Mazzifier_Configs.lua"/>
+	<Script file="DFM_Base.lua"/>
+	<Script file="Mazz3D_DBF.lua"/>
+	<Script file="Mazzifier_Bindings.lua"/>
+	<Script file="Mazzifier.lua"/>
+    <Frame name="Mazzifier_FrameBoxTemplate" inherits="OptionFrameBoxTemplate" virtual="true">
+    <Layers>
+        <Layer>
+            <FontString name="$parentNote" setAllPoints="true" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" text="">
+                <FontHeight> <AbsValue val="13" /> </FontHeight>
+                <Color r="1" g="1" b="1" />
+                <Shadow> <Color r="0" g="0" b="0" /> <Offset> <AbsDimension x="1" y="-1" /> </Offset> </Shadow>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT">
+                        <Offset> <AbsDimension x="15" y="15"/> </Offset>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT">
+                        <Offset> <AbsDimension x="-15" y="15"/> </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+        </Layer>
+    </Layers>
+    </Frame>
+	<CheckButton name="Mazzifier_CheckbuttonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="26" y="26"/>
+		</Size>
+		<HitRectInsets>
+			<AbsInset left="0" right="-100" top="0" bottom="0"/>
+		</HitRectInsets>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" justifyH="LEFT" justifyV="TOP" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<NormalTexture file="Interface\Buttons\UI-CheckBox-Up"/>
+		<PushedTexture file="Interface\Buttons\UI-CheckBox-Down"/>
+		<HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+		<CheckedTexture file="Interface\Buttons\UI-CheckBox-Check"/>
+		<DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled"/>
+		<Scripts>
+			<OnClick>
+				if ( this:GetChecked() ) then
+					PlaySound("igMainMenuOptionCheckBoxOn");
+				else
+					PlaySound("igMainMenuOptionCheckBoxOff");
+				end
+				Mazzifier_HandleCheckbutton(this);
+				MazzleUI:MouseClickEffect()
+			</OnClick>
+			<OnEnter>
+				if ( this.tooltipText ) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+				end
+				if ( this.tooltipRequirement ) then
+					GameTooltip:AddLine(this.tooltipRequirement, "", 1.0, 1.0, 1.0);
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</CheckButton>
+	<Button name="Mazzifier_TabTemplate" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+    	<Scripts>
+    		<OnClick>
+    			PanelTemplates_Tab_OnClick(Mazzifier_Frame);
+    			Mazzifier_TabSelect(this:GetName());
+    		</OnClick>
+    	</Scripts>
+    </Button>
+    <Frame name="MazzleTexFrameTemplate" virtual="true">
+        <Size>
+            <AbsDimension x="1200" y="600" />
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="-10" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Frame>
+    <Frame name="Mazzifier_TextBoxTemplate" inherits="Mazzifier_FrameBoxTemplate" virtual="true">
+        <Size>
+        	<AbsDimension x="10" y="240"/>
+        </Size>
+        <Layers>
+          <Layer>
+            <FontString name="$parentText" setAllPoints="true" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" text="">
+              <FontHeight>
+                <AbsValue val="16"  />
+              </FontHeight>
+              <Color r="1" g="0.8196079" b="0" />
+              <Shadow>
+                <Color r="0" g="0" b="0" />
+                <Offset>
+                  <AbsDimension x="1" y="-1" />
+                </Offset>
+              </Shadow>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="10" y="-10"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="-10" y="10"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+            </FontString>
+            <Texture setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+        <Scripts>
+        	<OnLoad>
+        		this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+        		this:SetBackdropColor(0.15, 0.15, 0.15);
+        		getglobal(this:GetName().."Text"):SetNonSpaceWrap(1)
+        	</OnLoad>
+        </Scripts>
+    </Frame>
+
+	<Frame name="Mazzifier_Frame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+        <Size>
+          <AbsDimension x="1220" y="620" />
+        </Size>
+        <Anchors>
+          <Anchor point="CENTER" relativeTo="UIParent">
+            <Offset>
+              <AbsDimension x="0" y="0" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="Mazzifier_CloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="Mazzifier_Frame" relativePoint="TOPRIGHT" >
+						<Offset>
+							<AbsDimension x="-5" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Frame name="$parentDragFrame">
+				<Size>
+					<AbsDimension x="1200" y="600" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>
+						local parent = this:GetParent();
+						if (arg1 == "LeftButton") then
+							parent.isMoving = true;
+							parent:StartMoving();
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnMouseUp>
+					<OnHide>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnHide>
+				</Scripts>
+			</Frame>
+        <Button name="Mazzifier_FrameTab1" inherits="Mazzifier_TabTemplate" id="1" text="Mazzifier">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="Mazzifier_Frame">
+                <Offset>
+                  <AbsDimension x="13" y="7" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+        </Button>
+        <Button name="Mazzifier_FrameTab2" inherits="Mazzifier_TabTemplate" id="2" text="General Options">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_FrameTab1">
+                <Offset>
+                  <AbsDimension x="-12" y="0" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+        </Button>
+        <Button name="Mazzifier_FrameTab3" inherits="Mazzifier_TabTemplate" id="3" text="Add-On Selection">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_FrameTab2">
+                <Offset>
+                  <AbsDimension x="-12" y="0" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+        </Button>
+        <Button name="Mazzifier_FrameTab4" inherits="Mazzifier_TabTemplate" id="4" text="Add-On Settings">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="Mazzifier_FrameTab3">
+                <Offset>
+                  <AbsDimension x="-12" y="0" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+        </Button>
+        <Button name="Mazzifier_FrameTab5" inherits="Mazzifier_TabTemplate" id="5" text="Button Layout">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="Mazzifier_FrameTab4">
+                <Offset>
+                  <AbsDimension x="-12" y="0" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+        </Button>
+      <Frame name="MazzleTexFrame1" inherits="MazzleTexFrameTemplate">
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="MazzleTex1" setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="MazzleTexFrame2" inherits="MazzleTexFrameTemplate">
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="MazzleTex2" setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="MazzleTexFrame3" inherits="MazzleTexFrameTemplate">
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="MazzleTex3" setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="MazzleTexFrame4" inherits="MazzleTexFrameTemplate">
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="MazzleTex4" setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="MazzleTexFrame5" inherits="MazzleTexFrameTemplate">
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="MazzleTex5" setAllPoints="true">
+              <TexCoords left="0" right="1" top="0" bottom="1" />
+            </Texture>
+          </Layer>
+        </Layers>
+        </Frame>
+        <Frame name="WelcomeLabel">
+            <Size>
+              <AbsDimension x="280" y="32" />
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativePoint="Top" relativeTo="Mazzifier_Frame">
+                <Offset>
+                  <AbsDimension x="-224" y="-12" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer>
+                <FontString setAllPoints="true" font="Fonts\FRIZQT__.TTF" text="Welcome to MazzleUI!" justifyH="CENTER">
+                  <FontHeight>
+                    <AbsValue val="28" />
+                  </FontHeight>
+                  <Color r="1" g="0.8196079" b="0" />
+                  <Shadow>
+                    <Color r="0" g="0" b="0" />
+                    <Offset>
+                      <AbsDimension x="1" y="-1" />
+                    </Offset>
+                  </Shadow>
+                </FontString>
+              </Layer>
+            </Layers>
+        </Frame>
+        <Button name="Mazzifier_NextButton" inherits="GameMenuButtonTemplate" text="Next ->" frameStrata="HIGH">
+            <Anchors>
+                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Frame">
+                    <Offset> <AbsDimension x="-15" y="15" /> </Offset>
+                </Anchor>
+            </Anchors>
+            <Size> <AbsDimension x="70" y="32" /> </Size>
+            <Scripts> <OnClick>Mazzifier_Next(); </OnClick> </Scripts>
+        </Button>
+        <Frame name="Mazzifier_Tab1" parent="Mazzifier_Frame"  setAllPoints="true">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="Mazzifier_Frame"/>
+                </Anchors>
+                <Size>
+          <AbsDimension x="600" y="620" />
+                </Size>
+            <Frames>
+                  <Frame name="Mazzifier_WelcomeFrame" inherits="Mazzifier_TextBoxTemplate">
+                    <Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="-23" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMLEFT" relativePoint="BOTTOM" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="40" y="75" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="75" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                  </Frame>
+                  <Button name="Mazzifier_Button" inherits="GameMenuButtonTemplate" text="Mazzify Me!"  hidden="true" >
+                    <Anchors>
+                      <Anchor point="BOTTOM" relativePoint="BOTTOM" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="0" y="20" />
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Size>
+                      <AbsDimension x="200" y="40" />
+                    </Size>
+                    <Scripts>
+                      <OnClick>Mazzifier_DoMazzify()</OnClick>
+                    </Scripts>
+                  </Button>
+                <Button name="Mazzifier_ReloadUIButton" inherits="GameMenuButtonTemplate" text="Push my button to finish spell!" hidden="true" frameStrata="HIGH">
+                    <Anchors>
+                        <Anchor point="BOTTOM" relativePoint="BOTTOM" relativeTo="Mazzifier_Frame">
+                            <Offset> <AbsDimension x="-249" y="96" /> </Offset>
+                        </Anchor>
+                    </Anchors>
+                    <Size> <AbsDimension x="200" y="60" /> </Size>
+                    <Scripts> <OnClick>Mazzifier_ReloadUI()</OnClick> </Scripts>
+                </Button>
+              </Frames>
+    		</Frame>
+        <Frame name="Mazzifier_Tab2" parent="Mazzifier_Frame" hidden="true"  setAllPoints="true">
+                <Anchors>
+                    <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_Frame"/>
+                </Anchors>
+                <Size>
+                    <AbsDimension x="600" y="620" />
+                </Size>
+            <Frames>
+				<Frame name="Mazzifier_Tab2Aspect" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="83"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="12" y="-50"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-22" y="-50"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Frames>
+    					<CheckButton name="Mazzifier_FrameCheckButton1" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+    					</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton2" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton1" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton3" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton2" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+                    </Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("What is the aspect ratio of your screen? (width/height)");
+						</OnLoad>
+					</Scripts>
+                </Frame>
+				<Frame name="Mazzifier_Tab2Parts" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="170"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="Mazzifier_Tab2Aspect" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-30"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT" relativeTo="Mazzifier_Tab2Aspect" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="-30"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Frames>
+    					<CheckButton name="Mazzifier_FrameCheckButton75" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+    					</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton4" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton75" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton5" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton4" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton6" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton5" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton76" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton6" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+                    </Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("Which portions of the UI would you like to Mazzify?");
+							getglobal(this:GetName().."Note"):SetText("|CFFFF0000Note:|CFFFFFFFF The above checkboxes determine whether that part of the UI is modified \nand whether the relevant options in the rest of the Mazzifier are disabled or enabled.");
+						</OnLoad>
+					</Scripts>
+                </Frame>
+				<Frame name="Mazzifier_Tab2FontSize" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="83"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="Mazzifier_Tab2Parts" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-20"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT" relativeTo="Mazzifier_Tab2Parts" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="-20"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Frames>
+    					<CheckButton name="Mazzifier_FrameCheckButton8" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+    					</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton9" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton8" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton10" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton9" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+                    </Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("How large do you like your chat window fonts?");
+						</OnLoad>
+					</Scripts>
+                </Frame>
+				<Frame name="Mazzifier_Tab2InstallMode" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="83"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="Mazzifier_Tab2FontSize" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-20"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT" relativeTo="Mazzifier_Tab2FontSize" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="-20"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Frames>
+    					<CheckButton name="Mazzifier_FrameCheckButton13" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+    					</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton14" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton13" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton15" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton14" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+                    </Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("Installation Mode:");
+						</OnLoad>
+					</Scripts>
+                </Frame>
+            </Frames>
+        </Frame>
+        <Frame name="Mazzifier_Tab3" parent="Mazzifier_Frame" hidden="true"  setAllPoints="true">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+                </Anchors>
+                <Size>
+          <AbsDimension x="600" y="600" />
+                </Size>
+            <Frames>
+			<Frame name="Mazzifier_ContentsPanel" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="83"/>
+					</Size>
+					<Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="-30" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMLEFT" relativePoint="BOTTOM" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="40" y="50" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-35" y="50" />
+                        </Offset>
+                      </Anchor>
+					</Anchors>
+				<Frames>
+				<ScrollFrame name="Mazzifier_Contents_ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+					<Anchors>
+             			<Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="8" y="-3" />
+                            </Offset>
+                        </Anchor>
+            			<Anchor point="BOTTOMRIGHT">
+                            <Offset>
+                                <AbsDimension x="-8" y="2" />
+                            </Offset>
+                        </Anchor>
+					</Anchors>
+					<Scripts>
+						<OnShow>
+							this:UpdateScrollChildRect();
+						</OnShow>
+					</Scripts>
+					<ScrollChild>
+                        <Frame name="Mazzifier_Content_ScrollChildFrame" >
+                            <Size>
+                            	<AbsDimension x="525" y="450"/>
+                            </Size>
+                            <Frames>
+							</Frames>
+                        </Frame>
+					</ScrollChild>
+				</ScrollFrame>
+				</Frames>
+				<Scripts>
+                    <OnLoad>
+						getglobal(this:GetName().."Title"):SetText("Please answer the following questions to determine which add-ons the Mazzifier will enable:");
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.05, 0.05, 0.05);
+                    </OnLoad>
+				</Scripts>
+ 			</Frame>
+            </Frames>
+        </Frame>
+        <Frame name="Mazzifier_Tab4" parent="Mazzifier_Frame" hidden="true">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+                </Anchors>
+                <Size>
+          <AbsDimension x="600" y="620" />
+                </Size>
+            <Frames>
+				<Frame name="Mazzifier_Tab4AddOns" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="83"/>
+					</Size>
+					<Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="-30" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMLEFT" relativePoint="BOTTOM" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="40" y="23" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="23" />
+                        </Offset>
+                      </Anchor>
+					</Anchors>
+					<Frames>
+    					<CheckButton name="Mazzifier_FrameCheckButton16" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+    					</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton17" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton16" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton18" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton17" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton19" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton18" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton20" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton19" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton21" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton20" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton22" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton21" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton23" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton22" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton24" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton23" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton25" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton24" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton26" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton25" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton27" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton26" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton28" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton27" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton29" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton28" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton30" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton29" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton31" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton30" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton32" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton31" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton33" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton32" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton34" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton33" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton35" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton34" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton36" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton35" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton37" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton36" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton38" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton37" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton39" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="Mazzifier_FrameCheckButton16" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="250" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton40" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton39" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton41" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton40" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton42" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton41" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton43" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton42" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton44" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton43" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton45" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton44" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton46" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton45" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton47" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton46" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton48" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton47" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton49" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton48" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton50" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton49" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton51" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton50" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton52" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton51" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton53" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton52" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton54" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton53" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton55" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton54" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton56" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton55" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton57" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton56" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton58" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton57" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton59" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton58" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton60" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton59" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton61" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton60" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton62" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton61" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton63" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton62" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton64" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton63" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+						<CheckButton name="Mazzifier_FrameCheckButton65" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_FrameCheckButton64" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="0" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+					</Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("The following add-ons will be configured:");
+                            getglobal(this:GetName().."Note"):SetText(TEXT("|CFFFF0000Warning:|CFFFFFFFF Some checkboxes above may be grayed out because the corresponding\nadd-on is currently disabled.  Re-enable the add-on first if you want to mazzify it."));
+						</OnLoad>
+					</Scripts>
+					</Frame>
+            </Frames>
+        </Frame>
+        <Frame name="Mazzifier_Tab5" parent="Mazzifier_Frame" hidden="true">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+                </Anchors>
+                <Size>
+          <AbsDimension x="600" y="620" />
+                </Size>
+            <Frames>
+				<Frame name="Mazzifier_Tab5Pict" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="240"/>
+					</Size>
+					<Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="-23" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="TOPLEFT" relativePoint="TOP" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="40" y="-23" />
+                        </Offset>
+                      </Anchor>
+					</Anchors>
+					<Frames>
+                      <Frame name="MazzleLayoutPictFrame">
+                        <Size>
+                            <AbsDimension x="512" y="256" />
+                        </Size>
+                        <Anchors>
+                          <Anchor point="BOTTOM" relativePoint="BOTTOM" relativeTo="Mazzifier_Tab5Pict">
+                            <Offset>
+                              <AbsDimension x="0" y="0" />
+                            </Offset>
+                          </Anchor>
+                        </Anchors>
+                        <Layers>
+                          <Layer level="BACKGROUND">
+                            <Texture name="MazzleLayoutPict" setAllPoints="true">
+                              <TexCoords left="0" right="1" top="0" bottom="1" />
+                            </Texture>
+                          </Layer>
+                        </Layers>
+                      </Frame>
+					</Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("Screenshot:");
+						</OnLoad>
+					</Scripts>
+				</Frame>
+				<Frame name="Mazzifier_Tab5Description" inherits="Mazzifier_TextBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="240"/>
+					</Size>
+					<Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Tab5Pict">
+                        <Offset>
+                          <AbsDimension x="0" y="-23" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="Mazzifier_Tab5Pict">
+                        <Offset>
+                          <AbsDimension x="0" y="-23" />
+                        </Offset>
+                      </Anchor>
+					</Anchors>
+				</Frame>
+				<Frame name="Mazzifier_Tab5Buttons" inherits="Mazzifier_FrameBoxTemplate">
+					<Size>
+						<AbsDimension x="10" y="30"/>
+					</Size>
+					<Anchors>
+                      <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Tab5Description">
+                        <Offset>
+                          <AbsDimension x="0" y="-15" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="Mazzifier_Tab5Description">
+                        <Offset>
+                          <AbsDimension x="0" y="-15" />
+                        </Offset>
+                      </Anchor>
+                      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="Mazzifier_Frame">
+                        <Offset>
+                          <AbsDimension x="-23" y="15" />
+                        </Offset>
+                      </Anchor>
+					</Anchors>
+					<Frames>
+    					<Frame name="Mazzifier_ButtonDropDown" inherits="UIDropDownMenuTemplate" enableMouse="true">
+    						<Anchors>
+    							<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+    								<Offset>
+    									<AbsDimension x="0" y="-7"/>
+    								</Offset>
+    							</Anchor>
+    						</Anchors>
+								<Layers>
+									<Layer level="BACKGROUND">
+										<FontString name="$parentLabel" inherits="GameFontNormalSmall" text="">
+											<Anchors>
+												<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+													<Offset>
+														<AbsDimension x="21" y="0"/>
+													</Offset>
+												</Anchor>
+											</Anchors>
+										</FontString>
+									</Layer>
+								</Layers>
+    						<Scripts>
+    							<OnLoad>
+    								Mazzifier_ButtonDropDown_OnLoad();
+    							</OnLoad>
+    							<OnEnter>
+    								GameTooltip:SetOwner(this, "ANCHOR_TOPRIGHT");
+    								GameTooltip:SetText("Use this menu to choose a button layout.", nil, nil, nil, nil, 1);
+    							</OnEnter>
+    							<OnLeave>
+    								GameTooltip:Hide();
+    							</OnLeave>
+    						</Scripts>
+    					</Frame>
+						<CheckButton name="Mazzifier_FrameCheckButton74" inherits="Mazzifier_CheckbuttonTemplate">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativeTo="Mazzifier_ButtonDropDown" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="15" y="4"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</CheckButton>
+					</Frames>
+					<Scripts>
+						<OnLoad>
+							this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+							this:SetBackdropColor(0.15, 0.15, 0.15);
+							getglobal(this:GetName().."Title"):SetText("What button layout would you like to use?");
+						</OnLoad>
+					</Scripts>
+				</Frame>
+            </Frames>
+        </Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				Mazzifier_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				Mazzifier_OnEvent(event);
+			</OnEvent>
+			<OnShow>
+			   Mazzify_Show()
+			</OnShow>
+			<OnHide>
+			   Mazzify_Hide()
+			</OnHide>
+		</Scripts>
+	</Frame>
+    <Frame name="Mazzifier_NeedAddonsFrame" frameStrata="DIALOG" parent="UIParent" hidden="true">
+    	<Size><AbsDimension x="500" y="200"/></Size>
+    	<Anchors>
+    		<Anchor point="CENTER"/>
+    	</Anchors>
+    	<Backdrop bgFile="Interface\AddOns\DiscordLibrary\PlainBackdrop" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+    		<BackgroundInsets>
+    			<AbsInset left="11" right="12" top="12" bottom="11"/>
+    		</BackgroundInsets>
+    		<TileSize>
+    			<AbsValue val="32"/>
+    		</TileSize>
+    		<EdgeSize>
+    			<AbsValue val="32"/>
+    		</EdgeSize>
+    	</Backdrop>
+    	<Frames>
+    		<Button name="$parent_No" inherits="UIPanelButtonTemplate" hidden="false">
+    			<Size><AbsDimension x="190" y="24"/></Size>
+    			<Anchors>
+    				<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+    					<Offset><AbsDimension x="15" y="15"/></Offset>
+    				</Anchor>
+    			</Anchors>
+    			<Scripts>
+    				<OnLoad>
+    					this:SetText("No, allow me to continue.");
+    				</OnLoad>
+    				<OnClick>
+    					Mazzifier_NeedAddonsFrame:Hide();
+    				</OnClick>
+    			</Scripts>
+    		</Button>
+    		<Button name="$parent_Yes" inherits="UIPanelButtonTemplate" hidden="false">
+    			<Size><AbsDimension x="275" y="24"/></Size>
+    			<Anchors>
+    				<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+    					<Offset><AbsDimension x="-15" y="15"/></Offset>
+    				</Anchor>
+    			</Anchors>
+    			<Scripts>
+    				<OnLoad>
+    					this:SetText("Yes, please enable those add-ons first.");
+    				</OnLoad>
+    				<OnClick>
+    					Mazzify_EnableNeededAddOns();
+    				</OnClick>
+    			</Scripts>
+    		</Button>
+    	</Frames>
+    	<Layers>
+    		<Layer level="OVERLAY">
+    			<FontString name="$parent_Text" inherits="GameFontNormal">
+    				<Size><AbsDimension x="400" y="150"/></Size>
+    				<Anchors>
+    					<Anchor point="TOP">
+    						<Offset><AbsDimension x="0" y="-15"/></Offset>
+    					</Anchor>
+    				</Anchors>
+    			</FontString>
+    		</Layer>
+    	</Layers>
+    	<Scripts>
+    		<OnLoad>
+    			this:SetBackdropColor(0.25, 0.25, 0.25);
+    			this:SetBackdropBorderColor(0.50, 0.50, 0.50);
+    			tinsert(UISpecialFrames,"Mazzifier_NeedAddonsFrame");
+    		</OnLoad>
+    	</Scripts>
+    </Frame>
+	<EditBox name="Mazzifier_EditBox" inherits="ChatFrameEditBoxTemplate" parent="UIParent" hidden="true">
+		<Scripts>
+			<OnLoad>
+			</OnLoad>
+		</Scripts>
+	</EditBox>
+	<GameTooltip name="MazzifySSToolTip" hidden="true" parent="UIParent" inherits="GameTooltipTemplate">
+		<Scripts>
+			<OnLoad>
+				this:SetOwner(WorldFrame, "ANCHOR_NONE");
+			</OnLoad>
+		</Scripts>
+	</GameTooltip>
+</Ui>

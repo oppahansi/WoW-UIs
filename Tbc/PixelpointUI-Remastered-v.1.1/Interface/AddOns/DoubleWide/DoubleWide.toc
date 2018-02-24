@@ -1,0 +1,5 @@
+## Interface: 20400
+## Title: DoubleWide (v0.7)
+## Author: Iriel & Kudane
+## Notes: Make QuestLog a DoubleWide! (v0.7)
+DoubleWide.lua

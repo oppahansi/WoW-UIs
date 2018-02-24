@@ -1,0 +1,24 @@
+## Interface: 20400
+## Title: ErrorMonster |cff7fff7f -Ace2-|r
+## Author: Rabbit
+## Notes: Filter and redirecter for errors, system messages and information messages.
+## Notes-esES: Filtro y redireccionador para errores, mensajes de sistema y mensajes de informaci\195\179n.
+## Notes-zhCN: 过滤和移除错误，系统，提示信息。
+## Version: 2
+## X-Credits: Allara for RogueSpam.
+## X-Category: Combat
+## X-eMail: rabbit.magtheridon@gmail.com
+## X-Website: http://www.wowace.com
+## X-License: CC-BY-NC-SA-2.5
+## SavedVariables: ErrorMonsterDB, ErrorMonsterDBChar
+## OptionalDeps: Ace2, LibSink-2.0
+
+embeds.xml
+
+ErrorMonster-enUS.lua
+ErrorMonster-koKR.lua
+ErrorMonster-esES.lua
+ErrorMonster-zhCN.lua
+
+ErrorMonster.lua
+

@@ -1,0 +1,49 @@
+
+smmConfig = {
+	["namespaces"] = {
+		["skins"] = {
+			["profiles"] = {
+				["Default"] = {
+					["border"] = false,
+					["skin"] = 2,
+				},
+			},
+		},
+		["coords"] = {
+			["profiles"] = {
+				["Default"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["mapPosition"] = {
+				1147.657147333535, -- [1]
+				694.9029975017838, -- [2]
+			},
+			["direction"] = false,
+			["show"] = {
+				["track"] = false,
+				["zoom"] = false,
+				["voice"] = false,
+				["time"] = false,
+				["meet"] = false,
+				["mail"] = false,
+				["map"] = false,
+				["bgs"] = false,
+			},
+			["locationText"] = false,
+			["locationShow"] = false,
+		},
+	},
+	["disabledModules"] = {
+		["Default"] = {
+			["pings"] = false,
+			["skins"] = false,
+			["autozoom"] = false,
+			["gui"] = false,
+		},
+	},
+}

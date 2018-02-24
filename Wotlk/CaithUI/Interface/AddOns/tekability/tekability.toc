@@ -1,0 +1,21 @@
+## Interface: 30200
+
+## Title: tekability
+## Notes: Simple item durability readout in the character frame.
+## Author: Tekkub Stoutwrithe
+## Version: 3.0.2.3
+## X-Website: http://www.tekkub.net/
+## X-Email: tekkub-wow@googlegroups.com
+## X-Category: Inventory
+## X-Credits: Fizzle by phyber
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Hooks: CharacterFrame_OnShow
+## X-LoadOn-CharacterFrame_OnShow: LoadAddOn('tekability')
+
+LibStub.lua
+CallbackHandler-1.0.lua
+LibDataBroker-1.1\LibDataBroker-1.1.lua
+tekKonfigAboutPanel.lua
+
+tekability.lua

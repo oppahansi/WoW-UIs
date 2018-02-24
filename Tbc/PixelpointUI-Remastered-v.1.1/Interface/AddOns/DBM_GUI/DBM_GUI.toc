@@ -1,0 +1,12 @@
+﻿## Interface: 20400
+## Title: |cff0055FFDeadly Boss Mod GUI|r
+## Title-zhCN: |cff0055FFDeadly Boss Mod|r GUI
+## Notes: Graphical User Interface for DBM
+## Notes-zhCN: Deadly Boss Mod 的图形设置界面
+## RequiredDeps: DBM_API
+## LoadOnDemand: 1
+## DefaultState: enabled
+## Author: Nitram
+## Version: 1.25
+## URL: http://www.deadlyminds.net
+GUI.xml

@@ -1,0 +1,23 @@
+﻿## Interface: 20400
+## Title: |cff0055FFDeadly Battleground Mods|r
+## Title-zhCN: |cff0055FFDeadly|r 战场 |cff0055FF模组|r
+## Title-ruRU: |cff0055FFДедли Мод БГ|r
+## Notes: Battleground Mods
+## Notes-zhCN: Deadly Boss Mod 的战场模组
+## Notes-ruRU: БГ Мод
+## Author: Tandanu and Nitram
+## LoadOnDemand: 1
+## RequiredDeps: DBM_API
+localization.en.lua
+localization.de.lua
+localization.tw.lua
+localization.cn.lua
+localization.es.lua
+localization.ru.lua
+Battlegrounds.lua
+Arathi.lua
+Alterac.lua
+Warsong.lua
+EyeOfTheStorm.lua
+Arenas.lua
+Load.lua

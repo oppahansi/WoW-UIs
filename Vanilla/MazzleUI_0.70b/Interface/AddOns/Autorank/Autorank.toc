@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: Cirk's Autorank v1.12.0
+## Notes: Automatically casts the appropriate spell rank for buffs on lower level targets
+## URL: http://www.wowinterface.com/downloads/fileinfo.php?id=4536
+## SavedVariables: AutorankState
+## OptionalDeps:
+## Dependencies:
+Autorank.xml

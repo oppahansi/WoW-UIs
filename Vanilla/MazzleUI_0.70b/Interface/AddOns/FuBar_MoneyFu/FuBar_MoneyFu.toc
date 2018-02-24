@@ -1,0 +1,32 @@
+## Interface: 11200
+## Title: FuBar - |cffffffffMoney|r|cff00ff00Fu|r
+## Title-koKR: |CFF99FF99F|CFFFFFFFFu|CFF99FF99B|CFFFFFFFFar - |cffffffffMonye|r|cff00ff00Fu|r
+## Notes: Keeps track of current money and all your characters on one realm.
+## Notes-koKR: 서버내의 모든 캐릭터의 금전 이동 사항을 확인합니다.
+## Notes-zhTW: 持續追縱目前的金錢狀況，同時也可以顯示此伺服器上其他角色的金錢狀況。
+## Author: phyber
+## OptionalDeps: Ace2, FuBar
+## SavedVariables: MoneyFuDB
+## SavedVariablesPerCharacter: MoneyFuCharDB
+## Version: 2
+## X-Category: Interface Enhancements
+
+Libs\FuBarPlugin-2.0\FuBarPlugin-2.0.lua
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceDB-2.0\AceDB-2.0.lua
+Libs\AceLocale-2.2\AceLocale-2.2.lua
+Libs\AceEvent-2.0\AceEvent-2.0.lua
+Libs\AceHook-2.1\AceHook-2.1.lua
+Libs\AceConsole-2.0\AceConsole-2.0.lua
+
+Libs\Compost-2.0\Compost-2.0.lua
+Libs\Dewdrop-2.0\Dewdrop-2.0.lua
+Libs\Tablet-2.0\Tablet-2.0.lua
+Libs\Abacus-2.0\Abacus-2.0.lua
+
+MoneyFuLocale-enUS.lua
+MoneyFuLocale-deDE.lua
+MoneyFuLocale-koKR.lua
+MoneyFuLocale-zhCN.lua
+MoneyFuLocale-zhTW.lua
+MoneyFu.lua

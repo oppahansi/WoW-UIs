@@ -1,0 +1,44 @@
+
+ZygorGuidesViewerSettings = {
+	["char"] = {
+		["Soufly - Angrathar"] = {
+			["maint_fetchitemdata"] = true,
+			["taxis"] = {
+			},
+			["guidename"] = "Zygor's Horde Leveling Guides\\Orc (1-13)",
+			["maint_fetchquestdata"] = true,
+			["starting"] = false,
+			["debuglog"] = {
+				"19:17:14> Viewer started. ---------------------------", -- [1]
+				"19:17:14> PLAYER_ENTERING_WORLD (dead?)", -- [2]
+				"19:17:14> PLAYER_ALIVE (dead?)", -- [3]
+				"19:17:14> CacheQuestLog cached 0 quests", -- [4]
+				"19:17:15> Got completed quests list", -- [5]
+				"19:17:15> CacheQuestLog cached 0 quests", -- [6]
+				"19:17:15> ZONE_CHANGED_NEW_AREA (dead?)", -- [7]
+				"19:17:15> Guides loaded. -----", -- [8]
+				"19:17:15> SetGuide Zygor's Horde Leveling Guides\\Orc (1-13) (1", -- [9]
+				"19:17:15> Guide loaded: Zygor's Horde Leveling Guides\\Orc (1-13)", -- [10]
+				"19:17:15> FocusStep 1", -- [11]
+				"19:17:15> Translated: accept/turnin Your Place In The World", -- [12]
+				"19:17:15> unpausing", -- [13]
+				"19:17:15> frameNeedsUpdating, so updating.", -- [14]
+			},
+			["guides_history"] = {
+				{
+					["short"] = "Orc (1-13)",
+					["full"] = "Zygor's Horde Leveling Guides\\Orc (1-13)",
+				}, -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Soufly - Angrathar"] = "kripp",
+	},
+	["profiles"] = {
+		["Soufly - Angrathar"] = {
+			["arrowcam"] = false,
+			["arrowsmooth"] = true,
+		},
+	},
+}

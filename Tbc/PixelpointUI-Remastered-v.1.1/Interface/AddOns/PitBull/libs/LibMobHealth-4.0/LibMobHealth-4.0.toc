@@ -1,0 +1,14 @@
+## Interface: 20400
+## LoadOnDemand: 1
+## Title: Lib: MobHealth-4.0
+## Notes: Estimates a mob's health
+## Author: ckknight
+## X-Credits: neronix
+## X-eMail: ckknight@gmail.com
+## Version: 1.0
+## X-Category: Library
+## SavedVariables: LibMobHealth40DB, LibMobHealth40Opt
+## X-License: LGPL v2.1
+
+LibStub\LibStub.lua
+lib.xml

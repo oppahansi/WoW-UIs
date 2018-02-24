@@ -1,0 +1,19 @@
+## Interface: 30300
+## Name: TipTop
+## Author: Seerah
+## Notes: Tooltip enhancement
+## Version: 2.3
+## SavedVariables: TipTopDB
+## SavedVariablesPerCharacter: TipTopPCDB
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\LibSharedMedia-3.0\lib.xml
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+
+TipTopOptions.lua
+tiptop.lua

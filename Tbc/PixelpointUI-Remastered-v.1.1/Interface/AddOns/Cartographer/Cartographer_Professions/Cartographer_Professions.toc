@@ -1,0 +1,34 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fProfessions|r]
+## X-Name: Professions
+## X-Name-deDE: Berufe
+## X-Name-frFR: Métiers
+## X-Name-koKR: 전문 기술
+## X-Name-zhTW: 專業技能
+## X-Name-esES: Profesiones
+## X-ModuleName: Professions
+## Notes: Stub for loading Cartographer module addons based on your professions.
+## Notes-deDE: Cartographer-Module in Abhängigkeit von Deinen Berufen laden.
+## Notes-frFR: Charge des modules pour Cartographer basés sur vos métiers.
+## Notes-koKR: 당신의 직업에 기초를 둔 Cartographer 모듈 애드온을 불려옵니다.
+## Notes-zhTW: 依據你的專業技能載入 Cartographer 模組。
+## Notes-esES: Carga los módulos del accesorio Cartographer basados en tus profesiones
+## Author: Chris "kergoth" Larson
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes
+## OptionalDeps: Ace2, Babble-2.2
+## X-Category: Map
+## X-eMail: clarson@kergoth.com
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\AceConsole-2.0\AceConsole-2.0.lua
+#Libs\Babble-Spell-2.2\Babble-Spell-2.2.lua
+
+Professions.lua

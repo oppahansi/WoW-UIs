@@ -1,0 +1,60 @@
+tag v4.0.0-beta6
+044b70b188e6af0afe729a18e8add929114f4d7d
+Shefki <shefki@shefki.org>
+2009-12-08 18:47:03 -0800
+
+Tagging v4.0.0-beta6
+
+
+--------------------
+
+Shefki:
+	- Replace the VisualHeal module that used LibHealComm-3.0 with the 4.0 one
+	that was experimental.
+	- Bump TOC for 3.3.0
+	- Workaround for the You are not in a party stuff.
+	- Oops called the wrong update function which broke the ability to disable
+	VisualHeal4 per layout.
+	- Ticket 606: Groups that were enabled and then redisabled during a single
+	session would not get their state map updated and would show again on
+	the next state change.  Most of the complaints were about party pets,
+	but it was universal to any group.
+	- Fix spell id for Chains of Ice for PTR, but backward compatabile with
+	3.2.x as well.
+	- Oops forgot to updated the load.xml for VisualHeal4 with the correct
+	libraries.
+	- Fix some .pkgmeta syntax errors
+	- Add a module with experimental LibHealComm-4.0 support.
+	- Ticket 297: Anchor text so it doesn't hang over the edge when set to
+	position on the edges of the unit frame.  This makes the text anchor
+	slightly different than indicators placed in the same place since they
+	will be centered on the corner.
+	- Not sure what the heck I was thinking when I did this.
+	Revert "Allow Party frames to be shown when in a raid per the Show when options"
+	
+	This reverts commit 4ad10da05c73d28d33d170dfc0485506d45228c7.
+	- Fix typos in RangeFader that broke long enemy range tests for Shaman and
+	Warriors.
+	- Allow Party frames to be shown when in a raid per the Show when options
+	under filtering.
+	- Fix Unholy Blight in Aura filters, was changed in 3.2 and got missed.
+	- Properly enable/disable some spells based on player race from filters.
+	- Add Blood Corruption for B.Elf Paladins and make Holy Vengeance be
+	alliance Paladin specific.
+	- Remove the filter for just Vengeance, no idea how we got this but it was
+	an NPC ability not a Paladin ability.
+	- Typo in the spellid for Seal of Corruption.
+	- Aura filters: Seal of Vengeance is alliance only and Seal of Corruption
+	(horde version of Seal of Vengeance) was missing entirely.
+	- More appropriate hat for the day.
+	- Try and load LibHealComm if VisualHeal is enabled, also for dev
+	enviornments.
+	- Try to load LibBanzai when the Aggro mdoule loads for dev environments.
+	- Don't set hooks if the module is disabled.
+	- Small performance improvement with the Portrait module.
+vangual:
+	- Don't query Banzai when it's not loaded.
+Shefki:
+	- Add Hunger For Blood to Rogue Self Buffs.
+	- Fix a case where I missed or UNKNOWN which caused SmartRace() to return
+	nil sometimes.

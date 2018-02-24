@@ -1,0 +1,13 @@
+## Interface: 20400
+## LoadOnDemand: 1
+## Title: Lib: DruidMana-1.0
+## Notes: A library to provide data on mana for druids in bear or cat form.
+## Author: ckknight
+## eMail: ckknight@gmail.com
+## Version: 1.0
+## X-Category: Library
+## OptionalDeps: LibStub
+## X-License: LGPL v2.1
+
+LibStub\LibStub.lua
+lib.xml

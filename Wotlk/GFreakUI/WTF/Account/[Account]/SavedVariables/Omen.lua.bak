@@ -1,0 +1,12 @@
+
+Omen3DB = {
+	["profileKeys"] = {
+		["Doublefisted - Icecrown"] = "Doublefisted - Icecrown",
+	},
+	["profiles"] = {
+		["Doublefisted - Icecrown"] = {
+			["PositionY"] = 501.6666946826391,
+			["PositionX"] = 646.0185410115881,
+		},
+	},
+}

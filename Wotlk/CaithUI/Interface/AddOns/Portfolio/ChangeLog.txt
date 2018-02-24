@@ -1,0 +1,109 @@
+Change Log
+
+TODO:
+- Fix ColorPicker to not callback twice on Okay when opacity is enabled
+- Allow for sub categories
+
+v1.21
+- Fixed text value insertion
+
+v1.2
+- Fixed bug with empty Windows
+- Added more robust text value insertion, handling %.2f for example
+- Added optionSetTable.about = false to opt out of the about panel
+- Added ChangeLog.txt
+
+v1.1
+- Added CONTROLTYPE_WINDOW for child frame control windows (optionally scrollable)
+- Modified Scrollbars to be inside the window, have a border, and still be scrollable while moused over
+Window width is now modified depending on the visibility of the scrollbar.
+- Renamed UpdateTextWrap to UpdateBox and it is now called on child controls when the window scroll box is changed
+- Fixed an error with dropdown entry selection
+- Modified SetRelativePoint for better extensibility:
+Added xOffset and yOffset fields for modifying the default offset from the anchor control.
+Added xOffsetRelative and yOffsetRelative fields for modifying the default offset of relatively anchored controls.
+xOffset and xOffsetRelative are also used in calculating the default width for windows.
+
+v1.0
+- Added CONTROLTYPE_EDITBOX
+- Removed isTemp  and replaced it with isGUI which is only a passthrough value to the callback; text and saved var are still updated. 
+It is now: callback(value, isGUI, isUpdate)
+isGUI is now passed as true for all GUI control interactions (but not for the Okay, Cancel and Default blizzard option panel buttons). 
+- Added control:Refresh() called when the blizzard options frame is shown
+- Added control:Okay(), control:Cancel() and control:Reset() that are called for each control that has them when you click the blizzard interface buttons
+- Fixed Cancel to correctly revert values/controls to their previous state. Doesn't pass isGUI.
+
+v0.94
+- Added CONTROLTYPE_COLORPICKER
+- Added Portfolio.Round (Round-Half-Up)
+
+v0.93
+- Refactored some code/files
+- Added LuaDocs
+- Renamed checkbox.dependentOptions to dependentControlsByID for clarity
+
+v0.92
+- option:Enabled() now restores custom font object colors
+- Fixed success and result global var leaks
+- Added CONTROLTYPE_DROPDOWN
+- Added control click sounds
+- Fixed tooltipText to be optional
+
+v0.91
+- Fixed a bug with text functions
+
+v0.9
+- Added CONTROLTYPE_TEXT
+- Fixed Text height/wrapping
+- Added control:Reset() - Disable() no longer resets.
+- dependentOptions will reset after disabling, but dependentControls will not
+- UpdateDependentControls renamed UpdateDependents, handles both dependentOptions and dependentControls
+- slider:SetMinMaxValues(min, max) now updates the stored min/max and texts if minText/maxText are not set
+- Enable/Disable now changes text color
+- tooltipText is now as flexible as text
+- Headers and Text controls now dynamically resize with text:UpdateTextWrap() called OnShow
+- Refactored and abstracted much of the control functionality to Portfolio.Control and renamed files.
+- Fixed a bunch of minor bugs
+
+v0.8
+- Text can now have %s or %d to be formatted with the option value. control:UpdateText() is called when an option is updated
+- Added dependentControls and dependentOptions for CONTROLTYPE_CHECKBOX to Enable/Disable other options
+- control:Disable() now resets the value to default
+- Cleaned up OnShow code so it doesn't call callbacks excessively
+- callback(value, isUpdate) now pass an extra boolean argument when called by control:Update() (used when loading vars)
+
+v0.7
+- Working Slider option
+
+v0.6
+- Now uses LibStub to handle library versioning
+- Removed event handling code and default variable initialization in favor of using LibDefaults
+- Upgraded to InterfaceOptionAboutPanel lib
+- Removed noAutoDefault. Now always loads vars that have defaults set.
+- loadVars is renamed initCallbacks and now defaults to true
+- Changed how GetValue/SetValue/Update works on the options
+
+v0.5
+- Added control:init() function for custom modification to the config frame
+- Added callbacks on vars loaded (or before init if LoD) if loadVars is set
+- Added Button
+- Added some Dropdown code (incomplete)
+- Added AboutPanel generated from toc info
+
+v0.4
+- Refactored the code into 3 files
+- Added some Slider code (incomplete)
+- Changed the registration arguments to match blizzard's format
+
+v0.3
+- Only loads once if embedded
+- Defaults are now defined on vars loaded (immediately if registered after) if a default is supplied and the saved variables are nil
+- Added noAutoDefault param for options and option sets. If defined, option's value overrides set's values.
+
+v0.2
+- Added a scroll frame for the main option panel
+- Slider in progress
+- Code cleanup
+
+v0.1
+- Checkboxes work

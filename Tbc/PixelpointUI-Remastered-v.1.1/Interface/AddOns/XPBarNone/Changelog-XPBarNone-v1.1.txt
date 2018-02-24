@@ -1,0 +1,12 @@
+commit 1696fa2515aad67e51b4128739070227ec6cd5cc
+Author: phyber <phyber@wowace>
+Date:   Mon Oct 6 00:01:02 2008 +0100
+
+    Accidentally committed a version of Core.lua which was filled with
+    EasyMenu() fail.
+
+commit 05b85f66ed58cec28fc8e91c601e98f69483e549
+Author: phyber <phyber@wowace>
+Date:   Sun Oct 5 17:39:31 2008 +0100
+
+    Initial git commit.

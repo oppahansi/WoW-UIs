@@ -1,0 +1,12 @@
+﻿## Interface: 20100
+## Title: Aloft Options
+## Notes: Load on Demand options for Aloft modules
+## Notes-zhTW: 隨需求載入 Aloft 模組選項。
+## Notes-zhCN: 根据需求加载，Aloft设置模块，官方简体中文版由Taburiss汉化。
+## Author: Roartindon/Silvermoon
+## Version: 1.0
+## LoadOnDemand: 1
+## Dependencies: Aloft
+## X-Aloft-Options: 1
+
+Contents.xml

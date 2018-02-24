@@ -1,0 +1,222 @@
+AzCastBar Changes | 2010 Jun 27
+-------------------------------
+- A texture check is now done when applying settings, this will avoid some Lua errors that happened, if a previously selected texture no longer exists. An invalid texture path will be set to the default.
+- If a plugin is not enabled, it will no longer "waste" CPU time applying the settings to bars.
+
+AzCastBar Changes | 2010 Apr 29
+-------------------------------
+- Texture tiling has been fixed for real now.
+
+AzCastBar Changes | 2010 Apr 28
+-------------------------------
+- The texture tiling issue introduced in patch 3.3.3 has now been worked around.
+
+AzCastBar Changes | 2009 Dec 16
+-------------------------------
+- Changed the TOC version to 30300 for the 3.3 patch.
+
+AzCastBar Changes | 2009 Aug 13
+-------------------------------
+- Changed the TOC version to 30200 for the 3.2 patch.
+- Options: Updated Edit Mode a little, it will no longer show EditMode bars for plugins that are disabled. Also, if you right click an EditMode bar, it will position itself in the center of the screen.
+- Options: Fixed some problems with the color options, where the color picker would start out with the old color if opened a second time.
+- Options: The name and time labels now has their own option category and can be configured completely independent of eachother.
+
+AzCastBar Changes | 2009 May 17
+-------------------------------
+- Auras: Better showing of who cast the buffs and debuffs, as it could sometimes show wrong info for those cast by out of group people.
+- Auras: The option to show pet auras will now also include vehicle auras.
+- Auras: Added option to select the label format. Possible options are, name & stack, name only and stack only.
+- Core: Changed the table recycler, this will affect some plugins, so they require an update.
+
+AzCastBar Changes | 2009 Apr 27
+-------------------------------
+- Auras: Buff and Debuff tooltips will now show from who you gained it.
+- Options: Added an option to reverse the statusbar growth. You can find it under "Appearance".
+- Options: A statusbar spark option has been added under "Appearance". Plugins does not have to support this, it will automatically be positioned by the core. Furthermore, until the option for showing a spark is enabled, the texture widget is not even created.
+
+AzCastBar Changes | 2009 Apr 19
+-------------------------------
+- CastBar: Removed the real time latency option for the safe zone, which was added in the last release. The reason for this is simple, the first cast you do, the time it shows will be good, a real time latency. But when doing back to back chain casting, you actually send the cast request before the previous cast ends, thus showing the supposedly "real time latency" way too high. As there is no good way to avoid this, I've removed the option.
+- CastBar: Merged trades should now fade out when completed.
+- Auras: Removed some pre 3.1 code for the self auras only filter.
+- Options: Corrected a bug that could cause a color option to generate an error when clicked.
+
+AzCastBar Changes | 2009 Apr 13
+-------------------------------
+- Changed the TOC version to 30100 for the 3.1 patch.
+- CastBar: Fixed a rare bug, which gave a Lua error on line 181, that could happen under unknown circumstances.
+- CastBar: Now has an option to show the real time latency for the safe zone, instead of the average one returned by GetNetStats().
+- CastBar: A new option to show the target of the cast has been added. Only works for the player castbar.
+- Auras: Removed some global pollution.
+- Auras: Added option to show auras with no duration as a full bar.
+- Auras: New option to select how long a buff duration you want to determine short/long buffs from, this time will determine when the bar will be colored using the "Buff Timeout Color". You can set it to zero to disable the timeout coloring.
+- Auras: Updated the "LibWeaponEnchant" library. This should fix enchants reseting the total time and sometimes showing as "??" with "0.0" time after login or zoning.
+- Options: Will now add some sound files to sharedmedia. Only relevant for plugins which has an sound file option.
+- Options: You can now change the offset of the text labels on the bar, that is the name and time label.
+- Options: The label color for the name and time, can now be configured individually.
+- Options: Redesigned the way the label alignment works, so the option "Swap Name & Time Labels" has been removed. You now configure the alignment for both the name and time label.
+- Core: Moved more of the plugin code into the core, specifically the parts that will apply bar settings and add new bars to the mainbar's bars table. Please update plugins to avoid any errors.
+- Core: Most plugins now uses the "SetFormattedText()" function to set the time through the new "plugin:SetTimeText()" plugin function. Doing this does not generate a massive amount of Lua garbage strings.
+- Core: Every plugin's main bar now has a default OnEvent script from creation which will call "plugin[event]" if it exists.
+- Core: The OnConfigChanged function is now only called once per plugin, not once per bar.
+
+AzCastBar Changes | 2009 Apr 01
+-------------------------------
+- CastBar: Hopefully fixed an issue where the castbar could "hang" if you tried crafting more than one item which had a cooldown, such as "Northrend Alchemy Research".
+- Auras: Improved the performance some by removing the OnUpdate handler from aura bars which had no duration. And those bars which does have a duration, has been limited to 60 updates per second.
+- Auras: The option to color the background to match the aura color, has been replaced with a color alpha slider. Setting this to anything above zero, will color the background with the same color as the aura.
+- Auras: Added support for the 3.1 code which allows to track who casts auras. This means the option to track only your own auras, wont break on patch day.
+- Auras: New future option to also track the auras your pet applies. Will not work until the 3.1 patch.
+- Auras: An option to only show the buffs which can be spell stolen has been added.
+- Auras: Weapon Enchant Timers should now update properly. Also, the total time of weapon enchants are now shown.
+- Auras: Now uses the "LibWeaponEnchant" library to update the weapon enchant data. This means less overhead, especially if used together with the Shaman timer plugin.
+- Mirror: This plugin has been rewritten. It will have no effect on its functionality, but it should have a better performance, not that the old one had bad performance though.
+- Mirror: The rewrite should also have fixed an issue, where the mirror timers wouldn't all show, if there were more than one timer when logging in.
+- Options: The "Copy Settings" option has been moved to the General category.
+- Options: A layout template option has been added, this will allow you to quickly set the appearance through a preset. Currently only two exists "Default" and "Auras", but I plan on adding more. If you have a nice setup, please post it and I will include it.
+- Core: Added a table recycler library, and made most multibar plugins use it. This means that plugins that update their timers often, such as the Aura plugin, wont increase so extreemly fast in memory usage and invoke the garbage collector.
+- Core: Removed the "shared" tooltip that was previously being used to scan for temporary weapon enchants.
+
+AzCastBar Changes | 2009 Mar 26
+-------------------------------
+- Auras: Added options to hide the default aura, enchant and tracking frame (hotfixed).
+- The "PlayerAuras" and "TargetAuras", previously part of the AzCastBar plugin package, has now been renamed to simply "Auras" and included in the main release. It will add two bars, "PlayerAuras" and "TargetAuras", but they will be disabled by default. But do try them out, AzCastBar can be more than just a cast bar.
+- CastBar: If a merged trade cast failed, it would not hide the cast, but instead just continue the animation as if you were still crafting. This is now fixed.
+- CastBar: Will no longer try and use the player cast bar for possessed pets if your player cast bar is disabled.
+- Mirror: When disabled, the default mirror bars will be re-enabled. Also optimised the code some.
+- Auras: Rewrote the aura sorting function to be better. It now also allows for an easy way to change the aura type priority, but it requires Lua editing.
+- Auras: Added an option to use the default debuff colors instead of the configured one.
+- Auras: Optimised the updating of auras. Before all aura types was updated if just one type changed, now it will only update the type changed.
+- Auras: Simple multibar support added. I intend to add an ingame option for this later, but for now you can add more bars, by editing the Lua file. Go to the very bottom and add a new "SpawnAuraPlugin" line, just change the name into something unique. This is nice if you want to have your debuffs in another place than buffs for example.
+- Auras: Added an option to only show the auras that you caused.
+- Options: Each plugin now has a new options category, which allows you to copy the bar settings from another plugin, this should save a lot of time when setting up bars.
+- Options: Added a new "Appearance" option, "Use Bar Texture as Background Texture". Enabling this will instead of a complete plain white texture, use the texture set for the bar.
+- Core: When a bar is configured with it's name label align to center, it will now properly show at the center, and not have it's room taken up by the timer label.
+- Core: Added a helper function that determines the best anchor spot for a tooltip, so you should no longer see any tips blocking the timer bars.
+- Core: Each plugin sub bar now has a reference to their config table, not just the main bar.
+- Core: New helper function "AzCastBar.CreateMainBar" which will fill in the token, options and subbar table, and itself to the "AzCastBar.frames" table. Used instead of "AzCastBar.CreateBar" for mainbars.
+
+AzCastBar Changes | 2009 Mar 22
+-------------------------------
+- Options: Removed some SharedMedia debug code.
+- Options: The minimum value for fadeout time can now be set to zero.
+- Options: Now uses my shared libraries for options factory and dropdown menus. Makes things a little easier to update and to add new options.
+- Core: No longer initialises all default variables for unset values on load, but instead uses a metatable.
+- CastBar: Disabling the pet casting bar should now properly re-enable the default UI pet casting bar.
+- CastBar: Should hopefully not conflict with certain other addons and now properly hide the blizzard casting bars when enabled.
+- CastBar: Removed the code that made the target castbar not show if it was player, and focus not show if it was target. This seemed to confuse a lot, and removing it only means less code.
+- CastBar: There is now an option to merge trade skills. What this does it to show you the total time when you craft more than one item.
+
+AzCastBar Changes | 2009 Mar 08
+-------------------------------
+- The CastBar and Mirror plugin has been moved out of the core part of AzCastBar, but will remain included in the main download. But doing this allows people to easily disable these two plugins if they have no need for them.
+- Core: Changed some of the core functions, an update of all plugins is required.
+- Core: Each bar frame will now have a global name, the format is "AzCastBarPlugin<TOKEN>", where token is the specific name of that frame, e.g. "Player". This was a request to allow panels to be anchored to AzCastBar frames.
+- Core: It is now possible for a plugin to add additional options. Because of this, some options has been removed under the options and moved directly into the plugins themselves.
+- Core: A slash command has been added to wipe all plugin settings, use "/acb wipeconfig" to do it. Note that this does not affect profiles.
+- CastBar: The Safezone indicator now shows for channeled casts as well.
+- CastBar: Will now show the bind location for "Astral Recall" just like it already does for Hearthstone. These should now also work for non english clients as well.
+- CastBar: The "Enable Bar Plugin" option in will now re-enable the default blizzard casting bar if disabled.
+- Options: A new option has been added to change the frame strata of the bar frames, you will find it under "Position" in the option dialog.
+- Options: You can now change the offset of the icon to the status bar, look for the option under the "Anchors" category.
+- Options: Removed the option "Show Bar Icon" and replaced it with an "Icon Anchor" option, which can be set to either "Left", "Right", or "None".
+- Options: Fixed a problem where the "Left Offset" was not updated when moving the bar manually in edit mode.
+- Options: By suggestion, I've added a new option to hide the borders around spell icons. This is on by default, so you'll have to go and disable it if you want the old look back, but I think most will prefer the change.
+- Options: The position of the option window will no longer be reset when you load a saved profile.
+- Many small optimizations and code improvements.
+
+AzCastBar Changes | 2009 Jan 10
+-------------------------------
+- New anchor settings added for multi bar plugins. You can modify in which direction the bars will grow, top, bottom, left or right. An anchor offset can also be set. You should update to the newest plugins to support this.
+- Removed some obsolete "OnEditMode" code from the castbar and mirror plugins as well as the options.
+
+AzCastBar Changes | 2008 Dec 22
+-------------------------------
+- The bars are no longer created as top level frames, meaning they should no longer be "popping" on top of other frames when shown.
+- Bars showing the total time will now show two decimals instead of just one, for better precision with haste ratings.
+- CastBar: Pets you are in possession of, will now show their cast bar using the player cast bar instead of the pet bar. Really nice for all the new WotLK quests.
+- Mirror: Corrected an error that could occur if you had a mirror bar showing, when turning on "Edit Mode".
+- Mirror: Now supports the option "Also Show Total Time".
+- Options: Fixed a problem where the option dialog went blank for options, at least I hope so, it's been somewhat hard for me to reproduce, so please let me know if it's still a problem.
+- Options: Changed how "Edit Mode" works. It's now a lot more clean, since it uses its own bars, instead of modifying the bar of each plugin.
+- All functions which were previously global, those named "AzCastBar_***", has now been moved into a table named "AzCastBar" to lower the global namespace pollution. This change will require all plugins to be updated.
+
+AzCastBar Changes | 2008 Oct 22
+-------------------------------
+- Fixed a cast bar problem, where it would say interrupted and hide itself when casting a spell, if you tried to cast another spell.
+- Added an option to show the total duration of the cast.
+
+AzCastBar Changes | 2008 Oct 18
+-------------------------------
+- Changed the TOC version to 30000 for the Wrath of the Lich King patch.
+- Options: Switched to using "LibSharedMedia-3.0". The library itself is still not included, so get it elsewhere.
+- Options: Updated the parameters for the scrollbars to make them work for the 3.0 patch.
+
+AzCastBar Changes | 2008 Apr 04
+-------------------------------
+- Should now properly initialize the backdrop background texture.
+- Options: Now uses the new CopyTable() function, which is a part of the Blizzard interface in 2.4, instead of a function of its own.
+- CastBar: Removed some old debugging code.
+
+AzCastBar Changes | 2008 Mar 21
+-------------------------------
+- Changed the TOC version to 20400 for the new 2.4.0 patch.
+- Default setting for the "SafeZone Indication" is now false due to the fact that this feature isn't so much needed anymore.
+- Added an option to hide the text label on the bar as well as the text indicating the time.
+- New option to set the text alignment of the Bar Label.
+- The drop down menus in the options now have a scrollbar. If you have a lot of shared media items, they should no longer drop off the screen.
+
+AzCastBar Changes | 2008 Jan 30
+-------------------------------
+- Code and plugin framework improved and optimized.
+- The Options received a big optimization as well.
+- The profile loader under the options will now only load settings for bar plugins which is currently loaded.
+
+AzCastBar Changes | 2007 Dec 28
+-------------------------------
+- Included "FlightTimes" and "BGTimers" as added plugins for AzCastBar, if you do not wish to use these, do not copy them to your AddOn folder.
+
+AzCastBar Changes | 2007 Nov 22
+-------------------------------
+- Fixed an error in the options dialog if you did not have SharedMediaLib installed.
+
+AzCastBar Changes | 2007 Nov 21
+-------------------------------
+- Changed the TOC version to 20300 for the 2.3 patch.
+- Added pet casting bar.
+- Options: Added support for SharedMediaLib to make more textures available. The library is not included with AzCastBar, but it will use it if installed.
+- Options: You now select which cast bar to configure in the window on the left side instead of buttons.
+- Options: You can now use the mousewheel to increase and decrease slider values.
+
+AzCastBar Changes | 2007 Aug 21
+-------------------------------
+- Fixed a problem which would hide the castbar, if you tried to cast something new while the GCD from a channeled spell was still up (e.g. spamming the mind flay button).
+- Options: Added "Enable Bar" option.
+- A problem causing the cast to go out of sync, when the cast bars gets hidden by calling up the map or hiding the UI with Alt+Z, has been fixed.
+- Fixed an error when clicking on a cast bar when the options had not yet been loaded.
+- When moving the bars with the mouse in "Edit Mode", the option frame for the current bar will now be updated accordingly.
+
+AzCastBar Changes | 2007 Aug 16
+-------------------------------
+- Options: Added slider for the castbar backdrop indent.
+- Fixed an issue that made the castbars appear "laggy" the longer your computer uptime was. The cause of this was due to Lua cutting off decimals on large numbers.
+- Made the option dialog Load on Demand.
+- Did a lot of restructuring of the entire mod.
+- Added profiles which you can load, save and delete manually. These settings are stored with the Load on Demand Option Dialog, so the saved entries will not take up memory until the Options is loaded.
+- Recoded a lot of how the settings are stored, this means your old config is lost, sorry.
+- The Texture drop down should now show the correct selected texture.
+
+AzCastBar Changes | 2007 Jul 19
+-------------------------------
+- Updated TOC to 20200 for the 2.2.0 patch.
+- Option for frame alpha added, this is how transparent the frame is. Default is 100.
+- The "Show Anchors" option which makes the bars movable is now a global option which will unlock all bars at once, and it will no longer get saved between sessions.
+- Added "Show Spell Rank" option, which if the spell has a rank, will show it in brackets after the spell name.
+- There is now an option to for the Safe Zone Area (Player Bar only).
+- Included a few Textures which you can switch to from the options.
+- Added option for Fade Out Time.
+
+AzCastBar Changes | 2007 Jul 09
+-------------------------------
+- First Release

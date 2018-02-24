@@ -1,0 +1,16 @@
+## Interface: 30000
+
+## Title: ButtonFacade: |cffff8000Caith|r
+## Notes: Caith skin for Button Facade.
+## Version: 3.0.2
+
+## Author: StormFX
+## X-eMail: stormfx@gmail.com
+## X-Website: http://www.wowace.com
+## X-RelSite-WoWI: 8869
+## X-Credits: JJSheets, Zeal, Caith
+
+## X-Category: Action Bars
+## OptionalDeps: LibButtonFacade, ButtonFacade
+
+Skins.lua

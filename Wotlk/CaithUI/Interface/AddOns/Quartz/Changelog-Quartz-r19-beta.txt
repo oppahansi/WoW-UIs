@@ -1,0 +1,55 @@
+------------------------------------------------------------------------
+r20 | nymbia | 2009-08-26 01:02:19 +0000 (Wed, 26 Aug 2009) | 1 line
+Changed paths:
+   A /tags/r19-beta (from /trunk:19)
+
+Tagging as r19-beta
+------------------------------------------------------------------------
+r19 | durcyn | 2009-08-25 18:42:17 +0000 (Tue, 25 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/Buff/Quartz_Buff.toc
+   M /trunk/Flight/Quartz_Flight.toc
+   M /trunk/Focus/Focus.lua
+   M /trunk/Focus/Quartz_Focus.toc
+   M /trunk/GCD/Quartz_GCD.toc
+   M /trunk/Interrupt/Quartz_Interrupt.toc
+   M /trunk/Latency/Quartz_Latency.toc
+   M /trunk/Mirror/Quartz_Mirror.toc
+   M /trunk/Pet/Quartz_Pet.toc
+   M /trunk/Player/Quartz_Player.toc
+   M /trunk/Quartz.toc
+   M /trunk/Range/Quartz_Range.toc
+   M /trunk/Swing/Quartz_Swing.toc
+   M /trunk/Target/Quartz_Target.toc
+   M /trunk/Target/Target.lua
+   M /trunk/Timer/Quartz_Timer.toc
+   M /trunk/Tradeskill/Quartz_Tradeskill.toc
+   M /trunk/locale/Quartz-deDE.lua
+   M /trunk/locale/Quartz-enUS.lua
+   M /trunk/locale/Quartz-frFR.lua
+   M /trunk/locale/Quartz-koKR.lua
+   M /trunk/locale/Quartz-ruRU.lua
+   M /trunk/locale/Quartz-zhCN.lua
+   M /trunk/locale/Quartz-zhTW.lua
+
+clean up and merge cmtitan's target/focus interrupt patch
+------------------------------------------------------------------------
+r18 | s8095324 | 2009-06-02 22:08:02 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Buff/Quartz_Buff.toc
+   M /trunk/Flight/Quartz_Flight.toc
+   M /trunk/Focus/Quartz_Focus.toc
+   M /trunk/GCD/Quartz_GCD.toc
+   M /trunk/Interrupt/Quartz_Interrupt.toc
+   M /trunk/Latency/Quartz_Latency.toc
+   M /trunk/Mirror/Quartz_Mirror.toc
+   M /trunk/Pet/Quartz_Pet.toc
+   M /trunk/Player/Quartz_Player.toc
+   M /trunk/Range/Quartz_Range.toc
+   M /trunk/Swing/Quartz_Swing.toc
+   M /trunk/Target/Quartz_Target.toc
+   M /trunk/Timer/Quartz_Timer.toc
+   M /trunk/Tradeskill/Quartz_Tradeskill.toc
+
+Title-zhTW & Notes-zhTW update
+------------------------------------------------------------------------

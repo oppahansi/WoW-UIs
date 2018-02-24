@@ -1,0 +1,16 @@
+## Interface: 11100
+## Name: FuBar - DamageMetersFu2
+## Title: FuBar - |cffffffffDamageMeters|r|cff00ff00Fu|r2
+## Notes: A FuBar plugin to show DamageMeters.
+## Version: 2.0.1
+## X-Category: combat
+## X-Date: 2006-09-22
+## X-eMail: zigatek@gmail.com
+## X-Website: http://www.wowinterface.com/
+## Author: Global
+## Dependencies: DamageMeters, FuBar
+## SavedVariables: DamageMetersFuDB
+## LoadOnDemand: 1
+libs\FuBarPlugin-2.0\FuBarPlugin-2.0.lua
+libs\Tablet-2.0\Tablet-2.0.lua
+DamageMetersFu.lua

@@ -1,0 +1,5 @@
+
+AucAdvancedLocal = {
+	["Stats"] = {
+	},
+}

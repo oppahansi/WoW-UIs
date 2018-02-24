@@ -1,0 +1,46 @@
+﻿## Interface: 20400
+## Title: AtlasLoot_SetsandPvP
+## Title-deDE: AtlasLoot |cFF0099FF[Sets and PvP]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[Sets and PvP]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[Sets and PvP]|r
+## Notes: AtlasLoot loot tables Sets and PvP Rewards
+## Notes-deDE: AtlasLoot loot tables Sets and PvP Rewards
+## Notes-zhCN: AtlasLoot loot tables Sets and PvP Rewards
+## Notes-zhTW: AtlasLoot loot tables Sets and PvP Rewards
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+sets.en.lua
+sets.cn.lua
+sets.de.lua
+sets.es.lua
+sets.fr.lua
+sets.kr.lua
+sets.tw.lua
+BattlegroundPvP.en.lua
+BattlegroundPvP.cn.lua
+BattlegroundPvP.de.lua
+BattlegroundPvP.es.lua
+BattlegroundPvP.fr.lua
+BattlegroundPvP.kr.lua
+BattlegroundPvP.tw.lua
+GeneralPvP.en.lua
+GeneralPvP.cn.lua
+GeneralPvP.de.lua
+GeneralPvP.es.lua
+GeneralPvP.fr.lua
+GeneralPvP.kr.lua
+GeneralPvP.tw.lua
+WorldPvP.en.lua
+WorldPvP.cn.lua
+WorldPvP.de.lua
+WorldPvP.es.lua
+WorldPvP.fr.lua
+WorldPvP.kr.lua
+WorldPvP.tw.lua

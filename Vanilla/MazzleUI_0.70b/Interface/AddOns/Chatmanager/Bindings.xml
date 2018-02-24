@@ -1,0 +1,54 @@
+<Bindings>
+	<Binding name="CHATMANAGER_PANEL" header="CHATMANAGER_TITLE">
+		if (ChatmanagerFrame:IsVisible()) then
+			HideUIPanel(ChatmanagerFrame);
+		else
+			ShowUIPanel(ChatmanagerFrame);
+		end
+	</Binding>
+	<Binding name="CHATMANAGER_SAY">
+		ChatMenu_SetChatType(ChatFrame1, "SAY");
+	</Binding>
+	<Binding name="CHATMANAGER_PARTY">
+		ChatMenu_SetChatType(ChatFrame1, "PARTY");
+	</Binding>
+	<Binding name="CHATMANAGER_RAID">
+		ChatMenu_SetChatType(ChatFrame1, "RAID");
+	</Binding>
+	<Binding name="CHATMANAGER_GUILD">
+		ChatMenu_SetChatType(ChatFrame1, "GUILD");
+	</Binding>
+	<Binding name="CHATMANAGER_OFFICER">
+		ChatMenu_SetChatType(ChatFrame1, "OFFICER");
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_1">
+		ChatFrame_OpenChat("/1 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_2">
+		ChatFrame_OpenChat("/2 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_3">
+		ChatFrame_OpenChat("/3 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_4">
+		ChatFrame_OpenChat("/4 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_5">
+		ChatFrame_OpenChat("/5 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_6">
+		ChatFrame_OpenChat("/6 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_7">
+		ChatFrame_OpenChat("/7 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_8">
+		ChatFrame_OpenChat("/8 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_9">
+		ChatFrame_OpenChat("/9 ", ChatFrame1);
+	</Binding>
+	<Binding name="CHATMANAGER_CHANNEL_10">
+		ChatFrame_OpenChat("/10 ", ChatFrame1);
+	</Binding>
+</Bindings>

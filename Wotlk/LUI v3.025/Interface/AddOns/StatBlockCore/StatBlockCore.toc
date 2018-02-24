@@ -1,0 +1,37 @@
+## Interface: 30300
+## Title: StatBlockCore
+## Notes: A core for your informational plugins to plug into.
+## Notes-frFR: Un noyau central pour vos blocs de statistiques.
+## Notes-esES: Un núcleo para bloques de información.
+## Notes-deDE: Ein Grundgerüst für deine Informationsblöcke.
+## Notes-ruRU: Это основа для ваших информационных панелей
+## Notes-zhCN: 信息区块内核
+## Notes-koKR: 블럭으로 게임 내 정보를 표시합니다.
+## Author: Funkydude
+## X-Category: Interface Enhancements
+## X-License: All Rights Reserved
+## Version: 2.65
+## SavedVariables: StatBlockCoreDB
+## OptionalDeps: Ace3, LibSharedMedia-3.0, SharedMedia
+## X-Embeds: Ace3, LibSharedMedia-3.0
+## X-Curse-Packaged-Version: v2.65
+## X-Curse-Project-Name: StatBlockCore
+## X-Curse-Project-ID: stat-block-core
+## X-Curse-Repository-ID: wow/stat-block-core/mainline
+
+embeds.xml
+
+locale\enUS.lua
+locale\koKR.lua
+locale\frFR.lua
+locale\deDE.lua
+locale\esMX.lua
+locale\ruRU.lua
+locale\zhCN.lua
+locale\esES.lua
+locale\zhTW.lua
+
+FlyPaper.lua
+LibDataBroker-1.1.lua
+StatBlockCore.lua
+

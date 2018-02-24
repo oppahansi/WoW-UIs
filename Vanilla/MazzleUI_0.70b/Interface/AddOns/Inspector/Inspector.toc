@@ -1,0 +1,18 @@
+## Interface: 11100
+## Title: Inspector (Gadget)
+## Notes: Find and Inspect Global variables 
+## Description: Find and Inspect Global variables use '/inspt on' to enable or bind to a key.
+## Version: 2.0.5
+## Author: Sagarus
+## Dependencies: AddonCore
+## OptionalDeps:
+## SavedVariables: InspectorSaved
+## LoadOnDemand:
+## DefaultState: disabled
+## ..\..\FrameXML\Fonts.xml
+## ..\..\FrameXML\UIPanelTemplates.xml
+## ..\..\FrameXML\UIDropDownMenuTemplates.xml
+## ..\..\FrameXML\CharacterFrameTemplates.xml
+InspectorGameMenuButton.xml
+InspectorTemplates.xml
+Inspector.xml

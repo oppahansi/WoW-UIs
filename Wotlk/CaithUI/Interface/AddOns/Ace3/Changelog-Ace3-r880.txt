@@ -1,0 +1,178 @@
+------------------------------------------------------------------------
+r880 | nevcairiel | 2009-11-15 17:02:07 +0000 (Sun, 15 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-EditBox.lua
+
+AceGUI-3.0: Clear the contents of the editbox when releasing it.
+------------------------------------------------------------------------
+r879 | nevcairiel | 2009-11-02 18:59:34 +0000 (Mon, 02 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/changelog.txt
+
+Updated changelog
+------------------------------------------------------------------------
+r878 | nevcairiel | 2009-11-02 18:51:58 +0000 (Mon, 02 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceAddon-3.0/AceAddon-3.0.lua
+   M /trunk/AceBucket-3.0/AceBucket-3.0.lua
+   M /trunk/AceComm-3.0/AceComm-3.0.lua
+   M /trunk/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+   M /trunk/AceConsole-3.0/AceConsole-3.0.lua
+
+More upvalue tweaks and cleanups
+------------------------------------------------------------------------
+r877 | nevcairiel | 2009-11-02 15:56:50 +0000 (Mon, 02 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/Ace3.lua
+   M /trunk/AceAddon-3.0/AceAddon-3.0.lua
+   M /trunk/AceBucket-3.0/AceBucket-3.0.lua
+   M /trunk/AceComm-3.0/AceComm-3.0.lua
+   M /trunk/AceConfig-3.0/AceConfig-3.0.lua
+   M /trunk/AceConfig-3.0/AceConfigCmd-3.0/AceConfigCmd-3.0.lua
+   M /trunk/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+   M /trunk/AceConfig-3.0/AceConfigRegistry-3.0/AceConfigRegistry-3.0.lua
+   M /trunk/AceDB-3.0/AceDB-3.0.lua
+   M /trunk/AceDBOptions-3.0/AceDBOptions-3.0.lua
+   M /trunk/AceEvent-3.0/AceEvent-3.0.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Button.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-CheckBox.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-ColorPicker.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-DropDown-Items.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-DropDown.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-DropDownGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-EditBox.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Frame.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Heading.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Icon.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-InlineGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-InteractiveLabel.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Keybinding.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Label.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-MultiLineEditBox.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-ScrollFrame.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-SimpleGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Slider.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-TabGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-TreeGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-Window.lua
+   M /trunk/AceHook-3.0/AceHook-3.0.lua
+   M /trunk/AceLocale-3.0/AceLocale-3.0.lua
+   M /trunk/AceSerializer-3.0/AceSerializer-3.0.lua
+   M /trunk/AceTimer-3.0/AceTimer-3.0.lua
+   M /trunk/CallbackHandler-1.0/CallbackHandler-1.0.lua
+
+Cleaned upvalues and added comments for Mikk's FindGlobals script
+------------------------------------------------------------------------
+r876 | nevcairiel | 2009-11-02 14:24:30 +0000 (Mon, 02 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/AceGUI-3.0.lua
+
+AceGUI-3.0: Added widget versioning in the recycling code, which will not re-use older widgets anymore if they are still in the pool on library upgrade.
+------------------------------------------------------------------------
+r875 | nevcairiel | 2009-11-01 19:18:53 +0000 (Sun, 01 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+
+When reverting, we should not revert the widget version, in fact, we should increase it!
+------------------------------------------------------------------------
+r874 | nevcairiel | 2009-11-01 19:17:34 +0000 (Sun, 01 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+
+AceGUI-3.0: Revert r871, since it introduced a regression that would not allow 2 widgets on the same row anymore when within a container with a scroll bar.
+------------------------------------------------------------------------
+r873 | nevcairiel | 2009-11-01 18:36:11 +0000 (Sun, 01 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-ScrollFrame.lua
+
+AceGUI-3.0: ScrollFrame: Change call order in the release function to make sure the scrollvalue in the status table is not touched after releasing the widget
+------------------------------------------------------------------------
+r872 | ammo | 2009-10-26 10:56:17 +0000 (Mon, 26 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+
+make SimpleGroup behave like an InlineGroup since it's used for option.inline with an empty name
+------------------------------------------------------------------------
+r871 | ammo | 2009-10-25 14:54:55 +0000 (Sun, 25 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+
+make blizz options panel margins same as blizzard uses
+------------------------------------------------------------------------
+r870 | nevcairiel | 2009-10-25 14:12:56 +0000 (Sun, 25 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-TabGroup.lua
+
+AceGUI-3.0: TabGroup: Tiny tweak
+
+------------------------------------------------------------------------
+r869 | nevcairiel | 2009-10-25 13:59:16 +0000 (Sun, 25 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-CheckBox.lua
+
+AceGUI-3.0: Improve the visuals of the RadioButton mode of the checkbox widget
+------------------------------------------------------------------------
+r868 | nevcairiel | 2009-10-25 12:15:08 +0000 (Sun, 25 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceDB-3.0/AceDB-3.0.lua
+
+AceDB-3.0: Don't fire the OnProfileReset callback when copying a profile
+------------------------------------------------------------------------
+r867 | nevcairiel | 2009-10-25 09:24:20 +0000 (Sun, 25 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-MultiLineEditBox.lua
+
+AceGUI-3.0: Disable the "Accept" Button on the MultiLineEditBox as well when disabling the widget (Ticket #84)
+
+------------------------------------------------------------------------
+r866 | nevcairiel | 2009-10-25 09:18:49 +0000 (Sun, 25 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-BlizOptionsGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-InlineGroup.lua
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-TabGroup.lua
+
+AceGUI-3.0: More margin adjustments regaring Ticket #78
+
+------------------------------------------------------------------------
+r865 | nevcairiel | 2009-10-25 08:01:52 +0000 (Sun, 25 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceDB-3.0/AceDB-3.0.lua
+
+AceDB-3.0: whitespace cleanup
+
+------------------------------------------------------------------------
+r864 | nevcairiel | 2009-10-25 07:10:24 +0000 (Sun, 25 Oct 2009) | 3 lines
+Changed paths:
+   M /trunk/AceDB-3.0/AceDB-3.0.lua
+
+AceDB-3.0: Don't save the profileKeys for namespaces, since we use the profile of the parent DB anyway. This will cut down 
+on SV complexity when using alot of namespaces.
+
+------------------------------------------------------------------------
+r863 | nevcairiel | 2009-10-24 16:37:25 +0000 (Sat, 24 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-ScrollFrame.lua
+
+AceGUI-3.0: Reset the ScrollFrame position when releasing it
+
+------------------------------------------------------------------------
+r862 | nevcairiel | 2009-10-24 16:32:11 +0000 (Sat, 24 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+
+AceConfigDialog-3.0: Fix the unpacking of the basepath arguments when internally calling :Open (Fixes #90)
+------------------------------------------------------------------------
+r861 | nevcairiel | 2009-10-22 17:55:48 +0000 (Thu, 22 Oct 2009) | 1 line
+Changed paths:
+   M /trunk/AceTab-3.0/AceTab-3.0.lua
+
+AceTab-3.0: *FrameType => *ObjectType for 3.3
+------------------------------------------------------------------------
+r860 | mikk | 2009-10-09 17:52:37 +0000 (Fri, 09 Oct 2009) | 2 lines
+Changed paths:
+   M /trunk/AceGUI-3.0/widgets/AceGUIWidget-EditBox.lua
+
+Ticket 21: Ability to accept links for EditBox Widget
+Implemented the given patch pretty much as-is, except made it upgradeable.
+------------------------------------------------------------------------

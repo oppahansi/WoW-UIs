@@ -1,0 +1,12 @@
+
+kgPanelsDB = {
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "Default",
+	},
+	["global"] = {
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

@@ -1,0 +1,14 @@
+## Interface: 30300
+## Author: LUI
+## Title: oUF LUI
+## Notes: LUI's oUF layout
+## X-Category: UnitFrame
+## RequiredDeps: oUF
+## OptionalDeps: oUF_RuneBar, oUF_Reputation, oUF_Experience
+
+oUF_LUI_Tags.lua
+modules\oUF_Smooth.lua
+modules\totem.lua
+modules\combopoints.lua
+oUF_LUI_Main.lua
+oUF_LUI_Party.lua

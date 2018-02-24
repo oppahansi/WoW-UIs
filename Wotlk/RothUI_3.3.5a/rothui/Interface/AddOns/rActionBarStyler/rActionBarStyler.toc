@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: rActionBarStyler
+## Author: roth
+## Notes: Styles the standard ActionBars
+rActionBarStyler.lua

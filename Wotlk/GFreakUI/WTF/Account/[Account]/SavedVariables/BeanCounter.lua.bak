@@ -1,0 +1,45 @@
+
+BeanCounterDB = {
+	["Icecrown"] = {
+		["[character]"] = {
+			["vendorsell"] = {
+			},
+			["postedBids"] = {
+			},
+			["completedAuctions"] = {
+			},
+			["failedBidsNeutral"] = {
+			},
+			["postedAuctions"] = {
+			},
+			["wealth"] = 161549,
+			["vendorbuy"] = {
+			},
+			["failedAuctions"] = {
+			},
+			["completedBidsBuyoutsNeutral"] = {
+			},
+			["failedBids"] = {
+			},
+			["version"] = 2.12,
+			["faction"] = "Horde",
+			["completedBidsBuyouts"] = {
+			},
+			["failedAuctionsNeutral"] = {
+			},
+			["completedAuctionsNeutral"] = {
+			},
+			["mailbox"] = {
+			},
+		},
+	},
+	["ItemIDArray"] = {
+	},
+	["settings"] = {
+		["profile.Default"] = {
+			["configator.left"] = 282.6667253885096,
+			["configator.top"] = 608.9999877586841,
+		},
+	},
+}
+BeanCounterAccountDB = nil

@@ -1,0 +1,25 @@
+3.3.0.9-Beta
+    In soviet russia addon localizes you!
+    deDE locale update for 3.3
+    Meh, textmate defaults to UTF8, we might as well actually use it
+    zhTW locale update
+    Move locale out into it's own file
+    Remove 3.2 backcompat
+    Up, down, what do we care?
+
+3.2.0.7-Beta
+    Generate roll frames on demand, stupid default frames use 4 now
+
+3.2.0.6-Beta
+    Fix CursorUpdate crap
+    Special case for auto-rolling mods
+    zhTW locale
+
+3.0.2.5-Beta
+    deDE locale
+
+3.0.1.4-Beta
+    SAY IT FRENCHIE!  SAY CHOWDAH!
+
+3.0.1.3-Beta
+    Fix OnUpdate error in Wrath

@@ -1,0 +1,9 @@
+## Interface: 30300
+## Author: Xus (Xussie of Kazzak EU)
+## Title: Forte|c929482c9Shard|r
+## Notes: Forte Shard Module
+## SavedVariables:
+## OptionalDeps:
+## Dependencies:Forte_Core
+Localization.lua
+Forte_Shard.xml

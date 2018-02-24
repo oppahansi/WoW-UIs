@@ -1,0 +1,7 @@
+
+VF_RealmPlayers_Playername = "Pixelpoint"
+VF_RealmPlayersVersion = "1.1.2"
+VF_RealmPlayers_Settings = {
+	["MaxDatabase"] = 1000,
+	["DebugMode"] = true,
+}

@@ -1,0 +1,17 @@
+
+ButtonFacadeDB = {
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+	},
+	["namespaces"] = {
+		["ButtonTest"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+				},
+			},
+		},
+	},
+}

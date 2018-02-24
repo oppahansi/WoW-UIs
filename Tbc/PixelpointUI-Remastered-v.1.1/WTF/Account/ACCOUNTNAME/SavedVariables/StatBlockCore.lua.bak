@@ -1,0 +1,24 @@
+
+StatBlockCoreDB = {
+	["profileKeys"] = {
+		["Pixelpoint - Hellfire"] = "Pixelpoint - Hellfire",
+	},
+	["profiles"] = {
+		["Pixelpoint - Hellfire"] = {
+			["plugins"] = {
+				["Bartender4"] = {
+					["posx"] = 644.6666870117188,
+					["posy"] = 422.0000305175781,
+				},
+				["kgPanels"] = {
+					["posx"] = 763.6666870117188,
+					["posy"] = 549.800048828125,
+				},
+				["Omen"] = {
+					["posx"] = 669.6666870117188,
+					["posy"] = 511.0000305175781,
+				},
+			},
+		},
+	},
+}

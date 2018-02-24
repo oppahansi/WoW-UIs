@@ -1,0 +1,17 @@
+## Interface: 11200
+## Title: Mazzlefizz's |cFF006699MazzleOptions|r
+## Notes: Add-On that provides an options GUI for Mazzle UI
+## SavedVariables: 
+## Dependencies: MazzleUI
+## LoadOnDemand: 1
+..\..\FrameXML\Fonts.xml
+..\..\FrameXML\UIPanelTemplates.xml
+..\..\FrameXML\CharacterFrameTemplates.xml
+..\..\FrameXML\OptionsFrameTemplates.xml
+..\..\FrameXML\UIDropDownMenuTemplates.xml
+..\..\FrameXML\ItemButtonTemplate.xml
+..\..\FrameXML\GameTooltipTemplate.xml
+..\..\FrameXML\HonorFrameTemplates.xml
+..\..\FrameXML\MoneyFrame.xml
+MazzleOptions_Templates.xml
+MazzleOptions.xml

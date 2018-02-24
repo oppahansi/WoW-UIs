@@ -1,0 +1,23 @@
+## Interface: 11200
+## Title: Auto Accept Invite
+## Author: TigerHeart of Argent Dawn
+## Version: 1.3
+## Notes: Auto Accept's Invites, based on include/exclude list. Also includes support for friendslist and guild roster.
+## X-Website: http://www.blackphoenix.us
+## X-Email: tigerheart@blackphoenix.us
+
+## OptionalDeps: Ace2
+## X-Embeds: Ace2
+## X-Category: Raid
+## Dependencies: 
+## SavedVariables: AutoAcceptInviteVars
+
+Libs\AceLibrary\AceLibrary.lua
+ 
+Libs\AceOO-2.0\AceOO-2.0.lua
+Libs\AceEvent-2.0\AceEvent-2.0.lua
+Libs\AceAddon-2.0\AceAddon-2.0.lua
+Libs\AceConsole-2.0\AceConsole-2.0.lua
+Libs\AceDB-2.0\AceDB-2.0.lua
+
+AutoAcceptInvite.lua

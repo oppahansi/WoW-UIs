@@ -1,0 +1,55 @@
+
+StufRaidCharLayoutDB = nil
+StufRaidCharDB = {
+	["balert"] = {
+		["Divine Shield"] = true,
+		["Vanish"] = true,
+		["Warsong Flag"] = true,
+		["Pain Suppression"] = true,
+		["Feign Death"] = true,
+		["Misdirection"] = true,
+		["Netherstorm Flag"] = true,
+		["Shield Wall"] = true,
+		["Divine Protection"] = true,
+		["Divine Intervention"] = true,
+		["Cheating Death"] = true,
+		["Silverwing Flag"] = true,
+		["Spirit of Redemption"] = true,
+		["Blessing of Sacrifice"] = true,
+		["Fade"] = true,
+		["Shadow Sight"] = true,
+		["Evasion"] = true,
+		["Last Stand"] = true,
+		["Cheat Death"] = true,
+		["Ice Block"] = true,
+		["Berserking"] = true,
+		["Blessing of Protection"] = true,
+		["Innervate"] = true,
+		["Cloak of Shadows"] = true,
+		["Invisibility"] = true,
+	},
+	["bshow"] = "raid",
+	["dalert"] = {
+		["Chains of Kel'Thuzad"] = true,
+		["Resurrection Sickness"] = true,
+		["Web Wrap"] = true,
+		["Mortal Strike"] = true,
+		["Brutal Assault"] = true,
+		["Aimed Shot"] = true,
+		["Frost Blast"] = true,
+		["Icebolt"] = true,
+		["Wound Poison"] = true,
+		["Focused Assault"] = true,
+		["Cyclone"] = true,
+	},
+	["dinclude"] = {
+	},
+	["dexclude"] = {
+		["Mutating Injection"] = true,
+	},
+	["binclude"] = {
+	},
+	["bexclude"] = {
+	},
+	["dshow"] = "raid",
+}

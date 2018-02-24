@@ -1,0 +1,334 @@
+
+SCT_CONFIG = {
+	["profileKeys"] = {
+		["Notions - HellGround"] = "Notions - HellGround",
+	},
+	["profiles"] = {
+		["Notions - HellGround"] = {
+			["DMGFONT"] = 1,
+			["FRAMESDATA"] = {
+				{
+					["FONT"] = "BigNoodleTitling-Oblique",
+				}, -- [1]
+				{
+					["FONT"] = "BigNoodleTitling-Oblique",
+				}, -- [2]
+				[10] = {
+					["MSGFONT"] = "BigNoodleTitling-Oblique",
+				},
+			},
+		},
+	},
+}
+SCT_EVENT_CONFIG = {
+	["profileKeys"] = {
+		["Notions - HellGround"] = "Global",
+	},
+	["global"] = {
+		["events"] = {
+			{
+				["type"] = "BUFF",
+				["r"] = 1,
+				["class"] = {
+					"Mage", -- [1]
+					"Shaman", -- [2]
+					"Druid", -- [3]
+					"Priest", -- [4]
+				},
+				["g"] = 1,
+				["soundwave"] = "Sound\\Spells\\Clearcasting_Impact_Chest.wav",
+				["iscrit"] = 1,
+				["name"] = "Clearcast",
+				["b"] = 0,
+				["display"] = "Clearcast!",
+				["search"] = "Clearcast",
+				["icon"] = 1,
+				["target"] = "SELF",
+			}, -- [1]
+			{
+				["type"] = "BUFF",
+				["r"] = 0.5,
+				["class"] = {
+					"Warrior", -- [1]
+					"Shaman", -- [2]
+				},
+				["g"] = 0,
+				["name"] = "Flurry",
+				["display"] = "Flurry!",
+				["b"] = 0,
+				["search"] = "Flurry",
+				["target"] = "SELF",
+			}, -- [2]
+			{
+				["type"] = "FADE",
+				["r"] = 0,
+				["class"] = {
+					"Shaman", -- [1]
+				},
+				["g"] = 0,
+				["name"] = "Lightning Shield",
+				["display"] = "Lightning Shield!",
+				["b"] = 1,
+				["search"] = "Lightning Shield",
+				["target"] = "SELF",
+			}, -- [3]
+			{
+				["type"] = "BUFF",
+				["r"] = 0,
+				["class"] = {
+					"Warlock", -- [1]
+				},
+				["g"] = 0.5,
+				["name"] = "Nightfall",
+				["override"] = true,
+				["display"] = "Nightfall!",
+				["b"] = 0.5,
+				["search"] = "Shadow Trance",
+				["target"] = "SELF",
+			}, -- [4]
+			{
+				["type"] = "MISS",
+				["source"] = "SELF",
+				["r"] = 1,
+				["class"] = {
+					"Warrior", -- [1]
+				},
+				["g"] = 1,
+				["iscrit"] = 1,
+				["name"] = "Overpower",
+				["b"] = 0,
+				["display"] = "Overpower!",
+				["override"] = false,
+				["misstype"] = "DODGE",
+				["target"] = "TARGET",
+			}, -- [5]
+			{
+				["type"] = "BUFF",
+				["r"] = 0.5,
+				["class"] = {
+					"Warrior", -- [1]
+				},
+				["g"] = 1,
+				["name"] = "Enraged",
+				["iscrit"] = 1,
+				["display"] = "Enraged!",
+				["b"] = 0.5,
+				["search"] = "Enrage",
+				["target"] = "SELF",
+			}, -- [6]
+			{
+				["type"] = "BUFF",
+				["r"] = 0.5,
+				["class"] = {
+					"Warrior", -- [1]
+					"Rogue", -- [2]
+					"Paladin", -- [3]
+					"Shaman", -- [4]
+					"Hunter", -- [5]
+				},
+				["g"] = 0.5,
+				["name"] = "Crusader",
+				["iscrit"] = 1,
+				["display"] = "Crusader!",
+				["b"] = 1,
+				["search"] = "Holy Strength",
+				["target"] = "SELF",
+			}, -- [7]
+			{
+				["type"] = "BUFF",
+				["r"] = 0.5,
+				["class"] = {
+					"Priest", -- [1]
+				},
+				["g"] = 0.5,
+				["name"] = "Spirit Tap",
+				["iscrit"] = 1,
+				["display"] = "Spirit Tap!",
+				["b"] = 0.5859375,
+				["search"] = "Spirit Tap",
+				["target"] = "SELF",
+			}, -- [8]
+			{
+				["type"] = "SUMMON",
+				["source"] = "SELF",
+				["r"] = 0.80078125,
+				["class"] = {
+					"Shaman", -- [1]
+				},
+				["g"] = 0.80078125,
+				["name"] = "Totems",
+				["b"] = 0,
+				["display"] = "[*1]",
+				["search"] = "Totem",
+				["icon"] = 1,
+				["target"] = "ANY",
+			}, -- [9]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 1,
+				["class"] = {
+					"Rogue", -- [1]
+					"Warrior", -- [2]
+				},
+				["g"] = 1,
+				["name"] = "Mace Stun",
+				["iscrit"] = 1,
+				["display"] = "Mace Stun!",
+				["b"] = 0,
+				["search"] = "Mace Stun",
+				["target"] = "TARGET",
+			}, -- [10]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 0,
+				["class"] = {
+					"Warrior", -- [1]
+				},
+				["g"] = 0.5,
+				["name"] = "Rooted",
+				["iscrit"] = 1,
+				["display"] = "Rooted!",
+				["b"] = 0,
+				["search"] = "Improved Hamstring",
+				["target"] = "TARGET",
+			}, -- [11]
+			{
+				["type"] = "BUFF",
+				["r"] = 0,
+				["class"] = {
+					"Warrior", -- [1]
+				},
+				["g"] = 1,
+				["iscrit"] = 1,
+				["name"] = "Full Sunder",
+				["b"] = 0,
+				["display"] = "Full Sunder!",
+				["buffcount"] = 5,
+				["search"] = "Sunder Armor",
+				["target"] = "TARGET",
+			}, -- [12]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 1,
+				["class"] = {
+					"Rogue", -- [1]
+				},
+				["g"] = 0,
+				["iscrit"] = 1,
+				["name"] = "Envenom",
+				["b"] = 1,
+				["display"] = "Envenom!",
+				["buffcount"] = 5,
+				["search"] = "Deadly",
+				["target"] = "TARGET",
+			}, -- [13]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 0.29296875,
+				["class"] = {
+					"Mage", -- [1]
+				},
+				["g"] = 0.5859375,
+				["iscrit"] = 1,
+				["name"] = "Frostbite",
+				["b"] = 0.87890625,
+				["display"] = "Frostbite!",
+				["search"] = "Frostbite",
+				["icon"] = 1,
+				["target"] = "TARGET",
+			}, -- [14]
+			{
+				["type"] = "MISS",
+				["source"] = "SELF",
+				["r"] = 0.5,
+				["class"] = {
+					"Warrior", -- [1]
+				},
+				["g"] = 0,
+				["name"] = "Deep Wound Spam",
+				["display"] = "",
+				["b"] = 0,
+				["search"] = "Deep Wound",
+				["target"] = "TARGET",
+			}, -- [15]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 0.5,
+				["class"] = {
+					"Priest", -- [1]
+				},
+				["g"] = 0.5,
+				["name"] = "Blackout",
+				["iscrit"] = 1,
+				["display"] = "Blackout!",
+				["b"] = 0.5859375,
+				["search"] = "Blackout",
+				["target"] = "TARGET",
+			}, -- [16]
+			{
+				["type"] = "BUFF",
+				["source"] = "SELF",
+				["r"] = 0.5,
+				["class"] = {
+					"Mage", -- [1]
+				},
+				["g"] = 0.25,
+				["name"] = "Impact",
+				["iscrit"] = 1,
+				["display"] = "Impact!",
+				["b"] = 0.25,
+				["search"] = "Impact",
+				["target"] = "TARGET",
+			}, -- [17]
+			{
+				["type"] = "MISS",
+				["source"] = "SELF",
+				["r"] = 0.99609375,
+				["class"] = {
+					"Rogue", -- [1]
+				},
+				["g"] = 0.59765625,
+				["name"] = "Feint",
+				["iscrit"] = 1,
+				["display"] = "Feint Failed!",
+				["b"] = 0.19921875,
+				["search"] = "Feint",
+				["target"] = "TARGET",
+			}, -- [18]
+			{
+				["type"] = "FADE",
+				["r"] = 0.80078125,
+				["class"] = {
+					"Mage", -- [1]
+				},
+				["g"] = 0.80078125,
+				["name"] = "Sheep",
+				["iscrit"] = 1,
+				["display"] = "Sheep Broke!",
+				["b"] = 1,
+				["search"] = "Polymorph",
+				["target"] = "FOCUS",
+			}, -- [19]
+			{
+				["type"] = "FADE",
+				["r"] = 0.80078125,
+				["class"] = {
+					"Mage", -- [1]
+				},
+				["g"] = 0.80078125,
+				["name"] = "Slow",
+				["iscrit"] = 1,
+				["display"] = "Slow Removed!",
+				["b"] = 0,
+				["search"] = "Slow",
+				["target"] = "ENEMY",
+			}, -- [20]
+		},
+		["firstload"] = true,
+	},
+}

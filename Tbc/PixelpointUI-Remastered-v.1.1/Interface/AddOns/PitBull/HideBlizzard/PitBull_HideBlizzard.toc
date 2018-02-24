@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fHideBlizzard|r]
+## Notes: Hide Blizzard frames that are no longer needed.
+## Notes-koKR: 더 이상 필요하지 않는 블리자드 프레임은 숨김 설정합니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+HideBlizzard.lua

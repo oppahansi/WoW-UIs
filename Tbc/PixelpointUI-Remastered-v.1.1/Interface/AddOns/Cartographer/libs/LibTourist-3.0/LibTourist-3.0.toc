@@ -1,0 +1,13 @@
+﻿## Interface: 20300
+## LoadOnDemand: 1
+## Title: Lib: Tourist-3.0
+## Notes: A library to provide information about zones and instances.
+## Author: ckknight
+## X-eMail: ckknight@gmail.com
+## X-Category: Library
+## Dependencies: LibBabble-Zone-3.0
+## X-AceLibrary-Tourist-2.0: true
+## X-License: LGPL v2.1
+
+LibStub\LibStub.lua
+lib.xml

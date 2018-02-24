@@ -1,0 +1,43 @@
+SpellSystem generates events for spell casts and item usages.  DoTimer uses them to add timers, and Cooldowns uses them for backup in case the regular cooldown-tracking method fails.  It creates a custom event with two arguments:
+
+EVENTS:
+SPELLSYSTEM_TIMEOUT
+- when a spell that generated earlier data does not exit via another event properly in a given amount of time
+SPELLSYSTEM_NEEDTARGET
+- when a spell has been cast that has no target information yet
+SPELLSYSTEM_BEGIN
+- when a spell begins to be cast, via function hook
+SPELLSYSTEM_FAILBEFORE
+- when a spell fails before it was successfully cast
+SPELLSYSTEM_FAILAFTER
+- when a spell fails after it was successfully cast
+SPELLSYSTEM_SUCCESS
+- when a spell casts and lands successfully
+SPELLSYSTEM_NOTARGET
+- when a spell which needed a target is cancelled
+SPELLSYSTEM_STOP
+- when a spell finishes casting
+
+ARGUMENT FORMAT:
+arg1 = {
+	spell = the name of the spell or item used
+	rank = its rank
+	texture = the texture for the spell or item
+	info = {
+		type = spell or item
+		id = itemID or spellID
+	}
+}
+arg2 = {
+	target = the name of the target
+	sex = its sex
+	level = its level
+	type = player, mob, or specialmob
+	icon = the raid icon, or 0 if none
+}
+
+Frames must register an event via:
+SpellSystem_RegisterEvent(frame,"event")
+
+and may unregister via:
+SpellSystem_UnregisterEvent(frame,"event")

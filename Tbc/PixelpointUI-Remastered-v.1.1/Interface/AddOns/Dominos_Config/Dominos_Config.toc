@@ -1,0 +1,13 @@
+﻿## Interface: 20400
+## Title: Dominos Config
+## Title-zhCN: |cFF0099FF[Dominos]|r 图形化配置模块
+## Notes: GUI based configuration for Dominos
+## Author: Tuller
+## Dependencies: Dominos
+## LoadOnDemand: 1
+localization\localization.lua
+localization\localization.cn.lua
+menu.lua
+panel.lua
+general.lua
+profiles.lua

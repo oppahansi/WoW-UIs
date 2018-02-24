@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2025"
+   name=""
+   committed-date="2005-07-02T23:51:34.254447Z"
+   url="svn://svn.cosmosui.org/trunk/Interface/AddOns/!ImprovedErrorFrame/Sound"
+   last-author="Sinaloit"
+   kind="dir"
+   uuid="fb67d479-5fe8-0310-8e92-f23c0312408b"
+   revision="2906"/>
+<entry
+   committed-rev="2025"
+   name="ErrorSound.mp3"
+   text-time="2005-12-14T00:01:43.000000Z"
+   committed-date="2005-07-02T23:51:34.254447Z"
+   checksum="ee5e527b37aa0a86999550937f3cab49"
+   last-author="Sinaloit"
+   kind="file"
+   prop-time="2005-12-14T00:01:43.000000Z"/>
+</wc-entries>

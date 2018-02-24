@@ -1,0 +1,188 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="Forte_Core.lua"/>
+	<Script file="Options.lua"/>
+	<Script file="Localization.lua"/>
+	
+	<Font name="FWFontHighlight" inherits="GameFontHighlightSmall" virtual="true"/>
+	<Font name="FWFontNormal" inherits="GameFontNormalSmall" virtual="true"/>
+	<Font name="FWFontDisable" inherits="GameFontDisableSmall" virtual="true"/>
+	
+	<Frame name="FWOptions" toplevel="true" parent="UIParent" frameStrata="DIALOG" hidden="true">
+		<Size>
+			<AbsDimension x="600" y="500" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativePoint="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\AddOns\Forte_Core\Textures\Background" edgeFile="Interface\AddOns\Forte_Core\Textures\Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="5"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="5"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBackground" file="Interface\AddOns\Forte_Core\Textures\XusLogo">
+					<Size>
+						<AbsDimension x="512" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentClose">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						--FWOptions:Hide();
+						FWOptions.show = 0;
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Down"/>
+				<HighlightTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Highlight" alphaMode="ADD"/>
+
+			</Button>	
+			<Frame name="$parentHeader">
+				<Size>
+					<AbsDimension x="600" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\AddOns\Forte_Core\Textures\Background" edgeFile="Interface\AddOns\Forte_Core\Textures\Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="5"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="5"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentIcon" file="Interface\Glues\CharacterCreate\UI-CharacterCreate-Classes">
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="3" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Size>
+								<AbsDimension x="14" y="14"/>
+							</Size>
+							<TexCoords left="0" right="1" top="0" bottom="1"/>
+						</Texture>
+						<FontString name="$parentTitle" inherits="FWFontHighlight" justifyH="CENTER" text="Forte Class Addon">
+							<Anchors>
+								<Anchor point="CENTER" relativePoint="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+
+			</Frame>
+			<ScrollFrame name="$parentFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="560" y="460"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-30"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<ScrollChild>
+					<Frame name="FWOptionsContent">
+						<Size>
+							<AbsDimension x="560" y="360"/>
+						</Size>
+					</Frame>
+				</ScrollChild>
+				<Scripts>
+					<OnVerticalScroll>
+						local scrollbar = getglobal(self:GetName().."ScrollBar");
+						scrollbar:SetValue(arg1);
+						local min;
+						local max;
+						min, max = scrollbar:GetMinMaxValues();
+						if ( arg1 == 0 ) then
+							getglobal(scrollbar:GetName().."ScrollUpButton"):Disable();
+						else
+							getglobal(scrollbar:GetName().."ScrollUpButton"):Enable();
+						end
+						if ((scrollbar:GetValue() - max) == 0) then
+							getglobal(scrollbar:GetName().."ScrollDownButton"):Disable();
+						else
+							getglobal(scrollbar:GetName().."ScrollDownButton"):Enable();
+						end
+						
+						FW:HideUnneededOptions();
+						
+					</OnVerticalScroll>
+				</Scripts>
+			</ScrollFrame>
+		</Frames>
+		<Scripts>
+			<OnShow>
+			</OnShow>
+			<OnUpdate>
+				FW:AutoScroll();
+			</OnUpdate>
+			<OnLoad>
+				tinsert(UISpecialFrames,self:GetName());
+				self:SetBackdropColor(0.00,0.00,0.00,0.20);
+				self:SetBackdropBorderColor(0.00,0.00,0.00,0.20);
+				FWOptionsBackground:SetVertexColor(1,1,1,0.3);
+			</OnLoad>
+			<OnMouseDown>
+				FW:StartMoving(arg1);
+			</OnMouseDown>
+			<OnMouseUp>
+				FW:StopMoving();
+			</OnMouseUp>
+			<OnHide>
+				FWOptions.show = 0;
+			</OnHide>
+		</Scripts> 
+	</Frame>
+</Ui>

@@ -1,0 +1,74 @@
+## Interface: 20400
+## Title: Aloft
+## Notes: Customize and enhance unit nameplates
+## Notes-zhTW: 自定增強單位名牌。
+## Notes-zhCN: 可自定义的姓名板增强插件，官方简体中文版由Taburiss汉化。
+## Author: Roartindon/Silvermoon, Alpha module by DrewW
+## OptionalDeps: FuBar, Ace2, Babble-2.2, LibBabble-Spell-3.0, LibBabble-Boss-3.0, DewdropLib, FuBarPlugin-2.0, RosterLib, SharedMediaLib, MobHealth, Waterfall-1.0, LibBanzai-2.0, TagCompiler-1.0
+## X-Category: Interface Enhancements
+## X-Embeds: Ace2, Babble-2.2, LibBabble-Spell-3.0, LibBabble-Boss-3.0, DewdropLib, FuBarPlugin-2.0, RosterLib, SharedMediaLib, Waterfall-1.0, LibBanzai-2.0, TagCompiler-1.0
+## SavedVariables: AloftDB, AloftFuDB
+## Version: 1.0
+## X-Donate: PayPal:jeff AT lim DOT com DOT au
+
+embeds.xml
+
+Aloft.lua
+AloftTag.lua
+
+CoreModules\AliasData.lua
+CoreModules\BossIcon.lua
+CoreModules\CastBar.lua
+CoreModules\CastBarOverlay.lua
+CoreModules\ClassData.lua
+CoreModules\ClassificationData.lua
+CoreModules\CreatureTypeData.lua
+CoreModules\Frame.lua
+CoreModules\HealthBar.lua
+CoreModules\Highlight.lua
+CoreModules\IsPetData.lua
+CoreModules\LevelText.lua
+CoreModules\NameText.lua
+CoreModules\Overlay.lua
+CoreModules\RaceData.lua
+CoreModules\RaidIcon.lua
+CoreModules\SpellIcon.lua
+CoreModules\UnitidData.lua
+
+Extras\AloftFu.lua
+Extras\AloftWaterfall.lua
+Extras\IsTotemTag.lua
+Extras\Presets.lua
+Extras\ReportStatusChanges.lua
+Extras\SetAll.lua
+
+Modules\Alpha.lua
+Modules\Banzai.lua
+Modules\CastBarTimeText.lua
+Modules\CombatText.lua
+Modules\ComboPointsText.lua
+Modules\CommentData.lua
+Modules\CommentText.lua
+Modules\GroupTargetCountData.lua
+Modules\GuildData.lua
+Modules\GuildText.lua
+Modules\HealthData.lua
+Modules\HealthText.lua
+Modules\IsGuildMemberData.lua
+Modules\IsTargetData.lua
+Modules\ManaBar.lua
+Modules\ManaData.lua
+Modules\ManaText.lua
+Modules\PetOwnersNameData.lua
+Modules\Polymorph.lua
+Modules\RecentlyDamagedData.lua
+Modules\RecentlyDamagedIcon.lua
+Modules\ShackleUndead.lua
+Modules\ShortGuildData.lua
+Modules\SpellNameText.lua
+Modules\TargetNameData.lua
+## Modules\ThreatBar.lua
+## Modules\ThreatData.lua
+Modules\Visibility.lua
+
+Options\Contents.xml

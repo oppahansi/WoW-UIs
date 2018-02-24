@@ -1,0 +1,5 @@
+## Interface: 11100
+## Title: StatusWindow
+## Author: Satrina@Stormrage
+## SavedVariablesPerCharacter: SWVar
+StatusWindow.xml

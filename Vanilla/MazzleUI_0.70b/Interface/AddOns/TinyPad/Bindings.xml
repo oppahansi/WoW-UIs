@@ -1,0 +1,13 @@
+<Bindings>
+	<Binding name="TinyPad Toggle" header="TINYPAD">
+		TinyPad.Toggle()
+	</Binding>
+	<Binding name="TinyPad Search">
+		if TinyPadSearchFrame:IsVisible() then
+			TinyPadSearchFrame:Hide()
+		else
+			TinyPadFrame:Show()
+			TinyPadSearchFrame:Show()
+		end
+	</Binding>
+</Bindings>

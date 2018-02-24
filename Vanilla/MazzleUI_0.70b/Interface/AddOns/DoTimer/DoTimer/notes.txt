@@ -1,0 +1,1 @@
+This addon is fairly obvious.  It makes timers appear onscreen for viewing pleasure.  Created originally for warlocks, it now supports all classes.  Access it ingame by typing "/dotimer" or "/dot".  

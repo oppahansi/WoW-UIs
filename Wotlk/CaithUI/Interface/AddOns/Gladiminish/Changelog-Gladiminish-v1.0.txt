@@ -1,0 +1,64 @@
+------------------------------------------------------------------------
+r7 | ghanburighan | 2009-08-17 16:31:17 +0000 (Mon, 17 Aug 2009) | 1 line
+Changed paths:
+   A /tags/v1.0 (from /trunk:6)
+
+Tagging as v1.0
+------------------------------------------------------------------------
+r6 | ghanburighan | 2009-08-15 20:53:48 +0000 (Sat, 15 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/Gladiminish.lua
+   M /trunk/config.lua
+   M /trunk/localization.deDE.lua
+   M /trunk/localization.enUS.lua
+
+New option to resize icons
+------------------------------------------------------------------------
+r5 | ghanburighan | 2009-08-11 16:15:32 +0000 (Tue, 11 Aug 2009) | 3 lines
+Changed paths:
+   M /trunk/Gladiminish.lua
+   M /trunk/Gladiminish.toc
+   M /trunk/config.lua
+   M /trunk/localization.deDE.lua
+   M /trunk/localization.enUS.lua
+
+Toc bump
+New option to move icons
+Some minor fixes, Thanks to Shadowed
+------------------------------------------------------------------------
+r4 | ghanburighan | 2009-08-02 21:34:00 +0000 (Sun, 02 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/Gladiminish.toc
+   M /trunk/embeds.xml
+
+removed leftover embed
+------------------------------------------------------------------------
+r3 | ghanburighan | 2009-08-02 21:28:23 +0000 (Sun, 02 Aug 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/Gladiminish.lua
+   M /trunk/Gladiminish.toc
+   A /trunk/config.lua
+   M /trunk/embeds.xml
+   A /trunk/localization.deDE.lua
+   A /trunk/localization.enUS.lua
+
+Added basic configuration
+------------------------------------------------------------------------
+r2 | ghanburighan | 2009-08-02 13:43:37 +0000 (Sun, 02 Aug 2009) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   A /trunk/Gladiminish.lua
+   A /trunk/Gladiminish.toc
+   A /trunk/embeds.xml
+
+Initial commit
+------------------------------------------------------------------------
+r1 | root | 2009-08-01 17:49:16 +0000 (Sat, 01 Aug 2009) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+
+"gladiminish/mainline: Initial Import"
+------------------------------------------------------------------------

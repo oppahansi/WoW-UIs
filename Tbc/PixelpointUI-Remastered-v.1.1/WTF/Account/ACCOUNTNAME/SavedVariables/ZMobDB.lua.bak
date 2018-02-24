@@ -1,0 +1,33 @@
+
+ZMobDB_table = {
+	["Pet_Creature_voidwalker.m2"] = {
+		["rotation"] = 0,
+		["zoom"] = 0,
+		["template"] = "No Use",
+		["position"] = {
+			0.1316145537216416, -- [1]
+			-0.1662498374260071, -- [2]
+		},
+		["scale"] = 1,
+	},
+	["default"] = {
+		["rotation"] = 0,
+		["zoom"] = 0,
+		["template"] = "No Use",
+		["position"] = {
+			0, -- [1]
+			0, -- [2]
+		},
+		["scale"] = 1,
+	},
+	["Self_Player_orcmale.m2"] = {
+		["rotation"] = 0.2612499412219061,
+		["zoom"] = -0.3791667913474741,
+		["template"] = "No Use",
+		["position"] = {
+			0.1385414320956193, -- [1]
+			-0.02770870260854561, -- [2]
+		},
+		["scale"] = 1.117187570896929,
+	},
+}

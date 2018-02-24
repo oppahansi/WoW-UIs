@@ -1,0 +1,27 @@
+------------------------------------------------------------------------
+r1013 | nevcairiel | 2008-10-02 12:30:19 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+------------------------------------------------------------------------
+r1012 | root | 2008-09-30 15:57:42 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r1011 | root | 2008-09-29 22:08:34 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r1009 | root | 2008-09-29 20:58:07 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/Grid
+   A /trunk (from /tmp/trunk/Grid:1008)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+<Ui>	
+	<Frame name="clearBlizzard" parent="UIParent" hidden="false"> 
+		<Scripts> 
+			<OnLoad>clearBlizzardOnLoad();</OnLoad> 
+			<OnEvent>clearBlizzardOnEvent(event);</OnEvent>
+		</Scripts> 
+	</Frame>
+</Ui>

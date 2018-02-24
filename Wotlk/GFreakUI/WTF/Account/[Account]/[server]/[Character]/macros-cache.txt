@@ -1,0 +1,60 @@
+MACRO 16777222 " " INV_Misc_QuestionMark
+#showtooltip
+/castsequence reset=120 Death Wish, Recklessness, Death Wish, Death Wish
+/cast Blood Fury
+END
+MACRO 16777223 " " INV_Misc_QuestionMark
+#showtooltip
+/startattack
+/castsequence reset=3.5 Bloodthirst, Whirlwind, Bloodthirst
+/cast Cleave
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+#showtooltip
+/startattack
+/castsequence reset=3.5 Bloodthirst, Whirlwind, Bloodthirst
+/cast Heroic Strike
+END
+MACRO 16777224 " " INV_Misc_QuestionMark
+#showtooltip
+/castsequence [nomod:alt] reset=15 Charge, Intercept
+/cast Heroic Throw
+END
+MACRO 16777225 " " INV_Misc_QuestionMark
+#showtooltip Intervene
+/cast [target=targettarget,help,nodead,combat] Intervene
+END
+MACRO 16777226 " " INV_Misc_QuestionMark
+#showtooltip
+/cast Shield Slam
+/cast [nomod:alt] Shield Block
+END
+MACRO 16777227 " " INV_Misc_QuestionMark
+#showtooltip
+/cast Devastate
+/cast Heroic Strike
+END
+MACRO 16777228 " " INV_Misc_QuestionMark
+#showtooltip
+/cast Thunder Clap
+/cast Cleave
+END
+MACRO 16777232 " " INV_Misc_QuestionMark
+#showtooltip
+/castsequence [nocombat] reset=15 Battle Stance, Charge, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance, Berserk Stance
+/cast [combat]  Berserker Stance
+END
+MACRO 16777233 " " INV_Misc_QuestionMark
+#showtooltip
+/use Damaged Necklace
+END
+MACRO 16777230 "Fury" Ability_Warrior_TitansGrip
+/cast Berserker Stance
+/usetalents 1
+/in 5.25 /equipset Fury
+END
+MACRO 16777231 "Tank" Ability_Warrior_DefensiveStance
+/equipset Tank
+/cast Defensive Stance
+/usetalents 2
+END

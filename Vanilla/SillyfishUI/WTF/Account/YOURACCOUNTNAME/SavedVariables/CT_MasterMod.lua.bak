@@ -1,0 +1,8 @@
+
+CT_Options = {
+	["version"] = 1.854,
+}
+CT_CPBPosition = 256
+CT_CPMovable = nil
+CT_KeyBindings = {
+}

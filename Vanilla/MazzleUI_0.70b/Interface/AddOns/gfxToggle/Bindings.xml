@@ -1,0 +1,8 @@
+<Bindings>
+	<Binding name="GFX_TOGGLE" header="GFX">
+		gfxToggle.Obj:Toggle()
+	</Binding>
+	<Binding name="GFX_AUTO">
+		gfxToggle.Obj:Auto()
+	</Binding>
+</Bindings>

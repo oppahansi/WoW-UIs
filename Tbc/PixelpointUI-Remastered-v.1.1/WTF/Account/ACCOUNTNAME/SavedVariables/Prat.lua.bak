@@ -1,0 +1,141 @@
+
+PratDB = {
+	["namespaces"] = {
+		["PratChannelColorMemory"] = {
+			["profiles"] = {
+				["Default"] = {
+					["colors"] = {
+						["LocalDefense"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["GuildRecruitment"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["General"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Trade"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+					},
+				},
+			},
+		},
+		["PratChannelSeparator"] = {
+			["profiles"] = {
+				["Default"] = {
+					["OFFICER"] = {
+						true, -- [1]
+						false, -- [2]
+						false, -- [3]
+						false, -- [4]
+						false, -- [5]
+						false, -- [6]
+						false, -- [7]
+					},
+					["RAID"] = {
+						true, -- [1]
+						false, -- [2]
+						false, -- [3]
+						false, -- [4]
+						false, -- [5]
+						false, -- [6]
+						false, -- [7]
+					},
+					["BATTLEGROUND"] = {
+						true, -- [1]
+						false, -- [2]
+						false, -- [3]
+						false, -- [4]
+						false, -- [5]
+						false, -- [6]
+						false, -- [7]
+					},
+				},
+			},
+		},
+		["PratPresets"] = {
+			["profiles"] = {
+				["Default"] = {
+					["on"] = true,
+				},
+			},
+		},
+		["PratKeyBindings"] = {
+			["profiles"] = {
+				["Default"] = {
+					["on"] = true,
+				},
+			},
+		},
+		["PlayerNames"] = {
+			["realms"] = {
+				["Archangel [14x] Blizzlike - Horde"] = {
+					["classes"] = {
+						["Obscene"] = "WARLOCK",
+					},
+					["levels"] = {
+						["Obscene"] = 2,
+					},
+				},
+			},
+		},
+		["minimap"] = {
+			["profiles"] = {
+				["Default"] = {
+					["on"] = true,
+				},
+			},
+		},
+		["PratChatFrames"] = {
+			["profiles"] = {
+				["Default"] = {
+					["initialized"] = true,
+				},
+			},
+		},
+		["PratPopupMessage"] = {
+			["profiles"] = {
+				["Default"] = {
+					["sink10OutputSink"] = "Popup",
+				},
+			},
+		},
+	},
+	["disabledModules"] = {
+		["Default"] = {
+			["PratChatLangButton"] = true,
+			["PratChatLink"] = true,
+			["CustomFilters"] = true,
+			["PratAddonMsgs"] = true,
+			["PratSubstitutions"] = true,
+			["PratClear"] = true,
+			["PratAltNames"] = true,
+			["PratSounds"] = true,
+			["PratFiltering"] = true,
+			["PratChatTabs"] = true,
+			["PratChatLog"] = true,
+			["Alias"] = true,
+			["PratChannelReordering"] = true,
+		},
+	},
+}
+PratFuDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+				["fontSizePercent"] = 1,
+			},
+			["showIcon"] = true,
+			["hidden"] = true,
+		},
+	},
+}

@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: |cff33ffccShagu|cffffffffPlates
+## Author: Eric (Shagu) Mauser, 2016
+## Notes: A fork of CustomNameplates which tries to provide  a TukUI alike appearance.
+## Version: 1.0
+nameplates.lua
+enemycast.lua

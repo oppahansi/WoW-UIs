@@ -1,0 +1,11 @@
+## Interface: 30300
+## Title: QuestMyMap
+## Author: Cargor
+## Version: 1.2.1
+## X-eMail: xconstruct@gmail.com
+## X-Website: http://www.xconstruct.net
+## Notes: Transparent layout and and quest map tweaks.
+
+resize.lua
+modifiedClicks.lua
+level.lua

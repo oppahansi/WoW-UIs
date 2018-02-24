@@ -1,0 +1,14 @@
+## Interface: 11200
+## Title: Mazzlefizz's |cFF0066993D Characters|r
+## Version: 1.0
+## Notes: 3D model Management for MazzleUI
+## OptionalDeps: 
+## Dependencies: Timex, Ace
+## SavedVariables: Mazz3D_ModelDB, Mazz3D_CameraDB
+Mazz3D.lua
+Mazz3D_Character.lua
+Mazz3D_Camera.lua
+Mazz3D_GUIControls.lua
+Mazz3D_DBCreation.lua
+Mazz3D_Globals.lua
+Mazz3D.xml

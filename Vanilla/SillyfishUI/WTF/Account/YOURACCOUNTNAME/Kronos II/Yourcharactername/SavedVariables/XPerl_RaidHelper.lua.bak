@@ -1,0 +1,42 @@
+
+XPerlConfigHelper = {
+	["UseCTRATargets"] = 1,
+	["OtherTargets_Scale"] = 1,
+	["OtherTargetTargets"] = 1,
+	["Tooltips"] = 0,
+	["Assists_BackTransparency"] = 1,
+	["RaidHelper"] = 1,
+	["TargettingFrame"] = 1,
+	["Scale_AssistsFrame"] = 1,
+	["MTLabels"] = 0,
+	["MaxMainTanks"] = 10,
+	["BorderColour"] = {
+		["a"] = 1,
+		["r"] = 0.5,
+		["g"] = 0.5,
+		["b"] = 0.5,
+	},
+	["AssistsFrame_Transparency"] = 0.8,
+	["Targets_Transparency"] = 0.8,
+	["UnitWidth"] = 100,
+	["BackgroundColour"] = {
+		["a"] = 1,
+		["r"] = 0,
+		["g"] = 0,
+		["b"] = 0,
+	},
+	["AssistsFrame"] = 1,
+	["MTTargetTargets"] = 1,
+	["TargetCountersSelf"] = 1,
+	["TargetCounters"] = 1,
+	["ExpandLock"] = 0,
+	["CollectOtherTargets"] = 1,
+	["Background_Transparency"] = 1,
+	["Targets_Scale"] = 1,
+	["ThreatBar"] = 1,
+	["UnitHeight"] = 26,
+	["ShowMT"] = 1,
+	["TargetCountersEnemy"] = 1,
+}
+XPerl_MainTanks = {
+}

@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fAura|r]
+## Notes: Show buffs and debuffs for PitBull frames as well as highlight frames that need cleansing.
+## Notes-koKR: 해제할 필요가 있는 강조 프레임과 마찬가지로 PitBull 프레임에 대해 버프/디버프를 보여줍니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+Aura.xml

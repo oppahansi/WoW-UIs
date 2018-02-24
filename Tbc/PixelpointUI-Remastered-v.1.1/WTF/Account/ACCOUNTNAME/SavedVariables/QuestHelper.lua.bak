@@ -1,0 +1,293 @@
+
+QuestHelper_Version = "0.65"
+QuestHelper_SaveVersion = 10
+QuestHelper_Locale = "enUS"
+QuestHelper_Quests = {
+	["0.65 on 2.4.3"] = {
+	},
+}
+QuestHelper_Objectives = {
+	["0.65 on 2.4.3"] = {
+		["monster"] = {
+			["Skymaster Sunwing"] = {
+			},
+			["Georgia"] = {
+			},
+			["Junter Weiss"] = {
+			},
+			["Gurric"] = {
+			},
+			["Urda"] = {
+			},
+			["Vahgruk"] = {
+			},
+			["Nutral"] = {
+			},
+			["Maddix"] = {
+			},
+			["Innalia"] = {
+			},
+			["Herzo Safeflight"] = {
+			},
+			["Barley"] = {
+			},
+			["Turida Coldwind"] = {
+			},
+			["Doras"] = {
+			},
+			["Grisha"] = {
+			},
+			["Grimwing"] = {
+			},
+			["Surristrasz"] = {
+			},
+			["Skymistress Gloaming"] = {
+			},
+			["Nyse"] = {
+			},
+			["Nethestrasz"] = {
+			},
+			["Dyslix Silvergrub"] = {
+			},
+			["Gorkas"] = {
+			},
+			["Kerna"] = {
+			},
+			["Shavalius the Fancy"] = {
+			},
+			["Halvdan"] = {
+			},
+			["Omu Spiritbreeze"] = {
+			},
+			["Kragh"] = {
+			},
+			["Thysta"] = {
+			},
+			["Runk Windtamer"] = {
+			},
+			["Morlia Doomwing"] = {
+			},
+			["Duskbat"] = {
+				["level"] = 2,
+				["id"] = 1512,
+				["levelw"] = 2,
+				["looted"] = 1,
+				["pos"] = {
+					{
+						43, -- [1]
+						0.301471298856285, -- [2]
+						0.7099027577387929, -- [3]
+						2.33, -- [4]
+					}, -- [1]
+				},
+			},
+			["Warmage Adami"] = {
+			},
+			["Amilya Airheart"] = {
+			},
+			["Dreadwind"] = {
+			},
+			["Grennik"] = {
+			},
+			["Makki Wintergale"] = {
+			},
+			["Hyeyoung Parka"] = {
+			},
+			["Shardi"] = {
+			},
+			["Gur'zil"] = {
+			},
+			["Skizzle Slickslide"] = {
+			},
+			["Penumbrius"] = {
+			},
+			["Devrak"] = {
+			},
+			["Breck Rockbrow"] = {
+			},
+			["Bragok"] = {
+			},
+			["Aludane Whitecloud"] = {
+			},
+			["Gorrim"] = {
+			},
+			["Celea Frozenmane"] = {
+			},
+			["Kiz Coilspanner"] = {
+			},
+			["Tobias Sarkhoff"] = {
+			},
+			["Omusa Thunderhorn"] = {
+			},
+			["Skymaster Baeric"] = {
+			},
+			["Rafae"] = {
+			},
+			["Lilleth Radescu"] = {
+			},
+			["Danica Saint"] = {
+			},
+			["Marvin Wobblesprocket"] = {
+			},
+			["The Spirit of Gnomeregan"] = {
+			},
+			["Bilko Driftspark"] = {
+			},
+			["Tal"] = {
+			},
+			["Tharm"] = {
+			},
+			["Narzun Skybreaker"] = {
+			},
+			["Gursha"] = {
+			},
+			["Ohura"] = {
+			},
+			["Maaka"] = {
+			},
+			["Gringer"] = {
+			},
+			["Baneflight"] = {
+			},
+			["Faustron"] = {
+			},
+			["Kabarg Windtamer"] = {
+			},
+			["Vlagga Freyfeather"] = {
+			},
+			["Brakkar"] = {
+			},
+			["Bat Handler Adeline"] = {
+			},
+			["Breyk"] = {
+			},
+			["Yugrek"] = {
+			},
+			["Harpax"] = {
+			},
+			["Kroum"] = {
+			},
+			["Michael Garrett"] = {
+			},
+			["Thalon"] = {
+			},
+			["Sky-Master Maxxor"] = {
+			},
+			["Shyn"] = {
+			},
+			["Bulkrek Ragefist"] = {
+			},
+			["Fhyn Leafshadow"] = {
+			},
+			["Karos Razok"] = {
+			},
+			["Du'ga"] = {
+			},
+			["Drek'Gol"] = {
+			},
+			["Gorrik"] = {
+			},
+			["Aedan Moran"] = {
+			},
+			["Unoke Tenderhoof"] = {
+			},
+			["Numo Spiritbreeze"] = {
+			},
+			["Vhulgra"] = {
+			},
+			["Alieshor"] = {
+			},
+			["Kimbiza"] = {
+			},
+			["Zarise"] = {
+			},
+			["Andruk"] = {
+			},
+			["Kip Trawlskip"] = {
+			},
+			["Gryfe"] = {
+			},
+			["Krexcil"] = {
+			},
+			["Cid Flounderfix"] = {
+			},
+		},
+		["item"] = {
+			[""] = {
+				["id"] = 6948,
+			},
+			["Refreshing Spring Water"] = {
+				["id"] = 159,
+			},
+			["Forest Mushroom Cap"] = {
+				["id"] = 4604,
+			},
+			["Hearthstone"] = {
+				["id"] = 6948,
+			},
+			["Chipped Claw"] = {
+				["id"] = 7074,
+				["drop"] = {
+					["Duskbat"] = 2,
+				},
+			},
+			["Ruined Pelt"] = {
+				["id"] = 4865,
+				["drop"] = {
+					["Duskbat"] = 1,
+				},
+			},
+			["Broken Fang"] = {
+				["id"] = 7073,
+				["drop"] = {
+					["Duskbat"] = 1,
+				},
+			},
+		},
+	},
+}
+QuestHelper_FlightInstructors = {
+	["0.65 on 2.4.3"] = {
+	},
+}
+QuestHelper_FlightRoutes = {
+	["0.65 on 2.4.3"] = {
+	},
+}
+QuestHelper_Pref = {
+	["track"] = true,
+	["filter_zone"] = false,
+	["scale"] = 1,
+	["comm"] = false,
+	["locale"] = "enUS",
+	["track_level"] = true,
+	["hide"] = false,
+	["show_ants"] = true,
+	["track_size"] = 8,
+	["perf_scale"] = 1,
+	["level"] = 2,
+	["map_button"] = true,
+	["solo"] = false,
+	["filter_level"] = true,
+	["filter_blocked"] = false,
+	["track_minimized"] = false,
+	["cart_wp"] = true,
+	["track_qcolour"] = true,
+	["tomtom_wp"] = true,
+	["tooltip"] = true,
+	["share"] = true,
+	["filter_watched"] = false,
+	["track_ocolour"] = true,
+	["filter_done"] = false,
+	["flight_time"] = true,
+	["track_scale"] = 1,
+}
+QuestHelper_UID = "p80nfqYuKtL7ZhJVKZJ7zeEJmu25j2OC"
+QuestHelper_SaveDate = 1361763532
+QuestHelper_SeenRealms = {
+	["Archangel [14x] Blizzlike"] = true,
+}
+QuestHelper_Errors = {
+	["crashes"] = {
+	},
+}

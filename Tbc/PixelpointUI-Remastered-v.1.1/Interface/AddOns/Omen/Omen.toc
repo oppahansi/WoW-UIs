@@ -1,0 +1,46 @@
+## Interface: 20400
+## Version: 2.0
+## X-Build: $Revision: 78662 $
+## X-ReleaseDate: $Date: 2008-03-27 01:18:39 -0700 (Thu, 27 Mar 2008) $
+## Title: Omen2
+## Notes: A lightweight, flexible, multi-target threat meter.
+## Notes-ruRU: Лёгкий, гибкий, измеритель угрозы.
+## Notes-frFR: Un "threat meter" léger, flexible et multi-cibles.
+## Notes-zhCN: 一个灵活的，多目标的，低资源占用的威胁值计量器。
+## Notes-zhTW: 一個輕量級、有彈性、可監視多個目標的仇恨統計插件。
+## Notes-koKR: 다중-대상에 대한 위협수준 미터기로 보여줍니다.
+## Author: Antiarc (cheald@gmail dot com)
+## OptionalDeps: Ace3, Threat-2.0, LibSharedMedia-3.0, SharedMedia, LibGUIDRegistry-0.1, LibSink-2.0, LibDropdown-1.0, oRA2, FuBar
+## X-Category: Combat
+## SavedVariables: Omen2DB, Omen2DefaultProfile
+## SavedVariablesPerCharacter: Omen2DBPC
+## X-Embeds: Ace3, Threat-2.0, LibSharedMedia-3.0, LibGUIDRegistry-0.1, LibSink-2.0
+
+embeds.xml
+
+Libs\LibFuBarPlugin-3.0\lib.xml
+
+Localization\enUS.lua
+Localization\ruRU.lua
+Localization\frFR.lua
+Localization\deDE.lua
+Localization\koKR.lua
+Localization\zhCN.lua
+Localization\zhTW.lua
+Localization\esES.lua
+
+Omen.lua
+Options.lua
+Frame.lua
+Bar.lua
+Media.lua
+Skins.lua
+Config.lua
+ModuleBase.lua
+
+Modules\SingleTarget\module.xml
+Modules\AOE\module.xml
+Modules\Healer\module.xml
+Modules\Overview\module.xml
+
+Cleanup.lua

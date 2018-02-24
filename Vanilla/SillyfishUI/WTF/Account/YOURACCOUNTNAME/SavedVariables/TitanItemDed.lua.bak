@@ -1,0 +1,8 @@
+
+TitanItemDedSettings = {
+	["Kronos IISillyfish"] = {
+		["Threshold"] = 1,
+		["Ignored"] = {
+		},
+	},
+}

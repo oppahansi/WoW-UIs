@@ -1,0 +1,227 @@
+------------------------------------------------------------------------
+r15603 | sayclub | 2006-10-31 03:46:38 -0500 (Tue, 31 Oct 2006) | 2 lines
+
+WitchHunt: Update kokR, Add Notes-koKR (by talkwind)
+
+------------------------------------------------------------------------
+r15598 | sayclub | 2006-10-31 00:21:49 -0500 (Tue, 31 Oct 2006) | 2 lines
+
+WitchHunt: Update koKR
+
+------------------------------------------------------------------------
+r15541 | ammo | 2006-10-30 10:44:58 -0500 (Mon, 30 Oct 2006) | 2 lines
+
+WitchHunt: touch for zip
+
+------------------------------------------------------------------------
+r14494 | ammo | 2006-10-20 08:47:14 -0400 (Fri, 20 Oct 2006) | 2 lines
+
+WitchHunt: toc update for global string fixing in parserlib
+
+------------------------------------------------------------------------
+r14399 | mikma | 2006-10-19 09:25:56 -0400 (Thu, 19 Oct 2006) | 1 line
+
+WitchHunt: .lua:25 fix
+------------------------------------------------------------------------
+r14398 | ammo | 2006-10-19 09:20:02 -0400 (Thu, 19 Oct 2006) | 2 lines
+
+WitchHunt: AceLocale enabled, drycoded, will have to test
+
+------------------------------------------------------------------------
+r12519 | ammo | 2006-10-01 13:45:56 -0400 (Sun, 01 Oct 2006) | 2 lines
+
+WitchHunt: externals fixed
+
+------------------------------------------------------------------------
+r12412 | kergoth | 2006-09-30 19:57:04 -0400 (Sat, 30 Sep 2006) | 1 line
+
+Further line ending madness.
+------------------------------------------------------------------------
+r12064 | nevcairiel | 2006-09-26 15:07:47 -0400 (Tue, 26 Sep 2006) | 3 lines
+
+Externals: Last Commit ( R - Z )
+ - I am sure i missed some externals, if you find them fix them, if you complain, go and die
+ - oh yeah, SCT isnt fixed, wouldnt let me.
+------------------------------------------------------------------------
+r9595 | tekkub | 2006-08-30 18:01:31 -0400 (Wed, 30 Aug 2006) | 2 lines
+
+WitchHunt
+- *POKE*
+------------------------------------------------------------------------
+r9412 | ammo | 2006-08-28 11:17:44 -0400 (Mon, 28 Aug 2006) | 2 lines
+
+WitchHunt: Compost-2.0 added for parserlib benefit
+
+------------------------------------------------------------------------
+r9410 | ammo | 2006-08-28 10:52:29 -0400 (Mon, 28 Aug 2006) | 2 lines
+
+WitchHunt: now parented to UIParent
+
+------------------------------------------------------------------------
+r9408 | ammo | 2006-08-28 10:47:48 -0400 (Mon, 28 Aug 2006) | 2 lines
+
+WitchHunt: Fixed emote extra s appearances
+
+------------------------------------------------------------------------
+r9129 | tekkub | 2006-08-25 18:52:50 -0400 (Fri, 25 Aug 2006) | 2 lines
+
+WitchHunt
+- TOC updates
+------------------------------------------------------------------------
+r9124 | tuplad | 2006-08-25 18:14:35 -0400 (Fri, 25 Aug 2006) | 1 line
+
+WitchHunt - Small fix on the totems
+------------------------------------------------------------------------
+r7975 | ammo | 2006-08-14 07:41:00 -0400 (Mon, 14 Aug 2006) | 2 lines
+
+WitchHunt: added throttling of 3 seconds to similar messages.
+
+------------------------------------------------------------------------
+r6713 | ammo | 2006-08-03 06:36:22 -0400 (Thu, 03 Aug 2006) | 3 lines
+
+WitchHunt:
+* experimental support for SCT5.0 may eat your babies
+
+------------------------------------------------------------------------
+r6594 | ammo | 2006-08-02 08:34:21 -0400 (Wed, 02 Aug 2006) | 3 lines
+
+WitchHunt:
+* Now reference ParserLib via external
+
+------------------------------------------------------------------------
+r6478 | rabbit | 2006-08-01 11:29:08 -0400 (Tue, 01 Aug 2006) | 1 line
+
+WitchHunt: Added Ace2 to optionaldeps.
+------------------------------------------------------------------------
+r6475 | ammo | 2006-08-01 11:27:22 -0400 (Tue, 01 Aug 2006) | 3 lines
+
+WitchHunt:
+* Fixed lock/unlock while standby
+
+------------------------------------------------------------------------
+r6469 | ammo | 2006-08-01 09:30:38 -0400 (Tue, 01 Aug 2006) | 2 lines
+
+WitchHunt:
+* Dragging the frame now works. /wh lock to toggle the lock.
+------------------------------------------------------------------------
+r5741 | ammo | 2006-07-26 04:07:26 -0400 (Wed, 26 Jul 2006) | 3 lines
+
+WitchHunt:
+* Lock defaults to true now
+
+------------------------------------------------------------------------
+r5673 | ammo | 2006-07-25 10:43:45 -0400 (Tue, 25 Jul 2006) | 4 lines
+
+WitchHunt:
+* Added fontsize setting for the WitchHunt frame.
+* Made a start with movable frame. doesn't do much yet.
+* Fixed extreme memory usage due to frames being created every message
+------------------------------------------------------------------------
+r5400 | ammo | 2006-07-23 04:59:30 -0400 (Sun, 23 Jul 2006) | 3 lines
+
+WitchHunt:
+* Now has an option to send it to SCT as a 'message' making it stick etc..
+
+------------------------------------------------------------------------
+r5399 | ammo | 2006-07-23 04:49:31 -0400 (Sun, 23 Jul 2006) | 3 lines
+
+WitchHunt:
+* Enlarged WH's own frame to fit more messages.
+
+------------------------------------------------------------------------
+r4733 | ammo | 2006-07-13 10:42:32 -0400 (Thu, 13 Jul 2006) | 4 lines
+
+WitchHunt:
+* Now uses ParserLib for it's events. All localizations should be supported that way.
+* Thanks to Moonsorrow.
+
+------------------------------------------------------------------------
+r4720 | kergoth | 2006-07-13 05:43:13 -0400 (Thu, 13 Jul 2006) | 1 line
+
+WitchHunt: Table constructions for _each and every message_ is a Bad Thing(tm).
+------------------------------------------------------------------------
+r4719 | ammo | 2006-07-13 05:38:23 -0400 (Thu, 13 Jul 2006) | 3 lines
+
+WitchHunt: 
+* More robust coding in WitchHunt_Message handler
+
+------------------------------------------------------------------------
+r4718 | ammo | 2006-07-13 05:30:50 -0400 (Thu, 13 Jul 2006) | 3 lines
+
+WitchHunt:
+* Now has support for Scrolling Combat Text working.
+* Cleaned up event registering/unregistering in case of "No display"
+------------------------------------------------------------------------
+r4717 | ammo | 2006-07-13 05:09:53 -0400 (Thu, 13 Jul 2006) | 4 lines
+
+WitchHunt:
+* Added optional support for Scrolling Combat Text
+* needs testing, committing for transfer to WoW capable PC ;)
+
+------------------------------------------------------------------------
+r4712 | kergoth | 2006-07-13 04:28:03 -0400 (Thu, 13 Jul 2006) | 1 line
+
+WitchHunt: s/Combat Text/Battle Text/g;
+------------------------------------------------------------------------
+r4711 | kergoth | 2006-07-13 04:26:41 -0400 (Thu, 13 Jul 2006) | 1 line
+
+WitchHunt: s/"none"/"None"/g;
+------------------------------------------------------------------------
+r4710 | kergoth | 2006-07-13 03:32:31 -0400 (Thu, 13 Jul 2006) | 1 line
+
+WitchHunt: make the display options more verbose, since there doesn't seem to be a way to give detailed descriptions to each of the validate elements for the 'text' type.
+------------------------------------------------------------------------
+r4709 | kergoth | 2006-07-13 03:06:41 -0400 (Thu, 13 Jul 2006) | 3 lines
+
+ r30497@crydee (orig r4707):  kergoth | 2006-07-12 22:09:41 -0700
+ WitchHunt: rework the chat handling wrt the mode of message display, and add support for Mik's Scrolling Battle Text.
+
+------------------------------------------------------------------------
+r4661 | ammo | 2006-07-12 10:35:33 -0400 (Wed, 12 Jul 2006) | 4 lines
+
+WitchHunt:
+* removed an ace:print that was spamming the chatlog.
+
+
+------------------------------------------------------------------------
+r4571 | ammo | 2006-07-11 11:09:03 -0400 (Tue, 11 Jul 2006) | 3 lines
+
+WitchHunt:
+* Added /wh errorframe to toggle sending to the errorframe or witchhunt's own frame
+* Added /wh nodisplay to toggle displaying witchhunt's messages. The WitchHunt_Message event is still fired, so you can register it to for instance send it to SCT.
+------------------------------------------------------------------------
+r4108 | ammo | 2006-07-06 04:18:57 -0400 (Thu, 06 Jul 2006) | 3 lines
+
+WitchHunt:
+* Fixed the toggle for targetonly
+
+------------------------------------------------------------------------
+r4047 | ammo | 2006-07-05 12:04:35 -0400 (Wed, 05 Jul 2006) | 2 lines
+
+WitchHunt:
+* Fixed line 169 gfind nil error
+------------------------------------------------------------------------
+r4046 | ammo | 2006-07-05 12:02:47 -0400 (Wed, 05 Jul 2006) | 3 lines
+
+WitchHunt:
+* .toc update
+
+------------------------------------------------------------------------
+r4043 | ammo | 2006-07-05 11:51:34 -0400 (Wed, 05 Jul 2006) | 4 lines
+
+WitchHunt:
+* Tested and working version.
+* Only uses the UIErrorsframe
+* Only options are combatonly and targetonly
+------------------------------------------------------------------------
+r4042 | ammo | 2006-07-05 11:09:41 -0400 (Wed, 05 Jul 2006) | 3 lines
+
+WitchHunt:
+* Changed to Ace2.0, don't use yet though ;)
+
+------------------------------------------------------------------------
+r21 | ammo | 2006-04-10 04:04:48 -0400 (Mon, 10 Apr 2006) | 2 lines
+
+Initial import of my mods
+
+------------------------------------------------------------------------

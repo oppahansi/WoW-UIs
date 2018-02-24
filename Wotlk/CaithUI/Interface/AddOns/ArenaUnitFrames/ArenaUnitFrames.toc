@@ -1,0 +1,22 @@
+## Interface: 30300
+## Title: Arena Unit Frames
+## Notes: Unit frames for arena opponents
+## Author: Torrid
+## SavedVariablesPerCharacter: ArenaUnitFrames_Config
+## Version: 3.02
+
+localization.enUS.lua
+localization.deDE.lua
+localization.frFR.lua
+localization.zhCN.lua
+localization.zhTW.lua
+localization.koKR.lua
+localization.esES.lua
+
+Spells.lua
+ArenaUnitFrames.lua
+ArenaUnitFrames.xml
+ArenaUnitFramesOptions.lua
+ArenaUnitFramesOptions.xml
+Alerts.lua
+Timer.lua

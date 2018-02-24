@@ -1,0 +1,14 @@
+## Interface: 20400
+
+## Title: ButtonFacade: |cffff8000ThinBlack|r
+## Notes: Pixel skin with shadow for ButtonFacade.
+## Version: 1
+
+## Author: Lily.Petal
+## X-eMail: Lily.Petal@hotmail.com
+## X-Credits: Ish for making me make this
+
+## X-Category: Action Bars
+## OptionalDeps: LibButtonFacade, ButtonFacade
+
+Skins.lua

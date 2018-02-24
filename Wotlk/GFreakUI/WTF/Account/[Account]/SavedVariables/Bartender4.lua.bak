@@ -1,0 +1,274 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["ActionBars"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "BOTTOM",
+								["y"] = 178.5000000341936,
+							},
+						}, -- [1]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "CENTER",
+								["y"] = -166.9999843393222,
+							},
+						}, -- [2]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "CENTER",
+								["y"] = -151.5000088561475,
+							},
+						}, -- [3]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "CENTER",
+								["y"] = -113.5000232174678,
+							},
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "CENTER",
+								["y"] = -75.50000256452148,
+							},
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000799788766,
+								["point"] = "CENTER",
+								["y"] = -37.49999941870846,
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						[9] = {
+						},
+						[10] = {
+						},
+					},
+				},
+				["Default"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 516.2667334855588,
+								["point"] = "BOTTOMLEFT",
+								["y"] = 57.98250066284332,
+							},
+						}, -- [1]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 516.2667334855588,
+								["point"] = "BOTTOMLEFT",
+								["y"] = 97.98251434029122,
+							},
+						}, -- [2]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 516.2667334855588,
+								["point"] = "BOTTOMLEFT",
+								["y"] = 137.9825236409558,
+							},
+						}, -- [3]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 94.08995206122904,
+								["point"] = "BOTTOM",
+								["y"] = 57.98250066284332,
+							},
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 94.08995206122904,
+								["point"] = "BOTTOM",
+								["y"] = 97.98251434029122,
+							},
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 94.08995206122904,
+								["point"] = "BOTTOM",
+								["y"] = 137.9825236409558,
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						[9] = {
+						},
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -188.8001114704816,
+						["point"] = "CENTER",
+						["scale"] = 0.800000011920929,
+						["y"] = 42.40002829248175,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -92.03498270669434,
+						["point"] = "BOTTOM",
+						["scale"] = 0.7300000190734863,
+						["y"] = 86.56249984028925,
+					},
+				},
+			},
+		},
+		["XPBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["enabled"] = true,
+					["alpha"] = 0.5,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -8.000030637483279,
+						["point"] = "TOPLEFT",
+						["scale"] = 1.91,
+						["y"] = 8.00005963367289,
+					},
+					["clickthrough"] = true,
+				},
+			},
+		},
+		["BlizzardArt"] = {
+		},
+		["BagBar"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 58.49987584296673,
+						["point"] = "CENTER",
+						["y"] = 1.500011181313653,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -91.84997025804387,
+						["point"] = "BOTTOM",
+						["scale"] = 1.100000023841858,
+						["y"] = 59.91250059161536,
+					},
+				},
+			},
+		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 53.50004865752078,
+						["point"] = "CENTER",
+						["y"] = 51.49999873483608,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -91.899914727951,
+						["point"] = "BOTTOM",
+						["y"] = 130.2924978309277,
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -135.7500840308204,
+						["point"] = "CENTER",
+						["y"] = 14.25000993324653,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 516.2667684998254,
+						["point"] = "BOTTOMLEFT",
+						["y"] = 188.4824974144495,
+					},
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Doublefisted - Icecrown"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -163.5000983066567,
+						["point"] = "CENTER",
+						["y"] = 89.50000188064911,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 516.2667334855588,
+						["point"] = "BOTTOMLEFT",
+						["y"] = 171.9825494913323,
+					},
+				},
+			},
+		},
+		["RepBar"] = {
+			["profiles"] = {
+				["Default"] = {
+					["enabled"] = true,
+					["alpha"] = 0.699999988079071,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -15,
+						["point"] = "BOTTOMLEFT",
+						["scale"] = 2.089999914169312,
+						["y"] = 24,
+					},
+					["clickthrough"] = true,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Doublefisted - Icecrown"] = "Default",
+	},
+	["profiles"] = {
+		["Doublefisted - Icecrown"] = {
+		},
+		["Default"] = {
+			["minimapIcon"] = {
+				["minimapPos"] = 246.786519193181,
+			},
+		},
+	},
+}

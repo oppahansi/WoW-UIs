@@ -1,0 +1,19 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffMirror|r
+## Notes: Quartz module to display timers for important stuff.
+## Title-ruRU: Кварц |cff7777ffЗеркало|r
+## Notes-ruRU: Модуль Кварца отображающий таймеры значительных событий.
+## Notes-zhTW: 顯示 '最基本' 的計時器，例如呼吸、假死等。包含其它特別的，例如小隊邀請、復活釋放、戰場 / 競技場開始等，及自訂計時器。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Mirror
+## X-Quartz-RequiredModules: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Mirror.lua

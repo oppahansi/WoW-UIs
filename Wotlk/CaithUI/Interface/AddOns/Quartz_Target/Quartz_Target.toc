@@ -1,0 +1,20 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffTarget|r
+## Notes: Quartz module to display casting bar for your target.
+## Title-ruRU: Кварц |cff7777ffЦель|r
+## Notes-ruRU: Модуль Кварца отображающий полосу применения вашей цели.
+## Title-zhTW: Quartz |cff7777ff目標施法條|r
+## Notes-zhTW: 簡約風格的目標施法條。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Target
+## X-Quartz-RequiredModules: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Target.lua

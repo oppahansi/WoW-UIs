@@ -1,0 +1,13 @@
+GhostPulse/.*
+GhostPulse/textures/.*
+GhostPulse/sounds/.*
+GhostPulse/images/.*
+GhostPulse/libs/.*
+GhostPulse/libs/AceAddon-2.0/.*
+GhostPulse/libs/AceComm-2.0/.*
+GhostPulse/libs/AceConsole-2.0/.*
+GhostPulse/libs/AceDB-2.0/.*
+GhostPulse/libs/AceEvent-2.0/.*
+GhostPulse/libs/AceLibrary/.*
+GhostPulse/libs/AceLocale-2.2/.*
+GhostPulse/libs/AceOO-2.0/.*

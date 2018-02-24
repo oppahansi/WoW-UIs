@@ -1,0 +1,23 @@
+
+idChat2DB = {
+	["namespaces"] = {
+		["Timestamps"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Color"] = {
+						["r"] = 0.2823529411764706,
+						["b"] = 0.8,
+						["g"] = 0.4980392156862745,
+					},
+				},
+			},
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Scroll"] = {
+				["on"] = true,
+			},
+		},
+	},
+}

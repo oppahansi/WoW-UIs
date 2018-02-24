@@ -1,0 +1,7 @@
+MACRO 16777217 " " INV_Misc_QuestionMark
+#showtooltip
+/cast [nocombat, stance:2] Battle Stance
+/cast [combat, stance:1, nomod:alt] Defensive Stance
+/cast [nocombat, stance:1] Charge
+/cast [combat, stance: 2] Taunt 
+END

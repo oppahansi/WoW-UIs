@@ -1,0 +1,26 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+	},
+	["profiles"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = {
+			["MainWindow"] = {
+				["Position"] = {
+					["y"] = -177.1683654785156,
+					["x"] = 577.0161743164063,
+					["w"] = 140.0000610351563,
+					["h"] = 199.9999847412109,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["CurDataSet"] = "OverallData",
+		},
+	},
+}

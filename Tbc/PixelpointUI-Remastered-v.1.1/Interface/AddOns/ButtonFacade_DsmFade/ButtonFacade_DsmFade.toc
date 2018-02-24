@@ -1,0 +1,14 @@
+## Interface: 20400
+
+## Title: ButtonFacade: |cffff8000DsmFade|r
+## Notes: DsmFade skin for ButtonFacade.
+## Version: 1.45
+
+## Author: Delsim
+## X-eMail: evanwagz@gmail.com
+## X-Credits: JJ Sheets for ButtonFacade. StormFX for LayerTest.
+
+## X-Category: Action Bars
+## OptionalDeps: LibButtonFacade, ButtonFacade
+
+Skins.lua

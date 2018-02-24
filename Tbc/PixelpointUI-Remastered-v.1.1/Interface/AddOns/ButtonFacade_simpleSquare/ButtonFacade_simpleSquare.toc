@@ -1,0 +1,15 @@
+## Interface: 20400
+
+## Title: ButtonFacade: |cffff8000simpleSquare|r
+## Notes: Simple square skin for ButtonFacade.
+## Version: 1.1
+## Author: MoonWitch
+## X-Website: http://www.wowace.com/wiki/ButtonFacade
+## X-eMail: witch@other-net.com
+## X-Category: Action Bars
+## X-Credits: ScythXIII for the textures.
+## X-Notes: Requested on the WoWAce forums by Phanx
+
+## Dependencies: ButtonFacade
+
+skins.lua

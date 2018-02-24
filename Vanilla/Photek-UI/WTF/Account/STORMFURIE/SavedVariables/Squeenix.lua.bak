@@ -1,0 +1,15 @@
+
+SqueenixDB = {
+	["profiles"] = {
+		["Default"] = {
+			["position"] = {
+				["y"] = 944.485658095056,
+				["relativeTo"] = "UIParent",
+				["point"] = "CENTER",
+				["relativePoint"] = "BOTTOMLEFT",
+				["realtivePoint"] = "TOP",
+				["x"] = 73.71430992217654,
+			},
+		},
+	},
+}

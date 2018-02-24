@@ -1,0 +1,361 @@
+------------------------------------------------------------------------
+r15156 | moonwolf | 2006-10-25 09:39:00 -0400 (Wed, 25 Oct 2006) | 1 line
+
+Mendeleev: Added Limited deDE translation. 
+------------------------------------------------------------------------
+r14979 | greywind | 2006-10-23 12:34:58 -0400 (Mon, 23 Oct 2006) | 1 line
+
+Mendeleev: fixed an error in MendeleevGlobals.zhTW.lua
+------------------------------------------------------------------------
+r14941 | q09q09 | 2006-10-23 05:40:29 -0400 (Mon, 23 Oct 2006) | 1 line
+
+Mendeleev : Added locals zhTW; update locals zhCN
+------------------------------------------------------------------------
+r14597 | rabbit | 2006-10-21 00:42:16 -0400 (Sat, 21 Oct 2006) | 1 line
+
+Mendeleev: AceLocale-2.2, Babble-2.2 and AceHook-2.1.
+------------------------------------------------------------------------
+r14595 | q09q09 | 2006-10-21 00:35:43 -0400 (Sat, 21 Oct 2006) | 1 line
+
+Mendeleev : Added locals zhCN
+------------------------------------------------------------------------
+r13938 | caldar | 2006-10-14 23:24:44 -0400 (Sat, 14 Oct 2006) | 1 line
+
+Mendeleev: Added AceDebug to toc and libraries
+------------------------------------------------------------------------
+r13579 | fenlis | 2006-10-11 02:36:33 -0400 (Wed, 11 Oct 2006) | 1 line
+
+Mendeleev : Added locals koKR
+------------------------------------------------------------------------
+r13533 | rabbit | 2006-10-10 14:20:07 -0400 (Tue, 10 Oct 2006) | 1 line
+
+Mendeleev: Slightly reduce the number of strings and strip all those colons from headings, since the heading and data are in separate columns anyway.
+------------------------------------------------------------------------
+r13532 | rabbit | 2006-10-10 13:53:17 -0400 (Tue, 10 Oct 2006) | 1 line
+
+Mendeleev: Crafted by, factions and sources use AL.
+------------------------------------------------------------------------
+r13531 | rabbit | 2006-10-10 13:32:19 -0400 (Tue, 10 Oct 2006) | 4 lines
+
+Mendeleev:
+ * Almost 100% AceLocale.
+ * Added Babble-Boss-2.0
+ * Fixed indentation in the categories.
+------------------------------------------------------------------------
+r13501 | fenlis | 2006-10-10 03:10:21 -0400 (Tue, 10 Oct 2006) | 2 lines
+
+Mendeleev :
+ - fixed error line 336
+------------------------------------------------------------------------
+r13485 | moonwolf | 2006-10-09 22:09:01 -0400 (Mon, 09 Oct 2006) | 2 lines
+
+Mendeleev: First steps towards acelocale locals made, long way to go.
+~slap mikma for making me do this
+------------------------------------------------------------------------
+r13391 | moonwolf | 2006-10-08 22:49:42 -0400 (Sun, 08 Oct 2006) | 1 line
+
+Mendeleev: First steps towards BabbleLib local's made.
+------------------------------------------------------------------------
+r13388 | moonwolf | 2006-10-08 22:01:42 -0400 (Sun, 08 Oct 2006) | 1 line
+
+Mendeleev: Changed headers for most instance tables to Babble-Zone
+------------------------------------------------------------------------
+r13383 | moonwolf | 2006-10-08 20:42:18 -0400 (Sun, 08 Oct 2006) | 1 line
+
+Mendeleev: Removed old locals files in preparation of moving towards acelocale.
+------------------------------------------------------------------------
+r13382 | moonwolf | 2006-10-08 20:23:26 -0400 (Sun, 08 Oct 2006) | 1 line
+
+Mendeleev: Added Onyxia loot table.
+------------------------------------------------------------------------
+r13369 | moonwolf | 2006-10-08 18:12:10 -0400 (Sun, 08 Oct 2006) | 1 line
+
+Mendeleev: Added Naxxramas
+------------------------------------------------------------------------
+r13366 | moonwolf | 2006-10-08 16:14:49 -0400 (Sun, 08 Oct 2006) | 9 lines
+
+Mendeleev: 
+- Added Blackwing Lair
+- Added Molten Core
+- Added the Outdoor bosses
+- Added the four dragons
+- Added Zul'Gurub
+- Added AQ20
+- Added AQ40
+
+------------------------------------------------------------------------
+r13365 | phyber | 2006-10-08 15:38:32 -0400 (Sun, 08 Oct 2006) | 2 lines
+
+Mendeleev:
+- Fix typo in Tradeskills.
+------------------------------------------------------------------------
+r13364 | phyber | 2006-10-08 15:36:34 -0400 (Sun, 08 Oct 2006) | 2 lines
+
+Mendeleev:
+- Fix externals to match those in TOC.
+------------------------------------------------------------------------
+r13258 | moonwolf | 2006-10-07 13:45:52 -0400 (Sat, 07 Oct 2006) | 6 lines
+
+Mendeleev:
+- Added LBRS
+- Added BRD 
+- Added Scholomance
+- Added Stratholme
+- Added the temple of hakkar 
+------------------------------------------------------------------------
+r13239 | moonwolf | 2006-10-07 10:50:40 -0400 (Sat, 07 Oct 2006) | 2 lines
+
+Mendeleev: 
+- Added UBRS
+------------------------------------------------------------------------
+r13233 | moonwolf | 2006-10-07 10:12:36 -0400 (Sat, 07 Oct 2006) | 7 lines
+
+Mendeleev: 
+- Split up design for loot table categories
+- Added Dire Maul back in (east, west and north combined)
+- Added a reputation item category
+- Added a world Boss Drop category
+- Added a Elemental Invasion bosses drop category
+
+------------------------------------------------------------------------
+r13170 | moonwolf | 2006-10-06 10:29:12 -0400 (Fri, 06 Oct 2006) | 1 line
+
+Mendeleev: Added a category for the faire card decks.
+------------------------------------------------------------------------
+r13118 | moonwolf | 2006-10-05 17:57:09 -0400 (Thu, 05 Oct 2006) | 1 line
+
+Mendeleev: Took out all the boss and raid loot tables, time to redo them from scratch based on zone instead of big lists.
+------------------------------------------------------------------------
+r13082 | elkano | 2006-10-05 11:07:13 -0400 (Thu, 05 Oct 2006) | 3 lines
+
+Mendeleev
+- added BabbleLib and PT to OptDeps
+- fixed sorting; define locals before calling them ^^ (why was that bug in there again?)
+------------------------------------------------------------------------
+r13071 | moonwolf | 2006-10-05 09:36:51 -0400 (Thu, 05 Oct 2006) | 1 line
+
+Mendeleev: Merged elkano's changes in, sort has been disabled for now, it causes an error in the table.sort function.
+------------------------------------------------------------------------
+r13066 | moonwolf | 2006-10-05 09:12:05 -0400 (Thu, 05 Oct 2006) | 1 line
+
+Mendeleev: MendeleevCmd.lua had become useless, better off without it.
+------------------------------------------------------------------------
+r13065 | moonwolf | 2006-10-05 08:57:11 -0400 (Thu, 05 Oct 2006) | 1 line
+
+Mendeleev: Enter Thaina branch.
+------------------------------------------------------------------------
+r13064 | moonwolf | 2006-10-05 08:51:56 -0400 (Thu, 05 Oct 2006) | 1 line
+
+Mendeleev: Clearing the old crap so we start from Thiana's branch aas a new base, Thank you Thiana and others. Thank you very much :P.
+------------------------------------------------------------------------
+r12749 | kergoth | 2006-10-02 22:19:17 -0400 (Mon, 02 Oct 2006) | 1 line
+
+Line ending bits.
+------------------------------------------------------------------------
+r12494 | mikma | 2006-10-01 11:44:24 -0400 (Sun, 01 Oct 2006) | 1 line
+
+Mendeleev: externals
+------------------------------------------------------------------------
+r12063 | nevcairiel | 2006-09-26 14:42:57 -0400 (Tue, 26 Sep 2006) | 1 line
+
+Externals: M-Q - getting close to the end :)
+------------------------------------------------------------------------
+r11576 | kergoth | 2006-09-20 19:43:01 -0400 (Wed, 20 Sep 2006) | 1 line
+
+Mendeleev: It's spelled Tailor, not Taylor.
+------------------------------------------------------------------------
+r11301 | thiana | 2006-09-18 20:28:48 -0400 (Mon, 18 Sep 2006) | 1 line
+
+Mendeleev: Fixed money display logic for recipe sources
+------------------------------------------------------------------------
+r11295 | tekkub | 2006-09-18 18:04:15 -0400 (Mon, 18 Sep 2006) | 3 lines
+
+Mendeleev
+- Added Crafted By set
+- Added Recipe source info (Drop, vendor, seasonal, quest, crafted, vendor price, vendor faction requirements)
+------------------------------------------------------------------------
+r1769 | moonwolf | 2006-05-13 14:07:11 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: fixed stupid mistake... kinda of a trend here.
+------------------------------------------------------------------------
+r1763 | moonwolf | 2006-05-13 08:07:36 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: removed readme folder, it should not be in here in the first place.
+------------------------------------------------------------------------
+r1761 | moonwolf | 2006-05-13 07:38:10 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: Slight change.
+------------------------------------------------------------------------
+r1760 | moonwolf | 2006-05-13 06:32:20 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: Changed Default options again, exported more strings.
+------------------------------------------------------------------------
+r1759 | moonwolf | 2006-05-13 06:11:36 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: Added the Readme folder.
+------------------------------------------------------------------------
+r1758 | moonwolf | 2006-05-13 06:11:08 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: Removed a the locals files, moved the readme, the license and the screenshot to a readme folder.
+------------------------------------------------------------------------
+r1757 | moonwolf | 2006-05-13 06:08:03 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: removed chatinform, it was causing crashes.Moved Locals files to seperate folder to take care of clutter
+------------------------------------------------------------------------
+r1756 | moonwolf | 2006-05-13 05:08:58 -0400 (Sat, 13 May 2006) | 1 line
+
+Mendeleev: Exported a lot of strings to MendeleevGlobals.lua
+------------------------------------------------------------------------
+r1383 | moonwolf | 2006-05-03 07:54:52 -0400 (Wed, 03 May 2006) | 2 lines
+
+Mendeleev: Fixed previous problem, should have remembered to include compostlib. 
+~whaleslap [moonwolf]
+------------------------------------------------------------------------
+r1381 | moonwolf | 2006-05-03 07:28:05 -0400 (Wed, 03 May 2006) | 1 line
+
+Mendeleev: PT has been embedded, some weird problem i can't figure out with the tradeskills remains. I'll ask tekkub to explain it to me when he wakes up again.
+------------------------------------------------------------------------
+r1380 | moonwolf | 2006-05-03 05:39:17 -0400 (Wed, 03 May 2006) | 2 lines
+
+Mendeleev: Stupid mistake on my part. *fixed*
+
+------------------------------------------------------------------------
+r1379 | moonwolf | 2006-05-03 05:38:10 -0400 (Wed, 03 May 2006) | 1 line
+
+Mendeleev: Preparing for externals.
+------------------------------------------------------------------------
+r1370 | moonwolf | 2006-05-03 04:05:32 -0400 (Wed, 03 May 2006) | 1 line
+
+Mendeleev: Added a tline = nil, back, it magically disapeared. Credit to elkano for noticing.
+------------------------------------------------------------------------
+r1367 | moonwolf | 2006-05-03 03:58:08 -0400 (Wed, 03 May 2006) | 1 line
+
+Mendeleev: Fixed a nil bug on line 205. I hope.
+------------------------------------------------------------------------
+r1051 | moonwolf | 2006-04-27 13:21:56 -0400 (Thu, 27 Apr 2006) | 1 line
+
+Mendeleev: Properly reclaiming the sorted table now.
+------------------------------------------------------------------------
+r1050 | moonwolf | 2006-04-27 13:20:22 -0400 (Thu, 27 Apr 2006) | 1 line
+
+Mendeleev: Fixed remaining problems in the tradeskill changes. 
+------------------------------------------------------------------------
+r980 | moonwolf | 2006-04-26 17:59:07 -0400 (Wed, 26 Apr 2006) | 1 line
+
+Mendeleev: Started work on the colors for trade skills, basics working, need to remove kinks. Code is very ugly in places. Will start working on it again when i have slept a bit, to tired to think straight.
+------------------------------------------------------------------------
+r970 | moonwolf | 2006-04-26 14:37:57 -0400 (Wed, 26 Apr 2006) | 1 line
+
+Mendeleev: Removed the loadlocals function, locals are now loaded in there respective file.
+------------------------------------------------------------------------
+r969 | moonwolf | 2006-04-26 14:33:27 -0400 (Wed, 26 Apr 2006) | 2 lines
+
+Mendeleev: Merging the SKF additions in the neronix branch on to trunk. Thank you very much Neronix
+~hug neronix
+------------------------------------------------------------------------
+r682 | moonwolf | 2006-04-23 08:44:44 -0400 (Sun, 23 Apr 2006) | 1 line
+
+Mendeleev: KCI integration now can be toggled, changed the saved vars layout around you will lose your settings, sorry for that.
+------------------------------------------------------------------------
+r499 | moonwolf | 2006-04-21 15:26:00 -0400 (Fri, 21 Apr 2006) | 1 line
+
+Mendeleev: KCI integration for those who wanted it, making it optional now.
+------------------------------------------------------------------------
+r496 | moonwolf | 2006-04-21 14:38:44 -0400 (Fri, 21 Apr 2006) | 1 line
+
+Mendeleev: Changed colours to work with string inline colour options in preparation for kci tooltip integration.
+------------------------------------------------------------------------
+r476 | moonwolf | 2006-04-20 17:19:27 -0400 (Thu, 20 Apr 2006) | 1 line
+
+Mendeleev: Changed Chat commands to use new name item in categories.
+------------------------------------------------------------------------
+r472 | moonwolf | 2006-04-20 17:04:18 -0400 (Thu, 20 Apr 2006) | 1 line
+
+Mendeleev: Added Category names in preparation to chat command changes.
+------------------------------------------------------------------------
+r351 | tekkub | 2006-04-17 23:51:49 -0400 (Mon, 17 Apr 2006) | 1 line
+
+Mendeleev - Minor code cleanup
+------------------------------------------------------------------------
+r84 | moonwolf | 2006-04-14 11:19:44 -0400 (Fri, 14 Apr 2006) | 1 line
+
+Mendeleev: Fixed index to id in lootrollitem moved chat commands file around in .toc
+------------------------------------------------------------------------
+r83 | moonwolf | 2006-04-13 04:35:40 -0400 (Thu, 13 Apr 2006) | 1 line
+
+Mend
+------------------------------------------------------------------------
+r82 | moonwolf | 2006-04-13 04:27:43 -0400 (Thu, 13 Apr 2006) | 1 line
+
+Mendeleev: Removed a redudancy in the hooking loop (kinky!) Added setitemref hook.
+------------------------------------------------------------------------
+r81 | moonwolf | 2006-04-13 03:43:43 -0400 (Thu, 13 Apr 2006) | 1 line
+
+mendeleev: properly ended a function 
+------------------------------------------------------------------------
+r80 | moonwolf | 2006-04-13 03:38:30 -0400 (Thu, 13 Apr 2006) | 1 line
+
+Mendeleev: Added setlootrollitem and setitemref
+------------------------------------------------------------------------
+r79 | moonwolf | 2006-04-12 08:05:59 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Fixed translations problems, i hope.
+------------------------------------------------------------------------
+r78 | moonwolf | 2006-04-12 07:52:21 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Rearanging toc.
+------------------------------------------------------------------------
+r77 | moonwolf | 2006-04-12 07:40:24 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Minimal frFR translation included now. 
+------------------------------------------------------------------------
+r76 | moonwolf | 2006-04-12 07:35:07 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Minimal dedE translation included now. 
+------------------------------------------------------------------------
+r74 | moonwolf | 2006-04-12 07:20:11 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Adding Locals files 
+------------------------------------------------------------------------
+r73 | moonwolf | 2006-04-12 07:19:33 -0400 (Wed, 12 Apr 2006) | 1 line
+
+Mendeleev: Merging localization changes back to trunk
+------------------------------------------------------------------------
+r72 | moonwolf | 2006-04-12 06:57:48 -0400 (Wed, 12 Apr 2006) | 2 lines
+
+Tekkub:
+Mendeleev: Changed cats for dm wings.
+------------------------------------------------------------------------
+r68 | moonwolf | 2006-04-11 17:14:44 -0400 (Tue, 11 Apr 2006) | 1 line
+
+Mendeleev: Merging the KCI branch back onto trunk.
+------------------------------------------------------------------------
+r64 | moonwolf | 2006-04-09 17:33:08 -0400 (Sun, 09 Apr 2006) | 1 line
+
+Mendeleev: Added support for tells. 
+------------------------------------------------------------------------
+r63 | moonwolf | 2006-04-09 17:13:01 -0400 (Sun, 09 Apr 2006) | 1 line
+
+Mendeleev: Chat command added that shows the last rendered items information in the chat channel of choice, Even EMOTE.
+------------------------------------------------------------------------
+r62 | moonwolf | 2006-04-09 13:28:45 -0400 (Sun, 09 Apr 2006) | 1 line
+
+mendeleev: Importing new version
+------------------------------------------------------------------------
+r61 | moonwolf | 2006-04-09 13:21:06 -0400 (Sun, 09 Apr 2006) | 1 line
+
+Mendeleev: Getting rid of old version, the hard way.
+------------------------------------------------------------------------
+r60 | moonwolf | 2006-04-08 17:50:05 -0400 (Sat, 08 Apr 2006) | 1 line
+
+Mendeleev: Fixed the malformed itemlink problem for real now.(user confirmed)
+------------------------------------------------------------------------
+r59 | moonwolf | 2006-04-08 14:35:22 -0400 (Sat, 08 Apr 2006) | 2 lines
+
+Mendeleev: Minor change to readme.txt for password check
+
+------------------------------------------------------------------------
+r58 | moonwolf | 2006-04-08 14:28:19 -0400 (Sat, 08 Apr 2006) | 1 line
+
+General Repo: Importing addons into trunk.
+------------------------------------------------------------------------

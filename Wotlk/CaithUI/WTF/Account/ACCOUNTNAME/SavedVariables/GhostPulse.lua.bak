@@ -1,0 +1,631 @@
+
+GhostPulseDB = {
+	["profiles"] = {
+		["Default"] = {
+			["alerts"] = {
+				["playerresurrection"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["ccexpirytarget"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["trinketcooldown"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["threatgentarget"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["enemyspellcastboss"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["threatgenfocus"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["spellresist"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["spellcast"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["decursemagic"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["spellimmune"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["playercooldown"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["ccexpiryfocus"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["cctarget"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["debuffgain"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["mobdebufftarget"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["lifetap"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["enemyspellcastfocus"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["debufffade"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["playerdeath"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["buffgain"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["bufffade"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["petcooldown"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["decursedisease"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["mobdebufffocus"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["bagitemcooldown"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["enemyspellcasttarget"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["ccfocus"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["decursepoison"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+				["decursecurse"] = {
+					["earlyWarningColor"] = {
+						0.75, -- [1]
+						1, -- [2]
+						0.75, -- [3]
+					},
+					["solo"] = true,
+					["minCooldown"] = 1.5,
+					["maxCooldown"] = 3600,
+					["inBattlegrounds"] = true,
+					["party"] = true,
+					["blacklist"] = {
+					},
+					["whileMounted"] = false,
+					["earlyWarning"] = true,
+					["raid"] = true,
+					["whitelist"] = {
+					},
+					["inCombat"] = false,
+				},
+			},
+			["specifics"] = {
+			},
+			["earlyWarningMethod"] = "MSBT",
+			["allowSharedFrames"] = true,
+			["frames"] = {
+				["Cooldowns"] = {
+					["overlay"] = {
+						["scale"] = 1,
+						["alpha"] = 0.4,
+						["texture"] = "",
+					},
+					["alertTypes"] = {
+						["trinketcooldown"] = true,
+						["playercooldown"] = true,
+					},
+					["pulse"] = {
+						["fadeInTime"] = 0.25,
+						["fontScale"] = 1,
+						["holdTime"] = 0.25,
+						["fadeOutTime"] = 0.75,
+						["alpha"] = 0.6,
+						["y"] = 6.564005428813041,
+						["x"] = -3.282030548706123,
+						["showText"] = false,
+						["relativePoint"] = "CENTER",
+						["autoFade"] = true,
+						["point"] = "CENTER",
+						["size"] = 192,
+					},
+					["overrideSound"] = "",
+					["whitelist"] = {
+					},
+					["unlockedTexture"] = "Interface\\Icons\\Spell_Nature_ElementalPrecision_1",
+					["blacklist"] = {
+					},
+				},
+			},
+			["overlay"] = {
+				["scale"] = 1,
+				["alpha"] = 0.4,
+				["texture"] = "",
+			},
+		},
+	},
+}

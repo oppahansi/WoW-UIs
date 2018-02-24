@@ -1,0 +1,29 @@
+------------------------------------------------------------------------
+r81937 | nevcairiel | 2008-09-21 15:31:39 -0400 (Sun, 21 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/Quartz/Buff/Buff.lua
+
+Quartz: quick 3.0/WotLK compatibility fix for Buff module, pending full usage of the new buff features, but it works for now
+------------------------------------------------------------------------
+r81925 | StingerSoft | 2008-09-20 05:46:00 -0400 (Sat, 20 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/Quartz/Buff/Quartz_Buff.toc
+   M /trunk/Quartz/Flight/Quartz_Flight.toc
+   M /trunk/Quartz/Focus/Quartz_Focus.toc
+   M /trunk/Quartz/GCD/Quartz_GCD.toc
+   M /trunk/Quartz/Interrupt/Quartz_Interrupt.toc
+   M /trunk/Quartz/Latency/Quartz_Latency.toc
+   M /trunk/Quartz/Mirror/Quartz_Mirror.toc
+   M /trunk/Quartz/Pet/Quartz_Pet.toc
+   M /trunk/Quartz/Player/Quartz_Player.toc
+   M /trunk/Quartz/Quartz.toc
+   M /trunk/Quartz/Range/Quartz_Range.toc
+   M /trunk/Quartz/Swing/Quartz_Swing.toc
+   M /trunk/Quartz/Target/Quartz_Target.toc
+   M /trunk/Quartz/Timer/Quartz_Timer.toc
+   M /trunk/Quartz/Tradeskill/Quartz_Tradeskill.toc
+   A /trunk/Quartz/locale/Quartz-ruRU.lua
+
+Quartz:
+- added ruRU local
+------------------------------------------------------------------------

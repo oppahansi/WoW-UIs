@@ -1,0 +1,13 @@
+## Interface: 20400
+
+## Title: Lib: ItemDB_VendorPrices1
+## Version: 1.0.1
+## Author: Saeris
+## LoadOnDemand: 1
+## OptionalDeps: Lib-CommonParsingTooltip1, Lib-EventsManager1
+
+
+## Notes: A library which catalogues vendor price data about all observed items, for use in other addons.
+
+
+ItemDB_VendorPrices1_Loader.xml

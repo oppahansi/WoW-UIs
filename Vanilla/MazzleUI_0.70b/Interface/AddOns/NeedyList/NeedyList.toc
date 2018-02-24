@@ -1,0 +1,8 @@
+## Interface: 11000
+## Title: Ralak's Needy List
+## Notes: Adds monitoring for party and raid members in need
+## SavedVariables: NL_CONFIGS
+## OptionalDeps: myAddOns, CastParty
+## Dependencies: 
+NLConfig.xml
+NeedyList.xml

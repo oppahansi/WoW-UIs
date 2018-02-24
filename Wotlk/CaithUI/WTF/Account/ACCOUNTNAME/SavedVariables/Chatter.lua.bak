@@ -1,0 +1,1243 @@
+
+ChatterDB = {
+	["namespaces"] = {
+		["Mousewheel Scroll"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["AltLinks"] = {
+			["realm"] = {
+				["Forscherliga"] = {
+				},
+				["Mannoroth"] = {
+				},
+				["Destromath"] = {
+				},
+				["Madmortem"] = {
+				},
+				["Gorgonnash"] = {
+				},
+				["Die Silberne Hand"] = {
+				},
+				["Eredar"] = {
+				},
+				["Vek'lor"] = {
+				},
+			},
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["caith"] = {
+				},
+				["Default"] = {
+				},
+				["damnit"] = {
+				},
+			},
+		},
+		["PlayerNames"] = {
+			["realm"] = {
+				["Forscherliga"] = {
+				},
+				["Mannoroth"] = {
+				},
+				["Destromath"] = {
+				},
+				["Madmortem"] = {
+				},
+				["Gorgonnash"] = {
+				},
+				["Die Silberne Hand"] = {
+				},
+				["Eredar"] = {
+				},
+				["Vek'lor"] = {
+				},
+			},
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["global"] = {
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["Buttons"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["ChannelNames"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+					["channels"] = {
+						["minus"] = "5.",
+						["Guild"] = "G.",
+						["Whisper From"] = "From",
+						["Officer"] = "O.",
+						["Raid Leader"] = "RL.",
+						["Raid Warning"] = "RW.",
+						["Whisper To"] = "To",
+						["LookingForGroup"] = "4.",
+						["Party"] = "P.",
+						["general"] = "1.",
+						["trade"] = "2.",
+						["localdefense"] = "3.",
+						["Raid"] = "R.",
+						["Battleground Leader"] = "BL.",
+						["Battleground"] = "BG.",
+					},
+				},
+				["caith"] = {
+					["channels"] = {
+						["Whisper To"] = "[T]",
+						["general"] = "[1]",
+						["Whisper From"] = "[Fr]",
+						["localdefense"] = "[3]",
+						["trade"] = "[2]",
+					},
+				},
+			},
+		},
+		["Scrollback"] = {
+			["profileKeys"] = {
+				["Zuz - Vek'lor"] = "Default",
+				["Kisama - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Zakura - Gorgonnash"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Menos - Gorgonnash"] = "Default",
+				["Cigaro - Forscherliga"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["caith"] = {
+				},
+				["Default"] = {
+				},
+				["damnit"] = {
+				},
+			},
+		},
+		["Timestamps"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["caith"] = {
+				},
+				["Default"] = {
+					["color"] = {
+						["b"] = 0.2313725490196079,
+						["g"] = 0.2313725490196079,
+						["r"] = 0.2313725490196079,
+					},
+					["format"] = "%M:%S",
+					["colorByChannel"] = false,
+				},
+				["damnit"] = {
+					["frames"] = {
+						["Frame3"] = false,
+						["Frame1"] = false,
+						["Frame5"] = false,
+						["Frame4"] = false,
+						["Frame6"] = false,
+						["Frame7"] = false,
+					},
+				},
+			},
+		},
+		["EditBox"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+					["attach"] = "TOP",
+					["colorByChannel"] = true,
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+					["attach"] = "TOP",
+					["colorByChannel"] = true,
+				},
+				["caith"] = {
+					["attach"] = "TOP",
+					["colorByChannel"] = true,
+					["inset"] = 8,
+					["background"] = "Moo",
+				},
+			},
+		},
+		["Invite Links"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+				["4:3"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+				["Default"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+				["caith"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+			},
+		},
+		["ChannelColors"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+					["colors"] = {
+						["Guild"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 1,
+							["r"] = 0.2509803921568627,
+						},
+						["LookingForGroup"] = {
+							["b"] = 0.9803921568627451,
+							["g"] = 1,
+							["r"] = 0.203921568627451,
+						},
+						["Party"] = {
+							["b"] = 1,
+							["g"] = 0.6666666666666666,
+							["r"] = 0.6666666666666666,
+						},
+						["Whisper"] = {
+							["b"] = 0.9450980392156863,
+							["g"] = 0.6274509803921569,
+							["r"] = 1,
+						},
+						["ang"] = {
+							["b"] = 0.3725490196078432,
+							["g"] = 0.7215686274509804,
+							["r"] = 0.7647058823529411,
+						},
+						["Raid"] = {
+							["b"] = 0.2470588235294118,
+							["g"] = 0.6392156862745098,
+							["r"] = 0.9333333333333334,
+						},
+						["Raid Warning"] = {
+							["b"] = 0.7176470588235294,
+							["g"] = 0.8588235294117647,
+							["r"] = 1,
+						},
+						["minus"] = {
+							["b"] = 0.203921568627451,
+							["g"] = 0.7647058823529411,
+							["r"] = 0.4235294117647059,
+						},
+						["CrbZ3001I1"] = {
+							["r"] = 0.4745098039215686,
+							["g"] = 0.6196078431372549,
+							["b"] = 0.7647058823529411,
+						},
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.4980392156862745,
+							["r"] = 1,
+						},
+						["Yell"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 0.2509803921568627,
+							["r"] = 1,
+						},
+						["LocalDefense"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3007I1"] = {
+							["b"] = 0.7647058823529411,
+							["g"] = 0.6196078431372549,
+							["r"] = 0.4745098039215686,
+						},
+						["CrbY1"] = {
+							["b"] = 1,
+							["g"] = 0.3882352941176471,
+							["r"] = 0.4431372549019608,
+						},
+						["Say"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+						["General"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Trade"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3006I1"] = {
+							["b"] = 0.7647058823529411,
+							["g"] = 0.6196078431372549,
+							["r"] = 0.4745098039215686,
+						},
+						["Officer"] = {
+							["b"] = 0.5019607843137255,
+							["g"] = 1,
+							["r"] = 0.6235294117647059,
+						},
+					},
+				},
+				["4:3"] = {
+					["colors"] = {
+						["Guild"] = {
+							["r"] = 0.2509803921568627,
+							["g"] = 1,
+							["b"] = 0.2509803921568627,
+						},
+						["Officer"] = {
+							["r"] = 0.2509803921568627,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.2509803921568627,
+						},
+						["Yell"] = {
+							["r"] = 1,
+							["g"] = 0.2509803921568627,
+							["b"] = 0.2509803921568627,
+						},
+						["LocalDefense"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["Party"] = {
+							["r"] = 0.6666666666666666,
+							["g"] = 0.6666666666666666,
+							["b"] = 1,
+						},
+						["Whisper"] = {
+							["r"] = 1,
+							["g"] = 0.5019607843137255,
+							["b"] = 1,
+						},
+						["Say"] = {
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["Raid Warning"] = {
+							["r"] = 1,
+							["g"] = 0.2823529411764706,
+							["b"] = 0,
+						},
+						["Raid"] = {
+							["r"] = 1,
+							["g"] = 0.4980392156862745,
+							["b"] = 0,
+						},
+						["General"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["Battleground"] = {
+							["r"] = 1,
+							["g"] = 0.4980392156862745,
+							["b"] = 0,
+						},
+					},
+				},
+				["Default"] = {
+					["colors"] = {
+						["CrbZ2026I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["Guild"] = {
+							["r"] = 0.2509803921568627,
+							["g"] = 1,
+							["b"] = 0.2509803921568627,
+						},
+						["CrbZ1006I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Whisper"] = {
+							["r"] = 1,
+							["g"] = 0.6274509803921569,
+							["b"] = 0.9450980392156863,
+						},
+						["Raid"] = {
+							["r"] = 0.9333333333333334,
+							["g"] = 0.6392156862745098,
+							["b"] = 0.2470588235294118,
+						},
+						["CrbZ3003I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["minus"] = {
+							["r"] = 0.4235294117647059,
+							["g"] = 0.7647058823529411,
+							["b"] = 0.203921568627451,
+						},
+						["CrbZ1009I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ1005I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ2019I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ1002I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3001I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ2002I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Yell"] = {
+							["r"] = 1,
+							["g"] = 0.2509803921568627,
+							["b"] = 0.2509803921568627,
+						},
+						["CrbZ1019I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3008I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ1021I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbY1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["GuildRecruitment"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ2015I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ1007I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Battleground"] = {
+							["r"] = 1,
+							["g"] = 0.4980392156862745,
+							["b"] = 0,
+						},
+						["CrbZ1012I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ1017I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["General"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ1016I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ1001I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3004I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ2003I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ1018I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["LookingForGroup"] = {
+							["b"] = 0.9803921568627451,
+							["g"] = 1,
+							["r"] = 0.203921568627451,
+						},
+						["AceComm"] = {
+							["r"] = 0.4235294117647059,
+							["g"] = 0.7647058823529411,
+							["b"] = 0.203921568627451,
+						},
+						["ang"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ1011I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ3007I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["rcr"] = {
+							["r"] = 0.4745098039215686,
+							["g"] = 0.6196078431372549,
+							["b"] = 0.7647058823529411,
+						},
+						["bv"] = {
+							["r"] = 0.4431372549019608,
+							["g"] = 0.3882352941176471,
+							["b"] = 1,
+						},
+						["Raid Warning"] = {
+							["r"] = 1,
+							["g"] = 0.8588235294117647,
+							["b"] = 0.7176470588235294,
+						},
+						["CrbZ3006I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ2021I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["Officer"] = {
+							["r"] = 0.6235294117647059,
+							["g"] = 1,
+							["b"] = 0.5019607843137255,
+						},
+						["CrbZ1008I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Say"] = {
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["CrbZ1014I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["CrbZ2024I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ2028I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["LocalDefense"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["s3arena"] = {
+							["r"] = 0.1568627450980392,
+							["g"] = 0.6549019607843137,
+							["b"] = 1,
+						},
+						["CrbZ3002I1"] = {
+							["r"] = 1,
+							["g"] = 0.7529411764705882,
+							["b"] = 0.7529411764705882,
+						},
+						["Trade"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ2013I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ2025I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["CrbZ2001I1"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Party"] = {
+							["r"] = 0.6666666666666666,
+							["g"] = 0.6666666666666666,
+							["b"] = 1,
+						},
+					},
+				},
+				["caith"] = {
+					["colors"] = {
+						["minus"] = {
+							["b"] = 0.203921568627451,
+							["g"] = 0.7647058823529411,
+							["r"] = 0.4235294117647059,
+						},
+						["General"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Raid Warning"] = {
+							["b"] = 0.7176470588235294,
+							["g"] = 0.8588235294117647,
+							["r"] = 1,
+						},
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.4980392156862745,
+							["r"] = 1,
+						},
+						["amg"] = {
+							["b"] = 0.203921568627451,
+							["g"] = 0.7647058823529411,
+							["r"] = 0.4235294117647059,
+						},
+						["Say"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+						["Yell"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 0.2509803921568627,
+							["r"] = 1,
+						},
+						["LocalDefense"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["Party"] = {
+							["b"] = 1,
+							["g"] = 0.6666666666666666,
+							["r"] = 0.6666666666666666,
+						},
+						["Whisper"] = {
+							["b"] = 0.9450980392156863,
+							["g"] = 0.6274509803921569,
+							["r"] = 1,
+						},
+						["Trade"] = {
+							["b"] = 0.7529411764705882,
+							["g"] = 0.7529411764705882,
+							["r"] = 1,
+						},
+						["ang"] = {
+							["b"] = 0.3725490196078432,
+							["g"] = 0.7215686274509804,
+							["r"] = 0.7647058823529411,
+						},
+						["Raid"] = {
+							["b"] = 0.2470588235294118,
+							["g"] = 0.6392156862745098,
+							["r"] = 0.9333333333333334,
+						},
+						["Guild"] = {
+							["b"] = 0.2509803921568627,
+							["g"] = 1,
+							["r"] = 0.2509803921568627,
+						},
+						["Officer"] = {
+							["b"] = 0.5019607843137255,
+							["g"] = 1,
+							["r"] = 0.6235294117647059,
+						},
+					},
+				},
+			},
+		},
+		["JustifyText"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+					["FRAME_3"] = "LEFT",
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["Highlight"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["caith"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["damnit"] = {
+					["sound"] = false,
+					["useSink"] = false,
+				},
+			},
+		},
+		["StickyChannels"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["ChatTabs"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["ChatFrameBorders"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+				},
+				["4:3"] = {
+				},
+				["Default"] = {
+				},
+				["caith"] = {
+				},
+			},
+		},
+		["ChatFont"] = {
+			["profileKeys"] = {
+				["Zakura - Gorgonnash"] = "Default",
+				["Nowidescreen - Gorgonnash"] = "4:3",
+				["Kisama - Gorgonnash"] = "Default",
+				["Houny - Eredar"] = "Default",
+				["Zabimaru - Gorgonnash"] = "Default",
+				["Caithly - Destromath"] = "Default",
+				["Caithlynss - Die Silberne Hand"] = "Default",
+				["Caithlol - Madmortem"] = "Default",
+				["Zuz - Vek'lor"] = "Default",
+				["Caithlynlyn - Eredar"] = "Default",
+				["Getsuga - Gorgonnash"] = "Default",
+				["Kaith - Gorgonnash"] = "Default",
+				["Sooth - Gorgonnash"] = "Default",
+				["Caithlyn - Gorgonnash"] = "damnit",
+				["Cigaro - Forscherliga"] = "Default",
+				["Menos - Gorgonnash"] = "Default",
+				["Kaithlyn - Gorgonnash"] = "Default",
+				["Caithlice - Destromath"] = "Default",
+				["Reloadui - Gorgonnash"] = "caith",
+				["Caithlynaz - Mannoroth"] = "Default",
+				["Kanpai - Gorgonnash"] = "Default",
+			},
+			["profiles"] = {
+				["damnit"] = {
+					["font"] = "Arial Narrow",
+					["fontsize"] = 11,
+					["frames"] = {
+						["FRAME_1"] = {
+							["fontsize"] = 11,
+						},
+						["FRAME_3"] = {
+							["fontsize"] = 11,
+						},
+					},
+				},
+				["4:3"] = {
+					["fontsize"] = 11,
+				},
+				["Default"] = {
+					["fontsize"] = 11,
+					["frames"] = {
+						["FRAME_3"] = {
+							["fontsize"] = 11,
+						},
+					},
+				},
+				["caith"] = {
+					["frames"] = {
+						["FRAME_2"] = {
+							["fontsize"] = 10,
+						},
+						["FRAME_3"] = {
+							["fontsize"] = 10,
+						},
+						["FRAME_1"] = {
+							["fontsize"] = 13,
+						},
+					},
+					["fontsize"] = 11,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Zakura - Gorgonnash"] = "Default",
+		["Nowidescreen - Gorgonnash"] = "4:3",
+		["Kisama - Gorgonnash"] = "Default",
+		["Houny - Eredar"] = "Default",
+		["Zabimaru - Gorgonnash"] = "Default",
+		["Caithly - Destromath"] = "Default",
+		["Caithlynss - Die Silberne Hand"] = "Default",
+		["Caithlol - Madmortem"] = "Default",
+		["Zuz - Vek'lor"] = "Default",
+		["Caithlynlyn - Eredar"] = "Default",
+		["Getsuga - Gorgonnash"] = "Default",
+		["Kaith - Gorgonnash"] = "Default",
+		["Sooth - Gorgonnash"] = "Default",
+		["Caithlyn - Gorgonnash"] = "damnit",
+		["Cigaro - Forscherliga"] = "Default",
+		["Menos - Gorgonnash"] = "Default",
+		["Kaithlyn - Gorgonnash"] = "Default",
+		["Caithlice - Destromath"] = "Default",
+		["Reloadui - Gorgonnash"] = "caith",
+		["Caithlynaz - Mannoroth"] = "Default",
+		["Kanpai - Gorgonnash"] = "Default",
+	},
+	["profiles"] = {
+		["damnit"] = {
+			["modules"] = {
+				["Highlights"] = false,
+				["Timestamps"] = false,
+				["Chat Font"] = true,
+			},
+			["welcomeMessaged"] = true,
+		},
+		["4:3"] = {
+		},
+		["Default"] = {
+			["modules"] = {
+				["Borders/Background"] = false,
+				["Timestamps"] = false,
+			},
+			["welcomeMessaged"] = true,
+		},
+		["caith"] = {
+			["modules"] = {
+				["Highlights"] = false,
+				["Timestamps"] = false,
+				["Chat Font"] = false,
+			},
+			["welcomeMessaged"] = true,
+		},
+	},
+}

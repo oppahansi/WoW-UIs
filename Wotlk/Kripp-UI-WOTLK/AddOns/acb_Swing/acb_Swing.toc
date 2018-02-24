@@ -1,0 +1,7 @@
+## Interface: 30300
+## Version: 09.12.16
+## Title: ACB Swing Timer
+## Author: Aezay (Earthen Ring EU)
+## Notes: Melee and Auto Shot Timer Plugin for AzCastBar 
+## Dependencies: AzCastBar
+core.lua

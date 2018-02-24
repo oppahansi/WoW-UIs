@@ -1,0 +1,12 @@
+## Interface: 20400
+
+## Title: Lib: CommonParsingTooltip1
+## Version: 1.1.0
+## Author: Saeris
+## LoadOnDemand: 1
+
+
+## Notes: A basic GameTooltip object, useful for sharing between multiple clients for common parsing tasks.
+
+
+CommonParsingTooltip1_Loader.xml

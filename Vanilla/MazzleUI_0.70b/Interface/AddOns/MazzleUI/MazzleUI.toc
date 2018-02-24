@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: Mazzlefizz's |cFF006699MazzleUI|r
+## Version: 0.1b
+## Notes: Utilities and Tweaks for MazzleUI
+## OptionalDeps: 
+## Dependencies: Ace, Timex, DiscordArt, DiscordFrameModifier, DiscordUnitFrames
+## SavedVariables: MazzleUI_DebugLog
+## SavedVariablesPerCharacter: Mazzifier_Progress, Mazzifier_LastInstalledVersion, MazzleUI_NLOff, MazzleUI_LastAspect, MazzleUI_EfficiencyMode, MazzleUI_Settings
+MazzleUI.xml

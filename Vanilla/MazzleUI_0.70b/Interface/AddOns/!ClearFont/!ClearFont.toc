@@ -1,0 +1,10 @@
+## Interface: 11200-1
+## Title: ClearFont |cffffffffv11200-1
+## Version: v11200-1
+## Author: Kirkburn
+## Notes: Magical UI font-changer by |cff66ff33Kirkburn|r!
+## URL: http://www.clearfont.co.uk/
+## DefaultState: Enabled
+## LoadOnDemand: 0
+ClearFont.lua
+ClearFontAddons.lua

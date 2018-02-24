@@ -1,0 +1,8 @@
+------------------------------------------------------------------------
+r80814 | mukha521 | 2008-08-22 14:04:28 -0400 (Fri, 22 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/Aloft/Modules/Visibility.lua
+
+Aloft:
+- Critter visibility fix for ruRU locale
+------------------------------------------------------------------------

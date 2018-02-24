@@ -1,0 +1,6 @@
+
+TidyPlatesOptions = {
+	["WelcomeShown"] = true,
+	["primary"] = "None",
+	["secondary"] = "Quatre/|cFFFF4400Damage",
+}

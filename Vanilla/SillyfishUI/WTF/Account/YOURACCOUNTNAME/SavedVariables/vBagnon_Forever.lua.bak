@@ -1,0 +1,2 @@
+
+BagnonForeverData = nil

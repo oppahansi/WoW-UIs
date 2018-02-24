@@ -1,0 +1,6 @@
+## Interface: 20400
+## Title: |cff01DFD7 !|rTakeThisColor
+## Notes: Custom classcolors
+## Author: Neal aka Neavx @ Alleria-EU
+
+!TakeThisColor.lua

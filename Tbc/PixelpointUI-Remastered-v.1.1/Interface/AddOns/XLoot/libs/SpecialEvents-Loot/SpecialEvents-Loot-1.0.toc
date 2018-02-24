@@ -1,0 +1,13 @@
+﻿## Interface: 20300
+## LoadOnDemand: 1
+
+## Author: Xuerian
+## Title: Lib: Special Events [|cffeda55fLoot|r]
+## Notes: Special events for players looting items.
+## X-Category: Library
+
+## X-AceLibrary-SpecialEvents-Loot-1.0: true
+
+## OptionalDeps: Ace2, Deformat
+
+SpecialEvents-Loot-1.0.lua

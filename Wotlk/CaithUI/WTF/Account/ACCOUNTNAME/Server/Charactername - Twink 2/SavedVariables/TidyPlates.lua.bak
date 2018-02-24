@@ -1,0 +1,5 @@
+
+TidyPlatesOptions = {
+	["primary"] = "CP",
+	["secondary"] = "None",
+}

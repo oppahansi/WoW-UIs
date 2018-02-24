@@ -1,0 +1,26 @@
+## Interface: 30100
+## Title: FluidFrames
+## Notes: Move, Resize, Rescale!
+## Author: AnduinLothar
+## RequiredDeps: Portfolio
+## OptionalDeps:
+## SavedVariablesPerCharacter: FluidFramesModifiedFrames, FluidFrames_SavedVars
+## Version: 2.3
+## X-Category: Frames
+## X-Revision: $Rev: 5127 $
+## X-Date: $Date: 2007-11-13 18:34:54 -0600 (Tue, 13 Nov 2007) $
+## X-Website: http://www.wowinterface.com/downloads/info7080-FluidFrames.html
+## X-Email: karlkfi@yahoo.com
+## X-Localizations: enUS
+## X-CompatibleLocales: enUS, enGB
+localization.en.lua
+FluidFrames.lua
+DraggableFrame.lua
+FluidImmobilize.lua
+FrameHide.lua
+FrameHighlight.lua
+FrameReparent.lua
+FrameRescale.lua
+FrameReset.lua
+FrameTempDragging.lua
+PortfolioRegistration.lua

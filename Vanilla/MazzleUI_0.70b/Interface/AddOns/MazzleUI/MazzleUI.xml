@@ -1,0 +1,88 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	
+	<Script file="MazzleUI.lua"/>
+	<Script file="MazzleUI_AddonToggles.lua"/>
+    <Script file="MazzleUI_Utilities.lua"/>
+	
+	<Button name="MazzleUIButtonTemplate" virtual="true" toplevel="true" frameStrata="LOW" enableMouse="true">
+		<Size>
+			<AbsDimension x="30" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parent_Icon">
+					<Size>
+						<AbsDimension x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0" bottom="1"/>
+				</Texture>
+				<Texture name="$parent_IconSelect">
+					<Size>
+						<AbsDimension x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="1" top="0" bottom="1"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+		<NormalText inherits="GameFontNormalLarge" text="">
+    		<FontHeight> <AbsValue val="20"/> </FontHeight>
+    		<Color r="1.0" g="1" b="1"/>
+    	</NormalText>
+		<HighlightText inherits="GameFontNormalLarge" text="">
+    		<FontHeight> <AbsValue val="20"/> </FontHeight>
+    		<Color r="1.0" g="1" b="1"/>
+    	</HighlightText>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp","RightButtonUp")
+			</OnLoad>
+			<OnMouseDown>
+				getglobal(this:GetName().."_Icon"):SetTexCoord(.075,.925,.075,.925)
+			</OnMouseDown>
+			<OnMouseUp>
+				getglobal(this:GetName().."_Icon"):SetTexCoord(0,1,0,1)
+			</OnMouseUp>
+			<OnEnter>
+				MazzleUI:OnTooltip(this:GetID(), this)
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+			<OnClick>
+				MazzleUI:OnClick(arg1, this:GetID())
+				getglobal(this:GetName().."_Icon"):SetTexCoord(0,1,0,1)
+			</OnClick>
+		</Scripts>
+	</Button>
+	<PlayerModel name="MazzleUI_MouseClick" file="Spells\ArcaneExplosion_Base.mdx" hidden="false" parent="UIParent" frameStrata="Dialog">
+        <Size><AbsDimension x="40" y="40"/></Size>
+	</PlayerModel>
+	<Button name="MazzleUI_RecapButton" inherits="MazzleUIButtonTemplate"  parent="UIParent" id="1" />
+	<Button name="MazzleUI_EfficiencyButton" inherits="MazzleUIButtonTemplate"  parent="UIParent" id="2" />
+	<Button name="MazzleUI_FastCastButton" inherits="MazzleUIButtonTemplate"  parent="UIParent" id="3" />
+	<Button name="MazzleUI_OptionsButton" inherits="MazzleUIButtonTemplate"  parent="UIParent" id="10" />
+	<EditBox name="MazzleUI_EditBox" inherits="ChatFrameEditBoxTemplate" parent="UIParent" hidden="true">
+		<Scripts>
+			<OnLoad>
+			</OnLoad>
+		</Scripts>
+	</EditBox>
+
+</Ui>

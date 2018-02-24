@@ -1,0 +1,54 @@
+------------------------------------------------------------------------
+r79 | nevcairiel | 2008-10-15 00:13:52 +0000 (Wed, 15 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/ErrorMonster.toc
+
+Update Interface Version to 30000 (per Rabbits request)
+------------------------------------------------------------------------
+r77 | 7destiny | 2008-10-13 16:07:56 +0000 (Mon, 13 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/ErrorMonster-koKR.lua
+
+ErrorMonster: koKR Update
+------------------------------------------------------------------------
+r76 | rabbit | 2008-10-11 15:26:53 +0000 (Sat, 11 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ErrorMonster-enUS.lua
+   M /trunk/ErrorMonster-esES.lua
+   M /trunk/ErrorMonster-koKR.lua
+   M /trunk/ErrorMonster-zhCN.lua
+   M /trunk/ErrorMonster-zhTW.lua
+   M /trunk/ErrorMonster.lua
+   M /trunk/ErrorMonster.toc
+   M /trunk/embeds.xml
+
+Convert to Ace3, simplified a great deal.
+------------------------------------------------------------------------
+r75 | rabbit | 2008-10-01 15:16:22 +0000 (Wed, 01 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/libs
+
+Remove externals and fix .pkgmeta.
+------------------------------------------------------------------------
+r74 | root | 2008-09-30 15:49:37 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r73 | root | 2008-09-29 21:48:48 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r71 | root | 2008-09-29 20:57:51 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/ErrorMonster
+   A /trunk (from /tmp/trunk/ErrorMonster:70)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------

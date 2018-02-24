@@ -1,0 +1,28 @@
+
+CPRDB = {
+	["profileKeys"] = {
+		["Pixelpoint - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["poisonpos"] = {
+				["y"] = 116,
+				["x"] = 137,
+				["point"] = "LEFT",
+				["anchor"] = "LEFT",
+			},
+			["textpos"] = {
+				["y"] = 30,
+				["x"] = 140,
+				["point"] = "LEFT",
+				["anchor"] = "LEFT",
+			},
+			["graphicpos"] = {
+				["y"] = 194,
+				["x"] = 139,
+				["point"] = "LEFT",
+				["anchor"] = "LEFT",
+			},
+		},
+	},
+}

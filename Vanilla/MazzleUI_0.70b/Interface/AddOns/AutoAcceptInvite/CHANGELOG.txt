@@ -1,0 +1,9 @@
+v1.3 - 11-18-06
+	Fixed ace:print problem. Oops!
+v1.2 - 10-27-06
+	Fixed standby error
+v1.1 - 9-19-06
+	Fixed capitalization in /commands breaking invites.
+
+v1.0 - Unreleased
+	Dev beta version

@@ -1,0 +1,6 @@
+## Interface: 11100
+## Title: ChatCast v1.41.01
+## Author: no quarter (Mediva on Kel'Thuzad)
+## Notes: Makes buff requests into clickable links
+## SavedVariables: ChatCast
+ChatCast.xml

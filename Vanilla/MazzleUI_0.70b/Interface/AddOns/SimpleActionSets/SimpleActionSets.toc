@@ -1,0 +1,8 @@
+## Interface: 11200
+## Version: 0.48b
+## Author: Brodrick (aka Kirov)
+## Title: SimpleActionSets
+## Notes: Allows all existing actions to be saved to a set which can be changed to later.
+## DefaultState: disabled
+## SavedVariables: SAS_Saved, SAS_BackUp, SAS_POS, SAS_OFFSET
+SimpleActionSets.xml

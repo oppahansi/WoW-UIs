@@ -1,0 +1,955 @@
+Shefki:
+	Update the maintank list from oRA faster.  An optimizaiton broke this.
+	Add IsOffline(unit), IsAFK(unit) and IsDND(unit) helper functions to
+	LuaTextx.
+	Provide access to the event that triggers the text to update with
+	LuaTexts.  There is a variable in the ScriptEnv called event now with
+	this info.  Texts that are just created will receive "_new" and texts
+	updating due to implicit update reasons or timers will receive
+	"_timer."  This should allow for caching of things like Auras and
+	proper detection of combat lock downs.
+	Changing the profile will now enable/disable modules per the profile
+	settings.
+	LuaTexts is the default text provider module now.
+	Fix the portraits reverting to full body mode when the frame is reused.
+	Fix missing Remove and Type controls after creating a new text.
+	Ticket 437: Text enable checkbox not functionining properly.
+	Make the determination if you're in a 10,25 or 40 man raid based off if
+	anyone is in those groups not by current size.  This should allow it
+	to scale appropriately based on what groups people in.  Should end
+	complaints about people missing from raid groups.
+	Fix the delay calculation to properly spend 10 minutes cleary the frame.
+	Add some more possible tests for Unit and Caster Aura filters.
+	Add the Caster filter type.
+	Delay clearing frames in groups and never clear singleton frames.  Group
+	frames will be cleared starting 5 minutes after you leave the group and
+	will finish 15 minutes after you've left the group.  This will eliminate
+	CPU churn from group members changing while in the group and from
+	target, focus et al changing any other time.
+	Speed up entering config mode by not showing the groups until they're
+	done being setup.
+	Go back to using PLAYER_TARGET_CHANGED but ignore UNIT_TARGET events for
+	player.  Seems UNIT_TARGET requires a server round trip that makes the
+	target frame laggy.
+	Ticket 400: Groups failing to update based on config while in config
+	mode.
+	Offsets need to be reversed when the frame is mirrored.
+	Stop listening to UPDATE_MOUSEOVER_UNIT, PLAYER_PET_CHANGED and
+	PLAYER_TARGET_CHANGED.  We're not using the mouseover unit and it's
+	wacky so it doesn't help the other wacky frames.  PLAYER_PET_CHANGED
+	is obsolete and is no longer even fired, UNIT_PET is though.
+	PLAYER_TARGET_CHANGED doubles up with UNIT_TARGET.
+	Avoid an unnecessary extra call to UnitGUID()
+	Ticket 270: Allow bar texture to be reset to default.
+	You were supposed to be able to reset it to default by setting it back
+	to the same value as the default.  However, we weren't properly looking
+	up what the defualt value was.
+	(this time the correct changes for this commit)
+	Revert "Ticket 270: Allow bar texture to be reset to default."
+	This reverts commit 64c67054f6e05fce1290e592f65a91cc495b6be1.
+	Ticket 270: Allow bar texture to be reset to default.
+	You were supposed to be able to reset it to default by setting it back
+	to the same value as the default.  However, we weren't properly looking
+	up what the defualt value was.
+	Ticket 293: Alter the spacing range to allow negative spacing for bars.
+	Ticket 358: Toggle for vehicle swap.
+	Fix a bug in a function we're not even really using.
+	Aura text configuration should be disabled when the current text is
+	disabled.
+	The unitid for the player's pet in party pet frames with include
+	player's pet turned on is actually playerpet, damn you Blizzard.
+	Remove duplicate configuration for enable/disabling time remaining text.
+	Fix a typo in a string.
+	Allow the slider to go down to 30% for Aura font sizes.
+	Configuration for and improvements to texts on Auras.
+	Friendly colors should disable when set to use unfriendly colors.
+	Add in a default I missed comitting when i only committed part of the
+	Options file.  Sorry.
+	Fix a typo.
+	Ticket 368: Allow frame level of auras to be set.
+	Ticket 356: Add options to color friendly auras by type.
+	Show tenth of a second precision for time left text timers on auras and
+	use SetFormattedText() to avoid creating garbage.
+	Fix default LuaTexts to put something on empty texts when in config mode
+	for the player frame.  In particular the castbar.
+	Fix error in LuaTexts Reptuation - Standard default code.  In order to
+	get this applied to your config you'll have to go through and reselect
+	the Reputation - Standard code from the drop down box for each Layout.
+	Bump the Interface number to 30100 and change to \n instead of \r.
+	Fix an error in the documentation for the
+	call_background_color_function().
+	Remove alpha from the custom color configs and color apis for bars.
+	This is already handled by the full and empty opacity configuration.
+	Ticket 163: Add custom background color option for Bars.
+	Ticket 418: Weird error with temporary weapon enchants.
+	Ticket 419: right clicking debuff removes buffs.
+	Ticket 238 et al.  Fix scaling problems with a large number of frames.
+	Most notable with Texts and ManaSpark.
+	Stop treating raidpet units as wacky.  We really do get events.  Should
+	improve performance.
+	Add a text for the PVPTimer in the default config for both DogTag and
+	LuaTexts.
+	Fix a reference to a function I was using for profiling.
+	Add ShortClassification, ShortRace and ShortClass
+	Minor localization fixes for LuaTexts.
+	Class function shouldn't be in global namespace.  Oops.
+	Spread wacky frame updates over the frames that occur between our update
+	rate.  This theoretically improves perceived performance by removing
+	jerkiness but in practice probably doesn't change much.  But it's a good
+	idea anyway.
+	Don't update hidden frames on a timer.  Should be a very large
+	performance upgrade in large raid groups.
+	Disable fast power updates in LuaTexts if predictedPower is off.
+	Fix a bug with PowerBar's not updating with predictedPower turned off.
+	Apply the same fix ckknight did to CastBar to LuaTexts.
+Cameron Knight:
+	make :FixCastData() less likely to break with the invalid key for next issue
+vangual:
+	Adding more Warrior selfbuffs and procs.
+Shefki:
+	Make that 4 places we had PLAYER_REGEN_DISABLED trapped.
+	Message for disabling config mode wasn't localized either, oops.
+	Seems unnecssary to register PLAYER_REGEN_DISABLED in 3 places.
+	Update HealthBar and PowerBar every OnUpdate.  In a strange way
+	this should actually improve perforamnce, since we won't be updating
+	bucketed events on a timer and they won't group up.
+	Fix Abbreviate.
+	Add AggroColor(unit), HPColor(cur,max), PowerColor(power_type),
+	and ReputationColor(reaction)
+	Fix HostileColor to support checking PVP flags like it should have.
+	Add PVPDuration() function.
+	Fix typo in vehicle name support.
+	Fix the bug where Offline(0:00) shows up for people that are clearly not
+	offline.
+	Don't run PARTY_MEMBERS_CHANGED once a minute but only the first time
+	like I intended.
+	Fix a typo in MaxXP() and dump the unit == "playerpet" crap.
+	Any unit not just those in your party should get marked as Dead.  Oops.
+	Fix some bugs with FormatDuration() that we picked up from DogTags.
+	Oops.
+	Fix typo in UNIT_SEPLLCAST_CHANNEL_STOP event name.
+	Reselect: Cast - Standard time and Cast - Standard name in texts to
+	fix in your own configurations.  It won't pick it up automatically. :(
+	Provide access to the timers via AFKDuration(unit), DeadDuration(unit)
+	and OfflineDuration(unit).
+	Allow scripts access to the already existing FormatDuration()
+	Add Abbreviate() to LuaTexts convenience functions.
+	Remove HasDivineIntervention().  Ended up being nothing but a wrapper
+	for UnitAura().  Don't want to encourage the idea that I'm gonna replace
+	all the DogTags that there's no point in doing so.
+	Oops add the missing load.xml for LuaTexts.
+	Tag cleanup in the defaults not just the presets.
+	Add the LuaTexts module.
+	Allow texts to be disabled individually.
+	Short does nothing for a Percent it should be Round(1)
+	Remove some dead code.
+	Remove some dead code from the default DogTagTexts, health is always
+	known exactly now.
+	Avoid some garbage collection by using :SetFormmatedText()
+	DogTagTexts isn't CombatIcon.
+Cameron Knight:
+	on fontstring deletion, be sure to reset the font, so as to clear any possible modifiers.
+Shefki:
+	Ticket 393: Druid enemy spells for range fader.
+	Ticket 392: Curse highlighting for Shamans not detecting spec swaps.
+	Ticket 379: Eclipse added to Druid self buff aura filters.
+	Fix ticket 326 et al: Border on player/pet frame doesn't show on login
+	Fix 299: CastBar unfilled when switching target error.
+	Applied patch from wurzel.
+	Helps if you actually pass the new parameters to make the optmization
+	work.
+	More config mode optimizaiton, avoid repeated ForceUnitFrameCreation
+	calls.
+	Limit the number of frames made for main tank filtered raid groups, 40
+	frames was silly.
+	Optomize entering config mode, going straight into a 40 man configmode
+	shouldn't disconnect you now.
+	Fix config mode for raids that was broken with the delayed frame
+	creation changes.
+	Remove some code I meant to remove with the previous commit.
+	Bucket guids for health and power updates which should improve
+	performance.
+	Bucket PowerBar UNIT_ events too, they were in PB3.
+	Large perf improvement: Bucket UNIT_HEALTH updates like we did in PB3
+Cameron Knight:
+	Make it so we no longer create every possible frame at the start, but rather, progressively. It will create n+3 units (where n is current) so that there is some leniency. In battlegrounds, it will try to detect and create the expected number based on zone.
+	Make :RunOnLeaveCombat slightly more efficient
+Shefki:
+	Properly handle resetting and copying profiles.
+	Optimize startup slightly, halfs the frame:Update() calls when building
+	GroupHeaders.
+	Unwrap RAID_ROSTER_UPDATE since it was unnecessary and created work to
+	pile up till we left combat.  Should improve performance when leaving
+	combat.
+	Fix problems with party/raid changes during combat.
+	:RunOnLeaveCombat() flat out didn't work when you were in combat.
+	Fail on ckknight's part.
+	Optomize DruidManaBar to avoid unnecessary iterations for bars that
+	won't exist when you're in a form with a mana bar.
+Cameron Knight:
+	when bars are created/destroyed, except when frame:Update() is called, call module:Update(frame) for all text-based modules.
+	Make the guids refresh on PLAYER_ENTERING_WORLD and every 15 seconds, just in case. Isn't very expensive if nothing has changed.
+Shefki:
+	Use a wrapper for caching in PowerBar.  No real change, just looks
+	nicer.
+	Account for pet units for the fast power performance improvements.
+	Fix auto hide of the castbar that was broken by the performance tuning.
+	Performance improvement to CastBarLatency module.
+	Cache the players last seen power and avoid needlessly updating the
+	powerbar.  This avoids PowerBar from chewing CPU time when you've got
+	full mana.
+	Variable leak into global namespace.
+	Performance improvement for CastBar: Do not iterate frames when nobody
+	is casting.
+Cameron Knight:
+	Because CVAR_UPDATE is useless, we have to hook SetCVar in order to tell if CVars actually change.
+Shefki:
+	Stop doing fast updates on the PowerBar if turned off in the CVARs.
+	Remove fast health updates entirely since Blizzard broke them anyway.
+	Wacky frames' health and mana bars were being updated twice when they
+	referenced the player or their pet.
+	Avoid unnecessary multiple calls to select().
+Cameron Knight:
+	Add a version display to the options screen.
+	if a wacky unit exists, then a non-wacky unit appears that has the same guid, the wacky unit should update its best unit.
+	Set up a guid-tracking system where wacky units detect equivalent non-wacky units and ride on the coat-tails of their events. This dramatically improves performance of wacky units if an equivalent non-wacky unit is found.
+	make the @alpha@ checks just a standard if statement, which is enabled only when in dev mode
+Shefki:
+	Fix ticket 372: Aura tooltips on auras other than buffs on yourself.
+	Ticket 338: Add an option to disable capturing clicks on aura icons.
+	Don't capture mouse input on auras that are not buffs and aren't on the
+	player themselves.
+	Performance improvements to the Aura module.  Code for cooldown texts no
+	longer iterates all the frames searching for cooldown texts that need
+	updating.
+	Shift some event handlers to Update.lua so we can merge a loop.
+	Optomize the aura updates.  No reason to iterate frames when there are
+	no queued updates.
+	Upvalue table.wipe for a function on a timer.
+Cameron Knight:
+	Allow for coloring of PvP enemies by class.
+	Make Shadow Word: Pain the priest attacking spell as far as RangeFader is concerned
+	RangeFader: set the enemy range spell for paladins to Hand of Reckoning
+	add arenapet support.
+	zoom portrait textures
+Shefki:
+	Fix ticket 346: Aura highlight producing invalid order function errors
+Cameron Knight:
+	make the BetterStatusBar handle cases where the value < 0 or > 1 by clamping.
+Shefki:
+	Add aura highlighting.
+Cameron Knight:
+	possible fix to vehicle unit switching
+Shefki:
+	Avoid an error when an aura update in the middle of a profile change.
+	When changing profiles deactivated unused singleton frames.
+	Fix ticket 323: CastBar Text problems with auto-hide.
+Cameron Knight:
+	fix the icon tutorial to say "indicator" instead of "icon"
+Shefki:
+	Use Default as the default profile rather than global per convention.
+	Allow main tank filter for raid groups to get list from oRA or CT_RA
+	Fix Ticket 328: Don't capture clicks on auras when frame is set
+	Click-Through.
+	Avoid an error when not in config_mode and header:IterateMembers(true)
+	is called.
+	Fix ticket 298: Profile switching was very buggy.
+Cameron Knight:
+	for DogTagTexts, show the default codes box before the custom box.
+	revert the combo points change to show points on the vehicle frame, I was confused.
+	For vehicle-based combo points (e.g. Maelstrom weapon), show the combo point on the vehicle itself rather than on the target.
+	Properly fix unit_id_to_frames when updating units based on vehicle change (WoW 3.1)
+	For portraits, as a fallback to show a blank area or to hide the portrait completely.
+	add an asterix after wacky units and unit groups.
+	Allow coloring the power bar by class.
+	Allow the Aggro module to display optionally on the HealthBar, Background, or Border, instead of just the HealthBar.
+	change the Border module to reference self:GetTextureAndColor(), this allows it to be overridden, by say an aggro module.
+	add Border module.
+	make the happiness icon default to size = 120%.
+vangual:
+	- Disable Totems module on wacky frames. (Way too wacky man!)
+	- Hopefully fixed stray fontsizes
+	- Timer now fixes wrong icons
+	- Fix an old texture leak
+	- Remove assert that wrongly fired during configmode
+	- Use newly provided control creation
+Cameron Knight:
+	possible bugfix
+	use SecureButton_GetModifiedUnit rather than SecureButton_GetUnit, since it responds to toggleForVehicle. check the vehicle events and switch the units to what they "should" be when that occurs.
+	add Rune bar to HideBlizzard module.
+	Implement http://www.wowace.com/projects/pitbull4/tickets/5 - Ability to set the default font size
+	always show the texture dropdown, so people stop bitching. Put a message about installing the 'SharedMedia' addon so they know how to get more textures/fonts.
+	for Runes, if a rune is not available, make it fade out a bit. This creates more of an obvious difference for what runes are available (outside of the cooldown spiral)
+	optimize the scale calculations by caching the values beforehand.
+	take scale into account when positioning indicators.
+	Add Runes module
+	Minor tweaks to the controls system
+	bugfix when a unit is getting more than 100% healing at any one time.
+	Rename Banzai to Aggro
+	Make the Banzai module a bit saner.
+	add VisualHeal module, using LibHealComm-3.0. Mostly based off of the version from PB3.
+	for status bar icons, zoom the icons a bit.
+vangual:
+	- Fixed icon placement in the latency module. Removed a magic number, added more comments and made the code more readable.
+Cameron Knight:
+	remove some magic numbers
+	use Arcane blast as the example icon
+	if icon is that guy's head, just go with a blank space. That guy's head is creepy.
+	add the option to Auto-hide the cast bar when not casting something.
+	add support for bars to have icons. Add CastBar icon. Fix CastBarLatency to take the icon into account.
+Shefki:
+	Fix a typo causing an error.
+	Fix ticket 253: All groups to be positioned with a slider in the config.
+	Move group positioning code into it's own function.
+	Fix ticket 290: Experience bar text sticking after bar removal.
+	Fix Ticket 257: Party images behind bars
+	2d portraits need to be parented to the portrait frame.
+	UpdateShownState needs to be delayed till we're out of combat.
+	Apply aura filter updates from Anseur.
+	Need to update the shown state of groups after changing include_player
+	or the unit_group for the group.
+	solo is only an acceptable show_state for a group header when
+	include_player is set.
+	Avoid an error in the warning code for the FakeUnitIDs.
+	Fix ticket 258: Errors with raid groups in party config mode.
+vangual:
+	- Stop messing with frames we're not enabled on.
+Shefki:
+	More Priest aura filtering updates.
+	Have to refresh the groups after changing their shown_when options.
+	Fix some issues with groups not showing when they should.
+	PitBull4:GetState() now returns "solo" when not in a raid or party.
+	Fix ticket 269: Mirror auras.
+	Fix ticket 276: Druid Mana Bar Text Isuses.
+	We need to force a full frame update if the DruidManaBar is removed
+	  by our single module update.
+	Priest and Paladin filter updates from Trollpriest.
+	Fix ticket 224: Group frames moving when more columns are added.
+	Properly update groups after changing their Sort method.
+	Switch to some faster constructs from what Blizzard used in the code I
+	"borrowed"
+	New AssignFakeUnitIDs() impelementation.  Should result in more accurate
+	sorting of unit ids in config_mode.
+vangual:
+	- Fix CastBarLatency display for channeling casts
+	- Allow more than one player-frame.
+	- Update Totem module to not expect .unit to be set. Possible Fix for Ticket #272 also.
+	Prepare center option for show-as-bar. Intentionally deactivated until I can get it working.
+Shefki:
+	Remove an inaccurate comment in the code.
+	Update modules even if no unit is set on the frame.
+	Fix a spot where I missed checking that we had a valid unit.
+	Remove reference to unused Options/Groups.lua file.
+	Indentation error.
+	Forget to test if we weren't filter raid groups at all.
+	Avoid creating 40 unit frames for groups that are limited to certain
+	parties within the raid.
+	Logic still wasn't quite right to get the exact number of frames we
+	wanted to force created on a group header.  I swear it works right now.
+	After making a new group have to RecheckConfigMode() so that the new
+	group will be forced to show.
+	Stop moving a frame when it gets hidden to avoid frames getting stuck on
+	the mouse cursor if they get hidden while moving.  e.g. moving a party
+	frame and someone leaves or joins the group.
+	When we're not in a party fake unit ids have to be generated for the
+	player frames even if the unit exists.
+	Fix: Party pets et al frames
+	We have to actually set the unit and then ask for the unit from
+	SecureButton_GetUnit(frame) to have fake unit ids work properly
+	for unitsuffix frames.
+	Only assign fake unit ids for config mode frames up to max frames not
+	the number that currently exist becuase we may have more frames than
+	we really need due to changing config, e.g. after turning include player
+	off.
+	Prevent getting 2 player frames in a party with include player turned on
+	and sort direction Descending.
+	Always create the right number of frames for a group, we were sometimes
+	creating spurious frames we would never use.
+	Changing the sort direction of a group needs to force frame updates.
+	Avoid some unnecessary work since SecureGroupHeader_Update() is only
+	being hooked for config mode.
+	Be sure to RecheckConfigMode() after a SecureGroupHeader_Update().
+	Short-circuit most of the code we don't really need if we've already st
+	the frame up as ForceShown.
+	Stop hiding frames after making changes in config mode.
+	ForceShow() needs to happen after we Show() the group header and we
+	can't short circuit ForceShow if force_show is already set because
+	the frame may have been hidden by SecureGroupHeader_Update.
+	This is a result of no longer hooking Hide() during config mode.
+	Better solution to prevent force_shown frames from being hidden.
+	Also fixes ticket 263: Frames stick to mouse when dragging.
+	Fix ticket 260: Singleton Frames not properly hidden when disabled from
+	config mode.  Very likely also fixes Ticket 223.
+	Fix typo in spellid for Focus Magic for Mage friend buffs aura filter.
+Cameron Knight:
+	make it so group changes don't update child frames unless actually necessary.
+	it's current / max, not current / current. Should fix power bar issues.
+Shefki:
+	Use the prefered UnitPower() and UnitPowerMax() functions.
+	Ticket 229: Hide PowerBar based on Power type.
+	Allow CastBarLatency to show on any frame representing the player.
+	Ticket 250: Configuration for Portrait Background
+	No longer assume .unit is set on all frames and remove some unneeded
+	variables.
+	Remove unnecessary variable.
+Cameron Knight:
+	don't give the DruidManaBar an example value.
+	no longer assume that :GetColor, :GetExtraColor, and :GetTexCoord will work if guid does not exist, always call the example functions in that case.
+	check for frame.force_show on frames rather than PitBull4.config_mode
+	bugfix with setting sort method
+	allow specifying order by group and order by class (for raids)
+Shefki:
+	Avoid more taint, brings back some unnecessary updates in config mode
+	but working frames are better than less CPU cycles in config mode.
+	Fix Ticket 233: Target frame not appearing.  Caused by taint from
+	setting/unsetting Show and Hide() for config mode.
+vangual:
+	Add CastBarLatency module
+Cameron Knight:
+	handle posiioning of the header label a lot more flexibly, to handle different directions sanely.
+	add group header labels in config mode.
+	add raid filtering
+	add docs for PitBull4:GetState()
+	make sure to create the group header when making a new one through the config.
+	make 5-man (or less) raids act as parties if everyone is in the same group. This occurs in arenas.
+	add an extra check to make sure raid frames only appear when they should (will be important when we treat 5-man raids as parties)
+	bugfix with removing layouts.
+	Bugfix for GroupHeader.lua:458: attempt to perform arithmetic on a string value
+	normalize most of the function and variable names to be snake_case rather than scrunchedcase or camelCase.
+	allow party groups to be shown in solo when player is shown, thus allowing you to just use it as your standard player frame.
+	allow showing player in party groups.
+	make it so OnMouseUp where button = "LeftButton" also acts as OnDragStop
+	fix a bug caused when switching from a raid unit group to party and vice versa.
+	some bugfixes
+Shefki:
+	Only cancel buffs on our own frames.
+Cameron Knight:
+	add situation filter so that groups can be hidden in party, raid10, raid25, and raid40 separately.
+	add default groups. currently just party and partypet.
+	allow changing config mode to raid10, raid25, and raid40. Don't show raid frames in party mode.
+	make things work sanely when switching a group header from a party to raid and vice versa.
+	structural changes for group headers. Also allow headers to set their unit group.
+	rearrange the unit and group options to allow for arbitrary addition and removal of units/groups. Currently, groups can be added/removed, but not units.
+	lots of changes to headers to make them unique on name rather than classification. Also rework the concept of classification.
+	Start fluid group code
+	Start fluid group code
+Shefki:
+	Ticket 83: Add partytargettarget and partypettargettarget frames.
+	Ticket 236: Option to hide DruidManaBar when at 100% Mana.
+	Properly handle knowing if an aura belongs to the player on 3.1.0 PTR.
+	Due to the API change that precipitated this, auras applied by your
+	totems or vehicles will now show as yours.  Yes this means
+	Malygos Phase 3 debuffs show as yours.
+	Fix text on DruidManaBar.  Another case of needing to force a full frame
+	update when a bar is created so the text provider will get trigger.
+	This is a workaround for ticket 205.
+	Don't hide the DruidManaBar when you hit 100% mana.  ckknight why did
+	you do this?
+	Improve the assignment of fake unit ids so that units for party pet
+	frames line up with the party frames.  There might be a better way
+	to do this, but this works for now.
+	Fix ticket 110 - Party Pets not ordered correctly.
+	We can not use Pet Headers because they check if the unit exists and
+	if not takes it out of the sort order and as a result the order ends
+	up not matching the super classification group.
+	Filter changes for PTR 3.1.0
+	Fix ticket 230, error when respecing a Shaman.
+	Move CHARACTER_POINTS_CHANGED handler after definition of can_dispel.
+	Oops the fix to FakeUnitID generation was bad.  Take into account
+	unitsuffix.
+	Need to force frames on a group header to update after they are forced
+	to exist because the hack that creates them shuffles the unit ids around
+	and they can end up displaying incorrect info in config mode.
+	Remove some now unnecessary code.  Since we have a Show() and Hide()
+	implemented for config mode we no longer need to stop watching a unit
+	and start watching again when we leave config mdoe.
+	Don't recalculate the position of frames when they are locked when a
+	drag finishes.
+	Fix ticket 190 - party frames moved when locked.  This should also fix
+	a couple other movement complaints for party frames.  Party frames will
+	no longer seem to snap after releasing unless they really are snapping
+	to another frame.  This was caused by an error in the calculation of
+	position accounting for scale.
+	Properly handle focus frame in config mode.
+	Properly handle changes to the party while in party config mode.
+	Remove some debug code I accidentally committed.
+	Whitespace cleanup.
+	Fix ticket 201 - Party Config mode error.  Use the right unit id
+	for the group header rather than hardcoded to partyN.
+	Workaround for ticket 209.  - Error 132 and Aura Filter Editor.
+	Fix ticket 214 - Aggro indicator (Banzai) gets stuck.
+	camelCase cleanup in CastBar.
+	Revert "update player cast data every tick, as sometimes incorrect info pops up and player is too important to get wrong"
+	This reverts commit 03fe5156964c3f6b1218d35109af5ba84d2b405c.
+	Revert "rearrange things a little, also put pet and target on the fast data update."
+	This reverts commit 25a68386a0799a49609bd6b1f32c0d8ac6a87089.
+	Fix ticket 156 Castbar flakiness.
+	The break was misplaced so if the first frame we found didn't have
+	a castbar then we would remove the cast info from the cache and
+	it wouldn't display for any from for that guid.
+	Fix some Shaman default Aura filter issues.
+	Fix tickets 121 and 129 - errors creating new elements in a new layout
+	Update default aura filters for Mages.
+	Fix ticket 206, error with simple mode of aura filter editor  on mages.
+	Fix ticket 181: Indicators on Party Frames Stuck After Config Mode.
+	Fix ticket 92 - Reputation Bar Text is 'stuck'
+	Fix error when using custom color with Experience bar and you have
+	rested xp.  Fixes
+	http://www.wowace.com/projects/pitbull4/tickets/185-experience-bar-causes-crash/
+	Allow debuffs you can dispel to show on Default debuffs, mine filter.
+	Fix an error when making a new Name filter.
+	Trailing whitespace cleanup
+	Add Aura Filtering.
+vangual:
+	minor speedup for highlight change
+	add option to turn off mousehover highlighting, fix ticket #178
+Shefki:
+	Fix a bug that prevented Other Unfriendly Aura border colors from being
+	changed.
+	Apparently we hadn't used AceHook-3.0 previously, include in
+	.pkgmeta/libs.xml
+	Add LibBanzai-2.0 to the libs.xml file.  Oops.
+	Use the right URL for LibBanzai-2.0
+	Add Banzai module.
+	Sort auras by what we can dispel.
+	Fix trailing whitspace.
+vangual:
+	- Remove some resizing that has become redundant as indicator
+Shefki:
+	Allow auras not applied by yourself to be removed.
+	Treat temporary weapon enchants as belonging to the player since we have
+	no way to be sure and it makes more sense for layout purposes.
+	Avoid repeated table lookups on the set_direction_point dispatch table.
+	Add support for smaller rows laying next to a partial larger row.
+Cameron Knight:
+	rearrange things a little, also put pet and target on the fast data update.
+	update player cast data every tick, as sometimes incorrect info pops up and player is too important to get wrong
+Shefki:
+	Properly calculate the y offset for the new row with some oddball
+	settings.
+Cameron Knight:
+	Add texture selection for combo points. Doesn't show if there is only one texture (which is how it is currently). Send me some textures, people.
+Shefki:
+	Fix trailing whitespace.
+	Retitle the new row on resize based on growth direction.
+	Cleanup some variable use to avoid unnecesary locals and unnecessary
+	table lookups.
+	Add option to force a new row of auras when size of auras changes.
+	Trailing spaces I misssed.
+	Add Size to Fit for Auras.
+	Consistently use a comma on last list entry.
+	Remove trailing whitespace.
+	Allow separate sizing for auras cast by player from other auras.
+Cameron Knight:
+	change combo point texture to a custom white texture that fills up the whole texture instead of a small portion. Allow changing spacing for combo points. Allow changing color for combo points, defaults to a tinted yellow.
+	bugfix for highlight in config mode
+	bugfix allowing indicators to be sized arbitrarily.
+	Bugfix for bars positioned on the right. Allow texts to be positioned different based on whether it's a horizontal or vertical bar or whether it's an indicator.
+	Allow positioning of portrait as a bar in the center. This will cause it to take on a rectangular shape rather than square.
+	Fix bug where portrait couldn't be set to not position like a bar.
+	add an option to highlight the frame when it is equivalent to your target.
+	add arena unit ids as valid. Maybe it works, I dunno.
+	bugfix
+Shefki:
+	Protect against nil keys for guess_spell_icon.
+Cameron Knight:
+	Add Sounds module, which plays sounds when you gain PvP, or when you gain/lose target/focus.
+	Make :RunOnLeaveCombat when you just entered combat but not in lockdown yet. (still inside the PLAYER_REGEN_DISABLED event). This fixes automatic turning off of config mode.
+	allow modules to actually override texts properly.
+	Make ManaSpark work with the DruidManaBar.
+	force a portrait update on UNIT_PORTRAIT_UPDATE
+	bugfix with setting a bar position
+	add UnitFrame:GetFont. Should simplify some logic as well as allowing custom modules to get fonts standardly.
+vangual:
+	Make use of new font system; Change modtype to indicator
+Cameron Knight:
+	Add font options for indicators if they specify show_font_option / show_font_size_option on their module.
+	Provide :GetFont for indicators, to be used by custom indicators that show fonts. No options yet.
+	remove the unnecessary id field on controls.
+	Add BarModule:GetTexture
+	rename IconModule to IndicatorModule.
+	remove the custom_indicator module type. icon can be used instead.
+	remove custom_bar, as it could be done with just bar.
+	make the :Call* methods for bar provider modules private.
+	make the :Call* methods for fader modules private.
+	make the :Call* methods for icon modules private.
+	make the :Call* methods for bar modules private.
+	add more support for custom_bar
+	add custom_bar module type
+	some renaming fixes
+	Change status_bar to bar
+vangual:
+	Revert "Add an LDB Launcher and LDBIcon support"
+	This reverts commit daf2aee03ca75d3b57d6a311712b352e3f2688f6.
+	Reverting this commit as it has been commited in mainline with some optimisations.
+Cameron Knight:
+	document the layout process.
+	include the DataBroker libs.
+	urg
+	add custom pitbull icon (hooray for the GIMP). Swap left/right click on the minimap icon.
+	add LDB launcher support. Much thanks to Vangual.
+Shefki:
+	Set the frame level for auras.
+vangual:
+	Ensure correct framelevel
+Cameron Knight:
+	make group headers a framelevel higher than unit frames so that all unit frames have a consistent framelevel.
+	make frame levels of indicators be +3 instead of +2 from frame.
+vangual:
+	Add an LDB Launcher and LDBIcon support
+Cameron Knight:
+	raise indicator frame levels to be one above bars. Fixes http://www.wowace.com/projects/pitbull4/tickets/76-2d-class-portrait-is-hidden-behind-bars/
+	Allow indicators to be positioned in the same space as bars. This will allow portrait to be placed on  the left and clickable. This option is available for all indicators, not just portrait.
+vangual:
+	Greatly simplified sound system; Made LibSharedMedia completely optional
+Cameron Knight:
+	make dogtag text box width = 'full' (thanks to Vangual for pointing it out)
+	Fix example DogTag CurMP => MP
+	give font strings shadows. I might make this configurable later.
+	simplify some logic. Make it so texts can be positioned against one another and indicators rather than always being put on the end.
+	merge the text/indicator positioning logic.
+	whoops, fix some references
+	change providers' layout_db.bars => layout_db.elements, same for texts.
+	bugfix
+	To simplify things, store bar and text providers as frame[module_id .. ";" .. element_id] as well as frame[module_id][element_id]
+	make text providers key on name rather than a numeric ID. This simplifies things immensely.
+	remove a print statement.
+	Some localization stuff. When a new layout is seen, call :OnNewLayout on all modules, this'll let providers set up defaults. Allow changing of bar provider bar names.
+Shefki:
+	Only show sample weapon buffs when they are enabled for the frame.
+Cameron Knight:
+	Give CastBar a 40% example value.
+	Fix fader modules by referring to the correct field.
+	don't disable the "Current text" box if the module is disabled.
+	Change how libs are loaded.
+	localize "Default"
+	Turn BlankSpace into a status_bar_provider instead of a status_bar
+	add status_bar_provider module type. This is a module type that produces multiple bars.
+vangual:
+	Minor cleanup
+Cameron Knight:
+	[DogTagTexts] add Absolute and Percent for Power. Add some checks to make it so all codes are cleaned.
+	bugfix
+	allow bars to nil out values (useful for BlankSpace). Make BlankSpace nil out deficit and background color.
+	disable modules in the colors section if the module itself is disabled.
+	for texts and indicators, don't show disabled bars in the attach to section.
+	disable options for non-bar modules.
+	don't make disabled bars show up in the bar position listing. if a bar is disabled, disable all its options.
+Shefki:
+	Fix an error with weapon enchants in some rare cases.
+Cameron Knight:
+	make the custom color toggle update the bar color.
+	Add options to change profiles. Make it so switching profiles actually works.
+	make the config update if you enter/exit combat.
+	disable a bunch of options when in combat lockdown.
+	Make frames snap to one another, for easy positioning.
+vangual:
+	Introduce per-Element colors; Add some minor optimizations
+	Changed border to fix "black corners". Would be cool to let user decide on the broder texture.
+Shefki:
+	New border graphic for Aura.  Similar to the one used by CaithUI.
+	Sorting and Config mode improvements.
+vangual:
+	Add config mode support
+	updated upvalues
+	Internal spacing is honored as Indicator now too
+	Ensure correct spiral update
+	Fix linebreak scaling
+	Totems: remove offsets, we're an Indicator now.
+	Totems: Switch to new central color options.
+	Totems: final step of the rename (in-code)
+	Totems: Apply rename to xml properly this time.
+	Revert "Totems: Preparing rename"
+	This reverts commit 5e9b1a06c7790a4f5ab84516a04a3ba1111d8057.
+	Totems: rename module folder
+	Totems: rename main file
+	Totems: Preparing rename
+	pbtt: Removed option totemsize
+	pbtt: Fix all known sizing sizing issues
+Cameron Knight:
+	fix an indicator positioning issue for Outside, Bottom
+Shefki:
+	Add Sample Weapon Buffs in Config mode.
+	Bug fixes to sorting.
+	Upvalue changes.
+	Add initial sorting implementation to the Aura module.
+	Switch to using GUIDs to track what needs updating in Aura module.
+	Use a pool of table entries to allow us to remove entries from the aura
+	list so that we can use table.sort.
+	Allow Aura colors to be reset to default.
+Cameron Knight:
+	reverse some reverse logic.
+	allow changing the low/med/high health colors.
+	un-break Aura
+	add color options to HealthBar
+	Make Module:SetColorOptionsFunction have the last return be a function that resets all colors.
+Shefki:
+	Move color options for Auras into the new color system.
+Cameron Knight:
+	make it possible that :GetExampleValue (and the like) might pass in nil as the frame
+	add color options to Background and Highlight
+	add custom coloring for all bars.
+	add reaction color options. Make the reputation bar and health bar use it.
+	Add changing power colors. Make PowerBar and DruidManaBar use it.
+	add a separator between the colors and the reset button.
+	add a Colors section. Make HealthBar use it. Currently only allows overrides for class.
+	implement :GetExampleValue for CastBar
+	a frame after setting a 3d portrait, verify that the model exists, if not, clear and update again. This fixes http://www.wowace.com/projects/pitbull4/tickets/38-portrait-refresh-updating/
+	Some portrait fixes
+	Rename Modules in the Layout Editor to Other, since it only shows a small subset of modules.
+	Fix http://www.wowace.com/projects/pitbull4/tickets/77-flashing-text-with-outline/
+	make healthbar color work for units that are friendly but out of range (partypets)
+	Make partypet frames actually work.
+Shefki:
+	Add support for temporary weapon enchants to the Aura module.
+vangual:
+	pbtt: Fix black-font bug
+	pbtt: Cleanup pass
+	pbtt: Major Layout changes, now actually use pb4 layouts properly, introduced minor bugs along with it
+Shefki:
+	Fix an error while mousing over auras in config mode.
+Cameron Knight:
+	bugfix
+Shefki:
+	Fix localization on sample auras.  The debuff_type should only be
+	localized for display not in the internal variables.
+	Deal with Enrage debuffs that have the wrong debuff type set.
+	Helps when you actually set the variable.
+	Prevent errors on unknown debuff types.
+Cameron Knight:
+	bugfix
+	fix a bug in auto_table__mt.
+Shefki:
+	Color by class is only done for player units not NPCs so adjust some
+	tooltip text.
+	Fix bug with Hostility Color NPCs option not working.
+Cameron Knight:
+	Various fixes
+Shefki:
+	Fix a typo in the color setting for civilian.
+	Small typo with adding coloring to Healthbar.
+	Add coloring by hostility, tapped, disconnected, dead, and so on to
+	HealthBar.
+	Remove script hooks when disabling Highlight module to avoid errors.
+	Add RemoveFrameScriptHook to compliment the AddFrameScriptHook method.
+	Add BlankSpace module.
+	Get rid of cooldown to describe the time remaining on an aura.
+	Add a missing period to a description.
+Cameron Knight:
+	properly change the scale of groups.
+	Fix http://www.wowace.com/projects/pitbull4/tickets/47-config-mode-enables-target-frame/
+Shefki:
+	Make some strings use the localization system that were missed.
+Cameron Knight:
+	remove the general options section, just stick it at the top, available all the time
+Shefki:
+	Fix some inconsistent casing in the options text for the Aura module.
+Cameron Knight:
+	fake commit to kick the packager
+	mess with some locale stuff
+	Convert a whole bunch of indicator spacing constants into layout options.
+vangual:
+	pbtt: Rollback one of the default changes.
+	pbtt: More Options and defaults cleanup.
+	pbtt: Fix spiral making the text timer unreadable
+	pbtt: Reintroduce frame offsets, Note: they don't work as expected yet.
+Shefki:
+	Initial addition of the Aura module.
+Cameron Knight:
+	add a way to lock frame movement.
+	change the layout editor's layout a bit. Add a way to delete layouts.
+	position texts so that they no longer overlap. Fixes http://www.wowace.com/projects/pitbull4/tickets/44-texts-should-not-overlap/
+	add Click-through support.
+	make indicator position show in a lot saner format
+	make bar position show in a lot saner format
+vangual:
+	pbtt: removed some debug codes and comments. (drycode)
+	pbtt: Configuration restructuring
+	- pbtt: Add Localization to TotemTimers Module
+	- pbtt: Some option table cleanup. (dry)
+Cameron Knight:
+	handle enabling and disabling of headers properly. Handle enabling/disabling of classifications in config mode properly.
+	possibly fix a weird bug with DogTagTexts
+	possibly fix a weird bug with DogTagTexts
+	move general options for bars and indicators (none there yet) under a general tab.
+	split up the LayoutEditor into multiple files, as it was getting unwieldy.
+	split off the layout parts from UnitFrame.lua
+	properly use AceLocale-3.0, now that the silent flag has been implemented. It only acts silent when in development mode.
+	add bar spacing and padding.
+	user power token instead of power type where applicable. this will make fuel and ammo show up on vehicles.
+	Allow spacing to be set per group. Add units per column/row, allowing you to have 2x2 party frames and such. Allow you to specify which way groups grow.
+	introduce the concept of super-classifications. party, partypet, partytarget, partypettarget would all have the super-classification of "party", since certain options such as sort method and direction would be the same.
+	support party-based groups, e.g. partypet, partytarget, etc. Force a fake unit id on fake frames.
+	Get config mode working with party frames.
+	Add options to change the x/y positions of units.
+	localize all modules.
+	localization fixes
+	AceLocale-3.0 is necessary now.
+	bugfix
+	Add localization (modules not done yet)
+	disable portrait module by default. Make the unit frame smaller by default.
+	Get VoiceIcon working in config mode
+	make ComboPoints show in config mode
+	make CombatText show in config mode
+	rename :HandleFontString to :AddFontString
+	make DogTagTexts module show [Name of Text] if the guid is nil and force_show is true.
+	make the frames show in config mode.
+	add initial config mode support. This doesn't show hidden frames, but it will show icons and bars that wouldn't normally exist. Note: there is an outward-facing API for config mode for addons like NShakedown.
+vangual:
+	Add TotemTimers module. Same functionality as the PB3 equivalent. Needs some code cleanup still.
+Cameron Knight:
+	do a check for frame.guid and module enable state before passing it to the module's :UpdateFrame, removing a lot of repeated code.
+	add Portrait module. Currently it's a custom indicator, so it's not placed as a bar as in PB3.
+	Add ManaSpark module.
+	add RangeFader module.
+	rename x.hidden to x.enabled and negated it. this makes more sense in most places. Disable the combat fader by default.
+	Add the 'fader' module type. Add the CombatFader module.
+	Clarify some logic in DruidManaBar. Add the Druid mana text.
+	make ThreatBar's :GetColor use GetThreatStatusColor
+	make ThreatBar work for party and raid members as well. Get the threat text working.
+	simplify some unnecessary logic
+	tweak to the docs
+	Remove the Hello Kitty module as a real module and put it into a doc file.
+	I think my last commit was odd.
+	Initial group support. Currently only party will work.
+Andrew Holman:
+	Added druid class checking to addon
+	Changed tabs from 4 spaces to a tab for commonality.
+	Modified modules.xml to include DruidManaBar
+	Added DruidManaBar module for PitBull4
+	Fixed problem with division by nil when rested xp is non-existant.
+	removed DS_Store
+	adding my modules
+Cameron Knight:
+	bugfixings due to UnitGUID("player") not being available on first login.
+	make DogTagTexts' default n is 8 instead of 7, since I added the experience text.
+	separate the Layout and Enable options (for units)
+	along with unit scale override, there is now a width and height multiplier.
+	if a module is disabled, don't show its options in the layout editor.
+	Allow "custom" modules to show layout options properly. If they return true as their first return, then they will be placed in the top-level menu of the layout editor instead of under Other. Add options for Background and Highlight.
+	Make health and power bars update every tick for every frame with the player or pet guids rather than set unit ids.
+	Add PitBull4:IterateFramesForGUIDs(...)
+	apparently some NPCs can be flagged as PvP, not flagged as PvP FFA, and not have a faction for some ungodly reason. In this event, show your own faction's PvP icon.
+	add the ExperienceBar module
+	make the reputation bar show colors properly
+	make the status bar module type handle extra values properly
+	add ComboPoints module.
+	add a special height modifier for custom indicator modules.
+	add HappinessIcon
+	add Module:UpdateForGUID(guid). make VoiceIcon work on a guid basis rather than unit basis.
+	add VoiceIcon (actually a custom_indicator, but mum's the word)
+	remove an unnecessary check.
+	add ReadyCheckIcon
+	add RestIcon
+	add RaidTargetIcon.
+	add PvPIcon
+	add MasterLooterIcon. Bugfix in the Layout editor.
+	add LeaderIcon module
+	indentation oddity
+	Add the HideBlizzard module.
+	add module-based options, including enabling/disabling modules on a global level.
+	add a button to open DogTag help.
+	don't fail on the npc unit id
+	Allow :IterateFramesForUnitIDs to have true passed in on the end to iterate over hidden frames.
+	clamp frames to screen.
+	make CombatText:UpdateFrame have a more accurate return value
+	add the CombatText module.
+	add the "custom_text" module type. This is useful for modules such as CombatText.
+	AceGUI has to be loaded before AceConfig
+	add the rest of the libs
+	now AceConfig-3.0
+	Add AceDB-3.0 now
+	add DogTag to .pkgmeta
+	update .pkgmeta with some libs (not done yet)
+	allow PitBull4:IterateModulesOfType take a tuple of module types rather than just one. Add the custom_indicator module type, which acts like Icon, except that you're expected to create the frame. Change the way indicators are scaled.
+	standardize how updating and clearing frames works between modules. Remove the "OnUpdate", "OnPopulate", and "OnClear" script hooks, as they're pointless now.
+	Make sure that :SetModuleType doesn't replace any values. Separate the "custom" module into its own file (even though it does practically nothing).
+	change PitBull4::IterateModulesOfType(module_type, enabled_only) to PitBull4: :IterateModulesOfType(module_type, also_disabled)
+	rename the module types textprovider to text_provider and statusbar to status_bar.
+	change PitBull4:IterateFramesForLayout(layout, only_shown) to PitBull4: IterateFramesForLayout(layout, also_hidden)
+	change PitBull4:IterateFramesForClassification(classification, only_shown) to PitBull4: IterateFramesForClassification(classification, also_hidden)
+	change PitBull4:IterateFramesForUnitID(unit, only_shown) to PitBull4: IterateFramesForUnitID(unit, also_hidden)
+	change PitBull4:IterateWackyFrames(only_shown) to PitBull4:IterateWackyFrames(also_hidden) and same for :IterateNonWackyFrames
+	change PitBull4:IterateFrames(only_shown) to PitBull4:IterateFrames(also_hidden)
+	Use AceGUI-3.0-SharedMediaWidgets for the texture and font widgets if it is available.
+	if LibSharedMedia-3.0 can't be found, use ChatFontNormal:GetFont() instead of hard-coding Arial. This will make it work for non-Westerners. If it is found, then validate "Arial Narrow" or fall back to the default that LSM specifies.
+	change onlyShown to only_shown
+	make the options frame wider by default so that it can fit 3 controls across the subgroup.
+	Add the ability to choose texture on a per-layout and a per-bar basis if LibSharedMedia-3.0 is available and has more than 1 statusbar texture. Same thing for fonts.
+	make :OnDragStop() just call :RefreshLayout() to keep things DRY. This will also prevent taint issues.
+	properly handle position with regard to scaling of both UIParent and the frame itself.
+	change verticalMirror to vertical_mirror (and same for horizontal_mirror). Add a scale override on a per-classification basis.
+	Allow changing size of the unit frames on a per-layout basis.
+	Make frame disabling work. This is done on a per-classification basis and acts as a special layout.
+	typo in DogTagTexts
+	bugfix for UnitFrame:IterateControls()
+	call module:RemoveFontString(font_string) when we're deleting it, so that the module can unregister it. Also some code cleanup.
+	Add the TextProviderModule type. Add the DogTagTexts module. Simplify some of the layout placement code.
+	change background and highlight modules to make the control they create using the same casing as the module ID.
+	split up the icon module's :GetTexture and :GetTexCoord functions. Pass in value to StatusBarModule:GetColor, in the case where you want to change color based on value (like health bar).
+	remove StatusBarModule:SetColorFunction, now it's just assumed that :GetColor will be the method to call. Same for :SetValueFunction => :GetValue and IconModule:SetTextureFunction => :GetTexture.
+	bugfix
+	have a set ordering for the layout editor
+	small optimization
+	bgAlpha => background_alpha
+	Move the module handling parts to its own folder
+	Split up Options into its own sections, put it in its own folder
+	Move some more things around
+	move some files around, use XML instead of the TOC to load up files.
+	change the naming of some things, split things up some more for clarity.
+	Move some functions around
+	some options-related bugfixing.
+	use self where it makes sense
+	Switch to using colon syntax most all places, as it was confusing to have some methods use colon syntax but some using dot syntax. Switch to using Ace3 for timers, events, module handling, and DB.
+	prepare for frame deletion
+	Add vertical mirroring. Tbh, I'm not sure a layout that would use it, but it could be cool.
+	Add the ability on a per-classification basis to mirror the layout horizontally. This is useful if you have a player frame and a target frame the same layout but want the target layout to mirror it (e.g. bars go other direction, things on the other side, etc.)
+	add real layout handling. Add setting of the layouts on a per-classification basis.
+	actually position icons and provide options for icons. get rid of all magic numbers in the layout (I think).
+	add a way for modules to register options. Add the "Color by class" option to HealthBar.
+	move the module types into their own files. Add a method to add new module types easily.
+	change .unitID to .unit, since that's what Blizzard expects for tooltips.
+	switch to using AceConfig-3.0. Add some actual options for bars.
+	Fix the way module registered functions are called.
+	Fix up some code, initial icon support
+	fix .docmeta
+	.docmeta
+	simplify some logic.
+	make CastBar work a bit better. Show targettarget.
+	Add CastBar
+	possibly fix up .pkgmeta. Fix an issue in options.
+	add Options, doesn't do much, but it does allow positioning of bars.
+Cameron Kenneth Knight:
+	Add ReputationBar
+	Make layout handle statusbar modules arbitrarily (not hardcoded)
+	Make statusbar layoutDB have default defaults (yes, the defaults have default values if not provided)
+	Add more features to the status bar positioning.
+	Add some more comments.
+	Fix some minor typos
+	Some doc fixes
+	Rearrange some logic
+	Separate out some logic, simplifying things.
+	Cleanup BetterStatusBar.lua
+	A whole bunch of changes.
+	Add health bar and power bar.
+	Add creation of controls and such.
+	Separate out some things for clarity.
+	There still needs to be a bit of work to make the code more following the arbitrary rules I set.
+	Add basic module support.
+	Separate the db section from the main, lots of hacking there.
+	Add two simple modules: Background and Highlight.
+	Add a way to create and delete controls
+	Add basic argument checking (only occurs for alpha packages)
+	Make tooltip-on-hover work
+	Make right-click menu work, as well as left-click target.
+	Small bugfixes, make it create initial frames (currently only player).
+	Add ClickCastFrames support.
+	Make sure to remove star defaults when logging out
+	Add the ability to have * keys in tables, no ** yet.
+	Change classifications to be handled by the defaults system
+	Change @debug@ to @alpha@
+	Add Version to TOC
+	Change name to PitBull Unit Frames 4.0
+	Make a bit of logic more understandable
+	Add in defaults handling
+	Initial commit

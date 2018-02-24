@@ -1,0 +1,16 @@
+﻿## Interface: 11200
+
+## Title: Big Wigs CThun Assist |cff7fff7f -Ace2-|r
+## Notes: Proximity and Stomach warnings for CThun.
+## Author: Ammo
+## X-Build: $Revision: 15470 $
+## X-ReleaseDate: $Date: 2006-10-29 12:05:19 -0500 (Sun, 29 Oct 2006) $
+## X-Category: Raid
+## X-BigWigsModule: BigWigsCThunAssist
+
+## Dependencies: BigWigs
+## OptionalDeps: Ace2, TabletLib, DewdropLib, RosterLib
+
+libs\RosterLib-2.0\RosterLib-2.0.lua
+
+BigWigs_CThunAssist.lua

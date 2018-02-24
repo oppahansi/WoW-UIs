@@ -1,0 +1,22 @@
+Why two font folders?
+---------------------
+(the following info does not apply to 'ClearFontNumber.ttf' - confusing, yes, I know)
+
+
+'Fonts' contains v1.0 of the ClearFont font, Calibri.
+
+- The numbers are fixed width and fixed height.
+- Currently used automatically.
+
+
+'Fonts2' contains v0.9 of the ClearFont font, Calibri.
+
+- The numbers are neither fixed width nor fixed height.
+- If you wish to use this version use the fonts contained within 'Fonts2':
+
+  - Change the following line in the ClearFont.lua and ClearFontAddons.lua files from:
+	local CLEAR_FONT_BASE = "Interface\\AddOns\\!ClearFont\\Fonts\\";
+    to:
+	local CLEAR_FONT_BASE = "Interface\\AddOns\\!ClearFont\\Fonts2\\";
+
+  - Redo Step Two (see the website)

@@ -1,0 +1,4 @@
+
+ConfabUser = {
+	["ignoreArrows"] = false,
+}

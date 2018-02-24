@@ -1,0 +1,19 @@
+﻿## Interface: 20300
+## LoadOnDemand: 1
+## Title: Lib: Babble [|cffeda55fBoss|r]
+## Notes: A library to help with localization.
+## Notes-zhCN: 为本地化服务的支持库[首领名称]
+## Notes-zhTW: 為本地化服務的函式庫[首領名稱]
+## Notes-deDE: BabbleLib ist eine Bibliothek, die bei der Lokalisierung helfen soll.
+## Notes-frFR: Une bibliothèque d'aide à la localisation.
+## Notes-esES: Una biblioteca para ayudar con las localizaciones.
+## Author: ckknight
+## X-eMail: ckknight@gmail.com
+## X-Credits: Funkydude
+## Version: 2.2.$Revision: 1131 $
+## X-Category: Library
+## OptionalDeps: Ace2
+## X-AceLibrary-Babble-Boss-2.2: true
+## X-License: MIT
+
+Babble-Boss-2.2.lua

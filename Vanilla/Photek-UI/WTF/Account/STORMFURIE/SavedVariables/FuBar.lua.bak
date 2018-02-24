@@ -1,0 +1,71 @@
+
+FuBar2DB = {
+	["profiles"] = {
+		["Default"] = {
+			["fontSize"] = 12,
+			["loadOnDemand"] = {
+				["FuBar_BattlegroundFu"] = {
+					["title"] = "BattlegroundFu",
+					["category"] = "Battlegrounds/PvP",
+				},
+				["FuBar_ItemBonusesFu"] = {
+					["title"] = "ItemBonusesFu",
+					["category"] = "Interface Enhancements",
+				},
+				["FuBar_ClockFu"] = {
+					["title"] = "ClockFu",
+					["category"] = "Interface Enhancements",
+				},
+				["FuBar_PerformanceFu"] = {
+					["title"] = "PerformanceFu",
+					["category"] = "Interface Enhancements",
+				},
+			},
+			["adjust"] = false,
+			["tooltip"] = {
+				["transparency"] = 0.75,
+			},
+			["panels"] = {
+				[1] = {
+					["xPercent"] = -1.139878997857835e-007,
+					["attachPoint"] = "BOTTOM",
+					["plugins"] = {
+						["center"] = {
+							[1] = "ItemBonusesFu",
+							[2] = "MoneyFu",
+							[3] = "PerformanceFu",
+						},
+						["right"] = {
+							[1] = "ClockFu",
+							[2] = "VolumeFu",
+							[3] = "BattlegroundFu",
+						},
+						["left"] = {
+							[1] = "LocationFu",
+							[2] = "ExperienceFu",
+							[3] = "ModMenuTuFu",
+						},
+					},
+					["widthPercent"] = 1,
+					["yPercent"] = 0.3945958120701364,
+				},
+			},
+			["minimap"] = {
+			},
+			["thickness"] = 7,
+			["transparency"] = 1,
+			["overflow"] = true,
+			["leftSpacing"] = 20,
+			["centerSpacing"] = 40,
+			["rightSpacing"] = 20,
+			["places"] = {
+				["center"] = {
+				},
+				["left"] = {
+				},
+			},
+			["detached"] = {
+			},
+		},
+	},
+}

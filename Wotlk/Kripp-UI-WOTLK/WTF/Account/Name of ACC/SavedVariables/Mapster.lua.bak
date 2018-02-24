@@ -1,0 +1,34 @@
+
+MapsterDB = {
+	["namespaces"] = {
+		["GroupIcons"] = {
+		},
+		["Coords"] = {
+		},
+		["FogClear"] = {
+		},
+		["BattleMap"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Kripparrian - Ysondre"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["arrowScale"] = 0.9800000190734863,
+			["point"] = "TOPLEFT",
+			["miniMap"] = true,
+			["scale"] = 0.5999999642372131,
+			["mini"] = {
+				["y"] = 25.78897157024528,
+				["x"] = -12.12218437879185,
+				["point"] = "TOPLEFT",
+				["scale"] = 0.800000011920929,
+				["alpha"] = 0.6100000143051148,
+				["disableMouse"] = false,
+			},
+			["x"] = -3.555549203973909,
+			["y"] = 6.399945526276269,
+		},
+	},
+}

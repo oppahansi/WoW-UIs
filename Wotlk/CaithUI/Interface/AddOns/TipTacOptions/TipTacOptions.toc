@@ -1,0 +1,11 @@
+## Interface: 30100
+## Version: 09.05.17
+## Title: TipTacOptions
+## Author: Aezay (Earthen Ring EU)
+## Notes: Option Dialog for TipTac
+## Dependencies: TipTac
+## LoadOnDemand: 1
+Libs\AzDropDown.lua
+Libs\AzOptionsFactory.lua
+DropDowns.lua
+Options.lua

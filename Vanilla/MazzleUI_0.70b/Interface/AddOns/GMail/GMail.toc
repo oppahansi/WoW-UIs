@@ -1,0 +1,21 @@
+## Interface: 11200
+## Version: 1.0
+## Title: GMail |cff7fff7f -Ace2-|r
+## Notes: Grennon Mail
+## Notes-zhTW: 群發郵件
+## Author: Grennon
+## X-Category: Mail
+## OptionalDeps: Ace2
+libs\AceLibrary\AceLibrary.lua
+libs\AceOO\AceOO-2.0.lua
+libs\AceEvent\AceEvent-2.0.lua
+libs\AceAddon\AceAddon-2.0.lua
+libs\AceHook\AceHook-2.1.lua
+
+localization.lua
+localization.fr.lua
+localization.ge.lua
+localization.zhcn.lua
+localization.zhTW.lua
+GMail.lua
+GMail.xml

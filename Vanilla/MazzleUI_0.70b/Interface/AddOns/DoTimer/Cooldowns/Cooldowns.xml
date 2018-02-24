@@ -1,0 +1,269 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<!--the other files for the addon-->
+	<Include file="Cooldowns_Menu.xml"></Include>
+	<Script file="Cooldowns.lua"></Script>
+	<Script file="Cooldowns_Data.lua"></Script>
+	<Script file="Cooldowns_Menu.lua"></Script>
+	<!--a simple frame; it just handles the onload and onevent for the entire addon-->
+	<Frame name="CooldownsFrame">
+		<Scripts>
+			<OnLoad> Cooldowns_OnLoad(); </OnLoad>
+			<OnEvent> Cooldowns_OnEvent(event); </OnEvent>
+		</Scripts>
+	</Frame>
+	<Frame name="CooldownsDelayFrame"/>
+	<!--used to parse tooltips for spell information-->
+	<GameTooltip name="CooldownsScanningFrame" inherits="GameTooltipTemplate">
+		<Scripts>
+			<OnLoad> this:SetOwner(this,"ANCHOR_NONE"); </OnLoad>
+		</Scripts>
+	</GameTooltip>
+	<!--the monstrosity behind the debuff icon/time string-->
+	<Frame name="CooldownsCooldownTemplate" virtual="true">
+		<Frames>
+			<!-- the button that contains the artwork for the debuff icon-->
+			<Frame name="$parentBar" hidden="true">
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Frames>
+					<Button name="$parentButton">
+						<Size>
+							<AbsDimension x="175" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<!-- the actual icon-->
+								<Texture name="$parentTexture">
+									<Size>
+										<AbsDimension x="20" y="20"/>
+									</Size>
+									<Anchors>
+										<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent"/>
+									</Anchors>
+								</Texture>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnLoad> this:RegisterForClicks("LeftButtonUp","RightButtonUp"); </OnLoad>
+							<OnClick>
+								Cooldowns_RemoveTimer(this:GetParent():GetParent():GetID())
+							</OnClick>
+							<OnEnter>
+								if this.spell then
+									GameTooltip:SetOwner(this,"ANCHOR_RIGHT")
+									local extra = "\n"..this.rank
+									if this.rank == "" then extra = "" end
+									GameTooltip:SetText(this.spell..extra)
+									GameTooltip:Show()
+								end
+							</OnEnter>
+							<OnLeave> GameTooltip:Hide(); </OnLeave>
+						</Scripts>
+					</Button>
+					<StatusBar name="$parentStatus">
+						<Size>
+							<AbsDimension x="150" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
+								<Offset>
+									<AbsDimension x="20" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<FontString name="$parentTime" inherits="SystemFont" justifyH="LEFT" justifyV="CENTER">
+									<Size>
+										<AbsDimension x="145" y="20"/>
+									</Size>
+									<Anchors>
+										<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
+											<Offset>
+												<AbsDimension x="5" y="0"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<Color r="1.0" g="1.0" b="1.0"/>
+								</FontString>
+							</Layer>
+						</Layers>
+						<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>		
+					</StatusBar>
+					<StatusBar name="$parentBackground" minValue="0.0" maxValue="1.0" defaultValue="1.0" alpha=".8">
+						<Size>
+							<AbsDimension x="150" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parentStatus"/>
+						</Anchors>
+						<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+						<BarColor r=".25" g=".25" b=".25"/>
+						<Scripts>
+							<OnLoad> this:SetFrameLevel(this:GetFrameLevel() - 1); </OnLoad>
+						</Scripts>
+					</StatusBar>							
+				</Frames>
+			</Frame>
+			<Frame name="$parentIcon" hidden="true">
+				<Anchors>
+					<Anchor point="CENTER"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<!-- displays the time: how much is remaining-->
+						<FontString name="$parentTime" text="0:00" inherits="GameFontNormal" justifyH="CENTER" justifyV="CENTER"/>		
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="$parentButton">
+						<Size>
+							<AbsDimension x="32" y="32"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent"/>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parentTexture">
+									<Size>
+										<AbsDimension x="32" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent"/>
+									</Anchors>
+								</Texture>				
+							</Layer>
+						</Layers>
+						<HighlightTexture alphaMode="ADD" file="Interface\Buttons\CheckButtonHilight"/>
+						<Scripts>
+							<OnLoad> this:RegisterForClicks("LeftButtonUp","RightButtonUp"); </OnLoad>
+							<OnClick>
+								Cooldowns_RemoveTimer(this:GetParent():GetParent():GetID())
+							</OnClick>
+							<OnEnter>
+								if this.spell then
+									GameTooltip:SetOwner(this,"ANCHOR_RIGHT")
+									local extra = "\n"..this.rank
+									if this.rank == "" then extra = "" end
+									GameTooltip:SetText(this.spell..extra)
+									GameTooltip:Show()
+								end
+							</OnEnter>
+							<OnLeave> GameTooltip:Hide(); </OnLeave>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+		</Frames>
+	</Frame>
+	<!-- the drag button, also defines the position of the timers-->
+	<Button name="CooldownsAnchorFrame" parent="UIParent" enableMouse="true" movable="true" frameStrata="MEDIUM" toplevel="true">
+		<Size>
+			<AbsDimension x="15" y="15"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\AddOns\DoTimer\Extras\DragButton"/>
+				<FontString name="$parentFirstUse" text="blah" inherits="GameFontNormal" justifyH="CENTER" justifyV="TOP" hidden="true">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="5" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad> this:RegisterForDrag("LeftButton"); this:RegisterForClicks("LeftButtonUp","RightButtonUp"); </OnLoad>
+			<OnDragStart> if CooldownsAnchorFrameFirstUse:IsVisible() then CooldownsAnchorFrameFirstUse:Hide() end; this:StartMoving(); </OnDragStart>
+			<OnDragStop> this:StopMovingOrSizing(); </OnDragStop>
+			<OnClick> Cooldowns_RemoveAllTimers(); </OnClick>
+		</Scripts>
+	</Button>
+	<!-- the main frame is shown if the UI is visible; hidden if UI is not (based on the user setting), also defines the scale-->
+	<Frame name="CooldownsMainFrame" parent="UIParent">
+		<Anchors>
+			<Anchor point="CENTER" relativePoint="CENTER" relativeTo="CooldownsAnchorFrame"/>
+		</Anchors>
+		<Size>
+			<AbsDimension x="1" y="1"/>
+		</Size>
+	</Frame>
+	<!--the actual cooldown table-->
+	<Frame name="CooldownsTable" parent="CooldownsMainFrame">
+		<!-- the 20 debuffs per target-->
+		<Frames>
+			<Button name="$parentName" enableMouse="false">
+				<Layers>
+					<Layer level="ARTWORK">
+						<!-- the target name string-->
+						<FontString name="$parentText" text="name" inherits="GameFontNormal" justifyH="CENTER" justifyV="TOP">
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad> this:RegisterForClicks("LeftButtonUp","RightButtonUp"); </OnLoad>
+					<OnClick> 
+						Cooldowns_RemoveAllTimers()
+					</OnClick>
+					<OnEnter>
+						if this.target then
+							GameTooltip:SetOwner(this,"ANCHOR_RIGHT")
+							GameTooltip:SetText("["..this.level.."]" ..this.target)
+						end
+					</OnEnter>
+					<OnLeave> GameTooltip:Hide(); </OnLeave>
+				</Scripts>
+			</Button>
+			<Frame name="$parentCooldown1" inherits="CooldownsCooldownTemplate" id="1"/>
+			<Frame name="$parentCooldown2" inherits="CooldownsCooldownTemplate" id="2"/>
+			<Frame name="$parentCooldown3" inherits="CooldownsCooldownTemplate" id="3"/>
+			<Frame name="$parentCooldown4" inherits="CooldownsCooldownTemplate" id="4"/>
+			<Frame name="$parentCooldown5" inherits="CooldownsCooldownTemplate" id="5"/>
+			<Frame name="$parentCooldown6" inherits="CooldownsCooldownTemplate" id="6"/>
+			<Frame name="$parentCooldown7" inherits="CooldownsCooldownTemplate" id="7"/>
+			<Frame name="$parentCooldown8" inherits="CooldownsCooldownTemplate" id="8"/>
+			<Frame name="$parentCooldown9" inherits="CooldownsCooldownTemplate" id="9"/>
+			<Frame name="$parentCooldown10" inherits="CooldownsCooldownTemplate" id="10"/>
+			<Frame name="$parentCooldown11" inherits="CooldownsCooldownTemplate" id="11"/>
+			<Frame name="$parentCooldown12" inherits="CooldownsCooldownTemplate" id="12"/>
+			<Frame name="$parentCooldown13" inherits="CooldownsCooldownTemplate" id="13"/>
+			<Frame name="$parentCooldown14" inherits="CooldownsCooldownTemplate" id="14"/>
+			<Frame name="$parentCooldown15" inherits="CooldownsCooldownTemplate" id="15"/>
+			<Frame name="$parentCooldown16" inherits="CooldownsCooldownTemplate" id="16"/>
+			<Frame name="$parentCooldown17" inherits="CooldownsCooldownTemplate" id="17"/>
+			<Frame name="$parentCooldown18" inherits="CooldownsCooldownTemplate" id="18"/>
+			<Frame name="$parentCooldown19" inherits="CooldownsCooldownTemplate" id="19"/>
+			<Frame name="$parentCooldown20" inherits="CooldownsCooldownTemplate" id="20"/>
+		</Frames>
+	</Frame>
+	<!-- used when i normalize the spacing of the targets to account for long target names, so they dont overlap most likely-->
+	<Frame name="CooldownsFontTest" parent="CooldownsMainFrame" hidden="true">
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" text="0:00" inherits="GameFontNormal" justifyH="CENTER" justifyV="CENTER">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="LEFT" relativeTo="$parent">
+							<Offset>
+								<AbsDimension x="5" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>			
+			</Layer>
+		</Layers>
+	</Frame>
+</Ui>

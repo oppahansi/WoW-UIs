@@ -1,0 +1,13 @@
+Version 1.2.1
+- fixed quest list disappearing
+
+Version 1.2
+- quest list now has a darker border
+- drag the border to change the size of the quest list
+- Shift-Leftclick or Rightclick at the border to toggle it
+
+Version 1.1
+- fixed for 3.3.3
+
+Version 1.0
+- initial release

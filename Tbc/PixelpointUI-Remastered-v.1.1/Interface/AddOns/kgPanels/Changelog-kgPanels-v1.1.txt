@@ -1,0 +1,773 @@
+------------------------------------------------------------------------
+r269 | kagaro | 2008-10-02 12:58:04 +0000 (Thu, 02 Oct 2008) | 2 lines
+Changed paths:
+   A /tags/v1.1 (from /trunk:268)
+
+Tagging as v1.1.
+Package now contains the config LOD addon, thanks pkgmeta!
+------------------------------------------------------------------------
+r268 | kagaro | 2008-10-02 12:55:33 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/Libs
+   A /trunk/kgPanelsConfig (from /tags/combo-beta2/kgPanelsConfig:267)
+
+kgPanels: updated trunk to new pkgmeta and layouts
+------------------------------------------------------------------------
+r263 | nevcairiel | 2008-10-02 12:09:00 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+------------------------------------------------------------------------
+r260 | kagaro | 2008-09-30 16:19:12 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r259 | kagaro | 2008-09-30 15:09:07 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r257 | kagaro | 2008-09-30 14:09:01 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+kgPanels: read the knowledge base stupid.
+------------------------------------------------------------------------
+r255 | kagaro | 2008-09-30 13:58:16 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+kgPanels: fixed .pkgmeta
+------------------------------------------------------------------------
+r253 | root | 2008-09-29 22:08:42 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/Libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r251 | root | 2008-09-29 20:59:00 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/kgPanels
+   A /trunk (from /tmp/trunk/kgPanels:250)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r248 | kagaro | 2008-09-16 02:45:24 +0000 (Tue, 16 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: toc update for email
+------------------------------------------------------------------------
+r246 | kagaro | 2008-08-26 20:37:13 +0000 (Tue, 26 Aug 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fix posible lookup issues with borders and backgrounds
+------------------------------------------------------------------------
+r243 | kagaro | 2008-08-05 12:15:41 +0000 (Tue, 05 Aug 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: case fix
+------------------------------------------------------------------------
+r241 | kagaro | 2008-08-05 11:44:07 +0000 (Tue, 05 Aug 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: updated to toc to match author name.
+------------------------------------------------------------------------
+r239 | kagaro | 2008-07-24 02:41:21 +0000 (Thu, 24 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/LICENSE.txt
+
+kgPanels: updated license file author cut + paster ftl
+------------------------------------------------------------------------
+r237 | kagaro | 2008-07-24 02:38:12 +0000 (Thu, 24 Jul 2008) | 1 line
+Changed paths:
+   A /tmp/trunk/kgPanels/LICENSE.txt
+
+kgPanels: added license file
+------------------------------------------------------------------------
+r236 | kagaro | 2008-07-21 12:15:30 +0000 (Mon, 21 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: changed launcher = true to type = "launcher"
+------------------------------------------------------------------------
+r235 | kagaro | 2008-07-21 11:55:09 +0000 (Mon, 21 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed global var to local for launcher and AddOns case for linux just in case.
+------------------------------------------------------------------------
+r233 | kagaro | 2008-07-18 17:02:44 +0000 (Fri, 18 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: updated toc for 2.4.3 since I added LibBroker support as well
+------------------------------------------------------------------------
+r232 | kagaro | 2008-07-16 13:32:15 +0000 (Wed, 16 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: set background to lowest draw layer relative to the frame borders should now be ontop of the background
+------------------------------------------------------------------------
+r231 | kagaro | 2008-07-15 17:43:45 +0000 (Tue, 15 Jul 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: added support for LibDataBroker-1.1
+Display mod who support launcher interface will give you a quickluanch button to the config
+------------------------------------------------------------------------
+r230 | pettigrow | 2008-06-20 15:25:50 +0000 (Fri, 20 Jun 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: frFR Update
+------------------------------------------------------------------------
+r227 | pettigrow | 2008-06-20 10:11:56 +0000 (Fri, 20 Jun 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fix frFR
+------------------------------------------------------------------------
+r226 | kagaro | 2008-06-08 15:32:54 +0000 (Sun, 08 Jun 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added secondary check for layout being null 
+------------------------------------------------------------------------
+r222 | kagaro | 2008-05-29 12:10:37 +0000 (Thu, 29 May 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: Now supports injecting artwork from the artlibrary into LibSharedMedia-3.0, prep for new LSM widgets
+------------------------------------------------------------------------
+r221 | kagaro | 2008-05-11 16:51:50 +0000 (Sun, 11 May 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/embeds.xml
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added callback handler to embeds as it was missing.
+------------------------------------------------------------------------
+r218 | kagaro | 2008-04-25 16:45:24 +0000 (Fri, 25 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: changed anchor check sequence
+------------------------------------------------------------------------
+r217 | kagaro | 2008-04-24 20:36:33 +0000 (Thu, 24 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added escape sequence detection and correction for all text options
+------------------------------------------------------------------------
+r216 | kagaro | 2008-04-24 20:32:29 +0000 (Thu, 24 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added escape sequence detection and correction for scripts
+------------------------------------------------------------------------
+r214 | kagaro | 2008-04-20 15:15:44 +0000 (Sun, 20 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: When a parent visiblity has been changed due to re-parenting or anchoring, we will now update all children visibilty as well.
+------------------------------------------------------------------------
+r209 | kurax | 2008-04-16 22:32:36 +0000 (Wed, 16 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: Add zhCN locale
+------------------------------------------------------------------------
+r207 | kagaro | 2008-04-14 23:21:47 +0000 (Mon, 14 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: undo last commit, hit wrong button
+------------------------------------------------------------------------
+r206 | kagaro | 2008-04-14 23:20:13 +0000 (Mon, 14 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: update e-parenting check 
+------------------------------------------------------------------------
+r204 | kagaro | 2008-04-08 14:16:09 +0000 (Tue, 08 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/Libs
+   M /tmp/trunk/kgPanels/embeds.xml
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: embed LibSharedMedia-3.0
+------------------------------------------------------------------------
+r203 | kagaro | 2008-04-06 17:50:57 +0000 (Sun, 06 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed reparent visibilty not being checked properly
+------------------------------------------------------------------------
+r202 | kagaro | 2008-04-06 16:26:33 +0000 (Sun, 06 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: attempt to fix reported problem with parent visibility
+------------------------------------------------------------------------
+r201 | kagaro | 2008-04-06 14:35:49 +0000 (Sun, 06 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added addiotnal onLoad check for reparented frames
+------------------------------------------------------------------------
+r200 | kagaro | 2008-04-06 14:22:09 +0000 (Sun, 06 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added addiotnal onLoad check for reparented frames
+------------------------------------------------------------------------
+r199 | kagaro | 2008-04-03 04:10:05 +0000 (Thu, 03 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/Libs
+
+kgPanels: added CallbackHandler to externals, to fix an issue with the config app
+------------------------------------------------------------------------
+r198 | kagaro | 2008-04-02 20:54:23 +0000 (Wed, 02 Apr 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed reparent issues with PitBull and Fubar
+------------------------------------------------------------------------
+r195 | kagaro | 2008-03-25 12:17:23 +0000 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: toc update
+------------------------------------------------------------------------
+r192 | kagaro | 2008-03-19 01:43:13 +0000 (Wed, 19 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added a error messgae to console for missing texture paths
+------------------------------------------------------------------------
+r191 | kagaro | 2008-03-18 15:10:36 +0000 (Tue, 18 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: moved sharedmedia check to top of file
+------------------------------------------------------------------------
+r190 | kagaro | 2008-03-18 01:58:24 +0000 (Tue, 18 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed cmdline parsing bug
+------------------------------------------------------------------------
+r189 | kagaro | 2008-03-18 01:34:35 +0000 (Tue, 18 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed an upvalue
+------------------------------------------------------------------------
+r186 | kagaro | 2008-03-17 18:08:23 +0000 (Mon, 17 Mar 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/kgPanels/s1.tga
+   D /tmp/trunk/kgPanels/s2.tga
+
+kgPanels: removed extra images
+------------------------------------------------------------------------
+r185 | kagaro | 2008-03-17 17:57:44 +0000 (Mon, 17 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+   A /tmp/trunk/kgPanels/s1.tga
+   A /tmp/trunk/kgPanels/s2.tga
+
+kgPanels: added some tga files and a copyright notice
+------------------------------------------------------------------------
+r183 | kagaro | 2008-03-17 14:19:15 +0000 (Mon, 17 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+   M /tmp/trunk/kgPanels/kgPanels.toc
+
+kgPanels: support only LibSM3
+------------------------------------------------------------------------
+r179 | kagaro | 2008-03-16 04:16:06 +0000 (Sun, 16 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: fixed a refactoring ug, missing the strata
+------------------------------------------------------------------------
+r176 | kagaro | 2008-03-16 00:36:55 +0000 (Sun, 16 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: removed an upval that was causing the enable bug
+------------------------------------------------------------------------
+r174 | kagaro | 2008-03-16 00:27:21 +0000 (Sun, 16 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: hopefully fix the odd bug of failed texture loading cause enable state to go false
+------------------------------------------------------------------------
+r170 | kagaro | 2008-03-15 23:43:03 +0000 (Sat, 15 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: adjusted load order of shared media libs
+------------------------------------------------------------------------
+r167 | kagaro | 2008-03-15 13:21:38 +0000 (Sat, 15 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/kgPanels/kgPanels.lua
+
+kgPanels: added french translations
+------------------------------------------------------------------------
+r164 | kagaro | 2008-03-15 12:12:09 +0000 (Sat, 15 Mar 2008) | 1 line
+Changed paths:
+   A /tmp/trunk/kgPanels (from /tmp/branches/kgPanels/Ace3:163)
+
+kgPanels: trunk release
+------------------------------------------------------------------------
+r157 | kagaro | 2008-03-15 12:05:08 +0000 (Sat, 15 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+
+kgPanels: updated externals to trunk
+------------------------------------------------------------------------
+r155 | kagaro | 2008-03-14 12:13:22 +0000 (Fri, 14 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: update for color adjustments
+------------------------------------------------------------------------
+r150 | kagaro | 2008-03-11 03:42:25 +0000 (Tue, 11 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added 2 helper functions
+------------------------------------------------------------------------
+r148 | kagaro | 2008-03-08 12:56:12 +0000 (Sat, 08 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: works now with LibSM 2 or 3
+------------------------------------------------------------------------
+r146 | kagaro | 2008-03-08 12:52:53 +0000 (Sat, 08 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: secondary check for Fetch function in shared media
+------------------------------------------------------------------------
+r143 | kagaro | 2008-03-07 13:32:11 +0000 (Fri, 07 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: tweak
+------------------------------------------------------------------------
+r141 | kagaro | 2008-03-07 13:01:01 +0000 (Fri, 07 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: aded a second check for nil deps
+------------------------------------------------------------------------
+r140 | kagaro | 2008-03-07 12:54:03 +0000 (Fri, 07 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: added license clause
+------------------------------------------------------------------------
+r138 | kagaro | 2008-03-05 12:49:51 +0000 (Wed, 05 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added support for background tiliing
+------------------------------------------------------------------------
+r137 | kagaro | 2008-03-05 05:01:46 +0000 (Wed, 05 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels:fixed bug on reload
+------------------------------------------------------------------------
+r136 | kagaro | 2008-03-05 00:03:49 +0000 (Wed, 05 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: updated toc to libsharedmedia-3.0
+------------------------------------------------------------------------
+r135 | kagaro | 2008-03-04 14:09:47 +0000 (Tue, 04 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: change sharedmedia support to 3.0
+------------------------------------------------------------------------
+r131 | kagaro | 2008-02-29 12:07:47 +0000 (Fri, 29 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fix bug in parent check
+------------------------------------------------------------------------
+r130 | kagaro | 2008-02-29 01:24:36 +0000 (Fri, 29 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: bug fix
+------------------------------------------------------------------------
+r129 | kagaro | 2008-02-29 01:08:32 +0000 (Fri, 29 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed a bug in re-parenting
+------------------------------------------------------------------------
+r128 | kagaro | 2008-02-28 15:23:30 +0000 (Thu, 28 Feb 2008) | 2 lines
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed a bug in width percentages
+
+------------------------------------------------------------------------
+r126 | kagaro | 2008-02-28 14:45:58 +0000 (Thu, 28 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: script dependencies per Panel now works
+------------------------------------------------------------------------
+r123 | kagaro | 2008-02-28 13:52:06 +0000 (Thu, 28 Feb 2008) | 2 lines
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added percentage support for heigh and width 
+
+------------------------------------------------------------------------
+r117 | kagaro | 2008-02-26 22:18:14 +0000 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed some parenting issues
+------------------------------------------------------------------------
+r115 | kagaro | 2008-02-26 17:54:31 +0000 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added an OnClick script handler DRYCODE
+------------------------------------------------------------------------
+r114 | kagaro | 2008-02-26 17:51:30 +0000 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added a delay mechanism for script loading
+------------------------------------------------------------------------
+r113 | kagaro | 2008-02-26 12:11:22 +0000 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: recycleFrame now updates the children parents to UIParent so they dont get lost.
+------------------------------------------------------------------------
+r111 | kagaro | 2008-02-25 23:14:02 +0000 (Mon, 25 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: made onload have a self reference instead of 'frame'
+------------------------------------------------------------------------
+r110 | kagaro | 2008-02-25 18:01:14 +0000 (Mon, 25 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: stubbed a non functional crop
+------------------------------------------------------------------------
+r108 | kagaro | 2008-02-25 15:30:53 +0000 (Mon, 25 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed alpha when using gradients
+------------------------------------------------------------------------
+r103 | kagaro | 2008-02-25 14:35:21 +0000 (Mon, 25 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updates for enable/disbale 
+------------------------------------------------------------------------
+r102 | kagaro | 2008-02-25 14:26:11 +0000 (Mon, 25 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated default panel setup
+------------------------------------------------------------------------
+r98 | kagaro | 2008-02-23 16:17:45 +0000 (Sat, 23 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added some inline locaization for the command line. and default items  Localizers go to town at the top of the file for the localizations
+------------------------------------------------------------------------
+r95 | kagaro | 2008-02-22 23:28:21 +0000 (Fri, 22 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed up border color issues, refactoring more stuff
+------------------------------------------------------------------------
+r93 | kagaro | 2008-02-22 01:20:16 +0000 (Fri, 22 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: refactor some code for config reuse
+------------------------------------------------------------------------
+r91 | kagaro | 2008-02-21 21:48:55 +0000 (Thu, 21 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added test adjustment code
+------------------------------------------------------------------------
+r90 | kagaro | 2008-02-21 20:56:44 +0000 (Thu, 21 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: shared media support added for font, if shared media is installed otherwise the only font is Blizzard default font
+------------------------------------------------------------------------
+r87 | kagaro | 2008-02-21 20:09:38 +0000 (Thu, 21 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated onEvent callback for panels to not use ... for easier non mod author usage now is arg1-arg10
+------------------------------------------------------------------------
+r86 | kagaro | 2008-02-21 20:05:53 +0000 (Thu, 21 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanls: all event code has been tested now and is working
+------------------------------------------------------------------------
+r85 | kagaro | 2008-02-21 18:47:59 +0000 (Thu, 21 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated code generation
+------------------------------------------------------------------------
+r82 | kagaro | 2008-02-17 18:22:57 +0000 (Sun, 17 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: bug fix
+------------------------------------------------------------------------
+r81 | kagaro | 2008-02-17 12:58:13 +0000 (Sun, 17 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels, fixed typo
+------------------------------------------------------------------------
+r80 | kagaro | 2008-02-16 14:15:32 +0000 (Sat, 16 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/embeds.xml
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+   D /tmp/branches/kgPanels/Ace3/sample_sv.lua
+
+kgPanels: added an activate layout method
+------------------------------------------------------------------------
+r78 | kagaro | 2008-02-14 17:14:42 +0000 (Thu, 14 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added a chunk name to scripts for debuggins info
+------------------------------------------------------------------------
+r75 | kagaro | 2008-02-14 14:55:10 +0000 (Thu, 14 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated script loader to pass a frame name instead of 'this'
+------------------------------------------------------------------------
+r68 | kagaro | 2008-02-09 21:31:59 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: made font string anonymous
+------------------------------------------------------------------------
+r67 | kagaro | 2008-02-09 21:29:58 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: Font updates
+------------------------------------------------------------------------
+r66 | evilelvis | 2008-02-09 21:00:20 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: drycode - ensure CreateFrame hook isn't run when the addon is disabled
+------------------------------------------------------------------------
+r64 | kagaro | 2008-02-09 13:10:00 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated scripting code
+------------------------------------------------------------------------
+r63 | kagaro | 2008-02-09 13:02:01 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added font code back in, and added a local fetch method to check our libs, and if shared media is install, check it
+------------------------------------------------------------------------
+r62 | kagaro | 2008-02-09 12:39:06 +0000 (Sat, 09 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+
+kgPanels: remove extenrla to libmmbutton
+------------------------------------------------------------------------
+r59 | evilelvis | 2008-02-05 04:45:41 +0000 (Tue, 05 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: hook todo
+------------------------------------------------------------------------
+r56 | kagaro | 2008-02-05 00:23:16 +0000 (Tue, 05 Feb 2008) | 2 lines
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added some cmdline switches
+
+------------------------------------------------------------------------
+r55 | evilelvis | 2008-02-04 23:43:43 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: todo list and some observations
+------------------------------------------------------------------------
+r53 | kagaro | 2008-02-04 22:23:17 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixed a typo
+------------------------------------------------------------------------
+r43 | kagaro | 2008-02-03 16:37:41 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: updated externals
+------------------------------------------------------------------------
+r41 | kagaro | 2008-02-03 13:45:58 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: minimap icon optional 
+------------------------------------------------------------------------
+r38 | evilelvis | 2008-02-03 09:59:03 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+   M /tmp/branches/kgPanels/Ace3/embeds.xml
+   A /tmp/branches/kgPanels/Ace3/icon.tga
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added a minimap icon
+------------------------------------------------------------------------
+r34 | evilelvis | 2008-02-03 01:24:29 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: remove unused references
+------------------------------------------------------------------------
+r33 | evilelvis | 2008-02-03 01:03:12 +0000 (Sun, 03 Feb 2008) | 4 lines
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+   M /tmp/branches/kgPanels/Ace3/embeds.xml
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: 
+- command-line switch now same as addon name
+- removed aceconfig3; don't need it since it's in kgPanelsConfig
+- kgPanelsConfig now correctly called
+------------------------------------------------------------------------
+r30 | kagaro | 2008-02-03 00:30:06 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: added options dep on libsharedmedia-2.0
+------------------------------------------------------------------------
+r29 | kagaro | 2008-02-03 00:04:32 +0000 (Sun, 03 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: recycle frames properly cleans up the scripts
+------------------------------------------------------------------------
+r28 | evilelvis | 2008-02-02 23:31:23 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3
+   M /tmp/branches/kgPanels/Ace3/Libs
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+   M /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: added AceConfig-3.0 to libs 
+------------------------------------------------------------------------
+r27 | evilelvis | 2008-02-02 23:27:54 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/embeds.xml
+
+kgPanels: small bug fix to xml namespace
+------------------------------------------------------------------------
+r26 | kagaro | 2008-02-02 22:50:02 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+   A /tmp/branches/kgPanels/Ace3/sample_sv.lua
+
+kgPanels: fixed reparenting code, aplied ee's comments and placed a sample sv file for reference atm
+------------------------------------------------------------------------
+r25 | evilelvis | 2008-02-02 19:17:44 +0000 (Sat, 02 Feb 2008) | 2 lines
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+- Added comments so I can remember what's going on
+- Marked potential problem areas
+------------------------------------------------------------------------
+r24 | kagaro | 2008-02-02 19:06:14 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPAnels: adjusted the font code
+------------------------------------------------------------------------
+r23 | kagaro | 2008-02-02 18:46:54 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: Add OnScript events for frames
+------------------------------------------------------------------------
+r22 | kagaro | 2008-02-02 17:10:34 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: now supports text overlays
+------------------------------------------------------------------------
+r21 | kagaro | 2008-02-02 15:43:01 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: update on available blending modes
+------------------------------------------------------------------------
+r20 | kagaro | 2008-02-02 15:20:17 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/embeds.xml
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: fixes for some drycode errors
+------------------------------------------------------------------------
+r19 | kagaro | 2008-02-02 14:29:25 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/kgPanels.lua
+
+kgPanels: added slash command
+------------------------------------------------------------------------
+r18 | kagaro | 2008-02-02 14:19:28 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/branches/kgPanels/Ace3/Libs
+
+kgPanels: settng externals
+------------------------------------------------------------------------
+r17 | kagaro | 2008-02-02 14:16:02 +0000 (Sat, 02 Feb 2008) | 1 line
+Changed paths:
+   A /tmp/branches/kgPanels
+   A /tmp/branches/kgPanels/Ace3
+   A /tmp/branches/kgPanels/Ace3/Libs
+   A /tmp/branches/kgPanels/Ace3/embeds.xml
+   A /tmp/branches/kgPanels/Ace3/kgPanels.lua
+   A /tmp/branches/kgPanels/Ace3/kgPanels.toc
+
+kgPanels: initial import
+------------------------------------------------------------------------

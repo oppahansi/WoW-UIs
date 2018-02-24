@@ -1,0 +1,8 @@
+
+IgM_SV = {
+	["enabled"] = true,
+	["list"] = {
+		["Icecrown-Horde"] = {
+		},
+	},
+}

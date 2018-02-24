@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fThreatBar|r]
+## Notes: Show a threat bar on the unit frame.
+## Notes-koKR: 유닛 프레임에 위협 바를 보여줍니다.
+## Author: Ckknight
+## X-Credits: Kyahx
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: nymbia@gmail.com
+## X-License: GPL v2 or later
+## Version: 2.0
+
+ThreatBar.lua

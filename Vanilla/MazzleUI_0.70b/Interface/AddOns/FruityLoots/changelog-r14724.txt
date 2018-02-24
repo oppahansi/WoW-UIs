@@ -1,0 +1,135 @@
+------------------------------------------------------------------------
+r14724 | damjau | 2006-10-21 20:55:23 -0400 (Sat, 21 Oct 2006) | 1 line
+
+FruityLoots - Add koKR
+------------------------------------------------------------------------
+r12517 | ammo | 2006-10-01 13:42:40 -0400 (Sun, 01 Oct 2006) | 2 lines
+
+FruityLoots: externals fixed
+
+------------------------------------------------------------------------
+r12057 | nevcairiel | 2006-09-26 13:04:50 -0400 (Tue, 26 Sep 2006) | 1 line
+
+Externals: All F, all FuBar plugins, i guess that was half of all addons.
+------------------------------------------------------------------------
+r9332 | sinaloit | 2006-08-27 17:21:34 -0400 (Sun, 27 Aug 2006) | 2 lines
+
+FruityLoots:
+- updating .toc for SVN file autocreation.
+------------------------------------------------------------------------
+r7943 | yzerman | 2006-08-13 22:53:54 -0400 (Sun, 13 Aug 2006) | 1 line
+
+FruityLoots - Adjust the Cursor Position
+------------------------------------------------------------------------
+r7662 | yzerman | 2006-08-11 03:49:42 -0400 (Fri, 11 Aug 2006) | 1 line
+
+FruityLoots - Chinese Locals Added
+------------------------------------------------------------------------
+r4862 | neriak | 2006-07-14 16:02:49 -0400 (Fri, 14 Jul 2006) | 1 line
+
+FruityLoots - fixed typos
+------------------------------------------------------------------------
+r4860 | neriak | 2006-07-14 15:55:38 -0400 (Fri, 14 Jul 2006) | 1 line
+
+FruityLoots - namechange for AceLoot
+------------------------------------------------------------------------
+r4858 | neriak | 2006-07-14 15:40:06 -0400 (Fri, 14 Jul 2006) | 1 line
+
+AceLoot: another try to get that damned svn:external working
+------------------------------------------------------------------------
+r4857 | neriak | 2006-07-14 15:36:52 -0400 (Fri, 14 Jul 2006) | 1 line
+
+Created folder remotely
+------------------------------------------------------------------------
+r4856 | neriak | 2006-07-14 15:36:12 -0400 (Fri, 14 Jul 2006) | 1 line
+
+Removed file/folder
+------------------------------------------------------------------------
+r4854 | neriak | 2006-07-14 15:01:05 -0400 (Fri, 14 Jul 2006) | 1 line
+
+AceLoot: minor cleanup
+------------------------------------------------------------------------
+r4853 | neriak | 2006-07-14 14:57:58 -0400 (Fri, 14 Jul 2006) | 1 line
+
+AceLoot: updated to Ace2
+------------------------------------------------------------------------
+r4852 | neriak | 2006-07-14 14:39:18 -0400 (Fri, 14 Jul 2006) | 1 line
+
+AceLoot - deleted folders
+------------------------------------------------------------------------
+r4851 | neriak | 2006-07-14 14:37:01 -0400 (Fri, 14 Jul 2006) | 1 line
+
+AceLoot - libs folder import
+------------------------------------------------------------------------
+r3195 | neriak | 2006-06-23 13:59:46 -0400 (Fri, 23 Jun 2006) | 1 line
+
+AceLoot: changed ace:print to self:debug
+------------------------------------------------------------------------
+r3194 | neriak | 2006-06-23 13:57:16 -0400 (Fri, 23 Jun 2006) | 1 line
+
+AceLoot: Minor code changes
+------------------------------------------------------------------------
+r3091 | neriak | 2006-06-21 14:52:26 -0400 (Wed, 21 Jun 2006) | 1 line
+
+AceLoot: wrong version number
+------------------------------------------------------------------------
+r3089 | neriak | 2006-06-21 14:23:00 -0400 (Wed, 21 Jun 2006) | 1 line
+
+AceLoot: date rev not updated ...
+------------------------------------------------------------------------
+r3088 | neriak | 2006-06-21 14:18:44 -0400 (Wed, 21 Jun 2006) | 1 line
+
+AceLoot: toc update
+------------------------------------------------------------------------
+r1575 | neriak | 2006-05-07 05:30:37 -0400 (Sun, 07 May 2006) | 1 line
+
+AceLoot: changed major version
+------------------------------------------------------------------------
+r1574 | neriak | 2006-05-07 05:29:16 -0400 (Sun, 07 May 2006) | 1 line
+
+AceLoot: fixed typo in non-german localization
+------------------------------------------------------------------------
+r1514 | neriak | 2006-05-06 16:50:17 -0400 (Sat, 06 May 2006) | 1 line
+
+AceLoot: removed local for AutoHide
+------------------------------------------------------------------------
+r1512 | neriak | 2006-05-06 16:47:40 -0400 (Sat, 06 May 2006) | 1 line
+
+AceLoot: keyword change
+------------------------------------------------------------------------
+r1446 | neriak | 2006-05-05 10:57:32 -0400 (Fri, 05 May 2006) | 1 line
+
+AceLoot: removed external .. hope this will work now :-/
+------------------------------------------------------------------------
+r1445 | neriak | 2006-05-05 10:54:52 -0400 (Fri, 05 May 2006) | 1 line
+
+AceLoot: I guess I'll stick with DIALOG strata.
+------------------------------------------------------------------------
+r1440 | neriak | 2006-05-05 06:46:51 -0400 (Fri, 05 May 2006) | 1 line
+
+AceLoot: Changed Strata back to High .. damned I need a valid frame strata list and their order from lowest to highest
+------------------------------------------------------------------------
+r1437 | neriak | 2006-05-05 04:51:14 -0400 (Fri, 05 May 2006) | 1 line
+
+AceLoot: fixed all issues, added offscreen prevention of the LootFrame.
+------------------------------------------------------------------------
+r1317 | neriak | 2006-05-01 19:32:05 -0400 (Mon, 01 May 2006) | 1 line
+
+AceLoot: changed event registering a tad
+------------------------------------------------------------------------
+r1211 | neriak | 2006-04-30 15:22:41 -0400 (Sun, 30 Apr 2006) | 1 line
+
+AceLoot: fixed 'Once' mode, after looting the first item the addon stops auto-position the LootFrame under your cursor.
+------------------------------------------------------------------------
+r1206 | neriak | 2006-04-30 12:47:29 -0400 (Sun, 30 Apr 2006) | 1 line
+
+AceLoot: removed the LootFrame hook, the addon is now completely event driven .. yay!
+------------------------------------------------------------------------
+r1203 | neriak | 2006-04-30 11:01:39 -0400 (Sun, 30 Apr 2006) | 1 line
+
+AceLoot: added toggle to only position button once (prevents the frame from jumping around while looting), added toggle to auto-hide the LootFrame, added svn:keywords Date Rev
+------------------------------------------------------------------------
+r482 | neriak | 2006-04-20 19:56:47 -0400 (Thu, 20 Apr 2006) | 1 line
+
+AceLoot: Initial import. Changed Framestrata to High so it does cover Bagnon and other frames with high strata
+------------------------------------------------------------------------

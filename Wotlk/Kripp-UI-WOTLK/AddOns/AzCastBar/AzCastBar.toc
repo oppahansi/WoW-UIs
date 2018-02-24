@@ -1,0 +1,8 @@
+## Interface: 30300
+## Version: 10.06.27
+## Title: AzCastBar
+## Author: Aezay (Earthen Ring EU)
+## Notes: Casting Bar Addon with Plugin Support
+## SavedVariablesPerCharacter: AzCastBar_Config
+Libs\LibTableRecycler.lua
+core.lua

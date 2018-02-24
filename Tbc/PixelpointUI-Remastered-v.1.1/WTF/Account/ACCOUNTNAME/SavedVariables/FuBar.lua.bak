@@ -1,0 +1,68 @@
+
+FuBar2DB = {
+	["profiles"] = {
+		["Default"] = {
+			["fontSize"] = 11,
+			["skin"] = "Interface\\AddOns\\FuBar\\background",
+			["skinB"] = 0,
+			["adjust"] = false,
+			["tooltip"] = {
+				["fontSizePercent"] = 1,
+			},
+			["panels"] = {
+				{
+					["xPercent"] = 0,
+					["attachPoint"] = "BOTTOM",
+					["widthPercent"] = 1,
+					["plugins"] = {
+						["right"] = {
+							"ClockFu 3.0", -- [1]
+							"BagFu", -- [2]
+							"MoneyFu", -- [3]
+							"DurabilityFu", -- [4]
+						},
+						["left"] = {
+						},
+						["center"] = {
+						},
+					},
+					["yPercent"] = 0.5,
+				}, -- [1]
+			},
+			["minimap"] = {
+			},
+			["skinG"] = 0,
+			["transparency"] = 1,
+			["rightSpacing"] = 27,
+			["leftSpacing"] = 33,
+			["detached"] = {
+				["FriendsFu"] = true,
+			},
+			["loadOnDemand"] = {
+				["FuBar_ClockFu"] = {
+					["title"] = "ClockFu 3.0",
+					["category"] = "Interface Enhancements",
+				},
+				["FuBar_BagFu"] = {
+					["title"] = "BagFu",
+					["category"] = "Inventory",
+				},
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
+				},
+			},
+			["skinR"] = 0,
+			["places"] = {
+				["left"] = {
+					["FriendsFu"] = true,
+				},
+				["right"] = {
+				},
+			},
+		},
+	},
+	["account"] = {
+		["firstTimeWoW21"] = true,
+	},
+}

@@ -1,0 +1,11 @@
+
+SI_Save = {
+	["inrangeupdate"] = true,
+	["playercache"] = true,
+	["scale"] = 0.699999988079071,
+	["items"] = 1,
+	["default"] = 1,
+	["btab"] = 3,
+	["itemscached"] = false,
+	["bonus"] = 1,
+}

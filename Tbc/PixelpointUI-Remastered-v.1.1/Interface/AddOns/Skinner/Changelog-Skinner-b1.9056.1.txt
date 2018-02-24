@@ -1,0 +1,83 @@
+commit c128a21ccea38b11016e5678d0d72bd428179bbe
+Author: Jncl <jncl@mac.com>
+Date:   Mon Oct 13 11:59:37 2008 +0100
+
+    Skinner: Load tekKonfig skin from Cork one
+
+commit 356daaf035608771be4e50a5f46141f873615e61
+Author: Jncl <jncl@mac.com>
+Date:   Sun Oct 12 20:37:54 2008 +0100
+
+    Skinner: Turn off debug messages
+
+commit 5e68c4cd529c4aa8bc5402b39a89897b5ccf7a1f
+Author: Jncl <jncl@mac.com>
+Date:   Sun Oct 12 20:22:50 2008 +0100
+
+    Skinner: Skinned tekKonfig
+
+commit a5839d6eda0c26de7e693f776a75c9524fbd3a48
+Author: Jncl <jncl@mac.com>
+Date:   Sun Oct 12 17:59:24 2008 +0100
+
+    Skinner: Skinned Cork & HandyNotes
+    - Updated AtlasQuest, EnhancedStackSplit & Prat skins
+
+commit 0b563d4a64c1cd9c31c9ef2c788bdbac5bc70269
+Author: Jncl <jncl@mac.com>
+Date:   Sat Oct 11 14:03:57 2008 +0100
+
+    Skinner: Bugfix for AchievementUI GameTooltip StatusBar skinning
+
+commit 242631995c7819452741fa7562da3f54df13c1de
+Author: Jncl <jncl@mac.com>
+Date:   Sat Oct 11 13:54:57 2008 +0100
+
+    Skinner: Skinned AchievmentUI, BarbershopUI, Calendar & FeedbackUI
+
+commit 71cdea7b740c7d5ceb1e6ba7a0e15a4020f4bdc0
+Author: Jncl <jncl@mac.com>
+Date:   Tue Oct 7 15:01:07 2008 +0100
+
+    Skinner: Added some 'Repository keyword substitutions' to TOC etc
+
+commit 55538180adf826a2126e7ed503252b65404e24bd
+Author: Jncl <jncl@mac.com>
+Date:   Tue Oct 7 00:14:00 2008 +0100
+
+    Skinner: Updated for WotLK/PTR changes, includes:
+    - support for new frames ( TokenUI, GlyphUI)
+    - support for updated frames (PetPaperDollFrame, PVPFrame, SpellBookFrame, TalentUI, TradeSkillUI)
+    - support for changes to button text colour
+    - support for changed function signatures
+    - support for GameTooltip StatusBars
+    - support for Backpack Token info
+    - support for updated Game Menu option frames
+    - support for Nameplate changes
+
+commit aba8ac609059d98d2a492a4c1cbd7e692b523353
+Author: Jncl <jncl@mac.com>
+Date:   Fri Oct 3 13:40:27 2008 +0100
+
+    Skinner: Added .gitignore
+    - Updated version number in TOC
+    - UPdated embeds.xml to correctly reflect library names
+
+commit a88a4391576e50df9af4f49b951a820769719903
+Author: Jncl <jncl@mac.com>
+Date:   Thu Oct 2 17:56:17 2008 +0100
+
+    Skinner: Updated .pkgmeta with corrected svn locations
+
+commit cddd697b4b8b94f29cab12b841ff1e1e02863f6f
+Author: Jncl <jncl@mac.com>
+Date:   Thu Oct 2 17:47:42 2008 +0100
+
+    Skinner: Updated .pkgmeta to remove leading slash from externals: entries
+
+commit b275d9674c785bd4f03fdbb4a1da0ceb7a3766e3
+Author: Jncl <jncl@mac.com>
+Date:   Thu Oct 2 17:39:00 2008 +0100
+
+    Skinner: First commit to Git Repo
+    -- includes bugfixes for PTR changes, and several other outstanding fixes

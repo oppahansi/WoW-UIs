@@ -1,0 +1,38 @@
+Frostadamus UI
+Check out my youtube channel.
+
+
+------------------------------------------------------------------------------------------------------------------------
+IMPORTANT: BACKUP INTERFACE FOLDER AND WTF FOLDER TO A SAFE PLACE BEFORE FOLLOWING THESE STEPS 
+1) Remove your Interface folder and use the one provided in the zip
+2) Remove your WTF folder and use the one provided in the zip
+3) Clear game cache (delete the WDB folder)
+4) Copy and Paste Fonts/Interface/WTF into your world of warcraft folder.
+5) Go into WTF Folder/Account/ and rename the YOURACCOUNTNAMEINCAPS to your account name. Enter the youraccountname
+folder and rename your server name exactly how is shown in login screen, enter the server folder and rename char name 
+like in game.
+
+-------------------------------------------------------------------------------------------------------------------------
+ADDON COMMANDS
+-------------------------------------------------------------------------------------------------------------------------
+
+RAID UNIT FRAMES - Luna Unit Frames - /luna
+CAST BAR - eCB - /eCB
+TOOLTIPS - TinyTip - /tinytip
+MINIMAP - Simple Mini Map - /simpleminimap
+IMPROVED ERROR FRAME - /ief
+MODUI - The entire dark classic UI - use button near bags M for config.
+BG Enemy Frames - /efs
+Aux - Auction House addon - https://forum.nostalrius.org/viewtopic.php?f=63&t=21102
+cooldowns - Enemy cooldown on top of the player target - https://github.com/shirsig/cooldowns
+NPCSCAN - /npcscan 
+          /npcscan Name(player or mob)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+For other settings check my entire youtube video.
+Frostadamus on youtube.

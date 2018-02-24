@@ -1,0 +1,77 @@
+------------------------------------------------------------------------
+r74059 | 7destiny | 2008-05-16 07:05:45 -0400 (Fri, 16 May 2008) | 2 lines
+Changed paths:
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   A /trunk/ElkBuffBars/locales/ElkBuffBars.koKR.lua
+
+ElkBuffBars
+- Added koKR localization
+------------------------------------------------------------------------
+r74035 | elkano | 2008-05-16 02:58:28 -0400 (Fri, 16 May 2008) | 1 line
+Changed paths:
+   M /trunk/ElkBuffBars/ElkBuffBars.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   M /trunk/ElkBuffBars/embeds.xml
+   M /trunk/ElkBuffBars/libs
+   A /trunk/ElkBuffBars/libs/CallbackHandler-1.0 (from /trunk/ElkBuffBars/libs/CallbackHandler-1.0:73803)
+   R /trunk/ElkBuffBars/libs/CallbackHandler-1.0/CallbackHandler-1.0.lua (from /trunk/ElkBuffBars/libs/CallbackHandler-1.0/CallbackHandler-1.0.lua:73803)
+   A /trunk/ElkBuffBars/libs/LibStub (from /trunk/ElkBuffBars/libs/LibStub:73803)
+   R /trunk/ElkBuffBars/libs/LibStub/LibStub.lua (from /trunk/ElkBuffBars/libs/LibStub/LibStub.lua:73803)
+   M /trunk/ElkBuffBars/locales/ElkBuffBars.enUS.lua
+   D /trunk/ElkBuffBars/locales/ElkBuffBars.koKR.lua
+
+ElkBuffBars: reverted changes by 7destiny
+------------------------------------------------------------------------
+r74007 | 7destiny | 2008-05-15 19:07:12 -0400 (Thu, 15 May 2008) | 2 lines
+Changed paths:
+   M /trunk/ElkBuffBars/embeds.xml
+   M /trunk/ElkBuffBars/libs
+   D /trunk/ElkBuffBars/libs/CallbackHandler-1.0
+   D /trunk/ElkBuffBars/libs/LibStub
+
+ElkBuffBars
+- change embeds.xml :p
+------------------------------------------------------------------------
+r73997 | 7destiny | 2008-05-15 17:48:53 -0400 (Thu, 15 May 2008) | 3 lines
+Changed paths:
+   M /trunk/ElkBuffBars/ElkBuffBars.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   M /trunk/ElkBuffBars/locales/ElkBuffBars.enUS.lua
+   A /trunk/ElkBuffBars/locales/ElkBuffBars.koKR.lua
+
+ElkBuffBars
+- Some local for translation
+- Add koKR local
+------------------------------------------------------------------------
+r73803 | elkano | 2008-05-14 04:52:49 -0400 (Wed, 14 May 2008) | 1 line
+Changed paths:
+   M /trunk/ElkBuffBars/EBB_Bar.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   M /trunk/ElkBuffBars/embeds.xml
+   M /trunk/ElkBuffBars/libs
+
+ElkBuffBars: moved to LibAbacus-3.0 and LibGratuity-3.0
+------------------------------------------------------------------------
+r70735 | scorpio0920 | 2008-04-21 09:41:32 -0400 (Mon, 21 Apr 2008) | 3 lines
+Changed paths:
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   A /trunk/ElkBuffBars/locales/ElkBuffBars.zhCN.lua
+   A /trunk/ElkBuffBars/locales/ElkBuffBars.zhTW.lua
+
+ElkBuffBars
+- Added zhCN and zhTW localization. (Need to to decorate)
+- Added Note-zhCN and Note-zhTW.
+------------------------------------------------------------------------
+r70705 | elkano | 2008-04-21 04:06:19 -0400 (Mon, 21 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/ElkBuffBars/EBB_Bar.lua
+   M /trunk/ElkBuffBars/EBB_BarGroup.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.lua
+   M /trunk/ElkBuffBars/ElkBuffBars.toc
+   M /trunk/ElkBuffBars/libs
+   A /trunk/ElkBuffBars/locales
+   A /trunk/ElkBuffBars/locales/ElkBuffBars.enUS.lua
+
+ElkBuffBars: finally support for localizing stuff :)
+------------------------------------------------------------------------

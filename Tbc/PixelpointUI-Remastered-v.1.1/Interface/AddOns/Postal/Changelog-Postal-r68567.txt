@@ -1,0 +1,53 @@
+------------------------------------------------------------------------
+r68567 | xinhuan | 2008-04-08 04:44:58 -0400 (Tue, 08 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Modules/Express.lua
+
+Postal: - Revert last commit for embedding textures in the fontstrings as it seems to cause word wrapping issues in the tooltip text.
+------------------------------------------------------------------------
+r67902 | xinhuan | 2008-04-03 12:35:25 -0400 (Thu, 03 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Modules/Express.lua
+
+Postal: - Convert to using embedded textures in fontstrings, instead of tooltip:AddTexture() so that we can have 12 icons instead of a tooltip's maximum of 10.
+------------------------------------------------------------------------
+r67693 | ananhaid | 2008-04-02 10:44:23 -0400 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Postal/Locales/zhCN.lua
+
+Postal: 
+- zhCN update.
+------------------------------------------------------------------------
+r67604 | next96 | 2008-04-01 22:53:27 -0400 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Postal/Locales/koKR.lua
+
+Postal: 
+- Update locale koKR
+------------------------------------------------------------------------
+r67601 | whyv | 2008-04-01 22:44:28 -0400 (Tue, 01 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Locales/zhTW.lua
+
+Postal: -update zhTW
+------------------------------------------------------------------------
+r67593 | xinhuan | 2008-04-01 21:57:16 -0400 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Postal/Locales/deDE.lua
+   M /trunk/Postal/Locales/enUS.lua
+   M /trunk/Postal/Locales/esES.lua
+   M /trunk/Postal/Locales/frFR.lua
+   M /trunk/Postal/Locales/koKR.lua
+   M /trunk/Postal/Locales/zhCN.lua
+   M /trunk/Postal/Locales/zhTW.lua
+   M /trunk/Postal/Modules/Express.lua
+
+Postal: - Add Mousewheel scrolling to Inbox frame to Express module. You can turn this off.
+- Return from localization files early instead of creating and registering unnecessary locale tables.
+------------------------------------------------------------------------
+r65817 | xinhuan | 2008-03-25 15:33:12 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Postal.toc
+
+Postal: - Update TOC to 20400, nothing is broken.
+------------------------------------------------------------------------

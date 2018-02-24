@@ -1,0 +1,5 @@
+
+EnchantrixBarkerConfig = {
+	["profile.Default"] = {
+	},
+}

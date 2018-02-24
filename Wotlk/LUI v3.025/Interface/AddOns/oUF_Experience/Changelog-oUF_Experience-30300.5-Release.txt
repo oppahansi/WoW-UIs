@@ -1,0 +1,16 @@
+tag 30300.5-Release
+07d4b458a3bd6ee4ab37949c7d2d24c9c9b42540
+Adrian L Lange <adrianlund@gmail.com>
+2009-12-28 19:52:19 +0100
+
+Tag 30300.5-Release
+
+
+--------------------
+
+Adrian L Lange:
+	- Update version
+	- Update TOC version
+	- Stupid copy/paste
+	- Add embedding support
+	- Clean up the act and make everything work with vehicles and other pets

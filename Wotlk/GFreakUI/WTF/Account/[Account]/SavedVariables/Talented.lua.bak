@@ -1,0 +1,10 @@
+
+TalentedDB = {
+	["profileKeys"] = {
+		["Doublefisted - Icecrown"] = "Doublefisted - Icecrown",
+	},
+	["profiles"] = {
+		["Doublefisted - Icecrown"] = {
+		},
+	},
+}

@@ -1,0 +1,34 @@
+## Interface: 20400
+
+## Title: VendorValues
+## Version: 4.1.0
+## Author: Saeris
+## SavedVariables: VendorValues_Config
+## OptionalDeps: Lib-ConfigManager1, Lib-ItemDB_VendorPrices1, Lib-SimpleSlash1, Lib-TooltipItemQuantities1
+
+
+## Notes: Displays in all item tooltips the vendor value of any item you encounter and bring to a merchant. Type "/veva" for commands.
+
+
+libraries\Lib-EventsManager1\EventsManager1_Loader.xml
+libraries\Lib-ConfigManager1\ConfigManager1_Loader.xml
+
+#libraries\Lib-EventsManager1\EventsManager1_Loader.xml
+
+libraries\Lib-CommonParsingTooltip1\CommonParsingTooltip1_Loader.xml
+#libraries\Lib-EventsManager1\EventsManager1_Loader.xml
+libraries\Lib-ItemDB_VendorPrices1\ItemDB_VendorPrices1_Loader.xml
+
+libraries\Lib-SimpleSlash1\SimpleSlash1_Loader.xml
+
+libraries\Lib-TooltipItemQuantities1\TooltipItemQuantities1_Loader.xml
+
+
+VendorValues_BaseObject.lua
+
+VendorValues_Localization_enUS.lua
+
+VendorValues_Config.lua
+VendorValues_Tooltips.lua
+
+VendorValues_Main.lua

@@ -1,0 +1,12 @@
+Commands
+--------
+
+/uihelp - for a list of the usable commands.
+/uf - to move unit frames
+/hb - to toggle keybind editor
+/dps - to toggle dps unitframe (vertical party members bar)
+/heal - to toggle grid mode
+/resetui - to reset tukui
+/ainv - sets invite as a keyword to invite the player who whispered you that invite. Or you can set your own keyword by using ainv keyword without the quotes
+/mss - to move the shapeshift, totem and aura bar
+/CLFix - to fix combat log

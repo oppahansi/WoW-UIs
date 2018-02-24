@@ -1,0 +1,1 @@
+## Interface: 30300## Author: Xus (Xussie of Kazzak EU)## Title: Forte|c50f58cbaPaladin|r## Notes: Forte Paladin Module## SavedVariables:## OptionalDeps:Forte_Casting, Forte_Timer, Forte_Cooldown## Dependencies:Forte_CoreLocalization.luaForte_Paladin.lua

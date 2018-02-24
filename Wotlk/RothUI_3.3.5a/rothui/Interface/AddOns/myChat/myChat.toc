@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: myChat
+## Version: 1.4.5
+## Author: Turkoid
+## Notes: Lightweight chat addon
+
+config.lua
+core.lua

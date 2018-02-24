@@ -1,0 +1,16 @@
+XPerl_Options: enabled
+XPerl_TeamSpeak: disabled
+SmartBuff: disabled
+WIM: enabled
+ElkBuffBars: disabled
+AtlasMajorCitiesEnhanced: disabled
+sct_options: disabled
+sct: disabled
+Coordinates: disabled
+Bagnon: enabled
+Bagnon_Config: enabled
+Bagnon_Forever: enabled
+Bagnon_GuildBank: enabled
+Bagnon_Tooltips: enabled
+Omen: enabled
+OneBag3: disabled

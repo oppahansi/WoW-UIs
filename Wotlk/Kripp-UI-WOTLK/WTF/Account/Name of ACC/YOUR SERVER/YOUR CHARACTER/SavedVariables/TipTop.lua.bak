@@ -1,0 +1,4 @@
+
+TipTopPCDB = {
+	["charSpec"] = false,
+}

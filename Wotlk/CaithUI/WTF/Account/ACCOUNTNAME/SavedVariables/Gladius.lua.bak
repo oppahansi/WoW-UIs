@@ -1,0 +1,32 @@
+
+GladiusDB = {
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+	},
+	["profiles"] = {
+		["Caithlyn - Gorgonnash"] = {
+			["barHeight"] = 26,
+			["manaFontSize"] = 8,
+			["locked"] = true,
+			["castBarHeight"] = 17,
+			["barWidth"] = 200,
+			["y"] = 365.7145254482923,
+			["x"] = 923.7941742503417,
+			["selectedFrameColor"] = {
+				["r"] = 0.4509803921568628,
+				["g"] = 0.7843137254901961,
+				["b"] = 1,
+			},
+			["classIcon"] = false,
+			["manaMax"] = false,
+			["barTexture"] = "Glamour4",
+			["manaBarHeight"] = 10,
+			["trinketStatus"] = false,
+			["frameColor"] = {
+				["a"] = 1,
+			},
+			["raceText"] = false,
+			["padding"] = 0,
+		},
+	},
+}

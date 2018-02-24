@@ -1,0 +1,11 @@
+TitanParchment: disabled
+TitanZeppelinMaster: disabled
+TitanSoulShardCounter: enabled
+TitanStanceSets: disabled
+TitanAtlas: disabled
+TitanBMRecLevel: disabled
+TitanCritLine: disabled
+Informant: enabled
+TitanTimers: disabled
+eCastingBar: disabled
+TitanXPBar: disabled

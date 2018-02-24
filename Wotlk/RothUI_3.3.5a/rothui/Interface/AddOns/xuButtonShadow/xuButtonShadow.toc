@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: xuButtonShadow
+## Author: Xu aka Garry
+## Notes: Styles the rActionButtonStyler with shadows.
+## Dependencies: rActionBarStyler, rActionButtonStyler
+## DefaultState: enabled
+xuButtonShadow.lua

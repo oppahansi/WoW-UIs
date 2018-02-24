@@ -1,0 +1,14 @@
+## Interface: 20400
+## Title: XPBarNone |cff7fff7f -Ace2-|r
+## Author: phyber
+## Notes: Lightweight XP bar using Ace2.
+## Version: 2.4
+## SavedVariables: XPBarNoneDB
+## OptionalDeps: Ace2, Dewdrop-2.0, LibSharedMedia-3.0, Waterfall-1.0
+## X-Category: Interface Enhancements
+## X-Website: http://phyber.wowinterface.com/
+## X-Embeds: Ace2, Dewdrop-2.0, LibSharedMedia-3.0, Waterfall-1.0
+
+embeds.xml
+Locales\locales.xml
+Core.lua

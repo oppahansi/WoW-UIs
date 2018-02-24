@@ -1,0 +1,9 @@
+MACRO 1 " " Ability_CheapShot
+/console cameraDistanceMaxFactor 2.6
+END
+MACRO 3 "Message" INV_Misc_QuestionMark
+LF7M Sarth + 3 10m Achievement run (drake res) need all
+END
+MACRO 2 "Spam" Ability_Creature_Cursed_03
+/script _G.ch=6;_G.m=15;_G.s=not _G.s;local t;if not _G.f then t=20;_G.f=CreateFrame("frame");_G.f:SetScript("OnUpdate", function (s, e) if _G.s then t=t+e;if t>_G.m then t=0; SendChatMessage(GetMacroBody("Message"),"CHANNEL",nil,_G.ch);end end end)end
+END

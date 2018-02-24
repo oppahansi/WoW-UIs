@@ -1,0 +1,19 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fDruidManaBar|r]
+## Notes: Show a mana bar for your Druid when in Cat or Bear form.
+## Notes-koKR: 드루이드가 표범 혹은 곰 변신 상태일 때를 위한 마나 바를 보여줍니다.
+## Author: ckknight
+## X-Credits: Some code borrowed from SmartyCat by Darravis
+## X-PitBull-Condition: return select(2, UnitClass("player")) == "DRUID"
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2, LibDruidMana-1.0
+## X-Embeds: LibDruidMana-1.0
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+DruidManaBar.lua

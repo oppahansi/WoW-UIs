@@ -1,0 +1,4 @@
+## Interface: 11200
+## Title: ClassPortraits_Vanilla
+## Notes: Shows class portraits of player characters
+ClassPortraits_Vanilla.lua

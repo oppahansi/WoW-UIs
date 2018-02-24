@@ -1,0 +1,907 @@
+
+RecountPerCharDB = {
+	["version"] = "1.3",
+	["combatants"] = {
+		["Obscene"] = {
+			["isFriend"] = true,
+			["LastEventHealth"] = {
+				"63 (100%)", -- [1]
+				"63 (100%)", -- [2]
+				"62 (98%)", -- [3]
+				"62 (98%)", -- [4]
+				"61 (96%)", -- [5]
+				"61 (96%)", -- [6]
+				"61 (96%)", -- [7]
+				"60 (95%)", -- [8]
+				"60 (95%)", -- [9]
+				"60 (95%)", -- [10]
+				"59 (93%)", -- [11]
+				"58 (92%)", -- [12]
+				"58 (92%)", -- [13]
+			},
+			["class"] = "Warlock",
+			["level"] = 1,
+			["FightsSaved"] = 1,
+			["Owner"] = false,
+			["LastEventHealthNum"] = {
+				100, -- [1]
+				100, -- [2]
+				98.41269841269842, -- [3]
+				98.41269841269842, -- [4]
+				96.82539682539682, -- [5]
+				96.82539682539682, -- [6]
+				96.82539682539682, -- [7]
+				95.23809523809524, -- [8]
+				95.23809523809524, -- [9]
+				95.23809523809524, -- [10]
+				93.65079365079365, -- [11]
+				92.06349206349206, -- [12]
+				92.06349206349206, -- [13]
+			},
+			["LastEvents"] = {
+				"Obscene Shadow Bolt Duskbat Hit -16 (Shadow)", -- [1]
+				"Duskbat Melee Obscene Hit -1 (Physical)", -- [2]
+				"Obscene Shadow Bolt Duskbat Hit -14 (Shadow)", -- [3]
+				"Duskbat Melee Obscene Hit -1 (Physical)", -- [4]
+				"Obscene Shadow Bolt Duskbat Hit -14 (Shadow)", -- [5]
+				"Obscene Melee Duskbat Hit -1 (Physical)", -- [6]
+				"Duskbat Melee Obscene Hit -1 (Physical)", -- [7]
+				"Duskbat Melee Obscene Miss", -- [8]
+				"Obscene Melee Duskbat Crit -2 (Physical)", -- [9]
+				"Duskbat Melee Obscene Hit -1 (Physical)", -- [10]
+				"Duskbat Melee Obscene Hit -1 (Physical)", -- [11]
+				"Obscene Melee Duskbat Crit -4 (Physical)", -- [12]
+				"Obscene Melee Duskbat Crit -4 (Physical)", -- [13]
+			},
+			["LastAbility"] = 359673.024,
+			["TimeLast"] = {
+				["ActiveTime"] = 1361764426,
+				["TimeDamage"] = 1361764426,
+				["OVERALL"] = 1361764426,
+				["DamageTaken"] = 1361764424,
+				["Damage"] = 1361764426,
+			},
+			["LastAttackedBy"] = "Duskbat",
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
+				"DAMAGE", -- [10]
+				"DAMAGE", -- [11]
+				"DAMAGE", -- [12]
+				"DAMAGE", -- [13]
+			},
+			["TimeWindows"] = {
+				["TimeDamage"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["Damage"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["DamageTaken"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+				["ActiveTime"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					0, -- [4]
+					0, -- [5]
+					0, -- [6]
+					0, -- [7]
+					0, -- [8]
+					0, -- [9]
+					0, -- [10]
+					0, -- [11]
+					0, -- [12]
+					0, -- [13]
+					0, -- [14]
+					0, -- [15]
+					0, -- [16]
+					0, -- [17]
+					0, -- [18]
+					0, -- [19]
+					0, -- [20]
+				},
+			},
+			["enClass"] = "WARLOCK",
+			["LastDamageTaken"] = 1,
+			["AbilityType"] = {
+				["Melee"] = "Melee",
+				["Shadow Bolt"] = "Shadow",
+			},
+			["LastFightIn"] = 0,
+			["isPlayer"] = true,
+			["type"] = "Self",
+			["GUID"] = "0x000000000008A8DB",
+			["TimeNeedZero"] = {
+				["Damage"] = false,
+				["ActiveTime"] = false,
+				["DamageTaken"] = false,
+				["TimeDamage"] = false,
+			},
+			["unit"] = "Obscene",
+			["LastDamageAbility"] = "Melee",
+			["LastEventNum"] = {
+				[10] = 1.587301587301587,
+				[7] = 1.587301587301587,
+				[2] = 1.587301587301587,
+				[11] = 1.587301587301587,
+				[4] = 1.587301587301587,
+			},
+			["NextEventNum"] = 14,
+			["TimeData"] = {
+				["TimeDamage"] = {
+					{
+						1361764406, -- [1]
+						1361764438, -- [2]
+						1361764439, -- [3]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.01222222222222222, -- [2]
+						0, -- [3]
+					}, -- [2]
+				},
+				["ActiveTime"] = {
+					{
+						1361764406, -- [1]
+						1361764438, -- [2]
+						1361764439, -- [3]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.01222222222222222, -- [2]
+						0, -- [3]
+					}, -- [2]
+				},
+				["DamageTaken"] = {
+					{
+						1361764425, -- [1]
+						1361764436, -- [2]
+						1361764437, -- [3]
+					}, -- [1]
+					{
+						0, -- [1]
+						0.007407407407407408, -- [2]
+						0, -- [3]
+					}, -- [2]
+				},
+				["Damage"] = {
+					{
+						1361764406, -- [1]
+						1361764423, -- [2]
+						1361764438, -- [3]
+						1361764439, -- [4]
+					}, -- [1]
+					{
+						0, -- [1]
+						1.955555555555556, -- [2]
+						0.02962962962962963, -- [3]
+						0, -- [4]
+					}, -- [2]
+				},
+			},
+			["LastEventIncoming"] = {
+				false, -- [1]
+				true, -- [2]
+				false, -- [3]
+				true, -- [4]
+				false, -- [5]
+				false, -- [6]
+				true, -- [7]
+				true, -- [8]
+				false, -- [9]
+				true, -- [10]
+				true, -- [11]
+				false, -- [12]
+				false, -- [13]
+			},
+			["Name"] = "Obscene",
+			["inGroup"] = true,
+			["LastEventTimes"] = {
+				359658.345, -- [1]
+				359661.036, -- [2]
+				359661.268, -- [3]
+				359662.855, -- [4]
+				359663.021, -- [5]
+				359664.892, -- [6]
+				359664.926, -- [7]
+				359666.945, -- [8]
+				359668.114, -- [9]
+				359668.966, -- [10]
+				359670.987, -- [11]
+				359671.371, -- [12]
+				359673.024, -- [13]
+			},
+			["Fights"] = {
+				["Fight1"] = {
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["Attacks"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 4,
+									["min"] = 2,
+									["count"] = 3,
+									["amount"] = 10,
+								},
+								["Hit"] = {
+									["max"] = 1,
+									["min"] = 1,
+									["count"] = 1,
+									["amount"] = 1,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 11,
+						},
+						["Shadow Bolt"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 16,
+									["min"] = 14,
+									["count"] = 3,
+									["amount"] = 44,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 44,
+						},
+					},
+					["TimeSpent"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["DamageTaken"] = 5,
+					["WhoDamaged"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["ElementDone"] = {
+						["Melee"] = 11,
+						["Shadow"] = 44,
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["DamagedWho"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 11,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 44,
+								},
+							},
+							["amount"] = 55,
+						},
+					},
+					["TimeDamage"] = 18.17,
+					["TimeDamaging"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 5,
+					},
+					["ActiveTime"] = 18.17,
+					["Damage"] = 55,
+				},
+				["LastFightData"] = {
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["Attacks"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 4,
+									["min"] = 2,
+									["count"] = 3,
+									["amount"] = 10,
+								},
+								["Hit"] = {
+									["max"] = 1,
+									["min"] = 1,
+									["count"] = 1,
+									["amount"] = 1,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 11,
+						},
+						["Shadow Bolt"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 16,
+									["min"] = 14,
+									["count"] = 3,
+									["amount"] = 44,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 44,
+						},
+					},
+					["TimeSpent"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["DamageTaken"] = 5,
+					["WhoDamaged"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["ElementDone"] = {
+						["Melee"] = 11,
+						["Shadow"] = 44,
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["DamagedWho"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 11,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 44,
+								},
+							},
+							["amount"] = 55,
+						},
+					},
+					["TimeDamage"] = 18.17,
+					["TimeDamaging"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 5,
+					},
+					["ActiveTime"] = 18.17,
+					["Damage"] = 55,
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["ElementTaken"] = {
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 0,
+					["ElementHitsTaken"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["ElementHitsDone"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["FAttacks"] = {
+					},
+					["ElementTakenBlock"] = {
+					},
+					["ElementDone"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["DamagedWho"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["WhoDamaged"] = {
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["PartialAbsorb"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["PartialResist"] = {
+					},
+					["CCBreak"] = 0,
+					["ManaGainedFrom"] = {
+					},
+					["RageGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["WhoHealed"] = {
+					},
+					["RageGain"] = 0,
+					["TimeSpent"] = {
+					},
+					["InterruptData"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["Heals"] = {
+					},
+					["HOTs"] = {
+					},
+					["EnergyGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["Healing"] = 0,
+					["ActiveTime"] = 0,
+					["Dispelled"] = 0,
+					["Attacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+					},
+					["ManaGain"] = 0,
+					["Overhealing"] = 0,
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["PartialAbsorb"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialBlock"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Block"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["Melee"] = {
+							["Details"] = {
+								["No Resist"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 5,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 0,
+						},
+					},
+					["Attacks"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 4,
+									["min"] = 2,
+									["count"] = 3,
+									["amount"] = 10,
+								},
+								["Hit"] = {
+									["max"] = 1,
+									["min"] = 1,
+									["count"] = 1,
+									["amount"] = 1,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 11,
+						},
+						["Shadow Bolt"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 16,
+									["min"] = 14,
+									["count"] = 3,
+									["amount"] = 44,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 44,
+						},
+					},
+					["TimeSpent"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["DamageTaken"] = 5,
+					["WhoDamaged"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["ElementDone"] = {
+						["Melee"] = 11,
+						["Shadow"] = 44,
+					},
+					["ElementHitsDone"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["DamagedWho"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 11,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 44,
+								},
+							},
+							["amount"] = 55,
+						},
+					},
+					["TimeDamage"] = 18.17,
+					["TimeDamaging"] = {
+						["Duskbat"] = {
+							["Details"] = {
+								["Melee"] = {
+									["count"] = 10,
+								},
+								["Shadow Bolt"] = {
+									["count"] = 8.17,
+								},
+							},
+							["amount"] = 18.17,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 5,
+					},
+					["ActiveTime"] = 18.17,
+					["Damage"] = 55,
+				},
+			},
+			["UnitLockout"] = 1361764411,
+			["LastActive"] = 1361764426,
+		},
+	},
+	["FightNum"] = 1,
+	["CombatTimes"] = {
+		{
+			1361764411, -- [1]
+			1361764427, -- [2]
+			"21:53:31", -- [3]
+			"21:53:47", -- [4]
+			"Duskbat", -- [5]
+		}, -- [1]
+	},
+	["FoughtWho"] = {
+		"Duskbat 21:53:31-21:53:47", -- [1]
+	},
+}

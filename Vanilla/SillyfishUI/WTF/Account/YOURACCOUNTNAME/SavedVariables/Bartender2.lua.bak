@@ -1,0 +1,2 @@
+
+BarDB = nil

@@ -1,0 +1,16 @@
+------------------------------------------------------------------------
+r73390 | rabbit | 2008-05-10 18:16:22 -0400 (Sat, 10 May 2008) | 1 line
+Changed paths:
+   M /trunk/ErrorMonster/ErrorMonster.lua
+
+ErrorMonster: Forgot the storage.
+------------------------------------------------------------------------
+r73388 | rabbit | 2008-05-10 18:12:21 -0400 (Sat, 10 May 2008) | 1 line
+Changed paths:
+   M /trunk/ErrorMonster/ErrorMonster.lua
+   M /trunk/ErrorMonster/ErrorMonster.toc
+   M /trunk/ErrorMonster/embeds.xml
+   M /trunk/ErrorMonster/libs
+
+ErrorMonster: Sink-2.0.
+------------------------------------------------------------------------

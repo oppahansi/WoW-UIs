@@ -1,0 +1,128 @@
+
+Bongos3DB = {
+	["namespaces"] = {
+		["actionBar"] = {
+			["profileKeys"] = {
+				["Pixelpoint - Outland"] = "Pixelpoint - Outland",
+			},
+			["profiles"] = {
+				["Pixelpoint - Outland"] = {
+					["showHotkeys"] = 1,
+					["showEmpty"] = 1,
+					["showMacros"] = 1,
+					["showTooltips"] = 1,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Pixelpoint - Outland"] = "Pixelpoint - Outland",
+	},
+	["profiles"] = {
+		["Pixelpoint - Outland"] = {
+			["minimapPos"] = 209.0781579727095,
+			["sticky"] = 1,
+			["showMinimap"] = 1,
+			["bars"] = {
+				{
+					["bindings"] = {
+						"1", -- [1]
+						"2", -- [2]
+						"3", -- [3]
+						"4", -- [4]
+						"5", -- [5]
+						"F", -- [6]
+						"6", -- [7]
+						"G", -- [8]
+						"E", -- [9]
+						"BUTTON5", -- [10]
+						"T", -- [11]
+						"|", -- [12]
+					},
+					["ids"] = {
+						1, -- [1]
+						2, -- [2]
+						3, -- [3]
+						4, -- [4]
+						5, -- [5]
+						6, -- [6]
+						7, -- [7]
+						8, -- [8]
+						9, -- [9]
+						10, -- [10]
+						11, -- [11]
+						12, -- [12]
+					},
+					["rows"] = 1,
+					["numSets"] = 1,
+					["cols"] = 12,
+					["y"] = 0,
+					["x"] = 572.2985229492188,
+					["spacing"] = 3,
+					["point"] = "BOTTOMLEFT",
+					["possessBar"] = true,
+					["setMap"] = {
+						["[bonusbar:1]"] = 2,
+					},
+				}, -- [1]
+				["cast"] = {
+					["y"] = 78,
+					["x"] = 686.7985229492188,
+					["showText"] = true,
+					["point"] = "BOTTOMLEFT",
+				},
+				["stats"] = {
+					["y"] = -214.9999855954953,
+					["x"] = -6.029332394064113e-005,
+					["showMemory"] = true,
+					["scale"] = 0.9,
+					["point"] = "TOPRIGHT",
+					["showPing"] = true,
+					["showFPS"] = true,
+				},
+				["roll"] = {
+					["y"] = 272.5116271972656,
+					["x"] = 0,
+					["point"] = "BOTTOMLEFT",
+				},
+				["pet"] = {
+					["y"] = 47.2689323425293,
+					["x"] = -495.9793701171875,
+					["point"] = "BOTTOMRIGHT",
+				},
+				["bags"] = {
+					["y"] = 0,
+					["x"] = 0,
+					["point"] = "BOTTOMRIGHT",
+					["showKeyring"] = true,
+					["hidden"] = true,
+				},
+				["class"] = {
+					["y"] = 7.399584293365479,
+					["x"] = 528.5156860351563,
+					["point"] = "BOTTOMLEFT",
+					["scale"] = 1.252628341742426,
+					["anchor"] = "1LB",
+				},
+				["xp"] = {
+					["textY"] = 0,
+					["point"] = "TOPLEFT",
+					["width"] = 0.75,
+					["y"] = -31.99993896484375,
+					["x"] = 198.4495849609375,
+					["alwaysShowXP"] = true,
+					["height"] = 14,
+					["alwaysShowText"] = true,
+					["textX"] = 0,
+				},
+				["menu"] = {
+					["y"] = 0,
+					["x"] = -350.2984619140625,
+					["point"] = "BOTTOMRIGHT",
+					["anchor"] = "1RC",
+				},
+			},
+		},
+	},
+}
+Bongos3Version = "1.3"

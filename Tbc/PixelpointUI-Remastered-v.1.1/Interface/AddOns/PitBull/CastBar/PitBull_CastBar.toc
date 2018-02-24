@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fCastBar|r]
+## Notes: Show a casting bar each of the PitBull unit frames.
+## Notes-koKR: 각 PitBull 유닛 프레임에 시전바를 보여줍니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+CastBar.lua

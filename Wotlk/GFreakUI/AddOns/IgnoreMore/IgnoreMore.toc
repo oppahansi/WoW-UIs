@@ -1,0 +1,21 @@
+## Interface: 30300
+## Title: IgnoreMore
+## Notes: Ignore more than 49 people, autoshared between your alts
+## Author: Mikk
+## Version: 1.1.1
+## eMail: dpsgnome@mail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: IgM_SV
+## SavedVariablesPerCharacter: 
+## X-RelSite-WoWI: 5186
+## X-Category: Chat/Communication
+##
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+## X-Curse-Packaged-Version: 1.1.1
+## X-Curse-Project-Name: IgnoreMore
+## X-Curse-Project-ID: ignore-more
+## X-Curse-Repository-ID: wow/ignore-more/mainline
+
+IgnoreMore.lua

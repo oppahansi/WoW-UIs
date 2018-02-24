@@ -1,0 +1,10 @@
+
+SoundAlerterDB = {
+	["profileKeys"] = {
+		["Astalker - Smolderforge"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

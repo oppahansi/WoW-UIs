@@ -1,0 +1,760 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="TargetButtons.lua"/>
+
+	<!-- Options frame for TargetButtons, made by QuippeR mostly after Blizzard's BattlefieldFrame-->
+
+ 
+
+	<!-- Frame for option types, virtual -->
+	<Frame name="OptionTypeTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="305" y="100"/>
+		</Size>
+		<Layers>
+		 <Layer level="ARTWORK">
+			<FontString name="$parentLabel" inherits="GameFontNormal">
+			 <Anchors>
+				<Anchor point="TOPLEFT">
+				 <Offset>
+					<AbsDimension x="22" y="22" />
+				 </Offset>
+				</Anchor>
+			 </Anchors>
+			</FontString>
+		 </Layer>
+		 <Layer level="BACKGROUND">
+			<Texture name="$parentTopLeft" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<TexCoords left="0.0" right="0.25" top="0.0" bottom="0.125"/>
+			</Texture>
+			<Texture name="$parentTop" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="273" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTopLeft" relativePoint="RIGHT"/>
+				</Anchors>
+				<TexCoords left="0.25" right="0.75" top="0.0" bottom="0.125"/>
+			</Texture>
+			<Texture name="$parentTopRight" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTop" relativePoint="RIGHT"/>
+				</Anchors>
+				<TexCoords left="0.75" right="1.0" top="0.0" bottom="0.125"/>
+			</Texture>
+			<Texture name="$parentLeft" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="58"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentTopLeft" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+				<TexCoords left="0.0" right="0.25" top="0.25" bottom="0.50"/>
+			</Texture>
+			<Texture name="$parentRight" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="58"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parentTopRight" relativePoint="BOTTOMRIGHT"/>
+				</Anchors>
+				<TexCoords left="0.75" right="1.0" top="0.25" bottom="0.50"/>
+			</Texture>
+			<Texture name="$parentBottomLeft" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentLeft" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+				<TexCoords left="0.0" right="0.25" top="0.725" bottom="0.85"/>
+			</Texture>
+			<Texture name="$parentBottom" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="273" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBottomLeft" relativePoint="RIGHT"/>
+				</Anchors>
+				<TexCoords left="0.25" right="0.75" top="0.725" bottom="0.85"/>
+			</Texture>
+			<Texture name="$parentBottomRight" file="Interface\ChatFrame\ChatFrameBorder">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBottom" relativePoint="RIGHT"/>
+				</Anchors>
+				<TexCoords left="0.75" right="1.0" top="0.725" bottom="0.85"/>
+			</Texture>
+		 </Layer>
+		</Layers>
+	</Frame>
+
+
+	<!-- Slider with the value shown, virtual -->
+	<Slider name="TBSliderTemp" inherits="OptionsSliderTemplate" virtual="true">
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentValue" inherits="GameFontNormal">
+				 <Anchors>
+					<Anchor point="TOP">
+					 <Offset>
+						<AbsDimension x="0" y="-13" />
+					 </Offset>
+					</Anchor>
+				 </Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Slider>
+
+
+
+	<!-- Real options frame -->
+
+	<Frame name="TBOptionsFrame" toplevel="true" movable="true" parent="UIParent" enableMouse="true" hidden="true">
+		<Size>
+			<AbsDimension x="384" y="512"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="0" y="-104"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<HitRectInsets>
+			<AbsInset left="0" right="34" top="0" bottom="75"/>
+		</HitRectInsets>
+		<TitleRegion setAllPoints="true"/>
+		<Layers>
+			<Layer level="BACKGROUND">
+        		        <Texture name="$parentPortrait" file="Interface\BattlefieldFrame\UI-Battlefield-Icon">
+		                    <Size>
+	                		<AbsDimension x="60" y="60"/>
+        		            </Size>
+	        	            <Anchors>
+        		                <Anchor point="TOPLEFT">
+		                            <Offset>
+		                                <AbsDimension x="7" y="-6"/>
+		                            </Offset>
+		                        </Anchor>
+		                    </Anchors>
+		                </Texture>
+        		</Layer>
+			<Layer level="BORDER">
+				<Texture file="Interface\AddOns\TargetButtons\Images\UI-TBopt-TopLeft">
+					<Size>
+						<AbsDimension x="256" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>		
+				<Texture file="Interface\AddOns\TargetButtons\Images\UI-TBopt-TopRight">
+					<Size>
+						<AbsDimension x="128" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPRIGHT"/>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\AddOns\TargetButtons\Images\UI-TBopt-BotLeft">
+					<Size>
+						<AbsDimension x="256" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\AddOns\TargetButtons\Images\UI-TBopt-BotRight">
+					<Size>
+						<AbsDimension x="128" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+				</Texture>
+				<FontString name="$parentFrameLabel" inherits="GameFontNormal" text="TARGETBUTTONS_NAMEVERSION">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="TBOptionsFrame" relativePoint="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-17"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentNameHeader" inherits="GameFontHighlight" text="TARGETBUTTONS_HEADER">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="75" y="-55"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+
+		<Frames>
+			<Frame name="TBOptionsFramePerButtonFrame" parent="TBOptionsFrame" inherits="OptionTypeTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-105"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Button name="TB_SelectButton" inherits="UIDropDownMenutemplate">
+						<Size>
+							<AbsDimension x="50" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<Absdimension x="0" y="5"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_SELBUT_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+
+							<OnLoad>
+								SelectButton_onLoad();
+							</OnLoad>
+						</Scripts>
+					</Button>
+					<CheckButton name="TB_ButtonVisible" inherits="OptionsCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="200" y="7"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_BUTVIS_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+
+							<OnLoad>
+								getglobal(this:GetName().."Text"):SetText(TARGETBUTTONS_VISIBLE);
+							</OnLoad>
+							<OnClick>
+								Toggle_Button();
+							</OnClick>
+						</Scripts>
+					</CheckButton>
+
+					<Slider name="TB_Size" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="TOP">
+								<Offset>
+									<AbsDimension x="0" y="-22"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_BUTSIZE_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_BIGGER);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_SMALLER);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());								
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+
+					<Slider name="TB_Slider_X" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="TOP">
+								<Offset>
+									<AbsDimension x="-70" y="-48"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_SLIDEX_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_RIGHT);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_LEFT);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());								
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+					<Slider name="TB_Slider_Y" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="TOP">
+								<Offset>
+									<AbsDimension x="70" y="-48"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_SLIDEY_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_UP);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_DOWN);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());								
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						(getglobal(this:GetName().."Label")):SetText(TARGETBUTTONS_PERBUTTON);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="TBOptionsFrameLayoutFrame" parent="TBOptionsFrame" inherits="OptionTypeTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-210"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString name="TB_NoLayoutOptions" inherits="GameFontNormal" text="TARGETBUTTONS_NOOPT" hidden="true">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="-5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Button name="TB_SelectLayout" inherits="UIDropDownMenutemplate">
+						<Size>
+							<AbsDimension x="70" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="CENTER">
+								<Offset>
+									<Absdimension x="0" y="30"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_SELLAY_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								SelectLayout_onLoad();
+							</OnLoad>
+						</Scripts>
+					</Button>
+					<Slider name="TB_Slider_Dist" inherits="TBSliderTemp" hidden="true">
+						<Anchors>
+							<Anchor point="CENTER">
+								<Offset>
+									<AbsDimension x="0" y="-5"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<FontString name="TB_Distance_Label" inherits="GameFontNormal" text="TARGETBUTTONS_DISTANCE">
+									<Anchors>
+										<Anchor point="TOP">
+											<Offset>
+												<AbsDimension x="0" y="10"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_DISTANCE_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_BIGGER);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_SMALLER);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());								
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						(getglobal(this:GetName().."Label")):SetText(TARGETBUTTONS_LAYOUT);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			
+			<Frame name="TBOptionsFrameGlobalFrame" parent="TBOptionsFrame" inherits="OptionTypeTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-315"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<EditBox name="TB_TargetFrame_Edit" letters="25" historyLines="0" autoFocus="false">
+						<Size>
+							<AbsDimension x="110" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="-65" y="28"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<FontString name="$parentLabel" inherits="GameFontNormal" justifyH="RIGHT">
+									<Anchors>
+										<Anchor point="RIGHT" relativePoint="LEFT">
+											<Offset>
+												<AbsDimension x="-12" y="0"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+								</FontString>
+								<Texture name="$parentLeft" file="Interface\Common\Common-Input-Border">
+									<Size>
+										<AbsDimension x="8" y="20"/>
+									</Size>
+									<Anchors>
+										<Anchor point="TOPLEFT">
+											<Offset>
+												<AbsDimension x="-8" y="0"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<TexCoords left="0" right="0.0625" top="0" bottom="0.625"/>
+								</Texture>
+								<Texture name="$parentMiddle" file="Interface\Common\Common-Input-Border">
+									<Size>
+										<AbsDimension x="115" y="20"/>
+									</Size>
+									<Anchors>
+										<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT"/>
+									</Anchors>
+									<TexCoords left="0.0625" right="0.9375" top="0" bottom="0.625"/>
+								</Texture>
+								<Texture name="$parentRight" file="Interface\Common\Common-Input-Border">
+									<Size>
+										<AbsDimension x="8" y="20"/>
+									</Size>
+									<Anchors>
+										<Anchor point="LEFT" relativeTo="$parentMiddle" relativePoint="RIGHT"/>
+									</Anchors>
+									<TexCoords left="0.9375" right="1.0" top="0" bottom="0.625"/>
+								</Texture>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_TARGEDIT_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnEditFocusLost>
+								this:HighlightText(0, 0);
+							</OnEditFocusLost>
+							<OnEnterPressed>
+								this:ClearFocus();
+							</OnEnterPressed>
+							<OnEscapePressed>
+								this:ClearFocus();
+							</OnEscapePressed>
+						</Scripts>
+						<FontString inherits="ChatFontNormal"/>
+					</EditBox>
+
+					<Button name="TB_TargetFrame_Set" inherits="UIPanelButtonTemplate" text="TARGETBUTTONS_SETFRAME">
+						<Size>
+							<AbsDimension x="120" y="21"/>
+						</Size>
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="65" y="28"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_SETFRAME1_TT..TB_TargetFrame_Edit:GetText()..TARGETBUTTONS_SETFRAME2_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnClick>
+								TB_TargetFrame_Edit:ClearFocus();
+								SetTargetFrameClicked();
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Slider name="TB_Offset_X" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="-70" y="60"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_XOFFSET_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_RIGHT);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_LEFT);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+					<Slider name="TB_Offset_Y" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="70" y="60"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_YOFFSET_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_UP);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_DOWN);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+
+					<Slider name="TB_GlobalSize" inherits="TBSliderTemp">
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="70" y="85"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_GLOBALSIZE_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."High"):SetText(TARGETBUTTONS_BIGGER);
+								getglobal(this:GetName().."Low"):SetText(TARGETBUTTONS_SMALLER);
+							</OnLoad>
+							<OnValueChanged>
+								ChangeOffset(this:GetName());
+							</OnValueChanged>
+						</Scripts>
+					</Slider>
+					<CheckButton name="TB_UseGlobalSize" inherits="OptionsCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="BOTTOM">
+								<Offset>
+									<AbsDimension x="-120" y="75"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+								GameTooltip:SetText(TARGETBUTTONS_USEGLOBAL_TT, 1.0, 1.0, 0.4, 0.8, 1);
+								GameTooltip:Show();
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnLoad>
+								getglobal(this:GetName().."Text"):SetText(TARGETBUTTONS_USEGLOBALSIZE);
+							</OnLoad>
+							<OnClick>
+								Toggle_GlobalSize();
+							</OnClick>
+						</Scripts>
+					</CheckButton>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						(getglobal(this:GetName().."Label")):SetText(TARGETBUTTONS_GLOBAL);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<Button name="TBOptionsFrameResetButton" inherits="UIPanelButtonGrayTemplate" text="Reset defaults">
+				<Size>
+					<AbsDimension x="110" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="TBOptionsFrame" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="205" y="-420"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnter>
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+						GameTooltip:SetText(TARGETBUTTONS_RESET_TT, 1.0, 1.0, 0.4, 0.8, 1);
+						GameTooltip:Show();
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+					<OnClick>
+						TB_Reset();
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="TBOptionsFrameCloseButtonDown" inherits="UIPanelButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="TBOptionsFrame" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="305" y="-420"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						Toggle_Options();
+					</OnClick>
+				</Scripts>
+			</Button> 
+			<Button name="TBOptionsFrameCloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="TBOptionsFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-29" y="-8"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						Toggle_Options();
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnShow>
+				PlaySound("igCharacterInfoOpen");
+			</OnShow>
+			<OnHide>
+				PlaySound("igCharacterInfoClose");
+			</OnHide>
+			<OnMouseWheel>
+				return;
+			</OnMouseWheel>
+		</Scripts>
+
+	</Frame>
+
+
+
+
+
+</Ui>

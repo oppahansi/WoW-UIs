@@ -1,0 +1,7 @@
+
+SimpleCombatLogDBPerChar = {
+	["version"] = "1.0.11896",
+	["settings"] = {
+		[2] = "default",
+	},
+}

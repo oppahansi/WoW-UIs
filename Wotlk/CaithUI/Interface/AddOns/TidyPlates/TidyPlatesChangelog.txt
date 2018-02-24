@@ -1,0 +1,262 @@
+5.10.5
+-------------------------------------------------------------------------
+Went back to LiberationSans for default font.  Why?  I like it!
+
+5.10.4
+-------------------------------------------------------------------------
++ If the Threat Line Widget sees that the targetted character is a "MAINTANK" under the raid roles, it will color the name blue.
+
+5.10.3
+-------------------------------------------------------------------------
++ Fixed "Hide Neutrals"
++ Went to ArialNarrow for the default font
++ Grey\DPS 
+	+ Added Hide Neutrals, Ignore Elites
++ Added SetPoint to extended (just in case)
++ Changed health bar color gathering to assist duels
+
+- Removed from loading procedure:
+	- SetCVar("CameraDistanceMaxFactor", 6)
+	- SetCVar("threatWarning", 3)
+	- SetCVar("ShowClassColorInNameplate", 1)
+	- SetCVar("showVKeyCastbar", 1)
+	
+5.10.2
+-------------------------------------------------------------------------
++ Removed Cvar setting, "CameraDistanceMaxFactor" (fixes camera zoom issues)
++ Re-enabled Cursor Update Event
+
+5.10.1
+-------------------------------------------------------------------------
++ Remove Cvar setting, "CameraDistanceMaxFactor"  (fixes camera zoom issues)
++ Cursor Update Event
+	
+Add to Grey:
++ Scale: ignore non-elites
++ Alpha: hide non-elites
++ Spinner Widget
++ move widgets to .widget
++ add a target widget to grey (testing)
+
+5.10
+-------------------------------------------------------------------------
+++ "Avoid Overlap" (Alias) in panel
+++ "Autoshow" Option in panel
+++ Independent Frame
+	* scale pass-through	(Not fully implemented; using Virtual Plates AND a theme which changes scale will show oddities)
+	* force alpha override	(The developer can tell Tidy Plates to force the alpha - avoiding Blizzard's default alpha - by returning 'true' as a second value for the return)
+		- ex. theme.SetAlpha = function(unit) return 1, true end  -- Will maintain the opacity at 100%, regardless of target status
+++ Set Default CVars after VARIABLES_LOADED
+++ Dual Spec Support (Changes theme based on spec)
+	- Added a second dropdown menu in panel
+++ Troubleshooting Panel
+	- Vkey/Bindings
+	- reset/reload
+++ Widgets
+	+ created TidyPlatesWidgets. table
+		+ Threat Wheel 
+		+ Class Icon Widget
+		+ Combo Point Widget 
+		+ Threat Line 
+		+ MT Logic Widget  
+	+ Syntax usage will follow
+++ Scale pass-through	(Not Complete; Using Virtual Plates AND a theme which changes scale will show oddities)
+++ Performance Enhancements
+++ More Comments (woo?)
+++ Code Re-organization 
+++ Widgets now use TidyPlatesWidgets:HideIn(), and a watcher frame to perform time checks; Faster than having
+	each widget process for OnUpdate
+++ Improvements to Panel Helpers
+++ 	Unit Info table
+	+ .GUID (from mouseover or target)
+++ Grey Theme 
+	++ Critter/Neutral Filter checkbox
+	++ Panel redesign
+	++ Tank Mode; "Expands the size of runaway mobs"
+	++ DPS Mode; "Expands the size of aggro'd mobs"
+	++ Widgets
+	++ Each of my own themes should have their own config panel for role,
+		allowing dual spec to work seamlessly..
+		TidyPlatesThemes["Grey (DPS)"] = config
+		TidyPlatesThemes["Grey (Tank)"] =  copytable(config)
+++ Virtual Plates should now behave better
+	* Scale-changing plates will still cause problemos, but now, ordinary plates will work just fine.
+	* Returning NIL in your ScaleDelegate function (if  you've got multiple modes) will allow VirtualPlates passthrough.
+++ Grey Tank/DPS panels and saved variables got some love; They work better
+	+ Delegate functions now use local variables for speed
++ Fixed Forceupdate	
++ Fixed some Grey variables
++ something else.. forgot what it was.  (Ok, I remembered;  I spelled "deficit" wrong.  I bought the wrong vowel!)
++ Fixed Health Text modes
+* Grey Theme 
+	- Added Current Health + Percent
+* Widgets
+	- General Mouseover Widget
+	- Combo Point Widget
+* Still had trouble with nameplate alpha changes updating after the OnShow call.
+	-- Solution: Indvidual Plate echo-update  
+* Retracted "Raid-Tanked" Widget (for the time-being)
+* Added an extended.widget table
+	- Theme designers should put all their widget references in this table
+* When nameplates are changed (manually or auto) by the Tidy Plates UI, 
+	the software will attempt to hide/clear any frames listed under the
+	extended.widget table.
+
+-------------------------------------------------------------------------
+5.9.5
+* Critter Filter on default theme, returned to Mode-level 
+
+5.9.4
+* Adjusted position of default theme data, to reduce targeting woes
+* Added a cache reset to the Hide hook
+* ForceUpdate now only operates on Shown plates
+* CURSOR_UPDATE is now part of the default events
+* Added alpha == 0 bypass
+* Elite Borders now have a star on the artwork, making visual ID easier
+* Simplified Scale and Alpha delegates of the default theme
+* Critter Filter on default theme, now always on
+
+5.9.3
+* frame layering tweaks
+* moved some skinning code around
+* casting progress now forces single plate graphical updates (to eliminate casting icon oddities)
+* painted my nails
+
+5.9.2
+* removed some old code related to the frame separation "feature" *shudder*
+* frames faded too much (more than 50%); problem fixed
+* level text will not show when skull icon is active
+* TidyPlates:ForceUpdate() does not allow targetting a specific frame, anymore.  Use: TidyPlates:ForceUpdateFrame(frame), instead
+* added .secureframe pointer to .extended, pointing to the base frame
+* added .flags to name, level, specialText, and specialText2 - used for adding outlines to your text...  if you REALLY want them.  *shudder*
+
+
+5.9.1
+* Changed default fonts from Arial to Liberation (halves the file size, woo!)
+* Undo the frame separation (Allows Virtual Plates to run)
+* '.hitbox' has been added, as a style category.  This will alter the clickable region, out-of-combat
+	- .hitbox.height	height of hitbox (default: 37)
+	- .hitbox.width		width of hitbox (default: 149)
+	
+Tidy Plates 5.9 Release Notes
+Release
+* Clean Up Files - Check!
+* Rename of "Beta Grey" to "Standard Grey" - Check!
+* re-added health bar color function
+
+Beta 7.5
+* Various tweaks to the update system
+* unit info cache filters out non-changing events 
+* Testing of new theme, Neon, which has a new threat widget, and uses health bar color to ID aggro
+
+Beta 7
+* Added: unit.isTarget to Unit Information Table
+* Each Tidy Plates extension has been changed to not be parented to the plate object.
+	- Please watch for memory leaks
+* Themes must now use the TOC tag, "## Dependencies: TidyPlates", to ensure proper operation
+* typing '/tidyplates' or '/tidybeta' without parameters will list the command line options AND open the interface panel
+* fixed a layering problem with casting bar
+* added unit info cache, to determine if unit info has changed
+* TidyPlates:ReloadTheme() will reload the current theme from the table source
+* TidyPlates:ForceUpdate() and :ForceUpdate(plate) will force the update of the entire plate
+	- Use this function when you absolutely must update every bit of graphic on the plate(s)
+* TidyPlates:Update() refreshes the unit data on each plate, and checks for changes
+	- Use this function for frugal CPU usage
+* Threat widget will now color the unit's target name by class color
+
+Beta 6
+* Fixed some bugs with combo points; It's still needing work, though.
+* Added reset commands:
+	'/tidyplates reset' and ' /tidybeta reset' resets variables without messing with WTF folders
+* Fixed position of Scale slider in the Beta Grey Interface Panel
+
+Beta 5
+* Added an 'Apply' button to BetaGrey theme
+* Added slash commands for Beta grey '/tidybeta [tank, dps, pvp]
+* Fixed some bugs
+* Added a text box to the threat widget, showing who (if it's not you) has the highest threat
+
+Beta 2
+* Engine modifications (echo function)
+	- Allows accurate update of current target/alpha 
+	- Reduces CPU consumption
+
+Beta 1 (And Earlier - This list is a work-in-progress) 
+* New Functions/Methods:
+	TidyPlates:ForceUpdate() - Forces the update of all nameplates
+	TidyPlates:ForceUpdate(frame) - Forces the update of the specified nameplate
+* Current Derived Unit Information Table (supplied to delegate functions):
+	unit.threatSituation	"LOW", "MEDIUM", "HIGH"	
+	unit.reaction			"FRIENDLY", "NEUTRAL", "HOSTILE"
+	unit.type				"NPC", "PLAYER"
+	unit.isBoss			true, if the skull icon is active (the creature is a boss/level ??)
+	unit.isDangerous	Same as isBoss
+	unit.isElite		true, if unit is elite (ie. elite symbol is shown)
+	unit.isMarked		true, if the unit is marked with a raid icon
+	unit.name			the unit's name
+	unit.alpha			float, the alpha of the nameplate (ie. 1= target, 1< non-target)
+	unit.level			integer, the unit's level
+	unit.health			integer, the unit's health
+	unit.isMouseover	true, if the highlight region is showing (ie. mouse is over the frame)
+	unit.red, unit.green, unit.blue 	0.0-1 Values, the raw color of the health bar
+	unit.isCasting						true, if cast bar is being shown
+	_, unit.healthmax 					integer, the maximum health of the unit
+	unit.class 			"DEATHKNIGHT", "DRUID","HUNTER", etc..
+	unit.isInCombat 	true, if name text is red (ie. unit is in combat with you)
+* Interface Options Panel
+		- Theme Chooser
+* New Delegate Functions: OnInitialize, OnUpdate 
+	- OnInitialize(plate)		This function is supplied a pointer to the Tidy Plates extension, 
+								which can be directly edited. This function is called when the plate 
+								extension is created. 
+	- OnUpdate(plate, unit)		This function is supplied a pointer to the Tidy Plates extension, and
+								the Unit Information Table.  This function is called when the plate is 
+								updated (via event, or forced), after all other delegate functions have 
+								been called
+		
+		
+		
+		
+		
+		
+		
+
+
+
+[B][SIZE="3"]Beta Versions[/SIZE][/B]
+
+Beta 1
+The biggest changes: Independent alpha control, internal widgets, dual spec support, troubleshooting panel, sweeping performance enhancements.
+
+Beta 2
+Significant core changes, hopefully for much better performance (it's faster in my own tests).  Started splitting 'Grey' into two themes; Grey/Tank and Grey/DPS.  Both will have their own panels.  Neither panel is finished (or even partially working).
+
+Beta 3
+More core changes, and changes to the panel utility functions (not that anyone besides me uses em) Grey Theme modifications (heavy).  "Grey\Tank" is the first subtheme, which will be followed by "Grey\DPS".  If you want to help me out, make some suggestions about "Grey\PVP" features.  Can't promise anything, but I'll give it a shot.
+
+Beta 4
+The new Grey theme is pretty much done.  Both Tank and DPS panels are active, and the functions work.  The new widget, "Main Tanked", has been implemented; It looks at your target and mouseovertargets for characters that are main tanks in your raid.  The nameplates will still expand when another player has aggro (in tank mode), but you'll get a nice icon indicating if it's being tanked, or if it's attacking a squishy.  Bear in mind, you need to mouse over the unit for it to work.  The icon will stay active for several seconds, so just sweep your cursor over the mobs.  (Yes, sweeping your cursor over mobs DOES incur some performance hits, since it signals the Tidy Plates core, though nothing that hurts my framerate.  I'm pretty confident that just about ALL of you downloading this have a much faster machine than I do.)
+
+Beta 5
+Grey -Fixes for tank and dps saved variables
+Grey- Panel improvements
+Grey- Function improvements
+Scale function changes
+
+Beta 5&6
+Bug Fixes n such
+
+Beta 7
+Changes to alpha handling, and adding the combo point widget back to the fray.  Added a few more Text modes.  Moved a bunch of things to the 5.10.X/5.11 list.
+
+Beta 8
+Changed some performance thingies, fixed some panel items, and retracted the Raid-Tanked widget (for now)
+
+I'm going to move forward toward releasing 5.10.  In order to speed up the process, I had to move some features to future releases.
+
+
+
+Threat Widget:
+The Threat Widget is simply a statusbar, drawn from the center-line of the nameplates, which represents your relative threat to that unit.  When the bar extends right and becomes amber, you've got the attention of the unit; The length of that bar indicates your lead over the next highest threat-holder.  If the bar extendeds left, the color will change to cyan, indicating that the unit isn't attacking you.  The length of the bar will indicate how far your threat trails behind the top threat-holder.  Additionally, if you are NOT the highest threat-holder, the threat widget will tell you who is.
+
+Summary; Tanks will want to see a right-pointing amber bar, while DPS will want to see left-leaning cyan.  Longer bars are safer. 

@@ -1,0 +1,2 @@
+
+EnchantrixBarkerConfig = nil

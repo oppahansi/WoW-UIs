@@ -1,0 +1,2 @@
+
+EQCompareDB = nil

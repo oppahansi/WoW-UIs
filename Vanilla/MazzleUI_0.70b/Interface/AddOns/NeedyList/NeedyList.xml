@@ -1,0 +1,965 @@
+<!-- Ralak's Needy List V1.1 -->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+	<Script file="NeedyList.lua"/>
+	<Button name="NLNeedButtonTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="22" y="22"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp", "Button4Up", "Button5Up");
+			</OnLoad>
+			<OnClick>
+				if( this.NeedName ~= nil ) then
+					NL_CureNeedOnUnit( this.NeedName, this:GetParent():GetParent().Unit, arg1 );
+				end
+			</OnClick>
+			<OnEnter>
+				NL_MOUSE_IN_FRAME = true;
+				NL_MOUSE_OVER_FRAME = this;
+				NL_MouseOverNeedButton(this);
+			</OnEnter>
+			<OnLeave>
+				NL_MOUSE_IN_FRAME = false;
+				NL_MOUSE_OVER_FRAME = nil;
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+	<Button name="NLBuffButtonTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="15" y="15"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				NL_MOUSE_IN_FRAME = true;
+				NL_MOUSE_OVER_FRAME = this;
+				NL_SetTooltipOwner(this:GetParent():GetParent(), "ANCHOR_TOPLEFT");
+				GameTooltip:SetUnitBuff( this:GetParent():GetParent().Unit, this:GetID() );
+			</OnEnter>
+			<OnLeave>
+				NL_MOUSE_IN_FRAME = false;
+				NL_MOUSE_OVER_FRAME = nil;
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+	<Button name="NLDebuffButtonTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="15" y="15"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentUnit" hidden="true" text=""/>
+				<Texture name="$parentOverlay" file="Interface\Buttons\UI-Debuff-Border">
+					<Size>
+						<AbsDimension x="17" y="17"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				NL_MOUSE_IN_FRAME = true;
+				NL_MOUSE_OVER_FRAME = this;
+				NL_SetTooltipOwner(this:GetParent():GetParent(), "ANCHOR_TOPLEFT");
+				GameTooltip:SetUnitDebuff( this:GetParent():GetParent().Unit, this:GetID() );
+			</OnEnter>
+			<OnLeave>
+				NL_MOUSE_IN_FRAME = false;
+				NL_MOUSE_OVER_FRAME = nil;
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+
+	<Button name="NeedyDetailFrameTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropColor(0, 0, 1, 0.5);
+			</OnLoad>
+			<OnEnter>
+				NL_MOUSE_IN_FRAME = true;
+			</OnEnter>
+			<OnLeave>
+				NL_MOUSE_IN_FRAME = false;
+			</OnLeave>
+		</Scripts>
+	</Button>
+
+	<Button name="NeedyNeedFrameTemplate" inherits="NeedyDetailFrameTemplate" virtual="true">
+		<Frames>
+			<Button name="$parentNeed1" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed2" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed3" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed4" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed5" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed6" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed5" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed7" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed6" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed8" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed7" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed9" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed8" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed10" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed9" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed11" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed10" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeed12" inherits="NLNeedButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentNeed11" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropColor(1, 0, 0, 0.5);
+			</OnLoad>
+		</Scripts>
+	</Button>
+	<Button name="NeedyBuffFrameTemplate" inherits="NeedyDetailFrameTemplate" virtual="true">
+		<Frames>
+			<Button name="$parentBuff1" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="9" y="-9"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff2" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff3" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff4" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff5" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff6" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff5" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff7" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff6" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff8" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff7" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff9" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff8" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff10" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff9" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff11" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff10" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff12" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff11" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff13" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff12" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff14" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff13" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff15" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff14" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentBuff16" inherits="NLBuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuff15" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+	</Button>
+
+	<Button name="NeedyDebuffFrameTemplate" inherits="NeedyDetailFrameTemplate" virtual="true">
+		<Frames>
+			<Button name="$parentDebuff1" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="9" y="-9"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff2" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff3" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff2" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff4" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff3" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff5" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff4" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff6" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff5" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff7" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff6" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff8" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff7" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff9" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff8" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff10" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff9" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff11" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff10" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff12" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff11" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff13" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff12" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff14" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff13" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff15" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff14" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuff16" inherits="NLDebuffButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff15" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+	</Button>
+
+	<Button name="NLMemberTemplate" frameStrata="LOW" virtual="true" hidden="false" parent="UnitFrame">
+		<Size>
+			<AbsDimension x="40" y="40"/>
+		</Size>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Frames>
+			<StatusBar name="$parentHPBar" inherits="TextStatusBar" hidden="true">
+				<Size>
+					<AbsDimension x="10" y="6"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="8" y="-21"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-8" y="-21"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetMinMaxValues(0, 100);
+						this:SetValue(100);
+					</OnLoad>
+					<OnEnter>
+						NL_MOUSE_IN_FRAME = true;
+						local member = this:GetParent().Unit;
+						NL_SetTooltipOwner(this:GetParent(), "ANCHOR_TOPLEFT");
+						GameTooltip:SetText( UnitHealth(member) .. "/" .. UnitHealthMax(member) );
+					</OnEnter>
+					<OnLeave>
+						NL_MOUSE_IN_FRAME = false;
+						GameTooltip:Hide();
+					</OnLeave>
+					<OnMouseUp>
+						NLMember_OnClick(arg1, this:GetParent());
+					</OnMouseUp>
+				</Scripts>
+				<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+				<BarColor r="0" g="1" b="0"/>
+			</StatusBar>
+			<StatusBar name="$parentMPBar" inherits="TextStatusBar" hidden="true">
+				<Size>
+					<AbsDimension x="10" y="6"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="8" y="5"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-8" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetMinMaxValues(0, 100);
+						this:SetValue(100);
+					</OnLoad>
+					<OnEnter>
+						NL_MOUSE_IN_FRAME = true;
+						local member = this:GetParent().Unit;
+						NL_SetTooltipOwner(this:GetParent(), "ANCHOR_TOPLEFT");
+						GameTooltip:SetText( UnitMana(member) .. "/" .. UnitManaMax(member) );
+					</OnEnter>
+					<OnLeave>
+						NL_MOUSE_IN_FRAME = false;
+						GameTooltip:Hide();
+					</OnLeave>
+					<OnMouseUp>
+						NLMember_OnClick(arg1, this:GetParent());
+					</OnMouseUp>
+				</Scripts>
+				<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+				<BarColor r="0" g="0" b="1"/>
+			</StatusBar>
+			<Button name="$parentBuffsDetails" inherits="NeedyBuffFrameTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentDebuffsDetails" inherits="NeedyDebuffFrameTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" relativeTo="$parentBuffsDetails">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentNeedsDetails" inherits="NeedyNeedFrameTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentName" hidden="false" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-7"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentHealthNum" hidden="false" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-8" y="-7"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStatus" hidden="true" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-21"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnShow>
+				if( NLConfig.ShowHealth == 1 ) then
+					getglobal( this:GetName() .. "HPBar" ):Show();
+				else
+					getglobal( this:GetName() .. "HPBar" ):Hide();
+				end
+				if( NLConfig.ShowMana == 1 ) then
+					getglobal( this:GetName() .. "MPBar" ):Show();
+				else
+					getglobal( this:GetName() .. "MPBar" ):Hide();
+				end
+				this:SetHeight(26 + NLConfig.ShowHealth * 6 + NLConfig.ShowMana * 6);
+				this:SetWidth(NLConfig.FrameWidth);
+			</OnShow>
+			<OnLoad>
+				this:SetBackdropColor(0, 0, 1, 0.5);
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp", "Button4Up", "Button5Up");
+			</OnLoad>
+			<OnEnter>
+				NL_MOUSE_IN_FRAME = true;
+				NLMember_OnEnter(this);
+			</OnEnter>
+			<OnLeave>
+				NL_MOUSE_IN_FRAME = false;
+				NLMember_OnLeave(this);
+			</OnLeave>
+			<OnClick>
+				NLMember_OnClick(arg1, this);
+			</OnClick>
+		</Scripts>
+	</Button>
+	<Frame name="NLMainFrame" hidden="false" parent="UIParent">
+		<Anchors>
+			<Anchor point="TOPRIGHT"/>
+		</Anchors>
+		<Frames>
+			<Button name="NLHeader" movable="true" parent="UIParent" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-150" y="-150"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Size>
+					<AbsDimension x="40" y="25"/>
+				</Size>
+				<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentLabel" justifyH="CENTER" hidden="false" inherits="GameFontNormalSmall" text="Needy List">
+							<Size>
+								<AbsDimension x="80" y="18"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER" relativePoint="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="1"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						this:SetBackdropColor(0, 0, 1, 0.5);
+						this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+						this:RegisterForDrag("LeftButtonDown");
+					</OnLoad>
+					<OnEnter>
+						NL_SetTooltipOwner(this, "ANCHOR_TOPLEFT");
+						GameTooltip:SetText("Left-click and drag to move Needy List.\nRight-click for configuration options.");
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+					<OnMouseDown>
+						if( arg1 == "LeftButton" ) then
+							GameTooltip:Hide();
+							this:StartMoving();
+						else
+							NLConfigNeedsFrame:Hide();
+							NLConfigFrame:Show();
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						this:StopMovingOrSizing();
+					</OnMouseUp>
+					<OnShow>
+						this:SetWidth(NLConfig.FrameWidth);
+					</OnShow>
+				</Scripts>
+			</Button>
+			<Button name="NLMember1" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLHeader" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember2" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember1" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember3" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember2" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember4" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember3" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember5" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember4" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember6" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember5" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember7" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember6" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember8" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember7" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember9" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember8" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember10" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember9" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember11" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember10" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember12" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember11" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember13" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember12" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember14" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember13" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember15" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember14" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember16" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember15" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember17" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember16" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="NLMember18" parent="UIParent" inherits="NLMemberTemplate" hidden="true">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="NLMember17" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				NL_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				NL_OnEvent(event, arg1);
+			</OnEvent>
+			<OnUpdate>
+				NL_OnUpdate(arg1);
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+    <GameTooltip name="NL_BuffTooltip" frameStrata="TOOLTIP" hidden="true" inherits="GameTooltipTemplate"> 
+    <Scripts> 
+    <OnLoad> 
+    this:SetOwner(UIParent, "ANCHOR_NONE"); 
+    </OnLoad> 
+    </Scripts> 
+    </GameTooltip> 
+
+</Ui>

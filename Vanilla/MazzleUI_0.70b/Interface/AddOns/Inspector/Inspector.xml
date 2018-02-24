@@ -1,0 +1,909 @@
+<!--
+   Inspector is a global variable inspection tool for debugging WoW scripts.
+
+   Created by Sagarus 2006/04/06
+-->
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="Inspector.lua"/>
+
+<!-- Main Window -->
+	<Frame name="IG_MainFrame" inherits="IG_FrameTemplate" parent="UIParent" hidden="true" enableMouse="true" movable="true" id="1">
+        <Frames>
+            <Button name="$parentConfigButton" inherits="UIPanelButtonTemplate">
+                <Size>
+                    <AbsDimension x="63" y="17"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPRIGHT" relativeTo="$parent">
+                        <Offset>
+                            <AbsDimension x="-25" y="-6"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        this:SetText(Inspector_CONFIG_LABEL);
+                    </OnLoad>
+                    <OnClick>
+                        Inspector.Config();
+                    </OnClick>
+                    <OnEnter>
+                        Inspector.ConfigButton_OnEnter();
+                    </OnEnter>
+                    <OnLeave>
+                        GameTooltip:Hide();
+                    </OnLeave>
+                </Scripts>
+            </Button>
+            <Button name="$parentScriptButton" inherits="UIPanelButtonTemplate">
+                <Size>
+                    <AbsDimension x="63" y="17"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="RIGHT" relativeTo="$parentConfigButton">
+                        <Offset>
+                            <AbsDimension x="-63" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        this:SetText(Inspector_SCRIPT_LABEL);
+                    </OnLoad>
+                    <OnClick>
+                        Inspector.Script();
+                    </OnClick>
+                    <OnEnter>
+                        Inspector.ScriptButton_OnEnter();
+                    </OnEnter>
+                    <OnLeave>
+                        GameTooltip:Hide();
+                    </OnLeave>
+                </Scripts>
+            </Button>
+        </Frames>
+		<Scripts>
+			<OnEvent>
+				Inspector_OnEvent(event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+
+<!-- Variable Frame -->
+    <Frame name="IG_VarFrame" inherits="IG_FrameTemplate" parent="UIParent" hidden="true" enableMouse="true" movable="true" id="2"/>
+
+<!-- Config Frame -->
+	<Frame name="IG_CfgFrame" toplevel="true" enableMouse="true" enableKeyboard="true" movable="true" parent="IG_MainFrame" hidden="true" id="3">
+		<Size>
+			<AbsDimension x="385" y="315"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="CENTER">
+ 				<Offset>
+ 					<AbsDimension x="0" y="0"/>
+ 				</Offset>
+ 			</Anchor>
+ 		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="10" right="10" top="10" bottom="10"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="38"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="356" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString inherits="IG_TitleFont" text="Inspector_CONFIG_TITLE">
+                    <FontHeight><AbsValue val="16"/></FontHeight>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="$parentHeader">
+							<Offset>
+								<AbsDimension x="0" y="-14"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+                <FontString name="$parent_MemoryLabel" inherits="IG_Font">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parent">
+                            <Offset>
+                                <AbsDimension x="125" y="-280"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+            <Button name="$parentCancel" inherits="IG_ConfigButtonTemplate">
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-16" y="16"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        this:SetText(CANCEL);
+                    </OnLoad>
+                    <OnClick>
+                        Inspector.ConfigFrame_Cancel();
+                    </OnClick>
+                </Scripts>
+            </Button>
+			<Button name="$parentOkay" inherits="IG_ConfigButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="16" y="16"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetText(OKAY);
+					</OnLoad>
+					<OnClick>
+						Inspector.ConfigFrame_Okay();
+					</OnClick>
+				</Scripts>
+			</Button>
+
+            <Frame name="$parentSearchTab" setAllPoints="true" hidden="false">
+                <Layers>
+                    <Layer>
+                        <FontString name="$parent_ConfigTextLabel" inherits="IG_Font" justifyH="RIGHT" justifyV="BOTTOM" text="Inspector_SEARCH_STRING">
+                            <Size>
+                                <AbsDimension x="85" y="15"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="14" y="-35"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+
+                        <FontString name="$parent_TypeLabel" inherits="IG_Font" text="Inspector_TYPE_STRING">
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parent">
+                                    <Offset>
+                                        <AbsDimension x="20" y="-64"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+
+                        <FontString name="$parent_ConfigCountLabel" inherits="IG_Font">
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parent">
+                                    <Offset>
+                                        <AbsDimension x="20" y="-120"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+        <!-- Search data -->
+                <Frames>
+                    <EditBox name="$parent_ConfigTextEditBox" inherits="IG_EditBoxTemplate" autoFocus="false">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_ConfigTextLabel" relativePoint="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="16" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </EditBox>
+
+                    <CheckButton name="$parent_SortCheckButton" inherits="IG_CheckButtonTemplate" checked="true">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_ConfigTextEditBox" relativePoint="TOPRIGHT">
+                                <Offset>
+                                    <AbsDimension x="10" y="-3"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Sort);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_AllTypesCheckButton" inherits="IG_CheckButtonTemplate" checked="true">
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parent_TypeLabel">
+                                <Offset>
+                                    <AbsDimension x="20" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.All);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_AllVarsCheckButton" inherits="IG_CheckButtonTemplate" checked="true">
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parent_ConfigCountLabel">
+                                <Offset>
+                                    <AbsDimension x="25" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.AllVars);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <EditBox name="$parent_ConfigCountEditBox" inherits="IG_EditBoxTemplate2" autoFocus="false">
+                        <Size><AbsDimension x="80" y="16"/></Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_AllVarsCheckButton">
+                                <Offset>
+                                    <AbsDimension x="76" y="2"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </EditBox>
+
+        <!-- Check Box Types -->
+                    <CheckButton name="$parent_TypeCheckButton1" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeLabel">
+                                <Offset>
+                                    <AbsDimension x="35" y="-20"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type1);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_TypeCheckButton2" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeCheckButton1">
+                                <Offset>
+                                    <AbsDimension x="95" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type2);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_TypeCheckButton3" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeCheckButton2">
+                                <Offset>
+                                    <AbsDimension x="95" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type3);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_TypeCheckButton4" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeLabel">
+                                <Offset>
+                                    <AbsDimension x="35" y="-34"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type4);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_TypeCheckButton5" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeCheckButton4">
+                                <Offset>
+                                    <AbsDimension x="95" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type5);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <CheckButton name="$parent_TypeCheckButton6" inherits="IG_CheckButtonTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TypeCheckButton5">
+                                <Offset>
+                                    <AbsDimension x="95" y="0"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                        <Scripts>
+                            <OnLoad>
+                                Inspector.SetLabel(Inspector.TextLabel.Type6);
+                            </OnLoad>
+                        </Scripts>
+                    </CheckButton>
+
+                    <Frame name="$parentRow1" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="40" y="-140"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow2" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow1" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow3" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow2" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow4" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow3" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow5" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow4" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow6" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow5" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentRow7" inherits="IG_RowTemplate">
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentRow6" relativePoint="BOTTOMLEFT">
+                                <Offset>
+                                    <AbsDimension x="0" y="-1"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </Frame>
+                </Frames>
+            </Frame>
+    <!-- Option Tab -->
+            <Frame name="$parentOptionTab" setAllPoints="true" hidden="true">
+                <Layers>
+                    <Layer>
+                        <FontString name="$parent_TimeoutLabel" inherits="IG_Font" justifyH="RIGHT" justifyV="BOTTOM" text="Inspector_OPTION_TIMEOUT">
+                            <Size>
+                                <AbsDimension x="125" y="15"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset>
+                                        <AbsDimension x="14" y="-35"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parent_MaxWidthLabel" inherits="IG_Font" justifyH="RIGHT" justifyV="BOTTOM" text="Inspector_OPTION_MAXWIDTH">
+                            <Size>
+                                <AbsDimension x="125" y="15"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parent_TimeoutLabel">
+                                    <Offset>
+                                        <AbsDimension x="0" y="-20"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parent_AlphaLabel" inherits="IG_Font" justifyH="RIGHT" justifyV="BOTTOM" text="Inspector_OPTION_ALPHA">
+                            <Size>
+                                <AbsDimension x="125" y="15"/>
+                            </Size>
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parent_MaxWidthLabel">
+                                    <Offset>
+                                        <AbsDimension x="0" y="-20"/>
+                                    </Offset>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+                <Frames>
+                    <EditBox name="$parent_TimeoutEditBox" inherits="IG_EditBoxTemplate2" autoFocus="false">
+                        <Size><AbsDimension x="50" y="16"/></Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_TimeoutLabel">
+                                <Offset>
+                                    <AbsDimension x="135" y="2"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </EditBox>
+                    <EditBox name="$parent_MaxWidthEditBox" inherits="IG_EditBoxTemplate2" autoFocus="false">
+                        <Size><AbsDimension x="50" y="16"/></Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_MaxWidthLabel">
+                                <Offset>
+                                    <AbsDimension x="135" y="2"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </EditBox>
+                    <EditBox name="$parent_AlphaEditBox" inherits="IG_EditBoxTemplate2" autoFocus="false">
+                        <Size><AbsDimension x="50" y="16"/></Size>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parent_AlphaLabel">
+                                <Offset>
+                                    <AbsDimension x="135" y="2"/>
+                                </Offset>
+                            </Anchor>
+                        </Anchors>
+                    </EditBox>
+                </Frames>
+            </Frame>
+
+            <Button name="$parentTab1" inherits="CharacterFrameTabButtonTemplate" id="1" text="Inspector_SEARCH_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent">
+						<Offset>
+							<AbsDimension x="12" y="-18"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						Inspector.ConfigFrameTab_OnClick(this:GetID());
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentTab2" inherits="CharacterFrameTabButtonTemplate" id="2" text="Inspector_OPTION_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="-14" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						Inspector.ConfigFrameTab_OnClick(this:GetID());
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+            <OnLoad>
+                Inspector_OnLoad();
+            </OnLoad>
+			<OnShow>
+				InspectorAddon:OnShow(this);
+			</OnShow>
+			<OnHide>
+                HideUIPanel(this);
+
+				InspectorAddon:OnHide(this);
+			</OnHide>
+            <OnMouseDown>
+                if ( arg1 == "LeftButton" ) then
+                    this:StartMoving();
+                end
+            </OnMouseDown>
+            <OnMouseUp>
+                this:StopMovingOrSizing();
+            </OnMouseUp>
+		</Scripts>
+    </Frame>
+    
+<!-- Script Frame -->
+	<Frame name="IG_ScriptFrame" toplevel="true" enableMouse="true" enableKeyboard="true" movable="true" parent="IG_MainFrame" hidden="true" id="4">
+		<Size>
+			<AbsDimension x="710" y="425"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="CENTER">
+ 				<Offset>
+ 					<AbsDimension x="0" y="0"/>
+ 				</Offset>
+ 			</Anchor>
+ 		</Anchors>
+
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="10" right="10" top="10" bottom="10"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="38"/>
+			</EdgeSize>
+		</Backdrop>
+
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentHeader" file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="390" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString inherits="IG_TitleFont" text="Inspector_SCRIPT_TITLE">
+                    <FontHeight><AbsValue val="16"/></FontHeight>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="$parentHeader">
+							<Offset>
+								<AbsDimension x="0" y="-14"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+            <Button name="$parentCancel" inherits="IG_ScriptButtonTemplate">
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+                        <Offset>
+                            <AbsDimension x="-16" y="16"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnLoad>
+                        this:SetText(CANCEL);
+                    </OnLoad>
+                    <OnClick>
+                        Inspector.ScriptFrame_Cancel();
+                    </OnClick>
+                </Scripts>
+            </Button>
+			<Button name="$parentSave" inherits="IG_ScriptButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parent">
+						<Offset>
+							<AbsDimension x="16" y="16"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetText(TEXT("Save"));
+					</OnLoad>
+					<OnClick>
+						Inspector.ScriptFrame_Save();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentExecute" inherits="IG_ScriptButtonTemplate">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentSave">
+						<Offset>
+							<AbsDimension x="4" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetText(TEXT("Execute"));
+					</OnLoad>
+					<OnClick>
+						Inspector.ScriptFrame_Execute();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentClear" inherits="IG_ScriptButtonTemplate">
+				<Anchors>
+					<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="$parentCancel">
+						<Offset>
+							<AbsDimension x="-4" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this:SetText(TEXT("Clear"));
+					</OnLoad>
+					<OnClick>
+						Inspector.ScriptFrame_Clear();
+					</OnClick>
+				</Scripts>
+			</Button>
+
+            <Frame name="$parentScriptTab1" setAllPoints="true" hidden="false" id="1">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab2" setAllPoints="true" hidden="true" id="2">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab3" setAllPoints="true" hidden="true" id="3">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab4" setAllPoints="true" hidden="true" id="4">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab5" setAllPoints="true" hidden="true" id="5">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab6" setAllPoints="true" hidden="true" id="6">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab7" setAllPoints="true" hidden="true" id="7">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Frame name="$parentScriptTab8" setAllPoints="true" hidden="true" id="8">
+                <Frames>
+                    <ScrollFrame name="$parentListScrollFrame" inherits="IG_ScriptScrollTemplate"/>
+                </Frames>
+            </Frame>
+
+            <Button name="$parentTab1" inherits="CharacterFrameTabButtonTemplate" id="1" text="Inspector_SCRIPT1_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativeTo="$parent">
+                        <Offset>
+                            <AbsDimension x="12" y="-18"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab2" inherits="CharacterFrameTabButtonTemplate" id="2" text="Inspector_SCRIPT2_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab1" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab3" inherits="CharacterFrameTabButtonTemplate" id="3" text="Inspector_SCRIPT3_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab2" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab4" inherits="CharacterFrameTabButtonTemplate" id="4" text="Inspector_SCRIPT4_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab3" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab5" inherits="CharacterFrameTabButtonTemplate" id="5" text="Inspector_SCRIPT5_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab4" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab6" inherits="CharacterFrameTabButtonTemplate" id="6" text="Inspector_SCRIPT6_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab5" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab7" inherits="CharacterFrameTabButtonTemplate" id="7" text="Inspector_SCRIPT7_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab6" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentTab8" inherits="CharacterFrameTabButtonTemplate" id="8" text="Inspector_SCRIPT8_TEXT">
+                <Size>
+                    <AbsDimension x="20" y="26"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="LEFT" relativeTo="$parentTab7" relativePoint="RIGHT">
+                        <Offset>
+                            <AbsDimension x="-14" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        Inspector.ScriptFrameTab_OnClick(this:GetID());
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+		</Frames>
+		<Scripts>
+            <OnLoad>
+                Inspector_OnLoad();
+            </OnLoad>
+			<OnShow>
+				InspectorAddon:OnShow(this);
+			</OnShow>
+			<OnHide>
+                HideUIPanel(this);
+
+				InspectorAddon:OnHide(this);
+			</OnHide>
+            <OnMouseDown>
+                if ( arg1 == "LeftButton" ) then
+                    this:StartMoving();
+                end
+            </OnMouseDown>
+            <OnMouseUp>
+                this:StopMovingOrSizing();
+            </OnMouseUp>
+		</Scripts>
+    </Frame>
+
+</Ui>
+

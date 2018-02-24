@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Molten AH-fix
+## Author: Anyone@Deathwing
+## Version: 1.2
+## Notes: Fixes auction house addon functionality on Molten-wow wotlk realms
+
+Molten_AH-fix.lua

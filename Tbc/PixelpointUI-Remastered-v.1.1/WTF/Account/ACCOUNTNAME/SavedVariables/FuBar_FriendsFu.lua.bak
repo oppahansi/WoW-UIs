@@ -1,0 +1,13 @@
+
+FuBar_FriendsFuDB = {
+	["profiles"] = {
+		["Default"] = {
+			["showIcon"] = false,
+			["detachedTooltip"] = {
+			},
+		},
+	},
+	["disabled"] = {
+		["Default"] = true,
+	},
+}

@@ -1,0 +1,9 @@
+## Interface: 11000
+## Title: WhoTip
+## Notes: Shift-clicking on a user name in chat shows a tooltip with their information.
+## Author: AnduinLothar
+## OptionalDeps: Khaos, Sea, SeaHooks
+## RequiredDeps:
+## SavedVariables: WhoTip_Mouse
+SeaHooks\SeaHooks.lua
+WhoTip.xml

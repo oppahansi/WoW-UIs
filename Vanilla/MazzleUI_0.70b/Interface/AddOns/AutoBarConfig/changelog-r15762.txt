@@ -1,0 +1,27 @@
+------------------------------------------------------------------------
+r15762 | toadkiller | 2006-11-02 12:02:54 -0500 (Thu, 02 Nov 2006) | 2 lines
+
+AutoBarConfig:
+-It is goddamn retarded but table.getn does not.
+------------------------------------------------------------------------
+r15753 | toadkiller | 2006-11-02 09:13:02 -0500 (Thu, 02 Nov 2006) | 3 lines
+
+AutoBarConfig:
+-Add checkbox to control the ActionBar locking feature
+-Checkbox to show hidden drag handle (unimplemented)
+------------------------------------------------------------------------
+r15665 | toadkiller | 2006-10-31 23:15:45 -0500 (Tue, 31 Oct 2006) | 2 lines
+
+AutoBarConfig:
+-Use getfenv instead of getglobal
+------------------------------------------------------------------------
+r15280 | toadkiller | 2006-10-27 01:05:00 -0400 (Fri, 27 Oct 2006) | 2 lines
+
+AutoBarConfig:
+-logtemplate property & some cosmetic code changes
+------------------------------------------------------------------------
+r14907 | toadkiller | 2006-10-22 23:54:14 -0400 (Sun, 22 Oct 2006) | 2 lines
+
+.AutoBarConfig
+loadondemand
+------------------------------------------------------------------------

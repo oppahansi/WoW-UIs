@@ -1,0 +1,9 @@
+
+SkinnerDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+			},
+		},
+	},
+}

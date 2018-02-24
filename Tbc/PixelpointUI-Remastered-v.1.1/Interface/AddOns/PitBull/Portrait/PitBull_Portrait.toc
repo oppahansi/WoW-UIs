@@ -1,0 +1,17 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fPortrait|r]
+## Notes: Show a portrait on the PitBull unit frame.
+## Notes-koKR: PitBull 유닛 프레임에 초상화를 보여줍니다.
+## Author: Kemayo
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-PitBull-DefaultState: 0
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+Portrait.lua

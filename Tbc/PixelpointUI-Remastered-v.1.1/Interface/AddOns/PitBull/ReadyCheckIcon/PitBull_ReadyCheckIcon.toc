@@ -1,0 +1,13 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fReadyCheckIcon|r]
+## Notes: Show Ready Check icon based on if the unit is ready or not.
+## Notes-koKR: 유닛의 응답에 따른 유닛 프레임에 준비 확인 아이콘을 보여줍니다.
+## Author: Ulic
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## X-Category: UnitFrame
+## X-License: GPL v2 or later
+## Version: 2.0
+
+ReadyCheckIcon.lua

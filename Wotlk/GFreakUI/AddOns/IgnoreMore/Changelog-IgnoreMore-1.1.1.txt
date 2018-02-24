@@ -1,0 +1,43 @@
+------------------------------------------------------------------------
+r51 | mikk | 2010-07-14 20:49:14 +0000 (Wed, 14 Jul 2010) | 1 line
+Changed paths:
+   A /tags/1.1.1 (from /trunk:50)
+
+Tagging as 1.1.1
+------------------------------------------------------------------------
+r50 | mikk | 2010-07-14 20:48:30 +0000 (Wed, 14 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/IgnoreMore.lua
+
+IgnoreMore: Fix the ignore reason not showing in the list view (gone since 3.3.5)
+------------------------------------------------------------------------
+r48 | mikk | 2010-07-04 04:41:45 +0000 (Sun, 04 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk/IgnoreMore.toc
+
+IgnoreMore: 
+- TOC 30300  (hehe)
+------------------------------------------------------------------------
+r47 | mikk | 2010-07-01 16:41:41 +0000 (Thu, 01 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk/IgnoreMore.lua
+
+IgnoreMore: 
+- More GetSelectedIgnore 3.3.5 fixes
+------------------------------------------------------------------------
+r46 | mikk | 2010-07-01 16:17:50 +0000 (Thu, 01 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk/IgnoreMore.lua
+
+IgnoreMore: 
+- 3.3.5: GetSelectedIgnore() always has to return a number now (0 for "nothing selected")
+------------------------------------------------------------------------
+r45 | mikk | 2010-07-01 15:45:15 +0000 (Thu, 01 Jul 2010) | 4 lines
+Changed paths:
+   M /trunk/IgnoreMore.lua
+
+IgnoreMore: 
+- Make more stuff local
+- De-ugly some code
+- Add Duel / Trade blocking (note that a trade request will still e.g. close your NPC interaction window... gah)
+------------------------------------------------------------------------

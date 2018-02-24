@@ -1,0 +1,2 @@
+
+VanillaGuideDB = nil

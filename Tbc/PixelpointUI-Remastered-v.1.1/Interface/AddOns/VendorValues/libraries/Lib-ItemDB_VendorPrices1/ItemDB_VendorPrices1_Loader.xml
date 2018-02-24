@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\..\FrameXML\UI.xsd">
+	
+	
+	<Script file="LibraryLoadManager1.lua"/>
+	
+	<Script file="ItemDB_VendorPrices1_BaseObject.lua"/>
+	<Script file="ItemDB_VendorPrices1_DataManip.lua"/>
+	<Script file="ItemDB_VendorPrices1_DefaultDatabase.lua"/>
+	<Script file="ItemDB_VendorPrices1_Main.lua"/>
+	
+	
+</Ui>

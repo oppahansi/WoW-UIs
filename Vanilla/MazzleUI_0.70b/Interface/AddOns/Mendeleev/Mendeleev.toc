@@ -1,0 +1,43 @@
+## Interface:  11200
+## Title: Mendeleev
+## Version: 0.6
+## Notes: Mendeleev shows information in the tooltip based on PeriodicTable
+## Author: MoonWolf
+## DefaultState: enabled
+## OptionalDeps: !!!Libs, Ace2, CompostLib, Babble-2.2, PeriodicTable, KC_Items
+## SavedVariables: MendeleevDB
+libs\AceLibrary\AceLibrary.lua
+libs\Compost-2.0\Compost-2.0.lua
+libs\AceOO-2.0\AceOO-2.0.lua
+libs\AceDB-2.0\AceDB-2.0.lua
+libs\AceAddon-2.0\AceAddon-2.0.lua
+libs\AceHook-2.1\AceHook-2.1.lua
+libs\AceEvent-2.0\AceEvent-2.0.lua
+libs\AceConsole-2.0\AceConsole-2.0.lua
+libs\AceLocale-2.2\AceLocale-2.2.lua
+libs\AceDebug-2.0\AceDebug-2.0.lua
+
+libs\Babble-Boss-2.2\Babble-Boss-2.2.lua
+libs\Babble-Class-2.2\Babble-Class-2.2.lua
+libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+
+MendeleevGlobals.lua
+MendeleevGlobals.zhCN.lua
+MendeleevGlobals.zhTW.lua
+MendeleevGlobals.koKR.lua
+MendeleevGlobals.deDE.lua
+Mendeleev.lua
+MendeleevCats.lua
+
+libs\PT\Core\PTEmbed.lua
+libs\PT\TradeSkills\PTTradeskillsEmbed.lua
+
+libs\PT\Elements\Misc\PTEmbedElemMisc.lua
+libs\PT\Elements\EquipSets\PTEmbedElemEquipSets.lua
+libs\PT\Elements\Food\PTEmbedElemFood.lua
+libs\PT\Elements\Instance\PTEmbedElemInstance.lua
+libs\PT\Elements\Raid\PTEmbedElemRaid.lua
+libs\PT\Elements\Tradeskills\PTEmbedElemTradeskill.lua
+libs\PT\Elements\AQ\PTEmbedElemAhnQiraj.lua
+libs\PT\Elements\ZG\PTEmbedElemZulGurub.lua
+

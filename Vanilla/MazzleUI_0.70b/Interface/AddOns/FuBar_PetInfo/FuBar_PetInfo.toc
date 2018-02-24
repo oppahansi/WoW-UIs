@@ -1,0 +1,11 @@
+## Interface: 11000
+## Title: FuBar - |cffffffffPetInfo|r
+## Version: v1.0.6
+## Author: Corgi
+## eMail: corgiwow@gmail.com
+## Notes: Display Pet Info
+## Dependencies: Ace, FuBar
+## SavedVariables: FuBar_PetInfoDB
+## LoadOnDemand: 1
+FuBar_PetInfoLocals.lua
+FuBar_PetInfo.lua

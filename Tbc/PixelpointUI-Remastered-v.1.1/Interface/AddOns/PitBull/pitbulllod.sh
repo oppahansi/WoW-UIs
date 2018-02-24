@@ -1,0 +1,63 @@
+#!/bin/sh
+cd ..
+rm -rf PitBull_Aura
+rm -rf PitBull_Banzai
+rm -rf PitBull_BarFader
+rm -rf PitBull_CastBar
+rm -rf PitBull_CombatFader
+rm -rf PitBull_CombatIcon
+rm -rf PitBull_CombatText
+rm -rf PitBull_ComboPoints
+rm -rf PitBull_DruidManaBar
+rm -rf PitBull_ExperienceBar
+rm -rf PitBull_HappinessIcon
+rm -rf PitBull_HealthBar
+rm -rf PitBull_HideBlizzard
+rm -rf PitBull_Highlight
+rm -rf PitBull_LeaderIcon
+rm -rf PitBull_MasterLooterIcon
+rm -rf PitBull_Portrait
+rm -rf PitBull_PowerBar
+rm -rf PitBull_PvPIcon
+rm -rf PitBull_RaidTargetIcon
+rm -rf PitBull_RangeCheck
+rm -rf PitBull_ReadyCheckIcon
+rm -rf PitBull_ReputationBar
+rm -rf PitBull_RestIcon
+rm -rf PitBull_Spark
+rm -rf PitBull_ThreatBar
+rm -rf PitBull_TotemTimers
+rm -rf PitBull_VoiceIcon
+rm -rf PitBull_VisualHeal
+
+cd PitBull
+
+mv Aura ../PitBull_Aura
+mv Banzai ../PitBull_Banzai
+mv BarFader ../PitBull_BarFader
+mv CastBar ../PitBull_CastBar
+mv CombatFader ../PitBull_CombatFader
+mv CombatIcon ../PitBull_CombatIcon
+mv CombatText ../PitBull_CombatText
+mv ComboPoints ../PitBull_ComboPoints
+mv DruidManaBar ../PitBull_DruidManaBar
+mv ExperienceBar ../PitBull_ExperienceBar
+mv HappinessIcon ../PitBull_HappinessIcon
+mv HealthBar ../PitBull_HealthBar
+mv HideBlizzard ../PitBull_HideBlizzard
+mv Highlight ../PitBull_Highlight
+mv LeaderIcon ../PitBull_LeaderIcon
+mv MasterLooterIcon ../PitBull_MasterLooterIcon
+mv Portrait ../PitBull_Portrait
+mv PowerBar ../PitBull_PowerBar
+mv PvPIcon ../PitBull_PvPIcon
+mv RaidTargetIcon ../PitBull_RaidTargetIcon
+mv RangeCheck ../PitBull_RangeCheck
+mv ReadyCheckIcon ../PitBull_ReadyCheckIcon
+mv ReputationBar ../PitBull_ReputationBar
+mv RestIcon ../PitBull_RestIcon
+mv Spark ../PitBull_Spark
+mv ThreatBar ../PitBull_ThreatBar
+mv TotemTimers ../PitBull_TotemTimers
+mv VoiceIcon ../PitBull_VoiceIcon
+mv VisualHeal ../PitBull_VisualHeal

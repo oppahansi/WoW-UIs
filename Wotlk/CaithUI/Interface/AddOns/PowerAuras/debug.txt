@@ -1,0 +1,9 @@
+- Pet health/mana trigger
+- Action Usable with pet actions
+- Action Usable with reactive buttons (ex. overpower)
+- Action Usable with macro buttons
+
+PowerAuras-2.5.9a\PowerAuras.lua:4177: Usage: UnitBuff("unit", [index] or ["name", "rank"][, "filter"])
+PowerAuras-2.5.9a\PowerAuras.lua:4177: in function `Powa_UpdateTimer'
+PowerAuras-2.5.9a\PowerAuras.lua:3589: in function `Powa_OnUpdate'
+<string>:"*:OnUpdate":1: in function <[string "*:OnUpdate"]:1>

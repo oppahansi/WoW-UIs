@@ -1,0 +1,145 @@
+tag v4.0.0-beta10
+43bbe7d953514032e5330e25e56aaead8c342cc2
+Shefki <shefki@shefki.org>
+2010-06-22 01:33:54 -0700
+
+Tagging as v4.0.0-beta10
+
+
+--------------------
+
+Shefki:
+	- Fix an error in the Aura FilterEditor when changing profiles.
+	- Really fix the problem with DifficultyColors for LuaTexts.
+	- Fix a bug in the defaults that prevented difficulty colors from updating after you leveled.
+	UNIT_LEVEL needs to be handled for the player and for the unit on the
+	unit frame.
+	- Avoid a rare error related to load orders and LibDBIcon-1.0.
+	- Style change to use capped variable for library name.
+	- Oops forgot to make config mode respect the individual icon configs.
+	- Add the ability to disable individual raid target icons per layout.
+	- Fix an error when opening a bar providers config tab.
+	I'd forgotten that bar providers module isn't in #info-1 but #info-2.
+	- Add boss1-4 ass valid boss ids.
+	Seems that Blizzard is generating events now for them on the PTR.
+	- Fix filename for LibDualSpec-1.0 in embeded installs.
+	- Ticket #604: Add support for Dual-spec profile swaps.
+	- Missed setting the Highlight frame to the Overlay level.
+	- Rework frame levels.  Includes fix for Ticket #743 (Inconsistent Portrait frame level)
+	The PlayerModel frame used for 3d Portraits never had its frame level
+	set so it was only 1 above the frame (along with bars).  However, 2d
+	portraits were set at the same frame level as indicators.  This meant
+	people using 3d portraits saw them consistently under indicators (as
+	most people probably want) while people using 2d portraits had somewhat
+	random behavior.
+	
+	Additionally, since all the frame levels were only spaced out by 1
+	frame, if something needed multiple layers for various reasons then some
+	objects would seem to be between parts of some objects and others.  A
+	great example of this was 2d portraits and auras.  The 2d Portrait would
+	be on top of the Auras but under the texts for them.
+	
+	This commit reworks the frame levels by spacing them out.  Frame levels
+	are layed out as follows (numbers are offsets from the unit frames
+	level)
+	
+	-1 GroupHeader
+	0  Unit Frame
+	1  Bars
+	5 Portrait
+	9  Aura
+	10 Aura Cooldown
+	11 Aura Text
+	13 Indicators
+	14 Totems CD
+	15 Totems Text
+	17 TextProvider Overlay
+	
+	If you've adjusted the frame level of your auras manually you may need
+	to adjust them to deal with the new changes since almost everything has
+	raised by quite a few frame levels.
+	- Fix an error caused by recycling a BetterStatusBar with animations on.
+	Prior to this the animation flags were turned off when the control was
+	retrieved.  Which led to a bit of a chicken/egg syndrome.  The value
+	gets updated during the retrieval process and it thinks the animations
+	are turned on so it expects the animation controls to exist, which they
+	don't since they're recycled separately.
+	
+	Now the flags are cleared when the animation objects are recycled.
+	- Add Mind Trauma debuff to Priest enemy debuffs whitelist.
+	- Ticket #631: Allow Health and PowerBars to be animated/faded over time.
+	This is similar to the BarFader module in PitBull3.  However, in this
+	case it has been added to the BetterStatusBar implementation.  Bar
+	modules that want to allow their bars to be animated should set
+	allow_animations on their module object.
+	
+	This is also implemented using the animation system added in WoW 3.1.x.
+	So it should be reasonably efficient.  Bars that are not set to animate
+	and/or fade incur no overhead.
+	- Ticket #748: CastBarLatency fails to show for abilities that don't trigger a GCD in some cases.
+	See my comment on the ticket for details of how this happens.  This
+	change also stops caching of the GCD between casts.  In a real
+	environment the GCD can't usefully be cached due to haste.
+Cameron Knight:
+	- Make class orderings customizeable and also rely on Blizz's standard CLASS_SORT_ORDER for the default.
+Shefki:
+	- Style cleanup in CastBar module.
+	Remove more camel casing and rename CREEPY_HEAD which is no longer a
+	head but just a generic warcraftl log
+	- Oops took one too many ends in the previous commit.
+	- Fix the bug that causes the auto-hide CastBar to ocassionally not hide.
+	There was a rare race condition between GetColor and FixCastData.  As a
+	CastBar is fading out we bounce back and forth between these two
+	functions.  When the calculation of the alpha gets to or below zero then
+	the bar should be hidden.  GetColor would remove the cast_data and stop
+	the timer frame but not clear the frames.  As a result the CastBar
+	would be stuck.  Really, the GetColor function should not be deleting
+	entries in cast_data, that should always happen in FixCastData.
+	- Remove a parameter from a function call that was never needed.  Oops.
+	- Fix Ticket #730: Fix deficit bars.
+	Can't avoid clamping to 0 and 1 and then storing it and then claimping
+	again for EPSILON and 1.  If we only clamp to EPSILON then we end up
+	with zero values calculated which create bars of an indeterminite width.
+	- BetterStatusBar was not clamping the extra value properly.
+	When both the value and the extra value was 1 then we wouldn't clamp the
+	extra value before setting it because 1 - extraValue resulted in 0 and
+	we'd clamp between 1e-5 and 0./
+	- Fix Ticket #728: Error in BetterStatusBar
+	BetterStatusBar didn't deal with NaN being passed to it, e.g.
+	StatusBar:SetValue(0/0).  It now treats this as zero.
+	- Fix Ticket #726: PetHeaders being used on non-pet based groups.
+	If you copy a group that was setup to use the pet header (Leave gaps for
+	pets) then this setting would be copied and applied to non-pet groups.
+	So if you copied a pet group and tried to make a raid then only raid
+	members with pets would be shown.
+	- Fix Ticket #549: Target highlights not always working.
+	This module had a number of logic problems with it.  It had a mix of
+	multiple design patterns that we use in PB4 modules.  Some parts of it
+	assumed that the highlight was only on the frame when it was shown and
+	some parts tried to hide and show the frame.
+	
+	Includes a slight optomization, as the color for the highlight is now
+	only set on frame creation and the configuration code nows finds all the
+	highlight frames and changes their colors when the config changes.
+	
+	The standard method of operation now for this module is to leave the
+	Highlight frame in existance unless the module is disabled for the
+	layout or the frame is entirely torn down.  The frame will be made on
+	demand when it is first needed.
+	- Allow for fader modules to have priorities less than the default.
+	- Ticket #719: Add a priority system to the fader module system.
+	Fader modules can now return an optional priority parameter as the 2nd
+	return from their GetOpacity function.  If no priority is returned then
+	it will be treated as priority 0.  The lowest opacity of the highest
+	priority module will be used.  This allows modules to be written to
+	force the opacity to be higher instead of simply lower.
+	- Just call the Focus frame Focus in LuaTexts like the rest of PB4.
+	We were using Focus-target as DogTags was using.  But this is terribly
+	confusing when there is a Focus' target frame.
+	- Convert the mouseover handling for LuaTexts to events.
+	This is far more efficient since it's not updating on a polling basis.
+	- Fix the show overheal option for the VisualHeal module.  It was always
+	using the setting for the currently selected layout in the config section
+	regardless of the layout for the frame.
+	- Avoid an error in showing the FocusFrame since blizzard removed
+	FocusFrame_Update()

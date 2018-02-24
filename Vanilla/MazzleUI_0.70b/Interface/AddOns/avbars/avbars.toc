@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: AVBars
+## Notes: Graphical Timers for Events in AV and AB
+## SavedVariables:
+## OptionalDeps:
+## Dependencies: 
+avbars.lua
+avbars.xml
+

@@ -1,0 +1,119 @@
+
+RaidRoll_DB = {
+	["Scale"] = 100,
+	["BASE_GP"] = 1,
+	["Loot"] = {
+		{
+			["ITEM_1"] = {
+				["ITEMLINK"] = "|cffa335ee|Hitem:51544:0:0:0:0:0:0:0:80|h[Wrathful Gladiator's Plate Legguards]|h|r",
+				["LOOTNAME"] = "Wrathful Gladiator's Plate Legguards",
+				["ITEMLEVEL"] = 270,
+				["ICON"] = "Interface\\Icons\\INV_PANTS_PLATE_27",
+				["RECEIVED"] = "-",
+				["WINNER"] = "-",
+			},
+			["TOTAL ITEMS"] = 4,
+			["LOOTER NAME"] = "Protestus",
+			["ITEM_4"] = {
+				["ITEMLINK"] = "|cffa335ee|Hitem:51216:0:0:0:0:0:0:0:80|h[Sanctified Ymirjar Lord's Legguards]|h|r",
+				["LOOTNAME"] = "Sanctified Ymirjar Lord's Legguards",
+				["ITEMLEVEL"] = 264,
+				["ICON"] = "Interface\\Icons\\inv_pants_plate_32",
+				["RECEIVED"] = "-",
+				["WINNER"] = "-",
+			},
+			["ITEM_3"] = {
+				["ITEMLINK"] = "|cffa335ee|Hitem:51375:0:0:0:0:0:0:0:80|h[Wrathful Gladiator's Sabatons of Dominance]|h|r",
+				["LOOTNAME"] = "Wrathful Gladiator's Sabatons of Dominance",
+				["ITEMLEVEL"] = 264,
+				["ICON"] = "Interface\\Icons\\inv_boots_chain_07",
+				["RECEIVED"] = "-",
+				["WINNER"] = "-",
+			},
+			["MOB NAME"] = "Toravon the Ice Watcher",
+			["ITEM_2"] = {
+				["ITEMLINK"] = "|cffa335ee|Hitem:51416:0:0:0:0:0:0:0:80|h[Wrathful Gladiator's Dreadplate Legguards]|h|r",
+				["LOOTNAME"] = "Wrathful Gladiator's Dreadplate Legguards",
+				["ITEMLEVEL"] = 270,
+				["ICON"] = "Interface\\Icons\\INV_PANTS_PLATE_27",
+				["RECEIVED"] = "-",
+				["WINNER"] = "-",
+			},
+		}, -- [1]
+		[0] = {
+			["TOTAL ITEMS"] = 0,
+		},
+		["TOTAL WINDOWS"] = 1,
+		["CURRENT WINDOW"] = 1,
+	},
+	["Rank Priority"] = {
+		10, -- [1]
+		9, -- [2]
+		8, -- [3]
+		7, -- [4]
+		6, -- [5]
+		5, -- [6]
+		4, -- [7]
+		3, -- [8]
+		2, -- [9]
+		1, -- [10]
+		0, -- [11]
+		-1, -- [12]
+	},
+	["EPGP"] = {
+	},
+	["EXTRAS_P"] = 0,
+	["DECAY_P"] = 0,
+	["MIN_EP"] = 2500,
+}
+RaidRoll_DBPC = {
+	["[character]"] = {
+		["RR_PlayerIconID"] = {
+		},
+		["RR_EPGP_Enabled"] = false,
+		["RR_RollCheckBox_Auto_Close"] = false,
+		["RR_Accept_All_Rolls"] = false,
+		["RR_AutoOpenLootWindow"] = true,
+		["RR_EPGP_Priority"] = false,
+		["RR_Roll_Tracking_Enabled"] = true,
+		["RR_ShowGroupNumber"] = false,
+		["Raid_Roll_SetMsg1_EditBox"] = "Roll [Item] Main Spec",
+		["Raid_Roll_SetMsg2_EditBox"] = "Roll [Item] Off Spec",
+		["RR_AllowExtraRolls"] = false,
+		["RR_RollCheckBox_GuildAnnounce"] = false,
+		["RR_PlayerIcon"] = {
+		},
+		["RR_RollCheckBox_Track_Bids"] = false,
+		["RR_RollCheckBox_Num_Not_Req"] = false,
+		["RR_Track_Unannounced_Rolls"] = false,
+		["RR_ReceiveGuildMessages"] = false,
+		["RR_RollCheckBox_Track_EPGPSays"] = false,
+		["RR_RollCheckBox_Multi_Rollers"] = false,
+		["RR_Show_Ranks"] = false,
+		["RR_Enable3Messages"] = false,
+		["RR_RollCheckBox_Auto_Announce"] = false,
+		["RR_ShowClassColors"] = true,
+		["RR_RankPriority"] = false,
+		["RR_RollCheckBox_GuildAnnounce_Officer"] = false,
+		["RR_RollCheckBox_Enable_Alt_Mode"] = false,
+		["RR_Frame_WotLK_Dung_Only"] = false,
+		["RR_NameMark"] = {
+			[""] = {
+			},
+			["sarevokk"] = {
+			},
+			["[character]"] = {
+			},
+			["whatsapp"] = {
+			},
+			["cormar"] = {
+			},
+			["kondoin"] = {
+			},
+		},
+		["Raid_Roll_SetMsg3_EditBox"] = "Roll [Item] Off Spec",
+		["Time_Offset"] = 0,
+		["RR_RollCheckBox_No_countdown"] = false,
+		["RR_ExtraWidth"] = 0,
+	},
+}

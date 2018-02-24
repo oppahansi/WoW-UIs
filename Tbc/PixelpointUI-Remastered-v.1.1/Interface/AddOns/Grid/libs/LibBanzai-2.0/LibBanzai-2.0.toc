@@ -1,0 +1,14 @@
+﻿## Interface: 20400
+## LoadOnDemand: 1
+## Title: Lib: Banzai-2.0
+## Notes: Aggro notification library.
+## Author: Rabbit
+## X-Website: http://www.wowace.com/wiki/BanzaiLib
+## X-Email: rabbit.magtheridon@gmail.com
+## X-Category: Library
+## X-Credits: maia
+## Version: 2.0
+## X-AceLibrary-Banzai-2.0: true
+
+lib.xml
+

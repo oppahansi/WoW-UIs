@@ -1,0 +1,18 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffFocus|r
+## Notes: Quartz module to display casting bar for your focus.
+## Title-ruRU: Кварц |cff7777ffФокус|r
+## Notes-ruRU: Модуль Кварца отображающий баффы и дебаффы цели/фокуса.
+## Notes-zhTW: 顯示 Focus 的施法條。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Focus
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Focus.lua

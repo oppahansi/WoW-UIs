@@ -1,0 +1,185 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="Forte_Shard.lua"/>
+	
+	<StatusBar name="FWSHBarTemplate" virtual="true" minValue="0" maxValue="1" defaultValue="1" hidden="true">
+		<Size>
+			<AbsDimension x="100" y="12"/>
+		</Size>
+		<HitRectInsets>
+			<AbsInset left="0" right="0" top="0" bottom="0"/>
+		</HitRectInsets>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentAmount" inherits="GameFontHighlightSmall" justifyH="RIGHT">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-1" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-1" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentName" inherits="GameFontHighlightSmall" justifyH="CENTER" hidden="false">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="1" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="1" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT" relativeTo="$parentAmount" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="-1" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentAmount" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="-1" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<Texture name="$parentSpark" file="Interface\AddOns\Forte_Core\Textures\Spark" alphaMode="ADD">
+					<Size>
+						<AbsDimension x="12" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentBack" file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar">
+					<Size>
+						<AbsDimension x="100" y="12"/>
+					</Size>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+
+		</Scripts>
+		<BarTexture file="Interface\PaperDollInfoFrame\UI-Character-Skills-Bar"/>
+		<BarColor r=".64" g=".21" b=".93"/>
+	</StatusBar>
+	
+	<Frame name="FWSHFrame" movable="true" toplevel="true" parent="UIParent" hidden="false">
+		<Size>
+			<AbsDimension x="106" y="20" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentAmount" inherits="GameFontHighlightSmall" justifyH="CENTER">
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="18" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentInfo" inherits="GameFontHighlightSmall" justifyH="RIGHT" text="waiting...">
+					<Anchors>
+						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-4" y="-10"/>
+							</Offset>
+						</Anchor>
+						
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="FWSHButton">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="2" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						FW:ShardCheck();
+					</OnClick>
+					<OnUpdate>
+						if self.over then
+							self.tip = "";
+							if FW.LastShardCheck ~= 0 then
+								self.tip=string.format(FW.L.LAST_CHECK,math.floor(GetTime()-FW.LastShardCheck));
+							end
+							self.tip = FW.L.GET_SH_UPDATE..self.tip
+							self.title = FW.L.UPDATE_NOW;
+							FW:ShowTip(self);
+						end
+					</OnUpdate>
+					<OnEnter>
+						self.over = 1;
+					</OnEnter>
+					<OnLeave>
+						self.over = nil;
+						FW:HideTip(self);
+					</OnLeave>
+				</Scripts>
+				<NormalTexture file="Interface\AddOns\Forte_Core\Textures\SH1"/>
+				<HighlightTexture file="Interface\AddOns\Forte_Core\Textures\SH2"/>
+			</Button>
+		</Frames>
+		
+		<Scripts>
+			<OnMouseDown>
+				FW:StartMoving(arg1);
+			</OnMouseDown>
+			<OnLoad>
+				FW:ShardOnload();
+			</OnLoad>
+			<OnMouseUp>
+				FW:SHFrame_OnClick(arg1);
+				FW:StopMoving();
+			</OnMouseUp>
+		</Scripts> 
+	</Frame>
+	<Frame name="FWSHBackground" parent="UIParent" hidden="false">
+		<Size>
+			<AbsDimension x="106" y="20" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="FWSHFrame" relativePoint="TOPLEFT"/>
+			<Anchor point="BOTTOMRIGHT" relativeTo="FWSHFrame" relativePoint="BOTTOMRIGHT"/>
+		</Anchors>
+		<Frames>
+			<StatusBar name="FWSHBar1" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar2" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar3" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar4" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar5" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar6" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar7" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar8" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar9" inherits="FWSHBarTemplate"/>
+			<StatusBar name="FWSHBar10" inherits="FWSHBarTemplate"/>
+		</Frames>
+		<Backdrop bgFile="Interface\AddOns\Forte_Core\Textures\Background" edgeFile="Interface\AddOns\Forte_Core\Textures\Border" tile="true">
+			<EdgeSize><AbsValue val="5"/></EdgeSize>
+			<TileSize><AbsValue val="5"/></TileSize>
+			<BackgroundInsets><AbsInset left="5" right="5" top="5" bottom="5"/></BackgroundInsets>
+		</Backdrop>
+	</Frame>
+</Ui>

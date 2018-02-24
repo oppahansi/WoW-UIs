@@ -1,0 +1,21 @@
+## Interface: 11200
+## Title: Mazzlefizz's |cFF006699Mazzifier|r
+## Notes: Configure Mazzle UI for initial use
+## SavedVariables: Mazzifier_G_InstalledVersionDB
+## SavedVariablesPerCharacter: Mazzifier_C_InstalledVersionDB, Mazzifier_CurrentInstallOptions
+## Dependencies: Ace, Timex, CT_Viewport, MazzleUI
+## LoadOnDemand: 1
+..\..\FrameXML\Fonts.xml
+..\..\FrameXML\UIPanelTemplates.xml
+..\..\FrameXML\CharacterFrameTemplates.xml
+..\..\FrameXML\OptionsFrameTemplates.xml
+..\..\FrameXML\UIDropDownMenuTemplates.xml
+..\..\FrameXML\ItemButtonTemplate.xml
+..\..\FrameXML\GameTooltipTemplate.xml
+..\..\FrameXML\HonorFrameTemplates.xml
+..\..\FrameXML\MoneyFrame.xml
+Mazzifier_Templates.xml
+Mazzifier.xml
+DUF\DUF_Setups.xml
+DART\DART_Setups.xml
+DAB\DAB_Setups.xml

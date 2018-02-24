@@ -1,0 +1,33 @@
+
+Omen2DB = {
+	["global"] = {
+	},
+	["profileKeys"] = {
+		["Kripparrian - Auchindoun"] = "Kripparrian - Auchindoun",
+	},
+	["profiles"] = {
+		["Kripparrian - Auchindoun"] = {
+			["PositionW"] = 166,
+			["PositionH"] = 299,
+			["PositionY"] = 385.5000610351563,
+			["PositionX"] = 821.0000610351563,
+			["minimapPosition"] = 277.5084646372095,
+			["options"] = {
+				["Show"] = true,
+				["SingleTarget"] = {
+					["Warnings"] = {
+						["EnableMessage"] = false,
+						["EnableSound"] = false,
+					},
+				},
+				["Modules"] = {
+					["LastActive"] = "SingleTarget",
+				},
+			},
+		},
+	},
+}
+Omen2DefaultProfile = {
+	false, -- [1]
+	"Modders: In your SavedVars, replace the first argument of this table with the profile you want loaded by default, like 'Default'.", -- [2]
+}

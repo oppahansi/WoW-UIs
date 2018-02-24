@@ -1,0 +1,20 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffSwing|r
+## Notes: Quartz module to display a swing timer.
+## Title-ruRU: Кварц |cff7777ffВзмах|r
+## Notes-ruRU: Модуль Кварца отображающий таймеры Взмаха (взмах оружием, натягивание тетивы, перезарядка оружия).
+## Title-zhTW: Quartz |cff7777ff攻擊間隔|r
+## Notes-zhTW: 顯示攻擊間隔計時器 (例如近戰武器/自動射擊)。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Swing
+## X-Quartz-RequiredModules: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Swing.lua

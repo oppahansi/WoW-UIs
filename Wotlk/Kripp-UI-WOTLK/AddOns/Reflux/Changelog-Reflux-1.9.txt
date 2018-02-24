@@ -1,0 +1,41 @@
+------------------------------------------------------------------------
+r45 | kagaro | 2010-02-17 17:53:21 +0000 (Wed, 17 Feb 2010) | 3 lines
+Changed paths:
+   A /tags/1.9 (from /trunk:44)
+
+Tagging as 1.9
+
+Fixed typoe bug in printf
+------------------------------------------------------------------------
+r44 | kagaro | 2010-02-17 14:58:12 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/Reflux.lua
+
+Changed printf to print
+------------------------------------------------------------------------
+r43 | kagaro | 2010-02-14 17:41:59 +0000 (Sun, 14 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/Reflux.lua
+
+Fixed a bug in switch, that caused Reflux to forgot an emulated profile when you switched.
+------------------------------------------------------------------------
+r40 | kagaro | 2010-02-07 16:10:16 +0000 (Sun, 07 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/Reflux.toc
+
+ToC bump for new functionality
+------------------------------------------------------------------------
+r39 | kagaro | 2010-02-07 16:09:03 +0000 (Sun, 07 Feb 2010) | 3 lines
+Changed paths:
+   M /trunk/Reflux.lua
+
+Initial checkin on snapshot code.
+
+Snapshotting, will have Reflux copy each addon profile (what ever it is currently set as) to the new prfile. creating a snapshot profile.
+------------------------------------------------------------------------
+r38 | kagaro | 2010-02-05 17:35:33 +0000 (Fri, 05 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/Reflux.lua
+
+Fixed a possible empty table check in show command
+------------------------------------------------------------------------

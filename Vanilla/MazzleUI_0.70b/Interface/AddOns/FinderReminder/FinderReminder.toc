@@ -1,0 +1,11 @@
+## Interface: 11000
+## Title: FinderReminder |cff007fff-Ace-|r
+## Notes: An Addon to remind finders to track the things they wish to find.
+## Author: tard
+## RequiredDeps: Ace 
+## SavedVariables: FinderReminderDB
+locals.frFR.lua
+locals.deDE.lua
+locals.enUS.lua
+FinderReminder.lua
+trackingbutton.lua

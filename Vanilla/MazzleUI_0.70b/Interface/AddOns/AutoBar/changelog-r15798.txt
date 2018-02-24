@@ -1,0 +1,234 @@
+------------------------------------------------------------------------
+r15798 | sayclub | 2006-11-03 01:40:07 -0500 (Fri, 03 Nov 2006) | 2 lines
+
+AutoBar:
+- Update koKR
+------------------------------------------------------------------------
+r15761 | toadkiller | 2006-11-02 12:00:50 -0500 (Thu, 02 Nov 2006) | 2 lines
+
+AutoBar:
+-Fix drag & drop error caused by table.getn not returning anything remotely close to number of elements in the array.
+------------------------------------------------------------------------
+r15754 | toadkiller | 2006-11-02 09:37:33 -0500 (Thu, 02 Nov 2006) | 4 lines
+
+AutoBar:
+-Partial fix for sorting of item lists
+-ArrangeOnUse within supported categories as well.  (Pets & Mounts only so far).
+-Checkbox to enable locking ActionBar buttons when AutoBar is locked.
+------------------------------------------------------------------------
+r15675 | sayclub | 2006-11-01 02:50:19 -0500 (Wed, 01 Nov 2006) | 2 lines
+
+AutoBar:
+- Update koKR
+------------------------------------------------------------------------
+r15664 | toadkiller | 2006-10-31 23:13:20 -0500 (Tue, 31 Oct 2006) | 6 lines
+
+AutoBar:
+-Added various Kimchis since they are a delicious food
+-ItemLists are now all based on PeriodicTable except for food which needs some rethinking perhaps.
+-Using getfenv in the lua code now
+-Collapsed racial & special mounts into just mounts
+-Fishing lure gear & poles
+------------------------------------------------------------------------
+r15460 | sayclub | 2006-10-29 08:54:11 -0500 (Sun, 29 Oct 2006) | 2 lines
+
+AutoBar:
+-Korea Locale
+------------------------------------------------------------------------
+r15282 | toadkiller | 2006-10-27 01:08:51 -0400 (Fri, 27 Oct 2006) | 2 lines
+
+AutoBar:
+-fix bad misc name in externals
+------------------------------------------------------------------------
+r15279 | toadkiller | 2006-10-27 01:01:24 -0400 (Fri, 27 Oct 2006) | 3 lines
+
+AutoBar:
+-Handle nil cache from PT
+-Actually check in the profile changes
+------------------------------------------------------------------------
+r15277 | toadkiller | 2006-10-27 00:38:18 -0400 (Fri, 27 Oct 2006) | 2 lines
+
+AutoBar:
+-Remove old svn property from AutoBar
+------------------------------------------------------------------------
+r15276 | toadkiller | 2006-10-27 00:33:54 -0400 (Fri, 27 Oct 2006) | 3 lines
+
+AutoBar:
+-Deal with some bad profile states.
+
+------------------------------------------------------------------------
+r15236 | toadkiller | 2006-10-26 12:07:08 -0400 (Thu, 26 Oct 2006) | 2 lines
+
+AutoBar:
+-foad
+------------------------------------------------------------------------
+r15235 | toadkiller | 2006-10-26 11:55:28 -0400 (Thu, 26 Oct 2006) | 2 lines
+
+AutoBar:
+-For gods sake update the libs folder
+------------------------------------------------------------------------
+r15232 | toadkiller | 2006-10-26 11:39:22 -0400 (Thu, 26 Oct 2006) | 2 lines
+
+AutoBar:
+-Fix property for pt misc
+------------------------------------------------------------------------
+r15231 | toadkiller | 2006-10-26 11:20:06 -0400 (Thu, 26 Oct 2006) | 3 lines
+
+AutoBar:
+-Korean tx to Sayclub
+-Added beginnings of a Quest Item category.
+------------------------------------------------------------------------
+r15207 | toadkiller | 2006-10-26 04:32:11 -0400 (Thu, 26 Oct 2006) | 2 lines
+
+AutoBar:
+-Pet Category added.  Reset to pick up the pet slot (rogues need to manually add it).
+------------------------------------------------------------------------
+r15202 | toadkiller | 2006-10-26 03:03:48 -0400 (Thu, 26 Oct 2006) | 2 lines
+
+AutoBar:
+-Adding percfoods for Halloween
+------------------------------------------------------------------------
+r15114 | eternally777 | 2006-10-24 17:48:05 -0400 (Tue, 24 Oct 2006) | 5 lines
+
+AutoBar:
+- The svn:externals property has been removed from the addon's base directory and placed instead on the libs directory (change made yesterday, but I think my commit message was interpreted differently).
+- Externals modified so that only the necessary components of Ace2 and PeriodicTable are in the libs folder, not the entire libraries.
+- TOC file updated to reflect the changes made to the file structure of the libs directory.
+- This commit message has been brought to you by the letter "A", and by viewers like you.
+------------------------------------------------------------------------
+r15068 | toadkiller | 2006-10-24 07:22:36 -0400 (Tue, 24 Oct 2006) | 2 lines
+
+AutoBar:
+- Not really sure if this is the right way to do it but overiding eternally777 changes.  You can not change paths to libraries without breaking the mod.
+------------------------------------------------------------------------
+r15057 | toadkiller | 2006-10-24 01:56:49 -0400 (Tue, 24 Oct 2006) | 4 lines
+
+AutoBar:
+-- French!  Thank you so much Cinedelle!
+-- Config is now load on demand.
+-- Initialization error on first startup fixed?
+------------------------------------------------------------------------
+r15040 | eternally777 | 2006-10-23 23:12:00 -0400 (Mon, 23 Oct 2006) | 4 lines
+
+AutoBar:
+- Adding new external properties
+- Removing AceModuleCore-2.0 from TOC as it was apparently unnecessary
+- Removed AceComm-2.0, AceTab-2.0, and maybe one or two others.
+------------------------------------------------------------------------
+r15039 | eternally777 | 2006-10-23 23:05:17 -0400 (Mon, 23 Oct 2006) | 4 lines
+
+AutoBar:
+- Externals clean-up, removing property from base directory and placing it on "libs" directory
+- Removing the unused embeds
+- Removing duplicate embeds
+------------------------------------------------------------------------
+r14900 | toadkiller | 2006-10-22 23:36:40 -0400 (Sun, 22 Oct 2006) | 2 lines
+
+AutoBar:
+Make config loadondemand part1
+------------------------------------------------------------------------
+r14625 | nevcairiel | 2006-10-21 07:06:06 -0400 (Sat, 21 Oct 2006) | 2 lines
+
+AutoBar:
+- AceHook is not really used, so dont load it in the .toc
+------------------------------------------------------------------------
+r14566 | toadkiller | 2006-10-20 22:46:04 -0400 (Fri, 20 Oct 2006) | 5 lines
+
+AutoBar:
+- Restored lost changes to character & shared display edit.
+- Acelocale 2.2
+- Some more Ace Locale conversion
+- Fixed error with smartSelfCast on the profile tab.
+------------------------------------------------------------------------
+r14441 | toadkiller | 2006-10-19 19:58:27 -0400 (Thu, 19 Oct 2006) | 2 lines
+
+AutoBar:
+Updated Chinese, tx to PDI175
+------------------------------------------------------------------------
+r14407 | toadkiller | 2006-10-19 11:06:03 -0400 (Thu, 19 Oct 2006) | 2 lines
+
+AutoBar:
+-Working externals finally I think
+------------------------------------------------------------------------
+r14404 | toadkiller | 2006-10-19 10:43:12 -0400 (Thu, 19 Oct 2006) | 2 lines
+
+AutoBar:
+-I think this is a property change.  Attempting to get the entire ace2 lib to save text space.
+------------------------------------------------------------------------
+r14402 | toadkiller | 2006-10-19 10:27:50 -0400 (Thu, 19 Oct 2006) | 2 lines
+
+AutoBar:
+- Make the Drag Handle hideable again
+------------------------------------------------------------------------
+r14338 | toadkiller | 2006-10-18 22:25:14 -0400 (Wed, 18 Oct 2006) | 4 lines
+
+Autobar:
+- Switch to Ace Event for timers 
+- Upgrade align buttons option to have any combination of vertical and horizontal alignment (9 options). 
+- Fix toc for Ace svn
+------------------------------------------------------------------------
+r14294 | toadkiller | 2006-10-18 20:49:28 -0400 (Wed, 18 Oct 2006) | 2 lines
+
+Autobar:
+Ok finally Dewdrop & not DewDrop.
+------------------------------------------------------------------------
+r14242 | rabbit | 2006-10-18 13:55:16 -0400 (Wed, 18 Oct 2006) | 2 lines
+
+AutoBar:
+- It's "Dewdrop", not "DewDrop".
+------------------------------------------------------------------------
+r14221 | toadkiller | 2006-10-18 05:30:27 -0400 (Wed, 18 Oct 2006) | 3 lines
+
+Autobar:
+Still messing with toc.  tx for changes rabbit.
+Switch to Ace event for timers.
+------------------------------------------------------------------------
+r14189 | rabbit | 2006-10-17 16:20:44 -0400 (Tue, 17 Oct 2006) | 2 lines
+
+AutoBar:
+- Fix trying to index ? error.
+------------------------------------------------------------------------
+r14187 | rabbit | 2006-10-17 16:10:59 -0400 (Tue, 17 Oct 2006) | 2 lines
+
+AutoBar:
+- Err, PT, not SEE.
+------------------------------------------------------------------------
+r14186 | rabbit | 2006-10-17 16:08:56 -0400 (Tue, 17 Oct 2006) | 2 lines
+
+AutoBar:
+- Fix OptionalDeps.
+------------------------------------------------------------------------
+r14185 | kebinusan | 2006-10-17 15:59:22 -0400 (Tue, 17 Oct 2006) | 1 line
+
+AutoBar: Attempt to fix externals for addon
+------------------------------------------------------------------------
+r14044 | toadkiller | 2006-10-15 19:37:06 -0400 (Sun, 15 Oct 2006) | 2 lines
+
+Autobar:
+still trying to get a working TOC for the wiki
+------------------------------------------------------------------------
+r13947 | toadkiller | 2006-10-15 00:08:21 -0400 (Sun, 15 Oct 2006) | 2 lines
+
+Autobar:
+Add AutoBarItemList back in
+------------------------------------------------------------------------
+r13945 | toadkiller | 2006-10-15 00:03:42 -0400 (Sun, 15 Oct 2006) | 2 lines
+
+Autobar:
+Slightly more ACE Locale 2.1
+------------------------------------------------------------------------
+r13927 | toadkiller | 2006-10-14 21:49:50 -0400 (Sat, 14 Oct 2006) | 2 lines
+
+Autobar:
+remove old dewdrop lib
+------------------------------------------------------------------------
+r13783 | toadkiller | 2006-10-13 07:14:56 -0400 (Fri, 13 Oct 2006) | 2 lines
+
+AutoBar:
+Trying to set externals
+------------------------------------------------------------------------
+r13782 | toadkiller | 2006-10-13 06:35:34 -0400 (Fri, 13 Oct 2006) | 2 lines
+
+AutoBar:
+checkin take 2
+------------------------------------------------------------------------

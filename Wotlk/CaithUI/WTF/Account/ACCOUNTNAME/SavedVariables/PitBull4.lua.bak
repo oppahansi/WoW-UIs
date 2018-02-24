@@ -1,0 +1,665 @@
+
+PitBull4DB = {
+	["namespaces"] = {
+		["CombatFader"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["HappinessIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["Highlight"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["show_target"] = false,
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["ExperienceBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["RaidTargetIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["RangeFader"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["CastBarLatency"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["CombatText"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["Sounds"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["LeaderIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["Border"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["Aura"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["zoom_aura"] = true,
+							["layout"] = {
+								["buff"] = {
+									["offset_y"] = 5,
+									["anchor"] = "TOPLEFT",
+									["side"] = "TOP",
+									["growth"] = "up_right",
+									["row_spacing"] = 3,
+									["col_spacing"] = 2,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["CastBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["Background"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["color"] = {
+								nil, -- [1]
+								nil, -- [2]
+								nil, -- [3]
+								0.8200000077486038, -- [4]
+							},
+						},
+					},
+				},
+			},
+		},
+		["ComboPoints"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["HideBlizzard"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["ReputationBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["DogTagTexts"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["first"] = false,
+							["elements"] = {
+								["Druid mana"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if not IsMana then FractionalDruidMP]",
+									["attach_to"] = "DruidManaBar",
+								},
+								["Threat"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[PercentThreat:Short:Hide(0):Percent]",
+									["attach_to"] = "ThreatBar",
+								},
+								["Power"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if HasMP then FractionalMP]",
+									["attach_to"] = "PowerBar",
+								},
+								["Reputation"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[if IsMouseOver then ReputationName else if ReputationName then FractionalReputation ' ' PercentReputation:Percent:Paren]",
+									["attach_to"] = "ReputationBar",
+								},
+								["Class"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Classification] [Level:DifficultyColor] [(if (IsPlayer or (IsEnemy and not IsPet)) then Class):ClassColor] [DruidForm:Paren] [SmartRace]",
+									["attach_to"] = "PowerBar",
+								},
+								["Cast"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Alpha((-CastStopDuration or 0) + 1) CastStopMessage or (CastName ' ' CastTarget:Paren)]",
+									["attach_to"] = "CastBar",
+								},
+								["Experience"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[FractionalXP] [PercentXP:Percent:Paren] [Concatenate('R: ', PercentRestXP:Hide(0):Percent)]",
+									["attach_to"] = "ExperienceBar",
+								},
+								["Health"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[Status or (if IsFriend then MissingHP:Hide(0):Short:Color('ff7f7f') else FractionalHP(known=true):Short or PercentHP:Percent)]",
+									["attach_to"] = "HealthBar",
+								},
+								["Cast time"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if not CastStopDuration then Concatenate('+', CastDelay:Round(1):Hide(0)):Red ' ' [CastEndDuration >= 0 ? '%.1f':Format(CastEndDuration)]]",
+									["attach_to"] = "CastBar",
+								},
+								["Name"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Name] [(AFK or DND):Angle]",
+									["attach_to"] = "HealthBar",
+								},
+							},
+						},
+					},
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["first"] = false,
+							["elements"] = {
+								["Druid mana"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if not IsMana then FractionalDruidMP]",
+									["attach_to"] = "DruidManaBar",
+								},
+								["Threat"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[PercentThreat:Short:Hide(0):Percent]",
+									["attach_to"] = "ThreatBar",
+								},
+								["Power"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if HasMP then FractionalMP]",
+									["attach_to"] = "PowerBar",
+								},
+								["Reputation"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[if IsMouseOver then ReputationName else if ReputationName then FractionalReputation ' ' PercentReputation:Percent:Paren]",
+									["attach_to"] = "ReputationBar",
+								},
+								["Class"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Classification] [Level:DifficultyColor] [(if (IsPlayer or (IsEnemy and not IsPet)) then Class):ClassColor] [DruidForm:Paren] [SmartRace]",
+									["attach_to"] = "PowerBar",
+								},
+								["Cast"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Alpha((-CastStopDuration or 0) + 1) CastStopMessage or (CastName ' ' CastTarget:Paren)]",
+									["attach_to"] = "CastBar",
+								},
+								["Experience"] = {
+									["exists"] = true,
+									["location"] = "center",
+									["code"] = "[FractionalXP] [PercentXP:Percent:Paren] [Concatenate('R: ', PercentRestXP:Hide(0):Percent)]",
+									["attach_to"] = "ExperienceBar",
+								},
+								["Health"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[Status or (if IsFriend then MissingHP:Hide(0):Short:Color('ff7f7f') else FractionalHP(known=true):Short or PercentHP:Percent)]",
+									["attach_to"] = "HealthBar",
+								},
+								["Cast time"] = {
+									["exists"] = true,
+									["location"] = "right",
+									["code"] = "[if not CastStopDuration then Concatenate('+', CastDelay:Round(1):Hide(0)):Red ' ' [CastEndDuration >= 0 ? '%.1f':Format(CastEndDuration)]]",
+									["attach_to"] = "CastBar",
+								},
+								["Name"] = {
+									["exists"] = true,
+									["location"] = "left",
+									["code"] = "[Name] [(AFK or DND):Angle]",
+									["attach_to"] = "HealthBar",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["HealthBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["size"] = 5,
+						},
+					},
+				},
+			},
+		},
+		["ManaSpark"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["Aggro"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["VoiceIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["VisualHeal"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["PowerBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["MasterLooterIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["CombatIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["RestIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["BlankSpace"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["first"] = false,
+							["elements"] = {
+								["Default"] = {
+									["exists"] = true,
+								},
+							},
+						},
+					},
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = true,
+							["first"] = false,
+							["elements"] = {
+								["Default"] = {
+									["exists"] = true,
+									["position"] = 10.00001,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		["ThreatBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+					["layouts"] = {
+						["Normal"] = {
+							["enabled"] = false,
+						},
+					},
+				},
+			},
+		},
+		["Portrait"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["ReadyCheckIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+		["PvPIcon"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "caith ui",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+				["caith ui"] = {
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "caith ui",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["groups"] = {
+				["Party pets"] = {
+					["enabled"] = true,
+					["unit_group"] = "partypet",
+				},
+				["Party"] = {
+					["enabled"] = true,
+				},
+			},
+			["made_groups"] = true,
+			["units"] = {
+				["targettargettarget"] = {
+					["position_y"] = -319.5568869472669,
+					["position_x"] = 211.282104773505,
+				},
+				["focustarget"] = {
+				},
+				["targettarget"] = {
+					["position_y"] = -140.8492303851304,
+					["position_x"] = 380.3406814244216,
+				},
+				["player"] = {
+					["position_y"] = -204.1435504799976,
+					["position_x"] = -176.8697245831199,
+				},
+				["focus"] = {
+					["position_y"] = 71.46669538191719,
+					["position_x"] = -440.8286923270325,
+				},
+				["target"] = {
+					["position_y"] = -211.7086859392013,
+					["position_x"] = 96.77128787968775,
+				},
+				["pet"] = {
+				},
+			},
+		},
+		["caith ui"] = {
+			["layouts"] = {
+				["Normal"] = {
+					["size_x"] = 255,
+					["bar_texture"] = "Glamour3",
+				},
+			},
+			["groups"] = {
+				["Party pets"] = {
+					["enabled"] = true,
+					["unit_group"] = "partypet",
+				},
+				["Party"] = {
+					["enabled"] = true,
+				},
+			},
+			["made_groups"] = true,
+			["units"] = {
+				["targettargettarget"] = {
+					["position_y"] = -117.2292259302367,
+					["position_x"] = 213.4181235450692,
+				},
+				["focustarget"] = {
+				},
+				["player"] = {
+					["position_y"] = -368.299799586014,
+					["position_x"] = -245.587349338946,
+				},
+				["focus"] = {
+				},
+				["target"] = {
+					["position_y"] = -364.4511942777178,
+					["position_x"] = 230.7729431770505,
+				},
+				["pet"] = {
+				},
+			},
+		},
+	},
+}

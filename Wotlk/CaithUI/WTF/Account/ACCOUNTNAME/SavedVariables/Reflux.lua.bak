@@ -1,0 +1,12 @@
+
+RefluxDB = {
+	["activeProfile"] = "test",
+	["addons"] = {
+	},
+	["emulated"] = {
+	},
+	["profiles"] = {
+		["test"] = {
+		},
+	},
+}

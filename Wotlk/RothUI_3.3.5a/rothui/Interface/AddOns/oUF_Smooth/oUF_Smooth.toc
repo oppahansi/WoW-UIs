@@ -1,0 +1,11 @@
+## Interface: 30300
+## Title: oUF Smooth Update
+## Notes: Smoothly updates bars
+## Author: Xuerian
+## Version: 1.1
+## X-Category: UnitFrame
+## Dependencies: oUF
+## DefaultState: enabled
+
+oUF_Smooth.lua
+

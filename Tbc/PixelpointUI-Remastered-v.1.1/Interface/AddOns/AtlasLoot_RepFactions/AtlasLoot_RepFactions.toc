@@ -1,0 +1,25 @@
+﻿## Interface: 20400
+## Title: AtlasLoot_RepFactions
+## Title-deDE: AtlasLoot |cFF0099FF[Rep-Factions]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[Rep-Factions]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[Rep-Factions]|r
+## Notes: AtlasLoot loot tables from all reputation factions
+## Notes-deDE: AtlasLoot loot tables from all reputation factions
+## Notes-zhCN: AtlasLoot loot tables from all reputation factions
+## Notes-zhTW: AtlasLoot loot tables from all reputation factions
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+rep.lua
+rep.cn.lua
+rep.de.lua
+rep.es.lua
+rep.fr.lua
+rep.kr.lua
+rep.tw.lua

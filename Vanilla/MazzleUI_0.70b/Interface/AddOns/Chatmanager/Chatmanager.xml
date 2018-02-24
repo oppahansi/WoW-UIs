@@ -1,0 +1,1634 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="localization.lua"/>
+	<Script file="Chatmanager.lua"/>
+	<Frame name="Chatmanager">
+		<Scripts> 
+			<OnLoad> 
+				Chatmanager_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				Chatmanager_OnEvent(event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+
+	<!-- Font templates -->
+	<Font name="ListingFont" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+		<Color r="1.0" g="1.0" b="1.0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+	</Font>
+
+	<!-- Basic button template (replaces UIPanelButtonTemplate to allow access
+	     to the highlight and disabled texts for dynamic text assignment) -->
+	<Button name="ChatmanagerButtonTemplate" virtual="true">
+		<ButtonText name="$parentText"/>
+		<NormalFont inherits="GameFontNormal"/>
+		<HighlightFont inherits="GameFontHighlight"/>
+		<DisabledFont inherits="GameFontDisable"/>
+		<NormalTexture inherits="UIPanelButtonUpTexture"/>
+		<PushedTexture inherits="UIPanelButtonDownTexture"/>
+		<DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+		<HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+		<Scripts>
+			<OnEnter>
+				if (this.tooltipText) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Button>
+
+	<!-- Basic check-button template (based on UICheckButtonTemplate but
+	     provides both "on" and "off" tooltips and an OnClick function passed
+	     in an onClick property, and doesn't define a font string) -->
+	<CheckButton name="ChatmanagerCheckButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="22" y="22"/>
+		</Size>
+		<HitRectInsets>
+			<AbsInset left="0" right="0" top="0" bottom="0"/>
+		</HitRectInsets>
+		<Scripts>
+			<OnEnter>
+				if (this:GetChecked()) then
+					if (this.tooltipOnText) then
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+						GameTooltip:SetText(this.tooltipOnText, nil, nil, nil, nil, 1);
+					end
+				else
+					if (this.tooltipOffText) then
+						GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+						GameTooltip:SetText(this.tooltipOffText, nil, nil, nil, nil, 1);
+					end
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				if (this:GetChecked()) then
+					PlaySound("igMainMenuOptionCheckBoxOn");
+					if (GameTooltip:IsOwned(this) and this.tooltipOnText) then
+						GameTooltip:SetText(this.tooltipOnText, nil, nil, nil, nil, 1);
+					end
+				else
+					PlaySound("igMainMenuOptionCheckBoxOff");
+					if (GameTooltip:IsOwned(this) and this.tooltipOffText) then
+						GameTooltip:SetText(this.tooltipOffText, nil, nil, nil, nil, 1);
+					end
+				end
+				if (this.onClick) then
+					this.onClick(this.onClickParam);
+				end
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\Buttons\UI-CheckBox-Up"/>
+		<PushedTexture file="Interface\Buttons\UI-CheckBox-Down"/>
+		<HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+		<CheckedTexture file="Interface\Buttons\UI-CheckBox-Check"/>
+		<DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled"/>
+	</CheckButton>
+
+	<!-- Template for option boxes (modified version of
+	     OptionFrameBoxTemplate) -->
+	<Frame name="ChatmanagerOptionBoxTemplate" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentTitle" inherits="GameFontNormal" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="0" y="12"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+				this:SetBackdropColor(0.5, 0.5, 0.5);
+				getglobal(this:GetName().."Title"):SetWidth(this:GetWidth() - 16);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<!-- Template for channel list buttons -->
+	<Button name="ChannelListTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="284" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentNumberText" inherits="ListingFont" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="16" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="6" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentNameText" inherits="ListingFont" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="252" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentNumberText">
+							<Offset>
+								<AbsDimension x="4" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+				getglobal(this:GetName().."NumberText"):SetText(string.format(CHATMANAGER_TEXT.FRAME_LIST_NUMBER_FORMAT, this:GetID()));
+			</OnLoad>
+			<OnClick>
+				PlaySound("igMainMenuOptionCheckBoxOn");
+				ChatmanagerFrame_ChannelButton_OnClick();
+			</OnClick>
+			<OnEnter>
+				if (this.tooltipText) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture name="$parentHighlight" file="Interface\Buttons\UI-Listbox-Highlight2" alphaMode="ADD">
+			<Size>
+				<AbsDimension x="278" y="16"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="3" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</HighlightTexture>
+	</Button>
+
+	<!-- Template for player list buttons -->
+	<Button name="PlayerListTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="140" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentNameText" inherits="ListingFont" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="116" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="12" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+			</OnLoad>
+			<OnClick>
+				PlaySound("igMainMenuOptionCheckBoxOn");
+				ChatmanagerFrame_PlayerButton_OnClick();
+			</OnClick>
+			<OnEnter>
+				if (this.tooltipText) then
+					GameTooltip:Hide();
+					GameTooltipSmallText:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltipSmallText:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+					if (this.tooltipText2) then
+						GameTooltipSmallText:AddLine(this.tooltipText2, 1, 1, 1);
+						GameTooltipSmallText:Show();
+					end
+				elseif (this.tooltipText2) then
+					GameTooltip:Hide();
+					GameTooltipSmallText:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltipSmallText:SetText(this.tooltipText2, 1, 1, 1, nil, 1);
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltipSmallText:Hide();
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture name="$parentHighlight" file="Interface\Buttons\UI-Listbox-Highlight2" alphaMode="ADD">
+			<Size>
+				<AbsDimension x="134" y="16"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="3" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</HighlightTexture>
+	</Button>
+
+	<!-- Chatmanager's main frame -->
+	<Frame name="ChatmanagerFrame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+		<Size>
+			<AbsDimension x="458" y="346"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="0" y="-104"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentTitle" file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="256" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<FontString name="$parentTitleText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="$parentTitle">
+							<Offset>
+								<AbsDimension x="0" y="-14"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentVersionText" inherits="GameFontDarkGraySmall">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-20" y="15"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<!-- Sub-frame for dragging parent (we only allow dragging from title bar) -->
+			<Frame name="$parentDragFrame">
+				<Size>
+					<AbsDimension x="132" y="28" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>
+						local parent = this:GetParent();
+						if (arg1 == "LeftButton") then
+							parent.isMoving = true;
+							parent:StartMoving();
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnMouseUp>
+					<OnHide>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnHide>
+				</Scripts>
+			</Frame>
+
+			<!-- Channels list sub-frame -->
+			<Frame name="ChatmanagerChannelListFrame" inherits="ChatmanagerOptionBoxTemplate">
+				<Size>
+					<AbsDimension x="288" y="170"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="12" y="-28"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Button name="$parentButton1" inherits="ChannelListTemplate" id="1">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="2" y="-2"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton2" inherits="ChannelListTemplate" id="2">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton1">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton3" inherits="ChannelListTemplate" id="3">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton2">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton4" inherits="ChannelListTemplate" id="4">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton3">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton5" inherits="ChannelListTemplate" id="5">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton4">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton6" inherits="ChannelListTemplate" id="6">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton5">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton7" inherits="ChannelListTemplate" id="7">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton6">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton8" inherits="ChannelListTemplate" id="8">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton7">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton9" inherits="ChannelListTemplate" id="9">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton8">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton10" inherits="ChannelListTemplate" id="10">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton9">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.05, 0.05, 0.05);
+						getglobal(this:GetName().."Title"):SetText("Channels");
+					</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<!-- Channel settings sub-frame -->
+			<Frame name="ChatmanagerChannelSettingsFrame" inherits="ChatmanagerOptionBoxTemplate">
+				<Size>
+					<AbsDimension x="288" y="94"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="ChatmanagerChannelListFrame">
+						<Offset>
+							<AbsDimension x="0" y="-18"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString name="$parentPasswordText" inherits="GameFontNormalSmall" justifyH="LEFT">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-16"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentForcePasswordText" inherits="GameFontNormalSmall" justifyH="LEFT">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="32" y="-36"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentStickyText" inherits="GameFontNormalSmall" justifyH="LEFT">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentForcePasswordText">
+									<Offset>
+										<AbsDimension x="0" y="-7"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentColorText" inherits="GameFontNormalSmall" justifyH="LEFT">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentStickyText">
+									<Offset>
+										<AbsDimension x="0" y="-7"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<!-- Editbox backdrop -->
+					<Frame>
+						<Size>
+							<AbsDimension x="160" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="60" y="-10"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+							<TileSize>
+								<AbsValue val="8"/>
+							</TileSize>
+							<EdgeSize>
+								<AbsValue val="8"/>
+							</EdgeSize>
+						</Backdrop>
+					</Frame>
+					<!-- Editbox for setting of password -->
+					<EditBox name="$parentEditBox" autoFocus="false" letters="31" ignoreArrows="true">
+						<Size>
+							<AbsDimension x="152" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="64" y="-10"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								this.textSet = 1;
+							</OnLoad>
+							<OnShow>
+								this:ClearFocus();
+								this:HighlightText(0,0);
+							</OnShow>
+							<OnEnterPressed>
+								this:ClearFocus();
+								this:HighlightText(0,0);
+								this.originalText = nil;
+								ChatmanagerFrame_SetPassword(this:GetText());
+								ChatmanagerChannelSettingsFramePasswordSetButton:Disable();
+							</OnEnterPressed>
+							<OnTextChanged>
+								local text = this:GetText();
+								local newText = string.gsub(text, "[%s%c]", "");
+								if (text ~= newText) then
+									this:SetText(newText);
+								end
+								if (this.textSet == 1) then
+									this.textSet = nil;
+									this.originalText = newText;
+								else
+									ChatmanagerChannelSettingsFramePasswordSetButton:Enable();
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								this:ClearFocus();
+								this:HighlightText(0,0);
+								if (this.originalText) then
+									if (this.originalText ~= this:GetText()) then
+										this.textSet = 1;
+										this:SetText(this.originalText);
+									end
+								end
+								ChatmanagerChannelSettingsFramePasswordSetButton:Disable();
+							</OnEscapePressed>
+						</Scripts>
+						<FontString inherits="ListingFont"/>
+					</EditBox>
+					<!-- Button for password set -->
+					<Button name="$parentPasswordSetButton" inherits="ChatmanagerButtonTemplate">
+						<Size>
+							<AbsDimension x="60" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentEditBox">
+								<Offset>
+									<AbsDimension x="4" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								ChatmanagerChannelSettingsFrameEditBox:ClearFocus();
+								ChatmanagerChannelSettingsFrameEditBox:HighlightText(0,0);
+								ChatmanagerFrame_SetPassword(ChatmanagerChannelSettingsFrameEditBox:GetText());
+								this:Disable();
+							</OnClick>
+						</Scripts>
+					</Button>
+					<!-- Color swatch for setting chat channel color -->
+					<Button name="$parentColorSwatch">
+						<Size>
+							<AbsDimension x="14" y="14"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentColorText">
+								<Offset>
+									<AbsDimension x="-4" y="2"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="BACKGROUND">
+								<Texture name="$parentSwatchBg">
+									<Size>
+										<AbsDimension x="12" y="12"/>
+									</Size>
+									<Anchors>
+										<Anchor point="CENTER">
+											<Offset>
+												<AbsDimension x="0" y="0"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+									<Color r="1.0" g="1.0" b="1.0"/>
+								</Texture>
+							</Layer>
+						</Layers>
+						<Scripts>
+							<OnEnter>
+								getglobal(this:GetName().."SwatchBg"):SetVertexColor(NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b);
+								if (this.tooltipText) then
+									GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+									GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+								end
+							</OnEnter>
+							<OnLeave>
+								getglobal(this:GetName().."SwatchBg"):SetVertexColor(HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b);
+								GameTooltip:Hide();
+							</OnLeave>
+							<OnClick>
+								ChatmanagerColorSwatch_OnClick(this.channelID);
+							</OnClick>
+						</Scripts>
+						<NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\ChatFrameColorSwatch"/>
+					</Button>
+					<!-- Always use password checkbox -->
+					<CheckButton name="$parentForcePasswordCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentForcePasswordText">
+								<Offset>
+									<AbsDimension x="0" y="6"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								this.onClick = ChatmanagerFrame_ForcePasswordOnClick;
+							</OnLoad>
+						</Scripts>
+					</CheckButton>
+					<!-- Channel sticky checkbox -->
+					<CheckButton name="$parentStickyCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyText">
+								<Offset>
+									<AbsDimension x="0" y="6"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								this.onClick = ChatmanagerFrame_StickyOnClick;
+							</OnLoad>
+						</Scripts>
+					</CheckButton>
+					<!-- Button for Moderation toggle -->
+					<Button name="$parentModerateButton" inherits="ChatmanagerButtonTemplate">
+						<Size>
+							<AbsDimension x="80" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPLEFT">
+								<Offset>
+									<AbsDimension x="280" y="-32"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								ChatmanagerFrame_ToggleModerateChannel();
+							</OnClick>
+						</Scripts>
+					</Button>
+					<!-- Button for Mute/Unmute toggle (currently hidden as
+					     it is not being used) -->
+					<Button name="$parentMuteButton" inherits="ChatmanagerButtonTemplate" text="Mute" hidden="true">
+						<Size>
+							<AbsDimension x="80" y="22"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPLEFT">
+								<Offset>
+									<AbsDimension x="280" y="-54"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+							</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.05, 0.05, 0.05);
+						getglobal(this:GetName().."Title"):SetText("Channel Settings");
+						getglobal(this:GetName().."Title"):SetWidth(this:GetWidth() - 16);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<!-- Players list sub-frame -->
+			<Frame name="ChatmanagerPlayerListFrame" inherits="ChatmanagerOptionBoxTemplate">
+				<Size>
+					<AbsDimension x="144" y="282"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="ChatmanagerChannelListFrame">
+						<Offset>
+							<AbsDimension x="2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Button name="$parentButton1" inherits="PlayerListTemplate" id="1">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="2" y="-2"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton2" inherits="PlayerListTemplate" id="2">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton1">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton3" inherits="PlayerListTemplate" id="3">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton2">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton4" inherits="PlayerListTemplate" id="4">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton3">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton5" inherits="PlayerListTemplate" id="5">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton4">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton6" inherits="PlayerListTemplate" id="6">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton5">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton7" inherits="PlayerListTemplate" id="7">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton6">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton8" inherits="PlayerListTemplate" id="8">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton7">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton9" inherits="PlayerListTemplate" id="9">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton8">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton10" inherits="PlayerListTemplate" id="10">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton9">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton11" inherits="PlayerListTemplate" id="11">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton10">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton12" inherits="PlayerListTemplate" id="12">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton11">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton13" inherits="PlayerListTemplate" id="13">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton12">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton14" inherits="PlayerListTemplate" id="14">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton13">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton15" inherits="PlayerListTemplate" id="15">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton14">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton16" inherits="PlayerListTemplate" id="16">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton15">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentButton17" inherits="PlayerListTemplate" id="17">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentButton16">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<!-- Scrollbar for the players list -->
+					<ScrollFrame name="ChatmanagerPlayerListScrollFrame" inherits="UIPanelScrollFrameTemplate">
+						<Size>
+							<AbsDimension x="116" y="274"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+								<Offset>
+									<AbsDimension x="-26" y="-4"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<ScrollChild>
+							<Frame name="$parentScrollChildFrame">
+								<Size>
+									<AbsDimension x="144" y="282"/>
+								</Size>
+							</Frame>
+						</ScrollChild>
+						<Scripts>
+							<OnVerticalScroll>
+								FauxScrollFrame_OnVerticalScroll(CHATMANAGER_PLAYER_LIST_BUTTON_HEIGHT, ChatmanagerFrame_UpdatePlayerList);
+							</OnVerticalScroll>
+						</Scripts>
+						<Layers>
+						</Layers>
+					</ScrollFrame>
+					<!-- Button for Moderation toggle -->
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.05, 0.05, 0.05);
+						getglobal(this:GetName().."Title"):SetText("Players");
+					</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<!-- Options button -->
+			<Button name="$parentOptionsButton" inherits="ChatmanagerButtonTemplate">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="-39" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if (ChatmanagerOptionsFrame:IsShown()) then
+							HideUIPanel(ChatmanagerOptionsFrame);
+						else
+							ShowUIPanel(ChatmanagerOptionsFrame);
+						end
+					</OnClick>
+				</Scripts>
+			</Button>
+			<!-- Close button -->
+			<Button name="$parentCloseButton" inherits="ChatmanagerButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="39" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HideUIPanel(ChatmanagerFrame);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropColor(0, 0, 0);
+				ChatmanagerFrame_OnLoad();
+			</OnLoad>
+			<OnShow>
+				ChatmanagerFrame_OnShow();
+			</OnShow>
+			<OnHide>
+				CloseDropDownMenus();
+			</OnHide>
+		</Scripts>
+	</Frame>
+
+	<!-- Chatmanager's options frame -->
+	<Frame name="ChatmanagerOptionsFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+		<Size>
+			<AbsDimension x="256" y="302"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="ChatmanagerFrame">
+				<Offset>
+					<AbsDimension x="-4" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentTitle" file="Interface\DialogFrame\UI-DialogBox-Header">
+					<Size>
+						<AbsDimension x="256" y="64"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="12"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<FontString name="$parentTitleText" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOP" relativeTo="$parentTitle">
+							<Offset>
+								<AbsDimension x="0" y="-14"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentReplyToSentText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="40" y="-34"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentChatLinkingText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentReplyToSentText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentChatLinkFormatText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentChatLinkingText">
+							<Offset>
+								<AbsDimension x="20" y="-8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentSmartStickyText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentChatLinkFormatText">
+							<Offset>
+								<AbsDimension x="-20" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentChatLogText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentSmartStickyText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentShowButtonText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentChatLogText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentScrollChatText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentShowButtonText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentHideChatButtonsText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentScrollChatText">
+							<Offset>
+								<AbsDimension x="20" y="-8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+				<FontString name="$parentStickySayText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentHideChatButtonsText">
+							<Offset>
+								<AbsDimension x="-20" y="-24"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStickyPartyText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentStickySayText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStickyRaidText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentStickyPartyText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStickyGuildText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOP" relativePoint="TOP" relativeTo="$parentStickySayText"/>
+						<Anchor point="LEFT" relativePoint="LEFT">
+							<Offset>
+								<AbsDimension x="136" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStickyOfficerText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentStickyGuildText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentStickyWhisperText" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentStickyOfficerText">
+							<Offset>
+								<AbsDimension x="0" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+			</Layer>
+		</Layers>
+		<Frames>
+			<!-- Sub-frame for dragging parent (we only allow dragging from title bar) -->
+			<Frame name="$parentDragFrame">
+				<Size>
+					<AbsDimension x="132" y="28" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>
+						local parent = this:GetParent();
+						if (arg1 == "LeftButton") then
+							parent.isMoving = true;
+							parent:StartMoving();
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnMouseUp>
+					<OnHide>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+						end
+					</OnHide>
+				</Scripts>
+			</Frame>
+
+			<!-- ReplyToSent checkbox -->
+			<CheckButton name="$parentReplyToSentCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentReplyToSentText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ReplyToSentOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- ChatLink checkboxes -->
+			<CheckButton name="$parentChatLinkingCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentChatLinkingText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ChatLinkOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentChatLinkFormatCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentChatLinkFormatText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ChatLinkFormatOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- SmartSticky checkbox -->
+			<CheckButton name="$parentSmartStickyCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentSmartStickyText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_SmartStickyOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- Chatlogging checkbox -->
+			<CheckButton name="$parentChatLogCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentChatLogText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ChatLogOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- Menu button checkbox -->
+			<CheckButton name="$parentShowButtonCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentShowButtonText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ShowButtonOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- Chat scrolling checkboxes -->
+			<CheckButton name="$parentScrollChatCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentScrollChatText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_ScrollChatOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentHideChatButtonsCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentHideChatButtonsText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_HideChatButtonsOnClick;
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<!-- Sticky chat type checkboxes -->
+			<CheckButton name="$parentStickySayCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickySayText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "SAY";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentStickyPartyCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyPartyText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "PARTY";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentStickyRaidCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyRaidText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "RAID";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentStickyGuildCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyGuildText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "GUILD";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentStickyOfficerCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyOfficerText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "OFFICER";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentStickyWhisperCheckButton" inherits="ChatmanagerCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="$parentStickyWhisperText">
+						<Offset>
+							<AbsDimension x="0" y="6"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						this.onClick = ChatmanagerOptionsFrame_StickyTypeButtonOnClick;
+						this.onClickParam = "WHISPER";
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+
+			<!-- Close button -->
+			<Button name="$parentCloseButton" inherits="ChatmanagerButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="14"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HideUIPanel(ChatmanagerOptionsFrame);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropColor(0, 0, 0);
+				ChatmanagerOptionsFrame_OnLoad();
+			</OnLoad>
+			<OnShow>
+				ChatmanagerOptionsFrame_OnShow();
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+	<!-- Dropdown menu frame -->
+	<Frame name="ChatmanagerDropDown" inherits="UIDropDownMenuTemplate"/>
+
+	<!-- Chatmanager's menu icon button -->
+	<Frame name="ChatmanagerMenuButtonFrame" frameStrata="LOW" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Anchors>
+			<Anchor point="BOTTOM" relativeTo="ChatFrameMenuButton" relativePoint="TOP"/>
+		</Anchors>
+		<Frames>
+			<Button name="$parentMenuButton">
+				<Size>
+					<AbsDimension x="20" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="OVERLAY">
+						<Texture file="Interface\Minimap\MiniMap-TrackingBorder">
+							<Size>
+								<AbsDimension x="48" y="48"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="-4" y="3"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						this:RegisterForClicks("LeftButtonUp");
+					</OnLoad>
+					<OnEnter>
+						if (this.tooltipText) then
+							GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+							GameTooltip:SetText(this.tooltipText);
+							if (this.tooltipText2) then
+								GameTooltip:AddLine(this.tooltipText2);
+								GameTooltip:Show();
+							end
+						end
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+					<OnMouseDown>
+						local parent = this:GetParent();
+						if ((arg1 == "LeftButton") and IsControlKeyDown()) then
+							parent.isMoving = true;
+							parent:StartMoving();
+						end
+					</OnMouseDown>
+					<OnMouseUp>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+							parent.wasMoving = true;
+						end
+					</OnMouseUp>
+					<OnHide>
+						local parent = this:GetParent();
+						if (parent.isMoving) then
+							parent:StopMovingOrSizing();
+							parent.isMoving = nil;
+							parent.wasMoving = nil;
+						end
+					</OnHide>
+					<OnClick>
+						local parent = this:GetParent();
+						if (not parent.wasMoving) then
+							PlaySound("igChatEmoteButton");
+							if (ChatmanagerFrame:IsShown() or ChatmanagerOptionsFrame:IsShown()) then
+								HideUIPanel(ChatmanagerFrame);
+								HideUIPanel(ChatmanagerOptionsFrame);
+							else
+								ShowUIPanel(ChatmanagerFrame);
+							end
+						else
+							parent.wasMoving = nil;
+						end
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MacroFrame\MacroFrame-Icon"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				ChatmanagerMenuButtonFrame_OnLoad();
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	
+	<!-- Special game tooltip just for showing smaller font single lines -->
+	<GameTooltip name="GameTooltipSmallText" frameStrata="TOOLTIP" clampedToScreen="true" hidden="true" parent="UIParent">
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTextLeft1" inherits="GameTooltipText" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="10" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentTextRight1" inherits="GameTooltipText" hidden="true">
+					<Anchors>
+						<Anchor point="RIGHT" relativeTo="$parentTextLeft1" relativePoint="LEFT">
+							<Offset>
+								<AbsDimension x="40" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentTextLeft2" inherits="GameTooltipText" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parentTextLeft1" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentTextRight2" inherits="GameTooltipText" hidden="true">
+					<Anchors>
+						<Anchor point="RIGHT" relativeTo="$parentTextLeft2" relativePoint="LEFT">
+							<Offset>
+								<AbsDimension x="40" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				GameTooltip_OnLoad();
+			</OnLoad>
+			<OnHide>
+				GameTooltip_OnHide();
+			</OnHide>
+		</Scripts>
+	</GameTooltip>
+</Ui>
+

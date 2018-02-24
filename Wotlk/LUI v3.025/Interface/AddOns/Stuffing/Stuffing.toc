@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: Stuffing
+## Notes: Hmmmm, stuffing!
+## Author: Hungtar
+## Version: 0.0.20
+## SavedVariablesPerCharacter: StuffingDB
+
+Stuffing.lua

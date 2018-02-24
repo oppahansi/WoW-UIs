@@ -1,0 +1,6 @@
+<Bindings>
+    <Binding name="Inspector_TOGGLE" header="Inspector">
+        InspectorAddon:BindingFunc();
+    </Binding>
+</Bindings>
+

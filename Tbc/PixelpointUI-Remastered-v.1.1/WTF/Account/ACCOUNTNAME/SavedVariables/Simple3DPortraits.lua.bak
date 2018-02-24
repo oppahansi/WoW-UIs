@@ -1,0 +1,10 @@
+
+Simple3DPortraitsDB = {
+	["profileKeys"] = {
+		["Pixelpoint - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

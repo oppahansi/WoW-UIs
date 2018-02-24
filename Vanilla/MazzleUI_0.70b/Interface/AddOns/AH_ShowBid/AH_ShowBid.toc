@@ -1,0 +1,13 @@
+## Interface: 1800
+## Title: AH_ShowBid
+## Version: 1800.1
+
+## Author: Larry @ Baelgun [DE], based on ShowBid by DarkStarX
+## eMail: stonehedge@gmx.de
+
+## Notes: Shows if an auction has a bid
+## Notes-deDE: Kennzeichnet Items mit einem Gebot im Auktionshaus
+
+## DefaultState: enabled
+
+AH_ShowBid.xml

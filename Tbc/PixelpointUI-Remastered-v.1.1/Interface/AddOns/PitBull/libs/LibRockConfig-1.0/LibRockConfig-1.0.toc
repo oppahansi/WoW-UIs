@@ -1,0 +1,14 @@
+﻿## Interface: 20400
+
+## Title: Lib: RockConfig-1.0
+## Notes: Configuration library
+## Notes-frFR: Librairie de configuration
+## Author: ckknight
+## X-Website: http://www.wowace.com
+## X-Category: Library
+## X-Donate: Paypal:ckknight AT gmail DOT com
+## X-eMail: ckknight AT gmail DOT com
+## X-License: LGPL v2.1
+## LoadOnDemand: 1
+
+lib.xml

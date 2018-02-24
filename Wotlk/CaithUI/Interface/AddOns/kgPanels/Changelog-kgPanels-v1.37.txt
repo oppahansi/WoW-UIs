@@ -1,0 +1,33 @@
+------------------------------------------------------------------------
+r352 | kagaro | 2010-03-23 14:37:47 +0000 (Tue, 23 Mar 2010) | 1 line
+Changed paths:
+   A /tags/v1.37 (from /trunk:351)
+
+Tagging as v1.37
+------------------------------------------------------------------------
+r351 | kagaro | 2010-03-23 14:16:55 +0000 (Tue, 23 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/kgPanels.lua
+   M /trunk/kgPanelsConfig/PanelHelper.lua
+   M /trunk/kgPanelsConfig/kgPanelsConfig.lua
+
+3.3.3 Api changes
+------------------------------------------------------------------------
+r350 | kagaro | 2010-03-09 13:36:24 +0000 (Tue, 09 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/kgPanelsConfig/kgPanelsConfig.lua
+
+Fix for inset changes, apparently I forgot to commit the config panel change.
+------------------------------------------------------------------------
+r349 | kagaro | 2010-03-09 13:36:07 +0000 (Tue, 09 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/kgPanelsConfig/kgPanelsConfig.lua
+
+Fix for inset changes, apparently I forgot to commit the config panel change.
+------------------------------------------------------------------------
+r348 | kagaro | 2010-02-25 13:22:15 +0000 (Thu, 25 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/kgPanels.lua
+
+Attempting fix for Stans reported error, GameCard expired and waiting on new one so cant test in game yet.
+------------------------------------------------------------------------

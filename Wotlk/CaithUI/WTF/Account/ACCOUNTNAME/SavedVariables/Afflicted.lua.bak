@@ -1,0 +1,254 @@
+
+AfflictedDB = {
+	["profileKeys"] = {
+		["Caiths - Gorgonnash"] = "Caiths - Gorgonnash",
+	},
+	["profiles"] = {
+		["Caiths - Gorgonnash"] = {
+			["showAnchors"] = false,
+			["dispelEnabled"] = true,
+			["anchors"] = {
+				["totems"] = {
+					["enabled"] = false,
+					["position"] = {
+						["y"] = 469.2383105957798,
+						["x"] = 956.9451906793614,
+					},
+					["scale"] = 1.4,
+					["displayType"] = "icon",
+				},
+				["buffs"] = {
+					["growUp"] = true,
+					["position"] = {
+						["y"] = 122.9164803462708,
+						["x"] = 595.4056414510595,
+					},
+					["scale"] = 1.4,
+					["displayType"] = "icon",
+				},
+				["spells"] = {
+					["growUp"] = true,
+					["position"] = {
+						["y"] = 122.9915997218039,
+						["x"] = 639.2917050021301,
+					},
+					["scale"] = 1.4,
+					["displayType"] = "icon",
+				},
+				["cooldowns"] = {
+					["growUp"] = true,
+					["position"] = {
+						["y"] = 122.6344240878114,
+						["x"] = 552.2512402246952,
+					},
+					["scale"] = 1.4,
+					["displayType"] = "icon",
+				},
+			},
+			["spells"] = {
+				[31687] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2",
+				},
+				[45182] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Ability_Rogue_CheatDeath",
+				},
+				[6940] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
+				},
+				[49039] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Shadow_RaiseDead",
+				},
+				[48792] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_IceBoundFortitude",
+				},
+				[47788] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Holy_GuardianSpirit",
+				},
+				[1044] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfValor",
+				},
+				[49916] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Shadow_SoulLeech_3",
+				},
+				[10060] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_PowerInfusion",
+				},
+				[38768] = {
+					["icon"] = "Interface\\Icons\\Ability_Kick",
+				},
+				[45438] = {
+					["icon"] = "Interface\\Icons\\Spell_Frost_Frost",
+				},
+				[27018] = {
+					["disabled"] = true,
+					["icon"] = "Interface\\Icons\\Ability_Hunter_AimedShot",
+				},
+				[2094] = {
+					["icon"] = "Interface\\Icons\\Spell_Shadow_MindSteal",
+				},
+				[61336] = {
+					["disabled"] = true,
+					["icon"] = "Interface\\Icons\\Ability_Druid_TigersRoar",
+				},
+				[19647] = {
+					["icon"] = "Interface\\Icons\\Spell_Shadow_MindRot",
+				},
+				[29166] = {
+					["disabled"] = false,
+				},
+				[48707] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Shadow_AntiMagicShell",
+				},
+				[5246] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Ability_GolemThunderClap",
+				},
+				[47528] = {
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_MindFreeze",
+				},
+				[44572] = {
+					["icon"] = "Interface\\Icons\\Ability_Mage_DeepFreeze",
+				},
+				[8983] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Ability_Druid_Bash",
+				},
+				[6554] = {
+					["icon"] = "Interface\\Icons\\INV_Gauntlets_04",
+				},
+				[10278] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
+				},
+				[2139] = {
+					["icon"] = "Interface\\Icons\\Spell_Frost_IceShock",
+				},
+				[50334] = {
+					["icon"] = "Interface\\Icons\\Ability_Druid_Berserk",
+				},
+				[16979] = {
+					["icon"] = "Interface\\Icons\\Ability_Hunter_Pet_Bear",
+				},
+				[10308] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfMight",
+				},
+				[42292] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_DispelMagic",
+				},
+				[44055] = {
+					["disabled"] = true,
+					["icon"] = "Interface\\Icons\\Spell_Holy_MindVision",
+				},
+				[51514] = {
+					["disabled"] = false,
+				},
+				[23920] = {
+					["disabled"] = false,
+				},
+				[10890] = {
+					["disabled"] = false,
+				},
+				[8643] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Ability_Rogue_KidneyShot",
+				},
+				[33206] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_PainSupression",
+				},
+				[642] = {
+					["icon"] = "Interface\\Icons\\Spell_Holy_DivineIntervention",
+				},
+				[25275] = {
+					["icon"] = "Interface\\Icons\\Ability_Rogue_Sprint",
+				},
+				[31224] = {
+					["icon"] = "Interface\\Icons\\Spell_Shadow_NetherCloak",
+				},
+				[1953] = {
+					["icon"] = "Interface\\Icons\\Spell_Arcane_Blink",
+				},
+				[12472] = {
+					["icon"] = "Interface\\Icons\\Spell_Frost_ColdHearted",
+				},
+				[33395] = {
+					["disabled"] = false,
+				},
+				[19574] = {
+					["icon"] = "Interface\\Icons\\Ability_Druid_FerociousBite",
+				},
+				[8177] = {
+					["disabled"] = false,
+					["icon"] = "Interface\\Icons\\Spell_Nature_GroundingTotem",
+				},
+				[36554] = {
+					["icon"] = "Interface\\Icons\\Ability_Rogue_Shadowstep",
+				},
+			},
+			["barWidth"] = 201,
+			["version"] = 979,
+			["barName"] = "Glamour2",
+			["disabledSpells"] = {
+				[2] = {
+					[26669] = true,
+					[13877] = true,
+					[14327] = true,
+					[44055] = true,
+					[27277] = true,
+					[20066] = false,
+					[51722] = true,
+					[49039] = true,
+					[6346] = true,
+					[18708] = false,
+					[11958] = true,
+					[20600] = true,
+					[32996] = true,
+					[27018] = true,
+					[34600] = true,
+					[46784] = true,
+					[43716] = true,
+					[13750] = true,
+					[66] = false,
+					[20589] = true,
+					[8177] = false,
+					[48743] = true,
+					[35166] = true,
+					[2825] = true,
+					[676] = false,
+					[61336] = true,
+					[40396] = true,
+				},
+				[3] = {
+					[26669] = true,
+					[13877] = true,
+					[14327] = true,
+					[6346] = true,
+					[49039] = true,
+					[11958] = true,
+					[35166] = true,
+					[40396] = true,
+					[34600] = true,
+					[46784] = true,
+					[43716] = true,
+					[13750] = true,
+					[27018] = true,
+					[27277] = true,
+					[20589] = true,
+					[48743] = true,
+					[32996] = true,
+					[2825] = true,
+					[51722] = true,
+					[44055] = true,
+					[61336] = true,
+				},
+			},
+			["dispelDest"] = "rwframe",
+		},
+	},
+}

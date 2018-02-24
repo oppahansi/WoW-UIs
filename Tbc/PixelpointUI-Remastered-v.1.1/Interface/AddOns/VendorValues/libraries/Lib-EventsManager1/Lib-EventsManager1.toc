@@ -1,0 +1,12 @@
+## Interface: 20400
+
+## Title: Lib: EventsManager1
+## Version: 1.2.1
+## Author: Saeris
+## LoadOnDemand: 1
+
+
+## Notes: A library to manage events, both Blizzard and custom.
+
+
+EventsManager1_Loader.xml

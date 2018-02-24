@@ -1,0 +1,43 @@
+﻿myChat FAQ:
+
+Q: Why did you develop this chat addon when there is so many of them already?
+A: After 3.3.5, oChat and Fane broke. I had already modified haste's code to include some features I wanted.
+	So I decided to conslidate a few of my addons and tweak it to my liking. Originally it was only planned for me and a few of my guildies,
+	but at the suggestion of a friend I uploaded it to WoWInterface.com
+
+Q: Where do I configure the addon?
+A: All configuration is done in the config.lua file.
+
+Q: Will you be adding an ingame config?
+A: I have no plans on implementing this.
+
+Q: Why did you include timestamps when blizzard added them?
+A: Blizzard only adds timestamps to channel messages. It doesnt add them to system messages, etc.
+
+Q: Why is there a small button next to all my chat lines?
+A: If you have timestamps off in interface options and copychat enabled this button is enabled to let you still copy chat.
+
+Q: Where can I turn on timestamps?
+A: Open your Interface options screen -> Game -> Social -> Chat Timestamps
+
+Q: How can I copy the text?
+A: Make sure you have copychat enabled and either click the timestamp or the button if timestamps are off
+
+Q: Why is the memory increasing, I thought it was lightweight?
+A: As direct result of how LUA handles strings, memory usage is always going to increase if you apply any type of custom formatting, 
+	however, if it's rising quickly there are a couple reasons: Either your getting spammed with alot of chat messages (major city or possibly raid) or 
+	you don't have ChatFrame2(combat log) blacklisted. There are ways to help with the first issue and that is to use a chat spam control addon (ie. SpamThrottle), 
+	but for combat log entries, there's not much that can be done. Normally the addon will hover between 60kb and 100kb under non extreme conditions
+
+Q: How do I enable timestamps for the combat log?
+A: Right click the combat log tab -> settings -> formatting -> Show Timestamp
+
+Q: Why is the combat log timestamp not recieving any special formatting or copychat capabilities?
+A: By default, I have blacklisted the combat log.
+
+Q: How do i enable/disable formatting on certain chat frames?
+A: Add/remove or set the value to true/false for chatframes in the format [ChatFrame#] = value 
+
+
+
+

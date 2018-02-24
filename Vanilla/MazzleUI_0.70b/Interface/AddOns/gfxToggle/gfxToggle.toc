@@ -1,0 +1,14 @@
+## Interface: 11000
+## Title: gfxToggle |cff007FFF -Ace-|r 
+## Author: Neriak
+## URL: http://neriak_x.wowinterface.com
+## Notes: Toggles GFX-Settings from Low to High automatically or by key/macro.
+## Notes-deDE: Aendert die Grafikdarstellung automatisch oder per Taste/Makro.
+## Dependencies: Ace
+## OptionalDeps: CompostLib, Metrognome
+## SavedVariables: gfxToggleDB
+CompostLib\CompostLib.lua
+Metrognome\MetrognomeLib.lua
+gfxToggleLocals.lua
+gfxToggle.lua
+

@@ -1,0 +1,15 @@
+
+SCT_CONFIG = {
+	["currentProfile"] = {
+		["Motrax of Emerald Dream [1x] Blizzlike"] = "char",
+	},
+	["chars"] = {
+		["Motrax of Emerald Dream [1x] Blizzlike"] = {
+			["notFirstTime"] = true,
+		},
+	},
+	["profiles"] = {
+		["char/Motrax of Emerald Dream [1x] Blizzlike"] = {
+		},
+	},
+}

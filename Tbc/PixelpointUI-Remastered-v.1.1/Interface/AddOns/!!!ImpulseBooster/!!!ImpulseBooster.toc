@@ -1,0 +1,10 @@
+## Interface: 20400
+## Title: I|cFFFF8080mpulse|rBooster
+## Notes: Improves your UI loading time and game performance in some cases. Compatible with WoW 1.9.0 and higher.
+## Author: Onotole @ Feenix 2.4.3 Archangel
+## X-Category: Interface Enhancements
+## X-Date: 2016-04-11
+## X-Website: https://github.com/Warlockbugs/impulse-booster
+## Version: 3.0
+
+ImpulseBooster.lua

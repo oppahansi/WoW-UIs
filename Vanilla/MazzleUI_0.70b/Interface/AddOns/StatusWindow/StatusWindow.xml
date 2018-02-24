@@ -1,0 +1,858 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML\UI.xsd">
+	<Script file="StatusWindow.lua"/>
+	<Script file="AddonMenu.lua"/>
+	<Script file="localisation.lua"/>
+
+	<GameTooltip name="SWTooltip" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="GameTooltipTemplate"/>
+
+	<Frame name="StatusWindowPaneTemplate" frameStrata="LOW" movable="true" virtual="true">
+		<Size>
+			<AbsDimension x="75" y="12"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="75" y="9"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnMouseDown>
+				if (arg1 == "LeftButton") and IsAltKeyDown() then
+					this:GetParent():GetParent():StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				this:GetParent():GetParent():StopMovingOrSizing()
+			</OnMouseUp>
+			<OnEnter>
+				if StatusWindow.modules[StatusWindow.panes[this:GetID()].module].Tooltip then
+					StatusWindow.modules[StatusWindow.panes[this:GetID()].module]:Tooltip()
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnLoad>
+				this.elapsed = 0
+				this.ticks = 0
+				this.text = getglobal(this:GetName().."Text")
+			</OnLoad>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="StatusWindowWindowTemplate" frameStrata="MEDIUM" movable="true" virtual="true">
+		<Size>
+			<AbsDimension x="75" y="12"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER">
+				<Offset>
+					<AbsDimension x="300" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Frame name="$parentContent">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="0" right="0" top="0" bottom="0"/>
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+				</Backdrop>
+				<Size>
+					<AbsDimension x="10" y="10"/>
+				</Size>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnMouseDown>
+				if (arg1 == "LeftButton") and IsAltKeyDown() then
+					this:StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				this:StopMovingOrSizing()
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="StatusWindowFrame" frameStrata="LOW" parent="UIParent">
+		<Size>
+			<AbsDimension x="10" y="10"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT"/>
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				StatusWindow:OnFrameLoad()
+			</OnLoad>
+			<OnEvent>
+				StatusWindow:OnFrameEvent(event)
+			</OnEvent>
+			<OnUpdate>
+				StatusWindow:OnFrameUpdate(arg1)
+			</OnUpdate>
+		</Scripts>
+		<Frames>
+			<Frame name="StatusWindowWindow1" inherits="StatusWindowWindowTemplate" id="1"/>
+			<Frame name="StatusWindowWindow2" inherits="StatusWindowWindowTemplate" id="2"/>
+			<Frame name="StatusWindowWindow3" inherits="StatusWindowWindowTemplate" id="3"/>
+			<Frame name="StatusWindowWindow4" inherits="StatusWindowWindowTemplate" id="4"/>
+			<Frame name="StatusWindowWindow5" inherits="StatusWindowWindowTemplate" id="5"/>
+			<Frame name="StatusWindowWindow6" inherits="StatusWindowWindowTemplate" id="6"/>
+			<Frame name="StatusWindowWindow7" inherits="StatusWindowWindowTemplate" id="7"/>
+			<Frame name="StatusWindowWindow8" inherits="StatusWindowWindowTemplate" id="8"/>
+			<Frame name="StatusWindowWindow9" inherits="StatusWindowWindowTemplate" id="9"/>
+			<Frame name="StatusWindowWindow10" inherits="StatusWindowWindowTemplate" id="10"/>
+			
+			<Frame name="StatusWindowPane1" inherits="StatusWindowPaneTemplate" id="1"/>
+			<Frame name="StatusWindowPane2" inherits="StatusWindowPaneTemplate" id="2"/>
+			<Frame name="StatusWindowPane3" inherits="StatusWindowPaneTemplate" id="3"/>
+			<Frame name="StatusWindowPane4" inherits="StatusWindowPaneTemplate" id="4"/>
+			<Frame name="StatusWindowPane5" inherits="StatusWindowPaneTemplate" id="5"/>
+			<Frame name="StatusWindowPane6" inherits="StatusWindowPaneTemplate" id="6"/>
+			<Frame name="StatusWindowPane7" inherits="StatusWindowPaneTemplate" id="7"/>
+			<Frame name="StatusWindowPane8" inherits="StatusWindowPaneTemplate" id="8"/>
+			<Frame name="StatusWindowPane9" inherits="StatusWindowPaneTemplate" id="9"/>
+			<Frame name="StatusWindowPane10" inherits="StatusWindowPaneTemplate" id="10"/>
+			<Frame name="StatusWindowPane11" inherits="StatusWindowPaneTemplate" id="11"/>
+			<Frame name="StatusWindowPane12" inherits="StatusWindowPaneTemplate" id="12"/>
+			<Frame name="StatusWindowPane13" inherits="StatusWindowPaneTemplate" id="13"/>
+			<Frame name="StatusWindowPane14" inherits="StatusWindowPaneTemplate" id="14"/>
+			<Frame name="StatusWindowPane15" inherits="StatusWindowPaneTemplate" id="15"/>
+			<Frame name="StatusWindowPane16" inherits="StatusWindowPaneTemplate" id="16"/>
+			<Frame name="StatusWindowPane17" inherits="StatusWindowPaneTemplate" id="17"/>
+			<Frame name="StatusWindowPane18" inherits="StatusWindowPaneTemplate" id="18"/>
+			<Frame name="StatusWindowPane19" inherits="StatusWindowPaneTemplate" id="19"/>
+			<Frame name="StatusWindowPane20" inherits="StatusWindowPaneTemplate" id="20"/>
+		</Frames>
+	</Frame>	
+	
+	<Button name="StatusWindowSlotTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="70" y="14"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<HighlightTexture file="Interface\RaidFrame\UI-RaidFrame-GroupButton" alphaMode="ADD">
+			<TexCoords left="0" right="0.640625" top="0.46875" bottom="0.90625"/>
+		</HighlightTexture>
+	</Button>
+
+	<!-- Button Group frames -->
+	<Frame name="StatusWindowButtonGroupTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="76" y="160"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentSlotsTexture1" file="Interface\RaidFrame\UI-RaidFrame-GroupOutline">
+					<Size>
+						<AbsDimension x="76" y="80"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+					<TexCoords left="0" right="0.6640625" top="0" bottom="0.625"/>
+				</Texture>
+				<Texture name="$parentSlotsTexture2" file="Interface\RaidFrame\UI-RaidFrame-GroupOutline">
+					<Size>
+						<AbsDimension x="76" y="80"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="$parentSlotsTexture1" relativePoint="BOTTOM"/>
+					</Anchors>
+					<TexCoords left="0" right="0.6640625" top="0" bottom="0.625"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentButton1" inherits="StatusWindowSlotTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSlotsTexture1" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="3" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton2" inherits="StatusWindowSlotTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton1" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton3" inherits="StatusWindowSlotTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton2" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton4" inherits="StatusWindowSlotTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton3" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton5" inherits="StatusWindowSlotTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton4" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton6" inherits="StatusWindowSlotTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSlotsTexture2" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="3" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton7" inherits="StatusWindowSlotTemplate" id="7">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton6" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton8" inherits="StatusWindowSlotTemplate" id="8">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton7" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton9" inherits="StatusWindowSlotTemplate" id="9">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton8" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="$parentButton10" inherits="StatusWindowSlotTemplate" id="10">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentButton9" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+
+	<Button name="StatusWindowButtonTemplate" movable="true" virtual="true">
+		<Size>
+			<AbsDimension x="70" y="14"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="80" y="8"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:SetFrameLevel(this:GetFrameLevel() + 2)
+				this:RegisterForClicks("RightButtonUp")
+				this.slot = nil
+				this.text = getglobal(this:GetName().."Text")
+			</OnLoad>
+			<OnClick>
+				if (arg1 == "RightButton") then
+					StatusWindowOptions.current = this
+					UIDropDownMenu_Initialize(StatusWindowModuleDropDown, StatusWindowOptions.ModuleDropDown_Initialise, "MENU")
+					ToggleDropDownMenu(1, nil, StatusWindowModuleDropDown, this:GetName())
+				end
+			</OnClick>
+			<OnMouseDown>
+				if (arg1 == "LeftButton") then
+					StatusWindowOptions:OnButtonDragStart()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				StatusWindowOptions:OnButtonDragStop()
+			</OnMouseUp>
+		</Scripts>
+		<NormalTexture file="Interface\RaidFrame\UI-RaidFrame-GroupButton">
+			<TexCoords left="0" right="0.640625" top="0" bottom="0.4375"/>
+		</NormalTexture>
+		<HighlightTexture file="Interface\RaidFrame\UI-RaidFrame-GroupButton" alphaMode="ADD">
+			<TexCoords left="0" right="0.640625" top="0.46875" bottom="0.90625"/>
+		</HighlightTexture>
+	</Button>
+
+	<Button name="StatusWindowWindowButtonTemplate" inherits="GameMenuButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="100" y="20"/>
+		</Size>
+		<Scripts>
+			<OnClick>
+				StatusWindowOptions:SetWindow(this:GetID())
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<Frame name="StatusWindowDropDownTemplate" inherits="UIDropDownMenuTemplate" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="21" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="StatusWindowOptionsFrame" frameStrata="HIGH" toplevel="true" parent="UIParent" hidden="true">
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+		<Size>
+				<AbsDimension x="430" y="420"/>
+		</Size>
+		<Anchors>
+				<Anchor point="CENTER"/>
+		</Anchors>
+
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="StatusWindowVersionString" inherits="GameFontNormal" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="200" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="2" y="2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="StatusWindowCurrentWindow" inherits="GameFontNormal" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="100" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="StatusWindowWindowsString" inherits="GameFontNormal" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="100" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="3" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="StatusWindowPanesString" inherits="GameFontNormal" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="76" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-10" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+			<Button name="StatusWindowCloseButton" inherits="GameMenuButtonTemplate" text="Close">
+				<Size>
+					<AbsDimension x="48" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-6" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:Close()
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="StatusWindowWindowButton1" inherits="StatusWindowWindowButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="3" y="-30"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton2" inherits="StatusWindowWindowButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton1" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton3" inherits="StatusWindowWindowButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton2" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton4" inherits="StatusWindowWindowButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton3" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton5" inherits="StatusWindowWindowButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton4" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton6" inherits="StatusWindowWindowButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton5" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton7" inherits="StatusWindowWindowButtonTemplate" id="7">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton6" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton8" inherits="StatusWindowWindowButtonTemplate" id="8">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton7" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton9" inherits="StatusWindowWindowButtonTemplate" id="9">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton8" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="StatusWindowWindowButton10" inherits="StatusWindowWindowButtonTemplate" id="10">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowWindowButton9" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-2"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+
+			<Frame name="StatusWindowModuleConfigDropDown" inherits="StatusWindowDropDownTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowWindowButton10" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="-15" y="-30"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<CheckButton name="StatusWindowAddonMenuCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowModuleConfigDropDown" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindow:AddonMenu()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
+			<Frame name="StatusWindowButtonGroup" inherits="StatusWindowButtonGroupTemplate">
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="StatusWindowButtons1" inherits="StatusWindowButtonGroupTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="-30"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="StatusWindowButtons2" inherits="StatusWindowButtonGroupTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowButtons1" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="StatusWindowModuleDropDown" inherits="UIDropDownMenuTemplate" id="1" hidden="true">
+				<Size>
+					<AbsDimension x="10" y="10"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="-10" y="-50"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<CheckButton name="StatusWindowAlignmentCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowButtonGroup" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:SetAlignment()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="StatusWindowBackgroundCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowAlignmentCheckButton" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:SetBackground()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="StatusWindowBorderCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowBackgroundCheckButton" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:SetBorder()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="StatusWindowUIScaleCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowBorderCheckButton" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:UIScale()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Slider name="StatusWindowScaleSlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowUIScaleCheckButton" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Slider>
+			<Slider name="StatusWindowWidthSlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowScaleSlider" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Slider>
+
+			<Button name="StatusWindowHelpButton" inherits="UIPanelButtonTemplate" text="Help">
+				<NormalText inherits="GameFontNormalSmall" />
+				<Size>
+					<AbsDimension x="40" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="StatusWindowButtons2" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnter>
+						StatusWindowOptions:Help()
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide()
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<Button name="StatusWindowButton1" inherits="StatusWindowButtonTemplate" id="1"/>
+			<Button name="StatusWindowButton2" inherits="StatusWindowButtonTemplate" id="2"/>
+			<Button name="StatusWindowButton3" inherits="StatusWindowButtonTemplate" id="3"/>
+			<Button name="StatusWindowButton4" inherits="StatusWindowButtonTemplate" id="4"/>
+			<Button name="StatusWindowButton5" inherits="StatusWindowButtonTemplate" id="5"/>
+			<Button name="StatusWindowButton6" inherits="StatusWindowButtonTemplate" id="6"/>
+			<Button name="StatusWindowButton7" inherits="StatusWindowButtonTemplate" id="7"/>
+			<Button name="StatusWindowButton8" inherits="StatusWindowButtonTemplate" id="8"/>
+			<Button name="StatusWindowButton9" inherits="StatusWindowButtonTemplate" id="9"/>
+			<Button name="StatusWindowButton10" inherits="StatusWindowButtonTemplate" id="10"/>
+			<Button name="StatusWindowButton11" inherits="StatusWindowButtonTemplate" id="11"/>
+			<Button name="StatusWindowButton12" inherits="StatusWindowButtonTemplate" id="12"/>
+			<Button name="StatusWindowButton13" inherits="StatusWindowButtonTemplate" id="13"/>
+			<Button name="StatusWindowButton14" inherits="StatusWindowButtonTemplate" id="14"/>
+			<Button name="StatusWindowButton15" inherits="StatusWindowButtonTemplate" id="15"/>
+			<Button name="StatusWindowButton16" inherits="StatusWindowButtonTemplate" id="16"/>
+			<Button name="StatusWindowButton17" inherits="StatusWindowButtonTemplate" id="17"/>
+			<Button name="StatusWindowButton18" inherits="StatusWindowButtonTemplate" id="18"/>
+			<Button name="StatusWindowButton19" inherits="StatusWindowButtonTemplate" id="19"/>
+			<Button name="StatusWindowButton20" inherits="StatusWindowButtonTemplate" id="20"/>
+		</Frames>
+		<Scripts>
+			<OnUpdate>
+				StatusWindowOptions:OnUpdate(arg1)
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+	<Script file="StatusWindowOptions.lua"/>
+
+	<!--											-->
+	<!--		Clock Module			-->
+	<!--											-->
+
+	<Frame name="StatusWindowClockOptions" frameStrata="HIGH" toplevel="true" parent="UIParent" hidden="true">
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+		<Size>
+			<AbsDimension x="100" y="100"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="StatusWindowClockOffsetLabel" inherits="GameFontNormal" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="100" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-5"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="StatusWindowClockOffsetText" inherits="GameFontHighlight" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="35" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="StatusWindowClockOffsetLabel" relativePoint="BOTTOM">
+							<Offset>
+								<AbsDimension x="0" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="StatusWindowClockOffsetDownButton">
+				<Size>
+					<AbsDimension x="14" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="StatusWindowClockOffsetText" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="2" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SWTime:OffsetDown()
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\Arrow-Left-Up"/>
+				<PushedTexture file="Interface\MoneyFrame\Arrow-Left-Down"/>
+				<DisabledTexture file="Interface\MoneyFrame\Arrow-Left-Disabled"/>
+			</Button>
+			<Button name="StatusWindowClockOffsetUpButton">
+				<Size>
+					<AbsDimension x="14" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="StatusWindowClockOffsetText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SWTime:OffsetUp()
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\Arrow-Right-Up"/>
+				<PushedTexture file="Interface\MoneyFrame\Arrow-Right-Down"/>
+				<DisabledTexture file="Interface\MoneyFrame\Arrow-Right-Disabled"/>
+			</Button>
+
+			<CheckButton name="StatusWindowClockCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowClockOffsetDownButton" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="-10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SWTime:Clock24HourCheck()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
+			<Button name="StatusWindowClockCloseButton" inherits="GameMenuButtonTemplate" text="Close">
+				<Size>
+					<AbsDimension x="48" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowClockOptions:Hide()
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+	<Script file="StatusWindowModule.lua"/>
+</Ui>
+

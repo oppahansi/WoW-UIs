@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: FreebTip
+## Notes: Custom Game Tooltip
+## Version: 1.4.2
+## Author: Freebaser
+## RequiredDeps: rColors
+
+FreebTip.lua

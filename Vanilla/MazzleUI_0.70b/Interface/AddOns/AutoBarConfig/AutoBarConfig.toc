@@ -1,0 +1,13 @@
+## Interface: 11200
+## Title: AutoBar Config|cff7fff7f -Ace2-|r
+## Notes: Config menu for AutoBar (LoadOnDemand)
+## Version: 5.0
+## Author: Toadkiller
+## Dependencies: AutoBar
+## LoadOnDemand: 1
+AutoBarConfig.lua
+AutoBarConfig.xml
+AutoBarConfigSlot.lua
+AutoBarConfigSlot.xml
+AutoBarChooseCategory.lua
+AutoBarChooseCategory.xml

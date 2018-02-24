@@ -1,0 +1,82 @@
+<Bindings>
+  <Binding name="CLICK ArenaUnitFrame1Button:LeftButton" header="AUF">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame2Button:LeftButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame3Button:LeftButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame4Button:LeftButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame5Button:LeftButton">
+    -- AUF
+  </Binding>
+
+  <Binding name="CLICK ArenaUnitFrame1Button:RightButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame2Button:RightButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame3Button:RightButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame4Button:RightButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame5Button:RightButton">
+    -- AUF
+  </Binding>
+
+  <Binding name="CLICK ArenaUnitFrame1Button:MiddleButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame2Button:MiddleButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame3Button:MiddleButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame4Button:MiddleButton">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame5Button:MiddleButton">
+    -- AUF
+  </Binding>
+
+  <Binding name="CLICK ArenaUnitFrame1Button:Button4">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame2Button:Button4">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame3Button:Button4">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame4Button:Button4">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame5Button:Button4">
+    -- AUF
+  </Binding>
+
+  <Binding name="CLICK ArenaUnitFrame1Button:Button5">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame2Button:Button5">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame3Button:Button5">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame4Button:Button5">
+    -- AUF
+  </Binding>
+  <Binding name="CLICK ArenaUnitFrame5Button:Button5">
+    -- AUF
+  </Binding>
+
+</Bindings>

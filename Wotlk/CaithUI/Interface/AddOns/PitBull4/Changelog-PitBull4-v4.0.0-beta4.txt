@@ -1,0 +1,11 @@
+tag v4.0.0-beta4
+4477c0af089905e4c4fe33fd3e01b1e88e87b926
+Shefki <shefki@shefki.org>
+2009-08-04 16:39:29 -0700
+
+Tagging as v4.0.0-beta4 to force a repack for LibDogTag users.
+
+
+--------------------
+
+No changelog

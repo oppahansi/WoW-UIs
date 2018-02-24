@@ -1,0 +1,9 @@
+## Interface: 30300
+## Author: Xus (Xussie of Kazzak EU), SHaG
+## Title: Forte|c70fff569Rogue|r
+## Notes: Forte Rogue Module
+## SavedVariables:
+## OptionalDeps:Forte_Casting, Forte_Timer, Forte_Cooldown
+## Dependencies:Forte_Core
+Localization.lua
+Forte_Rogue.lua

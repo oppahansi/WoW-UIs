@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Evl's Combat Text
+## Author: Evl
+## X-Curse-Packaged-Version: 2.5.2
+## X-Curse-Project-Name: Evl's Addons
+## X-Curse-Project-ID: evl
+## X-Curse-Repository-ID: wow/evl/mainline
+
+evl_CombatText.lua

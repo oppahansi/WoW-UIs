@@ -1,0 +1,45 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+	<Script file="CCP_Config.lua"/>
+	<Script file="ColorComboPointsLib.lua"/>
+	<Script file="ColorComboPoints.lua"/>		
+
+	<Button name="CCP_TextureTemplate" parent="UIParent" frameStrata="PARENT" movable="true" virtual="true">
+		<Size><AbsDimension x="20" y="20"/></Size>		
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parent_Texture">
+					<Color r="1" g="1" b="1"/>															
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnMouseUp>
+				CCP_MouseUp(this:GetName())
+			</OnMouseUp>
+			<OnMouseDown>
+				CCP_MouseDown(arg1)
+			</OnMouseDown>			
+		</Scripts>
+	</Button>
+			
+	<Button name="CCP_CP_1" inherits="CCP_TextureTemplate"/>
+	<Button name="CCP_CP_2" inherits="CCP_TextureTemplate"/>
+	<Button name="CCP_CP_3" inherits="CCP_TextureTemplate"/>
+	<Button name="CCP_CP_4" inherits="CCP_TextureTemplate"/>
+	<Button name="CCP_CP_5" inherits="CCP_TextureTemplate"/>
+	
+	<Frame name="CCP_MainFrame" hidden="false" parent="UIParent">
+		<Scripts>
+			<OnLoad>
+				CCP_Main_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				CCP_OnEvent();
+			</OnEvent>
+			<OnUpdate>
+				CCP_OnUpdata();
+			</OnUpdate>	
+		</Scripts>
+	</Frame>
+	
+</Ui>

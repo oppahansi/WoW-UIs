@@ -1,0 +1,28 @@
+## Interface: 30200
+## Title: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-deDE: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-esES: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-frFR: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-koKR: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-ruRU: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-zhCN: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Title-zhTW: PitBull4 |r[|cffeda55fVisualHeal|r]
+## Notes: Visualises healing done by you and your group members before it happens.
+## Notes-deDE: Zeigt Heilung von dir und anderen Gruppenmitgliedern bevor sie passiert.
+## Notes-esES: Visualises healing done by you and your group members before it happens.
+## Notes-frFR: Visualises healing done by you and your group members before it happens.
+## Notes-koKR: Visualises healing done by you and your group members before it happens.
+## Notes-ruRU: Visualises healing done by you and your group members before it happens.
+## Notes-zhCN: Visualises healing done by you and your group members before it happens.
+## Notes-zhTW: Visualises healing done by you and your group members before it happens.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull4
+## Version: v4.0.0-beta4
+## X-Curse-Packaged-Version: v4.0.0-beta4
+## X-Curse-Project-Name: PitBull Unit Frames 4.0
+## X-Curse-Project-ID: pitbull4
+## X-Curse-Repository-ID: wow/pitbull4/mainline
+
+load.xml

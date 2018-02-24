@@ -1,0 +1,10 @@
+
+TinyTipDB = {
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "global",
+	},
+	["profiles"] = {
+		["global"] = {
+		},
+	},
+}

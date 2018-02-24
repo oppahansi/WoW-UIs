@@ -1,0 +1,17 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fComboPoints|r]
+## Notes: Show combo points on the unit frame if you are a Rogue or Druid in Cat form.
+## Notes-koKR: 도적 혹은 드루이드의 표범 변신 상태이면 유닛 프레임에 연계 점수를 보여줍니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-PitBull-Condition: return select(2, UnitClass("player")) == "ROGUE" or select(2, UnitClass("player")) == "DRUID"
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+ComboPoints.lua

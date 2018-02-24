@@ -1,0 +1,98 @@
+AzCastBar Plugins Changes | 2009 Dec 16
+---------------------------------------
+- Changed the TOC version to 30300 for the 3.3 patch in all plugins.
+- LootRolls: Thanks to marmis85, this plugin has been updated to patch 3.3 with the new disenchant button.
+- Added a new plugin named "Threat", which is a simple threat meter for the amount of threat you have on your current target.
+
+AzCastBar Plugins Changes | 2009 May 17
+---------------------------------------
+- Cooldown: Added a "Maximum Shown Cooldown" option, default it's set to zero, which means any length.
+- Shaman: An option to show "Elemental Mastery" has been added.
+- Swing: Slam will no longer reset the swing timer, but rather suspend it instead.
+- Swing: The swing time reduction from parrying an attack should be more correct now.
+
+AzCastBar Plugins Changes | 2009 Apr 27
+---------------------------------------
+- Shaman: Fixed an error that would happen when having two melee weapons equipped, but only one imbued.
+- Shaman: Should now show the spirit wolves timer again.
+- Cooldown: Minimum allowed shown cooldown duration increased to "2", this was done as setting it to "1" would show all spells due to the global cooldown.
+
+AzCastBar Plugins Changes | 2009 Apr 13
+---------------------------------------
+- Changed the TOC version to 30100 on all plugins for the 3.1 patch.
+- Added a the plugin "Cooldowns", this tracks all your cooldowns.
+- GlobalCooldown: Added an option to show or hide the global cooldown timer on instant casts.
+- GlobalCooldown: Now shows the icon of the spell used to trigger the global cooldown.
+- Shaman: Updated the "LibWeaponEnchant" library. This should fix enchants reseting the total time and sometimes showing as "??" with "0.0" time after login or zoning.
+- Shaman: You can now configure which sound should be played when you get five stacks of Maelstrom.
+- Swing: Added the code to show a timer for wand shoot. The addon is disabled for all casters though, so the class check at the top of the Lua file has to be removed, if you wish to use it for wands too.
+- BattleGround: Fixed a bug that made it remove the wrong timer when the BG queue status updated.
+
+AzCastBar Plugins Changes | 2009 Apr 01
+---------------------------------------
+- All plugins has been optimised.
+- Flight: Fixed a bug that happened if you disabled this plugin.
+- Shaman: Now uses the "LibWeaponEnchant" library to update the weapon enchant data. This means less overhead.
+- Shaman: Added options for which shaman timers you wish to see.
+
+AzCastBar Plugins Changes | 2009 Mar 26
+---------------------------------------
+- All plugins has been optimised.
+- Renamed the "BGTimers" plugin into "BattleGround".
+- Flight: Fixed a nil table error that happened if you never had the plugin installed before.
+- LootRolls: The item tooltip will now update with comparison tips properly if you hold down shift.
+- GlobalCooldown: Fixed a bug where certain channeled spells, could trigger the bar to show wrong global cooldowns. An example would be the priests spell Penance.
+
+AzCastBar Plugins Changes | 2009 Mar 22
+---------------------------------------
+- Added a "Global Cooldown" plugin.
+- Renamed the "PlayerBuffs" plugin into "PlayerAuras".
+- Renamed the "DebuffWatch" plugin into "TargetAuras".
+- Flight: Changing the "Flight Bar Color" now actually changes the bar color!
+- Flight: Did some code cleanup and optimisation.
+- Flight: More flight routes has been added to the included ones.
+- Shaman: Now shows a Heroism/Bloodlust timer.
+- PlayerAuras: Now tracks tracking!
+- PlayerAuras: Added options to enable tracking of buffs, debuffs, weapon enchant and tracking.
+
+AzCastBar Plugins Changes | 2009 Mar 08
+---------------------------------------
+- Added a new plugin simply named "Shaman", it shows the timer for weapon imbues, elemental shield, maelstrom weapon buff count, and the time until spirit wolves run out.
+- Totem: You can now toggle the "Sentry Totem" by left-clicking the totem bar.
+- Totem: Added the option "Totem Bar Color".
+- Swing: The "Rune Strike" ability will now reset the swing timer.
+- Swing: Added an option to change the "Swing Bar Color".
+- Flight: No longer preloads the included flight time table for non english clients.
+- Flight: Added the option "Flight Bar Color".
+- Flight: Updated the included flight times tables, now includes 404 routes.
+- PlayerBuffs: Will now show the text string of the temporary weapon enchant on the buff bar.
+- PlayerBuffs: Four color options has been added for this plugin. "Buff Color", "Debuff Color", "Buff Timeout Color" and "Temporary Weapon Enchant Color".
+- DebuffWatch: Four options has been added for this plugin. "Show Buffs", "Show Debuffs", "Buff Color" and "Debuff Color".
+- BGTimers: Added three new options. "Neutral Color", "Alliance Color" and "Horde Color".
+
+AzCastBar Plugins Changes | 2009 Jan 10
+---------------------------------------
+- Updated all the multibar plugins to support the new anchor settings in the AzCastBar core. With these new options, you can select in which direction you want the bars to grow.
+- PlayerBuffs: Removed some unused code which could result in an error if you had a global variable named "color".
+- PlayerBuffs: If you turn off this plugin, the normal blizzard buff frames are now shown.
+- DebuffWatch: It is now possible to disable this plugin from the configurations.
+- RollTimers: Fixed a bug that made the tooltip show "Greed" instead of the proper tooltip, when you canceled a roll.
+- Swing: The timer for Auto Shot has been fixed, it will no longer set the timer for when the damage occur, but when the shot goes off.
+- Swing: Localised the names of spells by pulling them from the "GetSpellInfo()" function.
+- New Plugin: Totem Timers. This is just a simple totem timer. You can right click a timer to cancel the totem.
+
+AzCastBar Plugins Changes | 2008 Dec 22
+---------------------------------------
+- Changed the TOC version for all plugins to 30000 for the Wrath of the Lich King patch.
+- Swing: Now supports showing of the total swing time.
+- Flight: Updated number of included routes. Now has a total of 276 routes.
+- BGTimers: Snowfall graveyard timer now set to 4 minutes.
+- Added Plugin: LootRoll. Bars that replaces the pass, need or greed loot roll frames. Right click the bar to pass, need and greed has an icon on the right side of the bar.
+- Added Plugin: PlayerBuffs. This is a plugin which will show your buffs and debuff.
+- Added Plugin: DebuffWatch. Bars that shows your buffs and debuffs on the target, good for keeping certain debuffs up. Just lacking a filter to make it perfect.
+- Removed Plugin: LightsGrace. With the nerf of downranking, this plugin no longer serves any purpose.
+
+AzCastBar Plugins Changes | 2008 Mar 29
+---------------------------------------
+- BGTimers: Added secure flag carrier frames which you can click on to target whoever carries the flag.
+- Swing: The swing timer should now work with the new combat log system in 2.4.

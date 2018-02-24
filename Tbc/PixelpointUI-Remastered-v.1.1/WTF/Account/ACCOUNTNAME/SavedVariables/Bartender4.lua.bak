@@ -1,0 +1,125 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["BagBar"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+		["ActionBars"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+					["actionbars"] = {
+						{
+							["position"] = {
+								["y"] = 70.46855128690459,
+								["x"] = -0.7314300843031703,
+								["point"] = "BOTTOM",
+								["relPoint"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["position"] = {
+								["y"] = -190.7999949455261,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["position"] = {
+								["y"] = 100.6342557889875,
+								["x"] = -0.7313437559176457,
+								["point"] = "BOTTOM",
+								["relPoint"] = "BOTTOM",
+							},
+						}, -- [3]
+						{
+							["enabled"] = false,
+							["position"] = {
+								["y"] = -122.3999967575073,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [4]
+						{
+							["enabled"] = false,
+							["position"] = {
+								["y"] = -88.19999766349793,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [5]
+						{
+							["enabled"] = false,
+							["position"] = {
+								["y"] = -53.99999856948853,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						[9] = {
+						},
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+				},
+			},
+		},
+		["PetBar"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+					["position"] = {
+						["y"] = 45.67000945766267,
+						["x"] = -4.318534149682415e-005,
+						["point"] = "BOTTOM",
+						["relPoint"] = "BOTTOM",
+					},
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profileKeys"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+			},
+			["profiles"] = {
+				["Obscene - Archangel [14x] Blizzlike"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+	},
+	["profiles"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = {
+		},
+	},
+}

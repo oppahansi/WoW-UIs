@@ -1,0 +1,28 @@
+
+TipTopDB = {
+	["profileKeys"] = {
+		["Kripparrian - Ysondre"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["healthText"] = false,
+			["border"] = "Blizzard Tooltip",
+			["offsetX"] = "884",
+			["anchor"] = "TOPLEFT",
+			["inset"] = 2.5,
+			["bg"] = "Blizzard Tooltip",
+			["sbarbgcolor"] = {
+				["a"] = 0.4000000357627869,
+			},
+			["showTalentText"] = false,
+			["showTargetText"] = false,
+			["topBar"] = true,
+			["borderWidth"] = 12,
+			["classColor"] = false,
+			["itemColor"] = false,
+			["offsetY"] = "-469",
+			["healthBar"] = "Minimalist",
+			["sbarbg"] = "Blizzard",
+		},
+	},
+}

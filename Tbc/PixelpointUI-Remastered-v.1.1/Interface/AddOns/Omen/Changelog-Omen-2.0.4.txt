@@ -1,0 +1,119 @@
+------------------------------------------------------------------------
+r6 | arrowmaster | 2008-10-04 00:50:23 +0000 (Sat, 04 Oct 2008) | 1 line
+Changed paths:
+   A /tags/2.0.4 (from /trunk:5)
+
+Tagging as 2.0.4.
+------------------------------------------------------------------------
+r5 | nevcairiel | 2008-10-02 08:21:14 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+------------------------------------------------------------------------
+r3 | nevcairiel | 2008-10-01 07:32:15 +0000 (Wed, 01 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Add externals to .pkgmeta
+------------------------------------------------------------------------
+r2 | root | 2008-09-29 21:46:38 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r1 | root | 2008-09-29 21:19:06 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+   A /trunk/Bar.lua
+   A /trunk/Bindings.xml
+   A /trunk/Cleanup.lua
+   A /trunk/Config.lua
+   A /trunk/Frame.lua
+   A /trunk/Libs
+   A /trunk/Libs/LibFuBarPlugin-3.0
+   A /trunk/Libs/LibFuBarPlugin-3.0/LibFuBarPlugin-Mod-3.0.lua
+   A /trunk/Libs/LibFuBarPlugin-3.0/lib.xml
+   A /trunk/Localization
+   A /trunk/Localization/deDE.lua
+   A /trunk/Localization/enUS.lua
+   A /trunk/Localization/esES.lua
+   A /trunk/Localization/frFR.lua
+   A /trunk/Localization/koKR.lua
+   A /trunk/Localization/readme.txt
+   A /trunk/Localization/ruRU.lua
+   A /trunk/Localization/zhCN.lua
+   A /trunk/Localization/zhTW.lua
+   A /trunk/Media
+   A /trunk/Media/Sounds
+   A /trunk/Media/Sounds/aoogah.ogg
+   A /trunk/Media/Textures
+   A /trunk/Media/Textures/PulloutMarker.tga
+   A /trunk/Media.lua
+   A /trunk/ModuleBase.lua
+   A /trunk/Modules
+   A /trunk/Modules/AOE
+   A /trunk/Modules/AOE/AOE.lua
+   A /trunk/Modules/AOE/AOE_PulloutBar.lua
+   A /trunk/Modules/AOE/Localization
+   A /trunk/Modules/AOE/Localization/deDE.lua
+   A /trunk/Modules/AOE/Localization/enUS.lua
+   A /trunk/Modules/AOE/Localization/esES.lua
+   A /trunk/Modules/AOE/Localization/frFR.lua
+   A /trunk/Modules/AOE/Localization/koKR.lua
+   A /trunk/Modules/AOE/Localization/ruRU.lua
+   A /trunk/Modules/AOE/Localization/zhCN.lua
+   A /trunk/Modules/AOE/Localization/zhTW.lua
+   A /trunk/Modules/AOE/module.xml
+   A /trunk/Modules/Healer
+   A /trunk/Modules/Healer/Healer.lua
+   A /trunk/Modules/Healer/Localization
+   A /trunk/Modules/Healer/Localization/deDE.lua
+   A /trunk/Modules/Healer/Localization/enUS.lua
+   A /trunk/Modules/Healer/Localization/esES.lua
+   A /trunk/Modules/Healer/Localization/frFR.lua
+   A /trunk/Modules/Healer/Localization/koKR.lua
+   A /trunk/Modules/Healer/Localization/ruRU.lua
+   A /trunk/Modules/Healer/Localization/zhCN.lua
+   A /trunk/Modules/Healer/Localization/zhTW.lua
+   A /trunk/Modules/Healer/module.xml
+   A /trunk/Modules/Overview
+   A /trunk/Modules/Overview/Localization
+   A /trunk/Modules/Overview/Localization/deDE.lua
+   A /trunk/Modules/Overview/Localization/enUS.lua
+   A /trunk/Modules/Overview/Localization/esES.lua
+   A /trunk/Modules/Overview/Localization/frFR.lua
+   A /trunk/Modules/Overview/Localization/koKR.lua
+   A /trunk/Modules/Overview/Localization/ruRU.lua
+   A /trunk/Modules/Overview/Localization/zhCN.lua
+   A /trunk/Modules/Overview/Localization/zhTW.lua
+   A /trunk/Modules/Overview/Overview.lua
+   A /trunk/Modules/Overview/module.xml
+   A /trunk/Modules/SingleTarget
+   A /trunk/Modules/SingleTarget/Localization
+   A /trunk/Modules/SingleTarget/Localization/deDE.lua
+   A /trunk/Modules/SingleTarget/Localization/enUS.lua
+   A /trunk/Modules/SingleTarget/Localization/esES.lua
+   A /trunk/Modules/SingleTarget/Localization/frFR.lua
+   A /trunk/Modules/SingleTarget/Localization/koKR.lua
+   A /trunk/Modules/SingleTarget/Localization/ruRU.lua
+   A /trunk/Modules/SingleTarget/Localization/zhCN.lua
+   A /trunk/Modules/SingleTarget/Localization/zhTW.lua
+   A /trunk/Modules/SingleTarget/SingleTarget.lua
+   A /trunk/Modules/SingleTarget/SingleTarget_Compact.lua
+   A /trunk/Modules/SingleTarget/SingleTarget_PulloutBar.lua
+   A /trunk/Modules/SingleTarget/module.xml
+   A /trunk/Omen.lua
+   A /trunk/Omen.toc
+   A /trunk/Options.lua
+   A /trunk/PulloutBase.lua
+   A /trunk/ResizeGrip.tga
+   A /trunk/Skins.lua
+   A /trunk/embeds.xml
+   A /trunk/icon.blp
+
+Initial import of HEAD
+------------------------------------------------------------------------

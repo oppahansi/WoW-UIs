@@ -1,0 +1,2 @@
+
+SlideBarConfig = nil

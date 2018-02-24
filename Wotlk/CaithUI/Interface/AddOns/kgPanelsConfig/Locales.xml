@@ -1,0 +1,12 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="Locales\kgPanels-enUS.lua"/>
+	<Script file="Locales\kgPanels-esES.lua"/>
+	<Script file="Locales\kgPanels-esMX.lua"/>
+	<Script file="Locales\kgPanels-frFR.lua"/>
+	<Script file="Locales\kgPanels-deDE.lua"/>
+	<Script file="Locales\kgPanels-koKR.lua"/>
+	<Script file="Locales\kgPanels-zhCN.lua"/>
+	<Script file="Locales\kgPanels-zhTW.lua"/>
+	<Script file="Locales\kgPanels-ruRU.lua"/>
+</Ui>

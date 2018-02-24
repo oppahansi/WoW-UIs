@@ -1,0 +1,159 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["BagBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+					["visibility"] = {
+						["always"] = true,
+					},
+				},
+			},
+		},
+		["XPBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+				},
+			},
+		},
+		["ActionBars"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+					["actionbars"] = {
+						{
+							["position"] = {
+								["y"] = -194.9999859394758,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [1]
+						{
+							["position"] = {
+								["y"] = -165.3599994171447,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [2]
+						{
+							["position"] = {
+								["y"] = -135.7199988595794,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [3]
+						{
+							["position"] = {
+								["y"] = -106.0799983020141,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [4]
+						{
+							["position"] = {
+								["y"] = 337.2000664616851,
+								["x"] = 638.3761780221702,
+								["point"] = "CENTER",
+								["relPoint"] = "BOTTOMLEFT",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [5]
+						{
+							["position"] = {
+								["y"] = 307.5600378336515,
+								["x"] = 638.3761780221702,
+								["point"] = "CENTER",
+								["relPoint"] = "BOTTOMLEFT",
+							},
+							["visibility"] = {
+								["always"] = true,
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						[9] = {
+						},
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["RepBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+				},
+			},
+		},
+		["PetBar"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+					["visibility"] = {
+						["always"] = true,
+					},
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profileKeys"] = {
+				["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+			},
+			["profiles"] = {
+				["Caithlyn - Gorgonnash"] = {
+					["visibility"] = {
+						["always"] = true,
+					},
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+	},
+	["profiles"] = {
+		["Caithlyn - Gorgonnash"] = {
+			["snapping"] = 1,
+		},
+	},
+}

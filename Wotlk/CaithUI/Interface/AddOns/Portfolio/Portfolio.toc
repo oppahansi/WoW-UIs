@@ -1,0 +1,15 @@
+## Interface: 30100
+## Title: Portfolio
+## Notes: Interface Option Creation Utility
+## Author: AnduinLothar
+## OptionalDeps: LibDefaults
+## RequiredDeps:
+## Version: 1.21
+## X-Revision: $Rev: 5127 $
+## X-Date: $Date: 2007-11-13 18:34:54 -0600 (Tue, 13 Nov 2007) $
+## X-Category: Library
+## X-Website: http://www.wowinterface.com/downloads/info11749-Portfolio.html
+## X-Email: karlkfi@yahoo.com
+## X-Localizations: enUS
+## X-CompatibleLocales: enUS, enGB
+Loader.xml

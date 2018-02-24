@@ -1,0 +1,21 @@
+
+pErrorDB = {
+	"invalid target", -- [1]
+	"you cannot attack that target", -- [2]
+	"can't do that while moving", -- [3]
+	"there is nothing to attack", -- [4]
+	"you have no target", -- [5]
+	"spell is not ready yet", -- [6]
+	"ability is not ready yet", -- [7]
+	"another action is in progress", -- [8]
+	"you can't do that yet", -- [9]
+	"not enough runes", -- [10]
+	"you need to be closer to that character to interact with it", -- [11]
+	"item is not ready yet.", -- [12]
+	"objective complete", -- [13]
+	"you are too far away", -- [14]
+	"out of range", -- [15]
+	"target too close", -- [16]
+	"you are dead", -- [17]
+	"interrupted", -- [18]
+}

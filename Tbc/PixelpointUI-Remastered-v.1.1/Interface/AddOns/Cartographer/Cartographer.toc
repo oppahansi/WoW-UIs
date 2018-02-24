@@ -1,0 +1,27 @@
+﻿## Interface: 20400
+## Notes: Addon to manipulate the map
+## Note-frFR: Addon permettant la manipulation de la carte.
+## Notes-esES: Accesorio para manipular el mapa
+## Notes-koKR: 지도에 관련된 여러 기능을 조작하기 위한 애드온입니다.
+## Title: Cartographer
+## Notes-zhTW: 增強地圖的處理功能。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 0
+## SavedVariables: CartographerDB
+## OptionalDeps: LibRock-1.0, Ace2
+## X-Embeds: LibRock-1.0, LibRockComm-1.0, LibRockConfig-1.0, LibRockConsole-1.0, LibRockDB-1.0, LibRockEvent-1.0, LibRockHook-1.0, LibRockLocale-1.0, LibRockModuleCore-1.0, LibRockTimer-1.0, LibBabble-Zone-3.0, LibBabble-Spell-3.0, LibTourist-3.0, LibCrayon-3.0, LibRollCall-2.0, LibAbacus-3.0, Ace2, Babble-2.2, DewdropLib, LibPeriodicTable-3.1, TabletLib, RosterLib
+## X-Category: Map
+## X-Credits: Funkydude, kergoth, kagaro, Mery (for the waypoint images)
+## X-eMail: ckknight AT gmail DOT com
+## X-Website: http://www.wowace.com/
+## X-License: GPL v2 or later
+## X-Donate: PayPal:ckknight AT gmail DOT com
+## X-IssueTracker: Wowace:10024
+## Version: 2.0
+
+embeds.xml
+
+Cartographer.lua
+
+modules.xml

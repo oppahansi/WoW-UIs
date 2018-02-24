@@ -1,0 +1,11 @@
+## Interface: 30000
+## Title: LibDefaults
+## Notes: Saved Variable Initialization Library
+## Author: AnduinLothar
+## Version: 2.1
+## X-Revision: $Rev: 5127 $
+## X-Date: $Date: 2007-11-13 18:34:54 -0600 (Tue, 13 Nov 2007) $
+## X-Category: Library
+## X-Email: karlkfi@yahoo.com
+LibStub.lua
+LibDefaults.lua

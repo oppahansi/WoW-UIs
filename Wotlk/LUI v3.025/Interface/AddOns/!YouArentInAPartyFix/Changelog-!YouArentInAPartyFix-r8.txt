@@ -1,0 +1,24 @@
+------------------------------------------------------------------------
+r8 | Whitetooth | 2010-02-09 13:07:06 +0000 (Tue, 09 Feb 2010) | 4 lines
+Changed paths:
+   M /trunk/YouArentInAPartyFix.lua
+
+- Fix: No longer blocks messages to guild while not in a party/raid 
+- Fix: No longer blocks messages to party/raid while not in a guild 
+- Fix: No longer allows messages to raid while only in a party
+- New: Show which channel used in debug mode
+------------------------------------------------------------------------
+r7 | Whitetooth | 2010-01-22 11:09:35 +0000 (Fri, 22 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/!YouArentInAPartyFix.toc
+   M /trunk/YouArentInAPartyFix.lua
+
+- TOC 30300, still hasn't been fixed in 3.3.0
+- Also fixes "You are not in a guild." messages
+------------------------------------------------------------------------
+r6 | Whitetooth | 2009-09-06 08:12:19 +0000 (Sun, 06 Sep 2009) | 1 line
+Changed paths:
+   M /trunk/YouArentInAPartyFix.lua
+
+- This should fix yaiap when zoning out of bg
+------------------------------------------------------------------------

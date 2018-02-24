@@ -1,0 +1,24 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Script file="libs\LibStub\LibStub.lua"/>
+<Include file="libs\CallbackHandler-1.0\CallbackHandler-1.0.xml"/>
+<Include file="libs\LibRock-1.0\lib.xml"/>
+<Include file="libs\LibRockComm-1.0\lib.xml"/>
+<Include file="libs\LibRockConfig-1.0\lib.xml"/>
+<Include file="libs\LibRockConsole-1.0\lib.xml"/>
+<Include file="libs\LibRockDB-1.0\lib.xml"/>
+<Include file="libs\LibRockEvent-1.0\lib.xml"/>
+<Include file="libs\LibRockHook-1.0\lib.xml"/>
+<Include file="libs\LibRockModuleCore-1.0\lib.xml"/>
+<Include file="libs\LibRockTimer-1.0\lib.xml"/>
+<Include file="libs\LibBabble-Zone-3.0\lib.xml"/>
+<Include file="libs\LibTalentQuery-1.0\lib.xml"/>
+<Include file="libs\LibDogTag-3.0\lib.xml"/>
+<Include file="libs\LibDogTag-Unit-3.0\lib.xml"/>
+<Include file="libs\LibDruidMana-1.0\lib.xml"/>
+<Include file="libs\LibSharedMedia-2.0\lib.xml"/>
+<Include file="libs\LibBanzai-2.0\lib.xml"/>
+<Include file="libs\LibHealComm-3.0\lib.xml"/>
+<Include file="libs\LibMobHealth-4.0\lib.xml"/>
+</Ui>

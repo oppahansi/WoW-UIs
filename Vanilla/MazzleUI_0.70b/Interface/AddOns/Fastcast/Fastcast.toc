@@ -1,0 +1,8 @@
+## Interface: 11100
+## Title: Cirk's Fastcast v1.11.2
+## Notes: Provides functionality for improving spell casting on high latency connections
+## URL: http://www.wowinterface.com/downloads/fileinfo.php?id=4733
+## SavedVariables: FastcastState
+## OptionalDeps:
+## Dependencies:
+Fastcast.xml

@@ -1,0 +1,413 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<CheckButton name="CommunicationCheckButtonTemplate" virtual="true">
+		<HitRectInsets>
+			<AbsInset left="0" right="-100" top="0" bottom="0"/>
+		</HitRectInsets>
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<NormalTexture file="Interface\Buttons\UI-CheckBox-Up"/>
+		<PushedTexture file="Interface\Buttons\UI-CheckBox-Down"/>
+		<HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD"/>
+		<CheckedTexture file="Interface\Buttons\UI-CheckBox-Check"/>
+		<DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled"/>
+		<Scripts>
+			<OnClick>
+				if this:GetChecked() then
+					PlaySound("igMainMenuOptionCheckBoxOn");
+					this:SetChecked(1)
+				else
+					PlaySound("igMainMenuOptionCheckBoxOff");
+					this:SetChecked(0)
+				end
+			</OnClick>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+				GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</CheckButton>
+	<Button name="CommunicationButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="120" y="21"/>
+		</Size>
+		<ButtonText name="$parentText"/>
+		<NormalFont inherits="GameFontNormal"/>
+		<HighlightFont inherits="GameFontHighlight"/>
+		<DisabledFont inherits="GameFontDisable"/>
+		<NormalTexture inherits="UIPanelButtonUpTexture"/>
+		<PushedTexture inherits="UIPanelButtonDownTexture"/>
+		<DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+		<HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+				GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>			
+	</Button>
+	<EditBox name="CommunicationEditBoxTemplate" enableMouse="true" virtual="true" autoFocus="false">
+		<Size>
+			<AbsDimension x="100" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentLeft" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="8" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="-5" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.0625" top="0" bottom="0.625"/>
+				</Texture>
+				<Texture name="$parentRight" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="8" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.9375" right="1.0" top="0" bottom="0.625"/>
+				</Texture>
+				<Texture name="$parentMiddle" file="Interface\Common\Common-Input-Border">
+					<Size>
+						<AbsDimension x="10" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT"/>
+						<Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT"/>
+					</Anchors>
+					<TexCoords left="0.0625" right="0.9375" top="0" bottom="0.625"/>
+				</Texture>
+				<FontString name="$parentText" inherits="GameFontNormalSmall" text="VALUE">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="3" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				local text = this.tooltipText
+				for index,value in pairs(this.datatable) do text = text.."\n"..index end
+				GameTooltip:SetOwner(this,"ANCHOR_RIGHT")
+				GameTooltip:SetText(text,nil,nil,nil,nil,1)
+				GameTooltip:Show()
+			</OnEnter>
+			<OnEscapePressed>
+				local text = this:GetText()
+				if text == "" then this:ClearFocus()
+				else this.datatable[string.lower(text)] = nil; this:SetText("")
+				end
+			</OnEscapePressed>
+			<OnEnterPressed>
+				local text = this:GetText()
+				if not (text == "") then this.datatable[string.lower(text)] = 1; this:SetText("") end
+			</OnEnterPressed>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnEditFocusLost>
+				this:SetText("")
+			</OnEditFocusLost>
+			<OnEditFocusGained>
+				this:SetText("")
+			</OnEditFocusGained>
+		</Scripts>
+		<FontString inherits="ChatFontNormal"/>
+	</EditBox>
+	<Frame name="CommunicationMenuFrame" hidden="true" parent="UIParent" enableMouse="true" movable="true" frameStrata="DIALOG">
+		<TitleRegion setAllPoints="true"/>
+		<Size>
+			<AbsDimension x="500" y="180"/>
+		</Size>
+		<Anchors> 
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentTitle" inherits="GameFontHighlight" text="Communication Main Menu">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="9" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Frames>
+			<Editbox name="CommunicationReceivedDoTsEditBox" inherits="CommunicationEditBoxTemplate">
+				<Anchors>
+					<Anchor point="TOP" relativePoint="TOP">
+						<Offset>
+							<AbsDimension x="-40" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Sets which debuffs will be displayed from other players, assuming they send the data.  Press ENTER after typing in a name to add it to the list, or ESCAPE to remove it.  Current List:" 
+						CommunicationReceivedDoTsEditBoxText:SetText("Received DoTs"); 
+					</OnLoad>
+					<OnShow> this.datatable = Communication_Settings.recdots; </OnShow>
+				</Scripts>
+			</Editbox>
+			<Editbox name="CommunicationSentDoTsEditBox" inherits="CommunicationEditBoxTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CommunicationReceivedDoTsEditBox">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 						
+						this.tooltipText = "Sets which debuffs will be sent to other players.  Press ENTER after typing in a name to add it to the list, or ESCAPE to remove it.  Current List:" 
+						CommunicationSentDoTsEditBoxText:SetText("Sent DoTs"); 
+					</OnLoad>
+					<OnShow> this.datatable = Communication_Settings.sentdots; </OnShow>
+				</Scripts>
+			</Editbox>
+			<Editbox name="CommunicationReceivedCDEditBox" inherits="CommunicationEditBoxTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CommunicationSentDoTsEditBox">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Sets which cooldowns will be sent to other players.  Press ENTER after typing in a name to add it to the list, or ESCAPE to remove it.  Current List:" 
+						CommunicationReceivedCDEditBoxText:SetText("Received CDs"); 
+					</OnLoad>
+					<OnShow> this.datatable = Communication_Settings.reccds; </OnShow>
+				</Scripts>
+			</Editbox>
+			<Editbox name="CommunicationSentCDEditBox" inherits="CommunicationEditBoxTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CommunicationReceivedCDEditBox">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Sets which cooldowns will be sent to other players.  Press ENTER after typing in a name to add it to the list, or ESCAPE to remove it.  Current List:" 
+						CommunicationSentCDEditBoxText:SetText("Sent CDs"); 
+					</OnLoad>
+					<OnShow> this.datatable = Communication_Settings.sentcds; </OnShow>
+				</Scripts>
+			</Editbox>
+			<CheckButton name="CommunicationEnabledCheckButton" inherits="CommunicationCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Turns the addon on or off, default state: on.";
+						CommunicationEnabledCheckButtonText:SetText("Enabled"); 
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="CommunicationNewTargetsCheckButton" inherits="CommunicationCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT"  relativeTo="CommunicationEnabledCheckButton">
+						<Offset>
+							<AbsDimension x="0" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Determines if new target tables will be created if necessary, default state: yes.";
+						CommunicationNewTargetsCheckButtonText:SetText("New Targets"); 
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="CommunicationOnlyVisibleCheckButton" inherits="CommunicationCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT"  relativeTo="CommunicationNewTargetsCheckButton">
+						<Offset>
+							<AbsDimension x="0" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Determines if timers will only be shown from players that are near you, default state, yes.";
+						CommunicationOnlyVisibleCheckButtonText:SetText("Only Visible"); 
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="CommunicationSendDataCheckButton" inherits="CommunicationCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT"  relativeTo="CommunicationOnlyVisibleCheckButton">
+						<Offset>
+							<AbsDimension x="0" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Determines if any data will be sent at all, default state, yes.";
+						CommunicationSendDataCheckButtonText:SetText("Send Data"); 
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="CommunicationReceiveDataCheckButton" inherits="CommunicationCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT"  relativeTo="CommunicationSendDataCheckButton">
+						<Offset>
+							<AbsDimension x="0" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Determines if any data will be received at all, default state, yes.";
+						CommunicationReceiveDataCheckButtonText:SetText("Receive Data"); 
+					</OnLoad>
+				</Scripts>
+			</CheckButton>
+			<Button name="CommunicationResetButton" inherits="CommunicationButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Resets all settings to their default value." 
+						CommunicationResetButtonText:SetText("Reset"); 
+					</OnLoad>
+					<OnClick> Communication_Commands("reset"); </OnClick>
+				</Scripts>
+			</Button>
+			<Button name="CommunicationAuthorInfoButton" inherits="CommunicationButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CommunicationResetButton">
+						<Offset>
+							<AbsDimension x="0" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Prints in the chat frame information about the current version and about the author." 
+						CommunicationAuthorInfoButtonText:SetText("Author Info"); 
+					</OnLoad>
+					<OnClick> Communication_Commands("help version"); </OnClick>
+				</Scripts>
+			</Button>	
+			<Button name="CommunicationDoneButton" inherits="CommunicationButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Closes the menu and applies all changes made." 
+						CommunicationDoneButtonText:SetText("Done"); 
+					</OnLoad>
+					<OnClick> Communication_ParseMenuData(); CommunicationMenuFrame:Hide(); </OnClick>
+				</Scripts>
+			</Button>
+			<Button name="CommunicationCancelButton" inherits="CommunicationButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="CommunicationDoneButton">
+						<Offset>
+							<AbsDimension x="0" y="10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Closes the window without making any changes." 
+						CommunicationCancelButtonText:SetText("Cancel"); 
+					</OnLoad>
+					<OnClick> CommunicationMenuFrame:Hide(); </OnClick>
+				</Scripts>
+			</Button>
+			<Button name="CommunicationApplyButton" inherits="CommunicationButtonTemplate">
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="CommunicationCancelButton">
+						<Offset>
+							<AbsDimension x="0" y="10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad> 
+						this.tooltipText = "Applies all changes made without closing the window." 
+						CommunicationApplyButtonText:SetText("Apply"); 
+					</OnLoad>
+					<OnClick> Communication_ParseMenuData(); </OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+				this:SetBackdropColor(0.5, 0.5, 0.5);
+				table.insert(UISpecialFrames,"CommunicationMenuFrame")
+			</OnLoad>
+			<OnShow> Communication_SetMenuData(); </OnShow>
+		</Scripts>
+	</Frame>
+</Ui>

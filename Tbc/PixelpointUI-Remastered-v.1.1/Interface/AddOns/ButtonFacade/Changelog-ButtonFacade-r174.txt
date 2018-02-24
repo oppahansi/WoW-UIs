@@ -1,0 +1,87 @@
+------------------------------------------------------------------------
+r174 | ananhaid | 2008-10-24 14:09:22 +0000 (Fri, 24 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/Localization/zhCN.lua
+   M /trunk/Localization/zhTW.lua
+   M /trunk/Modules/ButtonTest.lua
+
+ButtonFacade:
+- zhCN/zhTW update. 
+------------------------------------------------------------------------
+r172 | stormfx | 2008-10-23 00:36:53 +0000 (Thu, 23 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/LibButtonFacade/LibButtonFacade.lua
+   M /trunk/Skins/Skins.lua
+
+ButtonFacade:
+ - Disable ModeScale to fix Autocast (It's not a model anymore?)
+------------------------------------------------------------------------
+r170 | satrina | 2008-10-22 16:11:53 +0000 (Wed, 22 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/LibButtonFacade/LibButtonFacade.lua
+
+ButtonFacade:
+ - Fix an error in LibButtonFacade where an infinite number of frames are created on repeated ApplySkin calls
+------------------------------------------------------------------------
+r168 | satrina | 2008-10-21 16:46:14 +0000 (Tue, 21 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/LibButtonFacade
+
+ButtonFacade:
+ - Fix LibStub external for LibButtonFacade
+------------------------------------------------------------------------
+r167 | satrina | 2008-10-21 15:38:17 +0000 (Tue, 21 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/ButtonFacade.toc
+
+ButtonFacade:
+ - Update TOC
+------------------------------------------------------------------------
+r166 | satrina | 2008-10-21 15:35:09 +0000 (Tue, 21 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/LibButtonFacade/LibButtonFacade.lua
+
+ButtonFacade:
+ - Fix infinite re-hooking bug
+------------------------------------------------------------------------
+r165 | swix | 2008-10-16 20:34:38 +0000 (Thu, 16 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/ButtonFacade.toc
+   A /trunk/Localization/ruRU.lua
+
+Added ruRU locale
+------------------------------------------------------------------------
+r164 | root | 2008-09-30 15:44:04 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r163 | root | 2008-09-30 14:45:07 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r162 | root | 2008-09-29 21:27:22 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+   M /trunk/Libs
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r160 | root | 2008-09-29 20:57:40 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/ButtonFacade
+   A /trunk (from /tmp/trunk/ButtonFacade:159)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r159 | next96 | 2008-09-16 02:43:08 +0000 (Tue, 16 Sep 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade/Localization/koKR.lua
+
+ButtonFacade:
+ - Update locale koKR
+------------------------------------------------------------------------

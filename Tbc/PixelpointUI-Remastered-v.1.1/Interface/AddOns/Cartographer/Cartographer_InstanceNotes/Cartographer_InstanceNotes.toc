@@ -1,0 +1,44 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fInstance Notes|r]
+## X-Name: Instance Notes
+## X-Name-deDE: Instanznotizen
+## X-Name-frFR: Notes d'instance
+## X-Name-koKR: 인스턴스 노트
+## X-Name-zhTW: 副本註記
+## X-Name-esES: Notas de Instancia
+## X-ModuleName: InstanceNotes
+## Notes: Module which adds default notes to the instance maps.
+## Notes-deDE: Modul, das den Instanzkarten die Standardnotizen hinzufügt.
+## Notes-frFR: Module permettant l'ajout de notes pré-définies sur les cartes d'instance.
+## Notes-koKR: 인스턴스 던전에 기본 노트를 추가합니다
+## Notes-zhTW: 新增預設註記到副本地圖的模組。
+## Notes-esES: Módulo que añade notas por defecto a los mapas de instancia
+## Author: ckknight
+## X-Credits: Funkydude
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes, Cartographer_InstanceMaps
+## OptionalDeps: Ace2, Babble-2.2
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceComm-2.0\AceComm-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+
+enUS.lua
+koKR.lua
+frFR.lua
+deDE.lua
+esES.lua
+zhTW.lua
+zhCN.lua
+module.lua
+notes.lua

@@ -1,0 +1,68 @@
+MACRO 43 "-SETUP 1-" Ability_Repair
+/aloft profile choose PixelpointUI
+/buffalo profile choose  Default
+/grid profile choose PixelpointUI
+/omen profile choose PixelpointUI
+/recount profile choose PixelpointUI
+/reload
+END
+MACRO 49 "-SETUP 2-" Ability_Repair
+/gladdy SetPixelProfile
+/bf SetPixelProfile
+/chatter profile
+/simpleminimap profile choose Default
+/xpbn profile choose PixelpointUI
+/pb
+/reload
+END
+MACRO 42 "/reload" Ability_DualWield
+/reload
+END
+MACRO 44 "Big Scale UI" Spell_Shadow_SealOfKings
+/run SetCVar("UIScale", 1)
+/reload
+END
+MACRO 36 "Center 1 bar" Spell_ChargePositive
+/dom show 1
+/dom show 2
+END
+MACRO 40 "Center Hide Bar" Spell_ChargeNegative
+/dom show bar 1
+/dom hide bar 2
+END
+MACRO 45 "Medium Scale UI" Spell_Shadow_SealOfKings
+/run SetCVar("UIScale", 0.89)
+/reload
+END
+MACRO 41 "Side 1 bar" Spell_ChargePositive
+/dom show 1
+/dom show 3
+/dom Hide 4
+/dom hide 5
+END
+MACRO 37 "Side 2 Bars" Spell_ChargePositive
+/dom show 1
+/dom show 3
+/dom show 4
+/dom hide 5
+END
+MACRO 39 "Side 3 Bars" Spell_ChargePositive
+/dom show 1
+/dom show 3
+/dom show 4
+/dom show 5
+END
+MACRO 38 "Side Hide Bars" Spell_ChargeNegative
+/dom show 1
+/dom hide 3
+/dom hide 4
+/dom hide 5
+END
+MACRO 46 "Small Scale UI" Spell_Shadow_SealOfKings
+/run SetCVar("UIScale", 0.79)
+/reload
+END
+MACRO 47 "Tiny Scale UI" Spell_Shadow_SealOfKings
+/run SetCVar("UIScale", 0.65)
+/reload
+END

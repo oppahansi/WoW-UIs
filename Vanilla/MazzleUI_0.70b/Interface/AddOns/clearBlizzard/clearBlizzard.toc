@@ -1,0 +1,7 @@
+## Interface: 1800
+## Title: clearBlizzard
+## Notes: clears frames
+## Author: Tomas Carnecky ( tom@dbservice.com )
+## SavedVariablesPerCharacter: clearBlizzardConfig
+clearBlizzard.lua
+clearBlizzard.xml

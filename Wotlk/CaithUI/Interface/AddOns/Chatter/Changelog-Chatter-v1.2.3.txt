@@ -1,0 +1,16 @@
+tag v1.2.3
+977ed5ea3022769ee5c824f5ece3a219c3223229
+root <root@cfrepos1.curseforge.net>
+2010-06-28 19:00:50 +0000
+
+Tagging as v1.2.3
+
+Tag created to pickup AceTab-3.0 fix
+
+
+--------------------
+
+Sal Scotto:
+	- Added Whisper Window locaization
+	- Forgot to ADD the AutoWhisper module in the previous commit. Fix wrong editbox object in PlayerNames module
+	- Adjusted tab completion for chateditbox.

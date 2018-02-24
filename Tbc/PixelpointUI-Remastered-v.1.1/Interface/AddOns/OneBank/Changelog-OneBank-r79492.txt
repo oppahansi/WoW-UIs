@@ -1,0 +1,8 @@
+------------------------------------------------------------------------
+r79492 | doktorjet | 2008-07-30 11:17:28 -0400 (Wed, 30 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/OneBank/OneBank.toc
+   M /trunk/OneBank/locals.lua
+
+OneBank - added russian (ruRU) localization and .toc notes
+------------------------------------------------------------------------

@@ -1,0 +1,65 @@
+MACRO 16777217 " " INV_Misc_QuestionMark
+#showtooltip Steady Shot
+/cast Steady Shot
+END
+MACRO 16777218 " " INV_Misc_QuestionMark
+#showtooltip Serpent Sting
+/cast Dash
+/cast Serpent Sting
+END
+MACRO 16777219 " " INV_Misc_QuestionMark
+#showtooltip Explosive Shot
+/cast Explosive Shot
+/cast [target=pettarget,exists] Rabid
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+#showtooltip Black Arrow
+/cast Black Arrow
+/cast [target=pettarget,exists] Rabid
+END
+MACRO 16777221 " " INV_Misc_QuestionMark
+#showtooltip Kill Command
+/petattack
+/petassist
+/cast Kill Command
+END
+MACRO 16777222 " " INV_Misc_QuestionMark
+#showtooltip Misdirection
+/cast [@focus, help] [@pet, nodead, exists] Misdirection
+/e casts MD
+END
+MACRO 16777223 " " INV_Misc_QuestionMark
+/cast [@pet,nodead,exists,nomodifier:alt] Mend Pet; [nomodifier:alt] Revive Pet
+/cast [modifier:alt] Dismiss Pet
+END
+MACRO 16777224 " " INV_Misc_QuestionMark
+#showtooltip Rapid Fire
+/cast Rapid Fire
+/cast Rabid
+END
+MACRO 16777225 " " INV_Misc_QuestionMark
+#showtooltip Bestial Wrath
+/cast Bestial Wrath
+/petattack
+/petassist
+/cast Rabid
+/cast Kill Command
+END
+MACRO 16777226 " " INV_Misc_QuestionMark
+/castsequence Aspect of the Hawk, Aspect of the Cheetah
+END
+MACRO 16777227 " " INV_Misc_QuestionMark
+#showtooltip Feign Death
+/stopcasting
+/stopcasting
+/stopcasting
+/stopcasting
+/cast Feign Death
+END
+MACRO 16777228 " " INV_Misc_QuestionMark
+#showtooltip Master's Call
+/petdefensive
+/petpassive
+/cast [@player] Master's Call
+/cast Dash
+END

@@ -1,0 +1,14 @@
+tag v1.7.7
+8489588a8996a160ac0f37242d4e65dbefa4bb85
+Shadowed <shadowed.wow@gmail.com>
+2010-08-14 11:58:21 -0700
+
+Tagging as release 1.7.7
+
+
+--------------------
+
+Shadowed:
+	- Fixed Ruby Sanctum not showing up
+	- Fixed casing typo causing GetSituationalTooltip error
+	- Apparently, you do not spell situational 'suitational' whoddathunk?

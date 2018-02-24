@@ -1,0 +1,80 @@
+MACRO 16777217 " " INV_Misc_QuestionMark
+#showtooltip Steady Shot
+/cast !auto shot
+/cast Steady Shot
+END
+MACRO 16777218 " " INV_Misc_QuestionMark
+#showtooltip Serpent Sting
+/cast Dash
+/cast Serpent Sting
+END
+MACRO 16777219 " " INV_Misc_QuestionMark
+#showtooltip Explosive Shot
+/cast Explosive Shot
+/cast [target=pettarget,exists] Rabid
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+#showtooltip Black Arrow
+/cast Black Arrow
+/cast [target=pettarget,exists] Rabid
+END
+MACRO 16777222 " " INV_Misc_QuestionMark
+#showtooltip Misdirection
+/cast [@focus, help] [@pet, nodead, exists] Misdirection
+/e casts MD
+END
+MACRO 16777223 " " INV_Misc_QuestionMark
+/cast [@pet,nodead,exists,nomodifier:alt] Mend Pet; [nomodifier:alt] Revive Pet
+/cast [modifier:alt] Dismiss Pet
+END
+MACRO 16777224 " " INV_Misc_QuestionMark
+#showtooltip Rapid Fire
+/cast Rapid Fire
+/cast Blood Fury(Racial)
+END
+MACRO 16777226 " " INV_Misc_QuestionMark
+/castsequence Aspect of the Hawk, Aspect of the Viper
+END
+MACRO 16777227 " " INV_Misc_QuestionMark
+#showtooltip Feign Death
+/stopcasting
+/stopcasting
+/stopcasting
+/stopcasting
+/cast Feign Death
+END
+MACRO 16777228 " " INV_Misc_QuestionMark
+#showtooltip Master's Call
+/petdefensive
+/petpassive
+/cast [@Soufly] Master's Call
+/cast Dash
+END
+MACRO 16777230 " " Spell_Fire_FelFire
+/focus mouseover
+END
+MACRO 16777231 " " INV_Misc_QuestionMark
+#showtooltip arcane shot
+/petattack
+/cast arcane shot
+END
+MACRO 16777233 " " INV_Misc_QuestionMark
+#showtooltip Pummel
+/cast Pummel
+END
+MACRO 16777234 " " INV_Misc_QuestionMark
+#showtooltip Kill Command
+/petattack
+/cast Kill Command
+END
+MACRO 16777235 " " INV_Misc_QuestionMark
+#showtooltip Bestial Wrath
+/cast Blood Fury(Racial)
+/cast Bestial Wrath
+/petattack
+END
+MACRO 16777236 " " INV_Misc_QuestionMark
+#showtooltip Multi-Shot
+/petattack
+/cast Multi-Shot
+END

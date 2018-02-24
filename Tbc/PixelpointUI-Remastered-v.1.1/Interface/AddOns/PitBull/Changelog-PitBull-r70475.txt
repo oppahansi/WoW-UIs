@@ -1,0 +1,554 @@
+------------------------------------------------------------------------
+r70475 | ottokang | 2008-04-19 11:52:20 -0400 (Sat, 19 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/RaidTargetIcon/RaidTargetIcon.lua
+
+PitBull
+- zhTW Update for RaidTargetIcon/RaidTargetIcon.lua
+------------------------------------------------------------------------
+r70306 | nemes | 2008-04-18 05:31:05 -0400 (Fri, 18 Apr 2008) | 3 lines
+Changed paths:
+   A /trunk/PitBull/Bindings.xml
+   M /trunk/PitBull/PitBull.lua
+
+PitBull:
+- add keybindings for changing raid group layout style
+
+------------------------------------------------------------------------
+r70036 | vangual | 2008-04-16 07:10:13 -0400 (Wed, 16 Apr 2008) | 4 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: performance improvements (minimal)
+- pbtt: fixes some situations where pulsing wasn't turned off properly
+- pbtt: might fix the missing border issue (having problems reproducing it reliably)
+------------------------------------------------------------------------
+r69982 | wang | 2008-04-15 22:18:12 -0400 (Tue, 15 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhCN update
+------------------------------------------------------------------------
+r69878 | vangual | 2008-04-15 12:32:53 -0400 (Tue, 15 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: Add /pbtt slash command to directly open the module's options
+------------------------------------------------------------------------
+r69825 | 7destiny | 2008-04-14 23:11:44 -0400 (Mon, 14 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- koKR Update
+------------------------------------------------------------------------
+r69785 | vangual | 2008-04-14 17:52:31 -0400 (Mon, 14 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: Add optional expiry pulses (4 new locale lines)
+------------------------------------------------------------------------
+r69651 | ellipsis | 2008-04-13 19:58:38 -0400 (Sun, 13 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PowerBar/PowerBar.lua
+
+PitBull_PowerBar: added a debug message to track down a class coloring issue.
+------------------------------------------------------------------------
+r69577 | ackis | 2008-04-13 13:10:30 -0400 (Sun, 13 Apr 2008) | 3 lines
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+
+PitBull
+- Remove LibBabbleSpell-3.0 from the ToC as references have been removed
+- Ellipsis, this should fix that problem I PMed you about on irc (crosses fingers)
+------------------------------------------------------------------------
+r69383 | ellipsis | 2008-04-12 19:12:05 -0400 (Sat, 12 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Aura/Core.lua
+   M /trunk/PitBull/Aura/Update.lua
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+PitBull_Aura: removed remaining 2.3 compat, and all references to Parser and Babble-Spell (fixes PB-384)
+------------------------------------------------------------------------
+r69018 | ellipsis | 2008-04-10 22:12:48 -0400 (Thu, 10 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Aura/Aura.xml
+   M /trunk/PitBull/Aura/Filter.lua
+   D /trunk/PitBull/Aura/Filter23.lua
+
+PitBull_Aura: Removed 2.3 compat.
+------------------------------------------------------------------------
+r69009 | ackis | 2008-04-10 19:39:36 -0400 (Thu, 10 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/RangeCheck/PitBull_RangeCheck.toc
+   M /trunk/PitBull/RangeCheck/RangeCheck.lua
+
+PitBull
+- Removed BabbleSpell from RangeCheck OINK OINK!!!!!
+------------------------------------------------------------------------
+r68199 | whyv | 2008-04-05 21:15:48 -0400 (Sat, 05 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/Aura/Core.lua
+   M /trunk/PitBull/Banzai/Banzai.lua
+   M /trunk/PitBull/CombatText/CombatText.lua
+   M /trunk/PitBull/ComboPoints/ComboPoints.lua
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+   M /trunk/PitBull/VisualHeal/VisualHeal.lua
+
+PitBull
+- update zhTW
+------------------------------------------------------------------------
+r67642 | kurax | 2008-04-02 02:53:23 -0400 (Wed, 02 Apr 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/CombatText/CombatText.lua
+
+PitBull: Update zhTW locale
+------------------------------------------------------------------------
+r67640 | kurax | 2008-04-02 02:34:03 -0400 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/CombatText/CombatText.lua
+
+PitBull
+- Add an individual font setting to CombatText module
+------------------------------------------------------------------------
+r67479 | noodles | 2008-04-01 06:54:47 -0400 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/Aura/Core.lua
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhTW check and update
+------------------------------------------------------------------------
+r67180 | ellipsis | 2008-03-30 18:23:11 -0400 (Sun, 30 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Banzai/Banzai.lua
+
+PitBull_Banzai: fix bug with units appearing to lose aggro when they didn't.
+------------------------------------------------------------------------
+r67167 | ellipsis | 2008-03-30 18:02:06 -0400 (Sun, 30 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/RangeCheck/RangeCheck.lua
+   M /trunk/PitBull/VisualHeal/VisualHeal.lua
+
+PitBull: VisualHeal & RangeCheck now remove their options from Global Settings when disabled.
+------------------------------------------------------------------------
+r67162 | ellipsis | 2008-03-30 17:39:29 -0400 (Sun, 30 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Highlight/Highlight.lua
+
+PitBull_Highlight: fixed options table so it doesn't error in the All Units config.
+------------------------------------------------------------------------
+r67114 | 7destiny | 2008-03-30 13:15:28 -0400 (Sun, 30 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- koKR Update
+------------------------------------------------------------------------
+r67041 | ellipsis | 2008-03-30 05:15:11 -0400 (Sun, 30 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+
+PitBull: PLAYER_PET_CHANGED -> UNIT_PET. The old event doesn't get fired anymore, causing the pet frame to be glitchy and unresponsive. It should behave much better now.
+------------------------------------------------------------------------
+r67040 | kurax | 2008-03-30 04:45:07 -0400 (Sun, 30 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull: Update zhCN locale
+------------------------------------------------------------------------
+r67030 | kurax | 2008-03-30 01:33:10 -0400 (Sun, 30 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/Aura/Core.lua
+   M /trunk/PitBull/Banzai/Banzai.lua
+   M /trunk/PitBull/BarFader/BarFader.lua
+   M /trunk/PitBull/CastBar/CastBar.lua
+   M /trunk/PitBull/CombatFader/CombatFader.lua
+   M /trunk/PitBull/CombatIcon/CombatIcon.lua
+   M /trunk/PitBull/CombatText/CombatText.lua
+   M /trunk/PitBull/ComboPoints/ComboPoints.lua
+   M /trunk/PitBull/DruidManaBar/DruidManaBar.lua
+   M /trunk/PitBull/ExperienceBar/ExperienceBar.lua
+   M /trunk/PitBull/HappinessIcon/HappinessIcon.lua
+   M /trunk/PitBull/HealthBar/HealthBar.lua
+   M /trunk/PitBull/HideBlizzard/HideBlizzard.lua
+   M /trunk/PitBull/Highlight/Highlight.lua
+   M /trunk/PitBull/LeaderIcon/LeaderIcon.lua
+   M /trunk/PitBull/MasterLooterIcon/MasterLooterIcon.lua
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+   M /trunk/PitBull/Portrait/Portrait.lua
+   M /trunk/PitBull/PowerBar/PowerBar.lua
+   M /trunk/PitBull/PvPIcon/PvPIcon.lua
+   M /trunk/PitBull/RaidTargetIcon/RaidTargetIcon.lua
+   M /trunk/PitBull/RangeCheck/RangeCheck.lua
+   M /trunk/PitBull/ReadyCheckIcon/ReadyCheckIcon.lua
+   M /trunk/PitBull/ReputationBar/ReputationBar.lua
+   M /trunk/PitBull/RestIcon/RestIcon.lua
+   M /trunk/PitBull/Spark/Spark.lua
+   M /trunk/PitBull/ThreatBar/ThreatBar.lua
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+   M /trunk/PitBull/VisualHeal/VisualHeal.lua
+   M /trunk/PitBull/VoiceIcon/VoiceIcon.lua
+
+PitBull
+- A totally revamp for zhCN translations, finally we've got rid of the holy nonsenses from the Mars.
+------------------------------------------------------------------------
+r67021 | wang | 2008-03-29 23:59:23 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhCN update
+------------------------------------------------------------------------
+r67004 | ellipsis | 2008-03-29 20:58:09 -0400 (Sat, 29 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull: Bad translator, no cookie.
+------------------------------------------------------------------------
+r66998 | 7destiny | 2008-03-29 20:22:56 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull
+- koKR Update
+------------------------------------------------------------------------
+r66960 | ellipsis | 2008-03-29 17:11:28 -0400 (Sat, 29 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+
+PitBull: Update classification borders on unit classification change (fixes PB-350).
+------------------------------------------------------------------------
+r66956 | ellipsis | 2008-03-29 16:53:46 -0400 (Sat, 29 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull: validate names of new texts on creation.
+------------------------------------------------------------------------
+r66934 | ulic | 2008-03-29 13:27:11 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/Aura/PitBull_Aura.toc
+   M /trunk/PitBull/Banzai/PitBull_Banzai.toc
+   M /trunk/PitBull/BarFader/PitBull_BarFader.toc
+   M /trunk/PitBull/CastBar/PitBull_CastBar.toc
+   M /trunk/PitBull/CombatFader/PitBull_CombatFader.toc
+   M /trunk/PitBull/CombatIcon/PitBull_CombatIcon.toc
+   M /trunk/PitBull/CombatText/PitBull_CombatText.toc
+   M /trunk/PitBull/ComboPoints/PitBull_ComboPoints.toc
+   M /trunk/PitBull/DruidManaBar/PitBull_DruidManaBar.toc
+   M /trunk/PitBull/ExperienceBar/PitBull_ExperienceBar.toc
+   M /trunk/PitBull/HappinessIcon/PitBull_HappinessIcon.toc
+   M /trunk/PitBull/HealthBar/PitBull_HealthBar.toc
+   M /trunk/PitBull/HideBlizzard/PitBull_HideBlizzard.toc
+   M /trunk/PitBull/Highlight/PitBull_Highlight.toc
+   M /trunk/PitBull/LeaderIcon/PitBull_LeaderIcon.toc
+   M /trunk/PitBull/MasterLooterIcon/PitBull_MasterLooterIcon.toc
+   M /trunk/PitBull/Portrait/PitBull_Portrait.toc
+   M /trunk/PitBull/PowerBar/PitBull_PowerBar.toc
+   M /trunk/PitBull/PvPIcon/PitBull_PvPIcon.toc
+   M /trunk/PitBull/RaidTargetIcon/PitBull_RaidTargetIcon.toc
+   M /trunk/PitBull/RangeCheck/PitBull_RangeCheck.toc
+   M /trunk/PitBull/ReadyCheckIcon/PitBull_ReadyCheckIcon.toc
+   M /trunk/PitBull/ReputationBar/PitBull_ReputationBar.toc
+   M /trunk/PitBull/RestIcon/PitBull_RestIcon.toc
+   M /trunk/PitBull/Spark/PitBull_Spark.toc
+   M /trunk/PitBull/ThreatBar/PitBull_ThreatBar.toc
+   M /trunk/PitBull/VisualHeal/PitBull_VisualHeal.toc
+   M /trunk/PitBull/VoiceIcon/PitBull_VoiceIcon.toc
+
+PitBull
+- Bumped Module .toc files
+------------------------------------------------------------------------
+r66923 | 7destiny | 2008-03-29 11:57:59 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- koKR Update
+------------------------------------------------------------------------
+r66894 | vangual | 2008-03-29 07:18:17 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- tt: should apply border color on more occasions
+------------------------------------------------------------------------
+r66889 | wang | 2008-03-29 06:09:24 -0400 (Sat, 29 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhCN update
+------------------------------------------------------------------------
+r66731 | vangual | 2008-03-28 14:07:18 -0400 (Fri, 28 Mar 2008) | 6 lines
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: fixes bug that made timers stop occasionally (bug of last commit)
+- pbtt: should fix SetPoint errors
+- pbtt: fixes PB-344
+- pbtt: should give better initial placement on fresh installations (PB-342)
+- pbtt: potential fix for PB-341
+------------------------------------------------------------------------
+r66446 | ckknight | 2008-03-27 14:41:23 -0400 (Thu, 27 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull - make all units work better with custom texts
+------------------------------------------------------------------------
+r66431 | vangual | 2008-03-27 13:53:58 -0400 (Thu, 27 Mar 2008) | 5 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: fixed many different errors when playerframe got (temp) hidden.
+- pbtt: should fix PB-338
+- pbtt: fixed anchoring to the middle
+- pbtt: Added ability to specify frame offsets (adds 4 locale lines)
+------------------------------------------------------------------------
+r66291 | ckknight | 2008-03-27 01:26:16 -0400 (Thu, 27 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull - remove WoW24 checks, assume WoW24.
+- make DogTag edit boxes multiline and syntax highlighted.
+------------------------------------------------------------------------
+r66226 | vangual | 2008-03-26 20:05:22 -0400 (Wed, 26 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: don't try to cleanup frames that were never created
+------------------------------------------------------------------------
+r66221 | ckknight | 2008-03-26 19:48:50 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull - fix alpha on the cast time
+------------------------------------------------------------------------
+r66184 | ckknight | 2008-03-26 18:39:09 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull - fix default cast duration format
+------------------------------------------------------------------------
+r66094 | ckknight | 2008-03-26 12:03:08 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/pitbulllod.bat
+   M /trunk/PitBull/pitbulllod.sh
+
+PitBull - remove InteractLines from the bat and sh files
+------------------------------------------------------------------------
+r66083 | ckknight | 2008-03-26 11:22:24 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/embeds.xml
+
+PitBull - change embeds order
+------------------------------------------------------------------------
+r65991 | noodles | 2008-03-26 03:48:51 -0400 (Wed, 26 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhTW update
+------------------------------------------------------------------------
+r65986 | ellipsis | 2008-03-26 03:39:38 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull: Updated some default texts to DogTag-3.0 syntax.
+------------------------------------------------------------------------
+r65940 | ellipsis | 2008-03-26 00:09:59 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+
+PitBull: Add LibTalentQuery-1.0 to X-Embeds too
+------------------------------------------------------------------------
+r65939 | ellipsis | 2008-03-26 00:04:31 -0400 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+PitBull: Embed LibTalentQuery-1.0 for DogTag.
+------------------------------------------------------------------------
+r65868 | ellipsis | 2008-03-25 18:15:54 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Aura/Core.lua
+
+PitBull_Aura: change default alpha of cooldown text to 1, so people will stop complaining about dim grey timers.
+------------------------------------------------------------------------
+r65858 | ellipsis | 2008-03-25 17:52:16 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   D /trunk/PitBull/InteractLines
+   M /trunk/PitBull/PitBull.toc
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/filelist.wau
+   M /trunk/PitBull/libs
+   M /trunk/PitBull/modules.xml
+
+PitBull: updated embeds and optdeps for 2.4. Removed broken InteractLines module.
+------------------------------------------------------------------------
+r65838 | ckknight | 2008-03-25 16:17:33 -0400 (Tue, 25 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull.toc
+
+PitBull - remove Ace2 references
+- bump version to 3.0 for marketing purposes
+------------------------------------------------------------------------
+r65837 | durcyn | 2008-03-25 16:16:22 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+PitBull: zip me, dammit.
+------------------------------------------------------------------------
+r65829 | durcyn | 2008-03-25 15:51:11 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+PitBull: clobber Threat-1.0 from externals/embeds/deps, as it was removed from /trunk.  ThreatBar is broken for the time being, but you get to keep the pieces.
+------------------------------------------------------------------------
+r65813 | durcyn | 2008-03-25 15:16:25 -0400 (Tue, 25 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+PitBull:  Add LDT-3 and LDT-Unit-3 to toc/embeds/externals for 2.4 goodness.
+------------------------------------------------------------------------
+r65554 | 7destiny | 2008-03-24 12:57:53 -0400 (Mon, 24 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- TotemTimers: koKR Update
+------------------------------------------------------------------------
+r65512 | stan | 2008-03-23 23:34:15 -0400 (Sun, 23 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/CombatFader/CombatFader.lua
+
+PitBull
+- fixes PB-221 - thx doxxx
+------------------------------------------------------------------------
+r65498 | vangual | 2008-03-23 18:47:28 -0400 (Sun, 23 Mar 2008) | 3 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+   A /trunk/PitBull/TotemTimers/border.tga
+
+PitBull
+- pbtt: added border coloring (2 new locale lines)
+- pbtt: feature-freeze for the next few days
+------------------------------------------------------------------------
+r65427 | ckknight | 2008-03-23 04:01:59 -0400 (Sun, 23 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+   M /trunk/PitBull/ThreatBar/ThreatBar.lua
+
+PitBull - fix standard reputation DogTag
+- add support for Threat-2.0, run in WoW 2.4
+------------------------------------------------------------------------
+r65425 | ckknight | 2008-03-23 03:36:29 -0400 (Sun, 23 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.lua
+   M /trunk/PitBull/PitBull_MetaLayout.lua
+
+PitBull - if WoW 2.4 is detected, use LibDogTag-3.0 instead of 2.0
+------------------------------------------------------------------------
+r65405 | ckknight | 2008-03-22 22:41:45 -0400 (Sat, 22 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/PitBull.toc
+
+PitBull - add LibHealComm-3.0 to OptionalDeps
+------------------------------------------------------------------------
+r65404 | ckknight | 2008-03-22 22:39:18 -0400 (Sat, 22 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/Banzai/Banzai.lua
+
+PitBull_Banzai - no longer use AceLocale
+------------------------------------------------------------------------
+r65389 | noodles | 2008-03-22 17:47:58 -0400 (Sat, 22 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhTW update
+------------------------------------------------------------------------
+r65362 | ckknight | 2008-03-22 14:49:07 -0400 (Sat, 22 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/PitBull/pitbulllod.bat
+   M /trunk/PitBull/pitbulllod.sh
+
+PitBull - add TotemTimers to bat and sh files
+------------------------------------------------------------------------
+r65339 | vangual | 2008-03-22 07:54:58 -0400 (Sat, 22 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- pbtt: adjusted initial default font size, poke me if the defaults still show "..." timers for your setup.
+------------------------------------------------------------------------
+r65335 | vangual | 2008-03-22 07:01:51 -0400 (Sat, 22 Mar 2008) | 3 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/PitBull_TotemTimers.toc
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- fixed a case where the totemtimers module accidentally loaded before wow 2.4 (fixes PB-331)
+- small deDE update (big thanks to all translators btw!)
+------------------------------------------------------------------------
+r65310 | wang | 2008-03-22 00:07:13 -0400 (Sat, 22 Mar 2008) | 3 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhCN update
+
+------------------------------------------------------------------------
+r65302 | 7destiny | 2008-03-21 22:16:49 -0400 (Fri, 21 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- TotemTimers: Added more localization. and koKR Update
+------------------------------------------------------------------------
+r65261 | vangual | 2008-03-21 13:59:35 -0400 (Fri, 21 Mar 2008) | 3 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- many fixes, improvements and new features for the totemtimers module (see wowace forum post)
+- added german locale
+------------------------------------------------------------------------
+r65218 | noodles | 2008-03-21 04:53:12 -0400 (Fri, 21 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhTW locale added
+------------------------------------------------------------------------
+r65162 | wang | 2008-03-20 09:58:47 -0400 (Thu, 20 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/PitBull/TotemTimers/TotemTimers.lua
+
+PitBull
+- zhCN added
+------------------------------------------------------------------------

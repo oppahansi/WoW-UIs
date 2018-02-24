@@ -1,0 +1,25 @@
+## Interface: 30300
+## LoadOnDemand: 1
+## Notes: Configuration for kgPanels
+## Title: kgPanelsConfig
+## Author: kagaro, EvilElvis
+## X-Category: Interface Enhancements
+## Dependencies: kgPanels
+## Version: v1.39-Beta
+## X-License: All Rights Reserved
+## X-Email: sal.scotto@gmail.com
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets
+## X-Curse-Packaged-Version: v1.39-Beta
+## X-Curse-Project-Name: kgPanels
+## X-Curse-Project-ID: kg-panels
+## X-Curse-Repository-ID: wow/kg-panels/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+Locales.xml
+kgPanelsConfig.lua
+kgPanelGuideFrame.lua
+ArtHelper.lua
+PanelHelper.lua
+LayoutHelper.lua

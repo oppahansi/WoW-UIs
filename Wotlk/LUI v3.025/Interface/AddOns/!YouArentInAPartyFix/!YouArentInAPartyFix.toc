@@ -1,0 +1,11 @@
+## Interface: 30300
+## Title: YouArentInAPartyFix
+## Notes: Fixes "You aren't in a party." spam in battlegrounds
+## Author: Whitetooth
+## X-Category: Fix
+## X-Curse-Packaged-Version: r8
+## X-Curse-Project-Name: YouArentInAPartyFix
+## X-Curse-Project-ID: youarentinapartyfix
+## X-Curse-Repository-ID: wow/youarentinapartyfix/mainline
+
+YouArentInAPartyFix.lua

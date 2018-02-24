@@ -1,0 +1,16 @@
+## Interface: 11000
+## Title: FuBar - |cffffffffCombatInfo|r|cff00ff00Fu|r
+## Notes: Combat stats in a central location.
+## Author: _dire_
+## eMail: 
+## Dependencies: Ace, FuBar
+## OptionalDependencies: TabletLib, DewdropLib
+## SavedVariablesPerCharacter: FuBar_CombatInfoFuDB
+## Version: 0.61
+## LoadOnDemand: 0
+FuBar_CombatInfoFu.xml
+FuBar_CombatInfoFuLocals.lua
+FuBar_CombatInfoFu_locale.fr.lua
+FuBar_CombatInfoFu_locale.de.lua
+FuBar_CombatInfoFu_locale.en.lua
+FuBar_CombatInfoFu.lua

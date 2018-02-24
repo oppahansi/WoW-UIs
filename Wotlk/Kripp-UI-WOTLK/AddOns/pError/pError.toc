@@ -1,0 +1,8 @@
+## Interface: 30300
+## Author: p3lim
+## Version: 30300.4-Release
+## Title: |cffff6000p|rError
+## Notes: Hide those pesky errors!
+## SavedVariables: pErrorDB
+
+pError.lua

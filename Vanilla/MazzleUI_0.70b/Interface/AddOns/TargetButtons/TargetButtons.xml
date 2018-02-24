@@ -1,0 +1,210 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+		<!-- <Script file="localization.de.lua"/> -->
+	<Script file="TargetButtons.lua"/>
+
+	<Frame name="TargetButtonsFrame">
+		<Scripts>
+			<OnLoad>
+				this:RegisterEvent("PLAYER_TARGET_CHANGED");
+				this:RegisterEvent("VARIABLES_LOADED");
+			</OnLoad>
+			<OnEvent>
+				if (event == "VARIABLES_LOADED") then
+					TargetButtons_Initialize();
+				else
+					Button_Redraw();
+				end
+			</OnEvent>
+			<OnUpdate>
+				TB_CheckRange();
+			</OnUpdate>
+		</Scripts>
+	</Frame>
+
+	<Button name="InviteButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_INVITE_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Invite_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Invite-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Invite-Down"/>
+		<DisabledTexture file="Interface\AddOns\TargetButtons\Images\Invite-Disabled"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+	<Button name="PromoteButton" parent="UIParent" toplevel="true" hidden="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_PROMOTE_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Promote_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Promote-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Promote-Down"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+
+	<Button name="FollowButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_FOLLOW_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Follow_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Follow-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Follow-Down"/>
+		<DisabledTexture file="Interface\AddOns\TargetButtons\Images\Follow-Disabled"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+
+	<Button name="TradeButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_TRADE_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Trade_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Trade-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Trade-Down"/>
+		<DisabledTexture file="Interface\AddOns\TargetButtons\Images\Trade-Disabled"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+
+	<Button name="WhisperButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_WHISPER_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Whisper_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Whisper-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Whisper-Down"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+
+	<Button name="DuelButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_DUEL_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Duel_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Duel-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Duel-Down"/>
+		<DisabledTexture file="Interface\AddOns\TargetButtons\Images\Duel-Disabled"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+
+	<Button name="InspectButton" parent="UIParent" toplevel="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+				GameTooltip:SetText(TARGETBUTTONS_INSPECT_TT, 1.0, 1.0, 1.0);
+				GameTooltip:Show();
+			</OnEnter>
+			<OnLoad>
+				this:GetFrameLevel(this:GetFrameLevel()+5)
+			</OnLoad>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+			<OnClick>
+				Inspect_onClick();
+			</OnClick>
+		</Scripts>
+		<NormalTexture file="Interface\AddOns\TargetButtons\Images\Inspect-Up"/>
+		<PushedTexture file="Interface\AddOns\TargetButtons\Images\Inspect-Down"/>
+		<DisabledTexture file="Interface\AddOns\TargetButtons\Images\Inspect-Disabled"/>
+		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+	</Button>
+
+</Ui>

@@ -1,0 +1,5 @@
+## Interface: 11100
+## Title: Mars Quest Organizer
+## Notes: Organizes your quests into categories.  Type /q for help.
+## SavedVariables: MarsQuestOrganizerSettings
+MarsQuestOrganizer.xml

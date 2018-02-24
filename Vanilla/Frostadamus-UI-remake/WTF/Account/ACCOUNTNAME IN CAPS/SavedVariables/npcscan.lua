@@ -1,0 +1,3 @@
+
+npcscan_targets = {
+}

@@ -1,0 +1,34 @@
+
+FuBar2DB = {
+	["profiles"] = {
+		["Default"] = {
+			["fontSize"] = 12,
+			["loadOnDemand"] = {
+			},
+			["adjust"] = true,
+			["tooltip"] = {
+			},
+			["panels"] = {
+				[1] = {
+					["plugins"] = {
+						["center"] = {
+						},
+						["right"] = {
+							[1] = "ClockFu",
+							[2] = "VolumeFu",
+						},
+						["left"] = {
+							[1] = "LocationFu",
+							[2] = "ExperienceFu",
+							[3] = "PerformanceFu",
+						},
+					},
+					["attachPoint"] = "TOP",
+				},
+				[2] = {
+					["attachPoint"] = "BOTTOM",
+				},
+			},
+		},
+	},
+}

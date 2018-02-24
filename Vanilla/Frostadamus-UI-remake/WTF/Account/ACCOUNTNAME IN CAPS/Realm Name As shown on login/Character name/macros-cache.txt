@@ -1,0 +1,31 @@
+MACRO 16777222 "Armors" Spell_Frost_ChillingArmor
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Ice Armor(Rank 4)") else CastSpellByName("Mage Armor(Rank 3)"); end;
+END
+MACRO 16777218 "Food" Spell_Misc_Food
+/run local f = IsShiftKeyDown(); if f == nil then UseItemByName("Conjured Cinnamon Roll") else cast("Conjure Food") end
+END
+MACRO 16777220 "Mount" Ability_Mount_Undeadhorse
+/use Purple Skeletal Warhorse
+/equip Carrot on a Stick
+/equip Eye of the Beast
+END
+MACRO 16777221 "sdasd" Ability_Ambush
+/ console groundEffectDensity 256 
+/170 groundEffectDist console 
+/ console detailDoodadAlpha 100 
+/777 farclip console 
+/ console horizonfarclip 6226 
+/ smallcull console 0 
+/ maxLOD console 3 
+/3 SkyCloudLOD console 
+/ console characterAmbient 1
+END
+MACRO 16777223 "Wards" Spell_Frost_FireResistanceTotem
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Frost Ward(Rank 4)") else CastSpellByName("Fire Ward(Rank 5)"); end;
+END
+MACRO 16777217 "Water" Spell_Misc_Drink
+/run local f = IsShiftKeyDown(); if f == nil then UseItemByName("Conjured Crystal Water") else cast("Conjure Water") end
+END
+MACRO 16777219 "XploDE" Spell_Shadow_ImprovedVampiricEmbrace
+/run local x = IsShiftKeyDown(); if x == nil then CastSpellByName("Arcane Explosion(Rank 6)") else CastSpellByName("Arcane Explosion(Rank 1)"); end;
+END

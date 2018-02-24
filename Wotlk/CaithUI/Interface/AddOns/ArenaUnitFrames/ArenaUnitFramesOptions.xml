@@ -1,0 +1,1604 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<!-- Alert box template -->
+	<Frame name="ArenaUnitFramesAlertSelectionFrameTempalte" virtual="true">
+		<Size>
+			<AbsDimension x="193" y="100"/>
+		</Size>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\ChatFrame\ChatFrameBackground" tile="true">
+			<EdgeSize>
+				<AbsValue val="1"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentName" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="5" y="-5"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<CheckButton name="$parentMsgCheckButton" inherits="UICheckButtonTemplate">
+				<Size>
+					<AbsDimension x="20" y="21"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HitRectInsets>
+					<AbsInset left="0" right="0" top="0" bottom="0"/>
+				</HitRectInsets>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Text"]:SetText(ARENA_UNIT_FRAMES_DISPLAY_MSG);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.MsgCheckButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentNoAudioRadio" inherits="UIRadioButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-45"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Text"]:SetText(ARENA_UNIT_FRAMES_NO_AUDIO);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.AudioRadio_OnClick(self, self:GetID());
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_NO_AUDIO_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentSoundEffectRadio" inherits="UIRadioButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentNoAudioRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Text"]:SetText(ARENA_UNIT_FRAMES_SOUND_EFFECT);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.AudioRadio_OnClick(self, self:GetID());
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_SOUND_EFFECT_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentSpeechRadio" inherits="UIRadioButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSoundEffectRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Text"]:SetText(ARENA_UNIT_FRAMES_SPEECH);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.AudioRadio_OnClick(self, self:GetID());
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_SPEECH_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</CheckButton>
+			<Button name="$parentSoundEffectPlayButton">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentSoundEffectRadio">
+						<Offset>
+							<AbsDimension x="100" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.SoundEffectPlayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-GuildButton-MOTD-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-GuildButton-MOTD-Disabled"/>
+				<DisabledTexture file="Interface\Buttons\UI-GuildButton-MOTD-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-GuildButton-MOTD-Up" alphaMode="ADD"/>
+			</Button>
+			<Button name="$parentSpeechPlayButton">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentSpeechRadio">
+						<Offset>
+							<AbsDimension x="100" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.SpeechPlayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-GuildButton-MOTD-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-GuildButton-MOTD-Disabled"/>
+				<DisabledTexture file="Interface\Buttons\UI-GuildButton-MOTD-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-GuildButton-MOTD-Up" alphaMode="ADD"/>
+			</Button>
+			<Button name="$parentOptionsButton" inherits="UIPanelButtonTemplate" text="GAMEOPTIONS_MENU">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="128" y="-25"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.AlertOptionsButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentExcludesButton" inherits="UIPanelButtonTemplate" text="ARENA_UNIT_FRAMES_EXCLUDE">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentOptionsButton" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.ExcludesButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentCustomButton" inherits="UIPanelButtonTemplate" text="CUSTOM">
+				<Size>
+					<AbsDimension x="60" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentExcludesButton" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.CustomButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:SetBackdropColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				self:SetBackdropBorderColor( .5, .5, .5 );
+			</OnLoad>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+				GameTooltip:SetText(self.tooltipText or "", nil, nil, nil, nil, 1);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesOptionsFrameClassButtonsTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="150" y="75"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentClass" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentMacro" inherits="ChatFontSmall" justifyH="LEFT" justifyV="TOP">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="10" y="-15"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="-15"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMLEFT"/>
+					</Anchors>
+					<Color r="0.5" g="0.5" b="0.5"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentEditButton" inherits="UIPanelButtonTemplate" text="ARENA_UNIT_FRAMES_EDIT">
+				<Size>
+					<AbsDimension x="40" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditButton_OnClick(self:GetParent().class);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				local id = self:GetID();
+				if ( id > 1 ) then
+					self:SetPoint("TOP", getglobal("ArenaUnitFramesOptionsFrameClass"..(id - 1)), "BOTTOM", 0, 0);
+				end
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesOptionsListEditBoxBackgroundTemplate" virtual="true">
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Scripts>
+			<OnLoad>
+				self:SetBackdropBorderColor(TOOLTIP_DEFAULT_COLOR.r, TOOLTIP_DEFAULT_COLOR.g, TOOLTIP_DEFAULT_COLOR.b);
+				self:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<!-- Edit Button Frame -->
+	<Frame name="ArenaUnitFramesOptionsEditFrame" parent="UIParent" frameStrata="DIALOG" enableMouse="true" hidden="true">
+		<Size>
+			<AbsDimension x="350" y="350"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"/>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentTitle" inherits="ChatFontNormal" justifyH="LEFT" text="ARENA_UNIT_FRAMES_EDIT">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</FontString>
+				<FontString name="$parentMacroHelp" inherits="GameFontNormalSmall" justifyH="LEFT" text="ARENA_UNIT_FRAMES_MACRO_HELP">
+					<Size>
+						<AbsDimension x="325" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="15" y="30"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<CheckButton name="$parentDefaultRadio" inherits="UIRadioButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-35"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(DEFAULT);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameRadio_OnClick(self:GetID())
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentTargetRadio" inherits="UIRadioButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentDefaultRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(TARGET..ARENA_UNIT_FRAMES_UNIT);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameRadio_OnClick(self:GetID())
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentFocusRadio" inherits="UIRadioButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentTargetRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(FOCUS..ARENA_UNIT_FRAMES_UNIT);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameRadio_OnClick(self:GetID())
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentCastRadio" inherits="UIRadioButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentFocusRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_CAST.." "..PLAYERSTAT_SPELL_COMBAT);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameRadio_OnClick(self:GetID())
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentMacroRadio" inherits="UIRadioButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentCastRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(MACRO);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameRadio_OnClick(self:GetID());
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<EditBox name="$parentSpellEditBox" letters="255" autoFocus="false" inherits="InputBoxTemplate">
+				<Size>
+					<AbsDimension x="200" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentCastRadio">
+						<Offset>
+							<AbsDimension x="100" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>
+						self:ClearFocus();
+					</OnEnterPressed>
+				</Scripts>
+			</EditBox>
+			<ScrollFrame name="$parentScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="286" y="85"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentMacroRadio" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+					<EditBox name="$parentText" multiLine="true" letters="255" autoFocus="false">
+						<Size>
+							<AbsDimension x="286" y="85"/>
+						</Size>
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(self:GetParent():GetName().."ScrollBar")
+								self:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (self.max ~= max) ) then
+									self.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								self:ClearFocus();
+							</OnEscapePressed>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+			<Button name="$parentTextButton">
+				<Size>
+					<AbsDimension x="286" y="85"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="ArenaUnitFramesOptionsEditFrameScrollFrame"/>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFramesOptionsEditFrameScrollFrameText:SetFocus();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Frame name="$parentTextBackground">
+				<Size>
+					<AbsDimension x="322" y="95"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT" relativeTo="ArenaUnitFramesOptionsEditFrameScrollFrame">
+						<Offset>
+							<AbsDimension x="-9" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnLoad>
+						self:SetBackdropBorderColor(TOOLTIP_DEFAULT_COLOR.r, TOOLTIP_DEFAULT_COLOR.g, TOOLTIP_DEFAULT_COLOR.b);
+						self:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+					</OnLoad>
+				</Scripts>
+			</Frame>
+
+			<Button name="$parentDoneButton" inherits="UIPanelButtonTemplate" text="DONE">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.ButtonsPanelEditFrameDoneButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:SetBackdropColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+			</OnLoad>
+			<OnShow>
+				ArenaUnitFrames.Options.ButtonsPanelEditFrame_OnShow(self);
+			</OnShow>
+			<OnHide>
+				ArenaUnitFrames.Options.ButtonsPanelEditFrame_OnHide();
+			</OnHide>
+		</Scripts>
+	</Frame>
+
+	<!-- General Options Panel -->
+	<Frame name="ArenaUnitFramesInterfaceGeneralPanel" hidden="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentTitle" inherits="GameFontNormalLarge" text="ARENA_UNIT_FRAMES_CONFIG_LABEL">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-15" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Slider name="ArenaUnitFramesOptionsScaleSlider" inherits="OptionsSliderTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-50" y="-55" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						self:Enable();
+						self:SetMinMaxValues(.5, 1);
+						self:SetValueStep(.05);
+						self:SetValue(ArenaUnitFrames_Config["options"]["scale"]);
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_SCALE);
+						getglobal(self:GetName().."Low"):SetText("50%");
+						getglobal(self:GetName().."High"):SetText("100%");
+					</OnShow>
+					<OnEnter>
+						if (self.tooltipText) then
+							GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+							GameTooltip:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b);
+							GameTooltip:SetText(self.tooltipText, 1.0, 1.0, 1.0);
+						end
+					</OnEnter>
+					<OnValueChanged>
+						PlaySound("igMainMenuOptionCheckBoxOn");	
+						ArenaUnitFrames_Config["options"]["scale"] = self:GetValue();
+						ArenaUnitMasterFrame:SetScale(ArenaUnitFrames_Config["options"]["scale"]);
+					</OnValueChanged>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Slider>
+			<Button name="$parentTargetColorButton">
+				<Size>
+					<AbsDimension x="25" y="25"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-150" y="-95" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentTexture" file="Interface\ChatFrame\ChatFrameBackground" tile="true" setAllPoints="true"/>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_TARGET_COLOR">
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="5" y="0" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						ArenaUnitFrames.Options.SetColorPickingButton(self, "targetColor");
+					</OnShow>
+					<OnClick>
+						ArenaUnitFrames.Options.ColorPickingButton_OnClick(self, "targetColor");
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentFocusColorButton">
+				<Size>
+					<AbsDimension x="25" y="25"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-150" y="-130" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentTexture" file="Interface\ChatFrame\ChatFrameBackground" tile="true" setAllPoints="true"/>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_FOCUS_COLOR">
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="5" y="0" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnShow>
+						ArenaUnitFrames.Options.SetColorPickingButton(self, "focusColor");
+					</OnShow>
+					<OnClick>
+						ArenaUnitFrames.Options.ColorPickingButton_OnClick(self, "focusColor");
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				ArenaUnitFrames.Options.GeneralPanel_OnLoad(self);
+			</OnLoad>
+			<OnShow>
+				ArenaUnitFrames.Options.GeneralPanel_OnShow(self);
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+	<!-- Alerts Panel -->
+	<Frame name="ArenaUnitFramesInterfaceAlertsPanel" hidden="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentAlerts" inherits="GameFontNormalLarge" text="ARENA_UNIT_FRAMES_ALERTS_LABEL">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-15" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+
+			<Frame name="$parentSelection1" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-40" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentSelection2" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSelection1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-5" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentSelection3" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSelection2" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-5" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentSelection4" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSelection1" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentSelection5" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSelection4" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-5" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentSelection6" inherits="ArenaUnitFramesAlertSelectionFrameTempalte" id="6">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentSelection5" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-5" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Button name="$parentPrevPageButton">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="20" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<FontString inherits="GameFontNormal" justifyH="LEFT" text="PREV">
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="RIGHT"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						if ( ArenaUnitFrames.Options.alertPage > 1 ) then
+							ArenaUnitFrames.Options.alertPage = ArenaUnitFrames.Options.alertPage - 1;
+						end
+						ArenaUnitFrames.Options.AlertPageUpdate();
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-PrevPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+			</Button>
+			<Button name="$parentNextPageButton">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-20" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<FontString inherits="GameFontNormal" justifyH="RIGHT" text="NEXT">
+							<Anchors>
+								<Anchor point="RIGHT" relativePoint="LEFT"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						PlaySound("igMainMenuOptionCheckBoxOn");
+						ArenaUnitFrames.Options.alertPage = ArenaUnitFrames.Options.alertPage + 1;
+						ArenaUnitFrames.Options.AlertPageUpdate();
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Up"/>
+				<PushedTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Down"/>
+				<DisabledTexture file="Interface\Buttons\UI-SpellbookIcon-NextPage-Disabled"/>
+				<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+			</Button>
+
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				ArenaUnitFrames.Options.AlertsPanel_OnLoad(self);
+			</OnLoad>
+			<OnShow>
+				ArenaUnitFrames.Options.AlertsPanel_OnShow(self);
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+	<!-- Custom Sound Effect Frame -->
+	<Frame name="AreaUnitFramesCustomSoundFrame" parent="ArenaUnitFramesInterfaceAlertsPanel" toplevel="true" enableMouse="true" hidden="true">
+		<Size>
+			<AbsDimension x="310" y="160"/>
+		</Size>
+		<Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+				<Size>
+					<AbsDimension x="128" y="17"/>
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture file="Interface\PaperDoll\UI-PaperDoll-SlotBackground.blp" tile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-8"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-3" y="8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.3" right="0.8" top="0.2" bottom="0.8"/>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="LEFT" justifyV="TOP" text="ARENA_UNIT_FRAMES_CUSTOM_SOUND_INFO">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-20"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-15" y="-160"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1" g="1" b="1"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<EditBox name="$parentEditBox" letters="100" autoFocus="true" inherits="InputBoxTemplate">
+				<Size>
+					<AbsDimension x="200" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="20" y="17"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnterPressed>
+						self:ClearFocus();
+					</OnEnterPressed>
+				</Scripts>
+			</EditBox>
+			<Button name="$parentOkayButton" inherits="UIPanelButtonTemplate" text="OKAY">
+				<Size>
+					<AbsDimension x="50" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-15" y="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.CustomSoundOkayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+
+	<!-- Excludes Frame -->
+	<Frame name="AreaUnitFramesExcludesFrame" parent="ArenaUnitFramesInterfaceAlertsPanel" toplevel="true" enableMouse="true" hidden="true">
+		<Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+				<Size>
+					<AbsDimension x="128" y="17"/>
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture file="Interface\PaperDoll\UI-PaperDoll-SlotBackground.blp" tile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-8"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-3" y="8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.3" right="0.8" top="0.2" bottom="0.8"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentOkayButton" inherits="UIPanelButtonTemplate" text="OKAY">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-15" y="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.ExcludesOkayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+
+	<!-- Alert Options Frame -->
+	<Frame name="AreaUnitFramesAlertOptionsFrame" parent="ArenaUnitFramesInterfaceAlertsPanel" toplevel="true" enableMouse="true" hidden="true">
+		<Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11"/>
+				<Size>
+					<AbsDimension x="128" y="17"/>
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture file="Interface\PaperDoll\UI-PaperDoll-SlotBackground.blp" tile="true">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-8"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-3" y="8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.3" right="0.8" top="0.2" bottom="0.8"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentOkayButton" inherits="UIPanelButtonTemplate" text="OKAY">
+				<Size>
+					<AbsDimension x="80" y="22"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-15" y="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.AlertOptionsOkayButton_OnClick(self);
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+
+	<!-- Buttons Panel -->
+	<Frame name="ArenaUnitFramesInterfaceButtonsPanel" hidden="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentButtons" inherits="GameFontNormalLarge" text="ARENA_UNIT_FRAMES_BUTTONS">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-15" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="ArenaUnitFramesButtonConfigButton" inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_BUTTON">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-60" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="ArenaUnitFramesButtonConfigModifiers" inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_MODIFIERS">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-110" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Frame name="ArenaUnitFramesButtonConfigButtonsDropDown" inherits="UIDropDownMenuTemplate" enableMouse="true">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="25" y="-75"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="ArenaUnitFramesButtonConfigModifierDropDown" inherits="UIDropDownMenuTemplate" enableMouse="true">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesButtonConfigButtonsDropDown" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<ScrollFrame name="ArenaUnitFramesButtonConfigScrollBar" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="150" y="400"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-26" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+					<Frame name="$parentChildFrame">
+						<Size>
+							<AbsDimension x="150" y="825"/>
+						</Size>
+						<Frames>
+							<Frame name="ArenaUnitFramesOptionsFrameClass1" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="1">
+								<Anchors>
+									<Anchor point="TOPLEFT">
+										<Offset>
+											<AbsDimension x="0" y="0"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+							</Frame>
+							<Frame name="ArenaUnitFramesOptionsFrameClass2" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="2"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass3" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="3"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass4" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="4"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass5" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="5"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass6" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="6"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass7" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="7"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass8" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="8"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass9" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="9"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass10" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="10"/>
+							<Frame name="ArenaUnitFramesOptionsFrameClass11" inherits="ArenaUnitFramesOptionsFrameClassButtonsTemplate" id="11"/>
+						</Frames>
+					</Frame>
+				</ScrollChild>
+			</ScrollFrame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				ArenaUnitFrames.Options.ButtonsPanel_OnLoad(self);
+			</OnLoad>
+			<OnShow>
+				ArenaUnitFrames.Options.ButtonsPanel_OnShow(self);
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+	<!-- Buff/Debuff Filters Panel -->
+	<Frame name="ArenaUnitFramesInterfaceBuffsPanel" hidden="true">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentBuffDebuffDisplay" inherits="GameFontNormalLarge" text="ARENA_UNIT_FRAMES_BUFF_DISPLAY">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-15" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentBuffs" inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_BUFFS">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="30" y="-40" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentDebuffs" inherits="GameFontNormal" text="ARENA_UNIT_FRAMES_DEBUFFS">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="30" y="-227" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<!-- Buff white/black list radio buttons -->
+			<CheckButton name="ArenaUnitFramesOptionsBuffsBlackListRadio" inherits="UIRadioButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="35" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_BLACKLIST);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.BuffsListsRadio_OnClick(self:GetID());
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="ArenaUnitFramesOptionsBuffsWhiteListRadio" inherits="UIRadioButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="213" y="-60"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_WHITELIST);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.BuffsListsRadio_OnClick(self:GetID());
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
+			<!-- Buff lists edit boxes -->
+			<ScrollFrame name="ArenaUnitFramesOptionsBuffsBlackListScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="125" y="130"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="35" y="-82"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+
+					<EditBox name="ArenaUnitFramesOptionsBuffsBlackListEditBox" multiLine="true" autoFocus="false">
+						<Size>
+							<AbsDimension x="135" y="130"/>
+						</Size>
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(self:GetParent():GetName().."ScrollBar")
+								self:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (self.max ~= max) ) then
+									self.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								self:ClearFocus();
+							</OnEscapePressed>
+							<OnShow>
+								self:SetText(ArenaUnitFrames_Config.lists.buffs.black);
+							</OnShow>
+							<OnHide>
+								ArenaUnitFrames_Config.lists.buffs.black = self:GetText();
+								ArenaUnitFrames.SetBuffFilter();
+							</OnHide>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+
+			<Frame name="ArenaUnitFramesOptionsBuffsBlackListEditBoxBackground" inherits="ArenaUnitFramesOptionsListEditBoxBackgroundTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsBuffsBlackListScrollFrame">
+						<Offset>
+							<AbsDimension x="-5" y="5"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsBuffsBlackListScrollFrame">
+						<Offset>
+							<AbsDimension x="25" y="-4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Button name="ArenaUnitFramesOptionsBuffsBlackListEditBoxTextButton">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsBuffsBlackListScrollFrame"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsBuffsBlackListScrollFrame"/>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFrames.Options.BuffsBlackListEditBox:SetFocus();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_BLACKLIST_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<ScrollFrame name="ArenaUnitFramesOptionsBuffsWhiteListScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="125" y="130"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="215" y="-82"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+
+					<EditBox name="ArenaUnitFramesOptionsBuffsWhiteListEditBox" multiLine="true" autoFocus="false">
+						<Size>
+							<AbsDimension x="135" y="130"/>
+						</Size>
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(self:GetParent():GetName().."ScrollBar")
+								self:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (self.max ~= max) ) then
+									self.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								self:ClearFocus();
+							</OnEscapePressed>
+							<OnShow>
+								self:SetText(ArenaUnitFrames_Config.lists.buffs.white);
+							</OnShow>
+							<OnHide>
+								ArenaUnitFrames_Config.lists.buffs.white = self:GetText();
+								ArenaUnitFrames.SetBuffFilter();
+							</OnHide>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+
+			<Frame name="ArenaUnitFramesOptionsBuffsWhiteListEditBoxBackground" inherits="ArenaUnitFramesOptionsListEditBoxBackgroundTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsBuffsWhiteListScrollFrame">
+						<Offset>
+							<AbsDimension x="-5" y="5"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsBuffsWhiteListScrollFrame">
+						<Offset>
+							<AbsDimension x="25" y="-4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Button name="ArenaUnitFramesOptionsBuffsWhiteListEditBoxTextButton">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsBuffsWhiteListScrollFrame"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsBuffsWhiteListScrollFrame"/>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFramesOptionsBuffsWhiteListEditBox:SetFocus();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_WHITELIST_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<!-- Debuff white/black list radio buttons -->
+			<CheckButton name="ArenaUnitFramesOptionsDebuffsBlackListRadio" inherits="UIRadioButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="35" y="-247"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_BLACKLIST);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.DebuffsListsRadio_OnClick(self:GetID());
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="ArenaUnitFramesOptionsDebuffsWhiteListRadio" inherits="UIRadioButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="213" y="-247"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						getglobal(self:GetName().."Text"):SetText(ARENA_UNIT_FRAMES_WHITELIST);
+					</OnLoad>
+					<OnClick>
+						ArenaUnitFrames.Options.DebuffsListsRadio_OnClick(self:GetID());
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+
+			<!-- Debuff lists edit boxes -->
+			<ScrollFrame name="ArenaUnitFramesOptionsDebuffsBlackListScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="125" y="130"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="35" y="-267"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+
+					<EditBox name="ArenaUnitFramesOptionsDebuffsBlackListEditBox" multiLine="true" autoFocus="false">
+						<Size>
+							<AbsDimension x="135" y="130"/>
+						</Size>
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(self:GetParent():GetName().."ScrollBar")
+								self:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (self.max ~= max) ) then
+									self.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								self:ClearFocus();
+							</OnEscapePressed>
+							<OnShow>
+								self:SetText(ArenaUnitFrames_Config.lists.debuffs.black);
+							</OnShow>
+							<OnHide>
+								ArenaUnitFrames_Config.lists.debuffs.black = self:GetText();
+								ArenaUnitFrames.SetBuffFilter();
+							</OnHide>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+
+			<Frame name="ArenaUnitFramesOptionsDebuffsBlackListEditBoxBackground" inherits="ArenaUnitFramesOptionsListEditBoxBackgroundTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsDebuffsBlackListScrollFrame">
+						<Offset>
+							<AbsDimension x="-5" y="5"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsDebuffsBlackListScrollFrame">
+						<Offset>
+							<AbsDimension x="25" y="-4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Button name="ArenaUnitFramesOptionsDebuffsBlackListEditBoxTextButton">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsDebuffsBlackListScrollFrame"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsDebuffsBlackListScrollFrame"/>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFramesOptionsDebuffsBlackListEditBox:SetFocus();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_BLACKLIST_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<ScrollFrame name="ArenaUnitFramesOptionsDebuffsWhiteListScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="125" y="130"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="215" y="-267"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<ScrollChild>
+
+					<EditBox name="ArenaUnitFramesOptionsDebuffsWhiteListEditBox" multiLine="true" autoFocus="false">
+						<Size>
+							<AbsDimension x="135" y="130"/>
+						</Size>
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(self:GetParent():GetName().."ScrollBar")
+								self:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (self.max ~= max) ) then
+									self.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								self:ClearFocus();
+							</OnEscapePressed>
+							<OnShow>
+								self:SetText(ArenaUnitFrames_Config.lists.debuffs.white);
+							</OnShow>
+							<OnHide>
+								ArenaUnitFrames_Config.lists.debuffs.white = self:GetText();
+								ArenaUnitFrames.SetBuffFilter();
+							</OnHide>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+
+			<Frame name="ArenaUnitFramesOptionsDebuffsWhiteListEditBoxBackground" inherits="ArenaUnitFramesOptionsListEditBoxBackgroundTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsDebuffsWhiteListScrollFrame">
+						<Offset>
+							<AbsDimension x="-5" y="5"/>
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsDebuffsWhiteListScrollFrame">
+						<Offset>
+							<AbsDimension x="25" y="-4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Button name="ArenaUnitFramesOptionsDebuffsWhiteListEditBoxTextButton">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramesOptionsDebuffsWhiteListScrollFrame"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="ArenaUnitFramesOptionsDebuffsWhiteListScrollFrame"/>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						ArenaUnitFramesOptionsDebuffsWhiteListEditBox:SetFocus();
+					</OnClick>
+					<OnEnter>
+						GameTooltip:SetOwner(self, "ANCHOR_TOPRIGHT");
+						GameTooltip:SetText(ARENA_UNIT_FRAMES_WHITELIST_TOOLTIP, nil, nil, nil, nil, 1);
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				ArenaUnitFrames.Options.BuffsPanel_OnLoad(self);
+			</OnLoad>
+			<OnShow>
+				ArenaUnitFrames.Options.BuffsPanel_OnShow(self);
+			</OnShow>
+		</Scripts>
+	</Frame>
+
+</Ui>

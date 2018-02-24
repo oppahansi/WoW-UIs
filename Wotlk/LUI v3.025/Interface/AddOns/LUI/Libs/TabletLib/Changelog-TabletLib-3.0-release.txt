@@ -1,0 +1,1360 @@
+------------------------------------------------------------------------
+r219 | nevcairiel | 2009-01-27 12:39:20 +0000 (Tue, 27 Jan 2009) | 1 line
+Changed paths:
+   A /tags/3.0-release (from /trunk:218)
+
+Tagging as 3.0-release
+------------------------------------------------------------------------
+r218 | nevcairiel | 2009-01-27 12:38:57 +0000 (Tue, 27 Jan 2009) | 1 line
+Changed paths:
+   M /trunk/TabletLib.toc
+
+TabletLib: .toc update
+------------------------------------------------------------------------
+r217 | adirelle | 2008-10-22 18:55:56 +0000 (Wed, 22 Oct 2008) | 1 line
+Changed paths:
+   M /trunk
+
+Fixed wrong Dewdrop-2.0 URL in svn:externals.
+------------------------------------------------------------------------
+r216 | nevcairiel | 2008-10-09 21:54:46 +0000 (Thu, 09 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/Tablet-2.0/Tablet-2.0.lua
+
+WoWAce Post-Processing: Virtually inflate Library Revision numbers for proper upgrade path
+------------------------------------------------------------------------
+r215 | nevcairiel | 2008-10-02 13:46:10 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Fix .pkgmeta
+------------------------------------------------------------------------
+r214 | root | 2008-09-30 23:05:37 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r212 | root | 2008-09-30 22:35:23 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/TabletLib
+   A /trunk (from /tmp/trunk/TabletLib:211)
+
+Importing oldrepo data under /trunk
+------------------------------------------------------------------------
+r211 | StingerSoft | 2008-07-18 13:24:14 +0000 (Fri, 18 Jul 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib: added ruRU translation
+------------------------------------------------------------------------
+r210 | rabbit | 2008-03-26 11:55:28 +0000 (Wed, 26 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.Some bumps.
+------------------------------------------------------------------------
+r209 | rabbit | 2008-03-10 12:07:43 +0000 (Mon, 10 Mar 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Small bugfix.
+------------------------------------------------------------------------
+r208 | rabbit | 2008-02-04 13:09:30 +0000 (Mon, 04 Feb 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Blank lines added by Tablet-2.0 at the end of categories no longer inherit properties from the category.
+------------------------------------------------------------------------
+r207 | arrowmaster | 2007-11-21 00:07:18 +0000 (Wed, 21 Nov 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: dont set global _
+------------------------------------------------------------------------
+r206 | kemayo | 2007-11-17 03:54:02 +0000 (Sat, 17 Nov 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib: Fix using alt to interact with locked tablets.  (MODIFIER_STATE_CHANGED args changed way back in 2.2 to LALT/RALT.)
+------------------------------------------------------------------------
+r205 | funkydude | 2007-11-13 17:19:46 +0000 (Tue, 13 Nov 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.trunk: Bump toc for various addons and libraries working on the PTR
+------------------------------------------------------------------------
+r204 | funkydude | 2007-09-25 16:20:41 +0000 (Tue, 25 Sep 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.trunk: various toc updates of ptr working addons
+------------------------------------------------------------------------
+r203 | ckknight | 2007-09-25 01:45:12 +0000 (Tue, 25 Sep 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - bugfix
+------------------------------------------------------------------------
+r202 | ckknight | 2007-07-22 00:28:21 +0000 (Sun, 22 Jul 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - possible nil fix
+------------------------------------------------------------------------
+r201 | rabbit | 2007-06-27 12:12:09 +0000 (Wed, 27 Jun 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Silence an error.
+------------------------------------------------------------------------
+r200 | ckknight | 2007-06-24 05:03:16 +0000 (Sun, 24 Jun 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fix potential issue
+------------------------------------------------------------------------
+r199 | funkydude | 2007-06-22 02:11:51 +0000 (Fri, 22 Jun 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+   A /tmp/trunk/TabletLib/embeds.xml
+
+TabletLib: use embeds.xml
+------------------------------------------------------------------------
+r198 | ckknight | 2007-06-19 07:57:51 +0000 (Tue, 19 Jun 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - before positioning, clamp and unclamp to screen.
+------------------------------------------------------------------------
+r197 | ckknight | 2007-06-19 03:35:39 +0000 (Tue, 19 Jun 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - due to a trick in lua, a table's memory is only refreshed when something is added to it, so that's done now in del(). Causes the memory values to look much lower ;-)
+------------------------------------------------------------------------
+r196 | ckknight | 2007-06-19 03:32:12 +0000 (Tue, 19 Jun 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - wrap all functions properly for debug mode.
+- small optimization
+------------------------------------------------------------------------
+r195 | hyperactiveChipmunk | 2007-06-18 00:34:54 +0000 (Mon, 18 Jun 2007) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib:
+- hack from forums for nonresponsive Tablet buttons.  Dunno if it works, but it doesn't seem to harm anything and this is the best way to find out >8)
+
+------------------------------------------------------------------------
+r194 | ckknight | 2007-05-23 05:02:56 +0000 (Wed, 23 May 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - remove WoW 2.0 compat
+------------------------------------------------------------------------
+r193 | funkydude | 2007-05-22 02:54:14 +0000 (Tue, 22 May 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib: toc > 20100
+------------------------------------------------------------------------
+r192 | helium | 2007-04-21 17:20:02 +0000 (Sat, 21 Apr 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib: updated zhTW locale
+------------------------------------------------------------------------
+r191 | ckknight | 2007-04-13 07:56:45 +0000 (Fri, 13 Apr 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - WoW2.1: GetFullScreenFrame() => GetUIPanel("fullscreen")
+------------------------------------------------------------------------
+r190 | ckknight | 2007-04-07 00:53:20 +0000 (Sat, 07 Apr 2007) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.Updated all libraries in !!!StandaloneLibraries to start their title with "Lib:" This should make dealing with Blizzard's addon enabler thingy much easier. At least for me.
+Hopefully nothing breaks. *thumbs up*
+
+------------------------------------------------------------------------
+r189 | ckknight | 2007-03-30 01:33:16 +0000 (Fri, 30 Mar 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - can now take AceOptions data tables in the menu argument
+------------------------------------------------------------------------
+r188 | ckknight | 2007-03-21 21:27:48 +0000 (Wed, 21 Mar 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fix potential nil bug
+------------------------------------------------------------------------
+r187 | ckknight | 2007-03-20 22:49:41 +0000 (Tue, 20 Mar 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - make sure that getTestWidth works
+------------------------------------------------------------------------
+r186 | ckknight | 2007-03-11 09:56:09 +0000 (Sun, 11 Mar 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - nil out func, onEnterFunc, onLeaveFunc as necessary
+------------------------------------------------------------------------
+r185 | ckknight | 2007-03-09 01:57:01 +0000 (Fri, 09 Mar 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fixed :assert
+
+------------------------------------------------------------------------
+r184 | ckknight | 2007-02-19 11:09:11 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - should fix OnLeave/OnEnter
+------------------------------------------------------------------------
+r183 | ckknight | 2007-02-19 11:01:35 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added onEnterFunc, onEnterArgX, onLeaveFunc, and onLeaveArgX
+------------------------------------------------------------------------
+r182 | ckknight | 2007-02-19 09:49:26 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - another possible efficiency boost
+------------------------------------------------------------------------
+r181 | ckknight | 2007-02-19 09:44:39 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now recycles fontstrings, so that no more than needed is created. Previously, after creating a large grid, many columns could go unused.
+------------------------------------------------------------------------
+r180 | ckknight | 2007-02-19 09:18:51 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now supports a completely arbitrary amount of columns
+------------------------------------------------------------------------
+r179 | ckknight | 2007-02-19 07:54:10 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - renamed left to col1, right to col2, third to col3, etc.
+------------------------------------------------------------------------
+r178 | ckknight | 2007-02-19 07:46:05 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - jostle around some stuff, args now stored as arg1 instead of 1
+------------------------------------------------------------------------
+r177 | ckknight | 2007-02-19 07:26:16 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fix a typo - it seriously had to be in here for many months.
+------------------------------------------------------------------------
+r176 | ckknight | 2007-02-19 07:18:26 +0000 (Mon, 19 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now creates fontstrings dynamically as needed.
+------------------------------------------------------------------------
+r175 | ckknight | 2007-02-19 07:02:32 +0000 (Mon, 19 Feb 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - reorganized fontstring structure to be tablet.buttons[i].left instead of tablet.lefts[i], so the button contains its children.
+- fixed issue where first line was outlined.
+------------------------------------------------------------------------
+r174 | ckknight | 2007-02-04 01:46:18 +0000 (Sun, 04 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - reset scroll if it's past maximum
+------------------------------------------------------------------------
+r173 | ckknight | 2007-02-04 01:20:44 +0000 (Sun, 04 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fix issue with icons not showing up properly
+------------------------------------------------------------------------
+r172 | ckknight | 2007-02-03 19:24:19 +0000 (Sat, 03 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added AddLine arguments checkCoordLeft, checkCoordRight, checkCoordTop, checkCoordBottom, checkColorR, checkColorG, and checkColorB
+------------------------------------------------------------------------
+r171 | ckknight | 2007-02-02 00:30:08 +0000 (Fri, 02 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - transparency of tablet changes transparency of slider bar.
+------------------------------------------------------------------------
+r170 | ckknight | 2007-02-02 00:24:24 +0000 (Fri, 02 Feb 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added a slider to scrollable tablets.
+fixed issue with 2-columned spacing
+------------------------------------------------------------------------
+r169 | ckknight | 2007-02-01 23:36:55 +0000 (Thu, 01 Feb 2007) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now uses a proper scrollframe for scrolling.
+Seems to work, but please test.
+Only issue I can see currently is that there is no indicator whether you actually can scroll up/down or not.
+------------------------------------------------------------------------
+r168 | ckknight | 2007-02-01 00:39:54 +0000 (Thu, 01 Feb 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - buttons now can be dragged and it'll be as if the whole tablet is being dragged. (like how it used to function)
+------------------------------------------------------------------------
+r167 | ckknight | 2007-01-31 22:17:04 +0000 (Wed, 31 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - better handling of GetMaxLinesPerScreen. Still not perfect
+------------------------------------------------------------------------
+r166 | ckknight | 2007-01-31 21:45:05 +0000 (Wed, 31 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - don't show lock option if positioned
+------------------------------------------------------------------------
+r165 | ckknight | 2007-01-31 21:10:37 +0000 (Wed, 31 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - should fix issues with people getting black areas.
+------------------------------------------------------------------------
+r164 | ckknight | 2007-01-27 21:10:12 +0000 (Sat, 27 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added a local, removed an unneeded statement
+------------------------------------------------------------------------
+r163 | ckknight | 2007-01-27 07:34:10 +0000 (Sat, 27 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added a minWidth thing to the Tablet registration arguments
+------------------------------------------------------------------------
+r162 | kergoth | 2007-01-23 23:43:23 +0000 (Tue, 23 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/LICENSE.txt
+
+.Line ending fixups part 2: trunk/ (script ended prematurely).
+------------------------------------------------------------------------
+r161 | ckknight | 2007-01-22 12:30:20 +0000 (Mon, 22 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - properly handle migrating .runChildren
+------------------------------------------------------------------------
+r160 | ckknight | 2007-01-22 09:09:51 +0000 (Mon, 22 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - typo
+------------------------------------------------------------------------
+r159 | ckknight | 2007-01-22 07:01:23 +0000 (Mon, 22 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - hopefully fix upgrading errors
+------------------------------------------------------------------------
+r158 | ckknight | 2007-01-22 02:12:05 +0000 (Mon, 22 Jan 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - optimization.
+Now works properly when UIParent is hidden (e.g. if you have the WorldMapFrame open)
+------------------------------------------------------------------------
+r157 | ckknight | 2007-01-22 00:00:50 +0000 (Mon, 22 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - if title's not provided, don't show a title.
+------------------------------------------------------------------------
+r156 | funkydude | 2007-01-10 08:27:03 +0000 (Wed, 10 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib: toc 20003
+------------------------------------------------------------------------
+r155 | funkydude | 2007-01-05 18:29:48 +0000 (Fri, 05 Jan 2007) | 1 line
+Changed paths:
+   D /tmp/trunk/TabletLib/Lib
+
+TabletLib: removed 1.0(tagged)
+------------------------------------------------------------------------
+r154 | elkano | 2007-01-04 21:24:09 +0000 (Thu, 04 Jan 2007) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0
+- fixed icons not scaling
+------------------------------------------------------------------------
+r153 | ckknight | 2007-01-03 13:37:25 +0000 (Wed, 03 Jan 2007) | 1 line
+Changed paths:
+   A /tmp/trunk/TabletLib/LICENSE.txt
+
+.ckknight's assorted libraries/addons - added LICENSE.txt files to folders that state the license used.
+------------------------------------------------------------------------
+r152 | ckknight | 2007-01-03 12:51:52 +0000 (Wed, 03 Jan 2007) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.Tablet-2.0 - changing license to LGPL v2.1. If you have code within this library that you do not want to be under this license, contact me to work out a solution.
+------------------------------------------------------------------------
+r151 | ckknight | 2006-12-30 13:53:52 +0000 (Sat, 30 Dec 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - made OnLeave much simpler, no weird hacks from API users required anymore.
+Bugfixing.
+Hooking now properly passes all values.
+------------------------------------------------------------------------
+r150 | ckknight | 2006-12-17 06:24:07 +0000 (Sun, 17 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - should fix issue with detach and reattach not showing tablet
+------------------------------------------------------------------------
+r149 | ckknight | 2006-12-16 04:45:37 +0000 (Sat, 16 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - should fix issue with "Title" and hideWhenEmpty
+------------------------------------------------------------------------
+r148 | ckknight | 2006-12-15 05:23:14 +0000 (Fri, 15 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now supports a bajillion args instead of just 3.
+------------------------------------------------------------------------
+r147 | shiftos | 2006-12-14 15:00:22 +0000 (Thu, 14 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib- added a note in spanish to the .toc (shiftos)
+------------------------------------------------------------------------
+r146 | shiftos | 2006-12-14 14:59:40 +0000 (Thu, 14 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib- updated spanish translation (shiftos)
+------------------------------------------------------------------------
+r145 | ckknight | 2006-12-14 08:45:37 +0000 (Thu, 14 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - added a frameLevel argument to the info
+------------------------------------------------------------------------
+r144 | ckknight | 2006-12-13 01:50:07 +0000 (Wed, 13 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fixed indentation bug.
+------------------------------------------------------------------------
+r143 | rabbit | 2006-12-12 20:46:53 +0000 (Tue, 12 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Spanish (esES) translation, thanks to shiftos.
+------------------------------------------------------------------------
+r142 | ckknight | 2006-12-12 18:21:09 +0000 (Tue, 12 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fix bug causing column 5 to be the same width as column 2
+------------------------------------------------------------------------
+r141 | ckknight | 2006-12-12 14:51:29 +0000 (Tue, 12 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - small bugfix
+------------------------------------------------------------------------
+r140 | ckknight | 2006-12-12 14:35:57 +0000 (Tue, 12 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - better handling of scrolling when dealing with set-position tablets
+------------------------------------------------------------------------
+r139 | ckknight | 2006-12-12 12:11:12 +0000 (Tue, 12 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fixed issues with scaling and tablet width.
+------------------------------------------------------------------------
+r138 | ckknight | 2006-12-08 11:42:51 +0000 (Fri, 08 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - bugfix
+------------------------------------------------------------------------
+r137 | rabbit | 2006-12-07 17:08:38 +0000 (Thu, 07 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Really make Dewdrop optional, like it says it should be.
+------------------------------------------------------------------------
+r136 | rabbit | 2006-12-07 17:01:39 +0000 (Thu, 07 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Update the children when we scale, so headers and hints are positioned correctly.
+------------------------------------------------------------------------
+r135 | rabbit | 2006-12-05 21:38:44 +0000 (Tue, 05 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Fix lock bug.
+------------------------------------------------------------------------
+r134 | ckknight | 2006-12-04 04:05:33 +0000 (Mon, 04 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+.Tablet-2.0 - removed SEKeys dependency. Now uses MODIFIER_STATE_CHANGED
+------------------------------------------------------------------------
+r133 | ckknight | 2006-12-03 16:58:08 +0000 (Sun, 03 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - remove lua51 checks. Changed k1-k20 into ...
+------------------------------------------------------------------------
+r132 | ckknight | 2006-12-01 00:08:53 +0000 (Fri, 01 Dec 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now uses MODIFIER_STATE_CHANGED
+------------------------------------------------------------------------
+r131 | ckknight | 2006-11-29 14:16:30 +0000 (Wed, 29 Nov 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib - updated TOC to 20000. (Still works in WoW 1.12)
+------------------------------------------------------------------------
+r130 | ckknight | 2006-11-24 04:45:45 +0000 (Fri, 24 Nov 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - now checks lua51 compat with loadstring instead of with GetBuildInfo
+------------------------------------------------------------------------
+r129 | ckknight | 2006-11-21 10:43:29 +0000 (Tue, 21 Nov 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0 - fixed issue with relativePoint
+:Open(parent) => :Open(parent, otherParent)
+added :SetTitleColor(r, g, b)
+------------------------------------------------------------------------
+r126 | rabbit | 2006-11-08 03:33:24 +0000 (Wed, 08 Nov 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+.Tablet-2.0: Fix saved font size not being restored properly if the default was not 1 (100%) and you set it to 1 manually.
+------------------------------------------------------------------------
+r125 | elkano | 2006-11-06 16:56:58 +0000 (Mon, 06 Nov 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib
+- hopefully fixes UTF-8 again...
+------------------------------------------------------------------------
+r124 | elkano | 2006-11-06 16:45:45 +0000 (Mon, 06 Nov 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib
+- readded zhTW (I shouldn't save after update...)
+------------------------------------------------------------------------
+r123 | elkano | 2006-11-06 16:40:42 +0000 (Mon, 06 Nov 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib
+- added some fake width to the width calculation to fix wrapping
+------------------------------------------------------------------------
+r122 | ckknight | 2006-10-23 01:25:39 +0000 (Mon, 23 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+.Tablet-1.0 - deprecating for WoW 2.0
+------------------------------------------------------------------------
+r121 | xinsonic | 2006-10-21 12:25:11 +0000 (Sat, 21 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib - Added zhTW to TabletLib
+------------------------------------------------------------------------
+r120 | ckknight | 2006-10-19 23:24:22 +0000 (Thu, 19 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+TabletLib - should fix calling numbers issue, which is actually a WoW bug.
+------------------------------------------------------------------------
+r119 | mjc | 2006-10-18 16:08:49 +0000 (Wed, 18 Oct 2006) | 4 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TouristLib, CompostLib, Metrognome, SpecialEventsEmbed, SpellCacheLib, AbacusLib, GratuityLib, RosterLib, PaintChipsLib, BabbleLib, CandyBar, ParserLib, JostleLib, DewdropLib, TabletLib, CrayonLib, ItemClassLib, Deformat:
+
+Mass toc update for new "X-AceLibrary" loading system.
+
+------------------------------------------------------------------------
+r118 | rabbit | 2006-10-17 19:16:19 +0000 (Tue, 17 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet-2.0: frFR translation, thanks Jerry!
+------------------------------------------------------------------------
+r117 | hshh | 2006-10-17 08:32:49 +0000 (Tue, 17 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet-2.0: add zhCN locale
+------------------------------------------------------------------------
+r116 | fenlis | 2006-10-16 12:35:36 +0000 (Mon, 16 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet-2.0 : Updated locals koKR
+------------------------------------------------------------------------
+r115 | gamefaq | 2006-10-16 04:55:59 +0000 (Mon, 16 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Updated deDE Translation
+------------------------------------------------------------------------
+r114 | rabbit | 2006-10-16 02:55:04 +0000 (Mon, 16 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet-2.0: Complete deDE translation, thanks Progman!
+------------------------------------------------------------------------
+r113 | rabbit | 2006-10-15 15:59:05 +0000 (Sun, 15 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet-2.0: Translators, rejoice!
+------------------------------------------------------------------------
+r112 | tekkub | 2006-10-12 03:24:28 +0000 (Thu, 12 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib - Now LoD
+------------------------------------------------------------------------
+r111 | caldar | 2006-10-03 00:52:21 +0000 (Tue, 03 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+
+------------------------------------------------------------------------
+r110 | kergoth | 2006-10-02 11:32:24 +0000 (Mon, 02 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+Line ending bits.
+------------------------------------------------------------------------
+r109 | kaelten | 2006-10-01 17:33:44 +0000 (Sun, 01 Oct 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib
+
+Cleanup externals
+------------------------------------------------------------------------
+r108 | nevcairiel | 2006-09-26 19:07:47 +0000 (Tue, 26 Sep 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib
+
+Externals: Last Commit ( R - Z )
+ - I am sure i missed some externals, if you find them fix them, if you complain, go and die
+ - oh yeah, SCT isnt fixed, wouldnt let me.
+------------------------------------------------------------------------
+r107 | ckknight | 2006-09-21 01:06:32 +0000 (Thu, 21 Sep 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - updated table.setn for upcoming lua 5.1
+------------------------------------------------------------------------
+r106 | tekkub | 2006-09-20 20:42:52 +0000 (Wed, 20 Sep 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib
+- TOC Updates
+------------------------------------------------------------------------
+r105 | ckknight | 2006-09-02 01:00:32 +0000 (Sat, 02 Sep 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - changed frame names from TabletLibFrame to Tablet20Frame and TabletLibDetachedFrame .. i to Tablet20DetachedFrame .. i
+------------------------------------------------------------------------
+r104 | ckknight | 2006-08-24 20:14:54 +0000 (Thu, 24 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - changed alt/lock handling
+------------------------------------------------------------------------
+r103 | ckknight | 2006-08-24 01:42:23 +0000 (Thu, 24 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - added 'hideWhenEmpty'
+------------------------------------------------------------------------
+r102 | ckknight | 2006-08-23 22:34:55 +0000 (Wed, 23 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - split showEverythingWhenDetached into showTitleWhenDetached and showHintWhenDetached
+------------------------------------------------------------------------
+r101 | ckknight | 2006-08-23 19:03:24 +0000 (Wed, 23 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - typo
+------------------------------------------------------------------------
+r100 | ckknight | 2006-08-23 18:08:54 +0000 (Wed, 23 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - bugfix
+------------------------------------------------------------------------
+r99 | ckknight | 2006-08-18 01:21:02 +0000 (Fri, 18 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - now works if data or detachedData is not fed in
+------------------------------------------------------------------------
+r98 | ckknight | 2006-08-18 01:16:19 +0000 (Fri, 18 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - fixed scroll down line bug.
+------------------------------------------------------------------------
+r97 | ckknight | 2006-08-18 01:07:31 +0000 (Fri, 18 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - added register argument showEverythingWhenDetached
+------------------------------------------------------------------------
+r96 | ckknight | 2006-08-17 23:47:18 +0000 (Thu, 17 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - possible bugfix
+------------------------------------------------------------------------
+r95 | ckknight | 2006-08-10 08:33:15 +0000 (Thu, 10 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - bugfix
+------------------------------------------------------------------------
+r94 | ckknight | 2006-08-10 08:29:18 +0000 (Thu, 10 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - fixed icky versioning bug
+------------------------------------------------------------------------
+r93 | ckknight | 2006-08-09 23:47:56 +0000 (Wed, 09 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - fixed checkWidth issue for >= 3 columns
+------------------------------------------------------------------------
+r92 | ckknight | 2006-08-09 20:40:00 +0000 (Wed, 09 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - fix for a bug caused by some other douche.
+------------------------------------------------------------------------
+r91 | ckknight | 2006-08-08 08:46:35 +0000 (Tue, 08 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - changed all lib locals to Tablet
+------------------------------------------------------------------------
+r90 | ckknight | 2006-08-08 08:27:16 +0000 (Tue, 08 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - bugfix
+------------------------------------------------------------------------
+r89 | ckknight | 2006-08-08 08:23:28 +0000 (Tue, 08 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - added :UpdateDetachedData(parent, data)
+------------------------------------------------------------------------
+r88 | ckknight | 2006-08-08 07:14:34 +0000 (Tue, 08 Aug 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - Dewdrop-related fixes
+------------------------------------------------------------------------
+r87 | ckknight | 2006-07-31 21:28:21 +0000 (Mon, 31 Jul 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - added checks
+------------------------------------------------------------------------
+r86 | yzerman | 2006-07-24 03:09:06 +0000 (Mon, 24 Jul 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib: Chinese Locals Added
+------------------------------------------------------------------------
+r85 | ckknight | 2006-07-16 00:43:21 +0000 (Sun, 16 Jul 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - Dewdrop fix
+------------------------------------------------------------------------
+r84 | ckknight | 2006-07-15 20:01:13 +0000 (Sat, 15 Jul 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+
+Tablet - assert -> self:assert
+argCheck -> self:argCheck
+------------------------------------------------------------------------
+r83 | ckknight | 2006-07-03 04:31:18 +0000 (Mon, 03 Jul 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+my libs - assorted fixes
+http://www.wowinterface.com/portal.php?id=10&a=my
+
+------------------------------------------------------------------------
+r82 | ckknight | 2006-07-02 23:31:16 +0000 (Sun, 02 Jul 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib
+   D /tmp/trunk/TabletLib/API.html
+   D /tmp/trunk/TabletLib/README.txt
+   A /tmp/trunk/TabletLib/Tablet-2.0
+   A /tmp/trunk/TabletLib/Tablet-2.0/Tablet-2.0.lua
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+Tablet - converted to Ace2
+------------------------------------------------------------------------
+r81 | handdol | 2006-06-28 12:49:01 +0000 (Wed, 28 Jun 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+BigWigs
+ - Korean localization added for TableLib
+------------------------------------------------------------------------
+r80 | ckknight | 2006-06-07 00:22:24 +0000 (Wed, 07 Jun 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - updated argument checking
+------------------------------------------------------------------------
+r79 | ckknight | 2006-05-31 05:58:34 +0000 (Wed, 31 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed line 2306 - attempt to compare nil to number.
+------------------------------------------------------------------------
+r78 | ckknight | 2006-05-29 05:50:44 +0000 (Mon, 29 May 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - now can take arbitrary strings as the parent frame.
+Blizzard icons used as check marks are now clipped at the edges.
+Added dontHook to register arguments.
+------------------------------------------------------------------------
+r77 | ckknight | 2006-05-28 01:03:10 +0000 (Sun, 28 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Fix possible bug
+------------------------------------------------------------------------
+r76 | ckknight | 2006-05-21 18:43:23 +0000 (Sun, 21 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - properly remembers locked state for detached tablets.
+------------------------------------------------------------------------
+r75 | ckknight | 2006-05-21 03:45:32 +0000 (Sun, 21 May 2006) | 3 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - updated to 6 columns.
+Optimizations.
+Fixed issue with subcategories.
+------------------------------------------------------------------------
+r74 | ckknight | 2006-05-20 20:09:23 +0000 (Sat, 20 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - now only unlocks a locked tablet though the alt key if sekeys is present.
+------------------------------------------------------------------------
+r73 | ckknight | 2006-05-16 07:44:33 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TouristLib - better logic for dual-monitors
+------------------------------------------------------------------------
+r72 | ckknight | 2006-05-16 07:06:43 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added IsRegistered(parent)
+------------------------------------------------------------------------
+r71 | ckknight | 2006-05-16 06:59:49 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added dual-monitor support.
+------------------------------------------------------------------------
+r70 | ckknight | 2006-05-16 05:37:00 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - opens tooltip on register if mouse is over frame.
+------------------------------------------------------------------------
+r69 | ckknight | 2006-05-16 05:28:18 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed typo.
+------------------------------------------------------------------------
+r68 | ckknight | 2006-05-16 05:27:00 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added more data checks.
+------------------------------------------------------------------------
+r67 | ckknight | 2006-05-16 05:23:39 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added more data checks.
+------------------------------------------------------------------------
+r66 | ckknight | 2006-05-16 05:14:56 +0000 (Tue, 16 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added a check for detachedData.
+------------------------------------------------------------------------
+r65 | ckknight | 2006-05-15 21:27:16 +0000 (Mon, 15 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - made blank lines after category headers more consistent.
+------------------------------------------------------------------------
+r64 | ckknight | 2006-05-11 04:44:06 +0000 (Thu, 11 May 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed width issues if a checkmark is present.
+clicks now register hardware events.
+------------------------------------------------------------------------
+r63 | ckknight | 2006-05-09 22:54:31 +0000 (Tue, 09 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed detach settings issues.
+------------------------------------------------------------------------
+r62 | ckknight | 2006-05-09 22:03:05 +0000 (Tue, 09 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Register can now take another parent with which to get information from.
+------------------------------------------------------------------------
+r61 | ckknight | 2006-05-08 08:21:34 +0000 (Mon, 08 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed width issue when no lines are present.
+------------------------------------------------------------------------
+r60 | ckknight | 2006-05-08 00:49:25 +0000 (Mon, 08 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed wrapping width.
+------------------------------------------------------------------------
+r59 | ckknight | 2006-05-03 22:12:02 +0000 (Wed, 03 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed category coloring with multiple columns.
+------------------------------------------------------------------------
+r58 | ckknight | 2006-05-02 01:06:40 +0000 (Tue, 02 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Locking/Unlocking now refreshes clickability of buttons.
+------------------------------------------------------------------------
+r57 | ckknight | 2006-05-02 00:14:24 +0000 (Tue, 02 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added highlight and text moving on mouse down to clickable lines.
+------------------------------------------------------------------------
+r56 | ckknight | 2006-05-01 23:39:23 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed some scaling issues. changed "Close" to "Close menu"
+------------------------------------------------------------------------
+r55 | ckknight | 2006-05-01 22:55:18 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - took out an errant print line.
+------------------------------------------------------------------------
+r54 | ckknight | 2006-05-01 22:01:47 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed clickable buttons.
+------------------------------------------------------------------------
+r53 | ckknight | 2006-05-01 11:05:54 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - no longer shows Detach when cantAttach is present.
+------------------------------------------------------------------------
+r52 | ckknight | 2006-05-01 11:03:39 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed cantAttach
+------------------------------------------------------------------------
+r51 | ckknight | 2006-05-01 09:29:46 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added cantAttach
+------------------------------------------------------------------------
+r50 | ckknight | 2006-05-01 07:53:11 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - optimizations, now have to click buttons within 0.5 seconds for it to work.
+------------------------------------------------------------------------
+r49 | ckknight | 2006-05-01 03:02:05 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed possible nil bug.
+------------------------------------------------------------------------
+r48 | ckknight | 2006-05-01 00:38:00 +0000 (Mon, 01 May 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed title on detached tablets.
+------------------------------------------------------------------------
+r47 | ckknight | 2006-04-30 23:46:51 +0000 (Sun, 30 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed a bug making blank text do something.
+------------------------------------------------------------------------
+r46 | ckknight | 2006-04-30 23:43:20 +0000 (Sun, 30 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added wrapN. Only works when specified to 1 column out of the 4.
+------------------------------------------------------------------------
+r45 | ckknight | 2006-04-30 23:04:20 +0000 (Sun, 30 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/README.txt
+   M /tmp/trunk/TabletLib/TabletLib.toc
+
+Changed author from Boss to ckknight.
+------------------------------------------------------------------------
+r44 | ckknight | 2006-04-30 09:31:17 +0000 (Sun, 30 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed a color inheritance issue.
+------------------------------------------------------------------------
+r43 | ckknight | 2006-04-30 08:50:10 +0000 (Sun, 30 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed blank line blow title with hidden categories.
+------------------------------------------------------------------------
+r42 | ckknight | 2006-04-30 08:21:20 +0000 (Sun, 30 Apr 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added showWithoutChildren.
+Categories now hide by default if they have no children in them.
+------------------------------------------------------------------------
+r41 | ckknight | 2006-04-29 12:08:24 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added justify<N>
+------------------------------------------------------------------------
+r40 | ckknight | 2006-04-29 11:44:46 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Justify now works for 2-columned categories if one column is showing.
+------------------------------------------------------------------------
+r39 | ckknight | 2006-04-29 11:07:18 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - removed debug line
+------------------------------------------------------------------------
+r38 | ckknight | 2006-04-29 11:03:02 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed width checking for subcategories.
+------------------------------------------------------------------------
+r37 | ckknight | 2006-04-29 10:16:21 +0000 (Sat, 29 Apr 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed category header inheritance issues.
+Added noInherit.
+------------------------------------------------------------------------
+r36 | ckknight | 2006-04-29 09:12:19 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed wrapping.
+------------------------------------------------------------------------
+r35 | ckknight | 2006-04-29 08:46:41 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed squishing typo.
+------------------------------------------------------------------------
+r34 | ckknight | 2006-04-29 07:29:10 +0000 (Sat, 29 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Major overhaul of code, optimizations.
+------------------------------------------------------------------------
+r33 | ckknight | 2006-04-28 20:50:40 +0000 (Fri, 28 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - removed children argument from category (will cause breakage)
+------------------------------------------------------------------------
+r32 | ckknight | 2006-04-28 08:29:40 +0000 (Fri, 28 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added optimizations, debugging code.
+------------------------------------------------------------------------
+r31 | ckknight | 2006-04-27 14:12:16 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added isRadio
+------------------------------------------------------------------------
+r30 | ckknight | 2006-04-27 13:38:41 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added indentation
+------------------------------------------------------------------------
+r29 | ckknight | 2006-04-27 11:49:25 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - AddLine can now accept text[RGB]<N>
+------------------------------------------------------------------------
+r28 | ckknight | 2006-04-27 11:36:31 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed assertions.
+------------------------------------------------------------------------
+r27 | ckknight | 2006-04-27 06:30:49 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - clicking a parent frame now hides the tooltip.
+------------------------------------------------------------------------
+r26 | ckknight | 2006-04-27 06:05:25 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed grid layout bug.
+------------------------------------------------------------------------
+r25 | ckknight | 2006-04-27 05:58:55 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed wrapping bug.
+------------------------------------------------------------------------
+r24 | ckknight | 2006-04-27 02:50:04 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - refreshing on click now works properly.
+------------------------------------------------------------------------
+r23 | ckknight | 2006-04-27 01:28:06 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - clickable buttons now work.
+------------------------------------------------------------------------
+r22 | ckknight | 2006-04-27 01:17:28 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed a bug that prevented wrapping.
+------------------------------------------------------------------------
+r21 | ckknight | 2006-04-27 01:12:03 +0000 (Thu, 27 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed a bug causing data vs. detachedData pollution.
+------------------------------------------------------------------------
+r20 | ckknight | 2006-04-26 22:00:58 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed scrolling to be correct when attached.
+------------------------------------------------------------------------
+r19 | ckknight | 2006-04-26 21:59:05 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added isTitle
+------------------------------------------------------------------------
+r18 | ckknight | 2006-04-26 14:35:03 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Raised framelevel
+------------------------------------------------------------------------
+r17 | ckknight | 2006-04-26 12:33:12 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed data saving of detached tablets.
+------------------------------------------------------------------------
+r16 | ckknight | 2006-04-26 11:34:24 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - hooks the OnMouseWheel parent script, allowing for scrolling.
+------------------------------------------------------------------------
+r15 | ckknight | 2006-04-26 11:05:35 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - removed debug line.
+------------------------------------------------------------------------
+r14 | ckknight | 2006-04-26 11:04:13 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed anchoring bug.
+------------------------------------------------------------------------
+r13 | ckknight | 2006-04-26 08:49:19 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed grid bug.
+------------------------------------------------------------------------
+r12 | ckknight | 2006-04-26 07:58:57 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed grid layout
+------------------------------------------------------------------------
+r11 | ckknight | 2006-04-26 07:07:19 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - CANCEL -> CLOSE
+------------------------------------------------------------------------
+r10 | ckknight | 2006-04-26 03:05:29 +0000 (Wed, 26 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - Setting functions can now take a raw table instead of just a registered frame.
+------------------------------------------------------------------------
+r9 | ckknight | 2006-04-26 02:30:13 +0000 (Wed, 26 Apr 2006) | 5 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - fixed translations.
+Fixed category blank line.
+Fixed detachedData position bug.
+Fixed detached nil bug.
+Fixed detached menu bug.
+------------------------------------------------------------------------
+r8 | ckknight | 2006-04-26 01:26:23 +0000 (Wed, 26 Apr 2006) | 2 lines
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - optimizations.
+Added IsLocked(), ToggleLocked(), IsAttached(), and Refresh()
+------------------------------------------------------------------------
+r7 | ckknight | 2006-04-25 21:40:03 +0000 (Tue, 25 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - updaed for Dewdrop API change.
+------------------------------------------------------------------------
+r6 | ckknight | 2006-04-25 21:18:45 +0000 (Tue, 25 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+
+TabletLib - fixed API.html typos
+------------------------------------------------------------------------
+r5 | ckknight | 2006-04-25 21:10:56 +0000 (Tue, 25 Apr 2006) | 1 line
+Changed paths:
+   M /tmp/trunk/TabletLib/API.html
+
+TabletLib - fixed API.html typos.
+------------------------------------------------------------------------
+r4 | ckknight | 2006-04-25 19:47:33 +0000 (Tue, 25 Apr 2006) | 1 line
+Changed paths:
+   A /tmp/trunk/TabletLib/API.html
+   M /tmp/trunk/TabletLib/Lib/TabletLib.lua
+
+TabletLib - added API documentation.
+------------------------------------------------------------------------
+r3 | ckknight | 2006-04-25 10:12:59 +0000 (Tue, 25 Apr 2006) | 1 line
+Changed paths:
+   A /tmp/trunk/TabletLib
+   A /tmp/trunk/TabletLib/Lib
+   A /tmp/trunk/TabletLib/Lib/TabletLib.lua
+   A /tmp/trunk/TabletLib/README.txt
+   A /tmp/trunk/TabletLib/TabletLib.toc
+
+TabletLib - Initial commit
+------------------------------------------------------------------------

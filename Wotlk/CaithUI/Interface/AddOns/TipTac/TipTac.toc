@@ -1,0 +1,7 @@
+## Interface: 30100
+## Version: 09.05.26
+## Title: TipTac
+## Author: Aezay (Earthen Ring EU)
+## Notes: Highly Customizable Tooltip Enhancement Addon
+## SavedVariables: TipTac_Config
+core.lua

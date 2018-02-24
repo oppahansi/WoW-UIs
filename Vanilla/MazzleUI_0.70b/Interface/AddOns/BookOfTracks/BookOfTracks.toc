@@ -1,0 +1,5 @@
+## Interface: 11100
+## Title: BookOfTracks v1.11a
+## Notes: Ease access to tracking skills
+## SavedVariables: BookOfTracks_Data
+BookOfTracks.xml

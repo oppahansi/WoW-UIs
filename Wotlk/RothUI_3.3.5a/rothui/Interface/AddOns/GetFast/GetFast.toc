@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Mail
+## Notes: Get all mail faster!
+## Author: Lanzelot
+## Version: 0.1
+
+GetFast.lua

@@ -1,0 +1,145 @@
+------------------------------------------------------------------------
+r36 | stormfx | 2008-10-14 00:18:57 +0000 (Tue, 14 Oct 2008) | 1 line
+Changed paths:
+   A /tags/3.0.2 (from /trunk:35)
+
+Tagging as 3.0.2.
+------------------------------------------------------------------------
+r35 | stormfx | 2008-10-14 00:16:03 +0000 (Tue, 14 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/ButtonFacade_Caith.toc
+
+ButtonFacade_Caith:
+- ToC update.
+------------------------------------------------------------------------
+r34 | stormfx | 2008-10-02 09:36:03 +0000 (Thu, 02 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ButtonFacade_Caith.toc
+   M /trunk/ReadMe.txt
+   M /trunk/Skins.lua
+   M /trunk/Textures/Backdrop.tga
+   M /trunk/Textures/Border.tga
+   M /trunk/Textures/Gloss.tga
+   M /trunk/Textures/Highlight.tga
+   M /trunk/Textures/Normal.tga
+   M /trunk/Textures/Overlay.tga
+
+ButtonFacade_Caith:
+- Files update.
+------------------------------------------------------------------------
+r33 | root | 2008-09-29 21:57:54 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r31 | root | 2008-09-29 20:57:40 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/ButtonFacade_Caith
+   A /trunk (from /tmp/trunk/ButtonFacade_Caith:30)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r28 | stormfx | 2008-05-18 18:08:28 +0000 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+
+ButtonFacade_Caith:
+ - Don't trim the icon on a square skin.
+------------------------------------------------------------------------
+r27 | stormfx | 2008-05-14 00:59:25 +0000 (Wed, 14 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Gloss.tga
+
+ButtonFacade_Caith:
+ - Brighter Gloss.
+------------------------------------------------------------------------
+r26 | stormfx | 2008-05-11 19:53:51 +0000 (Sun, 11 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+
+ButtonFacade_Caith:
+ - Minor tweaks.
+------------------------------------------------------------------------
+r25 | stormfx | 2008-05-11 05:13:34 +0000 (Sun, 11 May 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+
+ButtonFacade_Caith:
+ - Layer Order
+ - Re-version.
+------------------------------------------------------------------------
+r24 | stormfx | 2008-05-09 17:43:56 +0000 (Fri, 09 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Backdrop.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Border.tga
+   D /tmp/trunk/ButtonFacade_Caith/Textures/Checked.tga
+   D /tmp/trunk/ButtonFacade_Caith/Textures/Equip.tga
+   D /tmp/trunk/ButtonFacade_Caith/Textures/Flash.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Overlay.tga
+   D /tmp/trunk/ButtonFacade_Caith/Textures/Pushed.tga
+
+ButtonFacade_Caith:
+ - Final phase of color selection support.
+------------------------------------------------------------------------
+r23 | stormfx | 2008-05-07 21:09:16 +0000 (Wed, 07 May 2008) | 4 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Checked.tga
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Equip.tga
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Gloss.tga
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Highlight.tga
+
+ButtonFacade_Caith:
+ - Small size adjustment for clarity.
+ - Replaced the Gloss due to a complaint.
+ - Fine-tuned state textures.
+------------------------------------------------------------------------
+r22 | stormfx | 2008-05-07 05:04:12 +0000 (Wed, 07 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+   M /tmp/trunk/ButtonFacade_Caith/Textures/Normal.tga
+
+ButtonFacade_Caith:
+ - Prep for color selection (Phase 1).
+------------------------------------------------------------------------
+r21 | stormfx | 2008-05-06 20:18:49 +0000 (Tue, 06 May 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   M /tmp/trunk/ButtonFacade_Caith/Skins.lua
+
+ButtonFacade_Caith:
+ - Version bump.
+ - Add WoWI ID.
+------------------------------------------------------------------------
+r20 | stormfx | 2008-05-06 20:03:09 +0000 (Tue, 06 May 2008) | 2 lines
+Changed paths:
+   A /tmp/trunk/ButtonFacade_Caith/ButtonFacade_Caith.toc
+   A /tmp/trunk/ButtonFacade_Caith/ReadMe.txt
+   A /tmp/trunk/ButtonFacade_Caith/Skins.lua
+
+ButtonFacade_Caith:
+ - Files update.
+------------------------------------------------------------------------
+r19 | stormfx | 2008-05-06 20:01:23 +0000 (Tue, 06 May 2008) | 2 lines
+Changed paths:
+   A /tmp/trunk/ButtonFacade_Caith
+   A /tmp/trunk/ButtonFacade_Caith/Textures
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Backdrop.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Checked.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Equip.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Flash.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Gloss.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Highlight.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Normal.tga
+   A /tmp/trunk/ButtonFacade_Caith/Textures/Pushed.tga
+
+ButtonFacade_Caith:
+- Initial commit.
+------------------------------------------------------------------------

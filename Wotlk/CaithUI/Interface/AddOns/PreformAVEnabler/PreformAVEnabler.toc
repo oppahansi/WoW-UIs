@@ -1,0 +1,9 @@
+## Interface: 30200
+## Title: Preform AV Enabler
+## Notes: Synchronized solo queuing of battlegrounds
+## Notes-deDE: Automatisiert synchronisiertes Betreten des Alteractals
+## Author: Torrid
+## SavedVariables: PreformAVEnabler_HideColumn, PreformAVEnabler_SizeLimit, PreformAVEnabler_Buttonize
+## Version: 2.41
+
+PreformAVEnabler.xml

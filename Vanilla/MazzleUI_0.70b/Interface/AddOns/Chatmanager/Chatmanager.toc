@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: Cirk's Chatmanager v1.12.0
+## Notes: Helps you manage your chat channels
+## URL: http://www.wowinterface.com/downloads/fileinfo.php?id=4535
+## SavedVariables: ChatmanagerState
+## OptionalDeps:
+## Dependencies:
+Chatmanager.xml

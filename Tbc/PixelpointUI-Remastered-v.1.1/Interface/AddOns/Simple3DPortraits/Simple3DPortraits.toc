@@ -1,0 +1,15 @@
+## Interface: 20400
+## Title: Simple3DPortraits
+## Notes: Draws 3D portraits for main units that can be moved or resized at will.
+## Author: Daedhir
+## Version: 1.0
+## SavedVariables: Simple3DPortraitsDB
+## OptionalDeps: Ace3
+## X-Curse-Packaged-Version: v1.1.3
+## X-Curse-Project-Name: Simple3DPortraits
+## X-Curse-Project-ID: simple3dportraits
+## X-Curse-Repository-ID: wow/simple3dportraits/mainline
+
+embeds.xml
+Simple3DPortraits.lua
+

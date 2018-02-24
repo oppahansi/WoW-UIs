@@ -1,0 +1,8 @@
+## Interface: 1700
+## Author: Kaelten	
+## Title: KC_Mobility
+## Notes: Adding dragging to the blizzard frames, one step at a time.
+## Dependencies: Ace
+## SavedVariables: KC_MobilityDB
+KC_MobilityLocals.lua
+KC_Mobility.lua

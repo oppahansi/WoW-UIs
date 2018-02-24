@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: ClassMasterLoot v1.09 by Nitram@DE-Azshara
+## DefaultState: Enabled
+## SavedVariables: CML_Vars
+CML_Language.lua
+CML_Main.lua
+ClassMasterLoot.xml

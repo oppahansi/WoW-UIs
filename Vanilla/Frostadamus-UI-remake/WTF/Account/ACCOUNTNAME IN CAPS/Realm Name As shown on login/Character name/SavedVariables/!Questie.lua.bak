@@ -1,0 +1,233 @@
+
+QuestieSeenQuests = {
+	[3794365360] = 0,
+	[407123824] = 0,
+	[485058144] = 0,
+	[807922706] = 0,
+	[2992274912] = 0,
+	[4166110408] = 1,
+	[3223482298] = 0,
+	[1466397976] = 0,
+	[2060832832] = 0,
+	[2312607680] = 0,
+	[1031576848] = 0,
+	[2867106944] = 0,
+	[2605143824] = 0,
+	[1832316216] = 0,
+	[796465440] = 0,
+}
+QuestieTrackedQuests = {
+	[1832316216] = {
+		["objective1"] = {
+			["type"] = "item",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Gauntlet of Gordok Might: 1/1",
+		},
+		["leaderboards"] = 1,
+		["isComplete"] = 1,
+		["questName"] = "Unfinished Gordok Business",
+		["level"] = 60,
+		["tracked"] = false,
+		["questTag"] = "Dungeon",
+	},
+	[2605143824] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Warosh's Mojo: 0/1",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "Urok Doomhowl",
+		["level"] = 60,
+		["tracked"] = false,
+		["questTag"] = "Dungeon",
+	},
+	[2867106944] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Twilight Tablet Fragment: 0/8",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "The Twilight Mystery",
+		["level"] = 58,
+		["tracked"] = false,
+	},
+	[2060832832] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Abyssal Crest: 0/1",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "Abyssal Contacts",
+		["level"] = 60,
+		["tracked"] = false,
+		["questTag"] = "Elite",
+	},
+	[407123824] = {
+		["tracked"] = false,
+		["isComplete"] = 1,
+		["questName"] = "Wasteland",
+		["leaderboards"] = 0,
+		["level"] = 55,
+	},
+	[807922706] = {
+		["tracked"] = false,
+		["questName"] = "Report to General Kirika",
+		["leaderboards"] = 0,
+		["level"] = 60,
+	},
+	[1031576848] = {
+		["objective1"] = {
+			["type"] = "monster",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Twilight Geolord slain: 10/10",
+		},
+		["leaderboards"] = 1,
+		["isComplete"] = 1,
+		["questName"] = "Twilight Geolords",
+		["level"] = 60,
+		["tracked"] = false,
+	},
+	[796465440] = {
+		["objective1"] = {
+			["type"] = "monster",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Immol'thar slain: 1/1",
+		},
+		["leaderboards"] = 2,
+		["objective2"] = {
+			["type"] = "monster",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Prince Tortheldrin slain: 1/1",
+		},
+		["isComplete"] = 1,
+		["questName"] = "The Madness Within",
+		["level"] = 60,
+		["tracked"] = false,
+		["questTag"] = "Dungeon",
+	},
+	[485058144] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Reliquary of Purity: 0/1",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "A Reliquary of Purity",
+		["level"] = 60,
+		["tracked"] = false,
+	},
+	[2992274912] = {
+		["objective1"] = {
+			["type"] = "item",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Ironfel: 1/1",
+		},
+		["leaderboards"] = 1,
+		["isComplete"] = 1,
+		["questName"] = "Dark Iron Legacy",
+		["level"] = 52,
+		["tracked"] = false,
+		["questTag"] = "Dungeon",
+	},
+	[1466397976] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "event",
+			["desc"] = "Protect Captain Vanessa Beltis from the naga attack",
+		},
+		["leaderboards"] = 1,
+		["isComplete"] = -1,
+		["questName"] = "A Crew Under Fire",
+		["level"] = 57,
+		["tracked"] = false,
+	},
+	[3223482298] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Signed Field Duty Papers: 0/1",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "Field Duty",
+		["level"] = 60,
+		["tracked"] = false,
+		["questTag"] = "Elite",
+	},
+	[2312607680] = {
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Encrypted Twilight Text: 0/10",
+		},
+		["leaderboards"] = 1,
+		["questName"] = "Secret Communication",
+		["level"] = 60,
+		["tracked"] = false,
+	},
+	[3794365360] = {
+		["objective2"] = {
+			["type"] = "reputation",
+			["done"] = 1,
+			["notes"] = {
+			},
+			["desc"] = "Argent Dawn:  Revered / Revered",
+		},
+		["tracked"] = false,
+		["questName"] = "Mantles of the Dawn",
+		["level"] = 60,
+		["objective1"] = {
+			["notes"] = {
+			},
+			["type"] = "item",
+			["desc"] = "Argent Dawn Valor Token: 0/10",
+		},
+		["leaderboards"] = 2,
+	},
+}
+QuestieConfig = {
+	["minLevelFilter"] = false,
+	["maxShowLevel"] = 3,
+	["getVersion"] = 3.1,
+	["alwaysShowDistance"] = false,
+	["boldColors"] = false,
+	["arrowEnabled"] = true,
+	["showMapAids"] = true,
+	["trackerEnabled"] = true,
+	["showProfessionQuests"] = false,
+	["minShowLevel"] = 5,
+	["alwaysShowQuests"] = true,
+	["resizeWorldmap"] = false,
+	["alwaysShowLevel"] = true,
+	["showTrackerHeader"] = false,
+	["trackerList"] = false,
+	["maxLevelFilter"] = false,
+}
+QuestieTrackerVariables = {
+	["position"] = {
+		["relativeTo"] = "UIParent",
+		["point"] = "LEFT",
+		["relativePoint"] = "LEFT",
+		["yOfs"] = 0,
+		["xOfs"] = 0,
+	},
+}

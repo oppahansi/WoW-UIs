@@ -1,0 +1,58 @@
+------------------------------------------------------------------------
+r65599 | seerah | 2008-03-24 23:24:48 -0400 (Mon, 24 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer.toc
+   M /trunk/Cartographer/Cartographer_Battlegrounds/Cartographer_Battlegrounds.toc
+   M /trunk/Cartographer/Cartographer_Coordinates/Cartographer_Coordinates.toc
+   M /trunk/Cartographer/Cartographer_Foglight/Cartographer_Foglight.toc
+   M /trunk/Cartographer/Cartographer_GroupColors/Cartographer_GroupColors.toc
+   M /trunk/Cartographer/Cartographer_GuildPositions/Cartographer_GuildPositions.toc
+   M /trunk/Cartographer/Cartographer_InstanceLoot/Cartographer_InstanceLoot.toc
+   M /trunk/Cartographer/Cartographer_InstanceMaps/Cartographer_InstanceMaps.toc
+   M /trunk/Cartographer/Cartographer_InstanceNotes/Cartographer_InstanceNotes.toc
+   M /trunk/Cartographer/Cartographer_LookNFeel/Cartographer_LookNFeel.toc
+   M /trunk/Cartographer/Cartographer_Notes/Cartographer_Notes.toc
+   M /trunk/Cartographer/Cartographer_POI/Cartographer_POI.toc
+   M /trunk/Cartographer/Cartographer_Professions/Cartographer_Professions.toc
+   M /trunk/Cartographer/Cartographer_Waypoints/Cartographer_Waypoints.toc
+   M /trunk/Cartographer/Cartographer_ZoneInfo/Cartographer_ZoneInfo.toc
+
+Cartographer: toc bumpage, per ck
+------------------------------------------------------------------------
+r63590 | next96 | 2008-03-04 12:21:17 -0500 (Tue, 04 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer:
+- Update locale koKR
+------------------------------------------------------------------------
+r63524 | ckknight | 2008-03-04 02:42:39 -0500 (Tue, 04 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer_Waypoints - make the ShowOnMap check safer
+------------------------------------------------------------------------
+r63523 | ckknight | 2008-03-04 02:30:49 -0500 (Tue, 04 Mar 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer_Waypoints - actually call :ShowOnMap()
+------------------------------------------------------------------------
+r62820 | ckknight | 2008-02-24 22:12:36 -0500 (Sun, 24 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/Waypoints.lua
+
+Cartographer_Waypoints - add ability to scale the waypoint and set its alpha.
+------------------------------------------------------------------------
+r62799 | ckknight | 2008-02-24 16:45:53 -0500 (Sun, 24 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_LookNFeel/LookNFeel.lua
+
+Cartographer_LookNFeel - make it so tooltips are reparented to the overlay holder instead of non-overlay holder.
+------------------------------------------------------------------------
+r62657 | kergoth | 2008-02-23 11:27:20 -0500 (Sat, 23 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Cartographer/Cartographer_Waypoints/WayPoint.lua
+
+Cartographer: Waypoints: Don't freak out if _Notes doesn't exist.
+------------------------------------------------------------------------

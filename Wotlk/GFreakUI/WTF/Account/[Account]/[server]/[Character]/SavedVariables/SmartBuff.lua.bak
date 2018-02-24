@@ -1,0 +1,120 @@
+
+SMARTBUFF_Options = {
+	["ToggleAutoCombat"] = false,
+	["AutoSwitchTemplateInst"] = false,
+	["BuffTarget"] = false,
+	["SplashY"] = -100.0000013677448,
+	["MMCPosX"] = -47.93653179692691,
+	["IgnoreList"] = {
+	},
+	["ToggleSubGrpChanged"] = false,
+	["SplashX"] = 100.0000013677448,
+	["ToggleMsgNormal"] = false,
+	["AutoTimer"] = 5,
+	["ToggleGrp"] = {
+		true, -- [1]
+		false, -- [2]
+		false, -- [3]
+		false, -- [4]
+		false, -- [5]
+		false, -- [6]
+		false, -- [7]
+		false, -- [8]
+	},
+	["AutoSwitchTemplate"] = false,
+	["AntiDaze"] = true,
+	["RebuffTimer"] = 20,
+	["ToggleAutoSplash"] = true,
+	["BuffPvP"] = false,
+	["LastTemplate"] = "Solo",
+	["UpgradeToDualSpec"] = true,
+	["OldWheelDown"] = "CAMERAZOOMOUT",
+	["Debug"] = false,
+	["FirstStart"] = "v3.3e",
+	["AdvGrpBuffRange"] = false,
+	["HideSAButton"] = false,
+	["ShowMiniGrp"] = false,
+	["BlacklistTimer"] = 5,
+	["OldWheelUp"] = "CAMERAZOOMIN",
+	["MinCharges"] = 3,
+	["Toggle"] = true,
+	["HideMmButton"] = false,
+	["ToggleAutoSound"] = false,
+	["BuffInCities"] = true,
+	["MMCPosY"] = -84.21319003765098,
+	["AddList"] = {
+	},
+	["ToggleMsgWarning"] = false,
+	["CompMode"] = false,
+	["SplashDuration"] = 2,
+	["ToggleMsgError"] = false,
+	["CurrentFont"] = 9,
+	["ToggleAuto"] = true,
+	["UISync"] = true,
+	["CheckCharges"] = true,
+	["AdvGrpBuffCheck"] = false,
+	["ScrollWheelDown"] = true,
+	["ToggleAutoChat"] = false,
+	["InShapeshift"] = true,
+	["ScrollWheelUp"] = false,
+	["InCombat"] = false,
+}
+SMARTBUFF_Buffs = {
+	{
+		["Solo"] = {
+			["Battle Shout"] = {
+				["IgnoreList"] = {
+				},
+				["RBTime"] = 0,
+				["MH"] = false,
+				["CIn"] = false,
+				["COut"] = true,
+				["EnableS"] = false,
+				["SelfNot"] = false,
+				["EnableG"] = false,
+				["OH"] = false,
+				["AddList"] = {
+				},
+				["Reminder"] = true,
+				["ManaLimit"] = 0,
+				["SelfOnly"] = false,
+			},
+			["Blood Fury"] = {
+				["IgnoreList"] = {
+				},
+				["RBTime"] = 0,
+				["MH"] = false,
+				["CIn"] = false,
+				["COut"] = true,
+				["EnableS"] = false,
+				["SelfNot"] = false,
+				["EnableG"] = false,
+				["OH"] = false,
+				["AddList"] = {
+				},
+				["Reminder"] = true,
+				["ManaLimit"] = 0,
+				["SelfOnly"] = false,
+			},
+			["GrpBuffSize"] = 4,
+			["Bloodrage"] = {
+				["IgnoreList"] = {
+				},
+				["RBTime"] = 0,
+				["MH"] = false,
+				["CIn"] = false,
+				["COut"] = true,
+				["EnableS"] = false,
+				["SelfNot"] = false,
+				["EnableG"] = false,
+				["OH"] = false,
+				["AddList"] = {
+				},
+				["Reminder"] = true,
+				["ManaLimit"] = 0,
+				["SelfOnly"] = false,
+			},
+			["SelfFirst"] = false,
+		},
+	}, -- [1]
+}

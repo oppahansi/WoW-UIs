@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cff0066ff C|rError
+## Author: Castle
+## X-eMail: castle@saintly.com
+## Notes: Blocks all errors from the middle of your screen such as 'Not enough Energy'.
+
+core.lua

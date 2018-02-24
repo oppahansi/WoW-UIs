@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+	<Script file="Merchantbags.lua"/> 
+	<Frame name="Merchantbags"> 
+		<Scripts> 
+			<OnLoad> 
+				Merchantbags_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				Merchantbags_OnEvent(event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

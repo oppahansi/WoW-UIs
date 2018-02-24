@@ -1,0 +1,18 @@
+12/04/2008
+- Included the proper image files for Border and Highlight.
+
+11/28/2008
+- Trimmed the button edge of the Border and Highlight images.
+
+11/1/2008
+- Removed the ModelScale entry for the Cooldown layer.
+- Added AboveNormal = true; to the AutoCast layer.
+- Modified offset values for the AutoCast layer slightly.
+
+Thanks to StormFX for the above changes.
+
+10/23/2008
+- Optimized the scale of the Gloss skin.
+
+10/23/2008
+- Backdrop alpha value changed from 1 to 0.75 (now semi-transparent).

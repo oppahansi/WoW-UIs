@@ -1,0 +1,43 @@
+## Title: Ghost: Pulse
+## Notes: Flashes things you need to know.
+## Notes-zhCN: 在屏幕上弹出一些有用的东东
+## Author: Footrot
+
+## Interface: 30000
+## Version: 2.3
+## X-Build: ($Rev: 79231 $)
+
+## OptionalDeps: Ace2, Waterfall-1.0, LibSharedMedia-2.0
+## X-Embeds: Ace2, Waterfall-1.0
+
+## X-Website: http://www.wowinterface.com/downloads/info8418-GhostPulse2.html
+## X-Category: Interface Enhancements
+## X-RelSite-WoWI: 8418
+
+## SavedVariables: GhostPulseDB
+
+embeds.xml
+
+Locale-enUS.lua
+Locale-deDE.lua
+Locale-zhCN.lua
+Locale-zhTW.lua
+Locale-koKR.lua
+
+Watcher-Aura.lua
+Watcher-Bags.lua
+Watcher-CCExpiry.lua
+Watcher-Decurse.lua
+Watcher-EnemyCast.lua
+Watcher-LifeTap.lua
+Watcher-MobDebuff.lua
+Watcher-PetCooldown.lua
+Watcher-PlayerDeath.lua
+Watcher-Spell.lua
+Watcher-ThreatGen.lua
+Watcher-Trinket.lua
+
+Core.lua
+Engine.lua
+Pulse.lua
+Events.lua

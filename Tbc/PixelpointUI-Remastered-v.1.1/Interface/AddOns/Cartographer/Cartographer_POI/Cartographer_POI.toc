@@ -1,0 +1,31 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fPOI|r]
+## X-Name: POI
+## X-Name-deDE: PoI
+## X-Name-koKR: 포인트
+## X-Name-zhTW: 資訊點
+## X-Name-esES: PdI
+## X-ModuleName: POI
+## Notes: Module to manage points of interest.
+## Notes-deDE: Modul zur Verwaltung interessanter Orte ('Points of Interest').
+## Notes-koKR: 위치 포인트 관리 모듈을 제공합니다.
+## Notes-zhTW: 管理資訊點的模組。
+## Notes-esES: Módulo que gestiona los puntos de interés
+## Author: Chris "kergoth" Larson
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer, Cartographer_Notes
+## OptionalDeps: Ace2
+## X-Category: Map
+## X-eMail: clarson@kergoth.com
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\AceConsole-2.0\AceConsole-2.0.lua
+
+POI.lua

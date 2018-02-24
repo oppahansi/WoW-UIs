@@ -1,0 +1,12 @@
+
+GladdyXZ = {
+	["profileKeys"] = {
+		["Pixelpointxx - Bugs and Crashes"] = "Pixelpointxx - Bugs and Crashes",
+	},
+	["profiles"] = {
+		["Pixelpointxx - Bugs and Crashes"] = {
+			["y"] = 551.2333984375,
+			["x"] = 967.5667114257813,
+		},
+	},
+}

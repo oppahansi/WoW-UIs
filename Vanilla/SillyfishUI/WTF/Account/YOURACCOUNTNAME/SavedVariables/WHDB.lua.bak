@@ -1,0 +1,6 @@
+
+WHDB_Settings = {
+	["Shocktopus"] = {
+		["UseColors"] = 1,
+	},
+}

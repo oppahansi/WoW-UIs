@@ -1,0 +1,76 @@
+
+ArenaUnitFrames_Config = {
+	["lists"] = {
+		["buffs"] = {
+			["which"] = 1,
+			["black"] = "",
+			["white"] = "",
+		},
+		["debuffs"] = {
+			["which"] = 1,
+			["black"] = "",
+			["white"] = "",
+		},
+	},
+	["Alerts"] = {
+		["trinketUsed"] = {
+			["speech"] = true,
+			["displayMsg"] = true,
+		},
+		["trinketAvailable"] = {
+			["speech"] = true,
+			["displayMsg"] = true,
+		},
+	},
+	["options"] = {
+		["colorize"] = false,
+		["scale"] = 0.5,
+		["showBuffs"] = false,
+		["targetColor"] = {
+			0, -- [1]
+			0.8, -- [2]
+			0.8, -- [3]
+			1, -- [4]
+		},
+		["showCastbar"] = false,
+		["drMonitor"] = false,
+		["showToT"] = false,
+		["lockAlerts"] = true,
+		["showTrinket"] = true,
+		["lockFrame"] = false,
+		["showDebuffs"] = false,
+		["countdownPrecision"] = false,
+		["showMyDebuffsOnly"] = false,
+		["focusColor"] = {
+			0.5, -- [1]
+			0.5, -- [2]
+			0.5, -- [3]
+			1, -- [4]
+		},
+		["rangeIndicator"] = false,
+		["buffScan"] = false,
+		["showStealableOnly"] = false,
+	},
+	["buttons"] = {
+		{
+			["none"] = {
+				["default"] = {
+					["action"] = "target",
+				},
+			},
+		}, -- [1]
+		{
+			["none"] = {
+				["default"] = {
+					["action"] = "focus",
+				},
+			},
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+	},
+}

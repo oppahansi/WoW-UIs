@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fMasterLooterIcon|r]
+## Notes: Show an icon on the unit frame when the unit is the Master Looter.
+## Notes-koKR: 유닛이 전리품 담장자인 경우에 유닛 프레임에 아이콘을 보여줍니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+MasterLooterIcon.lua

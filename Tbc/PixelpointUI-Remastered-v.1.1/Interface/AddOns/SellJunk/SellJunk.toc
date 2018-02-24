@@ -1,0 +1,19 @@
+## Interface: 20400
+## Title: Sell Junk |cff7fff7f -Ace2-|r
+## Notes: Sells all junk in your inventory at once.
+## Author: Xonpathos
+## Version: $Rev: 55254 $
+## OptionalDeps: Ace2
+## SavedVariables: SellJunkDB
+## SavedVariablesPerCharacter: SellJunkDBPC
+## X-Category: Inventory
+
+libs\AceLibrary\AceLibrary.lua
+libs\AceOO-2.0\AceOO-2.0.lua
+libs\AceAddon-2.0\AceAddon-2.0.lua
+libs\AceDB-2.0\AceDB-2.0.lua
+libs\AceConsole-2.0\AceConsole-2.0.lua
+libs\AceEvent-2.0\AceEvent-2.0.lua
+
+SellJunk.xml
+SellJunk.lua

@@ -1,0 +1,16 @@
+.Version History
+1.0: (2006-04-19)
+- Initial release
+
+1.0.1: (2006-04-23)
+- Fixed category
+
+1.1: (2006-05-xx)
+- Completely rewritten
+- Updated to 1.2 FuBar API
+
+2.0: (2006-09-22)
+- Updated to 2.0 FuBar2 API
+
+2.0.1: (2006-09-22)
+- Fixed small error, should work with DamageMeters 5.1.1

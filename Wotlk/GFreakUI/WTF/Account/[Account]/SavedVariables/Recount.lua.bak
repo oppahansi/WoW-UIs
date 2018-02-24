@@ -1,0 +1,30 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Doublefisted - Icecrown"] = "Doublefisted - Icecrown",
+	},
+	["profiles"] = {
+		["Doublefisted - Icecrown"] = {
+			["GraphWindowY"] = 0,
+			["MainWindow"] = {
+				["Position"] = {
+					["y"] = 167.1110846072565,
+					["x"] = -172.8000625880016,
+					["w"] = 140.000019421976,
+					["h"] = 200.0000027354896,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["DetailWindowY"] = 0,
+			["DetailWindowX"] = 0,
+			["GraphWindowX"] = 0,
+			["CurDataSet"] = "OverallData",
+		},
+	},
+}

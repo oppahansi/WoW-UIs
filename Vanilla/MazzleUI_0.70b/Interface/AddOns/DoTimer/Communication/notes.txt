@@ -1,0 +1,1 @@
+A fairly fascinating addon.  It allows timers  to be shared with all members in a party or raid.  Basically if one classmember sees it, all members of that class see it.  So if you right-click on it to remove it, it is removed from their screens too.  Obviously only important timers should be communicated.  Access this addon ingame by typing "/comm".  

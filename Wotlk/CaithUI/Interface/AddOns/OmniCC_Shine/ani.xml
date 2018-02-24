@@ -1,0 +1,29 @@
+<Ui
+	xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/1801/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd"
+>
+	<AnimationGroup name="OmniCCAnimationTemplate_Shine" looping="NONE" virtual="true">
+		<Alpha change="-1" duration="0" order="0"/>
+
+		<Alpha change="1" duration="0.4" order="1"/>
+
+		<Scale scaleX="5" scaleY="5" duration="0.4" order="1">
+			<Origin point="CENTER"/>
+		</Scale>
+
+		<Scale scaleX="-5" scaley="-5" duration = "0.4" order = "2">
+			<Origin point="CENTER"/>
+		</Scale>
+
+		<Alpha change="-1" duration="0.4" order="2"/>
+
+		<Scripts>
+			<OnFinished>
+				if self:GetParent():IsShown() then
+					self:GetParent():Hide()
+				end
+			</OnFinished>
+		</Scripts>
+	</AnimationGroup>
+</Ui>

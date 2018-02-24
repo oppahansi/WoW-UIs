@@ -1,0 +1,69 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="EasyCopy.lua"/>
+	<Frame name="EasyCopy_core" toplevel="true" enableMouse="true" movable="true" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="500" y="45"/>
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<EditBox name="EasyCopyText">
+				<Size>
+					<AbsDimension x="365" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT">
+						<Offset>
+							<AbsDimension x="16" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<FontString inherits="GameFontWhite"/>
+				<Scripts>
+					<OnEnterPressed>
+						EasyCopy_core:Hide();
+					</OnEnterPressed>
+					<OnEscapePressed>
+						EasyCopy_core:Hide();
+					</OnEscapePressed>
+				</Scripts>
+			</EditBox>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				EasyCopy_OnLoad();
+			</OnLoad>
+			<OnDragStart>
+				if(arg1 == "LeftButton" and IsShiftKeyDown()) then
+					EasyCopy_core:StartMoving();
+				end
+			</OnDragStart>
+			<OnHide>
+				EasyCopy_core:StopMovingOrSizing();
+			</OnHide>
+			<OnDragStop>
+				EasyCopy_core:StopMovingOrSizing();
+			</OnDragStop>
+			<OnMouseUp>
+				EasyCopy_core:StopMovingOrSizing();
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+</Ui>

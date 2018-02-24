@@ -1,0 +1,7 @@
+﻿## Interface: 20400
+## Title: Combat Log Clearer
+## Notes: Clears the combat log constantly to prevent overflow
+## Version: 1.0
+## Author: Proditor
+
+CombatLogClearer.lua

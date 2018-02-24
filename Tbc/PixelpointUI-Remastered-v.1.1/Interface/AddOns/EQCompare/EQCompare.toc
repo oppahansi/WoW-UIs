@@ -1,0 +1,23 @@
+﻿## Interface: 20400
+## Author: hshh
+## Title: EQCompare |cff7fff7f -Ace2-|r
+## Notes: Compare equipped inventory items against items in chatframe hyperlink and bags/bank.
+## Notes-zhTW: 簡易的將所看到的物品與目前自己身上所裝備的物品做比較
+## Notes-deDE: Vergleiche getragene Gegenstände mit verlinkten Gegenständen aus dem Chatfenster oder Tasche/Bank/Auktionshaus
+## Version: 1.4
+## X-eMail: hshh@hshh.org
+## X-Website: http://www.hshh.org/
+## X-Category: Interface Enhancements
+## OptionalDeps: Ace2
+## SavedVariables: EQCompareDB
+
+libs\AceLibrary\AceLibrary.lua
+libs\AceOO-2.0\AceOO-2.0.lua
+libs\AceEvent-2.0\AceEvent-2.0.lua
+libs\AceAddon-2.0\AceAddon-2.0.lua
+libs\AceHook-2.1\AceHook-2.1.lua
+libs\AceDB-2.0\AceDB-2.0.lua
+libs\AceConsole-2.0\AceConsole-2.0.lua
+
+EQCompare.lua
+EQCompare.xml

@@ -1,0 +1,33 @@
+------------------------------------------------------------------------
+r148 | nevcairiel | 2008-10-02 16:34:04 +0000 (Thu, 02 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+.pkgmeta fix
+------------------------------------------------------------------------
+r147 | root | 2008-09-30 16:20:16 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r146 | root | 2008-09-29 21:56:54 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r144 | root | 2008-09-29 20:59:03 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/simpleMinimap
+   A /trunk (from /tmp/trunk/simpleMinimap:143)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r143 | kunda | 2008-09-02 14:51:57 +0000 (Tue, 02 Sep 2008) | 1 line
+Changed paths:
+   M /tmp/trunk/simpleMinimap/simpleMinimap.lua
+
+simpleMinimap: fixed MinimapNorthTag Texture show/hide issue
+------------------------------------------------------------------------

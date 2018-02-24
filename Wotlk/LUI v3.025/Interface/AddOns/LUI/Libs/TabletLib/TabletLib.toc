@@ -1,0 +1,20 @@
+﻿## Interface: 30000
+## LoadOnDemand: 1
+## Title: Lib: Tablet-2.0
+## Notes: A library to provide an efficient, featureful tooltip-style display.
+## Notes-esES: Una biblioteca que provee un tipo de tooltip de estilo eficiente y lleno de caracter\195\173sticas.
+## Author: ckknight
+## eMail: ckknight@gmail.com
+## X-Category: Library
+## OptionalDeps: Ace2, DewdropLib
+## X-Embeds: Ace2, DewdropLib
+## X-AceLibrary-Tablet-2.0: true
+## X-License: LGPL v2.1
+## X-Curse-Packaged-Version: 3.0-release
+## X-Curse-Project-Name: TabletLib
+## X-Curse-Project-ID: tabletlib
+## X-Curse-Repository-ID: wow/tabletlib/mainline
+
+embeds.xml
+
+Tablet-2.0\Tablet-2.0.lua

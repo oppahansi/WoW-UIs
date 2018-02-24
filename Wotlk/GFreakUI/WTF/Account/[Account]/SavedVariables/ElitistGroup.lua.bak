@@ -1,0 +1,12 @@
+
+ElitistGroupDB = {
+	["profileKeys"] = {
+		["Doublefisted - Icecrown"] = "Default",
+	},
+	["throttleAnnounced"] = true,
+	["profiles"] = {
+		["Default"] = {
+			["helped"] = true,
+		},
+	},
+}

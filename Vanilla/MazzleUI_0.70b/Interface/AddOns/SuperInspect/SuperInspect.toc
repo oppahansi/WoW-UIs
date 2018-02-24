@@ -1,0 +1,9 @@
+## Interface: 20000
+## Title: SuperInspect
+## Version: 2.0-alpha-bc-2
+## Notes: SuperInspect
+## Author: Chester, smurfy
+## Dependencies: SuperInspect_UI
+## SavedVariables: SI_Save
+
+SuperInspect.xml

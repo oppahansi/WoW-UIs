@@ -1,0 +1,72 @@
+
+SCT_CONFIG = {
+	["currentProfile"] = {
+		["Photek of Kazzak"] = "char",
+	},
+	["chars"] = {
+		["Photek of Kazzak"] = {
+			["notFirstTime"] = true,
+		},
+	},
+	["profiles"] = {
+		["char/Photek of Kazzak"] = {
+			["SCTD_SHOWRESIST"] = 1,
+			["SCTD_SHOWPET"] = 1,
+			["SCTD_DMGFONT"] = 1,
+			["SCTD_ENABLED"] = 1,
+			["SCTD_SPELLCOLOR"] = false,
+			["SCTD_SHOWTARGETS"] = false,
+			["SCTD_SHOWSPELL"] = 1,
+			["FRAMESDATA"] = {
+				[3] = {
+					["ANITYPE"] = 1,
+					["ALPHA"] = 100,
+					["DIRECTION"] = false,
+					["FADE"] = 1.5,
+					["FONTSHADOW"] = 2,
+					["TEXTSIZE"] = 24,
+					["FONT"] = 1,
+					["ANISIDETYPE"] = 1,
+					["YOFFSET"] = 210,
+					["XOFFSET"] = 0,
+				},
+			},
+			["COLORS"] = {
+				["SCTD_SHOWPET"] = {
+					["r"] = 0.6,
+					["g"] = 0.6,
+					["b"] = 0,
+				},
+				["SCTD_SHOWPERIODIC"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 0,
+				},
+				["SCTD_SHOWSPELL"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 0,
+				},
+				["SCTD_SHOWMELEE"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
+				["SCTD_SHOWCOLORCRIT"] = {
+					["r"] = 0.2,
+					["g"] = 0.4,
+					["b"] = 0.6,
+				},
+			},
+			["SCTD_SHOWMELEE"] = 1,
+			["SCTD_USESCT"] = 1,
+			["SCTD_SHOWPERIODIC"] = 1,
+			["SCTD_FLAGDMG"] = false,
+			["SCTD_SHOWDMGTYPE"] = false,
+			["SCTD_TARGET"] = false,
+			["SCTD_STICKYCRIT"] = 1,
+			["SCTD_SHOWSPELLNAME"] = 1,
+			["SCTD_SHOWCOLORCRIT"] = false,
+		},
+	},
+}

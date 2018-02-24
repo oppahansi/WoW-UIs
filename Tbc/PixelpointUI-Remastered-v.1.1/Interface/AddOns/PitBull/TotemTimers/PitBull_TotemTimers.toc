@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fTotemTimers|r]
+## Notes: Shows Totem timers for the PitBull player frame.
+## Notes-koKR: PitBull의 플레이어 프레임에 토템 타이머를 보여줍니다.
+## Author: Vangual
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## X-PitBull-Condition: return ((select(2, UnitClass("player")) == "SHAMAN")and(_G.UnitClassBase ~= nil))
+## X-Category: Shaman
+## X-eMail: ecf025o02@sneakemail.com
+## X-License: GPL v2 or later
+## X-WowaceForumPost1: http://www.wowace.com/forums/index.php?topic=11492.0
+## Version: 2.0
+
+TotemTimers.lua

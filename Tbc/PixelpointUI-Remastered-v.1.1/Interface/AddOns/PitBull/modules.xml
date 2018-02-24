@@ -1,0 +1,34 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Include file="Aura\Aura.xml"/>
+<Script file="CombatIcon\CombatIcon.lua"/>
+<Script file="ComboPoints\ComboPoints.lua"/>
+<Script file="HealthBar\HealthBar.lua"/>
+<Script file="HideBlizzard\HideBlizzard.lua"/>
+<Script file="Highlight\Highlight.lua"/>
+<Script file="LeaderIcon\LeaderIcon.lua"/>
+<Script file="PowerBar\PowerBar.lua"/>
+<Script file="MasterLooterIcon\MasterLooterIcon.lua"/>
+<Script file="PvPIcon\PvPIcon.lua"/>
+<Script file="RaidTargetIcon\RaidTargetIcon.lua"/>
+<Script file="RestIcon\RestIcon.lua"/>
+<Script file="Portrait\Portrait.lua"/>
+<Script file="CombatText\CombatText.lua"/>
+<Script file="CastBar\CastBar.lua"/>
+<Script file="ExperienceBar\ExperienceBar.lua"/>
+<Script file="ReputationBar\ReputationBar.lua"/>
+<Script file="Spark\Spark.lua"/>
+<Script file="DruidManaBar\DruidManaBar.lua"/>
+<Script file="BarFader\BarFader.lua"/>
+<Script file="CombatFader\CombatFader.lua"/>
+<Script file="Banzai\Banzai.lua"/>
+<Script file="RangeCheck\RangeCheck.lua"/>
+<Script file="ReadyCheckIcon\ReadyCheckIcon.lua"/>
+<Script file="ThreatBar\ThreatBar.lua"/>
+<Script file="TotemTimers\TotemTimers.lua"/>
+<Script file="VoiceIcon\VoiceIcon.lua"/>
+<Script file="HappinessIcon\HappinessIcon.lua"/>
+<Script file="VisualHeal\VisualHeal.lua"/>
+
+</Ui>

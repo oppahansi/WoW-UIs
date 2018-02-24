@@ -1,0 +1,15 @@
+﻿## Interface: 20400
+## Title: PitBull |r[|cffeda55fVoiceIcon|r]
+## Notes: Show an icon based on whether or not the unit is talking.
+## Notes-koKR: 유닛의 음성 사용 상태 여부에 근거해 아이콘을 보여줍니다.
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+VoiceIcon.lua

@@ -1,0 +1,101 @@
+
+Omen2DB = {
+	["global"] = {
+	},
+	["profileKeys"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = "Obscene - Archangel [14x] Blizzlike",
+	},
+	["profiles"] = {
+		["Obscene - Archangel [14x] Blizzlike"] = {
+			["options"] = {
+				["Modules"] = {
+					["LastActive"] = "SingleTarget",
+				},
+				["Lock"] = false,
+				["Show"] = true,
+				["Skin"] = {
+					["Modules"] = {
+						["Hide"] = true,
+					},
+					["Title"] = {
+						["Hide"] = true,
+					},
+					["Bars"] = {
+						["Height"] = 14,
+						["Texture"] = "Flat",
+						["Spacing"] = 0,
+					},
+					["BarList"] = {
+						["Opacity"] = 1,
+					},
+					["Labels"] = {
+						["Font"] = {
+							["Font"] = "BigNoodleTitling-Oblique",
+						},
+					},
+				},
+				["ShowWith"] = {
+					["Alone"] = true,
+					["Resting"] = true,
+					["PVP"] = true,
+				},
+				["HardOff"] = false,
+				["ActiveSkinName"] = "Default",
+				["FuBar"] = {
+					["HideMinimapButton"] = true,
+				},
+			},
+			["hidden"] = true,
+			["PositionH"] = 222.5555572509766,
+			["PositionY"] = 255.0002593994141,
+			["PositionX"] = 624.16650390625,
+			["LastActiveSkin"] = {
+				["Modules"] = {
+					["Hide"] = true,
+				},
+				["Title"] = {
+					["Height"] = 13,
+					["Background"] = {
+						["Color"] = {
+							["a"] = 0,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+					},
+					["Border"] = {
+						["Color"] = {
+							["a"] = 0,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+					},
+					["Hide"] = false,
+				},
+				["Scale"] = 100,
+				["Bars"] = {
+					["Texture"] = "Minimalist",
+					["AutohideAll"] = false,
+					["Autohide"] = false,
+					["Autocollapse"] = true,
+				},
+				["Frames"] = {
+					["Border"] = {
+						["Color"] = {
+							["a"] = 0.5300000011920929,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+					},
+				},
+			},
+			["PositionW"] = 197.2226715087891,
+		},
+	},
+}
+Omen2DefaultProfile = {
+	false, -- [1]
+	"Modders: In your SavedVars, replace the first argument of this table with the profile you want loaded by default, like 'Default'.", -- [2]
+}

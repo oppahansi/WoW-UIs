@@ -1,0 +1,759 @@
+MazzleUI Change Log:
+
+0.7
+- Feature Addition: MazzleOptions and MazzleHelp integrated into one add-on with a button to switch between the two modes.  I think it will be easier for users to see everything in one interface.  MazzleOptions code was also much better and more flexible.
+- Feature Addition: MazzleOptions now has an integrated FAQ system.  It automatically numbers sections/questions and presents questions and answers appropriately.
+- Feature Addition: TONS of new help and FAQ questions added to MazzleOptions help system.  All documents re-organized and rewritten.
+- Feature Addition: Mazzifier will now prompt the user to re-enable add-ons it needs to change the settings for.  Clicking yes will automatically enable all such add-ons and reload the UI.
+- Layout Change: Moved improved error frame button near other minimap buttons so certain button layouts have more room.
+- Feature Addition: MazzleUI will automatically adjust minimap buttons for add-ons that are disabled and aren't showing their buttons.
+- Bug Fix: You no longer will have problems clicking on links at the bottom of the general chat window.  Hid the resize edges of the chat frame.  (Thanks to Tigerheart for figuring it out)
+- Bug Fix: Fixed MonkeyQuest showing up in the middle left rather than top left in some aspect ratios
+- Bug Fix: Dots on you will show up in right combat log
+- Bug Fix: XRaidStatus should properly mazzify in all cases now
+- Feature Addition: Added auto dismounting at flight masters since it was lost when changing from FlightPath to ToFu.
+- Bug Fix: Divine Spirit fixed in NeedyList (credit to Tiger for the fix)
+- Add-On Set Change: Added SimpleCombatLog, Fubar Mail and BookofTracks to "Minimal" set.
+- Settings Change: Turned buff timers on in Blizzard settings module.  (Don't know how/why it got to be off)
+- Settings Change: Fixed bindings of autobar buttons.  (new ace2 version changed things)
+- Feature Addition: Button layout browser will now only show layouts that are universal or applicable to your class.
+- Bug Fix: Clicking the "Button Layout" checkbox in Mazzifier will not throw an illegal ID error
+- Feature Addition: Mazzifier now configures AtlasLoot settings
+- Settings Change: Necrosis now at 130%, purple skin, buffs on left and timers off.
+- Add-On Change: Replaced vChat and Teknicolor with Prat.
+- Button Layout Change:  All button layout descriptions updates and all new preview pictures in the Mazzifier.
+- Feature Addition: Mazzifier can now consider a list of spells when deciding what to put in a button! It will put the first item found from the list into the button.  It will also not put an item that it has already placed before.  Creating layouts that can handle multiple talent specs, character levels, racial abilities, etc. is much easier to do now.
+- Feature Addition: Added mount set to replace previous single mount binding in all layouts.  Considers all current mounts in the game.  You no longer have to learn how to use DAB to do drop your mount into slot 120.
+- Feature Addition: Added set of ALL tradeskills to three buttons in the context menu.  This should guarantee that everybody's trade skills show up right, including supporting skills like Disenchanting and Smelting.
+- Feature Addition: Added a racial skills set button to every layout.  All racial skills should show up now.  (Note: You may still need to add cannibalize to some of the layouts that didn't have room.)
+- Button Layout Change: All max spells changed to be several levels higher.  This means all layouts should properly place AQ and BC level spells.
+- Button Layout Change: DAB cooldown counts all turned off since OmniCC does them and a bit more
+- Button Layout Change: Changed context menu scripts in the button layouts to use options in MazzleOptions, so that it won't hide on click if you don't want it to.
+- Button Layout Change: Changed pet and shapeshift forms to have visible locations for all classes.  (for future use and special cases like Razorgore possession)
+- Feature Addition: New button layout, "Big Buttons Simple".  It's like the Simple layout, but with fewer buttons that are much larger.  Good for low resolution and/or 1.25 aspect ratio.
+- Add-On Selection Change: Enemy Cast Bar defaults to off.  (It's just too expensive)
+- Mage Layout:
+    - Fixed overlapping bars when certain skills are missing
+    - Cleaned up positioning of bars
+    - Combined combustion and arcane power into the same button (when mazzifying, not in general)
+    - Added multiple oil set for the oil button
+    - Added multiple polymorph set to the polymorph button
+    - Added blastwave to AOE bar
+    - Adjusted pet and shapeshift bar locations
+    - Added 1.33 version
+- Priest Layout:
+    - Fixed overlapping bars when certain skills are missing
+    - Cleaned up positioning of bars
+    - Added auto-applying oil button
+    - Now handles shadow spec spells
+    - Now handles Power Infusion, Lightwell and Divine Spirit
+    - Now handles all racial priest spells, not just Fear Ward.  Desperate prayer, Hex of Weakness, Starshards and Devouring Plague grouped in one button, while Feedback, Fear Ward, Shadowguard, Elune's Grace and Touch of Weakness is in another.
+    - Should be better for leveling.  Will place lesser heal and heal buttons in certain spots when you don't have greater heal or heal.  Will do the same for cure poison when you don't have abolish poison.
+    - Adjusted pet and shapeshift bar locations
+    - Added 1.33 version
+    - Fixed shoot wand binding
+- Hunter Layout:
+    - Changed range check to use wing clip.  Ranged bar will now show in all cases except when wing clip is in range.  (before melee would show when completely out of range of both melee and ranged weapons)
+    - Added missing Aspect of the Beast and ordered aspects based on levels you acquire them
+    - Feign death button moved so that it doesn't overlap pvp icon.  F5 binding added by request.
+    - Improved bindings
+    - Added Wyvern Sting, Counter-Attack and Trueshot Aura
+- Warlock Layout:
+    - Improved bindings
+    - Fixed overlapping bars when certain skills are missing
+    - Cleaned up positioning of bars.  Fixed overlap with bg queue icon
+    - Detect Greater Invisibility and Detect Lesser Invisibility merged into one button
+    - Demon Skin and Demon Armour merged into one button
+    - Added warlock mounts to mount sets so they'll install just like normal mounts and be bound to shift-~
+    - Reordered curses
+    - Reordered fears
+    - Shoot wand should properly work on F1
+Shaman
+    - Added combination Elemental Mastery/Stormstrike button
+    - Added Nature's Swiftness
+    - Added Mana Tide Totem
+    - Re-organized layout
+    - Improved bindings
+Shaman Durzil
+    - Added stormstrike, nature's swiftness and mana tide totems (spots for the latter two probably don't make sense, but I didn't want to mess with the layout)
+    - Cleaned up various layout problems (some anchors, overlapping battleground icon and gatherer, proper pet and shapeshift bar location)
+    - Note: Does not fit in 1.25 aspect ratio
+Rogue Simple
+    - Added racial buttons
+    - Improved bindings
+    - Increased size of shapeshift bar, moved so that it won't overlap tracking or gatherer icons
+    - Fixed anchors
+Rogue
+    - Completely revamped.  Many fundamental changes.
+    - Added all missing talents
+    - Added 1.33 and 1.25 versions
+Paladin
+    - Fixed nil error when using the judgement keybinding
+    - Improved key bindings
+    - Added talents holy shock, repentance, divine favor, holy shield
+Joypunk's Warrior Layout
+    - Fixed Execute/Overpower changing
+    - Removed faux stance shift bar
+    - Added Fury and Protection Talents (piercing howl, death wish, bloodthirst, last stand, concussion blow, and shield slam)
+    - Made keybindings more consistent with other layouts
+SimpleRogue, SimpleWarrior and Simple Druid Layouts
+    - Added explicit racial skills buttons
+    - Added some action placements
+    - Rearranged bars to be consistent with other layouts (main bar is top right)
+    - Improved key bindings
+    
+0.6
+- Feature Addition: Improved hot-swappable layouts.  Much cleaner and more organized.
+    (1) - There are now 15 different views.  They are the permutations of raid frames on bottom, raid frames on top, mt window on side, mt window on top, mt window on top with ToToT, showing party frames and hiding party frames.  MazzleUI will dynamically adjust locations, raid frame sizes, MT window sizes, and showing MT ToToT depending on the parameters of that view and your aspect ratio.
+    (2) - Each of those views has a 20 man-version where applicable.  MazzleUI will automatically redistribute your raid frames when your raid has less than 20 members.  It will redistribute back when you add more players to the raid.
+    (3) - MazzleUI will now automatically move up your main tank windows upwards depending on whether you are showing party pets.  (only applicable to 1.33 and 1.25 aspect ratios, and only when you have the MT windows set to show on the side.)
+    (4) - Key bindings for views now let you independently modify raid position (top/bottom/none), MT position (side, top, top wide), and Party Showing (yes/no).  It's easier to get the view you want now.
+------------------------
+- Feature Addition: Much improved Mazzifier Add-On Selection Options
+    (1) - Can now choose between different core add-on sets: (1) Full Install (HIGHLY recommended), (2) Less features, faster loading time, (3) Less features, less cpu usage, (4) bare minimum features.
+    (2) - Now has a section for "Special-Purpose Add-ons", where you can select to enable/disable (1) raiding add-ons, (2) pvp addons, (3) auction house addons, and (4) raid leading add-ons.
+    (3) - Now has a section for "Expensive Optional Add-ons", where you can enable add-ons that will be disabled in most default setups, namely (1) Gatherer, (2) Damage meters (you can choose from Recap, SWStats, and DamageMeters), and (3) Natur's Enemy Castbars, and (4) KLH Threat Meter.
+------------------------
+- Feature Addition: Much improved MazzleOptions navigation 
+    (1) - Now has an alphabetized, dynamically-generated directory of all add-ons in the package.  Clicking on an entry will take you to the appropriate category that contains the addon, its description and its options.  (Click on the topic Add-On Directory, at the top of the list to see this)
+    (2) - Mousing over any category will list all the add-ons in that category
+    (3) - The categorization themselves have been simplified.  It should be easier to find the options you are looking for now.
+------------------------
+- Feature Addition: Mazzifier now differentiates between settings that are global and those that contain character-specific information!  Will now only mazzify global settings once per Mazzifier version.  This mean you will no longer overwrite global settings you may have changed when you mazzify a new character.  Mazzifier will now also consider Blizzard settings just like an add-on with global settings.  It has been moved from the parts list to the add-on list.
+- Feature Addition: Add-ons that are selected for Mazzification but are not currently loaded will be grayed out in the Mazzifier.  This is because their settings cannot be changed without first enabling them.  I think this will clear up some of those mysterious bug reports where add-ons aren't being mazzified for some people.
+- Feature Addition: Mazzifier now configures button bindings seperately from blizzard settings
+- Feature Addition: Mazzifier will now clear previous action placement when configuring buttons.  This means you won't get strange actions in slots where the Mazzifier could not find the appropriate spell.  It also means that the simple layouts will start blank when "place actions" is checked.
+- Feature Addition: Mazzifier now has a close button.
+- Feature Addition: In MazzleOptions, when enabling or disabling an add-on, it will warn the user that they must reload for the changes to take effect and provide a button that allows them to do so.
+- Feature Addition: New MazzleUI option allows you to set whether the context menu will move to your mouse location when opened.
+- Feature Addition: New MazzleUI option allows you to set whether the context menu will automatically hide when an item is used within it.
+- Feature Addition: Many new entries and GUI options added to MazzleOptions.  Old obsolete entries removed.  
+- Feature Addition: Added new hotspot that toggles context menu.  Located in old decursive hotspot location, middle right.
+- Feature Addition: Added tell target ability to replace one removed with Chat Frame Extender, by default alt-t.
+- Feature Addition: SimpleCompass hotspot changed to toggle AlphaMap instead.
+- Feature Addition: MazzleUI will now show WarmUp frame after logging in when WarmUp is enabled for a one-time execution.
+------------------------
+- 3rd Party Add-On Modification: Added more layout profiles to sRaid to handle the new raid views system.  Changed spacing of title names so that they look better in current layouts.  Made them closer to the groups.
+- 3rd Party Add-On Modification: Changed oRA2 main tank frames to be slimmed down when placed on the side layouts.
+- 3rd Party Add-On Modification: Changed vChat to not hide the scroll to bottom button so we can still see it flash when not at bottom.  Added dfm settings that moved and resized the icons to make them a little less intrusive.
+- 3rd Party Add-On Modification: A bunch of significant changes to EasyCopy, an add-on that lets you copy any text from your chat frames
+        - Fixed handling of "|C" control code.
+        - Removed OnUpdate processing (completely unnecessary) and just hooked the right functions in OnLoad.  Removed hooking of chatframes 6 and 7.  I don't think we need copying in the combat logs.         - Removed printing of time stamps (vChat's is better) and just use an @ at the beginning of the line for copying text.  
+        - Changed font color to match UI.  
+        - Changed borders of EasyCopy's editbox to match UI.  
+- 3rd Party Add-On Modification: Change StatusWindows to be saved per character for those people who play on multiple servers in different time zones.
+------------------------
+- Layout Change: 3d model platforms now silver blue to match rest of unit frame color scheme
+- Layout Change: Removed DUF's combo points and added positional data for ColorComboPoints
+- Layout Change: Moved AVBars to left side of screen so they are less likely to be accidentally clicked.  Also scaled a little larger.
+- Layout Change: Moved Character frame, SuperInspect and DressUp window so that they can all be seen without overlapping each other.
+- Layout Change: Answering Machine scaled to 300%.  (so you can see when you are far away from your computer)
+------------------------
+- Settings Change: Updated Fubar add-on ordering and display settings for many fubar plugins
+- Settings Change: Activate hoverlink in EQCompare
+- Settings Change: Clique settings added for Mage, Priest, Druid, Shaman and Paladin added to Mazzifier.  (If there are ones that make sense for other classes, please post.  Please also comment on settings chosen, especially for Druid, Shaman and Paladin.)
+------------------------
+- Button Layout Change: Added Durzil's Shaman layout.
+------------------------
+- Bug Fix: Context menu will no longer appear when dragging items or skills.
+- Bug Fix: Hud numbers will no longer occasionally show when HUD is completely disabled
+- Bug Fix: "Place actions in button" checkbox in Mazzifier will no longer be enabled when button mazzifying is not selected.
+- Bug Fix: Mazzifier will set KCItem settings more reliably.  No longer relies on toggling of values.
+- Bug Fix: XCalc will not throw an error when opening options window for it.  Corrected a bug in xcalc's code.
+- Bug Fix: Tabs in MazzleHelp and Mazzifier will be now be consistent with the information shown when pulling up said window a second time in the same session.  Mazzlehelp will also properly remember last tab shown now.
+- Bug Fix: Screenshot function should now be correctly bound to print screen button
+- Bug Fix: Context menu will properly remember shown or hidden state.
+- Bug Fix: Bag and micromenu bars will work properly upon login when initially shown (before you had to click the MazzleUI text twice to hide)
+- Bug Fix: Target model will now bring up target menu when right-clicked anywhere in the frame.
+- Bug Fix: Changed Autobar slider range checking to stop moving of autobar position when options are opened
+- Bug Fix: You can once again right-click on Natur's Enemy Castbar icon to quickly disable or enable the addon
+- Bug Fix: SpellAlertSCT will once again properly unregister events when disabled in efficiency modes
+- Bug Fix: Mazzifier will not throw an error when KCItems or ChatManager is not enabled when run.
+------------------------
+- Add-On Change: Removed CT RaidAssist and all related automatic layout code for it.  sRaid and oRA is completely compatible and far leaner and faster.  Even though the CTRA option worked fine, I removed it now b/c I would have eventually done it when BC comes out.
+- Add-On Change: Added ColorComboPoints to rogue and druid sets
+- Add-On Change: Added DamageMeters, SWStats, Gatherer, KLH ThreatMeter.  (all of these are expensive and will be disabled by default).  Some settings added to mazzifier for these add-ons
+- Add-On Change: Replaced ChatFrameExtender and CleanChat with vChat and Teknicolor.  (lower cost Ace2 alternatives.  Features aren't quite there yet, but it's close and will improve.)  Added Mazzifier settings for vChat.
+- Add-On Change: Replaced CT_MailMod with gMail. (lower cost Ace2 alternative.  Note: Author says mass mail may still be a little flaky)
+- Add-On Change: Replaced AceHeal with Clique.  More features, nicer interface and BC ready.  Healing logic of ace heal no longer needed.
+- Add-On Change: Replaced SpellAlert SCT with WitchHunt (Tried it before, but it wasn't mature enough.  Seems to be a lot better now.) Also changed efficiency mode to toggle witch hunt instead of SpellAlert.
+- Add-On Change: Replaced oRA with oRA2.  (I can finally fit the MT windows into the layouts.)
+- Add-On Change: Replaced FlightPath with FuBar ToFu.  (lighter, didn't find many features of flightpath all that necessary)
+- Add-On Change: Removed AutoShoutOut.  Popular demand.
+- Add-On Change: Removed Duel Inspect. Popular demand.
+- Add-On Change: Replaced EquipCompare with EQC.  Lighter-weight version of the same thing.
+- Add-On Change: Removed SimpleCompass.  Popular demand.
+- Add-On Change: Replaced Re-URL with a modified version of EasyCopy.  You can now copy any line of text by just clicking on the '@' symbol at the beginning of the line.
+- Add-On Change: Added FixMe
+- Add-On Change: Added Fubar Money
+- Add-On Change: Added class-specific addon Fubar MageFu (mage)
+- Add-On Change: Added class-specific addon Fubar Ankh Timer Fu
+- Add-On Change: Added class-specific addon DoTimer (warlock)
+- Add-On Change: Added class-specific addon Fizzwidget's Hunters Helper (hunter)
+- Add-On Change: Added class-specific addon FizzWidgets Feed-O-Matic (hunter)
+- Add-On Change: Added class-specific addon Sorren's Hunter Timers (hunter)
+- Add-On Change: Added class-specific addon Tracker Assist (hunter)
+- Add-On Change: Added class-specific addon Fubar Tank Points Fu (Warrior and Druid)
+- Updated Add-Ons: Ace 2 Libs-r15152, ImprovedErrorFrame_v3.41, Ace 1 r12403, AceGUI-r13223, AdvancedTradeSkillWindow044, AHFavorites-r12878, AlphaMap (Fan's Update)v2.62.11200, AntiDaze0.7, AtlasLoot Enhanced v1.20.01, AutoAcceptInvite-1.0, AutoBar-r15798, AutoBarConfig-r15762, Autorank_v1120_060925, AVBARS-EDFCT, BigWigs-r15826, BigWigs_CThunAssist-r15686, BigWigs_NefCount-r14300, BookOfCrafts_v11200f, BugSack-r14722, CEnemyCastBar_Natur5_3_9, Chatmanager_v1120_061005, Clique-0.9.3-Beta, ColorComboPoints, DamageMeters_AL_v5.3.1_11200, Detox-r15132, DeuceCommander-r15614, DiscordActionBars3_17a, DoTimer v1.2 BETA 3, EasyCopy1.1, EQCompare-r15499, filelist.txt, FixMe-r13990, FruityLoots-r14724, FuBar-compat-1.2-r14801, FuBar-r15528, FuBar_AnkhTimerFu-r12558, FuBar_BattlegroundFu-r14646, Fubar_DamageMetersFu2_2.0.1, FuBar_DurabilityFu-r15532, FuBar_ExperienceFu-r15533, FuBar_FactionsFu-r12503, FuBar_FriendsFu-r14697, FuBar_GuildFu-r15418, FuBar_HonorFu-r14608, FuBar_ItemRackFu_2.0, FuBar_KCIFu-r15194, FuBar_MailFu-r14728, FuBar_MoneyFu-r15275, FuBar_NameToggleFu-r2.0.14363, FuBar_PursueFu_1.1.3161, FuBar_ReagentFu-2.0.2, FuBar_SkillsPlusFu 2.1.1 (Light), FuBar_TankPointsFu-r15185, FuBar_TopScoreFu-r14429, FuBar_VolumeFu-2.0.15251, Gatherer-2.2.3.1, gfw-feedomatic-11200-1, gfw-huntershelper-11200-2, GMail-r15720, ImprovedErrorFrame_v3.2, ItemRackFu-r12506, KC_Items-r14336, KLHThreatMeter17.21, Mendeleev-r15156, Merchantbags_v1120_061005, MobHealth-r14223, oRA2-r15774, PartySpotterv3.10.11200, sct-r13904, sctd21, SHunterTimers1.6.13, SimpleCombatLog-r15413, smartassist_(r298), sRaidFrames-r15402, SuperInspect_v1.192.sm12, Teknicolor-r15027[andalia], TinyTip-r15088, TinyTipExtras-r15089, TinyTipOptions-r14587, TrackerAssist_v1.15, vChat-r12481, WitchHunt-r15603, XRS-r15766
+
+0.5
+- Feature Addition: Final Mazz3D add-on
+    - Completed model survey.  Every single model currently in game should display properly positioned and sized.
+    - Much smaller footprint and more efficient.  
+        - Clever guessing code, hashing model and complex database manipulation code no longer needed and now removed. :(  All debug and camera survey code removed.
+        - All data collection fields of the database pruned
+        - Add-On is now completely restructured and much of it has been rewritten (code is Ace'd and far less generalized)
+        - Event handling streamlined (events handling is now modular, ability to enable and disable portions)
+        - Now adjusts cameras when models change shape more accurately.  Bosses that morph, druid shapeshifting, and mage polymorth all handled seamlessly now.
+        - OnUpdate processing scaled back dramatically.  Most of the time it will not even be on.  Only turned on for short bursts when doing animation or adjusting the model.
+- Feature Addition: sRaidFrames setup now has 6 different raid layouts: (1) 8 groups on bottom, (2) party frames and no raid, (3)8 raid groups on top and party on bottom, (4) 8 raid groups on top only, (5) 8 raid groups on top centered around MT windows on top, party on bottom, and (6)8 raid groups on top centered around MT windows on top, no party
+- Feature Addition: oRA main tank window will now automatically move in 1.25 aspect ratio when using sRaid frames with 8 groups on bottm
+- Feature Addition: New option to turn off all MazzleUI raid frame management, for those of you who want to move your raid frames around manually.
+- Feature Addition: MazzleOptions provides better feedback when enabling and disabling add-ons.  It will now tell you whether it's enabled, disabled, enabled but disabled after reload, or disabled but enabled after reload.  Button name will now also change to say enable, disable, don't enable and don't disable according to current state.
+- Feature Addition: Many new MazzleOptions entries added.  Some obsolete entries removed.
+- Feature Addition: Mazzifier will not incrementally change bindings so you're less likely to have your bindings changed when updating.  (note: next version will split out bindings from blizzard settings)
+- Feature Addition: You can now set a favorite 20 man raid view in MazzleOptions and MazzleUI will automatically switch to it based on the number of people in the raid.
+- Feature Addition: MazzleOptions now has a button to restore detached chat windows, in case that bug hits you.  (it's under the Mazzifier category)
+- Code Improvement: All embedded Ace2 libraries consolidated in one central library directory.  All embedded libraries removed.  Should make initial loading faster and initial pre-garbage collection memory use smaller.
+- 3rd Party Add-On Modification: Changed Autobar to be able to dock to a chat frame (using DFM to position caused weird behavior)
+- 3rd Party Add-On Modification: Changed ace 1 slash command to /ace1 to work better alongside non-embedded ace 2
+- Art Change: All new icons for MazzleOptions, MazzleHelp, MazzleUI Efficiency Mode, Recap and FastCast
+- Art Change: New consistent blue metallic color scheme for unit frames instead of previous resource type color scheme
+- Art Change: All new combo points that are clearer and more colorful.  Pow!  Also moved to be above the HUD so that it will no longer overlap bigwigs timers.
+- Layout Change: Added bag slots display per request (please leave feedback on whether you find this useful)
+- Layout Change: Fixed position of MonkeyQuest.  Added positional data for MonkeyQuestLog.  Change transparency and borders of MonkeyquestLog to match MonkeyQuest.
+- Layout Change: Moved battlefield minimap to accomodate xraid status
+- Layout Change: Moved necrosis timer bars so they no longer overlap enemy cast bars if used
+- Layout Change: Replaced Lootster button with MazzleOptions button (no longer need to right click the help icon to get MazzleOptions)
+- Layout Change: Combo points and HUD target of target now default to 100% opacity to be more visible for people at lower resolutions
+- Layout Change: Party pet buffs moved up so that they are less likely to be obscured by pet's 3d model
+- Layout Change: Target unit frame now shows raid icon
+- Settings Change: MazzleUI Efficiency mode settings set to proper initial values (if you changed them, you should double-check them again)
+- Settings Change: Disabled CleanChat's weird name banner popup feature
+- Settings Change: Added positional information for AVBars
+- Settings Change: Changed Alphamap alphas to 75% for all maps
+- Settings Change: Fubar layout updated for new and removed add-ons.
+- Settings Change: Decursive settings updated for new versions
+- Settings Change: XCalc will now hide its minimap button by default
+- Bug Fix: Target debuffs will no longer move down when target has no buffs
+- Bug Fix: Health and mana numbers in 1.6 aspect ratio party frames will no longer truncate in windowed mode
+- Bug Fix: Damage overlay will now show up in front of 3d model of pet
+- Bug Fix: Decursive window will no longer show after Mazzifying
+- Bug Fix: Mazzification will no longer abort if sRaid is not enabled at the time
+- Bug Fix: oRA <-> CTRaid package switching should enable/disable all the right things now
+- Bug Fix: Text description in MazzleOptions will no longer get truncated in lower resolutions (thanks Tigerheart for finding out how to do that)
+- Bug Fix: Topic list in MazzleOptions will now be properly centered in all resolutions
+- Bug Fix: Fixed some entries in MazzleOptions that had the wrong add-on name for enabling/disabling.  FuBar_FactionsFu, oRA Resurrection, oRA Invite
+- Bug Fix: HUD will now disappear if you switch targets after attacking target without actually engaging (for e.g. if you right click on an enemy but never get in range to actually attack)
+- Bug Fix: HUD will now check combat status when zoning
+- Bug Fix: MazzleOptions will now properly set values for add-ons that may have empty data structures (like AHFilters Plus)
+- Bug Fix: Autobar now uses internal docking to position itself rather than DFM.  Should allow less buggy behavior after changing settings.  (Tigerheart suggestion)
+- Bug Fix: TrinketMenu no longer draggable
+- Bug Fix: Position of BigWigs timers fixed (they changed the frame name)
+- Bug Fix: Disabled blizzard's auto self cast (causes self cast in all failure states including out of range!  i.e. retarded)
+- Bug Fix: Removed "Now in raid 40" debug message
+- Bug Fix: Removed some Mazz3D debug messages
+- Bug Fix: Updated version number of Mazzifier that was left out in last version
+- Bug Fix: MazzleOptions will give user feedback that an add-on was enabled or disabled rather than a debug message.
+- Bug Fix: Change various buggy uses of UnitName in NeedyLists.  Also reduced some redundant function calls.
+- Bug Fix: Applied Tigerheart's fix for Autobar
+- Bug Fix: Removed some obsolete add-ons from MazzleOptions
+- Bug Fix: Load on demand addons not currently loaded will no longer show up as disabled in MazzleOptions
+- Bug Fix: The "Place Actions in Buttons" option will no longer be enabled when you don't have Button mazzifying on.
+- Documentation Change: Joyluck changed to Joypunk
+- Add-On Change: Removed RaidFrameKiller.  I don't think it's needed anymore.
+- Add-On Change: Replaced KungFu with SkillPlusFu Light.  Latter also does professions.
+- Add-on Change: Removed Lootster (and stomped up and down on it until it was a bloody pulp).  It was causing the raid lockup problem.
+- Add-on Change: Went back to the old CharactersViewer.  New one has a really unnecessary dependency on a character profiling add-on and seems to be moving in a more bloated direction.
+- Add-On Change: Added Tigerheart's AutoAcceptInvite.  (settings GUI will be added in next version.  command to access right now is /aai)
+- Add-On Updates: 
+                    AH_QuickSearch_v1.4
+                    AlphaMap (Fans Update)v2.52.11200
+                    AutoBar11203
+                    AVBARS5p4
+                    BigWigs-r11642
+                    BookOfTracks_v11200c
+                    CEnemyCastBar_Natur5_2_7
+                    CharactersViewer_12100_1.04
+                    Detox-r11650
+                    Dhask-FlightMap-v1.12-1
+                    DiscordActionBars3_17a
+                    DiscordArt1_52a
+                    DiscordLibrary1_48
+                    DuelINspect1.0
+                    FuBar-2.0.9980
+                    FuBar-r10891
+                    FuBar_AmmoFu-2.0.9831
+                    FuBar_BattlegroundFu-r10758
+                    FuBar_HonorFu-r10757
+                    FuBar_KCIFu-2.0
+                    FuBar_MailFu-r9603
+                    FuBar_SkillsPlusFu 1.1 (Light)
+                    Fubar_StarterPack-2.0.9794
+                    FuBar_TopScoreFu-r11984
+                    FuBar_VolumeFu-r11632
+                    ImprovedErrorFrame_v3.2
+                    ItemRack_1_975
+                    ItemRackFu-r10743
+                    MailTo_1.12
+                    MonkeyBuddy_v2.4.2
+                    MonkeyQuest_v2.4.2
+                    MonkeyQuestLog_v0.4.2
+                    ReURL_11200
+                    sct51
+                    sctd202
+                    SimpleActionSets.0.48b
+                    smartassist_(r282)
+                    SpecialTalent1_08
+                    SpellAlertSCTv11200-2b3
+                    sRaidFrames-r9575
+                    StopTheLagness-r10715
+                    SuperInspect_v1.192
+                    TinyTip-r11621
+                    TinyTipExtras-r11620
+                    TinyTipOptions-r11619
+                    Warmup-r10890
+                    xcalc-v200
+                    XRS-r9666
+
+
+0.40
+
+- Feature Addition: Added 4 automatic MazzleUI efficiency modes!  These modes optionally kick in when you are either (1) in combat, (2) in a party, (3) in a raid or (4) are pvp flagged.  You can now set exactly what gets turned off in any of the efficiency modes, including the manual one, via the new options GUI.  This can be used to not only to scale back settings, but to activate addons only in contexts where they are useful.
+- Feature Addition: Complete load-on-demand options system called MazzleOption now fully implemented
+    - Every add-on has an entry with full description and one-click enabling and disabling!
+    - Every add-on has a GUI to change options even if the base add-on only has slash commands!
+    - Many add-ons have value-added options that extend the add-ons functionality, for example, auto-hiding the resurrection monitor when you are not on a healer or are not dead yourself.
+    - MazzleUI itself now has a multitude of options
+        - HUD now has an always show option.  You can now change the transparency level of the HUD seperately for in-combat, out-of-combat states.  Can also change transparency level of Target of Target and combo points.
+        - Mazz3D add-on allows you to selectively turn off animations, random animations, event-based animations and model adjustments.  You can also change debug settings related to the camera survey now.
+        - Mazzifier can be launched and be told to force current version database to be up to date
+        - Mazzle efficiency modes has a full interface to set exactly what is active in each mode.  (more on that below)
+        - All hidden hotspots can now be toggled off
+        - Automation ptions to auto-hide context menu, auto-accept resurrections, auto-accepts summons
+        - Special raid settings such as automatically switching raid layouts depending on whether it's a 20-man or 40-man
+- Feature Addition: Now has an option to use a package of oRA, sRaid and BigWigs instead of CT Raid Assist!  They are faster, use less memory and are compatible with raids using CT Raid Assist.  Raid frames in the oRA option are handled by a version of sRaid that is modified to position raid groups out in the same way that my CT layout did.
+- Feature Addition: New Target of Target hotspot.  Click anywhere undearneath the target cave (where it says "Look at person x.")
+- Feature Addition: Added 3d animation enabling/disabling in efficiency modes.  Toggles events and onUpdate processing.
+- Feature Addition: Added name tags enabling disabling in efficiency modes.  Can swap all nametag settings, including new friendly name plates, depending on what mode you're in.  Currently set to only enable name tags when pvp flagged.
+- Feature Addition: Added ability to toggle Natur's Enemy Cast Bars in efficiency modes.  
+- Feature Addition: Added ability to toggle compass in efficiency modes.  
+- Feature Addition: Added ability to toggle FastCast latency compensation in efficiency modes.  (remember lag does not equal latency, so you will most likely only need to use this in manual mode if at all.)
+- Feature Addition: Added ability to toggle BigWigs boss warnings in efficiency modes.  
+- Feature Addition: Added ability to toggle Scrolling Combat Text in efficiency modes.
+- Feature Addition: Added ability to toggle Scrolling Combat Text Damage in efficiency modes.
+- Feature Addition: Added ability to toggle Scrolling Combat Text Cooldowns in efficiency modes.
+- Feature Addition: Added ability to toggle SpellAlert SCT in efficiency modes.
+- Feature Addition: Added ability to toggle visibility of all DAB buttons/floaters and control boxes in efficiency modes.
+- Feature Addition: Added ability to change to a lower Discord update rate during efficiency modes.
+- Feature Addition: Improved Mazzifier with more install options
+    - Add-On mazzification now split into Add-On Selection and Add-On Settings.  The former determines which add-ons get disabled, while the latter determines which ones have settings modified.  There is a new tab frame for add-on selection now.
+    - Add-On Selection pane allows you to select one of four raid packages: (1) CT RaidAssist, (2) CT RaidAssist + BossMods, (3) sRaid, oRA and oRA raiding modules, and (4) sRaid, oRA, oRA raiding modules and oRA raid leading modules
+    - Add-On Selection pane allows you to select other raiding add-ons such as BigWigs
+    - Button layout selector now has a checkbutton to allow you to suppress automatic placement of your spells into the buttons, so now you can modify your button layouts by themselves.
+    - The tab frames are now traversed with a series of "Next" buttons to encourage people to double-check/customize settings.  Mazzify button only shows up after you hit next on the last tab frame.
+- Feature Addition: MazzleUI will now automatically switch to your favorite 20 man or 40 man raid layout depending on the size of the raid.
+- Feature Addition: Added new hotzone to open xCalc (bottom right corner)
+- Feature Addition: Changed Needylist hotspot to toggle Decursive windows instead.  You can right-click same hot spot if you still want to toggle visibility of NeedyList.
+- Feature Addition: Added new hotzone to select target of target (area under target box)
+- Feature Addition: AceHeal now also a mage-enabled addon.  Right-Click = AI, Shift-RClick = AB, Ctrl-RClick = Dampen, Alt-RClick = Amplify, Alt-LClick = Remove Curse
+- Feature Addition: Mazzifier now places bags when mazzifying the layout
+- Feature Addition: Added settings for TinyTip to Mazzifier
+- Feature Addition: Added settings for SpellAlertSCT to Mazzifier
+- Feature Addition: Added settings for ChatCast to Mazzifier
+- Feature Addition: Tagged mobs now have a prominent TAGGED label
+- Feature Addition: Added settings and positional data for basic oRA addons to Mazzifier (oRA base, oRA MainTankFrames, oRA MainTank, oRA Say, oRA Ready)
+- Feature Addition: Added settings and positional data for BigWigs
+- Feature Addition: Added settings for CEnemyCastBar to Mazzifier (need feedback and suggestions on these settings!).  Also moved from PvP set to general set.
+- 3rd Party Add-On Modification: Added the ability to right-click on CEnemyCastBar's minimap icon to quickly disable or enable it.
+- 3rd Party Add-On Modification: Added onupdate throttling to Scrolling Combat Text Cooldowns (full rate updates were not necessary.)  Also added enable and disable commands to fully unregister events when add-on is disabled by MazzleUI efficiency mode.
+- 3rd Party Add-On Modification: Added aceheal interface to sRaid
+- 3rd Party Add-On Modification: Throttled SCT Cooldowns OnUpdating
+- 3rd Party Add-On Modification: Turned off SpellAlert SCT OnUpdating if feign death setting is off
+- 3rd Party Add-On Modification: MerchantBags will now also open bags when opening trade
+- 3rd Party Add-On Modification: Changed MovableBags so that it places bags initially in a good spot for the MazzleUI layout
+- 3rd Party Add-On Modification: Added enable and disable commands to SpellAlert SCT to fully unregister events when add-on is disabled by MazzleUI efficiency mode.  Also changed code to disable all onupdate processing when feign death retargeting was not enabled.  (It was previously doing an unthrottled onUpdate that did nothing but check a variable when it was disabled)
+- 3rd Party Add-On Modification: Made changes to Answering Machine, AutoRank, ChatManager, FastCast and SimpleCombatLog to allow options to be set via MazzleOptions.
+- 3rd Party Add-On Modification: Stopped RaidFrameKiller from indicating when it kills frames.
+- 3rd Party Add-On Modification: Added two new layouts to sRaidFrames auto layout function.
+- Layout Change: Itemref tooltips moved higher so they are less likely to overlap unit tooltips
+- Layout change: HUD target health now shows actual amount instead of percentage
+- Layout change: Various unit frame text now more clear as per Tigerheart suggestions (increased alpha, added shadows).  Also changed some colors in 1.6 aspect.
+- Layout change: Added more actual health and mana amounts to party unit frames, and target unit frame for all three aspect ratios.  Moved other elements to accomodate.
+- Layout Change: Whether an enemy is tapped is now more clearly labelled
+- Code Improvement: MazzleUI add-on now "Ace'd".  (At least somewhat, doesn't really doesn't change much performance-wise, but does make some event handling cleaner.)
+- Bug Fix: Fixed positioning of main decursive window.  Add-on changed the frame name.
+- 3rd Party Add-On Modification: C'thun warner fixed for 1.12 changes.  Few bugs also fixed as well as picture compressed.  All done by Tigerheart.
+- Bug Fix: Model damage overlays will no longer get truncated when the message is too long (for e.g. with resists)
+- Bug Fix: Stopped LoadIT from placing a button in the main menu.  Was not playing well with other buttons.
+- Bug Fix: Disabled frame repositioning in CT Raid (experimental)
+- Bug Fix: Hides Alphamap when starting.  (for some reason StatusWindow makes it appear when you log in)
+- Bug Fix: Entering an efficiency mode will now update the Recap and FastCast buttons if they are en/disabled as a result
+- Bug Fix: HUD numbers now synchronized with the appearance of the graphics (no longer relies on DUF to show in combat)
+- Bug Fix: Energy value in HUD now correct for rogues.
+- Bug Fix: Fixed all DART layouts so that HUD would stop stealing mousewheel input
+- Bug Fix: Fixed MyBindings code so that print screen will work again.
+- Bug Fix: Hunter layout descript points to the right action slot 120 for mounting
+- Bug Fix: Fixed lack of initial settings bug in MovableBags
+- Bug Fix: Removed non-existent frames from KC_Mobility
+- Bug Fix: KCItems will no longer give error about performing math on nil when starting up with no KCItems database
+- Bug Fix: Applied fixes from Ace forums so that KC_Mobility does not mess up escape closing on some windows
+- Settings Change: The "simple" setups are now the default for most classes.  I'm finding the people who prefer to use a simple Blizzard-like layout are also the ones who don't have the savvy to switch the button layout before Mazzifying. :D
+- Settings Change: Updated CleanChat settings for format change.
+- Settings Change: Updated ChatFrameExtender settings for format change.
+- Settings Change: Added MobHealth3 settings and starting database.
+- Settings Change: Added oRA settings.
+- Settings Change: Added sRaid settings.
+- Settings Change: Added initial xRaid settings.
+- Settings Change: Updated all settings for Fubar 2.0
+- Settings Change: Updated SmartAssist for new version
+- Settings Change: Updated TinyTip for new version
+- Settings Change: Updated Blizzard settings for new version
+- Settings Change: Updated CEnemyCastBar for new versions (need feedback)
+- Settings Change: Added a second context menu button for people without mousebutton 4
+- Settings Change: Added various new key bindings
+- Settings Change: Mendeleev now has more categories active
+- Settings Change: MonkeyQuest now anchored to topleft of screen and grows down
+- Settings Change: Updated TrinketMenu settings to incorporate new settings in new version.  Also turned off cooldown numbers since OmniCC handles.
+- Settings Change: Updated ChatMananager settings to incorporate format changes in new version.
+- Settings Change: Updated Fubar module position.
+- Settings Change: Updated CT RaidAssist Settings
+- Settings Change: Updated DFM settings for change in name of Autobar frames
+- Settings Change: Changed SimpleCombatLog to shows dots on others, so that you can now see see ignite and similar things tick in offensive combat window.  Should also show leeching type stuff
+- Add-On Change: Added modified version of sRaidFrames.  It's a light-weight alternative to ct's raid frames.  Added new layout code to properly place raid frames making room for the target box and, in the case of the smaller 1.25 resolution, moving groups 7 and 8 to an alternate locations.
+- Add-On Change: Added BigWigs, syncable, personal raid warning system.
+- Add-On Change: Added oRA and a variety of modules.
+- Add-On Change: Removed RestFu.  It was causing Mendeleev to give an error sometimes when mousing over things.  Will re-add when one of the two are fixed.
+- Add-On Change: Replaced Notebook with Gello's TinyPad.  Better features and it even matches the UI. :)
+- Add-On Change: Replaced MobileFrames with KC_Mobility and MovableBags (lighter weight and does not conflict with TinyTip)
+- Add-On Change: Replaced TipBuddy with TinyTips (lighter weight and seems to resolve some blizzard tooltip issues
+- Add-On Change: Replaced Metamap with Alphamap.  (Metamap was just starting to incorporate way too many other add-ons that I have no interest in.)
+- Add-On Change: Replaced Recap with Recap-ParserLib (should be more efficient now since it uses the same parsing engine that Simple Combat Log does)
+- Add-On Change: Removed PeriodicTable (I don't think anything in MazzleUI uses it anymore that doesn't already have it embedded)
+- Add-On Change: Removed FizzWidget AdSpace (didn't seem useful enough)
+- Add-On Change: Added BigWigs (personal boss warning timer that is syncable, blocks raid leader spam and shows some great timers)
+- Add-On Change: Added MonkeyQuestLog.  Replacement of the QuestLog that works hand in hand with MonkeyQuest.
+- Add-On Change: Added PartySpotter to the pvp set.  (Colors icons for people on the map depending on whether they're in your group, raid, etc.)
+- Add-On Change: Added ChatCast. Now that someone has fixed the bugs, it's back!  (Look for links in your chat that will do cool things when clicked.)
+- Add-On Change: Removed AceNameToggle (no longer needed.  Fubar has a plugin, and new MazzleUI options will have an auto-pvp toggle)
+- Add-On Change: Removed ChatFrameFix (no longer needed)
+- Add-On Change: Removed MailSound.  (was never being used, since you guys didn't have the data files!  What kind of testers are you?!? :D)
+- Add-On Change: Removed SortEnchant.  Advanced Trade Skill Window now handles enchanting as well.
+- Add-On Change: Removed Catalyst. No longer needed post-1.11.  Added to conflict list, so the Mazzifier will now disable it.
+- Add-On Change: Removed Fubar Transporter, AceTooltip (did not find useful)
+- Add-On Change: Removed Fubar-Compat-1.0, FuBarPlugin-1.2 (no longer needed by any Fubar plugins being used)
+- Add-On Change: Removed AceAccept.  Functionality now provided within MazzleUI.
+- Add-On Updates:   AdvancedTradeSkillWindow040
+                    AlphaMap (Fans Update)v2.25.11200
+                    AtlasLoot Enhanced v1.18.00
+                    AuctionFilterPlus_v11100-1
+                    AutoBar11202
+                    AVBars_EnDeFr
+                    BigWigs-r9465
+                    BookOfCrafts_v11200b
+                    BookOfTracks_v11100a
+                    CEnemyCastBar_Natur5_1_5
+                    CharactersViewer_11000_Beta2.53
+                    ChatCast
+                    Chatmanager_v1114_060721
+                    ClassMasterLoot_v1-10.rar
+                    CleanChat_testversion14
+                    ClearFont v11200-1
+                    Cryolysis1.0.0.rar
+                    CThunWarner
+                    CT_MailMod
+                    CT_RABossMods
+                    CT_RaidAssist v1.54
+                    CT_Raid_RaidIcons 1.2
+                    CT_Viewport
+                    Decursive-1.9.8.2.Archa
+                    Dhask-FlightMap-v1.12-1
+                    DiscordActionBars3_16
+                    DiscordArt1_51
+                    DiscordLibrary1_46
+                    DiscordUnitFrames2_46
+                    EquipCompare_2.9.7_11200
+                    Fastcast_v1112_060809
+                    FinderReminder-r9368
+                    FruityLoots_R1.4862
+                    FuBar-2.0.8960
+                    Fubar1.0 Addons
+                    Fubar1.2 AddOns
+                    FuBarPlugin-2.0.8326
+                    FuBar_CTRaid2.0
+                    FuBar_FactionsFu 2_0_8372
+                    FuBar_FriendsFu 2_1_8372
+                    FuBar_GuildFu 2_1_8372
+                    FuBar_HonorFu-2.0.8990
+                    FuBar_KCIFu-0.9.5
+                    FuBar_KungFu-2.0.8512
+                    FuBar_MailFu-r9561
+                    FuBar_NameToggleFu-r2.0.9309
+                    FuBar_TopScoreFu-r2.0.9446
+                    FuBar_VolumeFu-2.0.8671
+                    ItemRackFu v1.2
+                    ItemRack_1_974
+                    KC_Mobility v0.90
+                    Lexan-2.1
+                    MailTo_1.11.5
+                    MobHealth3-3.1.1
+                    MonkeyBuddy_v2.3
+                    MonkeyQuestLog_v0.2
+                    MonkeyQuest_v2.3
+                    OmniCC6830
+                    oRA-r9114
+                    oRA_Assist-r9240
+                    oRA_BuffTimes 1.0
+                    oRA_Cooldowns-r9239
+                    oRA_Durability-r9238
+                    oRA_Invite-r9237
+                    oRA_Item-r9236
+                    oRA_MainTank-r9135
+                    oRA_MainTankFrames-r9083
+                    oRA_MainTank_1.1.3613
+                    oRA_Menu-r9235
+                    oRA_RaidSay-r9288
+                    oRA_Ready-r9234
+                    oRA_Resist-r9233
+                    oRA_Resurrection-r9232
+                    oRA_Version-r9289
+                    oRA_Zone-r9290
+                    PartySpotterv2.52.11000
+                    Recap-3.32-p3
+                    sct_cooldowns 1.4.2
+                    SimpleCombatLog-0.7
+                    smartassist_(r269)
+                    SpecialTalent1_08b1
+                    SpellAlertSCT5b2
+                    SpellAlertSCTv11200-1
+                    SW_Stats.1.5.3
+                    TimexR23.2
+                    TinyPad_1_4
+                    TinyTip_v1.4.11
+                    TrinketMenu_3_41
+                    TwinTrinkets-1.2.1
+                    xcalc-v100
+                    XRS-r9634
+
+
+0.28
+- Feature Addition: Added 9 new layouts:  Simple Rogue, Simple Druid, and Simple Warrior for each of the three resolutions.  These are layouts for our beloved nublets who want something similar to the Blizzard default setup.  Each layout has 4 or 5 bars, one of which pages based on stance/steal/form.  Rogue layout also includes a poison bar for one-click poison application.
+- Feature Addition: Switches to chat frame 1 upon login to compensate for Blizzard's switching to the last frame.
+- Bug Fix: Updating the base key binding set will no longer overwrite settings defined in your DAB layout. It will now save your DAB bindings, re-install base key bindings, and then reapply your DAB ones over it!
+- Bug Fix: AceHeal, KC Items, and MyBindings are now all per character.  Some were per class before and were sometimes getting reset to the default profile when another ones profile was switched.  P.S. I hate Ace's profile mechanism.
+- Bug Fix: Metamap settings changed so you can right and left click to zoom in and out by default.  
+- Bug Fix: Priest layouts Resurrection button now aligned vertically with only one bar to avoid overlap with priests missing certain talents.
+- Bug Fix: Reverted back to old version of AceHeal to preserve backward compatibility until I get new settings configured.
+- Add-On Change: Replaced HitsMode with SimpleCombatLog.  (still being updated and lighterweight.  Also uses ParserLib which may allow for even more efficiency down the line.)
+- Add-On Change: Replaced OpenBags with Cirk's MerchantBags (kinda arbitrary, but seems lower cost and more recently updated.  And I like Cirk's other addons.)
+- Add-On Change: Removed RecapFu.  (Decided it's not worth the update cost since the bar is by default hidden)
+- Code Improvement: Updated to new timex function format
+- Settings Change: 'B' mapped back to Blizzard OpenAllBags since OpenBags removed.
+- 1.11 Workaround:  Added RaidFrameKiller.  Add-on to handle the crazy raid info window from continually popping up.
+- Add-On Updates: AceLoot R9.3195, AcePlayerMenu 6/6/07, Autobar v1110.2, Autrank v1110.2, CEnemyCastBar v4.5, CharactersViewer v1110.1, ChatManager v1111, ClassMasterLoot v1.09, ClearFont v11100-2, CT Raid Assist 1.539, Discord Action Bars 3.16c, Discord Art 1.51b, Discord Library 1.45, Discord Mini Panels 1.1, Discord Unit Frames 2.46d, DuelInspect 0.9, Fubar 1.2.2895, Fubar ReagentFu 1.2.2, Fubar RestFu 1.2425, Fubar TopScoreFu 1.1.2989, Fubar StarterPack 1.2.3361, Lootster 1.2.6, Mars Quest Organizer 6/26/06, MerchantBags v1110, MetaMap 4.70, MiniBlizzRaid 1.11.1, MobInfo2 2.97, Notebook v1110, RaidFrameKiller 1.1, SCT 4.131, SimpleCombatLog 0.7, SpellAlert SCT v1110-1, SuperInspect v1.192, Timex R23.1, TipBuddy 2.22, TwinTrinkets 1.20
+
+0.27b
+- Feature Addition: New MazzleHelp system.  In-game help desk with FAQs, add-ons documentation, detailed button layout synopses, UI tour and more.  Loads on demand.
+- Feature Addition: Mazzifier will now disable add-ons that explicitly conflict
+- Feature Addition:  Bags now semi-transparent
+- Addon Modification: Changed Lootster whisper commands so that they are less likely to cause unexpected spam.  All commands that players may whisper to you should now be prefaced with "lootster".  For example, the "tell" command is now "lootstertell".
+- Bug Fix: Added KeyRing binding (Ctrl-K)
+- Bug Fix: Disabling AutoShoutOut will no longer prevent future Mazzifications
+- Bug Fix: Mazz3D keybindings have proper names again (this time for real)
+- Bug Fix: Mazz3D camera collection functions disabled again
+- Bug Fix: Added button to Mazzifier to reloadUI since you can no longer do that automatically in 1.11
+- Bug Fix: Tabs on AH frame will no longer wander. ;)
+- Bug Fix: Initial party/raid overlap in 1.33 and 1.25 aspect ratio fixed
+- Bug Fix: Excessive moaning during Mazzification reduced.  (please verify)
+- Bug Fix: KC Items settings now set correctly for multiple characters (existing users should double check their settings for each character or delete their kc_items.lua file and remazzify that add-on)
+- Bug Fix: Disabled alt self casting in Autorank.  Interferes with layouts that use alt key bindings.  You can already set alt self-casting in DAB anyway.
+- Layout Change: Added MazzleHelp button and changed layout accordingly.
+- Layout Change: Removed bar conditions in paladin layout that was throwing a DAB error
+- Layout Change: Mage 1.6 adjusted for battleground icon.  Shift 1-6 keybindings changed to alt 1-6 for easier access.  Added cooldown buttons to HUD
+- Add-On Updates: AceGUI 0.91, AceHeal vR12kx03b, CEnemyCastBar Natur 4.4, ChatFrameExtender 11100.01, ClearFont v11100-1, CT MailMod 1.44, CT RaidAssist 1.538, CT RaidAssist BossMods 1.24, CT ViewPort 1.12, Decursive 1.9.7, DiscordActionBars 3.16b, DiscordArt 1.51a, DiscordLibrary 1.42, DiscordUnitFrames 2.46b, EquipCompare 2.96, Fubar CheckStoneFu 0.3, GFW AdSpace 11100-1, Lootster 1.25, MailTo 1.10, Metamap 4.63, MonkeyBuddy 2.3, MonkeyQuest 2.3, MyBindings 11100, Recap ?, SCT 4.13, SmartAssist 1.24, StatusWindow 11100.01, TheoryCraft 1.06.3
+- Add-On Addition: Added disabled version of SimpleActionSets (so users can use for submitting layouts or trying new ones)
+- Add-On Addition: Added CEnemyCastBar and AVbars to the pvp set.
+- Add-On Addition: Readded Fubar Factions and Fubar PetInfo
+- Add-On Change: Replaced SpellAlert with SpellAlertSCT.  (Let me know what you think of it in comparison)
+- Add-On Removed: Framerate Adjuster (redundant with MazzleUI Efficiency mode.  Also many people didn't seem to expect or like it.)
+- 1.11 Workaround: Disabled some hilite and disabled textures in ChatManager, Notebook
+- 1.11 Workaround: Fixed big tooltip in right corner caused by SuperInspect
+- 1.11 Workaround: Fixed tooltip in bottom right corner caused by TipBuddy
+
+0.26b
+- Bug Fix: Scale changed when Mazzifier window is shown to insure it's fully visible
+- Bug Fix: Map keybinding restored (Metamap used to have its own, but they removed it)
+- Bug Fix: Priest button layout will no longer overlap minimap for low level priests with few spells
+- Bug Fix: Possible workaround for Fubar having incorrect width (need you guys to check this.  I think it's a fubar bug.)
+- Bug Fix: Battleground minimap moved to top right of screen where it's actually visible :)
+- Add-On Settings Changed:  Framerate Adjuster won't kick in unless you're under 15fps
+- Layout Change: Battleground icon addjusted.
+- Add-On Updates: Framerate Adjuster 1.4, TheoryCraft 1.04.5, TipBuddy 2.21, Metamap 4.13
+
+0.25b
+- Feature Addition: Mazzifier now loads on demand.  With all the databases, settings, button layouts and graphics (for 3 different aspects in some cases), the Mazzifier takes up a good deal of memory.  Will now cost nothing when you're not Mazzifying.
+- Feature Addition: Mazzifier now maintains a database of internal versions so the user can "patch" their current install rather than install from scratch!
+- Feature Addition: Mazzifier now will alert the user of obsolete addons from previous versions of MazzleUI that should be removed
+- Feature Addition: Mazzifier will now place actions in the correct buttons.  No more copying buttons from screenshots!  You'll be good to go immediately.  (uses modified code extracted from Simple Action Sets)
+- Feature Addition: Mazzifier will now completely disable add-ons that are not useful to the class of the character being Mazzified.  (Other character can still use them.)  
+- Feature Addition: Mazzifier will now disable add-ons for level 60 characters that don't need them, for example, experience add-ons.
+- Feature Addition: Mazzifier will now disable PvP add-ons for users that don't PvP.
+- Feature Addition: Mazzifier now has immensely improved GUI
+    - Split into four all new tabs to allow much greater customization
+        - Options tab allows user to choose aspect ratio, which sections of the UI to mazzify, font size set, whether to install class-specific add-ons, whether to instal PvP add-ons and installation mode (full, update or custom)
+        - Add-Ons tab to view/select exactly which add-ons will have their settings customized.  Also tells user which add-on settings have changed in patch.  Can also be used to reset settings to default state.
+        - Button layout tab.  Allows user to VISUALLY browse various button layouts complete with screenshots and descriptions!
+        - Better on-screen instructions via its own tab.
+- Feature Addition: Created all new Recap Button.  Now you have a visual indicator of whether your monitoring combat, and a quick way to turn it on/off and hide the window.
+- Feature Addition: Added tooltips for all of the invisible hot zones.  Removed help text overlays that showed up when you clicked on MazzleUI icon since they are no longer needed.
+- Feature Addition: Created all new FastCast button.  Allows you to see whether FastCast is on.  Click to activate FastCast in high latency situations.
+- Button Layout Change: Improved Mazzle Mage layout.  Now handles all specs, including fire and arcane.  Has buttons for on the fly switching of frost fire focus.  Has button for one-step application of oils.  Context menu added.  All action IDs cleaned up.  Fixed bar control code.   Now does spell/action placement.
+- Button Layout Change: Improved Mazzle Priest layout.  Context menu added.  All action IDs cleaned up.  Added Holy Nova and Holy Fire.  Mind control bar moved to accomodate other changes.  Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Hunter Layout.  Context menu.  Bar 1 changes depending on whether target is at melee or projectile range.  Handles Beast Master, Marksman, and Survival specs.  Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Druid Layout.  Context menu.  Bar 1-3 changes depending on form.  Handles feral, resto and balance specs well. Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Warlock Layout.  Context menu.  Handles all specs.  Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Rogue Layout.  Context menu.  Bar 1 changes depending on form.  Handles all specs.  Special poison bar for one click application to either weapon.  Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Shaman Layout.  Context menu.  Handles all specs (I think.)  Now does spell/action placement.
+- Button Layout Addition: All new Mazzle Paladin Layout.  Context menu.  Handles all specs.  Now does spell/action placement.
+- Button Layout Addition: Joyluck's Warrior Layout.  Context menu.  Several bars/buttons changes depending on stance.  Should handle all specs.  Now does spell/action placement.
+- Button Layout Addition: Endrian's Warrior Layout.  Layout for those who prefer to see all skills without paging.  Now does spell/action placement.
+- Button Layout Addition: Endrian's Warlock Layout.  Now does spell/action placement.
+- Code Improvement: Mazz3D camera database updating now handled like a normal add-on in the Mazzifier
+- Code Improvement: Mazz3D camera database updated
+- Code Improvement: MazzleUI Efficiency Mode, FastCast and Recap buttons are now independently-handled textures rather than Discord Art entries.
+- Layout Change: Much cleaner looking MazzleUI Efficiency Mode button, matches new Recap and FastCast buttons.  Moved to be among the other configuration buttons.
+- Layout Change: Removed HP and Mana Regen monitors.  No room with new buttons.
+- Layout Change: Placed Lootster button among the other configuration buttons
+- Layout Change: Many miscellaneous window adjustements and scaling.
+- Layout Change: Hid MonkeyBuddy and TrinketMenu icons.  (will come back later in options GUI)
+- Bug Fix: Buttons layouts that overlap trinket menu and other components fixed.
+- Bug Fix: Crafting and flight timer bar borders once again match the rest of the UI
+- Bug Fix: ChatManager tooltip now stays on screen
+- Bug Fix: Automake will perform chunks of crafting queue rather than one item.  "Do" button changed to "Make Next Crafting Step".
+- Bug Fix: Bindings defined in a DAB class layout will not be overwritten by the default key bindings
+- Bug Fix: Quest timer will now retain position.  Moved to top right of screen so it doesn't overlap the compass.
+- Bug Fix: Improved Error Frame will wrap error text better
+- Add-On Addition: Added KeepItCool (Tracks cooldowns of various trade skills across characters/realms.  Fubar compatible)
+- Add-On Addition: Replaced Improved Assist with SmartAssist 1.23  (does some cool things like targetting tanked mob with lowest health)
+- Add-On Addition: Added Class MasterLoot 1.05 (organizes master loot menu by class and adds random option)
+- Add-On Addition: Added MiniBlizzRaid 1.3 (Chops out unnecessary Blizzard raid frames and other UI elements)
+- Add-On Addition: Added Lexan.  (stops AH frame for closing when other things are opened.)
+- Add-On Addition: Added WhoTip.  (Shows who information in a tooltip so you can see it without swtiching to the general tab.  A similar add-on used to be in an older version of MazzleUI)
+- Add-On Addition: Added Class-Specific Add-on TwinTrinkets and positioning information
+- Add-On Addition: Added Class-Specific Add-on NecrosisLTD, as well as settings and positioning information
+- Add-On Change: Made the following add-ons class-specific: AceHeal, Fubar_Aspect, Fubar_AmmoFu, Fubar_PetInfo, Fubar_CheckStoneFu, Fubar_ReagentFu, NeedyList, Necrosis, TwinTrinkets
+- Add-On Change: Replaced Kalented with Special Talents, which does the same thing but allows you to see all three talent trees simultaneously.
+- Add-On Change: Replaced SM PlayerMenu with AcePlayerMenu.  Smaller footprint.
+- Add-On Change: Replaced LootHog with Looto.  Does more and has a much nicer looking GUI.
+- Add-On Change: Replaced AutoMake with Advanced Trade Window.  Does a ton more really cool stuff and...um still works.
+- Add-On Settings Change:  Too many to list.  Probably about 60% of the add-ons were changed or updated.
+- Add-On Removal: Removed KC Schedule Keep, AF ToggleBags, AutoMount.  They were either not needed or were already taken care of by other Add-Ons.  
+- Add-On Removal: Removed AuctionIt and related library Gryffon.  Not enough added functionality over KC's auction related functions.
+- Add-On Removal: Removed ChatCast temporarily.  Currently broken for some classes.  Has not been updated in some time :(  Will bring back when it works again.
+- Add-On Removal: Removed KC Enhanced Trades.  Advanced Trade Window already does this.
+- Add-On Removal: Removed FilterTradeSkill.  Advanced Trade Window already does this.
+- Add-On Removal: Temporarily removed TargetZ.  Currently does not work with the TipBuddy which is a more central add-on.
+- Add-On Removal: Temporarily removed Fubar PetInfo.  Currently does not work with latest version of Fubar.
+- Add-On Update:  Ace 1.3.1, AcePlayerMenu 0.2, Advanced Trade Skill Window 0.32, Answering Machine 1.11,, AQ AutoMount 1.8, Catalyst 1.2, ChatFrameFix 0.1, Book of Tracks 1100B, , Chatmanager v1102, Class MasterLoot 1.07, ClearFont 1100-4,, CleanChat 0.9b, Decursive 1.962,, Dhask FlightMap 1.10,, FilterTradeSkill 2.2.4,, Finder Reminder 1.4,, Fubar 1.2.2052, Fubar BattlegroundFu 1.1, Fubar CombatInfoFu 0.61, Fubar FriendsFu 1.5, Fubar GuildFu 1.52, Fubar ReagentFu 0.13, Fubar RecapFu 0.5.1, Fubar Transporter 0.64, Fubar Starter Pack 1.2.2054, gfxToggle R22, , KeepItCool 1.4, KC Items 0.94.5, Lexan 1.71, Lootster 1.22, MailTo 1.9.1, Mendeleev 0.71, Metamap 4.11, MiniBlizzRaid 1.3, MobInfo 2.89,, NecrosisLTD 1.51a, PeriodicTable r1347, ScrollingCombatText 4.12,, Simple Compass 1.09, Smart Assist 1.23, SortEnchant 2.22, SpecialTalent 1.05, Super Inspect 1.91, TheoryCraft 1.04.3, TipBuddy 2.209, WarmUp 0.5, WhoTip 1.1
+
+0.24b
+- Feature Addition: MazzleUI efficiency mode!  New button changes settings of various add-ons and uses gfxToggle to lower graphical and computational costs to speed up your performance in demanding areas. Currently changes graphics, turns off random animations, flinching animations, Recap and SimpleCompass. More to come in the future.
+- Feature Addition:  New hidden hot zone.  Clicking on the coordinates below the map will open up SimpleCompass.
+- Feature Addition: Right-clicking on Recap corner (bottom right of MazzleUI panel) toggles combat tracking.  Left-clicking hides/shows the Recap window.
+- Addon Change: Went back to old NeedyList.  I don't think the current version is ready for prime time. 
+- Feature Addition: Modified older version of NeedyList to have an "Add Party" button in the configurations.  Expanded the number of characters you can type in the sticky box to be twice as long.
+- Bug Fix: Fubar altered so that it doesn't try to move the chat frame window (and make the general tab disappear). Fubar deprecation messages also suppressed.
+- Bug fix: Autobar will no longer lose its position when you pull up the options window for it.
+- Bug Fix: Target of Target bar for party members now works in 1.6 aspect layout.
+- Bug Fix: Disabled texture detail changing in gfxtoggle to avoid disappearing of minimap.
+- Code Improvement: Moved minimap border into add-on folder and got rid of data folder overrides completely.
+- Code Improvement: MazzleUI art in Discord Library folder moved to MazzleUI directory
+- AddOn Addition: Fubar What's Up 1.90 (shows you how many of each BG is up), QueueWho 2.89, Mendeleev 1.6.5, SimpleCompass 0.7, AQ AutoMount 1.7
+- Addon Update: ItemRack 1.06, Metamap 3.4, SortEnchant 2.13, Warmup 0.5, NeedyList 2.01, Catalyst 1.20, ChatFrame Extender 1100.07, Book of Tracks 1100-7, AceLoot R6, Discord Art 1.5b
+- Layout Change: Changed self and target buff frames to be better aligned and start filling from the appropriate places in 1.25 aspect layout
+- Layout Change: Damage overlay on player better centered in all 3 aspects
+- Layout Change: Rest XP now shown as % rather than absolute amount (which seems to be buggy) in all 3 aspects
+- Bug Fix: Added placement of quest timer and game time frame.  These probably were not visible before.  
+- Layout Change: Removed character frame positioning.  
+- Layout Change: Minimap more accurately centered.
+- Layout change: Resized and adjusted target buttons to be more accurately aligned with target frame art.
+- Layout change: TrinketBar moved to be inbetween the time and ChatFrame6.  This gives more room to buttons.  Now that autobar is on the far right, it's much less likely that a shapeshift or pet bar will be in that spot.  MazzleUI Efficiency mode button placed next to TrinketBar
+- Settings change: LootHog settings changed.  Among other things, will no longer spam invalid roll messages.
+
+0.23b
+- Feature Addition: Clicking on 3D model now targets unit, right-clicking pulls up party menu.  You can still hold down to rotate or right-click to start an animation.
+- Feature Addition: Added warrior setups (cleaned up and modified version of Endrian's submission, scaled for 1.6, 1.25 and 1.33.  Improved mage and priest setups for all three aspect ratios.  Generic setups now use smart cast.
+- Feature Addition: Mazzifier now properly configures Autorank, Autobar, Fubar and Fastcast.
+- Feature Addition: Enhanced version of Ghostbar.  It now behaves more like a context menu.  Hit Shift-Mousebutton-4 to pull up.
+- Feature Addition: Enhanced version of LootHog courtesy of Tigerheart.  Shows min/max amounts for each player,
+above what the author did, so you can see 'cheaters' right away.
+- Feature Addition: First pass at merged user database from all current submissions.  Approximately twice the size of previous database.  Over 3500 mobs from all over Azeroth.
+- Art addition: Added chat edit box border to match rest of UI
+- Layout change: Group 2 and 3 swapped in 20 man 1.6 layout for better 10 man group layout, 1 and 2 swapped in 40 1.33 layout for less strange initial group formation :)
+- Addon Change: Added Ghostbar, Boss Panel, many Boss add-ons, WT_ZoningTimeFix, Catalyst, FilterTradeSkill 2.2.2, EasyMasterLoot 0.1.b1, Finder Reminder, TargetZ, Loothog
+- Code Improvement: Moved minimap mask and casting bar art into add-on folder and got rid of data folder override (new feature in 1.10)
+- Layout change: Trinketbar moved up per user request
+- Layout change: Autobar added (anchored to topright of chatbox 7)
+- Layout change: Flight timer bar moved to same location as casting bar
+- Addon Change: Removed KCAutoRepair (FuBar Repair module does the same thing), removed rSelfCast (already possible within DAB which also does smart self, and alt-clicking), removed all Titan addons (replaced by FuBar), removed TellTarget  (functionality already in ChatFrameExtender.)
+- Addon Change: Temporarily disabled Warmup, SortEnchant, FuBar Recap due to unresolved errors.
+- Settings change: Updated CFE, SCT, CTRA, NeedyList Mazzifier configurations.
+- Settings change: Added new needy list 2.0 features (yay, sticky multi groups!)
+- Addon Update: 
+AutoRank 1101, Catalyst 1.1.1, CharactersView 0.9.1, ChatCast 1.41, ChatFrame Extender 1100.05, CleanChat TV8, ClearFont 1100v4, CT Raid Assist 1.532, CT Raid Assist Boss Mods 1.22, CT Viewport 1.22, Decursive 1.94, Discord Action Bars 3.15, Discord Art 1.4, Discord Frame Modifier 1.2, Discord Library 1.4, Discord Macro Functions 1.26, Discord Unit Frames 2.45, DmgCalc 1.7, FastCast v1102, FizzWidget's AdSpace 1100-1, HitsMode 2.1.4, Inner Fire v1103, ItemRack 1.95, Metamap 3.30, MobileFrames 3.21, MobInfo 2.85, NeedyList 2.0, SCT 4.11, SM_PlayerMenu 1.4, SortEnchant 2.11, SuperInspect 1.17, SuperInspect 1.18, TargetButtons 0.36, TheoryCraft 1.02j, Timex R23.01, WT ZoningTimeFix 1.6c
+
+0.21b
+- Addon Update: Hitsmode 2.14, Discord Library (fixes tooltip problem)
+- Layout change: Platforms widened for races with big feet.  (dwarves!)
+- Bug fix: Applied manual fix to DAB resolve problems with cyclical errors.  Re-enabled Mage layout and DAB layout loading.
+- Bug fix: Fixed uninitialized table error with new Mazz3D import functions
+- Bug fix: Fixed text size not being saved
+- Bug fix: Removed default database for kc_items, since it now comes with one.  Issued command to initialize that instead.
+
+0.2b
+- Feature Addition: Target of Target on HUD
+- Feature Addition: Command-line text size changing (/mazzify normal|large|magoo)
+- Feature Addition: Modified StatusWindow code to increase refresh rate and slim down display
+- Feature Addition: Mazz3D merges import database with current database.  Database version numbers added.
+- Layout change: Leader icons moved up to accomodate taller races
+- Layout change: Damage overlay moved up to accomodate taller races
+- Layout change: DFM layout modified to accomodate removal of AB button
+- Layout change: Combo points adjusted for all HUDS to accomodate ToT.  Size/transparency modified.
+- Add-on Change: Added Cirk's InnerFire
+- Add-on Change: Removed Auto-buff, KC Enhanced Trades, ListFix, SM_PlayerMenu temporarily.
+- Add-on Change: VanasReply removed permanently since it's now built into the default UI.
+- Bug fix: Mazzifier no longer loads 1.6 Aspect ratio priest layouts for 1.33 and 1.25
+- Bug fix: Applied manual fix specified in forums to DAB for 1.10
+- Bug fix: Applied manual fix specified in forums to DiscordLibrary for 1.10
+- Bug fix: Manually fixed AceHeal for 1.10
+- Bug fix: Manually fixed StatusWindow for 1.10, redid layout
+- Bug fix: Manually fixed ABInfo for 1.10
+- Bug fix: Manually fixed CharactersViewer for 1.10
+- Bug fix: Manually fixed ChatFrameExtender for 1.10
+- Bug fix: Manually fixed AuctionIt for 1.10
+- Bug fix: Manually fixed Decursive for 1.10
+- Bug fix: Manually fixed DmgCalc Plus for 1.10
+- Bug fix: Manually fixed KC_AutoRepair for 1.10
+- Bug fix: Manually fixed KC Items for 1.10
+- Bug fix: Manually fixed Mobile Frames for 1.10
+- Bug fix: Manually fixed Metamap for 1.10
+- Bug fix: Manually fixed NeedyList for 1.10
+- Bug fix: Manually fixed TitanRepair for 1.10
+- Bug fix: Manually fixed Auction Filter Plus for 1.10
+- Bug fix: Manually fixed RegisterForSave issue with Titan XP Status
+- Bug fix: Recap no longer gets borked when minimized
+- Bug fix: Battleground button no longer on minimap
+- Bug fix: Weapon temporary buff #2 repositioned vertically (need rogue to verify)
+- Bug fix: Titan settings initialized with server name
+- Bug fix: AceHeals binds to mouse buttons only for classes that can heal.  Shield binding only on priest.  (Should fix clicking problem)
+- Add-on Updates: ClearFont 11000-2, ItemRack_1.94, TheoryCraft 1.01, ChatFrameExtender, SortEnchant 2.00b, Decursive 1.93
+- Settings change: Metamap main map coords on
+- Settings change: Equip compare now always shows as opposed to only when you hold down ctrl
+- Settings change: Item rack updated with new settings for new version
+
+0.12b
+- Add-Ons Updates: Autorank v1100, ClearFont 11000-1, CT_MailMod, CT_RABossMods, CT_RaidAssist 1.53, CT_Viewport, FlightMap 1.10, Discord Spellbook 1.1a, EquipCompare 2.96, FastCast 1.91, KC_Items 1.94.3, MobileFrames 3.1, NeedyList 1.62, SCT 4.1, StatusWindow, TheoryCraft 1.00c, Timex r23b6, Titan Recap 1.23, MailTo 1.8, ItemRack_1.92, Decursive 1.9.1
+- Bug fix: Mazzifier no longer reinitializes mob database
+
+0.1b Initial Release
+

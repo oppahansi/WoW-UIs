@@ -1,0 +1,55 @@
+------------------------------------------------------------------------
+r232 | grum | 2009-04-15 17:50:08 +0000 (Wed, 15 Apr 2009) | 2 lines
+Changed paths:
+   M /trunk/Modules/UrlCopy.lua
+
+Modules/UrlCopy: Dropped 'select' from the filterfunc, should be a bit more efficient now.
+
+------------------------------------------------------------------------
+r231 | grum | 2009-04-15 17:41:03 +0000 (Wed, 15 Apr 2009) | 4 lines
+Changed paths:
+   M /trunk/Modules/Highlight.lua
+
+Modules/Highlight:
+- Pass correct arguments to chatfilters (thanks SqueeG for reporting).
+- Don't allow creation of empty or all whitespace highlights.
+
+------------------------------------------------------------------------
+r230 | antiarc | 2009-04-15 00:50:40 +0000 (Wed, 15 Apr 2009) | 1 line
+Changed paths:
+   M /trunk/Chatter.toc
+   M /trunk/Modules/UrlCopy.lua
+
+Fix UrlCopy for 3.1. Bump TOC.
+------------------------------------------------------------------------
+r229 | antiarc | 2009-04-14 08:21:32 +0000 (Tue, 14 Apr 2009) | 1 line
+Changed paths:
+   M /trunk/Modules/UrlCopy.lua
+
+Fix the UrlCopy chat filter for 3.1. Drycode, will fix tomorrow if it's broken. Teepz, make me a sandwich.
+------------------------------------------------------------------------
+r228 | mikk | 2009-03-20 17:48:02 +0000 (Fri, 20 Mar 2009) | 3 lines
+Changed paths:
+   M /trunk/Modules/AltNames.lua
+
+AltNames:
+- Avoid a "You are not in a guild." error message for unguilded toons
+- Avoid toons being promoted/demoted past an "Alt" rank retaining unwanted notes (until next reload/relog)
+------------------------------------------------------------------------
+r227 | arrowmaster | 2009-03-20 03:55:44 +0000 (Fri, 20 Mar 2009) | 1 line
+Changed paths:
+   M /trunk/Modules/DelayGMOTD.lua
+
+Fix string.match error if something calls ChatFrame1:AddMessage(nil) before the GMOTD is found
+------------------------------------------------------------------------
+r226 | stanzilla | 2009-02-17 00:20:36 +0000 (Tue, 17 Feb 2009) | 4 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/Chatter.toc
+   D /trunk/embeds.xml
+
+- Load libs from toc and use no-lib-strip
+- fix .pkgmeta for LibBetterBlizzOptions
+- add LBBO to the list of loaded libs, yes it was not in there O.o
+- ignore Tests folder and localization script for zip creation
+------------------------------------------------------------------------

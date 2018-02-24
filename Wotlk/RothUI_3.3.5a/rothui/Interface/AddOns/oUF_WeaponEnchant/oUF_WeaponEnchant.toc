@@ -1,0 +1,8 @@
+## Interface: 30300
+## Author: Gotai
+## Version: r5
+## Title: oUF_WeaponEnchant
+## Notes: Weapon Enchant support for oUF
+## RequiredDeps: oUF
+
+oUF_WeaponEnchant.lua

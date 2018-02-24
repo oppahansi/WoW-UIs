@@ -1,0 +1,9 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="MarsQuestOrganizer.lua"/>
+	<Frame name="MarsQuestOrganizerFrame">
+		<Scripts>
+			<OnLoad>MarsQuestOrganizer_OnLoad();</OnLoad>
+			<OnEvent>MarsQuestOrganizer_OnEvent();</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

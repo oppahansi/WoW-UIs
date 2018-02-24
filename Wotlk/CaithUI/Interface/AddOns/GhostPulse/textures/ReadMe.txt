@@ -1,0 +1,1 @@
+Put TGA files here to use them as texture overlays for 'skinning' the pulses.  Best to use higher resolution textures than those generally available with cyCircled or ButtonFacade (try for at least 128 x 128 images for best results).

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <interface xmlns="http://www.wowace.com/xmlns/wowaddon/">20000</interface>
+  <author>Kaelten &amp; Turan</author>
+  <description>AddOn development and management toolkit.</description>
+  <enclosure length="51997" type="application/zip" url="http://files.wowace.com/Ace/Ace-r26541.zip"/>
+  <guid>http://files.wowace.com/Ace/Ace-r26541.zip</guid>
+  <link/>
+  <pubDate>Tue, 31 Jul 2007 22:17:49 +0000</pubDate>
+  <stable xmlns="http://www.wowace.com/xmlns/wowaddon/">false</stable>
+  <title>Ace</title>
+  <version xmlns="http://www.wowace.com/xmlns/wowaddon/">26541</version>
+</item>

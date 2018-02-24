@@ -1,0 +1,9 @@
+## Interface: 1800
+## Title: ColorComboPoints v1.00
+## Notes: Show your combo points as colored boxes underneath your character
+## SavedVariables: CCP_CONFIG
+## OptionalDeps: myAddOns
+## LoadOnDemand:
+## Dependencies:
+ColorComboPoints.xml
+CCPoption.xml

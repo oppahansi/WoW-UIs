@@ -1,0 +1,28 @@
+------------------------------------------------------------------------
+r78662 | StingerSoft | 2008-07-17 20:36:31 -0400 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Omen/Localization/ruRU.lua
+   M /trunk/Omen/Omen.toc
+
+Omen: fix ruRU translation
+------------------------------------------------------------------------
+r78656 | StingerSoft | 2008-07-17 20:16:34 -0400 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   A /trunk/Omen/Localization/ruRU.lua
+   A /trunk/Omen/Modules/AOE/Localization/ruRU.lua
+   A /trunk/Omen/Modules/Healer/Localization/ruRU.lua
+   A /trunk/Omen/Modules/Overview/Localization/ruRU.lua
+   A /trunk/Omen/Modules/SingleTarget/Localization/ruRU.lua
+
+Omen: added fully ruRU translation
+------------------------------------------------------------------------
+r78652 | StingerSoft | 2008-07-17 19:15:35 -0400 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Omen/Modules/AOE/module.xml
+   M /trunk/Omen/Modules/Healer/module.xml
+   M /trunk/Omen/Modules/Overview/module.xml
+   M /trunk/Omen/Modules/SingleTarget/module.xml
+   M /trunk/Omen/Omen.toc
+
+Omen: Added ruRU locale files
+------------------------------------------------------------------------

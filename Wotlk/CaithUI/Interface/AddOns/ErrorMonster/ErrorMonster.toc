@@ -1,0 +1,29 @@
+## Interface: 30100
+## Title: ErrorMonster
+## Author: Rabbit
+## Notes: Filter and redirecter for errors, system messages and information messages.
+## Notes-esES: Filtro y redireccionador para errores, mensajes de sistema y mensajes de informaci\195\179n.
+## Notes-zhCN: 过滤和移除错误，系统，提示信息。
+## Version: 3
+## X-Credits: Allara for RogueSpam.
+## X-Category: Combat
+## X-eMail: rabbit.magtheridon@gmail.com
+## X-Website: http://www.wowace.com
+## X-License: CC-BY-NC-SA-2.5
+## SavedVariables: ErrorMonsterDB
+## OptionalDeps: Ace3, LibSink-2.0
+## X-Curse-Packaged-Version: r85
+## X-Curse-Project-Name: ErrorMonster
+## X-Curse-Project-ID: error-monster
+## X-Curse-Repository-ID: wow/error-monster/mainline
+
+embeds.xml
+
+ErrorMonster-enUS.lua
+ErrorMonster-koKR.lua
+ErrorMonster-esES.lua
+ErrorMonster-zhCN.lua
+ErrorMonster-zhTW.lua
+
+ErrorMonster.lua
+

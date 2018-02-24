@@ -1,0 +1,25 @@
+﻿## Interface: 20400
+## Title: AtlasLoot_Crafting
+## Title-deDE: AtlasLoot |cFF0099FF[Crafting]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[Crafting]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[Crafting]|r
+## Notes: AtlasLoot loot tables of Crafting Items
+## Notes-deDE: AtlasLoot loot tables of Crafting Items
+## Notes-zhCN: AtlasLoot loot tables of Crafting Items
+## Notes-zhTW: AtlasLoot loot tables of Crafting Items
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+crafting.en.lua
+crafting.cn.lua
+crafting.de.lua
+crafting.es.lua
+crafting.fr.lua
+crafting.tw.lua
+crafting.kr.lua

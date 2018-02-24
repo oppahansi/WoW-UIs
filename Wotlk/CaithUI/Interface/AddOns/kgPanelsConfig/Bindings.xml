@@ -1,0 +1,8 @@
+<Bindings>
+	<Binding name="KGPANELFF" header="KGPANEL">
+		local kgc = LibStub("AceAddon-3.0"):GetAddon("kgPanels"):GetModule("kgPanelsConfig")
+		if kgc then
+			kgc:ShowFrames()
+		end
+	</Binding>
+</Bindings>

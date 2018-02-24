@@ -1,0 +1,43 @@
+local L = AceLibrary("AceLocale-2.2"):new("FuBar_HonorFu")
+
+L:RegisterTranslations("zhCN", function() return {
+	["Target hostile flagholder"] = "以夺旗者为目标",
+	["Target the current opposing flagholder. (also /tflag or /tarflag)"] = "以当前对抗夺旗者为目标 (/tflag or /tarflag)",
+	["Show honor"] = "显示荣誉",
+	["Show battlegrounds score"] = "显示战场得分",
+	["Show kills and deaths"] = "显示杀人和死亡数",
+	["Show PvP cooldown"] = "显示PvP冷却",
+	["Auto-release when dead"] = "死亡自动释放灵魂",
+	["Toggle whether to automatically release when dead in battlegrounds"] = "切换是否在战场死亡后自动释放灵魂",
+	["Auto-open minimap for battlegrounds"] = "自动打开战场小地图",
+	["Toggle whether to automatically open the battlegrounds minimap"] = "切换是否自动打开战场小地图",
+	["Print out PvP reputation gains"] = "输出PvP声望获得",
+	["Print out honor gains"] = "输出荣誉获得",
+	["Add info to enemy tooltip"] = "加入敌人提示信息",
+	["Reset battlegrounds scores"] = "重置战场得分",
+	["Reset the battlegrounds scores to 0-0"] = "重置战场得分到0-0",
+	["Gained %d reputation with %s"] = "获得 %d 点 %s 声望", -- "Gained 50 reputation with Warsong Outriders"
+	["Kill: %s %s. %d honor gained. Killed %d times today"] = "击杀: %s %s。获得 %d 点荣誉。今日击杀 %d 次", -- "Kill: Private Guy. 50 honor gained. Killed 2 times today"
+	["Gained %d bonus honor"] = "获得 %d 点荣誉", -- "Gained 50 bonus honor"
+	["Killed Today"] = "今日击杀",
+	["Number of kills today.\nIf more than 10 kills, then no more honor from this player."] = "今日击杀次数。\n如果超过10次，今日再击杀该玩家将不获得荣誉。",
+	["%d Kills - |cff%s%.0f%% %s|r"] = "%d 次击杀 - |cff%s%.0f%% %s|r", -- "3 Kills - |cffcfcfcf70% Honor|r"
+	["On"] = "开启",
+	["Off"] = "关闭",
+	["Kills-Deaths:"] = "击杀数-死亡数:",
+	["Today's HK honor:"] = "今日击杀荣誉",
+	["Today's bonus honor:"] = "今日奖励荣誉",
+	["Today's total honor:"] = "今日总荣誉",
+	["Flagged"] = "旗帜",
+	["PvP Cooldown:"] = "PvP 冷却:",
+	["Progress:"] = "进度:",
+	["Yesterday's honor:"] = "昨天荣誉",
+	["This week's honor:"] = "本周荣誉",
+	["Last week's honor:"] = "上周荣誉",
+	["Rating limit:"] = "军阶限制",
+	["Rank limit:"] = "等级限制",
+	["Battlegrounds score:"] = "战场得分",
+	["%s score"] = "%s 得分", -- "Warsong Gulch score"
+	["%s weekend"] = "%s 战场节日", -- "Warsong Gulch weekend"
+	["Click to target flag carrier (%s)"] = "单击将目标锁定夺旗者(%s)", -- "Click to target flag carrier (Guy)"
+} end)

@@ -1,0 +1,40 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fGuild Positions|r]
+## X-Name: Guild Positions
+## X-Name-deDE: Gildenpositionen
+## X-Name-frFR: Positions guilde
+## X-Name-koKR: 길드원 위치
+## X-Name-esES: Posiciones de Hermandad
+## X-ModuleName: GuildPositions
+## Notes: Module which shows you your fellow guild members' positions, as well as allowing them to see you.
+## Notes-deDE: Zeigt Dir die Position Deiner Gildenmitglieder an und erlaubt ihnen, Deine zu sehen.
+## Notes-frFR: Module affichant la position des membres de votre guilde, et leur permettant de voir la votre.
+## Notes-koKR: 당신의 위치를 길드원에게 표시하거나 길드원의 위치를 표시하는 모듈을 제공합니다.
+## Notes-esES: Módulo que muestra las posiciones de tus compañeros de hermandad, y también les permite verte a ti
+## Notes-zhTW: 這個模組可以讓你看到公會其他成員的位置，當然也可以讓他們看見你。
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, Babble-2.2, Roster-2.1, TabletLib, RollCall-1.0, CrayonLib, TouristLib
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceComm-2.0\AceComm-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\Babble-Class-2.2\Babble-Class-2.2.lua
+#Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+#Libs\Roster-2.1\Roster-2.1.lua
+#Libs\Tablet-2.0\Tablet-2.0.lua
+#Libs\RollCall-1.0\RollCall-1.0.lua
+#Libs\Crayon-2.0\Crayon-2.0.lua
+#Libs\Tourist-2.0\Tourist-2.0.lua
+
+GuildPositions.lua

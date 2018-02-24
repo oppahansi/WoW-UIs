@@ -1,0 +1,14 @@
+﻿## Interface: 20400
+
+## Title: Lib: Rock-1.0
+## Notes: AddOn development framework
+## Author: ckknight
+## X-Website: http://www.wowace.com
+## X-Category: Library
+## X-Donate: Paypal:ckknight AT gmail DOT com
+## X-eMail: ckknight AT gmail DOT com
+## X-License: LGPL v2.1
+## SavedVariables: LibRock_1_0DB
+## OptionalDeps: !BugGrabber, !Swatter
+
+lib.xml

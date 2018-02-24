@@ -1,0 +1,12 @@
+tag v1.1.3
+65da45c8fefc3b70198f056edcd5f6ddcb1aa447
+Brian Drell <daedhir@gmail.com>
+2011-12-07 18:54:00 -0700
+
+Tagging as v1.1.3
+
+
+--------------------
+
+Brian Drell:
+	- TOC bump

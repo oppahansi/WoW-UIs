@@ -1,0 +1,7 @@
+------------------------------------------------------------------------
+r75898 | arrowmaster | 2008-06-03 09:55:19 -0400 (Tue, 03 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/EQCompare/EQCompare.toc
+
+EQCompare: I swore I fixed this 2 months ago but I guess I didn't
+------------------------------------------------------------------------

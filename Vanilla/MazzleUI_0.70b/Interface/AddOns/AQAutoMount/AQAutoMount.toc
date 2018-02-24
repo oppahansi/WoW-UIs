@@ -1,0 +1,5 @@
+## Interface: 11000
+## Title: Ahn'Qiraj Auto Mount
+## Notes: Automatically use a Qiraj Resonating Crystal instead of your normal mount when in Ahn'Qiraj.
+## SavedVariables: AQAutoMount_Saved
+AQAutoMount.xml

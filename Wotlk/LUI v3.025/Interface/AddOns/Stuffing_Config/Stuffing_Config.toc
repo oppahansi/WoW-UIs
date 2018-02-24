@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: Stuffing_Config
+## Notes: Stuffing configuration GUI
+## Author: Hungtar
+## Version: 0.0.20
+## Dependencies: Stuffing
+## LoadOnDemand: 1
+
+embeds.xml
+Stuffing_Config.lua

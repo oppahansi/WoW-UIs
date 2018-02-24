@@ -1,0 +1,360 @@
+
+NeedToKnow_Settings = {
+	["Version"] = "2.0.1",
+	["Groups"] = {
+		{
+			["Enabled"] = true,
+			["NumberBars"] = 3,
+			["Scale"] = 0.9375003576278687,
+			["Bars"] = {
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [1]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "Reflection of Torment",
+					["Unit"] = "player",
+				}, -- [2]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "Greatness",
+					["Unit"] = "player",
+				}, -- [3]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [4]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [5]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [6]
+			},
+			["Width"] = 301.8665867646431,
+		}, -- [1]
+		{
+			["Enabled"] = false,
+			["NumberBars"] = 3,
+			["Scale"] = 1,
+			["Bars"] = {
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [1]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [2]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [3]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [4]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [5]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [6]
+			},
+			["Width"] = 270,
+		}, -- [2]
+		{
+			["Enabled"] = false,
+			["NumberBars"] = 3,
+			["Scale"] = 1,
+			["Bars"] = {
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [1]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [2]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [3]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [4]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [5]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [6]
+			},
+			["Width"] = 270,
+		}, -- [3]
+		{
+			["Enabled"] = false,
+			["NumberBars"] = 3,
+			["Scale"] = 1,
+			["Bars"] = {
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [1]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [2]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [3]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [4]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [5]
+				{
+					["Enabled"] = true,
+					["OnlyMine"] = true,
+					["BuffOrDebuff"] = "HELPFUL",
+					["BarColor"] = {
+						["a"] = 1,
+						["b"] = 0.6,
+						["g"] = 0.6,
+						["r"] = 0.6,
+					},
+					["AuraName"] = "",
+					["Unit"] = "player",
+				}, -- [6]
+			},
+			["Width"] = 270,
+		}, -- [4]
+	},
+	["BkgdColor"] = {
+		["a"] = 0.8,
+		["b"] = 0,
+		["g"] = 0,
+		["r"] = 0,
+	},
+	["Locked"] = true,
+	["BarTexture"] = "BantoBar",
+	["BarPadding"] = 3,
+	["BarSpacing"] = 3,
+}

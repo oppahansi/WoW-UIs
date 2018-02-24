@@ -1,0 +1,12 @@
+## Interface: 20400
+
+## Title: Lib: SimpleSlash1
+## Version: 1.4.2
+## Author: Saeris
+## LoadOnDemand: 1
+
+
+## Notes: A library to handle slash commands.
+
+
+SimpleSlash1_Loader.xml

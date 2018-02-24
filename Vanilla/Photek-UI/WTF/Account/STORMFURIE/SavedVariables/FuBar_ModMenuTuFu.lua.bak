@@ -1,0 +1,9 @@
+
+ModMenuTuFuDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+			},
+		},
+	},
+}

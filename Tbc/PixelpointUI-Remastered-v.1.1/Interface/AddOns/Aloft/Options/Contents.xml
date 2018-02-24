@@ -1,0 +1,40 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+
+<Script file="CoreModules\AliasData.lua"/>
+<Script file="CoreModules\BossIcon.lua"/>
+<Script file="CoreModules\CastBar.lua"/>
+<Script file="CoreModules\ClassData.lua"/>
+<Script file="CoreModules\ClassificationData.lua"/>
+<Script file="CoreModules\CreatureTypeData.lua"/>
+<Script file="CoreModules\Frame.lua"/>
+<Script file="CoreModules\HealthBar.lua"/>
+<Script file="CoreModules\Highlight.lua"/>
+<Script file="CoreModules\IsPetData.lua"/>
+<Script file="CoreModules\LevelText.lua"/>
+<Script file="CoreModules\NameText.lua"/>
+<Script file="CoreModules\RaceData.lua"/>
+<Script file="CoreModules\RaidIcon.lua"/>
+<Script file="CoreModules\SpellIcon.lua"/>
+
+<Script file="Modules\Alpha.lua"/>
+<Script file="Modules\Banzai.lua"/>
+<Script file="Modules\CastBarTimeText.lua"/>
+<Script file="Modules\CombatText.lua"/>
+<Script file="Modules\ComboPointsText.lua"/>
+<Script file="Modules\CommentData.lua"/>
+<Script file="Modules\CommentText.lua"/>
+<Script file="Modules\GuildData.lua"/>
+<Script file="Modules\GuildText.lua"/>
+<Script file="Modules\HealthText.lua"/>
+<Script file="Modules\ManaBar.lua"/>
+<Script file="Modules\ManaText.lua"/>
+<Script file="Modules\PetOwnersNameText.lua"/>
+<Script file="Modules\Polymorph.lua"/>
+<Script file="Modules\RecentlyDamagedIcon.lua"/>
+<Script file="Modules\ShackleUndead.lua"/>
+<Script file="Modules\ShortGuildData.lua"/>
+<Script file="Modules\SpellNameText.lua"/>
+<Script file="Modules\ThreatBar.lua"/>
+<Script file="Modules\Visibility.lua"/>
+
+</Ui>

@@ -1,0 +1,6 @@
+<Bindings>
+	<Binding name="SH_GETUPDATE" header="SHARD">
+	</Binding>
+	<Binding name="SH_OPTIONS">
+	</Binding>
+</Bindings>

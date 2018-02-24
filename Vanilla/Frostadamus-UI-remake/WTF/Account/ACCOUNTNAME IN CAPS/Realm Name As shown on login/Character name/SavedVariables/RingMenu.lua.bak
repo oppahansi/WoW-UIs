@@ -1,0 +1,14 @@
+
+RingMenu_settings = {
+	["colorR"] = 0,
+	["backdropScale"] = 1.5,
+	["colorAlpha"] = 0.5,
+	["animationSpeedOpen"] = 4,
+	["angleOffset"] = 0,
+	["colorB"] = 0,
+	["colorG"] = 0,
+	["numButtons"] = 12,
+	["animationSpeedClose"] = 3,
+	["startPageID"] = 13,
+	["radius"] = 100,
+}

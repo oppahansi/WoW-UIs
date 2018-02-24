@@ -1,0 +1,25 @@
+﻿## Interface: 20400
+## Title: AtlasLoot_BCInstances
+## Title-deDE: AtlasLoot |cFF0099FF[BC-Instances]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[BC-Instances]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[BC-Instances]|r
+## Notes: AtlasLoot loot tables from Burning Crusade instances
+## Notes-deDE: AtlasLoot loot tables from Burning Crusade instances
+## Notes-zhCN: AtlasLoot loot tables from Burning Crusade instances
+## Notes-zhTW: AtlasLoot loot tables from Burning Crusade instances
+## Author: Protcow
+## Version: 1.0.0
+## X-eMail:
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.youtube.com/Protcow
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+
+burningcrusade.en.lua
+burningcrusade.cn.lua
+burningcrusade.de.lua
+burningcrusade.es.lua
+burningcrusade.fr.lua
+burningcrusade.kr.lua
+burningcrusade.tw.lua

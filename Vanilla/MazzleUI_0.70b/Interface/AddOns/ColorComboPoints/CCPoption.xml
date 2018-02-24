@@ -1,0 +1,131 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/"> 
+	<Script file="ColorComboPoints.lua"/>
+	<Button name="CCP_BoxTemplate" parent="TBOptions" frameStrata="PARENT" movable="true" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="200" y="20"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOP" />
+		</Anchors>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="8"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="8"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="2" right="2" top="2" bottom="2"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">			
+				<FontString name="$parent_Title" inherits="GameFontNormal">	
+					<Anchors>
+						<Anchor point="LEFT" relitiveTo="$parent"/>							
+					</Anchors>
+					
+					<FontHeight>
+						<AbsValue val="14"/>
+					</FontHeight>
+					<Color r="1" g="1" b="0"/>
+				</FontString>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parent_Value" inherits="GameFontNormal">	
+					<Anchors>
+						<Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+						<Offset>	
+							<AbsDimension x="-4" y="0"/>;
+						</Offset>
+					</Anchor>
+					</Anchors>
+					<FontHeight>
+						<AbsValue val="14"/>
+					</FontHeight>
+					<Color r="1" g="1" b="1"/>
+				</FontString>
+			</Layer>			
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonDown", "MiddleButtonDown" ,"RightButtonDown");
+			</OnLoad>
+			<OnClick>				
+				CCP_SetValue(this:GetName(),arg1);				
+			</OnClick>		
+		</Scripts>
+	</Button>	
+	
+	<Frame name="TBOptions" toplevel="false" frameStrata="LOW" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+		<Size>
+			<AbsDimension x="250" y="20"/>
+		</Size>
+		<Anchors>
+			<Anchor point="RIGHT" relativePoint="CENTER"/>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border"
+			tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />	
+				<Size>
+					<AbsDimension x="128" y="17" />
+				</Size>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="CCPOptionsSave" inherits="GameMenuButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="20"/>
+				</Size>		
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="BOTTOM" relitiveTo="CENTER">
+						<Offset>
+							<AbsDimension x="50" y="-15" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						PlaySound("gsTitleOptionOK");
+						CCP_HideOption();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="CCPOptionsReset" inherits="GameMenuButtonTemplate" text="RESET">
+				<Size>
+					<AbsDimension x="80" y="20"/>
+				</Size>		
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="BOTTOM" relitiveTo="CENTER">
+						<Offset>
+							<AbsDimension x="-50" y="-15" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						PlaySound("gsTitleOptionOK");
+						CCP_Reset();
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+		</Frames>
+		<Scripts>
+			<OnMouseUp>
+				CCP_MouseUp(this:GetName());
+			</OnMouseUp>
+			<OnMouseDown>
+				CCP_MouseDown(arg1);
+			</OnMouseDown>
+		</Scripts>
+	</Frame>
+	
+</Ui>

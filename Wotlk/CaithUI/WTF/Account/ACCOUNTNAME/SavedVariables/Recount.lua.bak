@@ -1,0 +1,37 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Caithlyn - Gorgonnash"] = "Caithlyn - Gorgonnash",
+	},
+	["profiles"] = {
+		["Caithlyn - Gorgonnash"] = {
+			["GraphWindowY"] = 0,
+			["MainWindow"] = {
+				["Position"] = {
+					["y"] = 135.7949984153428,
+					["x"] = -598.6153380626809,
+					["w"] = 340.9232645612925,
+					["h"] = 238.5640279211764,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+					["Total Bar"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["DetailWindowY"] = 0,
+			["DetailWindowX"] = 0,
+			["MainWindowWidth"] = 340.9231925857298,
+			["MainWindowVis"] = false,
+			["MainWindowHeight"] = 238.563991933395,
+			["GraphWindowX"] = 0,
+			["LastInstanceName"] = "Alterac Valley",
+			["CurDataSet"] = "CurrentFightData",
+		},
+	},
+}

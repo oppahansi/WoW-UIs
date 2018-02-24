@@ -1,0 +1,40 @@
+Creating Plugins for AzCastBar
+------------------------------
+Coding a plugin for AzCastBar is relatively easy, I will try and describe in this text file what to do.
+The best teacher however, would be to just look at one of the already created plugins, and learn from those, maybe even use it as a base.
+Not everything there is to know is described in this file, so you will have to look at the code of an existing plugin to see it all.
+
+AzCastBar Core Functions
+------------------------
+CreateMainBar(frameType,token,options,multi)
+CreateBar(frameType,mainBar)
+FormatTime(sec,ext)
+GetOptimalAnchor(parent)
+
+Getting Started
+---------------
+To create a plugin, you should use the CreateMainBar() function, you want to use "Button" as frameType if you want it to be clickable,
+"Frame" otherwise, token will be the title of the plugin, and should be unique, options will be specific options table for your plugin,
+multi should be true if your plugin will show more than one bar.
+The frame returned by this function will be your first bar, it is adviced you use this to register the events you need.
+Any subsequent needs for more bars should be created using CreateBar(). First parameter here is the same as for CreateMainBar(),
+the second one should be the mainbar of your plugin.
+
+Updating the Bar
+----------------
+When updating the bar objects in the "OnUpdate" script, it is adviced to use the "bar:SetTimeText(time)" function rather than setting
+the text by using "bar.time:SetText(AzCastBar.FormatTime(sec,ext))". Doing so will avoid any creation of Lua garbage strings.
+If a "bar.totalTimeText" string variable is set, the "bar:SetTimeText()" function will also display the total time.
+
+OnConfigChanged Function
+------------------------
+This function is called when a plugin setting is changed. The two arguments passed are: mainBar, cfg.
+
+Plugin API Changes
+------------------
+Back when I first created this addon, it had no support for plugins, that was something which came slowly over time.
+Because of this, the implementation from my point of view is not ideal, there are certain things I would like to change,
+but haven't done so, as I don't want to break any plugins needlessly, although I am good at doing it anyway.
+
+- The various bar control variables, such as "token", should have had an underscore prefix, so it becomes "_token". This would avoid any concflicts by custom plugin variables.
+- Bar objects names should be capitalised, to again avoid conflicts with a plugin's own variables (bar.status -> bar.Status).

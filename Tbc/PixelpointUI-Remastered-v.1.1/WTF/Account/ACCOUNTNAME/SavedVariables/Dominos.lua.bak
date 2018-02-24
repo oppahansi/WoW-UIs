@@ -1,0 +1,217 @@
+
+DominosDB = {
+	["profileKeys"] = {
+		["Pixelpoint - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["ab"] = {
+				["style"] = {
+					nil, -- [1]
+					nil, -- [2]
+					nil, -- [3]
+					{
+					}, -- [4]
+				},
+			},
+			["petStyle"] = {
+				nil, -- [1]
+				nil, -- [2]
+				false, -- [3]
+				{
+				}, -- [4]
+			},
+			["frames"] = {
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 0,
+					["pages"] = {
+						["ROGUE"] = {
+							["[bonusbar:1]"] = 6,
+							["[bar:6]"] = 5,
+							["[bar:5]"] = 4,
+							["[bar:3]"] = 2,
+							["[bar:4]"] = 3,
+							["[bar:2]"] = 1,
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [1]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 40,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [2]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 80,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [3]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 120,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [4]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 160,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [5]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 200,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [6]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 240,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [7]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 280,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [8]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 320,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [9]
+				{
+					["point"] = "BOTTOM",
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 360,
+					["pages"] = {
+						["ROGUE"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [10]
+				["cast"] = {
+					["y"] = 30,
+					["x"] = 0,
+					["showText"] = true,
+					["point"] = "CENTER",
+				},
+				["menu"] = {
+					["y"] = 0,
+					["x"] = -244,
+					["point"] = "BOTTOMRIGHT",
+					["numButtons"] = 8,
+				},
+				["roll"] = {
+					["point"] = "LEFT",
+					["spacing"] = 2,
+					["numButtons"] = 4,
+					["columns"] = 1,
+				},
+				["xp"] = {
+					["y"] = -32,
+					["x"] = 0,
+					["point"] = "TOP",
+					["height"] = 14,
+					["texture"] = "blizzard",
+					["alwaysShowText"] = true,
+					["width"] = 0.75,
+				},
+				["bags"] = {
+					["numButtons"] = 6,
+					["point"] = "BOTTOMRIGHT",
+					["spacing"] = 4,
+				},
+				["pet"] = {
+					["y"] = -32,
+					["x"] = 0,
+					["point"] = "CENTER",
+					["spacing"] = 6,
+					["showstates"] = "[target=pet,nodead,exists,nobonusbar:5]",
+					["numButtons"] = 10,
+				},
+				["class"] = {
+					["numButtons"] = 1,
+					["point"] = "CENTER",
+					["spacing"] = 2,
+				},
+			},
+			["classStyle"] = {
+				nil, -- [1]
+				nil, -- [2]
+				false, -- [3]
+				{
+				}, -- [4]
+			},
+		},
+	},
+}
+DominosVersion = "1.3.3"

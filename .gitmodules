@@ -1,0 +1,45 @@
+[submodule "Vanilla/vashin1-WarriorUI"]
+	path = Vanilla/vashin1-WarriorUI
+	url = git@github.com:vashin1/WarriorUI.git
+[submodule "Vanilla/vashin1-SyncedUI"]
+	path = Vanilla/vashin1-SyncedUI
+	url = git@github.com:vashin1/SyncedUI.git
+[submodule "Vanilla/vashin1-SyncedUI-1440p-"]
+	path = Vanilla/vashin1-SyncedUI-1440p-
+	url = git@github.com:vashin1/SyncedUI-1440p-.git
+[submodule "Tbc/vashin1-SyncedUI-TBC"]
+	path = Tbc/vashin1-SyncedUI-TBC
+	url = git@github.com:vashin1/SyncedUI-TBC.git
+[submodule "Wotlk/vashin1-SyncedUI-WOTLK"]
+	path = Wotlk/vashin1-SyncedUI-WOTLK
+	url = git@github.com:vashin1/SyncedUI-WOTLK.git
+[submodule "Vanilla/shagu-pfUI"]
+	path = Vanilla/shagu-pfUI
+	url = git@github.com:shagu/pfUI.git
+[submodule "Vanilla/McgGithub-McgUI-1.12"]
+	path = Vanilla/McgGithub-McgUI-1.12
+	url = git@github.com:McgGithub/McgUI-1.12.git
+[submodule "Vanilla/obble-modui"]
+	path = Vanilla/obble-modui
+	url = git@github.com:obble/modui.git
+[submodule "Vanilla/Dyaxler-SpartanUI_Vanilla"]
+	path = Vanilla/Dyaxler-SpartanUI_Vanilla
+	url = git@github.com:Dyaxler/SpartanUI_Vanilla.git
+[submodule "Tbc/Dyaxler-SpartanUI_TBC"]
+	path = Tbc/Dyaxler-SpartanUI_TBC
+	url = git@github.com:Dyaxler/SpartanUI_TBC.git
+[submodule "Tbc/ElvUI-TBC-ElvUI"]
+	path = Tbc/ElvUI-TBC-ElvUI
+	url = git@github.com:ElvUI-TBC/ElvUI.git
+[submodule "Wotlk/ElvUI-Wotlk-ElvUI"]
+	path = Wotlk/ElvUI-Wotlk-ElvUI
+	url = git@github.com:ElvUI-WotLK/ElvUI.git
+[submodule "Wotlk/Bunny67-KkthnxUI-3.3.5"]
+	path = Wotlk/Bunny67-KkthnxUI-3.3.5
+	url = git@github.com:Bunny67/KkthnxUI-3.3.5.git
+[submodule "Wotlk/cogwerkz-DiabolicUI"]
+	path = Wotlk/cogwerkz-DiabolicUI
+	url = git@github.com:cogwerkz/DiabolicUI.git
+[submodule "Wotlk/Bunny67-Aurora"]
+	path = Wotlk/Bunny67-Aurora
+	url = git@github.com:Bunny67/Aurora.git

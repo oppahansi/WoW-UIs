@@ -1,0 +1,23 @@
+
+AucAdvancedConfig = {
+	["profile.Default"] = {
+		["stat.sales.ignoredsigs"] = {
+		},
+	},
+}
+AucAdvancedData = {
+	["AserArbitrageRealms"] = {
+		["Icecrown"] = "[character]",
+	},
+	["Stats"] = {
+	},
+	["UtilSearchUiData"] = {
+		["Global"] = {
+		},
+		["Current"] = {
+		},
+		["Version"] = 1,
+		["SavedSearches"] = {
+		},
+	},
+}

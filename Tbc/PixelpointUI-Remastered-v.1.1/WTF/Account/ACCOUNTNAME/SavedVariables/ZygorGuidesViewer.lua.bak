@@ -1,0 +1,27 @@
+
+ZygorGuidesViewerSettings = {
+	["currentProfile"] = {
+		["Pixelpointxx - Bugs and Crashes"] = "char",
+	},
+	["profiles"] = {
+		["char/Pixelpointxx - Bugs and Crashes"] = {
+			["visible"] = true,
+			["iconScale"] = 0.5,
+			["minimapnotedesc"] = true,
+			["step"] = 1,
+			["minimode"] = false,
+			["section"] = 15,
+			["opacitymain"] = 1,
+			["starting"] = false,
+			["iconAlpha"] = 1,
+			["autoskip"] = true,
+			["debug"] = false,
+			["minicons"] = false,
+			["showgoals"] = true,
+			["filternotes"] = false,
+			["hidecompleted"] = false,
+			["opacitymini"] = 1,
+			["autosizemini"] = true,
+		},
+	},
+}

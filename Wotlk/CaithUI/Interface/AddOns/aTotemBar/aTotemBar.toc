@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: aTotemBar
+## Features: Move and Hide the Default Totem Bar, Totem Timers, and Hides Blizzard's Timers
+## Author: Arimis - Bonechewer US
+## SavedVariables: aTotemBarDB
+
+aTotemBar.lua

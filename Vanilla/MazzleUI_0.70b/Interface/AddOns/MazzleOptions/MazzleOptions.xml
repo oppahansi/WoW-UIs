@@ -1,0 +1,391 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+    <Script file="localization.lua"/>
+    <Script file="MazzleOptions.lua"/>
+    <Script file="MazzleOptions_Addon_Interfaces.lua"/>
+    <Script file="MazzleOptions_Settings.lua"/>
+    <Script file="MazzleOptions_Settings2.lua"/>
+    <Script file="MazzleOptions_Help.lua"/>
+	<Font name="MazzleOptions_TitleFont" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight>
+			<AbsValue val="36"/>
+		</FontHeight>
+		<Color r="1" g="1" b="1"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="1"/>
+		</Shadow>
+	</Font>
+	<Button name="MazzleOptions_MainButtonTemplate" inherits="UIPanelButtonGrayTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="96" y="28"/>
+		</Size>
+		<NormalText inherits="GameFontHighlightSmall"/>
+		<DisabledText inherits="GameFontDisableSmall"/>
+		<HighlightText inherits="GameFontHighlightSmall"/>
+		<Scripts>
+			<OnClick>
+				MazzleOptions_CategoryButtonOnClick(this:GetID())
+			</OnClick>
+		</Scripts>
+	</Button>
+
+    <Frame name="MazzleOptions_Frame" toplevel="true" movable="true" enableMouse="true" hidden="true" parent="UIParent">
+        <Size>
+            <AbsDimension x="900" y="620" />
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER" relativeTo="UIParent">
+                <Offset>
+                    <AbsDimension x="0" y="0" />
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+            <BackgroundInsets>
+                <AbsInset left="11" right="12" top="12" bottom="11"/>
+            </BackgroundInsets>
+            <TileSize>
+                <AbsValue val="32"/>
+            </TileSize>
+            <EdgeSize>
+                <AbsValue val="32"/>
+            </EdgeSize>
+        </Backdrop>
+        <Frames>
+			<Button name="MazzleOptions_CloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="MazzleOptions_Frame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-10" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+            <Frame name="MazzleOptions_WaveIcon1" >
+                <Size>
+                    <AbsDimension x="64" y="64" />
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativeTo="MazzleOptions_Frame" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-10" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="MazzleOptionsWaveTexture1" setAllPoints="true">
+                            <TexCoords left="0" right="1" top="0" bottom="1" />
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Frame>
+            <Frame name="MazzleOptions_WaveIcon2" >
+                <Size>
+                    <AbsDimension x="64" y="64" />
+                </Size>
+                <Anchors>
+                    <Anchor point="BOTTOMLEFT" relativeTo="MazzleOptions_Frame" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="10" y="-10" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture name="MazzleOptionsWaveTexture2" setAllPoints="true">
+                            <TexCoords left="0" right="1" top="0" bottom="1" />
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Frame>
+            <Frame name="MazzleOptions_Banner" >
+                <Size>
+                    <AbsDimension x="800" y="64" />
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="MazzleOptions_Frame" relativePoint="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="0" />
+                        </Offset>
+                    </Anchor>
+                    <Anchor point="TOPRIGHT" relativeTo="MazzleOptions_Frame" relativePoint="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="0" y="0" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Backdrop bgFile="Interface\AddOns\MazzleOptions\images\MazzleUI_Books" edgeFile="" tile="true">
+                    <BackgroundInsets>
+                        <AbsInset left="11" right="12" top="12" bottom="11"/>
+                    </BackgroundInsets>
+                </Backdrop>
+				<Layers>
+					<Layer>
+						<FontString name="MazzleOptions_TitleText" inherits="MazzleOptions_TitleFont" text="MazzleUI Options" justifyH="CENTER">
+							<Size>
+								<AbsDimension x="500" y="0"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOP">
+									<Offset>
+										<AbsDimension x="0" y="-15"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+                <Scripts>
+                    <OnMouseDown>
+                    	local parent = this:GetParent();
+                    	if (arg1 == "LeftButton") then
+                    		parent.isMoving = true;
+                    		parent:StartMoving();
+                    	end
+                    </OnMouseDown>
+                    <OnMouseUp>
+                    	local parent = this:GetParent();
+                    	if (parent.isMoving) then
+                    		parent:StopMovingOrSizing();
+                    		parent.isMoving = nil;
+                    	end
+                    </OnMouseUp>
+                    <OnHide>
+                    	local parent = this:GetParent();
+                    	if (parent.isMoving) then
+                    		parent:StopMovingOrSizing();
+                    		parent.isMoving = nil;
+                    	end
+                    </OnHide>
+                </Scripts>
+            </Frame>
+			<Button name="MazzleOptions_OptionsButton" inherits="MazzleOptions_MainButtonTemplate" text="Options" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="25" y="-75"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="MazzleOptions_HelpButton" inherits="MazzleOptions_MainButtonTemplate" text="Help" id="2">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="MazzleOptions_OptionsButton" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="5" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Frame name="MazzleOptions_TopicsPanel" inherits="OptionFrameBoxTemplate">
+    			<Size>
+    				<AbsDimension x="300" y="450"/>
+    			</Size>
+        		<Anchors>
+        			<Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="20" y="-105" />
+                        </Offset>
+                    </Anchor>
+        			<Anchor point="BOTTOMLEFT">
+                        <Offset>
+                            <AbsDimension x="20" y="22" />
+                        </Offset>
+                    </Anchor>
+        		</Anchors>
+				<Frames>
+					<ScrollFrame name="MazzleOptions_Topics_ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+                		<Anchors>
+                			<Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="8" y="-3" />
+                                </Offset>
+                            </Anchor>
+                			<Anchor point="BOTTOMRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-8" y="2" />
+                                </Offset>
+                            </Anchor>
+                		</Anchors>
+						<Scripts>
+							<OnShow>
+								this:UpdateScrollChildRect();
+							</OnShow>
+						</Scripts>
+						<ScrollChild>
+							<Frame name="MazzleOptions_Topics_ScrollChildFrame">
+								<Size>
+									<AbsDimension x="300" y="450"/>
+								</Size>
+                        		<Anchors>
+                        			<Anchor point="TOPLEFT">
+                                        <Offset>
+                                            <AbsDimension x="0" y="0" />
+                                        </Offset>
+                                    </Anchor>
+                        			<Anchor point="BOTTOMLEFT">
+                                        <Offset>
+                                            <AbsDimension x="0" y="0" />
+                                        </Offset>
+                                    </Anchor>
+                        		</Anchors>
+								<Frames>
+								</Frames>
+							</Frame>
+						</ScrollChild>
+					</ScrollFrame>
+				</Frames>
+				<Scripts>
+                    <OnLoad>
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.15, 0.15, 0.15);
+						MazzleOptionsWaveTexture1:SetTexture("Interface\\AddOns\\MazzleOptions\\images\\MazzleUI_WaveIcon1")
+						MazzleOptionsWaveTexture2:SetTexture("Interface\\AddOns\\MazzleOptions\\images\\MazzleUI_WaveIcon2")
+						MazzleOptionsWaveTexture2:Hide()
+                    </OnLoad>
+				</Scripts>
+ 			</Frame>
+			<Frame name="MazzleOptions_ContentsPanel" inherits="OptionFrameBoxTemplate">
+    			<Size>
+    				<AbsDimension x="525" y="450"/>
+    			</Size>
+        		<Anchors>
+        			<Anchor point="TOPRIGHT">
+                        <Offset>
+                            <AbsDimension x="-30" y="-75" />
+                        </Offset>
+                    </Anchor>
+        			<Anchor point="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-30" y="22" />
+                        </Offset>
+                    </Anchor>
+        		</Anchors>
+				<Frames>
+					<ScrollFrame name="MazzleOptions_Contents_ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+						<Anchors>
+                 			<Anchor point="TOPLEFT">
+                                <Offset>
+                                    <AbsDimension x="8" y="-3" />
+                                </Offset>
+                            </Anchor>
+                			<Anchor point="BOTTOMRIGHT">
+                                <Offset>
+                                    <AbsDimension x="-8" y="2" />
+                                </Offset>
+                            </Anchor>
+						</Anchors>
+						<Scripts>
+							<OnShow>
+								this:UpdateScrollChildRect();
+							</OnShow>
+						</Scripts>
+						<ScrollChild>
+                            <Frame name="MazzleOptions_Content_ScrollChildFrame" >
+                                <Size>
+                                	<AbsDimension x="525" y="450"/>
+                                </Size>
+                                <Frames>
+								</Frames>
+                            </Frame>
+						</ScrollChild>
+					</ScrollFrame>
+				</Frames>
+				<Scripts>
+                    <OnLoad>
+						this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+						this:SetBackdropColor(0.05, 0.05, 0.05);
+                    </OnLoad>
+				</Scripts>
+ 			</Frame>
+        </Frames>
+        <Scripts>
+            <OnLoad>
+                MazzleOptions_OnLoad();
+            </OnLoad>
+            <OnEvent>
+                MazzleOptions_OnEvent(event);
+            </OnEvent>
+            <OnShow>
+                MazzleOptions_Show()
+            </OnShow>
+            <OnHide>
+                MazzleOptions_Hide()
+            </OnHide>
+        </Scripts>
+    </Frame>
+    <Frame name="MazzleOptions_ReloadUIFrame" frameStrata="DIALOG" parent="UIParent" hidden="true">
+    	<Size><AbsDimension x="400" y="120"/></Size>
+    	<Anchors>
+    		<Anchor point="CENTER"/>
+    	</Anchors>
+    	<Backdrop bgFile="Interface\AddOns\DiscordLibrary\PlainBackdrop" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+    		<BackgroundInsets>
+    			<AbsInset left="11" right="12" top="12" bottom="11"/>
+    		</BackgroundInsets>
+    		<TileSize>
+    			<AbsValue val="32"/>
+    		</TileSize>
+    		<EdgeSize>
+    			<AbsValue val="32"/>
+    		</EdgeSize>
+    	</Backdrop>
+    	<Frames>
+    		<Button name="$parent_No" inherits="MazzleOptions_MainButtonTemplate" hidden="false">
+    			<Size><AbsDimension x="180" y="24"/></Size>
+    			<Anchors>
+    				<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+    					<Offset><AbsDimension x="15" y="15"/></Offset>
+    				</Anchor>
+    			</Anchors>
+    			<Scripts>
+    				<OnLoad>
+    					this:SetText("No, I will reload later.");
+    				</OnLoad>
+    				<OnClick>
+    					MazzleOptions_ReloadUIFrame:Hide();
+    				</OnClick>
+    			</Scripts>
+    		</Button>
+    		<Button name="$parent_Yes" inherits="MazzleOptions_MainButtonTemplate" hidden="false">
+    			<Size><AbsDimension x="180" y="24"/></Size>
+    			<Anchors>
+    				<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="BOTTOMRIGHT">
+    					<Offset><AbsDimension x="-15" y="15"/></Offset>
+    				</Anchor>
+    			</Anchors>
+    			<Scripts>
+    				<OnLoad>
+    					this:SetText("Yes, please reload my UI.");
+    				</OnLoad>
+    				<OnClick>
+    					ReloadUI();
+    				</OnClick>
+    			</Scripts>
+    		</Button>
+    	</Frames>
+    	<Layers>
+    		<Layer level="OVERLAY">
+    			<FontString name="$parent_Text" inherits="GameFontNormal" text="The changes you made will not go into effect until you reload your UI.  Would you like to do that now?">
+    				<Size><AbsDimension x="270" y="50"/></Size>
+    				<Anchors>
+    					<Anchor point="TOP">
+    						<Offset><AbsDimension x="0" y="-15"/></Offset>
+    					</Anchor>
+    				</Anchors>
+    			</FontString>
+    		</Layer>
+    	</Layers>
+    	<Scripts>
+    		<OnLoad>
+    			this:SetBackdropColor(0.25, 0.25, 0.25);
+    			this:SetBackdropBorderColor(0.50, 0.50, 0.50);
+    			tinsert(UISpecialFrames,"MazzleOptions_ReloadUIFrame");
+    		</OnLoad>
+    	</Scripts>
+    </Frame>
+</Ui>

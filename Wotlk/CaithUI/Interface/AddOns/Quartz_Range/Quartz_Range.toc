@@ -1,0 +1,20 @@
+## Interface: 30200
+## LoadOnDemand: 1
+## Title: Quartz |cff7777ffRange|r
+## Notes: Quartz module to re-color your casting bar when the current target goes out of range.
+## Title-ruRU: Кварц |cff7777ffДистанция|r
+## Notes-ruRU: Модуль Кварца перекрашивает вашу полосу применения если текущая цель выходит за радиус действия.
+## Title-zhTW: Quartz |cff7777ff距離|r
+## Notes-zhTW: 當你的目標移動超出施法範圍時改變施法條顏色。
+## Author: Nymbia
+## Version: 1.0
+## Dependencies: Quartz
+## X-License: GPL v2
+## X-Quartz-Module: Range
+## X-Quartz-RequiredModules: Player
+## X-Curse-Packaged-Version: r19-beta
+## X-Curse-Project-Name: Quartz
+## X-Curse-Project-ID: quartz
+## X-Curse-Repository-ID: wow/quartz/mainline
+
+Range.lua

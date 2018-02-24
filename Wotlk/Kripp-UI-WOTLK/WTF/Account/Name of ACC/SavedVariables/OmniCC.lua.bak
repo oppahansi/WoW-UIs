@@ -1,0 +1,10 @@
+
+OmniCC4Config = {
+	["version"] = "5.0.3",
+	["groups"] = {
+	},
+	["groupSettings"] = {
+		["base"] = {
+		},
+	},
+}

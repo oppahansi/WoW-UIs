@@ -1,0 +1,9 @@
+## Interface: 11000
+## Title: TargetButtons
+## Author: QuippeR
+## Notes: Adds new buttons to the targeting frame
+## SavedVariables: TB_Vars
+## OptionalDeps: Cosmos, myAddOns
+## Dependencies:
+TargetButtons.xml
+TBOptions.xml

@@ -1,0 +1,1081 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<Font name="ArenaUnitFramesChatFontLarge" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="24"/>
+		</FontHeight>
+		<Color r="1.0" g="1.0" b="1.0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+	</Font>
+
+	<Font name="ArenaUnitFramesCountdownFont" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight>
+			<AbsValue val="36"/>
+		</FontHeight>
+		<Color r="1.0" g="1.0" b="1.0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+	</Font>
+
+	<Frame name="ArenaUnitFramesDebuffButtonTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="30" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentIcon" setAllPoints="true"/>
+			</Layer>
+			<!--
+			<Layer level="OVERLAY">
+				<Texture name="$parentBorder" file="Interface\Buttons\UI-Debuff-Overlays">
+					<Size>
+						<AbsDimension x="17" y="17"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
+				</Texture>	
+			</Layer>
+			-->
+		</Layers>
+		<Frames>
+			<Cooldown name="$parentCooldown" inherits="CooldownFrameTemplate" reverse="true" hidden="true">
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Cooldown>
+		</Frames>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				GameTooltip:SetText(self.debuffName);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesBuffButtonTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="30" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentIcon" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				GameTooltip:SetText(self.buffName);
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesRangeIconTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="24" y="24"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentIcon" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesAssistIconTemplate" alpha="0" virtual="true">
+		<Size>
+			<AbsDimension x="20" y="20"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture name="$parentIcon" file="Interface\Glues\CharacterCreate\UI-CharacterCreate-Classes" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesDimiTemplate" hidden="true" virtual="true">
+		<Size>
+			<AbsDimension x="36" y="36"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentIcon" setAllPoints="true"/>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentCountdown" inherits="GameFontNormalLarge" justifyH="CENTER" justifyV="CENTER">
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="0.0"/>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="ArenaUnitFrameTemplate" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="320" y="92"/>
+		</Size>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\ChatFrame\ChatFrameBackground" tile="true">
+			<EdgeSize>
+				<AbsValue val="1"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentPortrait">
+					<Size>
+						<AbsDimension x="48" y="48"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="1" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentCountdown" inherits="ArenaUnitFramesCountdownFont" justifyH="CENTER" justifyV="CENTER" frameStrata="TOOLTIP">
+					<Size>
+						<AbsDimension x="60" y="48"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="-6" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.0" g="1.0" b="1.0"/>
+				</FontString>
+				<FontString name="$parentName" inherits="GameFontNormalHuge">
+					<Size>
+						<AbsDimension x="140" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="50" y="3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="0.2" b="0"/>
+				</FontString>
+				<FontString name="$parentToT" inherits="GameFontNormalHuge" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="140" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-46"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="0.2" b="0"/>
+				</FontString>
+				<FontString name="$parentDeadText" inherits="GameFontNormalHuge" text="DEAD" hidden="true">
+					<Anchors>
+						<Anchor point="CENTER" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="120" y="-32"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentButton" inherits="SecureActionButtonTemplate" setAllPoints="true">
+				<Scripts>
+					<OnEnter>
+						ArenaUnitFrames.Button_OnEnter(self:GetParent());
+					</OnEnter>
+					<OnLeave>
+						self:GetParent().mouseover = nil;
+						_G[self:GetParent():GetName().."HealthBarText"]:Hide();
+						_G[self:GetParent():GetName().."ManaBarText"]:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+			<Cooldown name="$parentCooldown" frameStrata="MEDIUM" reverse="true" hidden="true">
+				<Size>
+					<AbsDimension x="48" y="48"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="1" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Cooldown>
+			<Frame name="$parentRangeIcon" inherits="ArenaUnitFramesRangeIconTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi1" inherits="ArenaUnitFramesDimiTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="-1" y="-25"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi2" inherits="ArenaUnitFramesDimiTemplate" id="2">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi1" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi3" inherits="ArenaUnitFramesDimiTemplate" id="3">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi2" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi4" inherits="ArenaUnitFramesDimiTemplate" id="4">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi3" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi5" inherits="ArenaUnitFramesDimiTemplate" id="5">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi4" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi6" inherits="ArenaUnitFramesDimiTemplate" id="6">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi5" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi7" inherits="ArenaUnitFramesDimiTemplate" id="7">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi6" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi8" inherits="ArenaUnitFramesDimiTemplate" id="8">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi7" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDimi9" inherits="ArenaUnitFramesDimiTemplate" id="9">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentDimi8" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<StatusBar name="$parentHealthBar" drawLayer="OVERLAY" enableMouse="false" hidden="true">
+				<Size>
+					<AbsDimension x="142" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="50" y="-18"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist3" setAllPoints="true">
+							<Color r="0.0" g="1.0" b="0.0" a="0.2"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="NumberFontNormal" hidden="true">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0" a="0.5"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						self:SetMinMaxValues(0, 100);
+						self:SetValue(100);
+					</OnLoad>
+				</Scripts>
+				<BarTexture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist2"/>
+				<BarColor r="0" g="1.0" b="0"/>
+			</StatusBar>
+			<StatusBar name="$parentManaBar" drawLayer="OVERLAY" enableMouse="false" hidden="true">
+				<Size>
+					<AbsDimension x="142" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentHealthBar" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentBG" file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist3" setAllPoints="true">
+							<Color r="0.0" g="0.0" b="1.0" a="0.2"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="NumberFontNormal" hidden="true">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0" a="0.5"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						self:SetMinMaxValues(0, 100);
+						self:SetValue(100);
+					</OnLoad>
+				</Scripts>
+				<BarTexture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist2"/>
+				<BarColor r="0" g="0" b="1.0"/>
+			</StatusBar>
+
+			<!-- party target icons -->
+			<Frame name="$parentAssistButton1" inherits="ArenaUnitFramesAssistIconTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="172" y="-46"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAssistButton2" inherits="ArenaUnitFramesAssistIconTemplate" id="2">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentAssistButton1" relativePoint="LEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAssistButton3" inherits="ArenaUnitFramesAssistIconTemplate" id="3">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentAssistButton2" relativePoint="LEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentAssistButton4" inherits="ArenaUnitFramesAssistIconTemplate" id="4">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentAssistButton3" relativePoint="LEFT"/>
+				</Anchors>
+			</Frame>
+
+			<!-- cast bar -->
+			<StatusBar name="$parentSpellBar" drawLayer="BORDER" hidden="true" virtual="true">
+				<Size>
+					<AbsDimension x="167" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="25" y="1"/>
+						</Offset>
+					</Anchor>
+					<!--
+					<Anchor point="BOTTOMRIGHT"/>
+					-->
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture setAllPoints="true">
+							<Color r="0" g="0" b="0" a="0.5"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString name="$parentText" inherits="GameFontNormalHuge">
+							<Size>
+								<AbsDimension x="168" y="24"/>
+							</Size>
+							<Anchors>
+								<Anchor setAllPoints="true"/>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0"/>
+						</FontString>
+						<!--
+						<Texture name="$parentBorder" file="Interface\CastingBar\UI-CastingBar-Border">
+							<Size>
+								<AbsDimension x="168" y="24"/>
+							</Size>
+							<Anchors>
+								<Anchor setAllPoints="true"/>
+							</Anchors>
+							<TexCoords left="0.11718" right="0.88281" top="0.43" bottom="0.6"/>
+						</Texture>
+						-->
+						<Texture name="$parentIcon">
+							<Size>
+								<AbsDimension x="24" y="24"/>
+							</Size>
+							<Anchors>
+								<Anchor point="RIGHT" relativeTo="$parent" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<Texture name="$parentSpark" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
+							<Size>
+								<AbsDimension x="24" y="24"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</Texture>
+						<Texture name="$parentFlash" file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist" alphaMode="ADD">
+							<Size>
+								<AbsDimension x="168" y="24"/>
+							</Size>
+							<Anchors>
+								<Anchor setAllPoints="true"/>
+							</Anchors>
+							<TexCoords left="0.11718" right="0.88281" top="0.43" bottom="0.6"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						_G[self:GetName().."Icon"]:Show();
+					</OnLoad>
+					<OnEvent>
+						CastingBarFrame_OnEvent(self, event, ...);
+					</OnEvent>
+					<OnUpdate>
+						CastingBarFrame_OnUpdate(self, elapsed);
+					</OnUpdate>
+					<OnShow>
+						CastingBarFrame_OnShow(self);
+					</OnShow>
+				</Scripts>
+				<BarTexture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist"/>
+				<BarColor r="1.0" g="0.7" b="0.0"/>
+			</StatusBar>
+			<Frame name="$parentDebuff1" inherits="ArenaUnitFramesDebuffButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="194" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDebuff2" inherits="ArenaUnitFramesDebuffButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentDebuff1" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDebuff3" inherits="ArenaUnitFramesDebuffButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentDebuff2" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDebuff4" inherits="ArenaUnitFramesDebuffButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentDebuff1" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDebuff5" inherits="ArenaUnitFramesDebuffButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentDebuff4" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentDebuff6" inherits="ArenaUnitFramesDebuffButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentDebuff5" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="$parentBuff1" inherits="ArenaUnitFramesBuffButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-1" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentBuff2" inherits="ArenaUnitFramesBuffButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentBuff1" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentBuff3" inherits="ArenaUnitFramesBuffButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentBuff2" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentBuff4" inherits="ArenaUnitFramesBuffButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentBuff1" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentBuff5" inherits="ArenaUnitFramesBuffButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentBuff4" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<Frame name="$parentBuff6" inherits="ArenaUnitFramesBuffButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentBuff5" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+
+			<Frame name="$parentTrinket" hidden="true">
+				<Size>
+					<AbsDimension x="48" y="48"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="$parentIcon" setAllPoints="true"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<Cooldown name="$parentCooldown" frameStrata="MEDIUM" setAllPoints="true" hidden="true"/>
+				</Frames>
+			</Frame>
+
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self.unit = "arena"..self:GetID();
+				ArenaUnitFrames.unitFrameLookup[self.unit] = self;
+				self.dimi = {};
+				self:SetBackdropColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				self:SetBackdropBorderColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				self.r = TOOLTIP_DEFAULT_BACKGROUND_COLOR.r;
+				self.g = TOOLTIP_DEFAULT_BACKGROUND_COLOR.g;
+				self.b = TOOLTIP_DEFAULT_BACKGROUND_COLOR.b;
+				getglobal(self:GetName().."Button"):RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp", "Button4Up", "Button5Up");
+				self:RegisterEvent("ARENA_OPPONENT_UPDATE");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramePetTemplate" inherits="SecureFrameTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="320" y="30"/>
+		</Size>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\ChatFrame\ChatFrameBackground" tile="true">
+			<EdgeSize>
+				<AbsValue val="1"/>
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture name="$parentPortrait">
+					<Size>
+						<AbsDimension x="28" y="28"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="1" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentName" inherits="GameFontNormalLarge">
+					<Size>
+						<AbsDimension x="140" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="30" y="3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="0.2" b="0"/>
+				</FontString>
+				<FontString name="$parentCountdown" inherits="NumberFont_Outline_Large" justifyH="CENTER" justifyV="CENTER" frameStrata="HIGH">
+					<Size>
+						<AbsDimension x="20" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="4" y="-6"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.0" g="1.0" b="1.0"/>
+				</FontString>
+				<FontString name="$parentDeadText" inherits="GameFontNormalLarge" text="DEAD" hidden="true">
+					<Anchors>
+						<Anchor point="CENTER" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="110" y="-20"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="$parentButton" inherits="SecureActionButtonTemplate" setAllPoints="true">
+				<Scripts>
+					<OnEnter>
+						ArenaUnitFrames.Button_OnEnter(self:GetParent());
+					</OnEnter>
+					<OnLeave>
+						self:GetParent().mouseover = nil;
+						_G[self:GetParent():GetName().."HealthBarText"]:Hide();
+						_G[self:GetParent():GetName().."ManaBarText"]:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+			<Cooldown name="$parentCooldown" frameStrata="MEDIUM" reverse="true" hidden="true">
+				<Size>
+					<AbsDimension x="28" y="28"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="1" y="-1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Cooldown>
+			<Frame name="$parentRangeIcon" inherits="ArenaUnitFramesRangeIconTemplate">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			<StatusBar name="$parentHealthBar" drawLayer="OVERLAY" enableMouse="false" hidden="true">
+				<Size>
+					<AbsDimension x="142" y="7"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="30" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist3" setAllPoints="true">
+							<Color r="0.0" g="1.0" b="0.0" a="0.2"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="NumberFontNormal" hidden="true">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0" a="0.5"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						self:SetMinMaxValues(0, 100);
+						self:SetValue(100);
+					</OnLoad>
+				</Scripts>
+				<BarTexture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist2"/>
+				<BarColor r="0" g="1.0" b="0"/>
+			</StatusBar>
+			<StatusBar name="$parentManaBar" drawLayer="OVERLAY" enableMouse="false" hidden="true">
+				<Size>
+					<AbsDimension x="142" y="7"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentHealthBar" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentBG" file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist3" setAllPoints="true">
+							<Color r="0.0" g="0.0" b="1.0" a="0.2"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<FontString name="$parentText" inherits="NumberFontNormal" hidden="true">
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="-2"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0" a="0.5"/>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnLoad>
+						self:SetMinMaxValues(0, 100);
+						self:SetValue(100);
+					</OnLoad>
+				</Scripts>
+				<BarTexture file="Interface\AddOns\ArenaUnitFrames\Textures\Minimalist2"/>
+				<BarColor r="0" g="0" b="1.0"/>
+			</StatusBar>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self.unit = "arenapet"..self:GetID();
+				ArenaUnitFrames.unitFrameLookup[self.unit] = self;
+				self.dimi = {};
+				self.pet = true;
+				self:SetBackdropColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				self:SetBackdropBorderColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				self.r = TOOLTIP_DEFAULT_BACKGROUND_COLOR.r;
+				self.g = TOOLTIP_DEFAULT_BACKGROUND_COLOR.g;
+				self.b = TOOLTIP_DEFAULT_BACKGROUND_COLOR.b;
+				getglobal(self:GetName().."Button"):RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp", "Button4Up", "Button5Up");
+			</OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitMasterFrame" inherits="SecureFrameTemplate" parent="UIParent" movable="true" hidden="true">
+		<Size>
+			<AbsDimension x="320" y="24"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"/>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentLabel" inherits="ArenaUnitFramesChatFontLarge" justifyH="LEFT" text="ARENA_UNIT_FRAMES">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="0" y="2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0.3" g="0.3" b="0.3"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+
+			<!-- COMBAT_LOG_EVENT_UNFILTERED gets its own frame because it gets called a ridiculous number of times -->
+			<Frame name="$parentLogListener"/>
+
+			<Frame name="ArenaUnitFrame1" inherits="ArenaUnitFrameTemplate" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFramePet1" inherits="ArenaUnitFramePetTemplate" hidden="true" id="1">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFrame1" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFrame2" inherits="ArenaUnitFrameTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramePet1" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFramePet2" inherits="ArenaUnitFramePetTemplate" hidden="true" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFrame2" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFrame3" inherits="ArenaUnitFrameTemplate" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramePet2" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFramePet3" inherits="ArenaUnitFramePetTemplate" hidden="true" id="3">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFrame3" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFrame4" inherits="ArenaUnitFrameTemplate" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramePet3" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFramePet4" inherits="ArenaUnitFramePetTemplate" hidden="true" id="4">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFrame4" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFrame5" inherits="ArenaUnitFrameTemplate" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFramePet4" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+			<Frame name="ArenaUnitFramePet5" inherits="ArenaUnitFramePetTemplate" hidden="true" id="5">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ArenaUnitFrame5" relativePoint="BOTTOMLEFT"/>
+				</Anchors>
+			</Frame>
+
+			<!-- X Close button -->
+			<Button name="$parentCloseButton" inherits="UIPanelCloseButton">
+				<Size>
+					<AbsDimension x="24" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if ( not InCombatLockdown() ) then
+							HideUIPanel(self:GetParent());
+							DEFAULT_CHAT_FRAME:AddMessage(ARENA_UNIT_FRAMES_ONCLOSE, 1, 1, 0);
+						end
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Up">
+					<TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/>
+				</NormalTexture>
+				<PushedTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Down">
+					<TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/>
+				</PushedTexture>
+				<HighlightTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Highlight" alphaMode="ADD">
+					<TexCoords left="0.2" right="0.8" top="0.2" bottom="0.8"/>
+				</HighlightTexture>
+			</Button>
+
+			<!-- config button -->
+			<Button name="$parentConfigButton">
+				<Size>
+					<AbsDimension x="24" y="24"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentCloseButton" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						if ( not InCombatLockdown() ) then
+							InterfaceOptionsFrame_OpenToCategory("Arena Unit Frames");
+						end
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\GossipFrame\HealerGossipIcon"/>
+				<PushedTexture file="Interface\GossipFrame\BinderGossipIcon"/>
+				<HighlightTexture file="Interface\GossipFrame\BinderGossipIcon" alphaMode="ADD"/>
+			</Button>
+
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				self:SetBackdropColor(
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.r,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.g,
+					TOOLTIP_DEFAULT_BACKGROUND_COLOR.b
+				);
+				ArenaUnitFrames.MasterFrame_OnLoad(self);
+			</OnLoad>
+			<OnUpdate>
+				ArenaUnitFrames.MasterFrame_OnUpdate(arg1);
+			</OnUpdate>
+			<OnMouseUp>
+				if ( self.isMoving ) then
+					self:StopMovingOrSizing();
+					self.isMoving = false;
+				end
+			</OnMouseUp>
+			<OnMouseDown>
+				if (not ArenaUnitFrames_Config["options"]["lock"] and arg1 == "LeftButton") then
+					self:StartMoving();
+					self.isMoving = true;
+				end
+			</OnMouseDown>
+		</Scripts>
+	</Frame>
+
+	<Frame name="ArenaUnitFramesAlertDragFrame" inherits="SecureFrameTemplate" parent="UIParent" movable="true" hidden="true">
+		<Size>
+			<AbsDimension x="800" y="70"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOP">
+				<Offset>
+					<AbsDimension x="0" y="-205"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop name="$parentBackdrop" bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"/>
+		<Scripts>
+			<OnMouseUp>
+				if ( self.isMoving ) then
+					self:StopMovingOrSizing();
+					self.isMoving = false;
+				end
+			</OnMouseUp>
+			<OnMouseDown>
+				if ( arg1 == "LeftButton" ) then
+					self:StartMoving();
+					self.isMoving = true;
+				end
+			</OnMouseDown>
+		</Scripts>
+	</Frame>
+
+	<MessageFrame name="ArenaUnitFramesAlertFrame" displayDuration="3" fadeDuration="1" insertMode="TOP" parent="UIParent" frameStrata="HIGH" toplevel="true">
+		<Size>
+			<AbsDimension x="800" y="70"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOP" relativeTo="ArenaUnitFramesAlertDragFrame"/>
+		</Anchors>
+		<FontString inherits="PVPInfoTextFont" justifyH="CENTER"/>
+	</MessageFrame>
+
+</Ui>

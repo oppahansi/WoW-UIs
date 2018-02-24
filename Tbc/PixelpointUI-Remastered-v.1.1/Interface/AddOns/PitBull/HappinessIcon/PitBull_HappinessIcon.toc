@@ -1,0 +1,17 @@
+## Interface: 20400
+## Title: PitBull |r[|cffeda55fHappinessIcon|r]
+## Notes: Show an icon on the pet frame to indicate its happiness.
+## Notes-koKR: 소환수 프레임에 소환수의 만족도를 나타내기 위해 아이콘을 보여줍니다.
+## Author: Ellipsis
+## X-PitBull-Condition: return select(2, UnitClass("player")) == "HUNTER"
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: PitBull
+## OptionalDeps: Ace2
+## X-Category: UnitFrame
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+HappinessIcon.lua

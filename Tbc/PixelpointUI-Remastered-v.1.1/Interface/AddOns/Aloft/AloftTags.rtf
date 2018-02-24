@@ -1,0 +1,83 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fswiss\fcharset77 Helvetica-Bold;\f2\fmodern\fcharset77 CourierNewPSMT;
+}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15540\viewh13180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+
+\f1\b Tags\
+
+\f0\b0 \
+
+\f2 alpha [bravo:charlie:hideIf(healthPercent < 80)] delta [conditional:"ShowStringIfConditional"]\
+
+\f0 \
+Tags are case insensitive\
+"alpha" and "delta" are literals, "[bravo:charlie:hideIf(healthPercent > 80)]" will be substituted, but hidden if health is greater than 80%. The string "ShowStringIfConditional" is only shown if conditional is true in the lua sense (ie. not false, and not nil)\
+\
+Operators supported:\
+\
+~a - equivalent to not(a)\
+a + b\
+a - b\
+a * b\
+a / b\
+a == b\
+a ~= b\
+a >= b\
+a <= b\
+\
+All text tags work as conditionals, and will only be shown if the values preceding it do not evaluate to false\
+\
+An example of a more complex tag is the following, which shows:  \
+	"health (hp%)" if hostile or neutral, just hp% if health not known is solved by last clause\
+	health % otherwise if not a friendly NPC and not in group\
+	health deficit in red if grouped player, empty if no health deficit\
+\
+
+\f2 [Not(IsFriendly):Health:Short:Suffix(" ")][Not(IsFriendly):Health:HealthPercent:Percent:Bracket][Not(IsFriendlyNPC):HealthPercent:HideKnownHealth:Percent][UnitID:HealthDeficit:Negate:HideZero:HexColor("ff8080")]\
+
+\f0 \
+The health display that I prefer is:\
+
+\f2 [Not(IsFriendly):Health:Short][Not(IsMaxHealth):HealthPercent:HideKnownHealth:Percent][IsFriendly:HealthDeficit:Negate:HideZero:Short:HexColor("ff8080")]\
+
+\f0 \
+List of current tags\
+\
+- Classification, ShortClassification\
+- CreatureType, ShortCreatureType\
+- Guild, ShortGuild\
+- Race, ShortRace\
+- Health, MaxHealth, HealthPercent, HealthDeficit\
+- HealthBarValue, HealthBarMaxValue, HealthBarDeficit\
+- HideNotGuild, HideGuild, HideZero, HideKnownHealth\
+- HideIf(Condition)\
+- IsGuildMember, IsGroup, IsMaxHealth, IsNotGroup\
+- IsTarget, IsPet, IsTotem, IsBoss\
+- IsFriendly, IsHostile, IsFriendlyNPC, IsFriendlyPlayer, IsNeutral\
+- IsNumber, IsString\
+- Level - nil if it cannot be determined\
+- Lower, Upper - String case change\
+- Maximum - Returns the higher of 2 numbers passed to it\
+- Minimum - Returns the lower of 2 numbers passed to it\
+- Mana, MaxMana, ManaDeficit, ManaPercent, PowerType (0=Mana, 1 = Rage, 2 = Focus, 3 = Energy, 4 = Happiness)\
+- Negate - Takes the negative of a number\
+- Not(Condition) - Logical not\
+- Percent - Percent sign if the preceding is non-empty\
+- Angle, Bracket, Brace - Places values in <>, (), \{\} if it's not empty\
+- Short - Numerical short form, ie. 123456 -> 123k\
+- Name, PlayerName, TargetName\
+- WasRecentlyDamaged\
+- NPCTag\
+- UnitID\
+- ToNumber(arg) - Converts arg to a number, if possible\
+- ToString - Converts arg to a string, if possible\
+- White, Red, Green, Blue, Cyan, Fuchsia, Yellow, Gray, DifficultyColor, PowerTypeColor, HealthBarColor, OriginalHealthBarColor\
+- HexColor(Hexstring), HexColorIf(Condition, HexString), Color(R, G, B), ColorIf(Condition, R, G, B) RGB(R, G, B), RGBIf(Condition, R, G, B) - Color takes values 0-1, RGB takes 0-255\
+- Prefix(PrefixString), Suffix(SuffixString), Surround(PrefixString, SuffixString) - If the tag is valid, apply the given strings\
+- Format(FormatString) - eg. [Health:Format("(%s)")] - Is identical in functionality to [health:bracket]\
+- Contains(String) - eg. [Name:Contains(\'d2Foo\'d3)] - Returns Foo if MyNameIsFooBar, and returns nil otherwise\
+}

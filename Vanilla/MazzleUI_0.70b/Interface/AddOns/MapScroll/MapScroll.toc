@@ -1,0 +1,12 @@
+## Interface: 1500
+## Title: MapScroll
+## RequiredDeps: Ace
+## SavedVariables: MapScrollDB
+## Version: R.1
+Core\MapScrollCoreLocals.lua
+Hider\MapScrollHiderLocals.lua
+Core\MapScrollCore.lua
+Core\MapScrollCore.xml
+Hider\MapScrollHider.lua
+HideAll\MapScrollHideAll.lua
+HideAllButBorder\MapScrollHideAllButBorder.lua

@@ -1,0 +1,29 @@
+﻿## Interface: 20400
+## Author: arJUna
+## Title: simpleMinimap |cff7fff7f -Ace2-|r
+## Notes: manipulate the minimap in numerous ways; move, scale, skin.
+## Notes-ruRU: Манипуляция мини картой; перемещение, маштабирование, изменение вида.
+## Title-zhCN: |cff7fff7f-Ace2-|r simpleMinimap
+## Notes-deDE: Ändert die Minimap z.B.: Bewegen, Skalieren, Skinnen.
+## Notes-esES: Manipula el minimapa de varias formas: mover, escalar, skin.
+## Notes-zhCN: 迷你地图功能增强; 移动, 缩放, 美化。
+## Notes-zhTW: 迷你地圖功能增強; 移動, 縮放, 美化。
+## Version: 20100-6
+## OptionalDeps: Ace2, DewdropLib
+## SavedVariables: smmConfig
+## X-Category: Map
+## X-AceForum: 2228
+## X-Embeds: Ace2, DewdropLib
+
+embeds.xml
+
+localizations.lua
+simpleMinimap.lua
+
+modules\autozoom.lua
+modules\compass.lua
+modules\coords.lua
+modules\gui.lua
+modules\movers.lua
+modules\pings.lua
+modules\skins.lua

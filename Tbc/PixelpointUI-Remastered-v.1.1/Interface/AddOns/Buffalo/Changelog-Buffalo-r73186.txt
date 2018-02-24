@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+r73186 | Sorata | 2008-05-09 04:57:30 -0400 (Fri, 09 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Buffalo/Buffalo.toc
+
+Buffalo:
+- Add ButtonFacade to optional dependencies
+------------------------------------------------------------------------
+r72889 | Sorata | 2008-05-06 16:49:11 -0400 (Tue, 06 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Buffalo/Buffalo.lua
+
+Buffalo: 
+- Add DreamLayout skinning back in if ButtonFacade isn't loaded (Meant to do this before I committed)
+------------------------------------------------------------------------
+r72860 | Sorata | 2008-05-06 10:35:09 -0400 (Tue, 06 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Buffalo/Buffalo.lua
+   M /trunk/Buffalo/BuffaloDefaults.lua
+
+Buffalo: 
+- Add ButtonFacade support
+------------------------------------------------------------------------

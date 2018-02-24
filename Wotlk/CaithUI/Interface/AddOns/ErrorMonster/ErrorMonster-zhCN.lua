@@ -1,0 +1,31 @@
+local L = LibStub("AceLocale-3.0"):NewLocale("ErrorMonster", "zhCN")
+if not L then return end
+
+L["Shows the current filters and their ID."] = "显示当前过滤清单及ID"
+L["Adds the given filter to the ignore list."] = "把特定过滤信息添加至忽略列表"
+L["<filter>"] = "<过滤信息>"
+L["Removes the given filter or ID from the filter list."] = "把特定过滤信息或ID从过滤列表中移除"
+L["Adding filter: "] = "添加过滤信息："
+L["Removing filter: "] = "移除过滤信息："
+L["Filter not found: "] = "过滤信息未找到："
+L["Active filters:"] = "激活的过滤信息："
+L["Throttle errors at the given rate in seconds."] = "屏蔽一定时间（以秒计）内反复出现的错误"
+L["Go berserk and eat all the errors."] = "狂暴！干掉所有错误信息！"
+L["Teach your ErrorMonster to aggro on other message types."] = "教会ErrorMonster吸收其他类型的信息"
+L["Error messages."] = "错误信息"
+L["Information messages."] = "提示信息"
+L["System messages."] = "系统信息"
+L["System messages"] = "系统信息"
+L["|cffff0000Ignore|r"] = "|cffff0000忽略|r"
+L["|cff00ff00Aggro|r"] = "|cffff0000吸收|r"
+
+L["list"] = "列表"
+L["add"] = "添加"
+L["remove"] = "移除"
+L["throttle"] = "节流"
+L["berserk"] = "狂暴"
+L["aggro"] = "吸收"
+L["error"] = "错误"
+L["information"] = "提示"
+L["system"] = "系统"
+

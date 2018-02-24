@@ -1,0 +1,18 @@
+------------------------------------------------------------------------
+r77412 | moonwitch | 2008-06-25 14:58:13 -0400 (Wed, 25 Jun 2008) | 1 line
+Changed paths:
+   A /trunk/ButtonFacade_simpleSquare
+   A /trunk/ButtonFacade_simpleSquare/ButtonFacade_simpleSquare.toc
+   A /trunk/ButtonFacade_simpleSquare/README.txt
+   A /trunk/ButtonFacade_simpleSquare/Textures
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareActive.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareBackdrop.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareBase.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareFlash.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareGloss.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquareHighlight.tga
+   A /trunk/ButtonFacade_simpleSquare/Textures/simpleSquarePushed.tga
+   A /trunk/ButtonFacade_simpleSquare/skins.lua
+
+ButtonFacade_simpleSquare: Initial commit
+------------------------------------------------------------------------

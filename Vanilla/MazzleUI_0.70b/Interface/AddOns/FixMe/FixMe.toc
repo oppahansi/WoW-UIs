@@ -1,0 +1,6 @@
+## Interface: 11210
+## Author: Thrae
+## Title: FixMe!
+## Notes: Fixes various problems with the current interface version. Will disable itself with each new WoW patch.
+FixMe.lua
+

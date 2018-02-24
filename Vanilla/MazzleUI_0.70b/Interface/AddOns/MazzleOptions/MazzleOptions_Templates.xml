@@ -1,0 +1,503 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Button name="MazzleOptionsTitleButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="300" y="16"/>
+		</Size>
+		<Scripts>
+			<OnClick>
+				MazzleOptions_TopicButton_OnClick(this:GetID());
+				MazzleUI:MouseClickEffect();
+			</OnClick>
+			<OnEnter>
+				if ( this.tooltipText ) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 0);
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentHighlight" file="Interface\QuestFrame\UI-QuestTitleHighlight"
+						 alphaMode="ADD" setAllPoints="true" hidden="true"/>
+			</Layer>
+		</Layers>
+		<NormalText name="$parentNormalText" inherits="GameFontNormalSmall" justifyH="LEFT" justifyV="CENTER">
+    		<Color r="1.0" g="1.0" b="1.0"/>
+			<Anchors>
+				<Anchor point="TOP">
+					<Offset>
+						<AbsDimension x="0" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</NormalText>
+		<HighlightText name="$parentHighlightText" inherits="GameFontHighlightSmall" justifyH="LEFT" justifyV="CENTER">
+			<Anchors>
+				<Anchor point="TOP">
+					<Offset>
+						<AbsDimension x="0" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</HighlightText>
+		<DisabledText name="$parentDisabledText" inherits="GameFontDisableSmall" justifyH="LEFT" justifyV="CENTER">
+			<Anchors>
+				<Anchor point="TOP">
+					<Offset>
+						<AbsDimension x="0" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</DisabledText>
+		<HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+	</Button>
+    
+	<Frame name="MazzleOptions_ButtonDropDownTemplate" inherits="UIDropDownMenuTemplate" enableMouse="true" virtual="true">
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+    						<Offset>
+    							<AbsDimension x="-8" y="1"/>
+    						</Offset>
+    					</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				if ( this.tooltipText ) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</Frame>
+
+	<Button name="MazzleOptions_ButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true" text="">
+		<Size>
+			<AbsDimension x="150" y="22"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+    						<Offset>
+    							<AbsDimension x="8" y="0"/>
+    						</Offset>
+    					</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnClick>
+				MazzleOptions_Button_SetValue(this:GetID());
+				MazzleUI:MouseClickEffect();
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<CheckButton name="MazzleOptions_CheckButtonTemplate" inherits="OptionsCheckButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="26" y="26"/>
+		</Size>
+		<Scripts>
+			<OnClick>
+				if ( this:GetChecked() ) then
+					PlaySound("igMainMenuOptionCheckBoxOn");
+    				MazzleOptions_CheckButton_SetValue(this:GetID(), true)
+				else
+					PlaySound("igMainMenuOptionCheckBoxOff");
+    				MazzleOptions_CheckButton_SetValue(this:GetID(), false)
+				end
+				MazzleUI:MouseClickEffect();
+			</OnClick>
+			<OnEnter>
+				if ( this.tooltipText ) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</CheckButton>
+
+	<CheckButton name="MazzleOptions_PerformanceCheckButtonTemplate" inherits="UICheckButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Scripts>
+			<OnClick>
+				if ( this:GetChecked() ) then
+					PlaySound("igMainMenuOptionCheckBoxOn");
+    				MazzleOptions_PerformanceEntry_SetValue((this:GetParent()):GetID(), this:GetID(), true)
+				else
+					PlaySound("igMainMenuOptionCheckBoxOff");
+    				MazzleOptions_PerformanceEntry_SetValue((this:GetParent()):GetID(), this:GetID(), false)
+				end
+				MazzleUI:MouseClickEffect();
+			</OnClick>
+			<OnEnter>
+				if ( this.tooltipText ) then
+					GameTooltip:SetOwner(this, "ANCHOR_RIGHT");
+					GameTooltip:SetText(this.tooltipText, nil, nil, nil, nil, 1);
+					GameTooltip:SetText("Mazzle in the hizzouse", nil, nil, nil, nil, 1);
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+	</CheckButton>
+
+	<Frame name="MazzleOptions_YesNoTemplate" inherits="OptionFrameBoxTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="500" y="60"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+			<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"/>
+		</Anchors>
+		<Frames>
+			<CheckButton name="$parent_CheckButtonYes" inherits="MazzleOptions_CheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-8"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+            	<Scripts>
+        			<OnClick>
+    					PlaySound("igMainMenuOptionCheckBoxOn");
+    					getglobal(this:GetParent():GetName().."_CheckButtonNo"):SetChecked(0)
+    					this:SetChecked(1)
+        				MazzleOptions_CheckButton_SetValue(this:GetParent():GetID(), true)
+        				MazzleUI:MouseClickEffect();
+        			</OnClick>
+                </Scripts>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButtonNo" inherits="MazzleOptions_CheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parent_CheckButtonYes" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="4"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+            	<Scripts>
+        			<OnClick>
+    					PlaySound("igMainMenuOptionCheckBoxOn");
+    					getglobal(this:GetParent():GetName().."_CheckButtonYes"):SetChecked(0)
+    					this:SetChecked(1)
+        				MazzleOptions_CheckButton_SetValue(this:GetParent():GetID(), false)
+        				MazzleUI:MouseClickEffect();
+        			</OnClick>
+                </Scripts>
+			</CheckButton>
+        </Frames>
+		<Scripts>
+			<OnLoad>
+				this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+				this:SetBackdropColor(0.05, 0.05, 0.05);
+				getglobal(this:GetName().."_CheckButtonYesText"):SetText("Yes");
+				getglobal(this:GetName().."_CheckButtonNoText"):SetText("No");
+			</OnLoad>
+		</Scripts>
+    </Frame>
+
+	<Slider name="MazzleOptions_SliderTemplate" orientation="HORIZONTAL" virtual="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="128" y="17"/>
+		</Size>
+		<HitRectInsets>
+			<AbsInset left="0" right="0" top="-10" bottom="-10"/>
+		</HitRectInsets>
+		<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="8"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="8"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="3" right="3" top="6" bottom="6"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+    						<Offset>
+    							<AbsDimension x="10" y="-1"/>
+    						</Offset>
+    					</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentLow" inherits="GameFontHighlightSmall" text="LOW">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="2" y="3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentHigh" inherits="GameFontHighlightSmall" text="HIGH">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+		    <OnEnter>
+		    </OnEnter>
+		    <OnLeave>
+		    </OnLeave>
+		    <OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_CURSOR");
+				GameTooltip:SetText(MazzleOptions_Slider_Format(this:GetID(), this:GetValue()), nil, nil, nil, nil, 1);
+				GameTooltip:Show();
+		    </OnEnter>
+		    <OnLeave>
+				GameTooltip:Hide();
+		    </OnLeave>
+			<OnMouseUp>
+				GameTooltip:Hide();
+			    MazzleOptions_SliderSet(this:GetID(), this:GetValue())
+			</OnMouseUp>
+			<OnValueChanged>
+				GameTooltip:SetText(MazzleOptions_Slider_Format(this:GetID(), this:GetValue()), nil, nil, nil, nil, 1);
+			</OnValueChanged>
+		</Scripts>
+		<ThumbTexture name="$parentThumb" file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+			<Size>
+				<AbsDimension x="32" y="32"/>
+			</Size>
+    		<Layers>
+    			<Layer level="ARTWORK">
+    				<FontString name="$parentThumbText" inherits="GameFontNormalSmall">
+    					<Anchors>
+    						<Anchor point="TOP" relativePoint="BOTTOM">
+        						<Offset>
+        							<AbsDimension x="10" y="-1"/>
+        						</Offset>
+        					</Anchor>
+    					</Anchors>
+    				</FontString>
+    			</Layer>
+    		</Layers>
+		</ThumbTexture>
+	</Slider>
+
+	<Frame name="MazzleOptions_PerformanceTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="225" y="30"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="RIGHT" relativePoint="LEFT" >
+    						<Offset>
+    							<AbsDimension x="-40" y="-10"/>
+    						</Offset>
+    					</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentHeader" inherits="GameFontNormalSmall" text="">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+    						<Offset>
+    							<AbsDimension x="14" y="0"/>
+    						</Offset>
+    					</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<CheckButton name="$parent_CheckButton6" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="6">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="10" y="-8"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButton5" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="5">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parent_CheckButton6" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButton4" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="4">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parent_CheckButton5" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButton3" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="3">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parent_CheckButton4" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButton2" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="2">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parent_CheckButton3" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+			<CheckButton name="$parent_CheckButton1" inherits="MazzleOptions_PerformanceCheckButtonTemplate" id="1">
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parent_CheckButton2" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-15" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</CheckButton>
+        </Frames>
+    </Frame>
+    
+	<Frame name="MazzleOptions_ScrollingTextBoxTemplate" virtual="true" inherits="OptionFrameBoxTemplate">
+		<Size>
+			<AbsDimension x="485" y="60"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+			<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"/>
+		</Anchors>
+		<Frames>
+			<ScrollFrame name="$parent_ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Anchors>
+         			<Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="8" y="-3" />
+                        </Offset>
+                    </Anchor>
+        			<Anchor point="BOTTOMRIGHT">
+                        <Offset>
+                            <AbsDimension x="-8" y="2" />
+                        </Offset>
+                    </Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						this:UpdateScrollChildRect();
+					</OnShow>
+				</Scripts>
+				<ScrollChild>
+                    <Frame name="$parent__ScrollChildFrame" >
+                        <Size>
+                        	<AbsDimension x="485" y="450"/>
+                        </Size>
+                        <Layers>
+                            <Layer>
+                                <FontString name="$parent_Text" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" text="Dummy Text">
+                                    <FontHeight> <AbsValue val="16"  /> </FontHeight>
+                                    <Color r="1" g="0.8196079" b="0" />
+                                    <Shadow>
+                                        <Color r="0" g="0" b="0" />
+                                        <Offset> <AbsDimension x="1" y="-1" /> </Offset>
+                                    </Shadow>
+                                    <Anchors>
+                                        <Anchor point="TOPLEFT">
+                                            <Offset> <AbsDimension x="10" y="-10"/> </Offset>
+                                        </Anchor>
+                                        <Anchor point="BOTTOMRIGHT">
+                                            <Offset> <AbsDimension x="-10" y="10"/> </Offset>
+                                        </Anchor>
+                                    </Anchors>
+                                </FontString>
+                                <Texture setAllPoints="true">
+                                    <TexCoords left="0" right="1" top="0" bottom="1" />
+                                </Texture>
+                            </Layer>
+                        </Layers>
+                    </Frame>
+				</ScrollChild>
+			</ScrollFrame>
+		</Frames>
+		<Scripts>
+            <OnLoad>
+				this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+				this:SetBackdropColor(0.05, 0.05, 0.05);
+            </OnLoad>
+		</Scripts>
+	</Frame>
+
+	<Frame name="MazzleOptions_TextBoxTemplate" virtual="true" inherits="OptionFrameBoxTemplate">
+		<Size>
+			<AbsDimension x="500" y="60"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+			<Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"/>
+		</Anchors>
+        <Layers>
+            <Layer>
+                <FontString name="$parent_Text" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" wraponspaces="true">
+        			<AbsDimension x="500"/>
+                    <FontHeight> <AbsValue val="14"  /> </FontHeight>
+                    <Color r="0" g="1" b="0" />
+                    <Shadow>
+                        <Color r="0" g="0" b="0" />
+                        <Offset> <AbsDimension x="1" y="-1" /> </Offset>
+                    </Shadow>
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset> <AbsDimension x="10" y="-10"/> </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <Texture setAllPoints="true">
+                    <TexCoords left="0" right="1" top="0" bottom="1" />
+                </Texture>
+            </Layer>
+        </Layers>
+		<Scripts>
+            <OnLoad>
+				this:SetBackdropBorderColor(0.4, 0.4, 0.4);
+				this:SetBackdropColor(0.05, 0.05, 0.05);
+            </OnLoad>
+		</Scripts>
+	</Frame>
+
+</Ui>

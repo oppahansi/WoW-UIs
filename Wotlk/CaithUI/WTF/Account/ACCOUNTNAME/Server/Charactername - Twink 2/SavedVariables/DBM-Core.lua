@@ -1,0 +1,105 @@
+
+DBM_SavedOptions = {
+	["SpecialWarningFontSize"] = 22,
+	["ShowWarningsInChat"] = false,
+	["DontSetBossIcons"] = false,
+	["SpecialWarningSound"] = "Sound\\Spells\\PVPFlagTaken.wav",
+	["HealthFrameLocked"] = false,
+	["HealthFrameGrowUp"] = true,
+	["StatusEnabled"] = true,
+	["HideBossEmoteFrame"] = false,
+	["ShowBigBrotherOnCombatStart"] = false,
+	["BlockVersionUpdatePopup"] = true,
+	["WarningColors"] = {
+		{
+			["b"] = 0.9411764705882353,
+			["g"] = 0.8,
+			["r"] = 0.4117647058823529,
+		}, -- [1]
+		{
+			["b"] = 0,
+			["g"] = 0.9490196078431372,
+			["r"] = 0.9490196078431372,
+		}, -- [2]
+		{
+			["b"] = 0,
+			["g"] = 0.5019607843137255,
+			["r"] = 1,
+		}, -- [3]
+		{
+			["b"] = 0.1019607843137255,
+			["g"] = 0.1019607843137255,
+			["r"] = 1,
+		}, -- [4]
+	},
+	["RangeFrameY"] = -184.3846210996221,
+	["SpecialWarningFont"] = "Interface\\Addons\\SharedMediaAdditionalFonts\\fonts\\sansation.ttf",
+	["SpamBlockRaidWarning"] = true,
+	["ShowFakedRaidWarnings"] = false,
+	["DontSendBossAnnounces"] = false,
+	["DontShowBossAnnounces"] = false,
+	["ArrowPosY"] = -150,
+	["RangeFramePoint"] = "LEFT",
+	["SpecialWarningPoint"] = "CENTER",
+	["ArrowPoint"] = "TOP",
+	["RaidWarningSound"] = "Sound\\Doodad\\BellTollNightElf.wav",
+	["RangeFrameX"] = 334.9397561026526,
+	["WarningIconRight"] = false,
+	["SpecialWarningX"] = -7.384416629981857,
+	["RangeFrameSound2"] = "none",
+	["AlwaysShowHealthFrame"] = false,
+	["RaidWarningPosition"] = {
+		["Y"] = 81.3518641354417,
+		["X"] = -6.71320627163001,
+		["Point"] = "CENTER",
+	},
+	["HPFrameMaxEntries"] = 5,
+	["Enabled"] = true,
+	["SpecialWarningY"] = 189.8717141029437,
+	["WarningIconLeft"] = false,
+	["HealthFrameWidth"] = 150,
+	["RangeFrameSound1"] = "none",
+	["DontSendBossWhispers"] = true,
+	["RangeFrameLocked"] = false,
+	["HPFrameY"] = 180.3843992686889,
+	["SpecialWarningFontColor"] = {
+		0.8313725490196078, -- [1]
+		1, -- [2]
+		0.7568627450980392, -- [3]
+	},
+	["HPFramePoint"] = "BOTTOMRIGHT",
+	["ShowMinimapButton"] = false,
+	["HPFrameX"] = -64.30751109277671,
+	["ShowSpecialWarnings"] = true,
+	["SpamBlockBossWhispers"] = false,
+	["ArrowPosX"] = 0,
+	["AutoRespond"] = true,
+}
+DBT_SavedOptions = {
+	["DBM"] = {
+		["FontSize"] = 9,
+		["HugeTimerY"] = 70.35894199015664,
+		["HugeBarXOffset"] = 0,
+		["Scale"] = 1.100000023841858,
+		["HugeBarsEnabled"] = false,
+		["StartColorR"] = 1,
+		["HugeWidth"] = 178,
+		["TimerX"] = 121.4359186594608,
+		["Texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\Glamour4",
+		["ExpandUpwards"] = false,
+		["TimerPoint"] = "LEFT",
+		["StartColorG"] = 0.6980392156862745,
+		["HugeBarYOffset"] = 4,
+		["HugeScale"] = 1.149999976158142,
+		["EndColorR"] = 1,
+		["Width"] = 117,
+		["HugeTimerPoint"] = "LEFT",
+		["BarYOffset"] = 19,
+		["HugeTimerX"] = 160.3215170874133,
+		["TimerY"] = 91.57622672470914,
+		["StartColorB"] = 0,
+		["EndColorG"] = 0,
+		["BarXOffset"] = 0,
+		["EndColorB"] = 0,
+	},
+}

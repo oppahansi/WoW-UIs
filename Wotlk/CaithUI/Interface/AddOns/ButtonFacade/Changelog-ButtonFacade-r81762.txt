@@ -1,0 +1,8 @@
+------------------------------------------------------------------------
+r81762 | next96 | 2008-09-15 22:43:08 -0400 (Mon, 15 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/ButtonFacade/Localization/koKR.lua
+
+ButtonFacade:
+ - Update locale koKR
+------------------------------------------------------------------------

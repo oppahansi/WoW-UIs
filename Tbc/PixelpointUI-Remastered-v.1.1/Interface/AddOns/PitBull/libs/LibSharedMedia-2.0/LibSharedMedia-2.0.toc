@@ -1,0 +1,16 @@
+﻿## Interface: 20400
+
+## Title: Lib: SharedMedia-2.0
+## Notes: Shared handling of media data (fonts, sounds, textures, ...) between addons.
+## Author: ckknight
+## X-OriginalAuthor: elkano
+## X-Category: Library
+## X-Website: http://www.wowace.com
+## X-Donate: Paypal:ckknight AT gmail DOT com
+## X-eMail: ckknight AT gmail DOT com
+
+## X-WoWIPortal: ckknight
+## LoadOnDemand: 1
+
+LibStub\LibStub.lua
+lib.xml

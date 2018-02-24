@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+r173 | arrowmaster | 2009-01-04 01:32:10 +0000 (Sun, 04 Jan 2009) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   M /trunk/SharedMedia.toc
+   M /trunk/statusbar/Armory.tga
+   M /trunk/statusbar/Glaze2.tga
+   M /trunk/statusbar/Melli.tga
+   M /trunk/statusbar/MelliDark.tga
+   M /trunk/statusbar/MelliDarkRough.tga
+   M /trunk/statusbar/Pill.tga
+   M /trunk/statusbar/Ruben.tga
+   M /trunk/statusbar/Tube.tga
+
+Toc bump to 30000
+------------------------------------------------------------------------
+r172 | root | 2008-09-29 21:56:32 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------

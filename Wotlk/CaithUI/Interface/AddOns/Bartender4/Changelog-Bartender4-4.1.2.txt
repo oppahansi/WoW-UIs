@@ -1,0 +1,1736 @@
+commit 6f3feafc1e48acd3ff0b5b457a80988da368b670
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 14:48:40 2008 +0200
+
+    Added missing locale
+
+commit d646802d2641d03736cefa3280ba5c5c63b8952d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 14:46:50 2008 +0200
+
+    Adjust .toc for next release
+
+commit b19d8ae23f1863db4707750b9ae82a4aa015e0c2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 14:46:17 2008 +0200
+
+    Adjusted initial positions of the bars to not overlap
+
+commit bbdf0b06f8f7529a5438f541f7d25cd4e947d4ff
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 14:37:01 2008 +0200
+
+    Added small popup in unlock mode that allows you to disable snapping and lock the bars again without opening the config
+
+commit 5b9d669956b9357d63bbd39e9c6677142cf29d9e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 11:02:11 2008 +0200
+
+    Simplify the refreshing of the visibility header on lock/unlock
+
+commit a96818756b64a57cee583b7724a3393b42eb7b73
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 10:24:31 2008 +0200
+
+    Update .toc for 4.1.1
+
+commit 397a83da2003003b7ad30117a6a09d8cb5ab7785
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 10:18:55 2008 +0200
+
+    Refresh visibility status of the bar after locking them again
+
+commit a1fcf1fd5812cc8d7f8bcdf05ad80488ffa6e324
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 10:09:38 2008 +0200
+
+    Adjust bagbar button size to new bags
+
+commit b549507c731c66b00bb3eb3f30b5c3637127f81b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 10:02:40 2008 +0200
+
+    Fix alot of bugs with switching profiles
+
+commit 9b35e84ef76562ac04b3a53950d83bb9cee4388f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 03:05:32 2008 +0200
+
+    Add /bartender and /bartender4 as slash commands to open the config
+
+commit 76eebc55caad3c14a2279cb0885f0ec1b48737b8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 15 02:52:31 2008 +0200
+
+    Make sure that every bar has the proper config reference when switching profiles
+
+commit 1290f1d5693d58bf389146173d5e376ff8d2dfc0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Oct 14 20:39:22 2008 +0200
+
+    Adjust .toc in preparation of release
+
+commit 8663238ea4a22229fd52ecc21830cc760efdb751
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Oct 12 15:11:14 2008 +0200
+
+    Small cleanup
+
+commit 97f10a12db6d76bc5e8ff3d5148668c0cae8d5c9
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Oct 12 15:09:09 2008 +0200
+
+    Added very basic Reputation/XP Bar modules
+    Support for the XP and Reputation Bar, Bartender4 hides them so it can show them again. Disabled by default.
+    
+    Note: The XP Bar hides itself when you reach max-level, and the Reputation Bar hides itself if you are not tracking any reputation.
+
+commit 461f274d4773529c212a3e72676f43b3064ff275
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Oct 11 20:27:29 2008 +0200
+
+    Fixed disabling of Auto-Assist
+
+commit 1b76f3f9dd55db008bec831781440310dafb9715
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Oct 11 19:48:55 2008 +0200
+
+    Fix error in auto-assist code with harm-assisting
+
+commit 5efa96d0ee52ee210eeba6d0aa0dcaa339f521b2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Oct 11 19:37:55 2008 +0200
+
+    Added a Leave Vehicle Button to the Main Bar on Slot 12
+    The Possess Bar usually only uses 10 buttons to the limit of 10 buttons on the pet bar, that leaves button 11 and 12 empty. Button 12 (id 132) is now being used for a Leave Vehicle button to be able to leave vehicles properly.
+    
+    Without a full 12-Button Main Bar, you probably want to Macro /script VehicleExit();
+    
+    I may add another form of button for this at some point, but not right now.
+
+commit 7d5f26a2278eb289c4534b56601ec16d1147bb54
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Oct 11 18:10:49 2008 +0200
+
+    Updated TODO.txt
+
+commit d2658cb4f05e33ff2e78604e286eccdf05e4e32d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Oct 11 00:33:02 2008 +0200
+
+    Use the Multiline Editbox for the State and Visibility Custom config
+
+commit f99404c5a6274624dcd992cc0cf59e3aaedea756
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Oct 9 00:40:03 2008 +0200
+
+    Added a Vertical MicroMenu option
+    The MicroMenu can once again be vertical again, however it does not have a full-blown Rows configuration like the actionbars do, due to some issues with the non-square micromenu buttons.
+    As a result of that, padding between the buttons is currently not available either.
+    Its planned to make the MicroMenu use the default ButtonBar template too in the future.
+
+commit 6d91f0f80feb6fd4f7582a5d8d389f36a6c3871f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Oct 9 00:23:36 2008 +0200
+
+    Fixed width of the MicroMenu overlay
+
+commit 9a6173787f51a15dcbce7560ebc61bd22fe0eb53
+Merge: 52188b3... 9d6bc2b...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 1 12:36:11 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit 9d6bc2b4916df6dd31c3bdeb6490e8fbad082abf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Oct 1 12:35:35 2008 +0200
+
+    Updated .pkgmeta externals for final migration
+
+commit 52188b3fd14704211fb3a728739dc3c6d29d910e
+Merge: fa56f27... 58247f6...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 30 09:25:10 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit 58247f6a07ec477a28057e0a0e6afe3b75c0e0ae
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 30 09:24:47 2008 +0200
+
+    Added .pkgmeta file
+
+commit fa56f2787c852c78ea55c1856be09b69bd3134d2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 29 11:23:31 2008 +0200
+
+    Some more tweaks to Babelfish script, changing output format slightly, and re-run the script.
+
+commit ca8e48aeecbf71f2db848807c3cfdcd497cc3f80
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 29 11:00:13 2008 +0200
+
+    Added a type check when writing the locale files
+
+commit c172c7770b10ea4cb4b9c4c19dbbedaef36f0bc4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 29 10:58:18 2008 +0200
+
+    Added support for non-true values in the base locale
+
+commit a502a9090b068ac08f0f34bded0ebd499fc264fe
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 29 10:52:23 2008 +0200
+
+    Allow configurationg of a different base locale in Babelfish Script
+
+commit 8664664151b2a0c99f277274f9fe08d1e8439b36
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 29 10:49:46 2008 +0200
+
+    Added more configuration variables to the Babelfish script
+
+commit ddb810fb1b3be14c51052877a9344449d5cc5b7f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 18:07:11 2008 +0200
+
+    Re-organized some state options and extended description of the ActionBar Paging option
+
+commit 5c60ec29f249952f5d56f154abb8fedf8a8ded68
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 18:01:10 2008 +0200
+
+    Added a button to the Config GUI to open the Key Binding Mode
+
+commit e35f488d55118a738299904ad3446e5fa2f3da68
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 15:23:20 2008 +0200
+
+    Added support for esMX to locale files and Babelfish script
+
+commit 9246db80f51d997540a7573538256307801e9852
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 15:05:12 2008 +0200
+
+    Small tweak to options implementation
+
+commit 93ad63a772f4702ba4af1d3332cdcaebc1d42e15
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 15:02:23 2008 +0200
+
+    Re-implemented Right-Click self-casting
+
+commit 8a78292d773f4414af8398e3b63aca1ec0c10ff2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 14:45:33 2008 +0200
+
+    Added "Copy Conditionals" button to the Visibility driver as well
+
+commit 899c256250466740911f3b609829eabc0eb8340f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 14:44:45 2008 +0200
+
+    Update State Driver after copying the previous set values into the custom driver
+
+commit c2905efe71eb26810afd2f2abdcae26d0ccbfcd9
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 14:36:06 2008 +0200
+
+    Added missing locale entries for new State Options
+
+commit 250f3d8a5be347e1d4ec242379f3a152f192d26f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 14:32:38 2008 +0200
+
+    Added Custom Conditionals support and Config options
+    You can now enter any macro conditions into an editbox in the Config GUI which will feed the state driver. The syntax is not validated, so its your own responsibility to know how macro syntax works!
+    Example:
+    [form:1]9;0 -- Page to Bar 9 in Form 1, otherwise don't page at all (id 0)
+
+commit 0b6b233ab0f65e48122975411f15f15b0ff0892c
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 28 00:25:31 2008 +0200
+
+    Add "Alpha" token to the version number in the .toc
+
+commit 66479e12b952c13b2cd705717098e4535a939c18
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 27 22:52:14 2008 +0200
+
+    Added new "type" attribute to the state stance map definition.
+    The new "type" attribute allows the state header to use any macro conditions to be used for paging, currently only used in Warlocks Metamorphosis which only reacts on "stance" and not on "bonusbar" in build 8982.
+    If type is not set, it defaults to "bonusbar" for compat reasons.
+
+commit 7fd6c09c2eadc738165c3c85aab95632b5c51984
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 27 22:49:11 2008 +0200
+
+    Fix Visibility Configuration for Metamorphosis
+    Metamorphosis is on slot 1 for GetShapeshiftFormInfo(), but when active GetShapeshiftForm() returns 2.
+    Added a hopefully temporary hack to work around the issue.
+
+commit 6f5de9a42ddccb60ae36f65d8dd40d5a8f9f7a76
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 27 22:35:33 2008 +0200
+
+    Fix paging support for Warlocks in Metamorphosis
+    Warlocks require a special treatment right now. Metamorphosis does not have a default BonusBar Offset and can only be caught by [stance:2] right now.
+
+commit 63eda4be43bed23f0b8ef2a23f81ce602e3866a0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 27 22:25:51 2008 +0200
+
+    Added Warlock Metamorphosis support to the State-Paging module of ActionBars
+
+commit 0c9429af60d7ca8b1bcb02d1a11fa0da06dcc6d0
+Merge: 39a8132... c8e4068...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 23 11:19:43 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit 39a8132031bc559228674452683af055e9d8c2cc
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 22 19:12:23 2008 +0200
+
+    Changed PetButton KeyBound implementation to always show a proper name
+    Bindings reported will always be in the format "Pet Button 1 (action_name)" now.
+    Note that bindings are always directly to the button, no matter whcih action is
+    currently associated to it, not as [1] claims.
+    
+    [1]: http://jira.wowace.com/browse/BT-39
+
+commit c8e4068fa652c88e892c48734e35e0d504c6f745
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 16 15:42:39 2008 +0200
+
+    Applyed workaround for the Action Blocked message when using /click macros
+    
+    Apparently the cache for the click-frames taints its first element after frame creation, so a one-time call of GetClickFrame() after frame-creation removes that tainted element from the cache, and all future calls return the proper secure frame. [1]
+    
+    [1]: http://forums.worldofwarcraft.com/thread.html?topicId=3773503744&sid=1&pageNo=4#60
+
+commit aa1867ad90c3538dd180c9a312e02778446e55cf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 14 13:25:48 2008 +0200
+
+    Removed SVN $Id$ Tags and updated locale
+
+commit 34242b5c414f9d4e612fd9114266c757c7cc40b1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Sep 14 11:03:12 2008 +0200
+
+    Fix TokenUI not loading with Bartender4 enabled
+
+commit c7dd6ac8e2fc8006604bb7db4c9be46c1679dcd4
+Merge: f9c9b4e... af35db6...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 6 11:53:11 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit af35db6328bed6ac2399ab73aa4802e59e9b1089
+Merge: 6172b36... cf3a121...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 6 11:51:02 2008 +0200
+
+    Merge branch 'master' of git@github.com:Nevcairiel/bartender4
+
+commit 6172b367c02691a3bb49889b08162e457b058966
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Sep 6 11:50:12 2008 +0200
+
+    Pet and Stance Bar will now obey the "Disable Tooltip" setting
+
+commit f9c9b4e8fd32f6e390fb065eba298ccd2eaab15f
+Merge: 27dcb23... cf3a121...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Sep 5 17:32:33 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit cf3a121b0338644028cddf5a88d9ec321f44650d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Sep 5 17:20:09 2008 +0200
+
+    The LDB plugin will only try to add itself if LDB is present
+
+commit 27dcb23d1b6a46c7d72fb53df931b2b72d2fea1a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Sep 5 11:59:43 2008 +0200
+
+    Refactor the fade-out option to use the new state functionality
+
+commit b457d056bb92c337b07b1f6680271267e57542a0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Sep 5 11:10:17 2008 +0200
+
+    Add WorldFrame and UIParent to the list of frames to snap to and tweak sticky code
+
+commit 93ad42385cb5e38659796e3f49562b334a5245de
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Sep 5 10:53:13 2008 +0200
+
+    Added simple Bar-snapping support, more to come
+
+commit a7335b6b190e44d4f99d6198ebdad29ebc65129e
+Merge: eee195e... dadab99...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Sep 4 22:03:11 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit dadab99c7cb11fc3117b7aa5ccda8e328efd57b6
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Sep 4 21:42:32 2008 +0200
+
+    Added missing LDB plugin
+
+commit eee195efe214c2fb9e381d27c09644252bbdfd47
+Merge: c365751... 2f08264...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 21:59:48 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit 2f08264659e25c0460206106e51997f2716b4e53
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 21:59:21 2008 +0200
+
+    Fix start-up errors due to missing locale reference
+
+commit c3657517942ea53a1bef7d7a7a7a8a0dff5e1ef0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 21:44:52 2008 +0200
+
+    Minor cleanups in action button code
+
+commit da58d8e303ea49b48cd9eef20a5f138cb11d11e9
+Merge: c7c303a... a44b12b...
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 17:03:48 2008 +0200
+
+    Merge branch 'master' into wrath
+
+commit a44b12b76fdc884e48d4a9a0b42cf1d552169a00
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 17:02:51 2008 +0200
+
+    Added LDB launcher plugin
+
+commit c7c303ae3c9fdbf0cdae2fde4ce7cc9cb7d88844
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 16:55:22 2008 +0200
+
+    Removed trailing spaces
+
+commit e018043a972f828dfe7c41c96efa3e75d6c0301d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Sep 2 07:55:12 2008 +0000
+
+    use custom visibility driver that supports fading in addition to the simple show/hide
+
+commit 5c5e2746c87a68a304b19d98af5fc822a53cd745
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 22:27:10 2008 +0000
+
+    oops forgot one
+
+commit eed9a681a5e2b38cd0d293240645e06f6104a2cb
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 22:26:14 2008 +0000
+
+    rewrite auto-assist feature using new secure state driver rather then ugly macrotext
+
+commit 58f46c261e214a5ea10c17f5ac2464ceda489581
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 15:57:03 2008 +0000
+
+    prevent spam when turning off custom mode again
+
+commit cb5b5dc67d11922bb55dff2340a5b36e29de2df9
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 15:40:51 2008 +0000
+
+    add custom-conditional support to visibility driver, does not validate the syntax yet, so take care
+
+commit d12eb849fefaeef5894fa66160706d1971438e3e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 15:09:38 2008 +0000
+
+    add options to control the new visibility driver
+    - currently supports: always hide, when possessing a npc, combat/nocombat, pet/nopet, stance:X
+
+commit df656280af2c9c94f6b8562b9899827200947db2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 14:26:39 2008 +0000
+
+    fix stance options
+
+commit c58af7643f0cad71716fed6778e96793bff74185
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 12:59:56 2008 +0000
+
+    fix options
+
+commit 959172dbcf71060c6129ce948089f521039ee445
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 12:42:18 2008 +0000
+
+    first draft of new visibility system, works so far, but lacks options
+
+commit d7d1d3cd6232409eb65a736cba1120aa1805ae3d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 11:21:13 2008 +0000
+
+    fix other bugs
+
+commit d578e07bf63673730c4f7d692c4ea117f1f53188
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 11:16:58 2008 +0000
+
+    fix .toc
+
+commit 6acaa9e6a1f42c00ef7a34b00d26ffd030ed3cfe
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 11:12:43 2008 +0000
+
+    restructuring, preparing for new changes
+
+commit dca3b31f9ddb014e6062b0a23a96e4367de44a6b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Sep 1 10:24:40 2008 +0000
+
+    change visibility driver to hide pet-bar when possessing, as blizzard doesn't give you a pet-bar either when in a vehicle, for example.
+
+commit 866d5357441f24743b2733cda59ce5ed1b162408
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Aug 31 18:30:33 2008 +0000
+
+    totally disable the default bar again (may or may not totally disable the vehicle ui too, off to testing :P)
+
+commit b0b17b8bdd6319c47d556196d33ec948c7f87335
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Aug 30 08:41:54 2008 +0000
+
+    remove workaround for bug that was fixed in the latest build
+
+commit 6e0e7867bd2876c0899ca236b25fcaa9f79d7cc3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Aug 23 09:55:50 2008 +0000
+
+    small fix for classes without stances
+
+commit 1b559df631a4f489a2ff1b191fa54469c0b1e8dd
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Aug 22 08:11:35 2008 +0000
+
+    update to changes to the secure code
+
+commit c769ed8b07b1ab316ec9f3c724ea8eec6a10ca01
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Aug 8 09:16:14 2008 +0000
+
+    smarter handling of the state configuration
+
+commit e4c0bfaefc9512fad9c2b27bace39634d068fa9a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Aug 8 07:10:19 2008 +0000
+
+    more fixes to stance code
+
+commit 4bfaf49d747ab46147aa8ad906a0af936c0ddcb6
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Aug 8 06:56:15 2008 +0000
+
+    very basic and hack'ish support for page swapping, hopefully doesnt break :D
+
+commit 827676e74bb9d1b62a51426d270c3f8f7d62cfea
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Aug 6 10:45:30 2008 +0000
+
+    properly show the autocast shine when toggling it
+
+commit cab1f365bfd0070960df4385e72c202a0c3ef005
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Aug 6 10:42:13 2008 +0000
+
+    some fixes to petbar and the new autocast glow
+
+commit e028cb99f786b55ca4898ce2bd146687fae5f571
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Aug 5 16:58:48 2008 +0000
+
+    fix micromenu with new buttons
+
+commit 1e0f014be1ccbf77d875bbfcb3fb0c39ddfe4239
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Aug 5 16:21:38 2008 +0000
+
+    comment a unfinished typo thingy
+
+commit bc9bfa321d78c3f96b1e9da46d3967f1cb76c44f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Aug 5 16:09:34 2008 +0000
+
+    bump .toc
+
+commit b0dbd42aa835da402338c4834dca8bd4621ef686
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Aug 5 16:09:04 2008 +0000
+
+    first set of fixes for WotlK
+    - conditional show/hide of bars is still broken
+    - page swapping in any form is broken as well
+
+commit 85801dc74d2f16e5c556e140cca7e7fd7e160d09
+Author: StingerSoft <StingerSoft@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Thu Jul 17 23:28:33 2008 +0000
+
+    update fully ruRU translation
+
+commit aded41c1cf0f57070ca1e376933361552e86b86a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Jul 16 16:33:50 2008 +0000
+
+    fix some behaviour
+
+commit 358fc6607c3e1cc0dbb14bc637bea93ff6fb60ab
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Jul 15 07:46:18 2008 +0000
+
+    fix a bug with action buttons not updating properly with AutoAssist active
+
+commit 2ffd19655baa3dc3b1445c59de28ef753aa1c43a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Jul 5 12:41:16 2008 +0000
+
+    big restructuring, split the options from the code and moved individual modules into subdirs
+    - expect big breakage if you try to update without completely restarting wow
+
+commit b856fc9760a0cd4040696384818e401d1cbe7e65
+Author: whyv <whyv@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sat Jul 5 10:54:04 2008 +0000
+
+    update zhTW locale
+
+commit e8054a1be2f7e033f2c177167fc65b1af02fbe0c
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sat Jul 5 05:00:32 2008 +0000
+
+    update zhCN
+
+commit 60d2bfe91bdc7c0fef15b127640adf04e0bb742f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jul 4 22:43:36 2008 +0000
+
+    simplify 3 translations to be combined in one
+
+commit 3a4694699cde6cb3f2293bd121d16ea051efef5e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jul 4 22:40:25 2008 +0000
+
+    add empty ruRU locale file and add ruRU to the babelfish script
+
+commit b5fcb19415611d67116a51518decbf3736991d35
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jul 4 16:57:19 2008 +0000
+
+    fix issue with hiding bars on disable
+
+commit caa897af46483bc337f8e03ff34a4f24339aa73f
+Author: pettigrow <pettigrow@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 25 08:17:39 2008 +0000
+
+    frFR Update
+
+commit 12bfb79d96406b1a63db611a0e9014ac9d21d857
+Author: sayclub <sayclub@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sun Jun 22 23:27:42 2008 +0000
+
+    - koKR Update
+
+commit b41a86008be39bcf6ecd6d6282ee0174f66f0005
+Author: whyv <whyv@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sun Jun 22 12:00:21 2008 +0000
+
+    update zhTW
+
+commit f1876d69c7d7a198e75554b0a16618e6cacbd89c
+Author: pettigrow <pettigrow@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sun Jun 22 11:24:53 2008 +0000
+
+    frFR Update
+
+commit 66d8e604a46390ee6c05d5f9421be351f254a9c1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 22 09:50:37 2008 +0000
+
+    babelfish run to validate locale
+
+commit 4aa60c0c69f99671b6d4f8cfe494387342e68b3c
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sun Jun 22 09:48:37 2008 +0000
+
+    add missing locales
+
+commit 5288055c7d73129ccf5b5bad9ddf74f801850081
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 22 01:00:50 2008 +0000
+
+    small fix
+
+commit 0dd8e3dbd1d1f48b35b4eabc6e4f116d03ff94cf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 22 00:39:04 2008 +0000
+
+    seperate Tree of Life and Moonkin stance configuration (moonkin will also now actually work)
+
+commit 7de890f9123640e4fb7d63fbbe985e53e80e2e0c
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 22 00:24:42 2008 +0000
+
+    revert some changes to the action button code again to resolve a weird issue with moving spells (once again its not possible to move actions in combat)
+
+commit 5da823daf6786edb2041e79f2a2e06d24dfa6c50
+Author: next96 <next96@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sat Jun 21 14:12:22 2008 +0000
+
+    - Update locale koKR
+
+commit 4e23013c644ea05fb8e02d55348027f96885e1ad
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Jun 21 13:42:26 2008 +0000
+
+    improve visibility driver logic and API
+
+commit 31cc52cbfff55a45502662805e4029cff97aa07a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Jun 21 13:19:28 2008 +0000
+
+    applied a fix to the "Hide" option in different states until the hiding system can be re-written
+
+commit 3ea0cf7a76242931c77eab30f64fc1995d966350
+Author: sayclub <sayclub@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Fri Jun 20 22:51:20 2008 +0000
+
+    - koKR Update
+
+commit 3e7f4c7bbf1a1d2fa92db5d8e270e2a985dc58f2
+Author: pettigrow <pettigrow@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Fri Jun 20 08:26:41 2008 +0000
+
+    frFR Update
+
+commit 8060002efc4e7eb7d7b0ca159e629ba2bff741d1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jun 20 00:03:21 2008 +0000
+
+    commit the other half of that <.<
+
+commit 14aa5efda439e17fe58996d2f3f471f0e73371d8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jun 20 00:01:23 2008 +0000
+
+    - update babelfish script to work with embeded escape chars (\n, \t, \", etc)
+    - bar creation now takes a name to avoid translation issues
+    - re-run babelfish script - If you find missing translations, just add the L[] wrapping around it and run the babelfish script!
+
+commit 58d690b24bb842fced915b6cf411e0e021cc53ef
+Author: next96 <next96@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Thu Jun 19 15:19:01 2008 +0000
+
+    - Update locale koKR
+
+commit d2cfed96e883266f7c6547c34e228ee4ed0f72f4
+Author: whyv <whyv@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Thu Jun 19 11:59:38 2008 +0000
+
+    update zhTW locale
+
+commit 9c86d78d2e0b5a5e26cb5a1ad863bf9332ad6def
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Thu Jun 19 11:08:10 2008 +0000
+
+    add missing locales
+
+commit 8d8d57aab40d09544d7a8c33bb5cabaf2bdcec47
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jun 19 07:58:49 2008 +0000
+
+    more svn stuff
+
+commit 8cac6f8d72ca262c7efb834996df0a8cbac659f2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jun 19 07:58:15 2008 +0000
+
+    svn stuff
+
+commit 4b0ffa8fed9dc76f925374bfcbdf275d5ec3ecd3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jun 19 07:35:04 2008 +0000
+
+    tweak one translation to be accessible by the babelfish script
+
+commit f0a2eded4f6a7d4350e73ede70be9653a40c7065
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jun 19 07:26:25 2008 +0000
+
+    update locale, now uses a advanced version of cladhaires babelfish script to generate the locale files
+
+commit d1ea810244f5f9813f1aae44cc3ce7711ee6a1ee
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jun 19 06:12:49 2008 +0000
+
+    add missing locale
+
+commit cf8b217a1cca94ce6a7637a9fcb330fe143b3f7d
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 22:45:58 2008 +0000
+
+    Bartender4:
+    Fixed missing locals
+
+commit 6705db12b57e93f12a9c6e57bf6a98661c490f23
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 22:10:30 2008 +0000
+
+    Bartender4:
+    Fixed missing locals
+
+commit 728a47775faf2a9358c6c7f39f3b349473c7bc9b
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 20:33:28 2008 +0000
+
+    My work is finished.
+
+commit 733e37d0a154a203ad4318c4fe72759fd22ff935
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 19:36:04 2008 +0000
+
+    fix a mistake
+
+commit b65818e89bddd754ab731c521e48ff203bc16356
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 19:35:03 2008 +0000
+
+    continue to work
+
+commit 6ff195efd3e36845f5b364f5d578464070f940ae
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Jun 18 16:58:08 2008 +0000
+
+    fix some layout and other junk in the locale files
+
+commit 42259637e411cb86bebfb1ec9ecdcf30207981e2
+Author: next96 <next96@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 16:23:33 2008 +0000
+
+    - Update locale koKR
+
+commit 4482f03871b9f7fe0b43b5c17df002c3ff9052ff
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 15:48:42 2008 +0000
+
+    I have forgotten some things
+
+commit 9b14b72fe99b6e4d6ca0924519a241f213a48a66
+Author: cwdg <cwdg@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Wed Jun 18 15:42:12 2008 +0000
+
+    add zhCN Localization(not finished yet)
+
+commit ddc11d864e2e99c57e8cc2a15b9a3aa6c751686b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Jun 18 09:35:17 2008 +0000
+
+    re-implement the hide macrotext option, should all be working now again
+
+commit a9ff46637f627a2427ed45af96ad1559765826b8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Jun 17 21:44:18 2008 +0000
+
+    remove Button Lock option because its defunct
+
+commit 4cdfbe6c0f84dc2fc575b905f5e83db8234b5ef3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Jun 17 13:36:45 2008 +0000
+
+    add a check around the keybinding code to hopefully prevent any errors
+
+commit 992e6519ed0061451e33114186759d8e0c991e80
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Jun 17 07:37:40 2008 +0000
+
+    fix flash texture
+
+commit 9796afddac6028de249d0af287b33431486a5339
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 16 20:58:36 2008 +0000
+
+    re-commit new button code, now with more checks and fixes and whatnot
+    - sadly, hiding the macro text is currently defunct, will be fixed soon'ish
+
+commit 8fa4195ba9e5303d2005b13f501ee7e78a95b38b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 16 18:41:58 2008 +0000
+
+    revert last commit until i can figure out wtf is wrong with those templates
+
+commit e072ee9e08728cdf996b01d2375f85a9f290536a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 16 15:07:46 2008 +0000
+
+    - now using the blizzard actionbutton template for action buttons
+    - this means:
+    -- draging of spells in combat is possible again
+    -- empty buttons will be really hidden
+    -- the lock actionbuttons option from the BT menu is currently gone, use the interface options setting to lock moving your actions
+
+commit 86d433fefe5d46f9168c5c0b923805b65898c7db
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 16 08:24:09 2008 +0000
+
+    fix error when loading profile
+
+commit dd91d867b751937ef577bb597458f67ff219cd46
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Jun 14 15:00:24 2008 +0000
+
+    dont try to steal bindings in combat, only ends up in errors anyway
+
+commit c1622e076fb2607770b7296c922a68597b90e8e2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Jun 11 14:38:54 2008 +0000
+
+    workaround for a stance issue that didnt save data properly
+
+commit a70c09effaa69218af47a54e7bb0c4cd3397fb9c
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 9 09:50:35 2008 +0000
+
+    small tweaks
+
+commit cc621807c757b4bc227a677ca7566e5c78dac9ff
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 8 10:24:12 2008 +0000
+
+    force all button layers to be on MEDIUM strata and fix up framelevels
+
+commit 90f2b872d824f495074ff77a868f8e3c74f72fed
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Jun 7 15:10:49 2008 +0000
+
+    - hide the pet-bar AutoCastable texture when AutoCast is enabled (works around a crazy ButtonFacade design that showed it on top - back to blizzard behavior)
+    - tweak stance bar code for classes that dont actually have a stance (yet)
+
+commit e3f1ea1dba9d1a7a214fc9744612dbc031c2f39e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Jun 2 21:17:50 2008 +0000
+
+    fix a bug in auto-assist logic
+
+commit c77eebfe00f207cb5413fa6e3333a6b9bd57b0c0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 1 15:33:08 2008 +0000
+
+    check for helpful before harmful
+
+commit d864f2b219965417a0a15a36072567ee2597d575
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 1 15:18:29 2008 +0000
+
+    added expiremental auto-assist feature
+    - automatically trys to target your target's target if your current spell cannot be cast on your target (useful for healers targeting a boss and healing the current MT, etc)
+
+commit e3f007b5ae1d49680108417f4c1c2b7c59383854
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 1 06:57:29 2008 +0000
+
+    small tweak to fadeout
+
+commit 8798f12df5bd68393d5982e911d1d338c07cb9c7
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jun 1 06:50:54 2008 +0000
+
+    make sure fadeout behaves correctly with locking and changing the bar alpha
+
+commit cdb0357348ddbca203811287b0a10d8bb26d12c4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 21:44:18 2008 +0000
+
+    updated ButtonFacade support to store the color values
+
+commit cbc2b5539631791bfd609bd044990110e44714c4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 21:08:02 2008 +0000
+
+    add very simple fade out support (disabled by default)
+
+commit d9e1bb2bb6927fad8405bc324dc9acbf30ba7db8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 19:48:47 2008 +0000
+
+    - add keyring and onebag option to bagbar
+    - fix some random stuff in the options tables
+
+commit ee13a40b9df538215cbcc8eee62238e79f72acc8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 16:32:28 2008 +0000
+
+    added very simple BagBar module, no keyring yet, option for only one back button coming soon, too
+
+commit f3c2336d0252a1f7821306c7ad3d54c841e7243a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 15:58:28 2008 +0000
+
+    added options to hide the hotkey and macrotext
+
+commit e07b43dbc18d0b6f2d41502a0518301868085020
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 14:29:27 2008 +0000
+
+    remove old keyBound code
+
+commit 9e092cda14beb384bb4fbd044904ac686037da37
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 31 11:16:59 2008 +0000
+
+    - now using LibKeyBound-1.0
+    - added more options to configure the show/hide state of the bar, now supports showing/hiding bars based on in-combat
+
+commit 3e3bd90c37ce470941d5b3854a38a40646a160f2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed May 28 10:27:51 2008 +0000
+
+    fix module enabling/disabling in various modules
+
+commit 88f2eca87c0010c68a15c7c2e040b36347ba5133
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue May 6 19:08:48 2008 +0000
+
+    fix error in keyBound zhTW locale, please dont break stuff <.<
+
+commit d3bb2675221c377f5311177bf57f0e691285dc3a
+Author: whyv <whyv@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Tue May 6 17:55:47 2008 +0000
+
+    Add zhTW locale to KeyBound
+
+commit dbc0ad51463d481c953c60d57589aed492776074
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon May 5 16:38:52 2008 +0000
+
+    tweak size of the NormalTexture
+
+commit 22075742e125fd495b06a016a8cf7063fa2268c3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon May 5 14:35:01 2008 +0000
+
+    remove Button argument from the skin callback, since we only allow skinning based on the group
+
+commit cfffaa706b1efe593585eee77c63004a1a4813c7
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon May 5 13:25:52 2008 +0000
+
+    add a check to the button layout code to prevent crazy behaviour if a user sets #Rows > #Buttons
+
+commit e971831afe3fed9370c20542797a6ba464a71ebf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 16:37:18 2008 +0000
+
+    fix parents when releasing/aquiring buttons, fixes inproper showing of buttons when reducing the number of buttons on a bar
+
+commit 96ef135b8144aa34f107e4e78cbaa11cf750705d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 10:47:45 2008 +0000
+
+    bump .toc to 2.4 .. wonder why i never did that before
+
+commit d8048408a5b5df0b07171145ab813b4cdf610a15
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 10:35:25 2008 +0000
+
+    add a reference to the real button into the button proxy object
+
+commit 141bba726113651195f741251628dd031208c8af
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 10:29:30 2008 +0000
+
+    add :GetActionID() to the action buttons
+
+commit 4fc318de8100d39062dc59b06714eb85df7c5f3f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 10:15:28 2008 +0000
+
+    fix clearing keybindings on bar1
+
+commit ebed178bd347a09a0ded1ba2eb709ceda8e0613b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 10:07:40 2008 +0000
+
+    fix the color of the overlay in unlocked mode
+
+commit 1bead472031a5b51bb65ecd2c4d3e2ff43490298
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun May 4 09:45:09 2008 +0000
+
+    fix translation error, stupid koreans :P
+
+commit 41782506629b41aeb824523c430e52b7daea70c9
+Author: damjau <damjau@48e1f902-e210-0410-a839-a0138e9d5bd5>
+Date:   Sun May 4 04:40:24 2008 +0000
+
+    add koKR locals
+
+commit 850c50c772cf22845a6341deb011f43d11428a9f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 23:22:51 2008 +0000
+
+    - fix hiding of the stance and menu bar
+    - fix a bug that was preventing the interaction indicators (highlight/pushed textures) to show up correctly in some cases
+    - re-enabled the checked texture for the stance buttons (why was that off <.<)
+
+commit 133efaaf1ef811c8a5f0e71e5781e95843a66ab7
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 19:32:47 2008 +0000
+
+    fix tooltip disabling
+
+commit 7c13c29f41974cb0a11628707fe3713a6c37cf11
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 19:21:55 2008 +0000
+
+    update TODO list
+
+commit c251dd367fda57fae5321a492bfad3fb3912752b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 17:08:28 2008 +0000
+
+    merge to trunk
+
+commit 39cd9c527a77a708fffa3d355969d626f045b251
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 16:46:24 2008 +0000
+
+    add simple FAQ
+
+commit f04d0acd08348db38d0030f8d16a42686ca0d6fb
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 15:29:32 2008 +0000
+
+    small tweaks
+
+commit 350332af1c242c95f7d03cd2219a7f461baa9585
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 14:21:10 2008 +0000
+
+    properly hide the LBF Backdrop and Gloss on empty buttons (thanks to jjsheets for the API)
+
+commit c07eae699189ae516f2cd47ec730d8bd6f686fa7
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 14:02:38 2008 +0000
+
+    - fix petbar normal texture appearing when clicking on a empty pet bar slot
+    - added ButtonFacade support to the petbar (has one glitch though, a empty pet bar button with a backdrop from BF will not hide the backdrop <.<)
+
+commit 07cba0a0a0036d01276ff9cb22d69b65138608c8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 13:10:55 2008 +0000
+
+    todo update
+
+commit 968613450ac5fa03a1f66b6dfe8b2dd6f8a40a30
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 12:55:33 2008 +0000
+
+    Bartender4:
+    - options to configure self-casting
+    - implement right-click self-cast
+
+commit 39f941fdc88fd940cb3c8ae96a3068da6af68f8a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 11:33:27 2008 +0000
+
+    Bartender4:
+    - added settings to toggle possess bar and actionbar-based switching (like pressing SHIFT-2 or SHIFT-MouseWheel to change bars)
+    - added TODO.txt
+
+commit 2f1a47d56ddc6cff5ce2b837104308c7166eace8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat May 3 11:13:27 2008 +0000
+
+    some svn keywords
+
+commit d458a13d114c229ce88c74c6e0cddfd459f910db
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Apr 20 10:13:10 2008 +0000
+
+    fix ButtonFacade support
+
+commit fc18ce470d5c90f66bdb0240e1d96ba013787fa4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Apr 13 10:15:54 2008 +0000
+
+    update keyBound
+
+commit 75f35186892525e451a0b5bfd5d91ea0fbe6bc04
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Apr 12 14:26:31 2008 +0000
+
+    add a "Zoom" toggle to the bar configuration to be able to use the Zoomed button style without ButtonFacade installed
+
+commit a889dd57c13099e8a89c532b7d53fa827942d18c
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Apr 12 11:07:42 2008 +0000
+
+    more ButtonFacade integration
+
+commit 9de4526d6c632f2ced668a9b17f6009eed1d7ecf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Apr 11 17:16:25 2008 +0000
+
+    remove empty file
+
+commit acbaae01eb3a6faa1366ed042ffb2de106169fa4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Apr 11 17:14:46 2008 +0000
+
+    - remove cyCircled support
+    - add preliminary ButtonFacade support (still some bugs in it)
+    - this also replaces the built-in skin selection for the bars (for now)
+
+commit 8b4d98cce6995f530099a9bf62487139947087c2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Apr 9 08:23:38 2008 +0000
+
+    fix profile issues with the pet bar
+
+commit 20b6c8a9ed8316ad92e9fc64d9bb76fb74cff564
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Apr 8 18:11:08 2008 +0000
+
+    fix bug in keybinding mode with empty pet buttons
+
+commit ce15737189e8e5c81318a216c8f5475a2ebe5d0e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Apr 8 16:53:01 2008 +0000
+
+    texture tweaks
+
+commit fa1419dc0599e3cb99bfd2d31271a7ba87895c71
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Apr 8 16:31:53 2008 +0000
+
+    - re-order button internals, should be easier to apply skins to now.
+    - will flush all keybindings made with keyBound (yeah branch and all :P run s/BT4Button([^:]+):/BT4Button\1Secure:/ on your bindings cache :p )
+
+commit e4510fbbb4ef308c4e14705f0a46b7fdb9f4ca25
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Apr 8 11:08:59 2008 +0000
+
+    more options tweaks
+
+commit b6adf401f603febe99f469f78afe1528634b8a3e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Apr 8 10:31:40 2008 +0000
+
+    - build the config on demand (might break stuff, srsly)
+    - add options for configuring the modifier switching
+
+commit 7bed8cdf217ca81f200d6e1c3746cdbb3df3ce13
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Mar 27 10:29:02 2008 +0000
+
+    setup externals/embeds
+
+commit 2c00040582d40e14259e486c6a646103c233acaa
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Mar 27 10:19:03 2008 +0000
+
+    doh forgot shadowform
+
+commit 8e97e69b425cbadc88f9817ea4a41ec04849fffe
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Mar 27 10:18:15 2008 +0000
+
+    use GetSpellInfo to get the stance names
+
+commit ea733bdad196244f930b7707946468bf7c5bdd8f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Mar 26 16:07:36 2008 +0000
+
+    fix bug for rogues
+
+commit 120c3e3d667606083dacc850b2a87f2f5cb6c6f4
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 25 10:49:01 2008 +0000
+
+    make default bar state work
+
+commit eeea3683f2fc5d90b9b0af27b7f19f0dc5dcd360
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 25 10:10:10 2008 +0000
+
+    use [bonusbar:x] instead of [stance:x], simplifies detection logic of stances, no more skipped aquatic form shit =P
+
+commit 1c10f11fad2ebb6aaf2d5b9ac8c48f7c1d182353
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Mar 15 16:30:44 2008 +0000
+
+    fix cyCircled support causing taint messages in some cases
+
+commit f472060b0af86fb7e24c16c9679bdf9a97cf0362
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Mar 13 16:42:26 2008 +0000
+
+    restructure configuration
+
+commit 17f6d471f10ff59de0d571afef4469633a8a46d1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 11 15:09:23 2008 +0000
+
+    update buttons after setting the style
+
+commit f7845069b5ecc8dc8d52cdbf32839d8cb269cc58
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 11 09:06:05 2008 +0000
+
+    tweak style support
+
+commit 8b4d870e36dcb15c625ad2a12fb56a7928163677
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 11 08:41:44 2008 +0000
+
+    add support for cyCircled button skinning
+
+commit e240432911e6f26a6844e01d91425ff8d1debf01
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 10 17:36:31 2008 +0000
+
+    enable <modifier>-selfcast until there is a option to toggle it
+
+commit 60fa80d4013283cce9ca5a9e8e54bd5b6ba79f7a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 10 16:20:58 2008 +0000
+
+    set override bindings on Bar1, ShapeshiftBar, PetBar
+
+commit 0c0abdbca66e391293b5a1ad969a3d64ffa78e5e
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 10 13:39:48 2008 +0000
+
+    tweak keybinding stuff and add support for pet and stance bar
+
+commit 4fbff43f4a8970f0b8c12ae134b9f23d12c70f31
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 10 13:12:58 2008 +0000
+
+    add keyBound by Tuller for key binding configuration, until there is some GUI/Button to open it, use /kb to bind buttons
+
+commit 439e4d2389d5668a490c355da78cc879b5e71aa2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 15:54:33 2008 +0000
+
+    fix some state stuff
+
+commit d84c43e524a625274461b17b80a0f3a4df2ec975
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 15:42:44 2008 +0000
+
+    beautify text tags on unlocked bars
+
+commit 177f03f29fc6992a1244cdcb91b7f5fd9a7fdac2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 15:38:34 2008 +0000
+
+    - add more descriptive error messages to get/set handlers
+    - add MicroMenu module (may not be 100% complete yet)
+
+commit 9afedb26f2a9026d2959fe31d7f7ad6eb53c7003
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 14:02:01 2008 +0000
+
+    use some more upvalues
+
+commit 83e787fa0611e8dfbe6d48e33595de412cac5d11
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 13:53:36 2008 +0000
+
+    tweak OnUpdate code, now uses ~30-40% less CPU then Bartender3
+
+commit 160e9ffe4f20c417d9bbcecd45cd5786bec60cd8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 10:43:34 2008 +0000
+
+    tweaks
+
+commit 3246f3a8a5948e0016dde931ccf5326f42f881c5
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Mar 7 10:18:42 2008 +0000
+
+    improve button handling with overlays
+
+commit b83005b73381f444c2ee223ae49baca653ff4429
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Mar 5 15:07:53 2008 +0000
+
+    hide empty pet buttons
+
+commit 45f86eff2642597187edf30bf9db2072fd9dfc69
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Mar 5 14:17:12 2008 +0000
+
+    - add Enable/Disable to the Pet and Stance Bar
+    - unlocking works right on the petbar now
+
+commit 23f723b892e5a6edd46857daaadc24f303423b84
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 4 22:21:13 2008 +0000
+
+    adjust strata of pet buttons to match all other bars, and fix dreamlayout framelevel
+
+commit b2bc187f6c7220e1ee07b6ce45f83f033857bba3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Mar 4 11:18:33 2008 +0000
+
+    reuse the DreamLayout frames
+
+commit 6adcf86b1ba4d9f17deb502c8a0e010171834508
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 3 12:17:59 2008 +0000
+
+    make button style work on the pet bar buttons, pretty much done now (short of hotkey display)
+
+commit 4fe87b8eeb7a0f65410af39871ca038128d961a8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 3 12:05:45 2008 +0000
+
+    fix a bug in button code
+
+commit 3ae640802d97f08d849e0a7b8205fd442e1f67ff
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Mar 3 11:45:24 2008 +0000
+
+    pet buttons actually work now, using blizzard templates
+
+commit 1ccc647634cbca4b9f0f26e353a0b87ee4fd84e3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Feb 21 17:29:02 2008 +0000
+
+    some work on pet bar, interim commit so i can raid in peace :P
+
+commit 720bd42401ab4593b8f16baddfbe32341c4885fa
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Feb 21 16:53:12 2008 +0000
+
+    fix bugs for classes that dont have any stances (yet)
+
+commit 17ed1caa904e39a2d6848c795bff2245281ddee0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Feb 21 13:58:23 2008 +0000
+
+    change pet button to a SecureActionButtonTemplate
+
+commit 9ed47da99d704a5cb99a0e856fc7deea18659884
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Feb 21 13:56:20 2008 +0000
+
+    add pet button template, borrowed from blizzy code, without their ugly scripts
+
+commit aa66d37a95019e3bd395de93efc8bcab91978407
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Feb 21 13:28:43 2008 +0000
+
+    stub for a petbar - not worky yet
+
+commit 299783383a461299dfe7cd2a2f09bb48d506e6bd
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Feb 18 14:14:54 2008 +0000
+
+    add new bar overlays
+
+commit c337a6419281f01d55af2dc7222639ff099e7ba0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Feb 17 13:26:43 2008 +0000
+
+    toc update
+
+commit 0b32b4a473cd30d12f4bb7a8459acddaa91b146f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Feb 17 11:41:33 2008 +0000
+
+    add state support for the possess bar
+
+commit c0cdde8e450b2d5b6c2c55f79938713efdc0f73b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Feb 17 01:37:33 2008 +0000
+
+    option tweaks
+
+commit 59df1ce268c1880a7eb47ad072db61a9b0e20f17
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 16 18:19:25 2008 +0000
+
+    - ButtonBar now uses .button_width and .button_height for layouting the buttons (defaults to 36)
+    - set button width/height for stancebar buttons
+
+commit 4f31e91de57a45239d36ce0ac3382f8d53f9f5c1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 16 18:04:50 2008 +0000
+
+    StanceBar
+    - increase default scale of the stance buttons
+    - add events to update the bar
+    - add OnDisable
+
+commit 3f60367faff7c3a0c940dc5a91824d9d256a12e6
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 16 17:17:31 2008 +0000
+
+    first working stance bar, still needs events for updating etc
+
+commit 1cec9114c9f68010c02abc76f59172e26fadf14f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 16 16:45:35 2008 +0000
+
+    dummy stancebar module
+
+commit e7841ed4d56465acbd4f358809b7a2894732da56
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 16 16:11:49 2008 +0000
+
+    strip some code from the actionbar module and move it to a generic ButtonBar module to be used for the stance and pet bar
+
+commit b95223a0200e093ce78a8f7ade5e96ee3ca59285
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Feb 12 08:44:19 2008 +0000
+
+    implement option to change the button style
+
+commit ea23115e2fb31decf9aadd2f032382931fa15d6a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Feb 11 18:59:17 2008 +0000
+
+    mark dreamlayout overlay properly so it gets hidden for empty buttons
+
+commit a7b9ca4c1f867fcdef2826eb81ded33dfb5b044d
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Feb 11 18:12:12 2008 +0000
+
+    implement different layouts
+
+commit 80f0d3d8117a40754f6c4b4533130916a40b6a14
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Feb 11 14:24:21 2008 +0000
+
+    options for page swapping based on stance
+
+commit 9102bb3f618290a769a8b613302c47ce2074c8a2
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Feb 2 14:34:35 2008 +0000
+
+    some option fluff
+
+commit 319f5dc02a204ef39548410d83c8c67454928079
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Thu Jan 31 09:55:51 2008 +0000
+
+    rework config system to use a API for setting up the table now, and no merging
+
+commit 2242edd844ebc043c5479736e687c0f14cfda5de
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Jan 20 16:05:17 2008 +0000
+
+    cleanups
+
+commit ccd361a4e0a4907a9f1c75316d0b9ba9d998d971
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jan 11 18:49:03 2008 +0000
+
+    svn stuff
+
+commit 3c64ce4269349881b110ec191d2d9c7882d42092
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jan 11 18:45:01 2008 +0000
+
+    - basic shapeshift support, no config interface for it yet
+
+commit 2fbed3b0cedb0f93a3d0a9329b579a004d010a51
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jan 11 15:56:03 2008 +0000
+
+    DRYCODE: copy/pasted stance translations from BT3 into locale files using AceLocale-3.0, and first module interface for stances
+
+commit 4431a2f8ed9bd80d754eae25a7cd1d484de301cf
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jan 11 15:28:09 2008 +0000
+
+    small tweak to button code
+
+commit 941de6d3db8651cf614199a3124d1c61aeb1e550
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Jan 11 15:20:55 2008 +0000
+
+    profile handling
+
+commit 72b94f4db260ecd481eb52631cc2ea61c3ec23d5
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Dec 30 21:36:55 2007 +0000
+
+    - Button: added action drag support
+    - Button: added show grid option
+    - Options: cleanup and sorting
+
+commit 09bb28f162e5d916ab0ddba95ff7645c122787ab
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 22 12:06:26 2007 +0000
+
+    cleanup options and database layout
+
+commit c1eaea3311268d84daf107b9cb578d9bdd9fa9fa
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Dec 12 15:49:23 2007 +0000
+
+    replace the slash command handler with a simple function to open the gui until AceConfigCmd works properly with plugins and inline groups
+
+commit 9efe3269eba076b432b4e82f333ae988e06494ac
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Dec 12 15:36:10 2007 +0000
+
+    implement (Show|Hide)Grid
+
+commit e4392c23d8b3bee8b3b2fd8d9252a90a77fb9ce1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Dec 12 15:03:31 2007 +0000
+
+    small options tweak
+
+commit d56c2cc4fc77ca56e8f263dbf3256c80b2e021d6
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Dec 12 09:59:17 2007 +0000
+
+    use db namespaces to store the actionbar configs, zomgmoremodular
+
+commit 21d87e57cf59954b2b163fb54fc5ebe3cfa38c74
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Dec 11 13:13:52 2007 +0000
+
+    change defaults to be more sane, default bars may work, or may hack your account, who knows
+
+commit 37520f8b58ac8ed14c2c1d1829a0c398994780ec
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Dec 11 13:02:06 2007 +0000
+
+    more work done and fixes applied
+
+commit 13300aae6ed3de3c5859e0172c4562ab2940eeb9
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Dec 11 08:32:48 2007 +0000
+
+    more work done
+
+commit 587c066fe5f55f28865b439ea7fc7166e8a14617
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Dec 9 11:45:03 2007 +0000
+
+    some reordering and more options
+
+commit 675a871ada650643b243092ba1ffd879a1f17e4f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Dec 9 10:25:20 2007 +0000
+
+    register for more chat commands
+
+commit de8edf73ba65b760ea87d753a968fa35cfaae97f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Dec 9 09:56:23 2007 +0000
+
+    actually apply settings when the addon loads
+
+commit 80348a88b32a2171518d5bca364b01e5fe0fdb3f
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sun Dec 9 09:47:08 2007 +0000
+
+    more option fun
+
+commit ed969c26fe8b030ca88144db505d92142bebb20a
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 8 16:38:57 2007 +0000
+
+    option stuff
+
+commit cf182cdd74a20814c5e263d817efa9102d985ae5
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 8 13:47:19 2007 +0000
+
+    use plugins to merge options together
+
+commit caa746668c05f37f0b69caab6dab8936b47e25b8
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Dec 3 22:43:37 2007 +0000
+
+    just some random fixes and tweaks and cake
+
+commit 276d0b6d1fbe06eca547d222a6b36ba422bb7855
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Mon Dec 3 14:58:16 2007 +0000
+
+    - split actionbar module and prototype into independent files
+    - added meta functions to update bars/buttons
+    - first options
+
+commit 0fc2692a53a70a123205193f035458bf2fd0286b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 1 14:21:40 2007 +0000
+
+    button implementation
+
+commit 1d14edf665902f5e2d4cd00fb6d7fb135c6b9ea5
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 1 11:45:30 2007 +0000
+
+    added support for multi-row bars
+
+commit 23316ede0f3987c03452b12540745c1e596b7739
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Sat Dec 1 09:06:18 2007 +0000
+
+    improve defaults and DB handling
+
+commit 75deac4e1e4053841f3966928959c17cc6b92098
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Nov 30 17:43:02 2007 +0000
+
+    nothing to see here, just storing progress before errors sneak in!
+
+commit cd9e02cd5ba21650f33e4b531dcdacb8fea56ca9
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Nov 30 16:08:53 2007 +0000
+
+    create bars in OnEnable so blizzard frame positioning code doesnt screw us
+
+commit 038d5dacae20d18f2782cfa490bbd989cecaebd1
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Nov 30 15:11:00 2007 +0000
+
+    improved frame placement code, will take advantage of the build-in blizzy code to always save position relative to the nearest edge (or center)
+
+commit cfa080b1cf559cfaf04370908c3fb5d4c632c95b
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Nov 30 14:15:53 2007 +0000
+
+    apply more duct tape
+
+commit a4526dc4380686b7081e3356915435877031c682
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Fri Nov 30 11:02:16 2007 +0000
+
+    interim commit to get something up on svn, totally untested and definitely not working drycode
+
+commit c4c6c2de1fbc51cedf5fd327610427d5826e0559
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Oct 30 14:27:52 2007 +0000
+
+    initial commit of empty files

@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: EasyCopy
+## Notes: Clickable Timestamp to copy a message.
+## SavedVariables: 
+EasyCopy.xml

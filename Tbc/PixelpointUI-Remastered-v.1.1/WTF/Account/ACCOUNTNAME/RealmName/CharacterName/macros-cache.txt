@@ -1,0 +1,120 @@
+MACRO 16777218 " " INV_Misc_QuestionMark
+#showtooltip hemorrhage
+/cast hemorrhage
+/startattack
+END
+MACRO 16777236 " " INV_Misc_QuestionMark
+#showtooltip Attack
+/startattack
+END
+MACRO 16777220 " " INV_Misc_QuestionMark
+#showtooltip Sap
+/console targetNearestDistance 10.000000
+/targetenemy [noharm][dead]
+/console targetNearestDistance 41.000000
+/cast [harm,nodead] Sap
+END
+MACRO 16777221 " " INV_Misc_QuestionMark
+#showtooltip blind
+/cast [modifier:alt, target=focus] blind
+/cast [nomodifier:alt] blind
+END
+MACRO 16777222 " " INV_Misc_QuestionMark
+#showtooltip shadowstep
+/cast [modifier:alt, target=focus] Shadowstep
+/cast [nomodifier:alt] shadowstep
+END
+MACRO 16777223 " " INV_Misc_QuestionMark
+#showtooltip cheap shot
+/cast premeditation
+/cast cheap shot
+END
+MACRO 16777217 " " Spell_Shadow_LifeDrain
+#showtooltip Hemorrhage
+/startattack
+/cast [modifier:alt, target=focus] Hemorrhage
+/cast [nomodifier:alt] Hemorrhage
+END
+MACRO 16777228 " " INV_Misc_QuestionMark
+#showtooltip Preparation
+/cast evasion
+/cast sprint
+/cast cold blood
+/cast premeditation
+/cast preparation
+END
+MACRO 16777231 " " INV_Misc_QuestionMark
+#showtooltip deadly throw
+/cast deadly throw
+/cast throw
+/cast shoot
+END
+MACRO 16777232 " " INV_Misc_QuestionMark
+#showtooltip kick
+/cast [modifier:alt, target=focus] kick
+/cast [nomodifier:alt] kick
+END
+MACRO 16777233 " " INV_Misc_QuestionMark
+#showtooltip garrote
+/cast premeditation
+/cast garrote
+END
+MACRO 16777234 " trade" Ability_Hunter_BeastCall
+/target ww
+/trade
+END
+MACRO 16777229 "/target" Spell_Shadow_SacrificialShield
+/target a
+/target b
+/target c
+/target d
+/target e
+/target f
+/target g
+/target h
+/target i
+/target j
+/target k
+/target l
+/target m
+/target n
+/target o
+/target p
+/target q
+/target r
+/target s
+/target t
+/target u
+/target v
+/target w
+/target x
+/target y
+END
+MACRO 16777242 "Arena1" Ability_Ambush
+/target arena1
+END
+MACRO 16777243 "Arena2 " Ability_Ambush
+/target arena2
+END
+MACRO 16777237 "CheapStop" Ability_CheapShot
+/cast cheap shot
+/stopattack
+END
+MACRO 16777224 "gfx h4" Spell_Misc_Food
+/console overridefarclip 1
+/console farclip 1000
+/console horizonfarclip 3226
+/console groundeffectdensity 100
+/console groundeffectdist 500
+/console detailDoodadAlpha 100
+/console smallcull 0
+/console skycloudlod 3
+END
+MACRO 16777240 "ILLHOOF" Spell_Shadow_SacrificialShield
+/cleartarget
+/target Demon Chains
+/stopmacro [nodead, harm]
+/target Kil'rek
+/stopmacro [nodead, harm]
+/target Terestian Illhoof
+END

@@ -1,0 +1,12 @@
+
+BagnonFrameSettings = {
+	["frames"] = {
+		["inventory"] = {
+			["scale"] = 0.85,
+			["y"] = 30.06545520495622,
+			["x"] = -7.843273616899751,
+			["dataBrokerObject"] = "WIM",
+		},
+	},
+	["version"] = "2.13.3",
+}

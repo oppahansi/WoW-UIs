@@ -1,0 +1,21 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	
+	<Script file="Core.lua"/>
+	
+	<Frame name="SellJunk" parent="UIParent" hidden="true">
+		<Frames>
+			<Button name="SellJunk_SellJunkButton" parent="MerchantFrame" inherits="OptionsButtonTemplate" text="Sell Junk">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="MerchantFrame">
+						<Offset>
+							<AbsDimension x="-41" y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<onClick>SellJunk:Sell()</onClick>
+				</Scripts>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>

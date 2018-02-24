@@ -1,0 +1,72 @@
+
+BugGrabberDB = {
+	["throttle"] = true,
+	["limit"] = 500,
+	["errors"] = {
+		{
+			["message"] = "AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1012: Invalid Custom Control Type - LSM30_Background\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1012: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:924>\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:951: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:924>\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1287: in function `FeedGroup'\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1208: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1187>\n(tail call): ?:\n<in C code>: ?\n<string>:\"safecall Dispatcher[3]\":9: in function <[string \"safecall Dispatcher[3]\"]:5>\n(tail call): ?:\nAceGUI-3.0\\AceGUI-3.0.lua:217: in function `Fire'\n...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:396: in function `SetSelected':\n...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:103: in function <...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:99>:\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:10:42",
+			["session"] = 3101,
+			["counter"] = 2,
+		}, -- [1]
+		{
+			["message"] = "AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1012: Invalid Custom Control Type - LSM30_Font\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1012: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:924>\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:951: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:924>\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1287: in function `FeedGroup'\nAceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1208: in function <...nfig-3.0\\AceConfigDialog-3.0\\AceConfigDialog-3.0.lua:1187>\n(tail call): ?:\n<in C code>: ?\n<string>:\"safecall Dispatcher[3]\":9: in function <[string \"safecall Dispatcher[3]\"]:5>\n(tail call): ?:\nAceGUI-3.0\\AceGUI-3.0.lua:217: in function `Fire'\n...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:396: in function `SetSelected':\n...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:103: in function <...s\\Ace3\\AceGUI-3.0\\widgets\\AceGUIWidget-TreeGroup.lua:99>:\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:10:53",
+			["session"] = 3101,
+			["counter"] = 1,
+		}, -- [2]
+		{
+			["message"] = "PitBull-3.0r79082\\VisualHeal\\VisualHeal.lua:105: PitBull_VisualHeal requires LibHealComm-3.0 to be available.\nLibRockDB-1.0-2021 (LibRockDB-1.0):1063: in function <Interface\\AddOns\\LibRockDB-1.0\\LibRockDB-1.0.lua:973>\n(tail call): ?:\n<in C code>: ?\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):2012: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:1904>\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):6235: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:6223>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:01",
+			["session"] = 3103,
+			["counter"] = 1,
+		}, -- [3]
+		{
+			["message"] = "PitBull-3.0r79082\\Banzai\\Banzai.lua:76: PitBull_Banzai requires the library LibBanzai-2.0 to be available.\nLibRockDB-1.0-2021 (LibRockDB-1.0):1063: in function <Interface\\AddOns\\LibRockDB-1.0\\LibRockDB-1.0.lua:973>\n(tail call): ?:\n<in C code>: ?\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):2012: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:1904>\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):6235: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:6223>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:01",
+			["session"] = 3103,
+			["counter"] = 1,
+		}, -- [4]
+		{
+			["message"] = "PitBull-3.0r79082\\Banzai\\Banzai.lua:76: PitBull_Banzai requires the library LibBanzai-2.0 to be available.\nLibRock-1.0-3317 (LibRock-1.0):2594: in function <Interface\\AddOns\\LibRock-1.0\\LibRock-1.0.lua:2557>\nLibRock-1.0-3317 (LibRock-1.0):2715: in function <Interface\\AddOns\\LibRock-1.0\\LibRock-1.0.lua:2710>\n<in C code>: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:927: in function `UIParentLoadAddOn':\nInterface\\FrameXML\\UIParent.lua:233: in function `CombatLog_LoadUI':\nInterface\\FrameXML\\UIParent.lua:343: in function `UIParent_OnEvent':\n<string>:\"*:OnEvent\":1: in function <[string \"*:OnEvent\"]:1>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:25",
+			["session"] = 3104,
+			["counter"] = 1,
+		}, -- [5]
+		{
+			["message"] = "PitBull-3.0r79082\\VisualHeal\\VisualHeal.lua:105: PitBull_VisualHeal requires LibHealComm-3.0 to be available.\nLibRock-1.0-3317 (LibRock-1.0):2594: in function <Interface\\AddOns\\LibRock-1.0\\LibRock-1.0.lua:2557>\nLibRock-1.0-3317 (LibRock-1.0):2715: in function <Interface\\AddOns\\LibRock-1.0\\LibRock-1.0.lua:2710>\n<in C code>: in function `LoadAddOn'\nInterface\\FrameXML\\UIParent.lua:927: in function `UIParentLoadAddOn':\nInterface\\FrameXML\\UIParent.lua:233: in function `CombatLog_LoadUI':\nInterface\\FrameXML\\UIParent.lua:343: in function `UIParent_OnEvent':\n<string>:\"*:OnEvent\":1: in function <[string \"*:OnEvent\"]:1>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:25",
+			["session"] = 3104,
+			["counter"] = 1,
+		}, -- [6]
+		{
+			["message"] = "PitBull-3.0r79082\\VisualHeal\\VisualHeal.lua:164: attempt to index upvalue 'LibHealComm' (a nil value)\nPitBull-3.0r79082\\PitBull.lua:4965: in function `_PopulateUnitFrame'\nPitBull-3.0r79082\\PitBull.lua:5066: in function `object_method'\nLibRockTimer-1.0-1118 (LibRockTimer-1.0):289: in function <...terface\\AddOns\\LibRockTimer-1.0\\LibRockTimer-1.0.lua:227>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:25",
+			["session"] = 3104,
+			["counter"] = 2,
+		}, -- [7]
+		{
+			["message"] = "PitBull-3.0r79082\\Banzai\\Banzai.lua:84: attempt to index upvalue 'banzai' (a nil value)\nLibRockModuleCore-1.0-1118 (LibRockModuleCore-1.0):691: in function `ToggleModuleActive'\nPitBull-3.0r79082\\PitBull.lua:1721: in function <Interface\\AddOns\\PitBull\\PitBull.lua:1705>\n<in C code>: ?\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):2012: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:1904>\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):4424: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:4420>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:37",
+			["session"] = 3104,
+			["counter"] = 1,
+		}, -- [8]
+		{
+			["message"] = "PitBull-3.0r79082\\VisualHeal\\VisualHeal.lua:118: attempt to index upvalue 'LibHealComm' (a nil value)\nLibRockModuleCore-1.0-1118 (LibRockModuleCore-1.0):691: in function `ToggleModuleActive'\nPitBull-3.0r79082\\PitBull.lua:1721: in function <Interface\\AddOns\\PitBull\\PitBull.lua:1705>\n<in C code>: ?\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):2012: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:1904>\nLibRockConfig-1.0-18798 (LibRockConfig-1.0):4424: in function <...rface\\AddOns\\LibRockConfig-1.0\\LibRockConfig-1.0.lua:4420>\n\n  ---",
+			["type"] = "error",
+			["time"] = "2008/10/09 19:43:43",
+			["session"] = 3104,
+			["counter"] = 1,
+		}, -- [9]
+	},
+	["save"] = true,
+	["session"] = 3171,
+}

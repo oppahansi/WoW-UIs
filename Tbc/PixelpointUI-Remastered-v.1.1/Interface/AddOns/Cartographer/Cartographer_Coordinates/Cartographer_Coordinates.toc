@@ -1,0 +1,35 @@
+﻿## Interface: 20400
+## Title: Cartographer |r[|cffeda55fCoordinates|r]
+## X-Name: Coordinates
+## X-Name-deDE: Koordinaten
+## X-Name-frFR: Coordonnées
+## X-Name-koKR: 좌표
+## X-Name-zhTW: 座標
+## X-Name-esES: Coordenadas
+## X-ModuleName: Coordinates
+## Notes: Module to add coordinates to the bottom of the world map of the player and the cursor.
+## Notes-deDE: Modul zur Anzeige der Spieler- und Mauszeiger-Koordinaten im unteren Bereich der Weltkarte.
+## Notes-frFR: Modules indiquant les coordonnées du joueur et du curseur en bas de la carte du monde.
+## Notes-koKR: 플레이어와 커서의 좌표를 세계 지도 밑에 보여줍니다.
+## Notes-zhTW: 在世界地圖底端增加游標和玩家目前座標的模組。
+## Notes-esES: Módulo para añadir coordenadas del jugador y cursor en la parte inferior del mapa del mundo
+## Author: ckknight
+## DefaultState: enabled
+## LoadOnDemand: 1
+## Dependencies: Cartographer
+## OptionalDeps: Ace2, Babble-2.2, TouristLib
+## X-Category: Map
+## X-eMail: ckknight@gmail.com
+## X-Website: http://ckknight.wowinterface.com/
+## X-License: GPL v2 or later
+## Version: 2.0
+
+#Libs\AceLibrary\AceLibrary.lua
+#Libs\AceOO-2.0\AceOO-2.0.lua
+#Libs\AceEvent-2.0\AceEvent-2.0.lua
+#Libs\AceAddon-2.0\AceAddon-2.0.lua
+#Libs\AceLocale-2.2\AceLocale-2.2.lua
+#Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
+#Libs\Tourist-2.0\Tourist-2.0.lua
+
+Coordinates.lua

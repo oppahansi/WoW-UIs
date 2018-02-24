@@ -1,0 +1,53 @@
+
+TidyPlatesGreyTankSavedVariables = {
+	["WidgetTug"] = false,
+	["HealthText"] = 1,
+	["ScaleLoose"] = 1.5,
+	["AggroLooseColor"] = {
+		["a"] = 0.9999978030100465,
+		["r"] = 0.5999986818060279,
+		["g"] = 0.9999978030100465,
+		["b"] = 0,
+	},
+	["AggroBorder"] = true,
+	["OpacityHideNeutral"] = false,
+	["OpacityHideNonElites"] = false,
+	["ScaleGeneral"] = 1,
+	["AggroHealth"] = false,
+	["WidgetSelect"] = false,
+	["AggroTankedColor"] = {
+		["a"] = 0.9999978030100465,
+		["r"] = 0.9999978030100465,
+		["g"] = 0,
+		["b"] = 0,
+	},
+	["ScaleIgnoreNonElite"] = false,
+	["WidgetWheel"] = false,
+	["OpacityNonTarget"] = 0.5,
+}
+TidyPlatesGreyDPSSavedVariables = {
+	["ScaleDanger"] = 1.5,
+	["AggroDangerColor"] = {
+		["a"] = 0.9999978030100465,
+		["r"] = 0.9999978030100465,
+		["g"] = 0,
+		["b"] = 0,
+	},
+	["WidgetSelect"] = false,
+	["HealthText"] = 2,
+	["AggroSafeColor"] = {
+		["a"] = 0.9999978030100465,
+		["r"] = 0.5999986818060279,
+		["g"] = 0.9999978030100465,
+		["b"] = 0,
+	},
+	["OpacityHideNeutral"] = false,
+	["ScaleGeneral"] = 1,
+	["AggroBorder"] = true,
+	["ScaleIgnoreNonElite"] = false,
+	["OpacityHideNonElites"] = false,
+	["AggroHealth"] = false,
+	["WidgetCombo"] = false,
+	["WidgetTug"] = false,
+	["OpacityNonTarget"] = 0.5,
+}

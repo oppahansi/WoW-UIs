@@ -1,0 +1,2 @@
+
+StufCharDB = nil

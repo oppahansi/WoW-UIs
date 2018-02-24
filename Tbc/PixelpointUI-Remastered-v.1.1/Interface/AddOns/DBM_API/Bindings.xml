@@ -1,0 +1,10 @@
+<Bindings>
+	<Binding name="DBMTOGGLE" header="DBM" runOnUp="true">
+		if (keystate == "down") then
+			DBMMinimapButton:GetScript("OnClick")();
+		end
+	</Binding>
+</Bindings>
+
+
+<!-- todo: RangeCheck etc. (?)-->

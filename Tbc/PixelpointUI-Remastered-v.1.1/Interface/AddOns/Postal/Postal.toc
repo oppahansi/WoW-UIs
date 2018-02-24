@@ -1,0 +1,44 @@
+## Interface: 20400
+## Version: 2.1
+## Title: Postal |cff7fff7f -Ace2-|r
+## Author: Xinhuan
+## X-Credits: Ammo, Rabbit, Grennon
+## X-Category: Mail
+## Notes: Postal: Enhanced Mailbox support
+## Notes-frFR: Postal: améliorations diverses de l'interface d'envoi/réception de courriers.
+## Notes-esES: Postal: soporte mejorado para el buzon
+## Notes-zhTW: Postal: 強化信箱功能。
+## Notes-zhCN: Postal: 增强信箱功能
+## OptionalDeps: Ace2, DewdropLib
+## SavedVariables: PostalDB
+## SavedVariablesPerCharacter: PostalDBPerChar
+##
+## LoadManagers: AddonLoader
+## X-LoadOn-Mailbox: true
+## X-LoadOn-Slash: /postal
+
+## X-Embeds: Ace2, DewdropLib
+embeds.xml
+
+#locales
+Locales\enUS.lua
+Locales\koKR.lua
+Locales\frFR.lua
+Locales\deDE.lua
+Locales\esES.lua
+Locales\zhTW.lua
+Locales\zhCN.lua
+
+#core
+Postal.lua
+
+#mods
+Modules\DejaVu.lua
+Modules\Express.lua
+Modules\OpenAll.lua
+Modules\Wire.lua
+Modules\Select.lua
+Modules\TradeBlock.lua
+Modules\Rake.lua
+Modules\BlackBook.lua
+

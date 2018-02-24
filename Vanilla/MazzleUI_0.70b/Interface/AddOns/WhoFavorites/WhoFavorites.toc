@@ -1,0 +1,12 @@
+## Interface: 1800
+## Version: 1.0
+## Author: Rizzle (based on code by Narwick in AHFav)
+## Title: Who Favorites
+## Notes: Saves who searches in a favorites list
+## DefaultState:
+## Dependencies: Ace
+## OptionalDeps: myAddOns
+## SavedVariables: WhoFavDB
+WhoFavLocals.lua
+WhoFavorites.xml
+

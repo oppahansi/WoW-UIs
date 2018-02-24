@@ -1,0 +1,11 @@
+## Interface: 30300
+## Author: Xus (Xussie of Kazzak EU)
+## Title: Forte|c0000ff00Xorcist|r II
+## Version: 1.959.8
+## Notes: Powerful Class AddOn for Raiders
+## SavedVariables: FC_Saved
+## OptionalDeps: LibSharedMedia-3.0, oRA3
+## Dependencies:
+## X-Category: Buffs & Debuffs, Combat, Class, Warlock
+## X-Email: xuswow@hotmail.com
+Forte_Core.xml

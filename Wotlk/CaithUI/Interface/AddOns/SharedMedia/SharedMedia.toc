@@ -1,0 +1,15 @@
+## Interface: 20400
+
+## Title: SharedMedia
+## Notes: Inserts some media into LibSharedMedia's storage.
+## Version: 3.0
+## Author: Lots of people.
+## X-Category: Miscellaneous
+
+## OptionalDeps: LibSharedMedia-3.0, LibSharedMedia-2.0, SharedMediaLib, SurfaceLib
+
+Libs\LibStub.lua
+
+Core.lua
+SharedMedia.lua
+MyMedia.lua

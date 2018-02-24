@@ -1,0 +1,11 @@
+<Bindings>	
+	<Binding name="OMENTOGGLE" description="Toggle the Omen window" header="OMEN">
+		Omen:Toggle()
+	</Binding>
+	<Binding name="OMENNEXTMODULE" description="Show the next Omen module">
+		Omen:CycleModule(1)
+	</Binding>
+	<Binding name="OMENPREVMODULE" description="Show the previous Omen module">
+		Omen:CycleModule(-1)
+	</Binding>
+</Bindings>

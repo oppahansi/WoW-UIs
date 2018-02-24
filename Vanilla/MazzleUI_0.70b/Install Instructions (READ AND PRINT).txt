@@ -1,0 +1,135 @@
+-- Copyright © 2006 Mazin Assanie
+-- All Rights Reserved.
+-- 
+-- Permission to use, copy, modify, and distribute this software in any way
+-- is not granted without expressed written agreement.  In the case that it
+-- is granted, the above copyright notice and this paragraph must appear in
+-- all copies, modifications, and distributions.
+--
+-- To contact the author of this work, use mazzlefizz@gmail.com 
+-- For more information on copyright, visit http://copyright.gov/ or http://whatiscopyright.org/
+--
+
+----------------------------------
+Welcome to MazzleUI!
+----------------------------------
+
+The first thing you want to do is print these directions out.  I know they may seem straightforward, but forgetting some of the simple steps can screw up the rest of the process.
+
+----------------------------------
+Step 1: Extract MazzleUI Files
+----------------------------------
+
+a) Create a directory called "MazzleUI" on the desktop or somewhere else handy.
+b) Extract the contents of the zip file into the MazzleUI directory
+
+----------------------------------
+Step 2: Save Your Old UI
+----------------------------------
+
+a) Go to your World of Warcraft directory (usually C:\Program Files\World of Warcraft)
+b) Rename the "Interface" folder to "Interface Old"
+c) Rename the "WTF" folder to "WTF Old"
+
+----------------------------------
+Step 3: Copy over the new UI files
+----------------------------------
+
+a) Drag "Interface" folder from the MazzleUI directory in step 1 to your World of Warcraft directory.
+b) If you are on a PC:  Drag the "Font" folder from the MazzleUI directory in step 1 to your World of Warcraft directory.  Note:  It'll ask you whether you want to overwrite files.  Respond with "Yes to All".  
+   - VERY IMPORTANT:  If you are on a Mac and already have a font folder, make sure to move each file from the font folder in the directory you made in step 1 to the font folder in your World of Warcraft directory.  Do not just drop the entire font folder in, since the default behavior on a Mac is to replace the entire contents of the directory, i.e. delete your old files.
+   
+----------------------------------
+Step 4: Get WoW ready
+----------------------------------
+a) Log in and choose your realm
+b) VERY IMPORTANT:  At the character selection screen, click the "Add-ons" button and check the add-on memory setting.  It should default to 48, but you should adjust it to your needs.  75 is how much I use for 1 gig of memory and it seems to work well. Usually, the UI uses about 54 mb of memory.
+c) VERY IMPORTANT:  Make sure "LOAD OUT OF DATE ADDONS" IS CHECKED
+d) VERY IMPORTANT:  Make sure to click 'Enable All' before starting the process.
+d) Log in.  Wait until a couple of the windows disappear and the MazzleUI installer window appears and greets you.  (should take no longer than 30 seconds or so)
+e) Hit the escape key and select "Video Options".  Set your desired resolution and any other video settings you'd like to modify now.
+
+----------------------------------
+Step 5: Get Mazzified
+----------------------------------
+a) If you need to re-open the Mazzifier, type /mazzify
+b) Double-check that the settings in the MazzleUI window corresponds to the aspect ratio of the resolution you just chose.  
+    - Note: Aspect ratio is width of your screen / height of your screen.  
+    - Note: It should choose the right one automatically.  If there isn't an exact match, choose the closest one.  I'd suggest choosing the next smallest one, unless you're resolution is very similar to one that is already there, for e.g. if your running at 1580x1000, choosing 1600x1200 might make more sense than choose the 1440 resolution.
+c) Click the "Next" button and answer the questions on each of the presented pages.
+d) Click the "Mazzify Me" button and wait. It'll start working its magic.  On slower machines, this could take a minute or two.
+e) When it is done, the Mazzifier will present you with another button to reloadUI.  Press it.
+
+----------------------------------
+Step 6: Rinse and Repeat
+----------------------------------
+
+When the reload comes back, your new UI should be ready to go!  At this point, it's time to repeat the process FOR EACH AND EVERY CHARACTER YOU PLAY.  (Do not repeat any of the items in Step 4)
+
+a) Log back out to the character selection screen
+b) Click the "Add-ons" button.  Select the next character you want to mazzify from the menu.
+c) Log back in and repeat Step 5
+
+Note: Due to a Blizzard bug with add-on disabling, the Mazzifier may warn you that it needs to turn on some disabled add-ons first.  Allow it to do that.  This should only happen the first time you install MazzleUI.
+----------------------------------
+Step 7: Enjoy!
+----------------------------------
+
+- Note: The button layouts are still very much a work in progress.  Expect to put some time here to learn DAB and get them to work as you'd like them to.  I expect 90% of people to not be happy with a setup that they did not create themselves, so don't be surprised if that's how you feel.
+
+- Note: If you installed one of the "Simple" setups, you'll need to drop your spells into your buttons yourself.  Note that the top left bar scrolls just like the default blizzard bar.  Use your mousewheel to get other pages to drop spells on.  For some classes, it should automatically switch pages when you switch stances or forms.
+
+- Tour some of the features:
+    - To pull up some of the more commonly used add-on windows, left-Click on any of the silver circular corners of the bottom panel 
+    - To pull up the micro menu bar and bag bar, left-Click on the "MazzleUI" text .
+    - To cycle through many different party/raid layouts, right-Click on the "MazzleUI" text.
+    - To rotate a pet or party member on the pedestal, click and drag the character model.
+    - To make a character or party member do something funny, right-click on the center of their model.
+
+- There are a series of buttons on the far right of the panel:
+    - The 'M' button allows you to access the MazzleOptions systems, where you can browse a ton of help documents and descriptions/options of every add-on in the package.  I highly recommend going through every element of MazzleOptions.
+
+- MazzleUI comes with some powerful healing capabilies via Clique and NeedyList.  Read the FAQ in MazzleOptions for more information.
+
+- Read the forums.  It's a great way to learn about issues before they become problems for you.   
+
+- You may be new to a lot of these add-ons.  They're useless if you don't know what they do.  Ideally, you'll want to play with and try to configure the settings to your liking if that's applicable.  I've tried to configure them to work well straight out of the box with settings that minimize memory usage.
+
+- Get involved!  Start posting like crazy with feedback, bug reports, things you felt you needed to change, things you liked, things you hated, etc.  That's what beta is all about.  If you're really helpful, you can contribute to camera collection or making DAB button layouts for the many incomplete classes.
+
+------------------------------------
+Additional Notes
+------------------------------------
+
+- Add any extra addons that you enjoy but are not included in MazzleUI.  Just move them over from your old "Interface" folder (the one you renamed in step 2) to your new one.
+
+- If you'd like to retain your old macros, COPY the "macros-cache.txt" and "macros-local.txt" files from your old WTF folder.  There may be several of these files in the various folders for the diferent characters.  Just make sure to put them in the exact same spot in your new WTF folder.
+
+- If you're using an aspect ratio that is not 1.25, 133, or 1.6 -- I have yet to get a user who isn't on one of these -- you'll probably need to resize the artwork and shift a few things around. To do this will probably require some knowledge of all four Discord addons, i.e. Discord Art, Discord Frame Modifier, Discord Action Bars and Discord Unit Frame.  You can learn more at www.discordmods.com
+
+- If you need to remazzify again at any point, you can type "/mazzify" to pull up the Mazzify configuration window.
+
+- If you plan to make any changes to any of the discord mod settings, you should probably create a new profile.  That way, it won't get overwritten when you mazzify again in the future.  Mazzification will only overwrite the profile named "MazzleUI". 
+
+- You can also copy old add-on settings from the SavedVariables folders in your old WTF folder to your new one.  I'd be careful with this.  If you overwrite something that the Mazzifier configured, you may screw something up.  (for e.g. if you copied over discord settings).  But remember, you can always backup your settings by making a copy of your WTF folder.  By doing that, you can experiment to your hearts content and then go back to your backed up settings if it doesn't work.  (You do not need to back-up your interface folder, just the WTF.)
+
+----------------------------------
+How to go back to your old UI:
+----------------------------------
+1) Delete the following folders
+    C:\Program Files\World of Warcraft\Interface
+    C:\Program Files\World of Warcraft\WTF
+2) Rename your "WTF Old" and "Interface Old" back to "WTF" and "Interface"
+3) Rename or remove the folder C:\Program Files\World of Warcraft\Fonts
+
+-- Copyright © 2006 Mazin Assanie
+-- All Rights Reserved.
+-- 
+-- Permission to use, copy, modify, and distribute this software in any way
+-- is not granted without expressed written agreement.  In the case that it
+-- is granted, the above copyright notice and this paragraph must appear in
+-- all copies, modifications, and distributions.
+--
+-- To contact the author of this work, use mazzlefizz@gmail.com 
+-- For more information on copyright, visit http://copyright.gov/ or http://whatiscopyright.org/
+--

@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r62952 | whyv | 2008-02-26 05:09:35 -0500 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Locales/zhTW.lua
+
+Postal: -zhTW fixed! sorry!
+------------------------------------------------------------------------
+r62950 | whyv | 2008-02-26 04:54:08 -0500 (Tue, 26 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Locales/zhTW.lua
+
+Postal: -update zhTW
+------------------------------------------------------------------------
+r61025 | xinhuan | 2008-02-12 00:07:47 -0500 (Tue, 12 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Modules/OpenAll.lua
+   M /trunk/Postal/Modules/Select.lua
+
+Postal: - Fix issue where it sometimes opens mail with just gold in it even though its not selected.
+------------------------------------------------------------------------
+r60953 | xinhuan | 2008-02-11 11:35:58 -0500 (Mon, 11 Feb 2008) | 1 line
+Changed paths:
+   M /trunk/Postal/Modules/Select.lua
+
+Postal: - Fix infinite loop which hangs wow (tailcalls ftw) when trying to return "unreturnable mail" such as AV tokens.
+------------------------------------------------------------------------

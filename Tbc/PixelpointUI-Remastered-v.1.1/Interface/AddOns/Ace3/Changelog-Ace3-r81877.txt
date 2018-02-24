@@ -1,0 +1,24 @@
+------------------------------------------------------------------------
+r81877 | nevcairiel | 2008-09-19 02:21:29 -0400 (Fri, 19 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/Ace3/AceGUI-3.0/widgets/AceGUIWidget-TreeGroup.lua
+
+Ace3 - AceGUI-3.0: merge fix for the latest beta patch
+- NOTE: The Blizzard Integration into the Interface Options is still broken due to a number of bugs in the FrameXML Code in this build!
+------------------------------------------------------------------------
+r81438 | nevcairiel | 2008-09-06 09:44:36 -0400 (Sat, 06 Sep 2008) | 2 lines
+Changed paths:
+   M /trunk/Ace3/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+   M /trunk/Ace3/AceDB-3.0/AceDB-3.0.lua
+   M /trunk/Ace3/AceDBOptions-3.0/AceDBOptions-3.0.lua
+   M /trunk/Ace3/AceGUI-3.0/AceGUI-3.0.lua
+   M /trunk/Ace3/AceGUI-3.0/widgets/AceGUIWidget-DropDown.lua
+   M /trunk/Ace3/AceGUI-3.0/widgets/AceGUIWidget-TabGroup.lua
+   M /trunk/Ace3/AceGUI-3.0/widgets/AceGUIWidget-TreeGroup.lua
+   M /trunk/Ace3/AceTab-3.0/AceTab-3.0.lua
+   M /trunk/Ace3/changelog.txt
+   M /trunk/Ace3/tests/AceDB-3.0-defaults.lua
+
+Ace3 - merge from development branch
+- see changelog.txt for major changes
+------------------------------------------------------------------------
