@@ -1,0 +1,16 @@
+tag v1.1.2
+52931b43fded88efd274d5ed1d95577b2cf04b9a
+Erik Broes <erikbroes@gmail.com>
+2010-02-04 00:31:26 +0100
+
+ChannelNames: Support for Dungeon Guide.
+
+
+--------------------
+
+Erik Broes:
+	- Added support for 'Dungeon Guide'. Translations still needed.
+unknown:
+	- Add TS3 url parsing to the URL mangler, as well
+	- Add Mumble parser for URL links. Will automatically inject your character's name into the link, so that when connecting to the server, your identity is prefilled. mumble://foo.com:1234 -> mumble://Yourname@foo.com:1234
+	- Enable URL linking by party leader

@@ -1,0 +1,154 @@
+
+SLDTDB = {
+	["namespaces"] = {
+		["Durability"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -336,
+					["noCombatHide"] = true,
+					["anchorFrom"] = "BOTTOM",
+					["offY"] = 17,
+				},
+			},
+		},
+		["Bag"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["anchorFrom"] = "BOTTOMLEFT",
+					["noCombatHide"] = true,
+					["offY"] = 15,
+					["offX"] = 429,
+				},
+			},
+		},
+		["Honor"] = {
+		},
+		["Coords"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -83,
+					["anchorFrom"] = "TOPRIGHT",
+					["anchor"] = "UIParent",
+					["offY"] = -181,
+				},
+			},
+		},
+		["ZoneText"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -113,
+					["anchorFrom"] = "TOPRIGHT",
+					["anchor"] = "UIParent",
+					["offY"] = -9,
+				},
+			},
+		},
+		["Framerate"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -135,
+					["anchorFrom"] = "BOTTOMRIGHT",
+					["noCombatHide"] = true,
+					["offY"] = 12,
+				},
+			},
+		},
+		["Memory"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -318,
+					["noBlizz"] = false,
+					["anchorFrom"] = "BOTTOMRIGHT",
+					["offY"] = 13,
+				},
+			},
+		},
+		["Mail"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -318,
+					["anchorFrom"] = "BOTTOM",
+					["showTotal"] = false,
+					["noCombatHide"] = true,
+					["offY"] = 17,
+				},
+			},
+		},
+		["Gold"] = {
+			["realm"] = {
+				["Gamer-District 7x"] = {
+					["Alliance"] = {
+						["Truculentt"] = {
+							["gold"] = 42749351,
+						},
+					},
+				},
+			},
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = 337,
+					["anchorFrom"] = "BOTTOMLEFT",
+					["noCombatHide"] = true,
+					["offY"] = 16,
+				},
+			},
+		},
+		["Clock"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["anchorFrom"] = "BOTTOMRIGHT",
+					["anchor"] = "UIParent",
+					["offY"] = 12,
+					["offX"] = -32,
+				},
+			},
+		},
+		["FriendList"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = 83,
+					["anchorFrom"] = "BOTTOMLEFT",
+					["offY"] = 14,
+				},
+			},
+		},
+		["GuildList"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["anchorFrom"] = "BOTTOMLEFT",
+					["noCombatHide"] = true,
+					["offX"] = 146,
+					["offY"] = 14,
+				},
+			},
+		},
+		["Latency"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["offX"] = -178,
+					["anchorFrom"] = "BOTTOMRIGHT",
+					["noCombatHide"] = true,
+					["offY"] = 13,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Truculentt - Gamer-District 7x"] = "Truculentt - Gamer-District 7x",
+	},
+	["profiles"] = {
+		["Truculentt - Gamer-District 7x"] = {
+			["modules"] = {
+				["Durability"] = false,
+				["Memory"] = false,
+				["Honor"] = false,
+				["Mail"] = false,
+				["Coords"] = false,
+				["ZoneText"] = false,
+			},
+			["gFontSize"] = 14,
+			["fontOutline"] = false,
+			["gColorClass"] = true,
+		},
+	},
+}

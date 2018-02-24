@@ -1,0 +1,67 @@
+BINDINGMODE 0
+bind W CLICK BT4Button98:LeftButton
+bind UP MOVEFORWARD
+bind S MOVEFORWARD
+bind DOWN NONE
+bind A STRAFELEFT
+bind D STRAFERIGHT
+bind Q CLICK BT4Button97:LeftButton
+bind E CLICK BT4Button99:LeftButton
+bind SPACE JUMP
+bind NUMPAD0 NONE
+bind X CLICK BT4Button50:LeftButton
+bind Z CLICK BT4Button49:LeftButton
+bind NUMLOCK NONE
+bind BUTTON4 STRAFERIGHT
+bind R CLICK BT4Button28:LeftButton
+bind 1 CLICK BT4Button37:LeftButton
+bind 2 CLICK BT4Button38:LeftButton
+bind 3 CLICK BT4Button39:LeftButton
+bind 4 CLICK BT4Button40:LeftButton
+bind 5 CLICK BT4Button41:LeftButton
+bind 6 NONE
+bind 7 NONE
+bind 8 NONE
+bind 9 NONE
+bind 0 NONE
+bind - NONE
+bind = NONE
+bind CTRL-F1 CLICK BT4Button48:LeftButton
+bind CTRL-F2 CLICK BT4Button47:LeftButton
+bind CTRL-F3 CLICK BT4Button46:LeftButton
+bind CTRL-1 CLICK BT4Button45:LeftButton
+bind CTRL-2 NONE
+bind SHIFT-1 CLICK BT4Button36:LeftButton
+bind SHIFT-2 CLICK BT4Button35:LeftButton
+bind SHIFT-MOUSEWHEELUP CLICK BT4Button102:LeftButton
+bind SHIFT-MOUSEWHEELDOWN CLICK BT4Button103:LeftButton
+bind F1 CLICK BT4Button24:LeftButton
+bind SHIFT-F1 CLICK BT4Button34:LeftButton
+bind F2 CLICK BT4Button23:LeftButton
+bind F3 CLICK BT4Button22:LeftButton
+bind F4 CLICK BT4Button21:LeftButton
+bind F5 CLICK BT4Button20:LeftButton
+bind SHIFT-F2 CLICK BT4Button33:LeftButton
+bind SHIFT-F3 CLICK BT4Button32:LeftButton
+bind G CLICK BT4Button53:LeftButton
+bind F CLICK BT4Button52:LeftButton
+bind V MOVEBACKWARD
+bind C CLICK BT4Button51:LeftButton
+bind F12 TOGGLEWORLDMAP
+bind F11 OPENALLBAGS
+bind SHIFT-B NONE
+bind ESCAPE TOGGLEGAMEMENU
+bind M NONE
+bind MOUSEWHEELUP CLICK BT4Button42:LeftButton
+bind MOUSEWHEELDOWN CLICK BT4Button43:LeftButton
+bind END CAMERAZOOMOUT
+bind HOME CAMERAZOOMIN
+bind CTRL-MOUSEWHEELUP CLICK BT4Button54:LeftButton
+bind CTRL-MOUSEWHEELDOWN CLICK BT4Button55:LeftButton
+bind ` CLICK BT4Button100:LeftButton
+bind BUTTON5 STRAFELEFT
+bind SHIFT-BUTTON3 TOGGLEAUTORUN
+bind SHIFT-BUTTON1 CLICK BT4Button91:LeftButton
+bind SHIFT-BUTTON2 CLICK BT4Button85:LeftButton
+bind CAPSLOCK JUMP
+bind CTRL-BUTTON3 CLICK _NPCScanButton:LeftButton

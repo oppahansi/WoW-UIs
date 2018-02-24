@@ -1,0 +1,96 @@
+
+kgPanelsDB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Default",
+	},
+	["global"] = {
+		["version"] = 2,
+		["layouts"] = {
+			["Boda"] = {
+				["Omen"] = {
+					["crop"] = false,
+					["strata"] = "BACKGROUND",
+					["bg_color"] = {
+						["a"] = 0,
+						["r"] = 0.04313725490196078,
+						["g"] = 0.04313725490196078,
+						["b"] = 0.04313725490196078,
+					},
+					["anchorTo"] = "CENTER",
+					["parent"] = "UIParent",
+					["bg_orientation"] = "HORIZONTAL",
+					["anchorFrom"] = "CENTER",
+					["hflip"] = false,
+					["bg_insets"] = {
+						["r"] = 4,
+						["t"] = 4,
+						["l"] = -4,
+						["b"] = -4,
+					},
+					["vflip"] = false,
+					["tileSize"] = 0,
+					["bg_texture"] = "Caith",
+					["anchor"] = "UIParent",
+					["level"] = 0,
+					["scripts"] = {
+					},
+					["use_absolute_bg"] = false,
+					["bg_blend"] = "BLEND",
+					["text"] = {
+						["y"] = 0,
+						["font"] = "Blizzard",
+						["justifyH"] = "CENTER",
+						["x"] = 0,
+						["color"] = {
+							["a"] = 1,
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["text"] = "",
+						["justifyV"] = "MIDDLE",
+						["size"] = 12,
+					},
+					["bg_style"] = "SOLID",
+					["gradient_color"] = {
+						["a"] = 1,
+						["r"] = 1,
+						["g"] = 1,
+						["b"] = 1,
+					},
+					["border_color"] = {
+						["a"] = 0,
+						["r"] = 0.04313725490196078,
+						["g"] = 0.04313725490196078,
+						["b"] = 0.04313725490196078,
+					},
+					["border_texture"] = "Caith",
+					["y"] = 310.8696370948198,
+					["width"] = 319.652286405301,
+					["rotation"] = 0,
+					["x"] = 351.630583922133,
+					["bg_alpha"] = 1,
+					["border_edgeSize"] = 16,
+					["height"] = 84.78268381217795,
+					["mouse"] = false,
+					["absolute_bg"] = {
+						["ULx"] = 0,
+						["ULy"] = 0,
+						["LLy"] = 1,
+						["LLx"] = 0,
+						["URy"] = 0,
+						["URx"] = 1,
+						["LRx"] = 1,
+						["LRy"] = 1,
+					},
+					["tiling"] = false,
+				},
+			},
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["layout"] = "Boda",
+		},
+	},
+}

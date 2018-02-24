@@ -1,0 +1,14 @@
+
+BugSackDB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["minimap"] = {
+				["minimapPos"] = 286,
+				["radius"] = 80,
+			},
+		},
+	},
+}

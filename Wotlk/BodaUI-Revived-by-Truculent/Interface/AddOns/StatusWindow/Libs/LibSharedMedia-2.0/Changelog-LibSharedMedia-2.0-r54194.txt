@@ -1,0 +1,72 @@
+------------------------------------------------------------------------
+r54194 | funkydude | 2007-11-09 01:45:26 -0500 (Fri, 09 Nov 2007) | 1 line
+Changed paths:
+   M /trunk/Cartographer/embeds.xml
+   M /trunk/Cartographer/libs
+   M /trunk/CowTip/embeds.xml
+   M /trunk/CowTip/libs
+   M /trunk/FuBar/embeds.xml
+   M /trunk/FuBar/libs
+   M /trunk/LibBabble-Inventory-3.0/LibBabble-Inventory-3.0.toc
+   M /trunk/LibBabble-Inventory-3.0/lib.xml
+   M /trunk/LibBabble-Spell-3.0/LibBabble-Spell-3.0.toc
+   M /trunk/LibBabble-Spell-3.0/lib.xml
+   M /trunk/LibBabble-Zone-3.0/LibBabble-Zone-3.0.toc
+   M /trunk/LibBabble-Zone-3.0/lib.xml
+   M /trunk/LibDogTag-2.0/LibDogTag-2.0.toc
+   M /trunk/LibDogTag-2.0/lib.xml
+   M /trunk/LibGratuity-3.0/LibGratuity-3.0.toc
+   M /trunk/LibGratuity-3.0/lib.xml
+   M /trunk/LibInventory-2.1/LibInventory-2.1.toc
+   M /trunk/LibInventory-2.1/lib.xml
+   M /trunk/LibRock-1.0/LibRock-1.0.toc
+   M /trunk/LibRock-1.0/lib.xml
+   M /trunk/LibRoman-1.0/LibRoman-1.0.toc
+   M /trunk/LibRoman-1.0/lib.xml
+   M /trunk/LibSharedMedia-2.0/LibSharedMedia-2.0.toc
+   M /trunk/LibSharedMedia-2.0/lib.xml
+   M /trunk/PitBull/embeds.xml
+   M /trunk/PitBull/libs
+
+.trunk: revert back to having LibStub in toc's so we don't load 5 billion copies when we have addons with embeds. Authors, if you use a library that uses LibStub, embed the LibStub tag version with it, not the trunk. Carto/CowTip/FuBar/PitBull have been changed accordingly.
+------------------------------------------------------------------------
+r54172 | funkydude | 2007-11-08 20:09:28 -0500 (Thu, 08 Nov 2007) | 1 line
+Changed paths:
+   M /trunk/LibBabble-Spell-3.0/LibBabble-Spell-3.0.toc
+   M /trunk/LibBabble-Spell-3.0/lib.xml
+   M /trunk/LibBabble-Zone-3.0/LibBabble-Zone-3.0.toc
+   M /trunk/LibBabble-Zone-3.0/lib.xml
+   M /trunk/LibDogTag-2.0/LibDogTag-2.0.toc
+   M /trunk/LibDogTag-2.0/lib.xml
+   M /trunk/LibGratuity-3.0/LibGratuity-3.0.toc
+   M /trunk/LibGratuity-3.0/lib.xml
+   M /trunk/LibInventory-2.1/LibInventory-2.1.toc
+   D /trunk/LibInventory-2.1/LibStub.lua
+   M /trunk/LibInventory-2.1/lib.xml
+   M /trunk/LibRoman-1.0/LibRoman-1.0.toc
+   M /trunk/LibRoman-1.0/lib.xml
+   M /trunk/LibSharedMedia-2.0/LibSharedMedia-2.0.toc
+   M /trunk/LibSharedMedia-2.0/lib.xml
+
+.trunk: move LS reference to xml file instead of toc for remaining libs
+------------------------------------------------------------------------
+r53229 | funkydude | 2007-10-25 15:57:18 -0400 (Thu, 25 Oct 2007) | 1 line
+Changed paths:
+   M /trunk/LibSharedMedia-2.0/LibSharedMedia-2.0.toc
+   D /trunk/LibSharedMedia-2.0/LibStub/1.0
+   A /trunk/LibSharedMedia-2.0/LibStub/LibStub.lua
+   D /trunk/LibSharedMedia-2.0/embeds.xml
+
+LibSharedMedia-2.0: tweak layout
+------------------------------------------------------------------------
+r53142 | funkydude | 2007-10-24 21:02:38 -0400 (Wed, 24 Oct 2007) | 1 line
+Changed paths:
+   M /trunk/LibSharedMedia-2.0/LibSharedMedia-2.0.lua
+   M /trunk/LibSharedMedia-2.0/LibSharedMedia-2.0.toc
+   A /trunk/LibSharedMedia-2.0/LibStub
+   A /trunk/LibSharedMedia-2.0/LibStub/1.0
+   A /trunk/LibSharedMedia-2.0/LibStub/1.0/LibStub.lua
+   A /trunk/LibSharedMedia-2.0/embeds.xml
+
+LibSharedMedia-2.0: split LibStub to a separate file
+------------------------------------------------------------------------

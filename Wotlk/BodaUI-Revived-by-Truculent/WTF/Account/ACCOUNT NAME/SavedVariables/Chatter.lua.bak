@@ -1,0 +1,283 @@
+
+ChatterDB = {
+	["namespaces"] = {
+		["Highlight"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["AltLinks"] = {
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["realm"] = {
+				["Eldre'Thalas"] = {
+				},
+			},
+		},
+		["Scrollback"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["Invite Links"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["words"] = {
+						["inv"] = "inv",
+						["invite"] = "invite",
+					},
+				},
+			},
+		},
+		["ChannelColors"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["colors"] = {
+						["General"] = {
+							["b"] = 0.752941220998764,
+							["g"] = 0.752941220998764,
+							["r"] = 1.000000059138984,
+						},
+						["Guild"] = {
+							["b"] = 0.250980406999588,
+							["g"] = 1.000000059138984,
+							["r"] = 0.250980406999588,
+						},
+						["Trade"] = {
+							["b"] = 0.752941220998764,
+							["g"] = 0.752941220998764,
+							["r"] = 1.000000059138984,
+						},
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.4980392451398075,
+							["r"] = 1.000000059138984,
+						},
+						["Raid Leader"] = {
+							["b"] = 0.03529411973431706,
+							["g"] = 0.2823529578745365,
+							["r"] = 1.000000059138984,
+						},
+						["Raid Warning"] = {
+							["b"] = 0,
+							["g"] = 0.2823529578745365,
+							["r"] = 1.000000059138984,
+						},
+						["Yell"] = {
+							["b"] = 0.250980406999588,
+							["g"] = 0.250980406999588,
+							["r"] = 1.000000059138984,
+						},
+						["LocalDefense"] = {
+							["b"] = 0.752941220998764,
+							["g"] = 0.752941220998764,
+							["r"] = 1.000000059138984,
+						},
+						["aomanagement"] = {
+							["b"] = 1.000000059138984,
+							["g"] = 0.2823529578745365,
+							["r"] = 0,
+						},
+						["Whisper"] = {
+							["b"] = 1.000000059138984,
+							["g"] = 0.501960813999176,
+							["r"] = 1.000000059138984,
+						},
+						["Say"] = {
+							["b"] = 1.000000059138984,
+							["g"] = 1.000000059138984,
+							["r"] = 1.000000059138984,
+						},
+						["Party"] = {
+							["b"] = 1.000000059138984,
+							["g"] = 0.6666667060926557,
+							["r"] = 0.6666667060926557,
+						},
+						["Raid"] = {
+							["b"] = 0,
+							["g"] = 0.4980392451398075,
+							["r"] = 1.000000059138984,
+						},
+						["Battleground Leader"] = {
+							["b"] = 0.717647101264447,
+							["g"] = 0.8588235802017152,
+							["r"] = 1.000000059138984,
+						},
+						["Officer"] = {
+							["b"] = 0.06666667060926557,
+							["g"] = 0.125490203499794,
+							["r"] = 0.752941220998764,
+						},
+					},
+				},
+			},
+		},
+		["StickyChannels"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["ChatFrameBorders"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["Buttons"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["scrollReminder"] = true,
+				},
+			},
+		},
+		["Timestamps"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["EditBox"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["ChatTabs"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["PlayerNames"] = {
+			["profiles"] = {
+				["Default"] = {
+					["levelByDiff"] = true,
+					["includeLevel"] = false,
+				},
+			},
+			["global"] = {
+			},
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["realm"] = {
+				["Eldre'Thalas"] = {
+				},
+			},
+		},
+		["ChannelNames"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["JustifyText"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+		["Editbox History"] = {
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["realm"] = {
+				["Eldre'Thalas"] = {
+					["history"] = {
+						"/chatter", -- [1]
+					},
+				},
+			},
+		},
+		["ChatFont"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+					["font"] = "Arial Narrow",
+					["fontsize"] = 14,
+				},
+			},
+		},
+		["Mousewheel Scroll"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Default",
+			},
+			["profiles"] = {
+				["Default"] = {
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["modules"] = {
+				["Edit Box Polish"] = false,
+				["Justify Text"] = false,
+				["Tell Target (/tt)"] = false,
+				["Tiny Chat"] = false,
+				["Chat Copy"] = false,
+				["Timestamps"] = false,
+				["Invite Links"] = false,
+				["Chat Font"] = false,
+				["Disable Buttons"] = true,
+				["Highlights"] = false,
+				["Editbox History"] = true,
+				["URL Copy"] = false,
+				["Sticky Channels"] = false,
+			},
+		},
+	},
+}

@@ -1,0 +1,44 @@
+
+SexyMapDB = {
+	["namespaces"] = {
+		["Ping"] = {
+		},
+		["Coordinates"] = {
+		},
+		["Buttons"] = {
+		},
+		["AutoZoom"] = {
+		},
+		["Shapes"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["shape"] = "Interface\\BUTTONS\\WHITE8X8",
+				},
+			},
+		},
+		["Fader"] = {
+		},
+		["Movers"] = {
+		},
+		["Borders"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["applyPreset"] = false,
+				},
+			},
+		},
+		["HudMap"] = {
+			["profiles"] = {
+				["Truculentt - Gamer-District 7x"] = {
+					["setNewScale"] = true,
+					["scale"] = 1.4,
+				},
+			},
+		},
+		["ZoneText"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Truculentt - Gamer-District 7x"] = "Truculentt - Gamer-District 7x",
+	},
+}

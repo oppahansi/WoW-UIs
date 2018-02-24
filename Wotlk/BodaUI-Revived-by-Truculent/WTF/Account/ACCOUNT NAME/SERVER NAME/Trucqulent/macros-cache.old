@@ -1,0 +1,6 @@
+MACRO 16777218 "mark" INV_Misc_QuestionMark
+/cast Hunter's Mark(Rank 4) [@mouseover,harm][]
+END
+MACRO 16777217 "pet" Ability_Druid_Disembowel
+/petattack [@mouseover,harm][]
+END

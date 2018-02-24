@@ -1,0 +1,86 @@
+
+IceCoreDB = {
+	["profiles"] = {
+		["Default"] = {
+			["detachedTooltip"] = {
+			},
+			["modules"] = {
+				["TargetInfo"] = {
+					["myTagVersion"] = 3,
+					["enabled"] = false,
+				},
+				["TargetCast"] = {
+					["myTagVersion"] = 3,
+					["enabled"] = false,
+				},
+				["PetHealth"] = {
+					["myTagVersion"] = 3,
+					["enabled"] = false,
+				},
+				["PlayerHealth"] = {
+					["textVisible"] = {
+						["lower"] = false,
+					},
+					["myTagVersion"] = 3,
+					["lockLowerTextAlpha"] = true,
+					["barFontSize"] = 20,
+				},
+				["CastBar"] = {
+					["myTagVersion"] = 3,
+				},
+				["TargetOfTarget"] = {
+					["enabled"] = false,
+				},
+				["TargetHealth"] = {
+					["myTagVersion"] = 3,
+					["textVisible"] = {
+						["lower"] = false,
+					},
+					["barFontSize"] = 17,
+				},
+				["ComboPoints"] = {
+					["enabled"] = false,
+				},
+				["PlayerMana"] = {
+					["lockLowerTextAlpha"] = true,
+					["myTagVersion"] = 3,
+					["textVisible"] = {
+						["lower"] = false,
+					},
+					["barFontSize"] = 20,
+				},
+				["PetMana"] = {
+					["myTagVersion"] = 3,
+					["enabled"] = false,
+				},
+				["FocusCast"] = {
+					["myTagVersion"] = 3,
+				},
+				["TargetMana"] = {
+					["myTagVersion"] = 3,
+					["textVisible"] = {
+						["lower"] = false,
+					},
+					["barFontSize"] = 17,
+				},
+				["MirrorBarHandler"] = {
+					["enabled"] = false,
+				},
+			},
+			["fontFamily"] = "Accidental Presidency",
+			["barBgBlendMode"] = "ADD",
+			["barTexture"] = "GlowArc",
+			["colors"] = {
+				["ScaledManaColor"] = {
+					["r"] = 1,
+				},
+				["ScaledHealthColor"] = {
+					["g"] = 0,
+					["r"] = 1,
+				},
+			},
+			["barBlendMode"] = "ADD",
+			["barPreset"] = "GlowArc",
+		},
+	},
+}

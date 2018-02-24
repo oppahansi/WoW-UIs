@@ -1,0 +1,7 @@
+MACRO 1 "Camera" INV_Misc_QuestionMark
+/console cameradistancemaxfactor 5
+END
+MACRO 2 "Pet Attk" Ability_BackStab
+/petfollow [@pettarget,nodead]
+/petattack [@mouseover,harm][]
+END

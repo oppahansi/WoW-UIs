@@ -1,0 +1,204 @@
+
+SBFDB = {
+	["global"] = {
+		["throttlePeriod"] = 0.5,
+		["spells"] = {
+			["Red Drake"] = {
+				["duration"] = 0,
+				["untilCancelled"] = true,
+				["auraType"] = 20,
+			},
+			["Essence of Wintergrasp"] = {
+				["duration"] = 0,
+				["untilCancelled"] = true,
+				["auraType"] = 20,
+			},
+		},
+		["version"] = 3,
+		["castable"] = {
+			["WARRIOR"] = {
+				["HARMFUL"] = {
+				},
+				["HELPFUL"] = {
+					["Red Drake"] = true,
+					["Essence of Wintergrasp"] = true,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+	},
+	["profiles"] = {
+		["Bodasafa - Eldre'Thalas"] = {
+			["exclusionList"] = {
+			},
+			["buttonFacade"] = {
+				["SBFFrame2"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["SBFFrame1"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+			},
+			["alwaysWarnList"] = {
+			},
+			["units"] = {
+				["player"] = {
+					["debuff"] = 2,
+					["buff"] = 1,
+				},
+			},
+			["buffFrameList"] = {
+			},
+			["sticky"] = {
+			},
+			["frames"] = {
+				{
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 3,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["scale"] = 1,
+						["y"] = -15,
+						["font"] = "Friz Quadrata TT",
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 3,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["x"] = 0,
+					},
+					["layout"] = {
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-65, -- [2]
+							-250, -- [3]
+						},
+						["scale"] = 1,
+						["opacity"] = 1,
+						["rowCount"] = 1,
+						["y"] = 0,
+						["x"] = 0,
+						["count"] = 20,
+						["visibility"] = 1,
+						["sort"] = 1,
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+					},
+					["unit"] = "player",
+				}, -- [1]
+				{
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 3,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["scale"] = 1,
+						["y"] = -15,
+						["font"] = "Friz Quadrata TT",
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 3,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["x"] = 0,
+					},
+					["layout"] = {
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-110, -- [2]
+							-250, -- [3]
+						},
+						["scale"] = 1,
+						["opacity"] = 1,
+						["rowCount"] = 1,
+						["y"] = 0,
+						["x"] = 0,
+						["count"] = 16,
+						["visibility"] = 1,
+						["sort"] = 1,
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+					},
+					["unit"] = "player",
+				}, -- [2]
+			},
+			["filters"] = {
+			},
+		},
+	},
+}

@@ -1,0 +1,12 @@
+
+Omen3DB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+	},
+	["profiles"] = {
+		["Bodasafa - Eldre'Thalas"] = {
+			["PositionY"] = 501.6666380424715,
+			["PositionX"] = 420.8333323028623,
+		},
+	},
+}

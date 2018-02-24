@@ -1,0 +1,13 @@
+## Interface: 30000
+## Version: 2.01
+## Title: StatusWindow
+## Author: Satrina@Stormrage
+## SavedVariables: SWVar
+## OptionalDeps: LibStub, LibSharedMedia-2.0, LibScrollingDropDown-1.0
+
+embeds.xml
+StatusWindow.lua
+Localisation.en.lua
+StatusWindowModule.lua
+StatusWindow.xml
+

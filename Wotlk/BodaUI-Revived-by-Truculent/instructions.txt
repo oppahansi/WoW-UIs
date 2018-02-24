@@ -1,0 +1,31 @@
+Installation
+•	Backup and then delete your WTF and Interface folders.
+•	Download the UI and extract it to your desktop.
+•	Open the BodaUI Folder then drag the WTF and Interface folders into your WoW folder.
+•	Open the WTF folder and rename the appropriate folders with YOUR information. All 3 of these must be spelled 100% correctly. Additionally you should use your "old" account name if you have one. Meaning the all caps one you had before the battle.net conversion. If you created your account after the battle.net conversion and do not have an "old" account name, then use your battle.net account name (spelled correctly in e-mail format).
+•	Account Name (All Caps) 
+•	Your Server Name (First Letter Cap and any punctuation)
+•	Your Character Name (First Letter Cap)
+
+In Game Setup
+•	First stop at your Character Selection Screen. Click the AddOns button and check Load out of date AddOns, then enable all of them. 
+•	Then proceed into the game type the following slash commands and select the BodaUI profile for each: 
+/buttonfacade
+/bt
+/chatter
+/chinchilla
+/icehud
+/kgpanels config
+/mbf
+/msbt
+/omen config
+/pitbull
+/recount config
+/sbf options
+/statuswindow - Use the Bodasafa profile for this one.
+
+• After you have set all the profiles reload your UI by typing /rl to finish the profiles.
+•	By downloading my UI you will have inherited all my Macros and Key Bindings for the game and Bartender. Delete the Macros you do not want and change all the key bindings.
+• I do not use a player portrait in my UI due to Icehud showing my health and rage. I recommend that you bind a key to target self. This can be done through the blizzard menu in the key bindings tab. Once you press that key you will see you as the target. You then right click the frame to get all the options you would via a normal player portrait.
+•	Log out to save the changes.
+•	Login and Enjoy!

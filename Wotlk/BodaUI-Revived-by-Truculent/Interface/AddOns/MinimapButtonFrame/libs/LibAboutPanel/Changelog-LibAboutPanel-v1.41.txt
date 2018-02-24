@@ -1,0 +1,16 @@
+tag v1.41
+ef02bdd303185880bfa4c54efc9804a43e02eab6
+John Pasula <ackis@shaw.ca>
+2009-05-27 05:20:26 -0600
+
+Tagging as v1.41 (version without Ackis' dumbass dry-code mistake which wasn't actually dry-coded)
+
+
+--------------------
+
+John Pasula:
+	Convert files to unix types.
+	Update ToC to 1.41
+	Readd the @project-revision@ replacement.  And fix the repo replacements.
+Daniel Ceregatti:
+	Fix Ackis dry coding.

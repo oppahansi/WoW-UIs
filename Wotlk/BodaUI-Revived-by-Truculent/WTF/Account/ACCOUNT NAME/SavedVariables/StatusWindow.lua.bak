@@ -1,0 +1,103 @@
+
+SWVar = {
+	["version"] = 2.2,
+	["Bodasafa of Eldre'Thalas"] = {
+		["frames"] = {
+			{
+				["module"] = "Time",
+				["window"] = 1,
+				["width"] = 60,
+				["modVar"] = {
+					["offset"] = 0,
+					["textAlign"] = "LEFT",
+					["label"] = "$2:$3 $4",
+				},
+				["padding"] = 5,
+				["position"] = 4,
+				["height"] = 17,
+				["textAlign"] = "LEFT",
+				["icon"] = false,
+				["new"] = true,
+			}, -- [1]
+			{
+				["module"] = "Latency",
+				["window"] = 1,
+				["width"] = 43,
+				["modVar"] = {
+					["textAlign"] = "LEFT",
+					["label"] = "$1 ms",
+				},
+				["padding"] = 5,
+				["position"] = 3,
+				["height"] = 17,
+				["textAlign"] = "LEFT",
+				["icon"] = false,
+				["new"] = true,
+			}, -- [2]
+			{
+				["module"] = "FPS",
+				["window"] = 1,
+				["width"] = 42,
+				["modVar"] = {
+					["textAlign"] = "LEFT",
+					["label"] = "$1 FPS",
+				},
+				["padding"] = 5,
+				["position"] = 2,
+				["height"] = 17,
+				["textAlign"] = "LEFT",
+				["icon"] = false,
+				["new"] = true,
+			}, -- [3]
+			{
+				["module"] = "Durability",
+				["window"] = 1,
+				["width"] = 51,
+				["modVar"] = {
+					["textAlign"] = "LEFT",
+					["label"] = "$i $1%",
+				},
+				["padding"] = 5,
+				["position"] = 1,
+				["height"] = 17,
+				["textAlign"] = "LEFT",
+				["icon"] = true,
+				["new"] = true,
+			}, -- [4]
+		},
+		["windows"] = {
+			{
+				["rowCount"] = 4,
+				["fontSize"] = 13,
+				["relTo"] = "BOTTOMLEFT",
+				["backgroundColour"] = {
+					["a"] = 0,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+				["scale"] = 1,
+				["opacity"] = 1,
+				["border"] = "Interface\\None",
+				["borderSize"] = 16,
+				["y"] = 141.0929634933187,
+				["x"] = 257.8004861101755,
+				["textColour"] = {
+					["a"] = 1,
+					["b"] = 0.89,
+					["g"] = 1,
+					["r"] = 0.941,
+				},
+				["font"] = "Accidental Presidency",
+				["background"] = "Blizzard Tooltip",
+				["relPoint"] = "BOTTOMLEFT",
+				["borderColour"] = {
+					["a"] = 1,
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
+			}, -- [1]
+		},
+	},
+}

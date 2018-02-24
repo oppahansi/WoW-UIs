@@ -1,0 +1,6 @@
+## Interface: 30000
+## Title: Baud Mark
+## Notes: Allows you to quickly mark targets while holding a hotkey.
+## Author: Baudzilla
+## Version: 1.1
+BaudMark.xml

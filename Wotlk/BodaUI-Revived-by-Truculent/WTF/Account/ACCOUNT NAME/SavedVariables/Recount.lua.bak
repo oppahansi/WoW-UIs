@@ -1,0 +1,71 @@
+
+RecountDB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+	},
+	["profiles"] = {
+		["Bodasafa - Eldre'Thalas"] = {
+			["GraphWindowY"] = 0,
+			["MainWindow"] = {
+				["Buttons"] = {
+					["FileButton"] = false,
+					["CloseButton"] = false,
+					["ReportButton"] = false,
+				},
+				["Position"] = {
+					["y"] = -450.8862653872143,
+					["x"] = 781.1917474929751,
+					["w"] = 203.8969680585772,
+					["h"] = 153.6231514330785,
+				},
+			},
+			["SegmentBosses"] = true,
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+					["Total Bar"] = {
+						["a"] = 1,
+					},
+				},
+				["Window"] = {
+					["Background"] = {
+						["a"] = 0,
+						["r"] = 0.9607843137254902,
+						["g"] = 0.9607843137254902,
+						["b"] = 0.9607843137254902,
+					},
+					["Title"] = {
+						["a"] = 0,
+					},
+				},
+			},
+			["DetailWindowY"] = 0,
+			["DetailWindowX"] = 0,
+			["BarTextColorSwap"] = false,
+			["Locked"] = true,
+			["MainWindowWidth"] = 203.8969680585772,
+			["Filters"] = {
+				["Show"] = {
+					["Ungrouped"] = false,
+				},
+				["TrackDeaths"] = {
+					["Self"] = false,
+					["Pet"] = false,
+					["Boss"] = false,
+					["Grouped"] = false,
+				},
+				["Data"] = {
+					["Pet"] = false,
+				},
+			},
+			["MainWindowHeight"] = 153.6231514330785,
+			["GraphWindowX"] = 0,
+			["LastInstanceName"] = "Zul'Gurub",
+			["BarTexture"] = "Aluminium",
+			["CurDataSet"] = "OverallData",
+			["Font"] = "Accidental Presidency",
+		},
+	},
+}

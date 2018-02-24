@@ -1,0 +1,24 @@
+
+ChinchillaDB = {
+	["namespaces"] = {
+		["ShowHide"] = {
+			["profiles"] = {
+				["Default"] = {
+					["locationBar"] = false,
+					["zoom"] = false,
+					["lfg"] = false,
+					["voice"] = false,
+					["locationText"] = false,
+					["track"] = false,
+				},
+			},
+		},
+		["MoveButtons"] = {
+			["profiles"] = {
+				["Default"] = {
+					["dayNight"] = 211,
+				},
+			},
+		},
+	},
+}

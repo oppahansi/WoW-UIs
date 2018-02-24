@@ -1,0 +1,7 @@
+## Interface: 20300
+## Version: 1.0
+## Title: StatusWindow - Mail
+## Author: Satrina@Stormrage
+## Dependencies: StatusWindow
+
+SWMail.lua

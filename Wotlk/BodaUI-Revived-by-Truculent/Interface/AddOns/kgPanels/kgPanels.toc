@@ -1,0 +1,20 @@
+## Interface: 30300
+## Notes: Create panels for customizing your UI, sucessor to eePanels
+## Title: kgPanels
+## Author: kagaro
+## SavedVariables: kgPanelsDB
+## X-Category: Interface Enhancements
+## Version: v1.38
+## X-Email: sal.scotto@gmail.com
+## X-License: All Rights Reserved
+## OptionalDeps: Ace3, LibSharedMedia-3.0, LibDataBroker-1.1
+## X-Curse-Packaged-Version: v1.38
+## X-Curse-Project-Name: kgPanels
+## X-Curse-Project-ID: kg-panels
+## X-Curse-Repository-ID: wow/kg-panels/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+kgPanels.lua

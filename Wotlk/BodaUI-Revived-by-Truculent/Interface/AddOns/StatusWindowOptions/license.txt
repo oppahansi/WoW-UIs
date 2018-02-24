@@ -1,0 +1,14 @@
+- 2 December 2007 -
+
+StatusWindow2 is copyright 2007 by L. Tremblay (satrina@evilempireguild.org)
+All rights and license are reserved by the author, except as follows:
+
+License is explicitly granted to:
+- Use this addon by itself for your own personal use.
+- Use this addon as part of a compilation package.
+- Incorporate this addon into a compilation package that you maintain and distribute on any addon hosting site.
+- Use portions of code found within this addon, provided credit is given for the borrowed code.
+
+This addon is authorised to be hosted at:
+http://www.wowinterface.com
+

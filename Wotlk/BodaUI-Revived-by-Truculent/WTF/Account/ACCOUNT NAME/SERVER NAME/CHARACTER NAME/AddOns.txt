@@ -1,0 +1,12 @@
+CombatLogFix: enabled
+Grid2: disabled
+Grid2Options: disabled
+Grid2StatusRaidDebuffs: disabled
+Grid2StatusRaidDebuffsOptions: disabled
+SexyMap: disabled
+ShadowedUF_Options: disabled
+ShadowedUnitFrames: disabled
+TidyPlates: disabled
+TipTac: enabled
+TidyPlates_ThreatPlates: disabled
+SLDataText: disabled

@@ -1,0 +1,9 @@
+
+BugGrabberDB = {
+	["throttle"] = true,
+	["limit"] = 500,
+	["errors"] = {
+	},
+	["save"] = true,
+	["session"] = 1,
+}

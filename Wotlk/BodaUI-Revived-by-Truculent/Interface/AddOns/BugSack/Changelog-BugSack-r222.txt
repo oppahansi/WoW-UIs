@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r222 | Phanx | 2009-12-26 13:43:52 +0000 (Sat, 26 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/BugSack.lua
+
+- Shift-click on previous/next buttons to jump to first/last bug
+------------------------------------------------------------------------
+r221 | pb_ee1 | 2009-12-10 18:41:19 +0000 (Thu, 10 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/Locales/frFR.lua
+
+Updating frFR locale.
+------------------------------------------------------------------------
+r220 | rabbit | 2009-12-10 11:11:16 +0000 (Thu, 10 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/config.lua
+
+Fix the minimap option.
+------------------------------------------------------------------------
+r219 | rabbit | 2009-11-22 00:57:00 +0000 (Sun, 22 Nov 2009) | 1 line
+Changed paths:
+   M /trunk/BugSack.lua
+
+Reset sack session on login.
+------------------------------------------------------------------------

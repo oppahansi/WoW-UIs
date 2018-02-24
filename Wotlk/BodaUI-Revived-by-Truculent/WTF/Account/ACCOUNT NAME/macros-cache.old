@@ -1,0 +1,6 @@
+MACRO 1 "Arc" Spell_Holy_ElunesGrace
+/archud config
+END
+MACRO 2 "Bar" Spell_Nature_EarthShock
+/bartender
+END

@@ -1,0 +1,107 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+	<GameTooltip name="SWTooltip" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="GameTooltipTemplate"/>
+
+	<Button name="StatusWindowPaneTemplate" frameStrata="LOW" movable="true" virtual="true">
+		<Size>
+			<AbsDimension x="75" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentIcon">
+					<Size>
+						<AbsDimension x="16" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="75" y="10"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnClick>
+				StatusWindow:Click(arg1)
+			</OnClick>
+			<OnMouseDown>
+				StatusWindow:MouseDown(arg1)
+			</OnMouseDown>
+			<OnMouseUp>
+				StatusWindow:MouseUp(arg1)
+			</OnMouseUp>
+			<OnEnter>
+				StatusWindow:FrameOnEnter()
+			</OnEnter>
+			<OnLeave>
+				StatusWindow:FrameOnLeave()
+			</OnLeave>
+			<OnLoad>
+				this.text = getglobal(this:GetName().."Text")
+				this.icon = getglobal(this:GetName().."Icon")
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
+	<Frame name="StatusWindowWindowTemplate" frameStrata="MEDIUM" movable="true" clampedtoscreen="true" virtual="true">
+		<Size>
+			<AbsDimension x="75" y="20"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER">
+				<Offset>
+					<AbsDimension x="300" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Frame name="$parentContent">
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+				</Anchors>
+				<Size>
+					<AbsDimension x="75" y="20"/>
+				</Size>
+			</Frame>
+		</Frames>
+	</Frame>
+	
+  <Frame name="StatusWindowFrame" frameStrata="LOW" parent="UIParent">
+		<Size>
+			<AbsDimension x="1" y="1"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT"/>
+		</Anchors>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentTmp" inherits="GameFontNormalSmall" justifyH="LEFT" hidden="true">
+					<Anchors><Anchor point="CENTER"/></Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				StatusWindow:OnFrameLoad()
+			</OnLoad>
+			<OnEvent>
+				StatusWindow:OnFrameEvent(event)
+			</OnEvent>
+			<OnUpdate>
+				StatusWindow:OnFrameUpdate(arg1)
+			</OnUpdate>
+		</Scripts>
+	</Frame>	
+</Ui>
+

@@ -1,0 +1,87 @@
+tag 30300.4-Release
+59591bae7fb927f7fddbfff131bafd8f0530481c
+Adrian L Lange <adrianlund@gmail.com>
+2009-12-30 21:03:20 +0100
+
+Tag 30300.4-Release
+
+
+--------------------
+
+Adrian L Lange:
+	- Update version
+	- Update TOC version
+	- Minor changes
+	- Update version
+	- Use the right DB, fool!
+	- Update version
+	- Use global db table
+	- Vars change
+	- Use a local db instead
+	- Cleaned up the loading a bit
+	- Don't need database converting any more
+	- Design change
+	- Messy commit is messy
+	- Update to GitHub
+p3lim-52096:
+	- Updated TOC for Patch 3.2
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@21 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Fixed first load
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@20 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Preparing for 3.2, removed 'all' feature and cleaned up config
+	Removed 'all' feature
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@19 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Added a custom license
+	Removed GPL license
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@18 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Added license
+	Fixed issue with blank blacklist
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@17 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Updated toc to 3.1
+	Fixed issues with savedvariables
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@16 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Cancel doesnt work :/
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@15 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Added a cleaner config
+	Fixed some performance issues
+	Fixed compability issues
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@14 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Added mass filter option
+	Added additional options to slash handler
+	Added smarter database system
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@13 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Fixed error on combat login
+	Removed strict filtering
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@12 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Minor cleanup
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@11 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Fixed typo in slashhandler
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@10 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Rewrite, more user-friendly
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@9 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Cleanup and clarification
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@8 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Updated database
+	Fixed the handler
+	
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@7 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Update to 30000
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@6 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Some fixes
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@5 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Removed whitelist, no need for it
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@4 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Initial commit
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@3 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+	- Create directories
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@2 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6
+wowinterface:
+	- Creating inital directory structure
+	git-svn-id: svn://svn.wowinterface.com/pError-161/trunk@1 7a612bb6-1b7b-4f5f-b58b-e1cc54d1b6b6

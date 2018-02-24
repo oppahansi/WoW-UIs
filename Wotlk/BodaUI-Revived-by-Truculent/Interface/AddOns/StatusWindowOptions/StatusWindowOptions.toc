@@ -1,0 +1,14 @@
+## Interface: 30000
+## Version: 2.01
+## Title: StatusWindow Options
+## Author: Satrina@Stormrage
+## OptionalDeps: LibStub, LibSharedMedia-2.0, LibScrollingDropDown-1.0, LibColourFrame-1.0
+## Dependencies: StatusWindow
+## LoadOnDemand: 1
+
+embeds.xml
+RoundedDropDown.xml
+StatusWindowOptions.lua
+Localisation.en.lua
+StatusWindowOptions.xml
+

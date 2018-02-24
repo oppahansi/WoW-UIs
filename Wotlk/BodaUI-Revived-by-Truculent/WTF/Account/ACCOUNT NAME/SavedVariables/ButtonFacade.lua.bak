@@ -1,0 +1,17 @@
+
+ButtonFacadeDB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+	},
+	["namespaces"] = {
+		["ButtonTest"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+	},
+}

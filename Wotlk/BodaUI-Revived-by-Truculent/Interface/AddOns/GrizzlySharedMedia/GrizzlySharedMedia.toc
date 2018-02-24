@@ -1,0 +1,17 @@
+## Interface: 30000
+
+## Title: Grizzly Shared Media
+## Notes: Adds as much media i could find into one mod for fonts, backgrounds, bars.
+## Version: 1
+## Author: All the people who made the art, maintained by Zerosugar
+## X-Credits: Miscellaneous
+## X-Category: Miscellaneous
+
+## OptionalDeps: LibSharedMedia-2.0, LibSharedMedia-3.0, SharedMediaLib
+
+Libs\LibStub.lua
+
+embeds.xml
+
+Core.lua
+GrizzlySharedMedia.lua

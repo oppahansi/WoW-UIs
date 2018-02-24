@@ -1,0 +1,330 @@
+------------------------------------------------------------------------
+r510 | parnic | 2010-04-24 14:55:23 +0000 (Sat, 24 Apr 2010) | 1 line
+Changed paths:
+   A /tags/1.6.2 (from /trunk:509)
+
+Tagging as 1.6.2
+------------------------------------------------------------------------
+r509 | parnic | 2010-04-24 14:49:46 +0000 (Sat, 24 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+   M /trunk/modules/TargetHealth.lua
+
+- reverted r500 because it was causing taint
+------------------------------------------------------------------------
+r508 | parnic | 2010-04-24 14:11:56 +0000 (Sat, 24 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PetHealth.lua
+
+- fixed pet health to be colored properly whenever the "color bar by health %" option is checked
+------------------------------------------------------------------------
+r507 | parnic | 2010-04-23 04:36:18 +0000 (Fri, 23 Apr 2010) | 2 lines
+Changed paths:
+   M /trunk/IceCore.lua
+   M /trunk/modules/TargetInfo.lua
+
+- set the default bar texture back to roundbar
+- split the buff/debuff filter into a buff filter and a debuff filter
+------------------------------------------------------------------------
+r506 | parnic | 2010-04-21 14:09:43 +0000 (Wed, 21 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/IceElement.lua
+
+- possibly fix weird issue where GetClassColor could be called with a function argument from somewhere...I can't reproduce the error, but several people have reported it, so this ought to fix it.
+------------------------------------------------------------------------
+r505 | parnic | 2010-04-20 20:21:38 +0000 (Tue, 20 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/IceCore.lua
+
+- it's probably a good idea to get rid of the default bar texture being RoundBar since CleanCurves looks so much nicer. this should give new users of the mod (and people who don't know that other textures are available) a nicer-looking default setup
+------------------------------------------------------------------------
+r504 | parnic | 2010-04-20 17:55:20 +0000 (Tue, 20 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CastBar.lua
+
+- fixed a problem with the cast lag indicator for channeled spells that i caused in an attempt to fix the lag indicator not working for reversed bars
+------------------------------------------------------------------------
+r503 | parnic | 2010-04-20 05:56:46 +0000 (Tue, 20 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/IceCastBar.lua
+
+- attempt to fix button mashing while casting channeled spells causing the cast bar to get cut off when it wasn't supposed to. needs user testing before going live
+------------------------------------------------------------------------
+r502 | parnic | 2010-04-17 22:34:37 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/IceCastBar.lua
+
+- added an optional icon to the player and target casting bars that shows which spell is being casted/channeled. default is off
+------------------------------------------------------------------------
+r501 | parnic | 2010-04-17 22:22:42 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CastBar.lua
+   M /trunk/modules/PlayerHealth.lua
+   M /trunk/modules/Threat.lua
+
+- fixed the cast lag indicator, the incoming heal indicator, and aggro pull indicator to draw on the proper area of the bar when the bar is set to reverse direction
+------------------------------------------------------------------------
+r500 | parnic | 2010-04-12 05:26:46 +0000 (Mon, 12 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+   M /trunk/modules/TargetHealth.lua
+
+- fixed up the clickable frame for player and target to be hidden/unclickable when the bar alpha is at 0
+------------------------------------------------------------------------
+r499 | parnic | 2010-04-11 23:48:51 +0000 (Sun, 11 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+
+- fixed the incoming heal bar being invisible sometimes (such as the bar alpha being 0 when OOC, >0 when not full, and the player being OOC with a non-full bar)
+------------------------------------------------------------------------
+r498 | parnic | 2010-04-10 21:27:06 +0000 (Sat, 10 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/TargetHealth.lua
+
+- added ArcHUD clickable area fixes to the target health bar as well
+------------------------------------------------------------------------
+r496 | parnic | 2010-04-05 05:22:34 +0000 (Mon, 05 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+
+- fixed the player's clickable area when using the ArcHUD texture to be on the outside edge of the bar instead of the inside
+------------------------------------------------------------------------
+r495 | parnic | 2010-04-05 03:49:48 +0000 (Mon, 05 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/IceHUD.toc
+   M /trunk/IceUnitBar.lua
+   A /trunk/modules/ComboPointsBar.lua
+
+- added oft-requested combo points bar
+------------------------------------------------------------------------
+r494 | parnic | 2010-04-05 02:11:46 +0000 (Mon, 05 Apr 2010) | 5 lines
+Changed paths:
+   M /trunk/IceCore.lua
+   M /trunk/IceHUD.lua
+   M /trunk/modules/CustomCDBar.lua
+
+- user-submitted change care of JX:
+Added mechanism to provide common throttled updates to all bars, even those that are hidden.
+Added "Display when ready" option to Custom Cooldown bar to replace "Display when empty" toggle.
+Modified Custom Cooldown bar to use common throttled updates. This should be rolled out to all bars eventually.
+Tidied up display of spell icons in Custom Cooldown bar. There was a problem with the appropriate aura icon not being loaded correctly until the spell had fired.
+------------------------------------------------------------------------
+r493 | parnic | 2010-04-01 20:37:33 +0000 (Thu, 01 Apr 2010) | 2 lines
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+   M /trunk/modules/CustomCDBar.lua
+
+- made sure to unregister OnUpdate in custom bars and cd bars after the bar is hidden
+- added the spell icon functionality from the custom bar to the custom cd bar
+------------------------------------------------------------------------
+r492 | parnic | 2010-04-01 19:28:11 +0000 (Thu, 01 Apr 2010) | 3 lines
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+
+- made sure to set the custom bar's buff icon to draw on top of the bar
+- fixed the custom bar to call up to the super's version of TargetChanged so that the internal "i has a target" property is kept updated
+- made custom bar weapon buffs display an appropriate icon
+------------------------------------------------------------------------
+r491 | parnic | 2010-04-01 16:04:45 +0000 (Thu, 01 Apr 2010) | 2 lines
+Changed paths:
+   M /trunk/IceCastBar.lua
+   M /trunk/modules/TargetCast.lua
+
+- fixed the non-interruptible check to work for the target cast bar's TargetChanged event
+- fixed :Redraw from causing a cast bar to draw gray and stop updating (could happen if spell interruptibility changed mid-cast)
+------------------------------------------------------------------------
+r490 | parnic | 2010-04-01 15:35:28 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/modules/TargetCast.lua
+
+- fixed bug introduced in r485 that prevented the target cast bar from showing up when changing targets while the target is casting
+------------------------------------------------------------------------
+r489 | parnic | 2010-03-31 18:50:54 +0000 (Wed, 31 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+
+- added an optional icon to be displayed alongside a custom bar that shows what spell the bar is tracking. default is off
+------------------------------------------------------------------------
+r488 | parnic | 2010-03-31 16:31:38 +0000 (Wed, 31 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/IceCastBar.lua
+   M /trunk/IceUnitBar.lua
+
+- minor cleanup of the animation/scale-setting code to avoid duplicating chunks of code
+------------------------------------------------------------------------
+r487 | Parnic | 2010-03-30 23:35:49 +0000 (Tue, 30 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+
+- integrated a user-submitted cleanup of how we were managing bar texture clipping after 3.3.3's mess. this binds the texture to the frame and calls SetHeight on the frame instead of the texture as well as unifies the "reverse direction" behavior a bit
+------------------------------------------------------------------------
+r486 | Parnic | 2010-03-30 23:34:09 +0000 (Tue, 30 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+   M /trunk/modules/CustomCDBar.lua
+   M /trunk/modules/CustomCount.lua
+
+- added protection against giving a custom bar/cooldown/counter an empty name causing it to disappear from the options list
+------------------------------------------------------------------------
+r485 | parnic | 2010-03-29 06:13:51 +0000 (Mon, 29 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/TargetCast.lua
+
+- added theoretically-functional feature to display a different cast bar color (red by default) if a target's spell is non-interruptible. took implementation from blizzard frames (including mid-cast event hook) but largely untested. enabled by default.
+------------------------------------------------------------------------
+r484 | parnic | 2010-03-29 06:11:13 +0000 (Mon, 29 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+
+- made "Reverse direction" option be grayed out if the bar is disabled
+------------------------------------------------------------------------
+r483 | parnic | 2010-03-28 13:47:40 +0000 (Sun, 28 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CustomCDBar.lua
+
+- added "maximum duration" feature to cooldown bars by request
+------------------------------------------------------------------------
+r482 | parnic | 2010-03-26 04:40:53 +0000 (Fri, 26 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+
+- fixed a bug i caused in a user-submitted feature
+------------------------------------------------------------------------
+r480 | Parnic | 2010-03-25 19:55:29 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/modules/CastBar.lua
+   M /trunk/modules/PlayerHealth.lua
+   M /trunk/modules/SliceAndDice.lua
+   M /trunk/modules/Threat.lua
+
+- added some code to hide a bar if its height would have been set to 0. not sure why, but GlowArc and HiBar are having issues with zero-height bars, so this seems to fix it without needing to figure out what's up with the texture
+------------------------------------------------------------------------
+r479 | Parnic | 2010-03-25 18:10:16 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+
+- added user-submitted "max duration" functionality to custom bars such that they can always be a fixed time period
+------------------------------------------------------------------------
+r478 | Parnic | 2010-03-25 17:49:17 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SliceAndDice.lua
+
+- fixed a couple of issues that could cause the SnD bar to display incorrectly
+------------------------------------------------------------------------
+r477 | Parnic | 2010-03-25 17:26:36 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+
+- fixed an issue causing a weird shadow to appear on the player health bar without LibCommHeal-4.0 installed
+------------------------------------------------------------------------
+r476 | Parnic | 2010-03-25 17:19:38 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SliceAndDice.lua
+
+- made sure to set the default height on the slice'n'dice bar to 0 to make sure it doesn't go crazy
+------------------------------------------------------------------------
+r475 | Parnic | 2010-03-25 17:03:29 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+
+- fixed the 'bar visible' checkbox to work again
+------------------------------------------------------------------------
+r473 | parnic | 2010-03-25 06:30:25 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/PlayerHealth.lua
+
+- fixed a bug with the incoming heal bar being disabled and causing an oversized green bar to appear
+------------------------------------------------------------------------
+r472 | parnic | 2010-03-25 05:13:40 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/SunderCount.lua
+
+- fixed typo in SunderCount causing it to not work
+------------------------------------------------------------------------
+r470 | parnic | 2010-03-25 04:22:49 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/Totems.lua
+
+- fixed totems to work with 3.3.3
+------------------------------------------------------------------------
+r469 | parnic | 2010-03-25 04:15:22 +0000 (Thu, 25 Mar 2010) | 3 lines
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/modules/ComboPoints.lua
+   M /trunk/modules/Runes.lua
+   M /trunk/modules/SliceAndDice.lua
+   M /trunk/modules/Threat.lua
+
+- MAJOR thanks to Shefki for finding and fixing most of the 3.3.3 issues!
+- fixed runes module
+- fixed a few other minor issues
+------------------------------------------------------------------------
+r468 | shefki | 2010-03-25 01:04:47 +0000 (Thu, 25 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/modules/ComboPoints.lua
+   M /trunk/modules/CustomCount.lua
+   M /trunk/modules/LacerateCount.lua
+   M /trunk/modules/MaelstromCount.lua
+   M /trunk/modules/SunderCount.lua
+
+Fix textures on count modules.
+
+------------------------------------------------------------------------
+r467 | shefki | 2010-03-25 01:00:30 +0000 (Thu, 25 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/modules/CustomCDBar.lua
+
+Fix an error when changing the color of a CustomCD Bar.
+
+------------------------------------------------------------------------
+r466 | shefki | 2010-03-25 00:58:38 +0000 (Thu, 25 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/modules/CustomBar.lua
+
+Fix an error when trying to change the color of a custom bar.
+
+------------------------------------------------------------------------
+r465 | shefki | 2010-03-24 23:56:17 +0000 (Wed, 24 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/modules/PlayerMana.lua
+
+Fix for druids logging in with a messed up ticker bar when predictedPower is turned off.
+
+------------------------------------------------------------------------
+r464 | shefki | 2010-03-24 23:54:14 +0000 (Wed, 24 Mar 2010) | 2 lines
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/IceCastBar.lua
+   M /trunk/IceHUD.lua
+   M /trunk/IceUnitBar.lua
+   M /trunk/modules/CastBar.lua
+   M /trunk/modules/CustomBar.lua
+   M /trunk/modules/CustomCDBar.lua
+   M /trunk/modules/PlayerHealth.lua
+   M /trunk/modules/PlayerMana.lua
+   M /trunk/modules/SliceAndDice.lua
+   M /trunk/modules/Threat.lua
+
+Fix for removal of SetTexCoordModifiesRect in 3.3.3.
+
+------------------------------------------------------------------------
+r461 | parnic | 2010-03-24 01:49:52 +0000 (Wed, 24 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/IceBarElement.lua
+   M /trunk/IceHUD.lua
+   M /trunk/modules/CastBar.lua
+   M /trunk/modules/CustomBar.lua
+   M /trunk/modules/CustomCDBar.lua
+   M /trunk/modules/Threat.lua
+
+- super temporary hack to get IceHUD back into a working state. this forces all users to use the RivetBar preset since straight vertical bars are the only things that work right now. a future update will fix the problem for real
+------------------------------------------------------------------------
+r460 | Parnic | 2010-03-17 16:40:59 +0000 (Wed, 17 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/modules/CastBar.lua
+
+- hopefully fix a bug where the cast bar could sometimes try to access nil
+------------------------------------------------------------------------

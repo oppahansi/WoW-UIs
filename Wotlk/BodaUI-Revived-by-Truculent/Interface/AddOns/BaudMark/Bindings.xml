@@ -1,0 +1,5 @@
+<Bindings>
+  <Binding name="BaudMark" header="BaudMark" runOnUp="true">
+    BaudMark_HotkeyPressed(keystate)
+  </Binding>
+</Bindings>

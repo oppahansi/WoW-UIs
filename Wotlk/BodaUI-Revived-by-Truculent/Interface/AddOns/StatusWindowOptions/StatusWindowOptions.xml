@@ -1,0 +1,1055 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+	
+	<Button name="SWColourButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="22" y="22"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentHighlight">
+					<Size>
+						<AbsDimension x="20" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="CENTER">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0"/>
+				</Texture>
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentHighlight" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="3" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\ChatFrameColorSwatch"/>
+		<Scripts>
+			<OnLoad>
+				this.highlight = getglobal(this:GetName().."Highlight")
+				this.texture = getglobal(this:GetName().."NormalTexture")
+				this.label = getglobal(this:GetName().."Label")
+			</OnLoad>
+			<OnEnter>
+				this.highlight:SetVertexColor(NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b)
+			</OnEnter>
+			<OnLeave>
+				this.highlight:SetVertexColor(HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b)
+			</OnLeave>
+		</Scripts>
+	</Button>
+
+	<Button name="StatusWindowListButtonTemplate" virtual="true">
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true">
+			<EdgeSize>
+				<AbsValue val="8"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="8"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+		</Backdrop>
+		<Size>
+			<AbsDimension x="150" y="14"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentLabel" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp")
+				this.label= getglobal(this:GetName().."Label")
+				this:SetBackdropColor(0,0,0,1)
+			</OnLoad>
+			<OnMouseDown>
+				if IsAltKeyDown() and (arg1 == "LeftButton") then
+				elseif this.index then
+					StatusWindowOptions.currentFrameIndex = this:GetID()
+					StatusWindowOptions:SelectFrame(this.index)
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+			</OnMouseUp>
+		</Scripts>
+		<HighlightTexture file="Interface\FriendsFrame\UI-FriendsFrame-HighlightBar" alphaMode="ADD">
+			<Size>
+				<AbsDimension x="150" y="10"/>
+			</Size>
+			<Anchors>
+				<Anchor point="TOP">
+					<Offset>
+						<AbsDimension x="0" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</HighlightTexture>
+	</Button>
+
+	<Frame name="SWOptions" frameStrata="LOW" toplevel="true" parent="UIParent" hidden="true" movable="true">
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+		<Size>
+				<AbsDimension x="650" y="420"/>
+		</Size>
+		<Anchors>
+				<Anchor point="CENTER"/>
+		</Anchors>
+
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentVersionString" inherits="GameFontNormal" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="200" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="2" y="2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+			<Frame name="$parentWindowDropDown" inherits="RoundedDropDownFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Frame>
+			
+			<Button name="$parentNewButton" inherits="GameMenuButtonTemplate">
+				<Size>
+					<AbsDimension x="125" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-22"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:NewWindow()
+					</OnClick>
+				</Scripts>
+			</Button>
+      <Button name="$parentRemoveButton" inherits="GameMenuButtonTemplate">
+        <Size>
+          <AbsDimension x="125" y="20"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentNewButton" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="5" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            StatusWindowOptions:RemoveWindow()
+          </OnClick>
+        </Scripts>
+      </Button>
+
+      <Frame name="$parentCopyProfileButton">
+        <Size>
+          <AbsDimension x="150" y="25"/>
+        </Size>
+				<Anchors>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-10" y="-25"/>
+            </Offset>
+          </Anchor>
+				</Anchors>
+        <Frames>
+          <Button name="$parentButton">
+            <Size>
+              <AbsDimension x="24" y="24"/>
+            </Size>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+            </Anchors>
+            <Scripts>
+              <OnClick>
+                LibStub:GetLibrary('LibScrollingDropDown-1.0'):Open(this:GetParent())
+              </OnClick>
+            </Scripts>
+            <NormalTexture name="$parentNormalTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Up">
+              <Size>
+                <AbsDimension x="24" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+              </Anchors>
+            </NormalTexture>
+            <PushedTexture name="$parentPushedTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Down">
+              <Size>
+                <AbsDimension x="24" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+              </Anchors>
+            </PushedTexture>
+            <DisabledTexture name="$parentDisabledTexture" file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Disabled">
+              <Size>
+                <AbsDimension x="24" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+              </Anchors>
+            </DisabledTexture>
+            <HighlightTexture name="$parentHighlightTexture" file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="24" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+              </Anchors>
+            </HighlightTexture>
+          </Button>
+        </Frames>
+        <Layers>
+          <Layer level="OVERLAY">
+            <FontString name="$parentLabel" inherits="GameFontNormalSmall" justifyH="RIGHT">
+              <Size>
+                <AbsDimension x="125" y="14"/>
+              </Size>
+              <Anchors>
+                <Anchor point="RIGHT">
+                  <Offset>
+                    <AbsDimension x="-26" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+      </Frame>
+
+			<Frame name="$parentCurrentWindow">
+				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Size>
+					<AbsDimension x="420" y="340"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="5" y="-50"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Button name="$parentFrameList1" inherits="StatusWindowListButtonTemplate" id="1">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="10" y="-20"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList2" inherits="StatusWindowListButtonTemplate" id="2">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList1" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList3" inherits="StatusWindowListButtonTemplate" id="3">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList2" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList4" inherits="StatusWindowListButtonTemplate" id="4">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList3" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList5" inherits="StatusWindowListButtonTemplate" id="5">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList4" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList6" inherits="StatusWindowListButtonTemplate" id="6">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList5" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList7" inherits="StatusWindowListButtonTemplate" id="7">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList6" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList8" inherits="StatusWindowListButtonTemplate" id="8">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList7" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList9" inherits="StatusWindowListButtonTemplate" id="9">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList8" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<Button name="$parentFrameList10" inherits="StatusWindowListButtonTemplate" id="10">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameList9" relativePoint="BOTTOM"/>
+						</Anchors>
+					</Button>
+					<ScrollFrame name="$parentFrameListScrollFrame" inherits="FauxScrollFrameTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentFrameList1" relativePoint="TOPLEFT">
+								<Offset>
+									<AbsDimension x="0" y="0"/>
+								</Offset>
+							</Anchor> 
+							<Anchor point="BOTTOMRIGHT" relativeTo="$parentFrameList10" relativePoint="BOTTOMRIGHT">
+								<Offset>
+									<AbsDimension x="-5" y="0"/>
+								</Offset>
+							</Anchor> 
+						</Anchors>
+						<Scripts>
+							<OnVerticalScroll>
+								FauxScrollFrame_OnVerticalScroll(14, StatusWindowOptions.UpdateFrameList)
+							</OnVerticalScroll>
+						</Scripts>
+					</ScrollFrame>
+
+					<Button name="$parentFrameUpButton" inherits="GameMenuButtonTemplate">
+						<Size>
+							<AbsDimension x="65" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentFrameList3" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="25" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:FrameUp()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentFrameAddButton" inherits="GameMenuButtonTemplate">
+						<Size>
+							<AbsDimension x="65" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameUpButton" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-5"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:AddFrame()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentFrameRemoveButton" inherits="GameMenuButtonTemplate">
+						<Size>
+							<AbsDimension x="65" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameAddButton" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-5"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:RemoveCurrentFrame()
+							</OnClick>
+						</Scripts>
+					</Button>
+					<Button name="$parentFrameDownButton" inherits="GameMenuButtonTemplate">
+						<Size>
+							<AbsDimension x="65" y="20"/>
+						</Size>
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentFrameRemoveButton" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-5"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:FrameDown()
+							</OnClick>
+						</Scripts>
+					</Button>
+
+          <Slider name="$parentRowCountSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentFrameUpButton" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="20" y="25"/>
+                </Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:RowCountChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+          <Slider name="$parentScaleSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentRowCountSlider" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-18"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:ScaleChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+					<Slider name="$parentOpacitySlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentScaleSlider" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-18"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:OpacityChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+
+					<Frame name="$parentBackgroundDropDown" inherits="RoundedDropDownFrameTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentFrameList10" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="0" y="-15"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Frame>
+          <Button name="$parentBackgroundColour" inherits="SWColourButtonTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentBackgroundDropDown" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="10" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:ColourPicker("backgroundColour")
+							</OnClick>
+						</Scripts>
+					</Button>
+					
+					<Frame name="$parentBorderDropDown" inherits="RoundedDropDownFrameTemplate">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentBackgroundDropDown" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-10"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Frame>
+					<Slider name="$parentBorderSizeSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentBorderDropDown" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="10" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:BorderSizeChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+					<Button name="$parentBorderColour" inherits="SWColourButtonTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentBorderSizeSlider" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="10" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:ColourPicker("borderColour")
+							</OnClick>
+						</Scripts>
+					</Button>
+					
+					<Frame name="$parentFontDropDown" inherits="RoundedDropDownFrameTemplate">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentBorderDropDown" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-10"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Frame>
+					<Slider name="$parentFontSizeSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentFontDropDown" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="10" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:FontSizeChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+					<Button name="$parentTextColour" inherits="SWColourButtonTemplate">
+						<Anchors>
+							<Anchor point="LEFT" relativeTo="$parentFontSizeSlider" relativePoint="RIGHT">
+								<Offset>
+									<AbsDimension x="10" y="0"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:ColourPicker("textColour")
+							</OnClick>
+						</Scripts>
+					</Button>
+					<CheckButton name="$parentUseWindowColourCheckButton" inherits="OptionsCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="$parentTextColour" relativePoint="BOTTOMLEFT">
+								<Offset>
+									<AbsDimension x="-4" y="-2"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>
+								StatusWindowOptions:UseWindowColour()
+							</OnClick>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_TOP")
+								GameTooltip:AddLine(StatusWindow.strings.USEWINDOWCOLOURTT1)
+								GameTooltip:AddLine(StatusWindow.strings.USEWINDOWCOLOURTT2)
+								GameTooltip:Show()
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide()
+							</OnLeave>
+						</Scripts>
+					</CheckButton>
+
+				</Frames>
+				
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentTitle" inherits="GameFontNormal" justifyH="CENTER">
+							<Size>
+								<AbsDimension x="100" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOP">
+									<Offset>
+										<AbsDimension x="0" y="-5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentFrame" inherits="GameFontNormal" justifyH="CENTER">
+							<Size>
+								<AbsDimension x="150" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+			
+			<Frame name="$parentCurrentFrame">
+				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Size>
+					<AbsDimension x="220" y="340"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-5" y="-50"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<Frame name="$parentModuleDropDown" inherits="RoundedDropDownFrameTemplate">
+						<Anchors>
+							<Anchor point="TOP">
+								<Offset>
+									<AbsDimension x="0" y="-30"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+					</Frame>
+					<Slider name="$parentWidthSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="TOP">
+								<Offset>
+									<AbsDimension x="0" y="-75"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:WidthChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+					<Slider name="$parentHeightSlider" inherits="OptionsSliderTemplate">
+						<Anchors>
+							<Anchor point="TOP" relativeTo="$parentWidthSlider" relativePoint="BOTTOM">
+								<Offset>
+									<AbsDimension x="0" y="-18"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:HeightChanged()
+              </OnValueChanged>
+            </Scripts>
+					</Slider>
+          <Slider name="$parentPaddingSlider" inherits="OptionsSliderTemplate">
+            <Anchors>
+              <Anchor point="TOP" relativeTo="$parentHeightSlider" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="-15"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnValueChanged>
+                StatusWindowOptions:PaddingChanged()
+              </OnValueChanged>
+            </Scripts>
+          </Slider>
+				</Frames>
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString name="$parentTitle" inherits="GameFontNormal" justifyH="CENTER">
+							<Size>
+								<AbsDimension x="235" y="12"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOP">
+									<Offset>
+										<AbsDimension x="0" y="-5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+			
+			<Button name="$parentCloseButton" inherits="GameMenuButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="48" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-6" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:Close()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentResetButton" inherits="GameMenuButtonTemplate">
+				<Size>
+					<AbsDimension x="96" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-6" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:ResetProfile()
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnUpdate>
+				StatusWindowOptions:OnUpdate(arg1)
+			</OnUpdate>
+			<OnMouseDown>
+				if (arg1 == "LeftButton") and IsAltKeyDown() then
+					this.moving = 1
+					this:StartMoving()
+				end
+			</OnMouseDown>
+			<OnMouseUp>
+				if this.moving then
+					this:StopMovingOrSizing()
+					this.moving = nil
+				end
+			</OnMouseUp>
+		</Scripts>
+	</Frame>
+
+	<!--											-->
+	<!--		Count Module			-->
+	<!--											-->
+
+	<Frame name="StatusWindowCountOptions" parent="SWOptions" hidden="true">
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+		<Size>
+			<AbsDimension x="200" y="60"/>
+		</Size>
+		<Layers>
+		</Layers>
+		<Frames>
+			<Button name="$parentIcon" inherits="ItemButtonTemplate">
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="-5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnReceiveDrag>
+						StatusWindowOptions:InvokeConfigFunc("ReceiveItem")
+					</OnReceiveDrag>
+				</Scripts>
+			</Button>
+		</Frames>
+    <Scripts>
+      <OnLoad>
+        this:SetBackdropColor(0,0,0,1)
+      </OnLoad>
+    </Scripts>
+	</Frame>
+
+	<!--											-->
+	<!--		Generic Module			-->
+	<!--											-->
+
+	<Frame name="StatusWindowGenericOptions" parent="SWOptions" hidden="true">
+    <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true">
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="0" right="0" top="0" bottom="0"/>
+      </BackgroundInsets>
+    </Backdrop>
+		<Size>
+			<AbsDimension x="200" y="75"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentEdit">
+				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="16"/>
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="16"/>
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="5" right="5" top="5" bottom="5"/>
+					</BackgroundInsets>
+				</Backdrop>
+				<Size>
+					<AbsDimension x="135" y="25"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM">
+						<Offset>
+							<AbsDimension x="-10" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Frames>
+					<EditBox name="$parentText" letters="100" autoFocus="false">
+						<Size>
+							<AbsDimension x="115" y="14"/>
+						</Size>
+						<Anchors>
+							<Anchor point="CENTER"/>
+						</Anchors>
+						<Scripts>
+							<OnEscapePressed>
+								this:ClearFocus()
+							</OnEscapePressed>
+							<OnTabPressed>
+								this:ClearFocus()
+							</OnTabPressed>
+							<OnEnterPressed>
+								StatusWindowOptions:GenericConfigTextOK()
+                this:SetFocus()
+							</OnEnterPressed>
+							<OnLoad>
+								this:SetTextColor(1,1,1)
+							</OnLoad>
+						</Scripts>
+						<FontString inherits="GameFontNormal"/>
+					</EditBox>
+				</Frames>
+				<Scripts>
+					<OnLoad>
+						this:SetBackdropColor(0,0,0,1)
+					</OnLoad>
+				</Scripts>
+			</Frame>
+			<Button name="$parentHelpButton" inherits="GameMenuButtonTemplate" text="?">
+				<Size>
+					<AbsDimension x="15" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="$parentEdit" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="-3" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnter>
+						StatusWindowOptions:GenericConfigHelpTooltip()
+					</OnEnter>
+					<OnLeave>
+            GameTooltip:Hide()
+					</OnLeave>
+				</Scripts>
+			</Button>
+			<Button name="$parentOKButton" inherits="GameMenuButtonTemplate" text="OK">
+				<Size>
+					<AbsDimension x="35" y="20"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentEdit" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="3" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:GenericConfigTextOK()
+					</OnClick>
+				</Scripts>
+			</Button>
+      <Slider name="$parentTextAlignSlider" inherits="OptionsSliderTemplate">
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="$parentEdit" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="10" y="15"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnValueChanged>
+            StatusWindowOptions:GenericConfigTextAlignmentChanged()
+          </OnValueChanged>
+        </Scripts>
+      </Slider>
+		</Frames>
+    <Scripts>
+      <OnLoad>
+        this:SetBackdropColor(0,0,0,1)
+      </OnLoad>
+    </Scripts>
+	</Frame>
+
+	<!--											-->
+	<!--		Clock Module			-->
+	<!--											-->
+
+	<Frame name="StatusWindowClockOptions" parent="StatusWindowGenericOptions" hidden="true">
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="0" right="0" top="0" bottom="0"/>
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+		</Backdrop>
+    <Anchors>
+      <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="TOP"/>
+    </Anchors>
+    <Size>
+			<AbsDimension x="200" y="75"/>
+		</Size>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="StatusWindowClockOffsetLabel" inherits="GameFontNormal" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="100" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-5"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="StatusWindowClockOffsetText" inherits="GameFontHighlight" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="35" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="StatusWindowClockOffsetLabel" relativePoint="BOTTOM">
+							<Offset>
+								<AbsDimension x="0" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="StatusWindowClockOffsetDownButton">
+				<Size>
+					<AbsDimension x="14" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="RIGHT" relativeTo="StatusWindowClockOffsetText" relativePoint="LEFT">
+						<Offset>
+							<AbsDimension x="2" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:InvokeConfigFunc("OffsetDown")
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\Arrow-Left-Up"/>
+				<PushedTexture file="Interface\MoneyFrame\Arrow-Left-Down"/>
+				<DisabledTexture file="Interface\MoneyFrame\Arrow-Left-Disabled"/>
+			</Button>
+			<Button name="StatusWindowClockOffsetUpButton">
+				<Size>
+					<AbsDimension x="14" y="14"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="StatusWindowClockOffsetText" relativePoint="RIGHT">
+						<Offset>
+							<AbsDimension x="2" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:InvokeConfigFunc("OffsetUp")
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\MoneyFrame\Arrow-Right-Up"/>
+				<PushedTexture file="Interface\MoneyFrame\Arrow-Right-Down"/>
+				<DisabledTexture file="Interface\MoneyFrame\Arrow-Right-Disabled"/>
+			</Button>
+			<CheckButton name="StatusWindowLocalTimeCheckButton" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="StatusWindowClockOffsetDownButton" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="-10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						StatusWindowOptions:InvokeConfigFunc("ClockLocalTime")
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+		</Frames>
+    <Scripts>
+      <OnLoad>
+        this:SetBackdropColor(0,0,0,1)
+        StatusWindowOptions:Initialise()
+      </OnLoad>
+    </Scripts>
+	</Frame>
+</Ui>
+

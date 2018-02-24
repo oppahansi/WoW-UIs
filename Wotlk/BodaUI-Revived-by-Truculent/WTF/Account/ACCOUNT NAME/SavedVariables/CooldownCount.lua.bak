@@ -1,0 +1,10 @@
+
+CooldownCountDB = {
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

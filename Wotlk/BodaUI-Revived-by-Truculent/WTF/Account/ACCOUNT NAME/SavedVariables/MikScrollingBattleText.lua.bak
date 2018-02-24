@@ -1,0 +1,294 @@
+
+MSBTProfiles_SavedVars = {
+	["profiles"] = {
+		["Default"] = {
+			["normalFontName"] = "Accidental Presidency",
+			["critFontName"] = "Accidental Presidency",
+			["creationVersion"] = "5.4.77",
+		},
+		["BodaUI"] = {
+			["alwaysShowQuestItems"] = false,
+			["exclusiveSkillsDisabled"] = true,
+			["critFontName"] = "Accidental Presidency",
+			["qualityExclusions"] = {
+				true, -- [1]
+				true, -- [2]
+				true, -- [3]
+				true, -- [4]
+			},
+			["scrollAreas"] = {
+				["Outgoing"] = {
+					["direction"] = "Up",
+					["offsetX"] = 254,
+					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = -142,
+					["animationStyle"] = "Straight",
+					["iconAlign"] = "Left",
+				},
+				["Incoming"] = {
+					["direction"] = "Up",
+					["offsetX"] = -273,
+					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = -139,
+					["animationStyle"] = "Straight",
+				},
+			},
+			["normalFontName"] = "Accidental Presidency",
+			["events"] = {
+				["PET_INCOMING_HOT_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DOT_CRIT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_PARRY"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_PARRY"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_PARRY"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_MISS"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_MISS"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DODGE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_HEAL"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DAMAGE_SHIELD_CRIT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DOT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_PARRY"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DODGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DAMAGE_SHIELD_CRIT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_REFLECT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DAMAGE_SHIELD"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DAMAGE_SHIELD"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_MISS"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_DODGE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DAMAGE_SHIELD_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_MISS"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DODGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_RESIST"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_MONEY"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_LOOT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SOUL_SHARD_CREATED"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_DISPEL"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_EVADE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_RESIST"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DOT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DODGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_MISS"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_SPELL_DOT_CRIT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_EVADE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_PARRY"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_INTERRUPT"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_DODGE"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_MISS"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_HEAL_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_BLOCK"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_IMMUNE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DEFLECT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DAMAGE_SHIELD"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ENVIRONMENTAL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_RESIST"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_SPELL_DOT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_HOT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_DAMAGE_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_SPELL_DOT_CRIT"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_PARRY"] = {
+					["disabled"] = true,
+				},
+			},
+			["creationVersion"] = "5.4.77",
+		},
+	},
+}
+MSBT_SavedMedia = {
+	["fonts"] = {
+	},
+	["sounds"] = {
+	},
+}

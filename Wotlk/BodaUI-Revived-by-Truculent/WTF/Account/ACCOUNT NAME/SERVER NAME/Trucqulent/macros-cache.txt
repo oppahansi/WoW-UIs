@@ -1,0 +1,7 @@
+MACRO 16777218 "attk" Ability_BackStab
+/petfollow [@pettarget,nodead]
+/petattack [@mouseover,harm][]
+END
+MACRO 16777217 "Camera" INV_Misc_QuestionMark
+/console cameradistancemaxfactor 5
+END

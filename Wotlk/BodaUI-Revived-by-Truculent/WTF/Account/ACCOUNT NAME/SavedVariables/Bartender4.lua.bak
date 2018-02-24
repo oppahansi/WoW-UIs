@@ -1,0 +1,131 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["BagBar"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+		["XPBar"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+		["ActionBars"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+					["actionbars"] = {
+						{
+							["position"] = {
+								["y"] = -224.9999785137725,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [1]
+						{
+							["position"] = {
+								["y"] = -190.7999924723957,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["position"] = {
+								["y"] = -156.600006431019,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [3]
+						{
+							["position"] = {
+								["y"] = -122.3999940095847,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [4]
+						{
+							["position"] = {
+								["y"] = -88.19999917485539,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [5]
+						{
+							["position"] = {
+								["y"] = -53.99999994344987,
+								["x"] = 0,
+								["point"] = "CENTER",
+								["relPoint"] = "CENTER",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						[9] = {
+						},
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["RepBar"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+		["PetBar"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profileKeys"] = {
+				["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+			},
+			["profiles"] = {
+				["Bodasafa - Eldre'Thalas"] = {
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Bodasafa - Eldre'Thalas"] = "Bodasafa - Eldre'Thalas",
+	},
+	["profiles"] = {
+		["Bodasafa - Eldre'Thalas"] = {
+		},
+	},
+}

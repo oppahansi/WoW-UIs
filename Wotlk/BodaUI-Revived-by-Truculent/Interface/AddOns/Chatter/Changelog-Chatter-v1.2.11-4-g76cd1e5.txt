@@ -1,0 +1,5 @@
+Sal Scotto:
+	- Fixed click invite for cata, backwards compat to live
+	- Fixed click invite for cata, backwards compat to live
+	- Fixed some references to this
+	- Added compat fix for Cata
