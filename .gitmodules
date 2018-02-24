@@ -43,3 +43,6 @@
 [submodule "Wotlk/Bunny67-Aurora"]
 	path = Wotlk/Bunny67-Aurora
 	url = git@github.com:Bunny67/Aurora.git
+[submodule "Tbc/Evolvee-EvolvePWPUI"]
+	path = Tbc/Evolvee-EvolvePWPUI
+	url = git@github.com:Evolvee/EvolvePWPUI.git
