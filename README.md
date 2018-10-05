@@ -1,3 +1,7 @@
+**Please consider donating if you find my work usefull.**
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/schellenberga)
+
 # WoW UIs
 A simple collection of Vanilla, Tbc and Wotlk UIs
 
